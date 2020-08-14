@@ -1,6 +1,8 @@
 # KeywordTables
 Instrument keyword definitions and paramaters
 
+Tab-separated files with the following columns:
+
 | Keyword | Keyword Name |
 | ------- | ------------ |
 | Source | Original source of keyword value
