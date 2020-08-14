@@ -28,7 +28,7 @@ DETSEC16	KOA	Mosaic detector section (from HDU 16 DETSEC)	char		VARCHAR2(32 BYTE
 DISPSCAL	KOA	"CCD pixel scale, dispersion (arcsec/pixel)"	double		FLOAT(126)	16	Y	Y	N						Get with Luca/Carlos to determine equation
 DQA_DATE	KOA	Date of DQA run	char		VARCHAR2(32 BYTE)	32	Y	Y	N						
 DQA_VERS	KOA	DQA version number	char		VARCHAR2(32 BYTE)	32	Y	Y	N						
-FCSKOAID	KOA	FCS KOA ID	char		VARCHAR2(32 BYTE)	32	Y	Y	N						See IDL source
+FCSKOAID	KOA	KOAID of associated Flexure Compensation System file	char		VARCHAR2(32 BYTE)	32	Y	Y	N						See IDL source
 FILTER	KOA	Filter name (copied from DWFILNAM)	char		VARCHAR2(16 BYTE)	16	Y	Y	N				Y		
 GUIDFWHM	KOA	FWHM of guide star	double		FLOAT(126)	16	Y	Y	N						
 GUIDTIME	KOA	UT of GUIDFWHM value	char		VARCHAR2(32 BYTE)	32	Y	Y	N						
