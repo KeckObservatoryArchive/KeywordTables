@@ -17,3 +17,6 @@ Tab-separated files with the following columns:
 | Mincol | Minimum allowed value for the keyword
 | Maxcol | Maximum allowed value for the keyword
 | Discrete Values | Comma-separated list of allowed values for the keyword
+| UI | This keyword is used in the KOA UI
+| Calib | This keyword is used for calibration association
+| Notes | Any notes pertaining to this keyword and/or value
