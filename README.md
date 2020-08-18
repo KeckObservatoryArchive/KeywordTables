@@ -11,7 +11,6 @@ The files are saved as tab-separated columns with the following information:
 | Keyword | Keyword Name |
 | ------- | ------------ |
 | Source | Original source of keyword value
-| Description | Keyword definition
 | Data Type | char, double, integer
 | Size | Maximum character length of keyword value
 | DB Data Type | Data type for database table creation
@@ -24,4 +23,5 @@ The files are saved as tab-separated columns with the following information:
 | Discrete Values | Comma-separated list of allowed values for the keyword
 | UI | This keyword is used in the KOA UI
 | Calib | This keyword is used for calibration association
+| Description | Keyword definition
 | Notes | Any notes pertaining to this keyword and/or value
