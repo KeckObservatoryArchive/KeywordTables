@@ -1,7 +1,12 @@
 # KeywordTables
 Instrument keyword definitions and paramaters
 
-Tab-separated files with the following columns:
+These files are used to:
+* Create a configuration file at WMKO for creation of metadata tables and verification of data types
+* Create the database tables at NExScI
+* ...
+
+The files are saved as tab-separated columns with the following information:
 
 | Keyword | Keyword Name |
 | ------- | ------------ |
