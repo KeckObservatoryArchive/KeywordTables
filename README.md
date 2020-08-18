@@ -22,6 +22,7 @@ The files are saved as tab-separated columns with the following information:
 | Mincol | Minimum allowed value for the keyword
 | Maxcol | Maximum allowed value for the keyword
 | Discrete Values | Comma-separated list of allowed values for the keyword
+| Metadata | Include in meatadata sent from WMKO to NExScI
 | UI | This keyword is used in the KOA UI
 | Calib | This keyword is used for calibration association
 | Description | Keyword definition
