@@ -18,6 +18,7 @@ The files are saved as tab-separated columns with the following information:
 | Nulls Allowed? | Are nulls allowed for this keyword?
 | Validate Format? | Does the value match the data type for this keyword?
 | Check Values? | Verify data range (mincol, maxcol) and verify FITS value is the same as metadata value
+| Output Format | Format in the DDs and TAP schema
 | Mincol | Minimum allowed value for the keyword
 | Maxcol | Maximum allowed value for the keyword
 | Discrete Values | Comma-separated list of allowed values for the keyword
