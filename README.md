@@ -1,5 +1,5 @@
 # KeywordTables
-Instrument keyword definitions and paramaters
+These tables contain definitions and paramaters for all archived instrument keywords and any additional database information added during archiving of FITS data.
 
 These files are used to:
 * Create a configuration file at WMKO for creation of metadata tables and verification of data types
