@@ -159,7 +159,7 @@ FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			flatlamp 6
 FLAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			imaging flatlamp	
 FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			spectroscopy flatlamp	
 FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			focal station	
-FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N					Y				
+FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N					Y			Telescope focal station	
 FOCUSDIF	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus difference	
 FOCUSMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			focus mode	
 FOCUSOFF	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus offset	
@@ -321,7 +321,7 @@ ROTA2TOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 2 total offset
 ROTATALG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator algorithm	
 ROTATCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator calibration status	
 ROTATCMT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator comment	
-ROTATDCS	DEIMOS	char		VARCHAR2(8 BYTE)	8	Y	Y	N					Y				
+ROTATDCS	DEIMOS	char		VARCHAR2(8 BYTE)	8	Y	Y	N					Y			rotator DCS control permission	
 ROTATFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator fiducial	
 ROTATMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator mode	
 ROTATNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator named position	
