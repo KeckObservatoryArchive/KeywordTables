@@ -1,9 +1,9 @@
 Keyword	Source	Data Type	Unit	DB Data Type	Size	Nulls Allowed	Validate Format	Check Values	Output Format	Mincol	Maxcol	Discrete Values	Metadata	UI	Calib	Description	Notes
 KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y					Y	Y		KOA data filename	
-OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Copy of DATAFILE	May have to add .fits to DATAFILE
-PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		WMKO program ID	
+OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Copy of DATAFILE keyword value	
+PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		WMKO assigned program identification code	
 PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Program institution	
-PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Program PI	
+PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Program principal investigator	
 PROGTITL	KOA	char		VARCHAR2(248 BYTE)	248	Y	Y	N					Y	Y		Program title	
 KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y				"fcscal, polcal, bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus"	Y	Y		KOA image type (from OBSTYPE?)	
 CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Will always be set to DEIMOS	
@@ -25,10 +25,10 @@ DETSEC13	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (f
 DETSEC14	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 14 DETSEC)	
 DETSEC15	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 15 DETSEC)	
 DETSEC16	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 16 DETSEC)	
-DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N					Y			"CCD pixel scale, dispersion (arcsec/pixel)"	Get with Luca/Carlos to determine equation
-DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Date of DQA run	
-DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			DQA version number	
-FCSKOAID	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			KOAID of associated Flexure Compensation System file	See IDL source
+DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N					Y			"CCD pixel scale, dispersion (arcsec/pixel)"	
+DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Date of processing for archiving	
+DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Version of KOA processing software	
+FCSKOAID	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			KOAID of associated Flexure Compensation System file	
 FILTER	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y	Y		Filter name (copied from DWFILNAM)	
 GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N					Y			FWHM of guide star	
 GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			UT of GUIDFWHM value	
@@ -40,7 +40,7 @@ PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y		0	9999		Y			Proprietary period
 SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y					Y			WMKO observing schedule semester	
 SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N					Y			"CCD pixel scale, spatial (arcsec/pixel)"	
 SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Nominal spectral resolution	Get with Luca/Carlos to calculate
-UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y	Y		Copy of UTC	
+UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y	Y		Universal time (copy of UTC)	
 WAVEBLUE	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y	Y		Blue end wavelength	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
 WAVECNTR	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y			Central wavelength	IM: 4000-10500 and use filter ranges/cutoffs
 WAVERED	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y	Y		Red end wavelength	Using grating to determine range
@@ -466,7 +466,7 @@ UTBP15V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +15V raw value
 UTBP30V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +30V raw value	
 UTBP5V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +5V raw value	
 UTBTEMP	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board temperature	
-UTC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y			UTC	
+UTC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y			Coordinated universal time	
 UTC-END	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			UTC end time	
 VIDOFF1	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 1	
 VIDOFF10	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 10	
@@ -484,3 +484,10 @@ VIDOFF6	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 6
 VIDOFF7	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 7	
 VIDOFF8	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 8	
 VIDOFF9	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 9	
+CRA	NExScI	char		VARCHAR2(11)	11								N			Original character string RA before conversion to Eq2000	
+CDEC	NExScI	char		VARCHAR2(11)	11								N			Original character string DEC before conversion to Eq2000	
+L0_INGTIME	NExScI	char		TIMESTAMP	19								N			Time of metadata ingestion	
+UTDATETIME	NExScI	char		TIMESTAMP	11								N			Combined DATE_OBS and UT as a timestamp	
+FILEHAND	NExScI	char		VARCHAR2(151)	151								N			Path to the file in the archive	
+FILEURL	NExScI	char		VARCHAR2(151)	151								N			URL to file in the archive	
+SEMID	NExScI	char		VARCHAR2(21)	21								N			SEMESTER and PROGID	
