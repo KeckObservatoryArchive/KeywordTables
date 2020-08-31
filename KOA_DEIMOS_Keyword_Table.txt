@@ -1,493 +1,493 @@
 Keyword	Source	Data Type	Unit	DB Data Type	Size	Nulls Allowed	Validate Format	Check Values	Output Format	Mincol	Maxcol	Discrete Values	Metadata	UI	Calib	Description	Notes
-KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y					Y	Y		KOA data filename	
-OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Copy of DATAFILE keyword value	
-PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		WMKO assigned program identification code	
-PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Program institution	
-PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N					Y	Y		Program principal investigator	
-PROGTITL	KOA	char		VARCHAR2(248 BYTE)	248	Y	Y	N					Y	Y		Program title	
-KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y				"fcscal, polcal, bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus"	Y	Y		KOA image type (from OBSTYPE?)	
-CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Will always be set to DEIMOS	
-OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N				"longslit, mos, image, unknown"	Y	Y		"Observation mode of this FITS file (longslit, mos, image, unknown)"	
-DATLEVEL	KOA	integer		"NUMBER(*,0)"	8	Y	Y	N					Y			Data reduction level (0 = raw)	
-DETSEC01	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 1 DETSEC)	
-DETSEC02	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 2 DETSEC)	
-DETSEC03	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 3 DETSEC)	
-DETSEC04	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 4 DETSEC)	
-DETSEC05	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 5 DETSEC)	
-DETSEC06	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 6 DETSEC)	
-DETSEC07	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 7 DETSEC)	
-DETSEC08	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 8 DETSEC)	
-DETSEC09	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 9 DETSEC)	
-DETSEC10	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 10 DETSEC)	
-DETSEC11	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 11 DETSEC)	
-DETSEC12	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 12 DETSEC)	
-DETSEC13	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 13 DETSEC)	
-DETSEC14	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 14 DETSEC)	
-DETSEC15	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 15 DETSEC)	
-DETSEC16	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Mosaic detector section (from HDU 16 DETSEC)	
-DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N					Y			"CCD pixel scale, dispersion (arcsec/pixel)"	
-DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Date of processing for archiving	
-DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Version of KOA processing software	
-FCSKOAID	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			KOAID of associated Flexure Compensation System file	
-FILTER	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y	Y		Filter name (copied from DWFILNAM)	
-GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N					Y			FWHM of guide star	
-GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			UT of GUIDFWHM value	
-MJD 	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Numeric version of MJD-OBS	
-NEXTEN	KOA	integer		"NUMBER(*,0)"	16	N	Y	N					Y			Number of image extensions (HDUs)	Use astropy to determine # of image extensions and populate keyword with that number
-NPIXSAT	KOA	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			Number of pixels above saturation in mosaic	
-OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			Observing assistant	
-PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y		0	9999		Y			Proprietary period	
-SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y					Y			WMKO observing schedule semester	
-SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N					Y			"CCD pixel scale, spatial (arcsec/pixel)"	
-SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Nominal spectral resolution	Get with Luca/Carlos to calculate
-UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y	Y		Universal time (copy of UTC)	
-WAVEBLUE	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y	Y		Blue end wavelength	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
-WAVECNTR	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y			Central wavelength	IM: 4000-10500 and use filter ranges/cutoffs
-WAVERED	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N		4000	11000		Y	Y		Red end wavelength	Using grating to determine range
-WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Dome humidity at WXTIME	
-WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Dome temperature at WXTIME	
-WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Dewpoint at WXTIME	
-WXOUTHUM	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Outside humidity at WXTIME	
-WXOUTTMP	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Outside temperature at WXTIME	
-WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Pressure at WXTIME	
-WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Time of weather measurements	
-WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Wind directionat WXTIME	
-WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N					Y			Wind speed at WXTIME	
-ABFREQ	DEIMOS	integer	Hz	"NUMBER(*,0)"	16	Y	Y	N					Y			anti-blooming frequency	
-AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N					Y			air mass	
-AIRPRESS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			air pressure status	
-AMPLIST	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			amplifier list	
-AMPMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			amplifier mode	
-AMPPSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			amplifier size	
-ANTIBLM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			anti-blooming status	
-AUTOPANE	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			autopane window	
-AUTOSHUT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			autoshutter 	
-AXESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			telescope tracking status	
-AZ	DCS	double		FLOAT(126)	16	Y	Y	N					Y			azimuth	
-BAYBFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			electronic bay B fan	
-BAYCFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			electronic bay C fan	
-BINNING	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			binning	
-BITPIX	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of bits per pixel	
-BSCALE	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			default scaling factor	
-BZERO	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			offset data range with data range of unsigned short	
-CALOCAL	DCS	double		FLOAT(126)	16	Y	Y	N					Y			collimation local (azimuth)	
-CCDGAIN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			gain	
-CCDPSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pixel size	
-CCDSPEED	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			readout speed	
-CCDSUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			ccd on-chip summing	
-CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N					Y			collimation local (elevation)	
-CHECKSUM	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			HDU checksum	
-COOLFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			cooling fan	
-COOLFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			cooling flow	
-CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			current instrument	
-DARKTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			fraction of moon illumination	
-DATASUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			data unit checksum	
-DATE	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			file creation date	
-DATE_BEG	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			beginning datetime of exposure	
-DATE_END	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			end datetime of exposure	
-DATE-OBS	DCS	char		DATE	16	N	Y	Y					Y	Y		observing date	
-DCSSTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			drive control system status	
-DCSVERS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			drive control system version	
-DDEC	DCS	double		FLOAT(126)	16	Y	Y	N					Y			differential tracking rate (dec)	
-DEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y	Y		declination	
-DETCNFID	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			mosaic detector configuration id	
-DETECTOR	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			detector	
-DETLSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			detector size	
-DOMEPOSN	DCS	double		FLOAT(126)	16	Y	Y	N					Y			dome position	
-DOMESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			dome status	
-DRA	DCS	double		FLOAT(126)	16	Y	Y	N					Y			differential tracking rate (RA)	
-DTRACK	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			differential tracking status	
-DWFILCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Filter wheel calibration state	
-DWFILFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Filter wheel fiducial light source	
-DWFILMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Filter wheel control mode	
-DWFILNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Filter name	
-DWFILORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			Filter wheel ordinal position (conversion of DWFILRAW)	
-DWFILRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			Filter wheel raw position (stage encoder counts)	
-DWFILSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Filter status	
-DWFILTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			Filter torque	
-DWFILTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			Filter target	
-DWFILVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			Filter wheel position (degrees)	
-DWFOCCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera focus status	
-DWFOCFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera focus fiducial status	
-DWFOCMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera focus mode	
-DWFOCNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera focus named position	
-DWFOCORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera focus ordinal position	
-DWFOCRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera focus raw position	
-DWFOCSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera focus status	
-DWFOCTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera focus torque	
-DWFOCTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera focus target	
-DWFOCVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera focus value	
-DWXL8CAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera translation stage status	
-DWXL8FOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera translation stage fiducial status	
-DWXL8MOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera translation stage mode	
-DWXL8NAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera translation stage named position	
-DWXL8ORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera translation stage ordinal position	
-DWXL8RAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera translation stage raw position	
-DWXL8STA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			camera translation stage status	
-DWXL8TOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera translation stage torque	
-DWXL8TRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			camera translation stage target	
-DWXL8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera translation stage value	
-EL	DCS	double		FLOAT(126)	16	Y	Y	N					Y			elevation	
-ELAPTIME	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	Y		0	12500		Y	Y		elapsed time	
-EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N					Y	Y		equinox	
-ERASECNT	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			erase count	
-ERASLINE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			erase line	
-EXPTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			exposure time	
-EXTEND	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			FITS extensions	
-FCSCCNOX	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			FCS crosscorrection conflicts (X-axis)	
-FCSCCNOY	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			FCS crosscorrection conflicts (Y-axis)	
-FCSCUSEL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			FCS active CuAr lamp	
-FCSEXNOX	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			FCS excessive correction (X-axis)	
-FCSEXNOY	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			FCS excessive correction (Y-axis)	
-FCSIMGFI	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			FCS image file	
-FCSMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			FCS mode	
-FCSREFFI	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			FCS reference image	
-FCSRMSX1	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			"FCS crosscorrection RMS (X-axis, detector 1)"	
-FCSRMSX2	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			"FCS crosscorrection RMS (X-axis, detector 2)"	
-FCSRMSXD	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			FCS correction difference (X-axis)	
-FCSRMSXM	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			FCS correction mean (X-axis)	
-FCSRMSY1	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			"FCS crosscorrection RMS (Y-axis, detector 1)"	
-FCSRMSY2	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			"FCS crosscorrection RMS (Y-axis, detector 2)"	
-FCSRMSYD	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			FCS correction difference (Y-axis)	
-FCSRMSYM	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			FCS correction mean (Y-axis)	
-FCSSKIPS	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			FCS skip counter value	
-FCSTRACK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			FCS tracking status	
-FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			flatlamp 3	
-FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			flatlamp 4	
-FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			flatlamp 5	
-FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			flatlamp 6	
-FLAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			imaging flatlamp	
-FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			spectroscopy flatlamp	
-FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			focal station	
-FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N					Y			Telescope focal station	
-FOCUSDIF	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus difference	
-FOCUSMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			focus mode	
-FOCUSOFF	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus offset	
-FOCUSRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			focus raw encoder position	
-FOCUSTOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			focus target offset	
-FOCUSTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			focus target	
-FOCUSTUS	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			focus target user offset	
-FOCUSUSR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus user value	
-FOCUSVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			focus value	
-FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			reference frame	
-FRAMENO	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y	Y		frame number	
-G3TLTCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 3 tilt status	
-G3TLTENC	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt encoder	
-G3TLTFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 3 tilt fiducial	
-G3TLTMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 3 tilt mode	
-G3TLTNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 3 tilt named position	
-G3TLTNOM	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt nominal position	
-G3TLTOFF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt offset	
-G3TLTORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt ordinal position	
-G3TLTRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt raw position	
-G3TLTSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 3 tilt status	
-G3TLTTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 3 tilt torque	
-G3TLTTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 3 tilt target	
-G3TLTVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 3 tilt value	
-G3TLTWAV	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 3 tilt wavelength	
-G4TLTCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 4 tilt status	
-G4TLTENC	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt encoder	
-G4TLTFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 4 tilt fiducial	
-G4TLTMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 4 tilt mode	
-G4TLTNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 4 tilt named position	
-G4TLTNOM	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt nominal position	
-G4TLTOFF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt offset	
-G4TLTORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt ordinal position	
-G4TLTRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt raw position	
-G4TLTSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating 4 tilt status	
-G4TLTTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 4 tilt torque	
-G4TLTTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating 4 tilt target	
-G4TLTVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 4 tilt value	
-G4TLTWAV	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating 4 tilt wavelength	
-GCLP1POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 1 position	
-GCLP1TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 1 target	
-GCLP2POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 2 position	
-GCLP2TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 2 target	
-GCLP4POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 4 position	
-GCLP4TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 4 target	
-GCLP5POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 5 position	
-GCLP5TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating clamp 5 target	
-GRATEFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating fiducial	
-GRATENAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating name	
-GRATEPIN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating pin	
-GRATEPOS	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating position	
-GRATESTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating status	
-GRATETRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating target	
-GRSELCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating selector status	
-GRSELFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating selector fiducial	
-GRSELMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating selector mode	
-GRSELNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating selector named position	
-GRSELORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating selector ordinal position	
-GRSELRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating selector raw position	
-GRSELSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			grating selector status	
-GRSELTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating selector torque	
-GRSELTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			grating selector target	
-HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			hour angle	
-HATCHPOS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			hatch position	
-HATCHTRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			hatch target	
-HPLOGTIM	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			datetime stamp of last datalogger scan	
-IMTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			image type	
-INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N					Y			instrument angle	
-INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			instrument flip	
-INSTRUME	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y	Y		intrument	
-IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			ion pump 1 status	
-IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			ion pump 2 status	
-KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			keep prescan pixels	
-LAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			arclamp status	
-LATITUDE	DCS	double		FLOAT(126)	16	Y	Y	N					Y			latitude	
-LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			local sidereal time	
-MJD-OBS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			MJD of observation	
-MOSMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			multi-object mode	
-NAXIS	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			naxis	
-NSUBINT	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of sub integrations	
-NVIDINP	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of video inputs	
-OBJECT	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			object	
-OBSERVER	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			observer	
-OBSTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			observation type	
-OUTDIR	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			data output directory	
-OUTFILE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			output file	
-OVRFLUSH	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			postscan flush lines	
-PANE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane	
-PANE1	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 1	
-PANE10	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 10	
-PANE11	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 11	
-PANE12	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 12	
-PANE13	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 13	
-PANE14	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 14	
-PANE15	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 15	
-PANE16	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 16	
-PANE2	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 2	
-PANE3	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 3	
-PANE4	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 4	
-PANE5	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 5	
-PANE6	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 6	
-PANE7	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 7	
-PANE8	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 8	
-PANE9	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pane 9	
-PANEFITS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			FITS pane	
-PANELIST	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			pane list	
-PANERROR	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			pane error	
-PARANG	DCS	double		FLOAT(126)	16	Y	Y	N					Y			parallactic angle	
-PARANTEL	DCS	double		FLOAT(126)	16	Y	Y	N					Y			parallactic angle of telescope	
-PMFM	DCS	double		FLOAT(126)	16	Y	Y	N					Y			primary mirror focus mode	
-PONAME	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name	
-PONAME1	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 1	
-PONAME2	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 2	
-PONAME3	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 3	
-PONAME4	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 4	
-PONAME5	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 5	
-PONAME6	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 6	
-PONAME7	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 7	
-PONAME8	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 8	
-PONAME9	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			pointing origin name 9	
-POSTLINE	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			postflush line	
-POSTPIX	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			postpixels	
-POXOFF	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x offset	
-POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position	
-POXPOS1	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 1	
-POXPOS2	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 2	
-POXPOS3	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 3	
-POXPOS4	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 4	
-POXPOS5	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 5	
-POXPOS6	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 6	
-POXPOS7	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 7	
-POXPOS8	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 8	
-POXPOS9	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin x position 9	
-POYOFF	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y offset	
-POYPOS	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position	
-POYPOS1	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 1	
-POYPOS2	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 2	
-POYPOS3	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 3	
-POYPOS4	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 4	
-POYPOS5	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 5	
-POYPOS6	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 6	
-POYPOS7	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 7	
-POYPOS8	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 8	
-POYPOS9	DCS	double		FLOAT(126)	16	Y	Y	N					Y			pointing origin y position 9	
-PRECOL	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of unbinned prescan pixels per amplifier	
-PREFLUSH	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of prescan lines to flush	
-PRELINE	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of prescan lines	
-PREROW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			number of prescan rows	
-PROGNAME	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			Observer assigned program ID	
-RA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y	Y		right ascension	
-ROTA1GOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 1 gap offset	
-ROTA1IOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 1 index offset	
-ROTA1QOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 1 quality offset	
-ROTA1TOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 1 total offset	
-ROTA2GOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 2 gap offset	
-ROTA2IOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 2 index offset	
-ROTA2QOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 2 quality offset	
-ROTA2TOF	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator 2 total offset	
-ROTATALG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator algorithm	
-ROTATCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator calibration status	
-ROTATCMT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator comment	
-ROTATDCS	DEIMOS	char		VARCHAR2(8 BYTE)	8	Y	Y	N					Y			rotator DCS control permission	
-ROTATFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator fiducial	
-ROTATMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator mode	
-ROTATNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator named position	
-ROTATORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator ordinal position	
-ROTATSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator status	
-ROTATSTQ	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			rotator smoothed torque	
-ROTATTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			rotator torque	
-ROTATTRK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator tracking	
-ROTATTTK	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator time tracking	
-ROTATTVA	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			rotator value target	
-ROTATVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			rotator value	
-ROTATVEL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			rotator velocity	
-ROTBASE	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator base value	
-ROTDEST	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator destination	
-ROTERCNT	DCS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			rotator error count	
-ROTERRS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator error status	
-ROTMODE	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N					Y			rotator mode	
-ROTOFF	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator offset	
-ROTPDEST	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator physical destination	
-ROTPDSTS	DCS	double	degrees	FLOAT(126)	16	Y	Y	N					Y			rotator physical destination slow	
-ROTPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N					Y			rotator user position	
-ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N					Y			rotator physical position	
-ROTREFAN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N					Y			rotator reference angle	
-ROTSEL	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator selected	
-ROTSRVER	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator servo error	
-ROTSTST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			rotator status	
-ROTZERO	DCS	double		FLOAT(126)	16	Y	Y	N					Y			rotator zero point	
-ROWSHFT	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			row shift for subintegration	
-SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N					Y			secondary focus	
-SECTHETX	DCS	double		FLOAT(126)	16	Y	Y	N					Y			secondary angle X	
-SECTHETY	DCS	double		FLOAT(126)	16	Y	Y	N					Y			secondary angle Y	
-SHBLCLTM	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			shutter blade closing time	
-SHBLOPTM	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			shutter blade opening time	
-SHCLOCNT	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			shutter closing count	
-SHLATCLO	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			shutter closure latency	
-SHLATOPN	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			shutter opening latency	
-SHOPNCNT	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			shutter opening count	
-SIMPLE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			simple	
-SIMULATE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			simulation mode	
-SLARMPOS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask arm position	
-SLARMTRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask arm target	
-SLMSKBAR	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask barcode	
-SLMSKCAS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask calibration status	
-SLMSKFOO	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask foot state	
-SLMSKFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask fiducial	
-SLMSKLOC	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N					Y			slitmask location	
-SLMSKMAL	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y			slitmask misaligned	
-SLMSKNAM	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y	Y		slitmask name	
-SLMSKPOS	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			slitmask position	
-SLMSKSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask status	
-SLMSKTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			slitmask target	
-SLSELCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask selector calibration status	
-SLSELFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask selector fiducial	
-SLSELMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask selector mode	
-SLSELNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask selector named position	
-SLSELORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			slitmask selector ordinal position	
-SLSELRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			slitmask selector raw position	
-SLSELSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			slitmask selector status	
-SLSELTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			slitmask selector torque	
-SLSELTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			slitmask selector target	
-ST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			sidereal time	
-TARGDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			target declination	
-TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target epoch	
-TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target equinox	
-TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			target frame	
-TARGNAME	DCS	char		VARCHAR2(72 BYTE)	72	Y	Y	N					Y	Y		target name	
-TARGPLAX	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target parallax	
-TARGPMDC	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target proper motion dec	
-TARGPMRA	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target proper motion RA	
-TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			target RA	
-TARGRADV	DCS	double		FLOAT(126)	16	Y	Y	N					Y			target radial velocity	
-TBAR1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 1	
-TBAR2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 2	
-TBAR3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 3	
-TBAR4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 4	
-TBAR5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 5	
-TBAR6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 6	
-TBAR7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 7	
-TBAR8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			temperature sensor 8	
-TCAM1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 1	
-TCAM2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 2	
-TCAM3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 3	
-TCAM4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 4	
-TCAM5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 5	
-TCAM6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 6	
-TCAM7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 7	
-TCAM8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			camera temperature sensor 8	
-TDIS1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 1	
-TDIS2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 2	
-TDIS3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 3	
-TDIS4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 4	
-TDIS5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 5	
-TDIS6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 6	
-TDIS7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 7	
-TDIS8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			driver disk temperature sensor 8	
-TELESCOP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			telescope	
-TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N					Y			telescope focus	
-TEMPDET	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			detector temperature	
-TEMPSET	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			detector temperature setpoint	
-TGRA1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating temperature sensor 1	
-TGRA2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating temperature sensor 2	
-TGRA3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			grating temperature sensor 3	
-TMIRRNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			tent mirror named position	
-TMIRRORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			tent mirror ordinal position	
-TMIRRRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			tent mirror raw position	
-TMIRRTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			tent mirror target	
-TMIRRVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			tent mirror value	
-TMPCINC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N					Y			coolant in temperature	
-TMPCOOLC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N					Y			coolant temperature	
-TMPCOUTC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N					Y			coolant out temperature	
-TMPTVCOC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N					Y			guider coolant temperature	
-TTIME	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			exposure time	
-TUBETEMP	DCS	double		FLOAT(126)	16	Y	Y	N					Y			tube temperature	
-TVA2SPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider power status	
-TVCAMPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider camera power status	
-TVCOFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider coolant flow	
-TVFILCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider filter calibration status	
-TVFILFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider filter fiducial	
-TVFILMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider filter mode	
-TVFILNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider filter named position	
-TVFILORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider filter ordinal position	
-TVFILRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider filter raw position	
-TVFILSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider filter status	
-TVFILTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			guider filter torque	
-TVFILTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider filter target	
-TVFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider flip	
-TVFOCCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider focus calibration status	
-TVFOCFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider focus fiducial	
-TVFOCMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider focus mode	
-TVFOCNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider focus named position	
-TVFOCORD	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider focus ordinal position	
-TVFOCRAW	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider focus raw position	
-TVFOCSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider focus status	
-TVFOCTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			guider focus torque	
-TVFOCTRG	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			guider focus target	
-TVPOWSET	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider power set	
-TVS2FPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			guider power	
-UTB15VEN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			utility board 15V enabled	
-UTB30VEN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			utility board 30V enabled	
-UTBM15V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board -15V raw value	
-UTBP15V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +15V raw value	
-UTBP30V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +30V raw value	
-UTBP5V	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board +5V raw value	
-UTBTEMP	DEIMOS	double		FLOAT(126)	16	Y	Y	N					Y			utility board temperature	
-UTC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y					Y			Coordinated universal time	
-UTC-END	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N					Y			UTC end time	
-VIDOFF1	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 1	
-VIDOFF10	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 10	
-VIDOFF11	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 11	
-VIDOFF12	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 12	
-VIDOFF13	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 13	
-VIDOFF14	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 14	
-VIDOFF15	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 15	
-VIDOFF16	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 16	
-VIDOFF2	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 2	
-VIDOFF3	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 3	
-VIDOFF4	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 4	
-VIDOFF5	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 5	
-VIDOFF6	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 6	
-VIDOFF7	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 7	
-VIDOFF8	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 8	
-VIDOFF9	DEIMOS	integer		"NUMBER(*,0)"	16	Y	Y	N					Y			video offset amplifier 9	
-CRA	NExScI	char		VARCHAR2(11)	11								N			Original character string RA before conversion to Eq2000	
-CDEC	NExScI	char		VARCHAR2(11)	11								N			Original character string DEC before conversion to Eq2000	
-L0_INGTIME	NExScI	char		TIMESTAMP	19								N			Time of metadata ingestion	
-UTDATETIME	NExScI	char		TIMESTAMP	11								N			Combined DATE_OBS and UT as a timestamp	
-FILEHAND	NExScI	char		VARCHAR2(151)	151								N			Path to the file in the archive	
-FILEURL	NExScI	char		VARCHAR2(151)	151								N			URL to file in the archive	
-SEMID	NExScI	char		VARCHAR2(21)	21								N			SEMESTER and PROGID	
+KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				Y	Y		KOA data filename	
+OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				Y	Y		Copy of DATAFILE keyword value	
+PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				Y	Y		WMKO assigned program identification code	
+PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				Y	Y		Program institution	
+PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				Y	Y		Program principal investigator	
+PROGTITL	KOA	char		VARCHAR2(248 BYTE)	248	Y	Y	N	248s				Y	Y		Program title	
+KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s			fcscal, polcal, bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus	Y	Y		KOA image type (from OBSTYPE?)	
+CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Will always be set to DEIMOS	
+OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s			longslit, mos, image, unknown	Y	Y		Observation mode of this FITS file (longslit, mos, image, unknown)	
+DATLEVEL	KOA	integer		NUMBER(*,0)	8	Y	Y	N	11d				Y			Data reduction level (0 = raw)	
+DETSEC01	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 1 DETSEC)	
+DETSEC02	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 2 DETSEC)	
+DETSEC03	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 3 DETSEC)	
+DETSEC04	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 4 DETSEC)	
+DETSEC05	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 5 DETSEC)	
+DETSEC06	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 6 DETSEC)	
+DETSEC07	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 7 DETSEC)	
+DETSEC08	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 8 DETSEC)	
+DETSEC09	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 9 DETSEC)	
+DETSEC10	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 10 DETSEC)	
+DETSEC11	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 11 DETSEC)	
+DETSEC12	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 12 DETSEC)	
+DETSEC13	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 13 DETSEC)	
+DETSEC14	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 14 DETSEC)	
+DETSEC15	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 15 DETSEC)	
+DETSEC16	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Mosaic detector section (from HDU 16 DETSEC)	
+DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			CCD pixel scale, dispersion (arcsec/pixel)	
+DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Date of processing for archiving	
+DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Version of KOA processing software	
+FCSKOAID	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			KOAID of associated Flexure Compensation System file	
+FILTER	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y	Y		Filter name (copied from DWFILNAM)	
+GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FWHM of guide star	
+GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			UT of GUIDFWHM value	
+MJD	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Numeric version of MJD-OBS	
+NEXTEN	KOA	integer		NUMBER(*,0)	16	N	Y	N	11d				Y			Number of image extensions (HDUs)	Use astropy to determine # of image extensions and populate keyword with that number
+NPIXSAT	KOA	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			Number of pixels above saturation in mosaic	
+OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			Observing assistant	
+PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	11d	0	9999		Y			Proprietary period	
+SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y	8s				Y			WMKO observing schedule semester	
+SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N	12.6f				Y			CCD pixel scale, spatial (arcsec/pixel)	
+SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Nominal spectral resolution	Get with Luca/Carlos to calculate
+UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	16s				Y	Y		Universal time (copy of UTC)	
+WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d	4000	11000		Y	Y		Blue end wavelength	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
+WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d	4000	11000		Y			Central wavelength	IM: 4000-10500 and use filter ranges/cutoffs
+WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d	4000	11000		Y	Y		Red end wavelength	Using grating to determine range
+WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Dome humidity at WXTIME	
+WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Dome temperature at WXTIME	
+WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Dewpoint at WXTIME	
+WXOUTHUM	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Outside humidity at WXTIME	
+WXOUTTMP	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Outside temperature at WXTIME	
+WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Pressure at WXTIME	
+WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Time of weather measurements	
+WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Wind directionat WXTIME	
+WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Wind speed at WXTIME	
+ABFREQ	DEIMOS	integer	Hz	NUMBER(*,0)	16	Y	Y	N	11d				Y			anti-blooming frequency	
+AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			air mass	
+AIRPRESS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			air pressure status	
+AMPLIST	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			amplifier list	
+AMPMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			amplifier mode	
+AMPPSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			amplifier size	
+ANTIBLM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			anti-blooming status	
+AUTOPANE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			autopane window	
+AUTOSHUT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			autoshutter	
+AXESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			telescope tracking status	
+AZ	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			azimuth	
+BAYBFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			electronic bay B fan	
+BAYCFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			electronic bay C fan	
+BINNING	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			binning	
+BITPIX	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of bits per pixel	
+BSCALE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			default scaling factor	
+BZERO	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			offset data range with data range of unsigned short	
+CALOCAL	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			collimation local (azimuth)	
+CCDGAIN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			gain	
+CCDPSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pixel size	
+CCDSPEED	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			readout speed	
+CCDSUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			ccd on-chip summing	
+CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			collimation local (elevation)	
+CHECKSUM	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			HDU checksum	
+COOLFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			cooling fan	
+COOLFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			cooling flow	
+CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			current instrument	
+DARKTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			fraction of moon illumination	
+DATASUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			data unit checksum	
+DATE	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	16s				Y			file creation date	
+DATE_BEG	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			beginning datetime of exposure	
+DATE_END	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			end datetime of exposure	
+DATE-OBS	DCS	char		DATE	16	N	Y	Y	32s				Y	Y		observing date	
+DCSSTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			drive control system status	
+DCSVERS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			drive control system version	
+DDEC	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			differential tracking rate (dec)	
+DEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	12.6f				Y	Y		declination	
+DETCNFID	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			mosaic detector configuration id	
+DETECTOR	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			detector	
+DETLSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			detector size	
+DOMEPOSN	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			dome position	
+DOMESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			dome status	
+DRA	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			differential tracking rate (RA)	
+DTRACK	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			differential tracking status	
+DWFILCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Filter wheel calibration state	
+DWFILFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Filter wheel fiducial light source	
+DWFILMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Filter wheel control mode	
+DWFILNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Filter name	
+DWFILORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			Filter wheel ordinal position (conversion of DWFILRAW)	
+DWFILRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			Filter wheel raw position (stage encoder counts)	
+DWFILSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Filter status	
+DWFILTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Filter torque	
+DWFILTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			Filter target	
+DWFILVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			Filter wheel position (degrees)	
+DWFOCCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera focus status	
+DWFOCFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera focus fiducial status	
+DWFOCMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera focus mode	
+DWFOCNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera focus named position	
+DWFOCORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera focus ordinal position	
+DWFOCRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera focus raw position	
+DWFOCSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera focus status	
+DWFOCTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera focus torque	
+DWFOCTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera focus target	
+DWFOCVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera focus value	
+DWXL8CAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera translation stage status	
+DWXL8FOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera translation stage fiducial status	
+DWXL8MOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera translation stage mode	
+DWXL8NAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera translation stage named position	
+DWXL8ORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera translation stage ordinal position	
+DWXL8RAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera translation stage raw position	
+DWXL8STA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			camera translation stage status	
+DWXL8TOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera translation stage torque	
+DWXL8TRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			camera translation stage target	
+DWXL8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera translation stage value	
+EL	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			elevation	
+ELAPTIME	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	Y	11d	0	12500		Y	Y		elapsed time	
+EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y	Y		equinox	
+ERASECNT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			erase count	
+ERASLINE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			erase line	
+EXPTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			exposure time	
+EXTEND	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			FITS extensions	
+FCSCCNOX	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			FCS crosscorrection conflicts (X-axis)	
+FCSCCNOY	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			FCS crosscorrection conflicts (Y-axis)	
+FCSCUSEL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			FCS active CuAr lamp	
+FCSEXNOX	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			FCS excessive correction (X-axis)	
+FCSEXNOY	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			FCS excessive correction (Y-axis)	
+FCSIMGFI	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			FCS image file	
+FCSMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			FCS mode	
+FCSREFFI	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			FCS reference image	
+FCSRMSX1	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS crosscorrection RMS (X-axis, detector 1)	
+FCSRMSX2	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS crosscorrection RMS (X-axis, detector 2)	
+FCSRMSXD	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS correction difference (X-axis)	
+FCSRMSXM	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS correction mean (X-axis)	
+FCSRMSY1	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS crosscorrection RMS (Y-axis, detector 1)	
+FCSRMSY2	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS crosscorrection RMS (Y-axis, detector 2)	
+FCSRMSYD	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS correction difference (Y-axis)	
+FCSRMSYM	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			FCS correction mean (Y-axis)	
+FCSSKIPS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			FCS skip counter value	
+FCSTRACK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			FCS tracking status	
+FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			flatlamp 3	
+FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			flatlamp 4	
+FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			flatlamp 5	
+FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			flatlamp 6	
+FLAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			imaging flatlamp	
+FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			spectroscopy flatlamp	
+FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			focal station	
+FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N	48s				Y			Telescope focal station	
+FOCUSDIF	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			focus difference	
+FOCUSMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			focus mode	
+FOCUSOFF	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			focus offset	
+FOCUSRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			focus raw encoder position	
+FOCUSTOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			focus target offset	
+FOCUSTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			focus target	
+FOCUSTUS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			focus target user offset	
+FOCUSUSR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			focus user value	
+FOCUSVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			focus value	
+FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			reference frame	
+FRAMENO	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y	Y		frame number	
+G3TLTCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 3 tilt status	
+G3TLTENC	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt encoder	
+G3TLTFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 3 tilt fiducial	
+G3TLTMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 3 tilt mode	
+G3TLTNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 3 tilt named position	
+G3TLTNOM	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt nominal position	
+G3TLTOFF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt offset	
+G3TLTORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt ordinal position	
+G3TLTRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt raw position	
+G3TLTSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 3 tilt status	
+G3TLTTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 3 tilt torque	
+G3TLTTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 3 tilt target	
+G3TLTVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 3 tilt value	
+G3TLTWAV	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 3 tilt wavelength	
+G4TLTCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 4 tilt status	
+G4TLTENC	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt encoder	
+G4TLTFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 4 tilt fiducial	
+G4TLTMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 4 tilt mode	
+G4TLTNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 4 tilt named position	
+G4TLTNOM	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt nominal position	
+G4TLTOFF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt offset	
+G4TLTORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt ordinal position	
+G4TLTRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt raw position	
+G4TLTSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating 4 tilt status	
+G4TLTTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 4 tilt torque	
+G4TLTTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating 4 tilt target	
+G4TLTVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 4 tilt value	
+G4TLTWAV	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating 4 tilt wavelength	
+GCLP1POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 1 position	
+GCLP1TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 1 target	
+GCLP2POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 2 position	
+GCLP2TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 2 target	
+GCLP4POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 4 position	
+GCLP4TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 4 target	
+GCLP5POS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 5 position	
+GCLP5TRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating clamp 5 target	
+GRATEFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating fiducial	
+GRATENAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating name	
+GRATEPIN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating pin	
+GRATEPOS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating position	
+GRATESTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating status	
+GRATETRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating target	
+GRSELCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating selector status	
+GRSELFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating selector fiducial	
+GRSELMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating selector mode	
+GRSELNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating selector named position	
+GRSELORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating selector ordinal position	
+GRSELRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating selector raw position	
+GRSELSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			grating selector status	
+GRSELTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating selector torque	
+GRSELTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			grating selector target	
+HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			hour angle	
+HATCHPOS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			hatch position	
+HATCHTRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			hatch target	
+HPLOGTIM	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			datetime stamp of last datalogger scan	
+IMTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			image type	
+INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			instrument angle	
+INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			instrument flip	
+INSTRUME	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y	Y		intrument	
+IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			ion pump 1 status	
+IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			ion pump 2 status	
+KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			keep prescan pixels	
+LAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			arclamp status	
+LATITUDE	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			latitude	
+LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			local sidereal time	
+MJD-OBS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			MJD of observation	
+MOSMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			multi-object mode	
+NAXIS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			naxis	
+NSUBINT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of sub integrations	
+NVIDINP	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of video inputs	
+OBJECT	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			object	
+OBSERVER	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			observer	
+OBSTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			observation type	
+OUTDIR	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			data output directory	
+OUTFILE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			output file	
+OVRFLUSH	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			postscan flush lines	
+PANE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane	
+PANE1	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 1	
+PANE10	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 10	
+PANE11	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 11	
+PANE12	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 12	
+PANE13	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 13	
+PANE14	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 14	
+PANE15	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 15	
+PANE16	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 16	
+PANE2	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 2	
+PANE3	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 3	
+PANE4	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 4	
+PANE5	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 5	
+PANE6	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 6	
+PANE7	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 7	
+PANE8	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 8	
+PANE9	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pane 9	
+PANEFITS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			FITS pane	
+PANELIST	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			pane list	
+PANERROR	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			pane error	
+PARANG	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			parallactic angle	
+PARANTEL	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			parallactic angle of telescope	
+PMFM	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			primary mirror focus mode	
+PONAME	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name	
+PONAME1	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 1	
+PONAME2	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 2	
+PONAME3	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 3	
+PONAME4	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 4	
+PONAME5	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 5	
+PONAME6	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 6	
+PONAME7	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 7	
+PONAME8	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 8	
+PONAME9	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			pointing origin name 9	
+POSTLINE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			postflush line	
+POSTPIX	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			postpixels	
+POXOFF	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x offset	
+POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position	
+POXPOS1	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 1	
+POXPOS2	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 2	
+POXPOS3	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 3	
+POXPOS4	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 4	
+POXPOS5	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 5	
+POXPOS6	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 6	
+POXPOS7	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 7	
+POXPOS8	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 8	
+POXPOS9	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin x position 9	
+POYOFF	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y offset	
+POYPOS	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position	
+POYPOS1	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 1	
+POYPOS2	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 2	
+POYPOS3	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 3	
+POYPOS4	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 4	
+POYPOS5	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 5	
+POYPOS6	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 6	
+POYPOS7	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 7	
+POYPOS8	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 8	
+POYPOS9	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			pointing origin y position 9	
+PRECOL	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of unbinned prescan pixels per amplifier	
+PREFLUSH	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of prescan lines to flush	
+PRELINE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of prescan lines	
+PREROW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			number of prescan rows	
+PROGNAME	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			Observer assigned program ID	
+RA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	12.6f				Y	Y		right ascension	
+ROTA1GOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 1 gap offset	
+ROTA1IOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 1 index offset	
+ROTA1QOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 1 quality offset	
+ROTA1TOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 1 total offset	
+ROTA2GOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 2 gap offset	
+ROTA2IOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 2 index offset	
+ROTA2QOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 2 quality offset	
+ROTA2TOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator 2 total offset	
+ROTATALG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator algorithm	
+ROTATCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator calibration status	
+ROTATCMT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator comment	
+ROTATDCS	DEIMOS	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s				Y			rotator DCS control permission	
+ROTATFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator fiducial	
+ROTATMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator mode	
+ROTATNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator named position	
+ROTATORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator ordinal position	
+ROTATSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator status	
+ROTATSTQ	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator smoothed torque	
+ROTATTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator torque	
+ROTATTRK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator tracking	
+ROTATTTK	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator time tracking	
+ROTATTVA	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator value target	
+ROTATVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator value	
+ROTATVEL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator velocity	
+ROTBASE	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator base value	
+ROTDEST	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator destination	
+ROTERCNT	DCS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			rotator error count	
+ROTERRS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator error status	
+ROTMODE	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s				Y			rotator mode	
+ROTOFF	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator offset	
+ROTPDEST	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator physical destination	
+ROTPDSTS	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator physical destination slow	
+ROTPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator user position	
+ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator physical position	
+ROTREFAN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator reference angle	
+ROTSEL	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator selected	
+ROTSRVER	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator servo error	
+ROTSTST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			rotator status	
+ROTZERO	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			rotator zero point	
+ROWSHFT	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			row shift for subintegration	
+SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			secondary focus	
+SECTHETX	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			secondary angle X	
+SECTHETY	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			secondary angle Y	
+SHBLCLTM	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			shutter blade closing time	
+SHBLOPTM	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			shutter blade opening time	
+SHCLOCNT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			shutter closing count	
+SHLATCLO	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			shutter closure latency	
+SHLATOPN	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			shutter opening latency	
+SHOPNCNT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			shutter opening count	
+SIMPLE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			simple	
+SIMULATE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			simulation mode	
+SLARMPOS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask arm position	
+SLARMTRG	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask arm target	
+SLMSKBAR	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask barcode	
+SLMSKCAS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask calibration status	
+SLMSKFOO	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask foot state	
+SLMSKFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask fiducial	
+SLMSKLOC	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s				Y			slitmask location	
+SLMSKMAL	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y			slitmask misaligned	
+SLMSKNAM	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y	Y		slitmask name	
+SLMSKPOS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			slitmask position	
+SLMSKSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask status	
+SLMSKTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			slitmask target	
+SLSELCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask selector calibration status	
+SLSELFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask selector fiducial	
+SLSELMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask selector mode	
+SLSELNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask selector named position	
+SLSELORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			slitmask selector ordinal position	
+SLSELRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			slitmask selector raw position	
+SLSELSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			slitmask selector status	
+SLSELTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			slitmask selector torque	
+SLSELTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			slitmask selector target	
+ST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			sidereal time	
+TARGDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			target declination	
+TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target epoch	
+TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target equinox	
+TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			target frame	
+TARGNAME	DCS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s				Y	Y		target name	
+TARGPLAX	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target parallax	
+TARGPMDC	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target proper motion dec	
+TARGPMRA	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target proper motion RA	
+TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			target RA	
+TARGRADV	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			target radial velocity	
+TBAR1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 1	
+TBAR2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 2	
+TBAR3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 3	
+TBAR4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 4	
+TBAR5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 5	
+TBAR6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 6	
+TBAR7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 7	
+TBAR8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			temperature sensor 8	
+TCAM1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 1	
+TCAM2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 2	
+TCAM3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 3	
+TCAM4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 4	
+TCAM5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 5	
+TCAM6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 6	
+TCAM7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 7	
+TCAM8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			camera temperature sensor 8	
+TDIS1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 1	
+TDIS2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 2	
+TDIS3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 3	
+TDIS4VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 4	
+TDIS5VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 5	
+TDIS6VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 6	
+TDIS7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 7	
+TDIS8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			driver disk temperature sensor 8	
+TELESCOP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			telescope	
+TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			telescope focus	
+TEMPDET	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			detector temperature	
+TEMPSET	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			detector temperature setpoint	
+TGRA1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating temperature sensor 1	
+TGRA2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating temperature sensor 2	
+TGRA3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			grating temperature sensor 3	
+TMIRRNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			tent mirror named position	
+TMIRRORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			tent mirror ordinal position	
+TMIRRRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			tent mirror raw position	
+TMIRRTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			tent mirror target	
+TMIRRVAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			tent mirror value	
+TMPCINC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	12.6f				Y			coolant in temperature	
+TMPCOOLC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	12.6f				Y			coolant temperature	
+TMPCOUTC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	12.6f				Y			coolant out temperature	
+TMPTVCOC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	12.6f				Y			guider coolant temperature	
+TTIME	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			exposure time	
+TUBETEMP	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			tube temperature	
+TVA2SPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider power status	
+TVCAMPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider camera power status	
+TVCOFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider coolant flow	
+TVFILCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider filter calibration status	
+TVFILFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider filter fiducial	
+TVFILMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider filter mode	
+TVFILNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider filter named position	
+TVFILORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider filter ordinal position	
+TVFILRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider filter raw position	
+TVFILSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider filter status	
+TVFILTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			guider filter torque	
+TVFILTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider filter target	
+TVFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider flip	
+TVFOCCAL	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider focus calibration status	
+TVFOCFOP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider focus fiducial	
+TVFOCMOD	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider focus mode	
+TVFOCNAM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider focus named position	
+TVFOCORD	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider focus ordinal position	
+TVFOCRAW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider focus raw position	
+TVFOCSTA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider focus status	
+TVFOCTOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			guider focus torque	
+TVFOCTRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			guider focus target	
+TVPOWSET	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider power set	
+TVS2FPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			guider power	
+UTB15VEN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			utility board 15V enabled	
+UTB30VEN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			utility board 30V enabled	
+UTBM15V	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			utility board -15V raw value	
+UTBP15V	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			utility board +15V raw value	
+UTBP30V	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			utility board +30V raw value	
+UTBP5V	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			utility board +5V raw value	
+UTBTEMP	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f				Y			utility board temperature	
+UTC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	16s				Y			Coordinated universal time	
+UTC-END	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				Y			UTC end time	
+VIDOFF1	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 1	
+VIDOFF10	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 10	
+VIDOFF11	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 11	
+VIDOFF12	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 12	
+VIDOFF13	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 13	
+VIDOFF14	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 14	
+VIDOFF15	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 15	
+VIDOFF16	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 16	
+VIDOFF2	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 2	
+VIDOFF3	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 3	
+VIDOFF4	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 4	
+VIDOFF5	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 5	
+VIDOFF6	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 6	
+VIDOFF7	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 7	
+VIDOFF8	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 8	
+VIDOFF9	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d				Y			video offset amplifier 9	
+CRA	NExScI	char		VARCHAR2(11)	11				11s				N			Original character string RA before conversion to Eq2000	
+CDEC	NExScI	char		VARCHAR2(11)	11				11s				N			Original character string DEC before conversion to Eq2000	
+L0_INGTIME	NExScI	char		TIMESTAMP	19				19s				N			Time of metadata ingestion	
+UTDATETIME	NExScI	char		TIMESTAMP	11				11s				N			Combined DATE_OBS and UT as a timestamp	
+FILEHAND	NExScI	char		VARCHAR2(151)	151				151s				N			Path to the file in the archive	
+FILEURL	NExScI	char		VARCHAR2(151)	151				151s				N			URL to file in the archive	
+SEMID	NExScI	char		VARCHAR2(21)	21				11s				N			SEMESTER and PROGID	
