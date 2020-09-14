@@ -1,4 +1,4 @@
-Keyword	DB Name	Source	Data Type	Unit	DB Data Type	Size	Nulls Allowed	Validate Format	Check Values	Output Format	Special Ingest	Mincol	Maxcol	Discrete Values	Metadata	UI	Calib	Description	Notes
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	Description	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y	KOA data filename	
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Copy of DATAFILE keyword value	
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y	Y	WMKO assigned program identification code	
@@ -82,14 +82,14 @@ COOLFLOW	COOLFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			cooling fl
 CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			current instrument	
 DARKTIME	DARKTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			fraction of moon illumination	
 DATASUM	DATASUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			data unit checksum	
-DATE	DATE	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	16s					Y			file creation date	
+DATE	DATE_UT	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	16s					Y			file creation date	
 DATE_BEG	DATE_BEG	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			beginning datetime of exposure	
 DATE_END	DATE_END	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			end datetime of exposure	
 DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	32s	Y				Y	Y	Y	observing date	
 DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			drive control system status	
 DCSVERS	DCSVERS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			drive control system version	
 DDEC	DDEC	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			differential tracking rate (dec)	
-DEC	DEC2000	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	declination	
+DEC	DEC2000	DCS	char		FLOAT(126)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	declination	
 DETCNFID	DETCNFID	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			mosaic detector configuration id	
 DETECTOR	DETECTOR	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			detector	
 DETLSIZE	DETLSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			detector size	
@@ -309,7 +309,7 @@ PREFLUSH	PREFLUSH	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			number of pre
 PRELINE	PRELINE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			number of prescan lines	
 PREROW	PREROW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			number of prescan rows	
 PROGNAME	PROGNAME	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Observer assigned program ID	
-RA	RA2000	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	right ascension	
+RA	RA2000	DCS	char		FLOAT(126)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	right ascension	
 ROTA1GOF	ROTA1GOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			rotator 1 gap offset	
 ROTA1IOF	ROTA1IOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			rotator 1 index offset	
 ROTA1QOF	ROTA1QOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			rotator 1 quality offset	

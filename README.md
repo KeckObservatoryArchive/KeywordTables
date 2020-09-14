@@ -9,22 +9,22 @@ These files are used to:
 
 The files are saved as tab-separated columns with the following information:
 
-| Keyword | Keyword Name from FITS file|
+| FITSKeyword | Keyword Name from FITS file|
 | ------- | ------------ |
-| DB Name | Name in database table 
+| DBKeyword | Name in database table 
 | Source | Original source of keyword value
-| Data Type | char, double, integer
+| MetadataDatatype | Datatype in metadaa table (ie char, double, integer)
 | Size | Maximum character length of keyword value
-| DB Data Type | Data type for database table creation
+| DBDatatype | Data type for database table creation
 | Units | Units for the keyword value
-| Nulls Allowed? | Are nulls allowed for this keyword?
-| Validate Format? | Does the value match the data type for this keyword?
-| Check Values? | Verify data range (mincol, maxcol) and verify FITS value is the same as metadata value
-| Output Format | Format in the DDs and TAP schema
-| Special Ingest | Is there special treatment by dbIngest (i.e. hard-coded alterations to contents or name)
-| Mincol | Minimum allowed value for the keyword
-| Maxcol | Maximum allowed value for the keyword
-| Discrete Values | Comma-separated list of allowed values for the keyword
+| NullsAllowed | Are nulls allowed for this keyword?
+| ValidateFormat | Does the value match the data type for this keyword?
+| CheckValues | Verify data range (mincol, maxcol) and verify FITS value is the same as metadata value
+| OutputFormat | Format in the DDs and TAP schema
+| SpecialIngest | Is there special treatment by dbIngest (i.e. hard-coded alterations to contents or name)
+| MininimumVal | Minimum allowed value for the keyword
+| MaximumVal | Maximum allowed value for the keyword
+| DiscreteValues | Comma-separated list of allowed values for the keyword
 | Metadata | Include in meatadata sent from WMKO to NExScI
 | UI | This keyword is used in the KOA UI
 | Calib | This keyword is used for calibration association
