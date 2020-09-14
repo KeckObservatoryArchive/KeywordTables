@@ -23,7 +23,7 @@ global args
 output_dd_FOR_DB = ''
 output_dd_FOR_DISK = ''
 
-prog_description = "Read a tab-delimited version of a KOA instrument keyword table, and generate any/all of the following: dbIngest keyword table; SQL database table creation script; data dictionary files (for disk/database); rows to add to TAP DD "
+prog_description = "Read a tab-delimited version of a KOA instrument keyword table, and generate any/all of the following: dbIngest keyword table; SQL database table creation script; data dictionary files (for disk/database).  TAP_SCHEMA population to be added soon. "
 
 parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=prog_description)
 
@@ -31,12 +31,11 @@ parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpForm
 parser.add_argument("-d", action='store_true', default=False, dest='debug', help='Turn on debugging')
 parser.add_argument("-kw", action='store', default='', dest='output_kw', help='Output Keyword Table (dbIngest style)')
 parser.add_argument("-dd", action='store', default='', dest='output_dd', help='Prefix for disk/database DD Tables')
-parser.add_argument("-tap", action='store', default='', dest='output_tap', help='Output TAP Table')
 parser.add_argument("-db", action='store', default='', dest='output_db', help='Output DB Creation Script')
 
 ## Positional args:
 parser.add_argument("input_tab_file", type=str, help="Input tab-delimited file")
-parser.add_argument("table_name", type=str, help="table name (ie koa_nirspec_v4)")
+parser.add_argument("table_name", type=str, help="table name (ie KOA_NIRSPEC_V4)")
 
 args = parser.parse_args()
 
@@ -44,13 +43,12 @@ input_file            = args.input_tab_file
 output_kw             = args.output_kw
 output_dd_FOR_DB      = args.output_dd + '.for_database'
 output_dd_FOR_DISK    = args.output_dd + '.for_disk'
-output_tap            = args.output_tap
 output_db             = args.output_db
 table_name            = args.table_name.upper()
 debug                 = args.debug
 
-if (output_kw == '' and args.output_dd == '' and output_tap == '' and output_db == ''):
-  printerr("Must select at least one type of output table (Keyword, DD, DB, TAP)")
+if (output_kw == '' and args.output_dd == '' and output_db == ''):
+  printerr("Must select at least one type of output table (Keyword, DD, DB)")
   
 
 if debug:
@@ -58,7 +56,6 @@ if debug:
   print ("output_dd_FOR_DB = %s" % output_dd_FOR_DB)
   print ("output_dd_FOR_DISK = %s" % output_dd_FOR_DISK)
   print ("output_kw = %s" % output_kw )
-  print ("output_tap = %s" % output_kw )
   print ("output_db = %s" % output_kw )
 
 
@@ -72,21 +69,13 @@ input_nrows = len(input_t)
 if debug:
   print ("input_nrows = ", input_nrows)
 
-#
-# Do some replacements for commonly known issues before we really get going:
-#
-
-
-
-
-
 
 ######
 # FIRST: dbIngest-style  keyword table - ie KOA_HIRES_Keywords.tbl
 #
 #
 # Keyword table is simple: just an IPAC version of the original but with 
-# no spaces in the column headers and a few less columns.
+# some columns renamed
 # 
 #####
 
@@ -104,10 +93,25 @@ output_kw_t = Table([input_t['DBKeyword'],
                     input_t['DiscreteValues']])
 
 # Instead of 'null' nulls, we just want blanks in the keyword table:
-fill = [(masked, ' ', 'Description'), (masked, ' ', 'units'), (masked, ' ', 'description'),(masked, ' ', 'Unit'), (masked, ' ', 'mincol'), (masked, ' ', 'maxcol'), (masked, ' ', 'discretevalcol')]
+fill = [(masked, ' ', 'Description'), 
+        (masked, ' ', 'description'), 
+        (masked, ' ', 'Units'), 
+        (masked, ' ', 'units'), 
+        (masked, ' ', 'description'),
+        (masked, ' ', 'MinValue'), 
+        (masked, ' ', 'MaxValue'), 
+        (masked, ' ', 'DiscreteValues'), 
+        (masked, ' ', 'FITSKeyword'), 
+        (masked, ' ', 'nulls'), 
+        (masked, ' ', 'NullsAllowed')]
 
-print(input_t['DBKeyword'][0])
-print(input_t['DBKeyword'][1])
+
+output_kw_t.rename_column('DBKeyword', 'Keyword')
+output_kw_t.rename_column('MetadataType', 'DataType')
+output_kw_t.rename_column('Units', 'Unit')
+output_kw_t.rename_column('MinValue', 'mincol')
+output_kw_t.rename_column('MaxValue', 'maxcol')
+output_kw_t.rename_column('DiscreteValues', 'discretevalcol')
 
 # Output Keyword table if requested
 if (output_kw != ''):
@@ -145,64 +149,67 @@ if (output_db != ''):
 
 has_ra_dec = 0
 for i in range(input_nrows):
-    output_dd_type = input_t['MetadataDatatype'][i].lower()
-    output_dd_format = input_t['OutputFormat'][i].lower()
+
+    if (input_t['FITSKeyword'][i] == 'RA'):
+      has_ra_dec = 1   # We will need to know later if this table had columns named 'RA/DEC' to start or not
 
     # Database script 
     if (output_db != ''):
       db.write("    \"" + input_t['DBKeyword'][i].strip().upper() + "\" " + input_t['DBDatatype'][i] + ",\n");
 
     # Table structure
-    output_dd_t.add_row([i+1,                                     #cntr
-                         input_t['DBKeyword'][i], #name
-                         input_t['DBKeyword'][i],                   #original_name
-                         input_t['Description'][i],               #description
+    output_dd_t.add_row([i+1,                                      #cntr
+                         input_t['DBKeyword'][i],                  #name
+                         input_t['DBKeyword'][i],                  #original_name - in DD-speak this is the same as name for our purposes, not the FITS keyword name
+                         input_t['Description'][i],                #description
                          input_t['Units'][i],                      #units
-                         output_dd_type,                          #intype
-                         output_dd_format,                        #format
-                         input_t['DBDatatype'][i],              #dbtype
-                         input_t['NullsAllowed'][i],             #nulls
-                         '2',                                     #tableflg
-                         i+1,                                     #groupid
-                         'y',                                     #irsadef
-                         'y',                                     #sel
-                         'n',                                     #indx
-                         input_t['DBKeyword'][i]])                  #label
+                         input_t['MetadataDatatype'][i].lower(),   #intype
+                         input_t['OutputFormat'][i].lower(),       #format
+                         input_t['DBDatatype'][i],                 #dbtype
+                         input_t['NullsAllowed'][i],               #nulls
+                         '2',                                      #tableflg
+                         i+1,                                      #groupid
+                         'y',                                      #irsadef
+                         input_t['TAPPrincipal'][i],               #sel
+                         'n',                                      #indx
+                         input_t['DBKeyword'][i]])                 #label
 
 
 
-# Add the IPAC-only rows to the data dictionary table (both versions):
+###This chunk removed now that we have added them to the original keyword tables:
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'CRA', 'CRA', 'Original character string RA before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CRA'])
+#### Add the IPAC-only rows to the data dictionary table (both versions):
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'CDEC', 'CDEC', 'Original character string DEC before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CDEC'])
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'CRA', 'CRA', 'Original character string RA before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CRA'])
 
-if ("hires" in table_name.lower()):
-  input_nrows = input_nrows +1
-  output_dd_t.add_row([input_nrows, 'HA_D', 'HA_D', 'Original HA in decimal before conversion to sexagesimal', 'null', 'double', '12.6s', 'float(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'HA_D'])
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'CDEC', 'CDEC', 'Original character string DEC before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CDEC'])
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'UTDATETIME', 'UTDATETIME', 'Combined DATE_OBS and UT as a timestamp', 'null', 'char', '11s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'UTDATETIME'])
+###if ("hires" in table_name.lower()):
+###  input_nrows = input_nrows +1
+###  output_dd_t.add_row([input_nrows, 'HA_D', 'HA_D', 'Original HA in decimal before conversion to sexagesimal', 'null', 'double', '12.6s', 'float(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'HA_D'])
 
-
-input_nrows = input_nrows +1
-if ("hires" in table_name.lower()):
-  output_dd_t.add_row([input_nrows, 'MD_INGTIME', 'MD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
-  output_dd_t.add_row([input_nrows, 'DVD_INGTIME', 'DVD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'DVD_INGTIME'])
-else:
-  output_dd_t.add_row([input_nrows, 'L0_INGTIME', 'L0_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'UTDATETIME', 'UTDATETIME', 'Combined DATE_OBS and UT as a timestamp', 'null', 'char', '11s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'UTDATETIME'])
 
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'FILEHAND', 'FILEHAND', 'Path to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEHAND'])
+###input_nrows = input_nrows +1
+###if ("hires" in table_name.lower()):
+###  output_dd_t.add_row([input_nrows, 'MD_INGTIME', 'MD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
+###  output_dd_t.add_row([input_nrows, 'DVD_INGTIME', 'DVD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'DVD_INGTIME'])
+###else:
+###  output_dd_t.add_row([input_nrows, 'L0_INGTIME', 'L0_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'FILEURL', 'FILEURL', 'URL to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEURL'])
 
-input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'SEMID', 'SEMID', 'SEMESTER and PROGID', 'null', 'char', '11.11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'SEMID'])
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'FILEHAND', 'FILEHAND', 'Path to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEHAND'])
+
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'FILEURL', 'FILEURL', 'URL to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEURL'])
+
+###input_nrows = input_nrows +1
+###output_dd_t.add_row([input_nrows, 'SEMID', 'SEMID', 'SEMESTER and PROGID', 'null', 'char', '11.11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'SEMID'])
 
 
 # Output the disk-version (that dbIngest will use for dbin)
@@ -218,7 +225,7 @@ for r in range(len(fixme_t)):
     fixme_t['units'][r] = ''
 ascii.write(fixme_t, output_dd_FOR_DISK + '.tmp2', format='ipac', fast_writer=False, overwrite=True)
 
-# Make a version with the header
+# Make a version with the header which will be needed by dbIngest
 try:
   input_dd = open(output_dd_FOR_DISK + '.tmp2', "r")
 except:
@@ -248,6 +255,8 @@ if has_ra_dec == 0:
   output_dd_t.add_row([input_nrows, 'RA', 'RA', 'Right Ascension (J2000)', 'null', 'float', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'RA'])
   input_nrows = input_nrows +1
   output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', 'float', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'DEC'])
+
+
 input_nrows = input_nrows + 1
 output_dd_t.add_row([input_nrows, 'X', 'X', '', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'X'])
 input_nrows = input_nrows + 1
@@ -273,25 +282,32 @@ ascii.write(fixme_t, output_dd_FOR_DB, format='ipac', fast_writer=False, overwri
 
 # Finish the SQL script
 
+
 if (output_db != ''):
-  db.write("    \"CRA\" VARCHAR2(11 BYTE),\n")
-  db.write("    \"CDEC\" VARCHAR2(11 BYTE),\n")
-  if ("hires" in table_name.lower()):
-    db.write("    \"HA_D\" FLOAT(126),\n")
-  db.write("    \"UTDATETIME\" TIMESTAMP (6),\n")
-  if ("hires" in table_name.lower()):
-    db.write("    \"MD_INGTIME\" TIMESTAMP (6),\n")
-    db.write("    \"DVD_INGTIME\" TIMESTAMP (6),\n")
-  else:
-    db.write("    \"L0_INGTIME\" TIMESTAMP (6),\n")
-  db.write("    \"FILEHAND\" VARCHAR2(151 BYTE),\n")
-  db.write("    \"FILEURL\" VARCHAR2(151 BYTE),\n")
-  db.write("    \"SEMID\" VARCHAR2(21 BYTE),\n")
   db.write("    \"X\" FLOAT(126),\n")
   db.write("    \"Y\" FLOAT(126),\n")
   db.write("    \"Z\" FLOAT(126),\n")
   db.write("    \"SPT_IND\" NUMBER(38),\n")
   db.write("    \"CNTR\" NUMBER(38)\n")
+
+
+
+### Removed now that these are in original keyword table:
+
+
+###  db.write("    \"CRA\" VARCHAR2(11 BYTE),\n")
+###  db.write("    \"CDEC\" VARCHAR2(11 BYTE),\n")
+###  if ("hires" in table_name.lower()):
+###    db.write("    \"HA_D\" FLOAT(126),\n")
+###  db.write("    \"UTDATETIME\" TIMESTAMP (6),\n")
+###  if ("hires" in table_name.lower()):
+###    db.write("    \"MD_INGTIME\" TIMESTAMP (6),\n")
+###    db.write("    \"DVD_INGTIME\" TIMESTAMP (6),\n")
+###  else:
+###    db.write("    \"L0_INGTIME\" TIMESTAMP (6),\n")
+###  db.write("    \"FILEHAND\" VARCHAR2(151 BYTE),\n")
+###  db.write("    \"FILEURL\" VARCHAR2(151 BYTE),\n")
+###  db.write("    \"SEMID\" VARCHAR2(21 BYTE),\n")
   db.write("  )\n")
   db.write("  TABLESPACE \"KOA_DATA\" ;\n")
   db.write("  CREATE INDEX IKOAIMTYP_" + table_name + " ON " + table_name + "(KOAIMTYP) TABLESPACE KOA_DATA;\n")
