@@ -484,10 +484,10 @@ VIDOFF6	VIDOFF6	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			video offset am
 VIDOFF7	VIDOFF7	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			video offset amplifier 7	
 VIDOFF8	VIDOFF8	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			video offset amplifier 8	
 VIDOFF9	VIDOFF9	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			video offset amplifier 9	
-	CRA	NExScI	char		VARCHAR2(11)	11				#N/A	Y				N			Original character string RA before conversion to Eq2000	
-	CDEC	NExScI	char		VARCHAR2(11)	11				#N/A	Y				N			Original character string DEC before conversion to Eq2000	
-	L0_INGTIME	NExScI	char		TIMESTAMP	19				#N/A	Y				N			Time of metadata ingestion	
-	UTDATETIME	NExScI	char		TIMESTAMP	11				#N/A	Y				N	Y		Combined DATE_OBS and UT as a timestamp	
-	FILEHAND	NExScI	char		VARCHAR2(151)	151				#N/A	Y				N	Y	Y	Path to the file in the archive	
-	FILEURL	NExScI	char		VARCHAR2(151)	151				#N/A	Y				N			URL to file in the archive	
-	SEMID	NExScI	char		VARCHAR2(21)	21				#N/A	Y				N	Y	Y	SEMESTER and PROGID	
+ 	CRA	NExScI	char		VARCHAR2(11)	11				11s	Y				N			Original character string RA before conversion to Eq2000	
+ 	CDEC	NExScI	char		VARCHAR2(11)	11				11s	Y				N			Original character string DEC before conversion to Eq2000	
+ 	L0_INGTIME	NExScI	char		TIMESTAMP	19				11s	Y				N			Time of metadata ingestion	
+ 	UTDATETIME	NExScI	char		TIMESTAMP	11				11s	Y				N	Y		Combined DATE_OBS and UT as a timestamp	
+ 	FILEHAND	NExScI	char		VARCHAR2(151)	151				151s	Y				N	Y	Y	Path to the file in the archive	
+ 	FILEURL	NExScI	char		VARCHAR2(151)	151				151s	Y				N			URL to file in the archive	
+ 	SEMID	NExScI	char		VARCHAR2(21)	21				21s	Y				N	Y	Y	SEMESTER and PROGID	
