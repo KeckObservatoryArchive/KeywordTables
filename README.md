@@ -28,5 +28,7 @@ The files are saved as tab-separated columns with the following information:
 | Metadata | Include in meatadata sent from WMKO to NExScI
 | UI | This keyword is used in the KOA UI
 | Calib | This keyword is used for calibration association
+| TAP_visible | This keyword wil be exposed to the TAP service
+| TAP_principal | Value of 'principal' in TAP_SCHEMA.columns - some TAP clients use to determine whether to include in default selection
 | Description | Keyword definition
 | Notes | Any notes pertaining to this keyword and/or value
