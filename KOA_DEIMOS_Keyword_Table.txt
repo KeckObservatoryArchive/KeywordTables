@@ -1,11 +1,11 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Notes
-KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y	Y	Y	KOA data filename	
-OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Copy of DATAFILE keyword value	
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y	Y	Y	Unique identifier for each file	
+OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Original filename at the telescope, copied from DATAFILE keyword	
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y	Y	Y	Y	WMKO assigned program identification code	
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y	Y	Y	Y	Program institution	
 PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y	Y	Y	Y	Program principal investigator	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(248 BYTE)	248	Y	Y	N	248s					Y	Y	Y	Y	Y	Program title	
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				fcscal, polcal, bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus	Y	Y	Y	Y	Y	KOA image type (from OBSTYPE?)	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				fcscal, polcal, bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus	Y	Y	Y	Y	Y	Type of observation: 'object' for science files, other values are calibration files	
 CAMERA	CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Will always be set to DEIMOS	
 OBSMODE	OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				longslit, mos, image, unknown	Y	Y	Y	Y	Y	Observation mode of this FITS file (longslit, mos, image, unknown)	
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y			Y		Data reduction level (0 = raw)	
@@ -40,10 +40,10 @@ PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	11d		0	9999		Y	Y	Y	Y	Y	Proprie
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y	8s					Y			Y		WMKO observing schedule semester	
 SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		CCD pixel scale, spatial (arcsec/pixel)	
 SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		Nominal spectral resolution	Get with Luca/Carlos to calculate
-UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	16s					Y	Y	Y	Y	Y	Universal time (copy of UTC)	
-WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Blue end wavelength	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
-WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y			Y		Central wavelength	IM: 4000-10500 and use filter ranges/cutoffs
-WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Red end wavelength	Using grating to determine range
+UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	16s					Y	Y	Y	Y	Y	UT time of observation, in format HH:MM:SS.XX	
+WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
+WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y			Y		Central wavelength (angstroms)	IM: 4000-10500 and use filter ranges/cutoffs
+WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)	Using grating to determine range
 WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		Dome humidity at WXTIME	
 WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		Dome temperature at WXTIME	
 WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		Dewpoint at WXTIME	
@@ -89,7 +89,7 @@ DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	32s	Y				Y	Y	Y	Y	Y	observing date
 DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		drive control system status	
 DCSVERS	DCSVERS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		drive control system version	
 DDEC	DDEC	DCS	double		FLOAT(126)	16	Y	Y	N	12.6f					Y			Y		differential tracking rate (dec)	
-DEC	Dec2000	DCS	char		FLOAT(126)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	Y	Y	declination	
+DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	11s	Y				Y	Y	Y	Y	Y	declination	
 DETCNFID	DETCNFID	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		mosaic detector configuration id	
 DETECTOR	DETECTOR	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		detector	
 DETLSIZE	DETLSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		detector size	
@@ -309,7 +309,7 @@ PREFLUSH	PREFLUSH	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of 
 PRELINE	PRELINE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of prescan lines	
 PREROW	PREROW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of prescan rows	
 PROGNAME	PROGNAME	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Observer assigned program ID	
-RA	RA2000	DCS	char		FLOAT(126)	16	Y	Y	Y	12.6f	Y				Y	Y	Y	Y	Y	right ascension	
+RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	11s	Y				Y	Y	Y	Y	Y	right ascension	
 ROTA1GOF	ROTA1GOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 gap offset	
 ROTA1IOF	ROTA1IOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 index offset	
 ROTA1QOF	ROTA1QOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 quality offset	
@@ -484,8 +484,8 @@ VIDOFF6	VIDOFF6	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset
 VIDOFF7	VIDOFF7	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset amplifier 7	
 VIDOFF8	VIDOFF8	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset amplifier 8	
 VIDOFF9	VIDOFF9	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset amplifier 9	
-	CRA	NExScI	char		VARCHAR2(11)	11				11s	Y				N			Y		Original character string RA before conversion to Eq2000	
-	CDEC	NExScI	char		VARCHAR2(11)	11				11s	Y				N			Y		Original character string DEC before conversion to Eq2000	
+	Dec2000	NexScI	double		FLOAT(126)	16				12.6f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox	
+	RA2000	NExScI	double		FLOAT(126)	11				12.6f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox	
 	L0_INGTIME	NExScI	char		TIMESTAMP	19				11s	Y				N			N		Time of metadata ingestion	
 	UTDATETIME	NExScI	char		TIMESTAMP	11				11s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	
 	FILEHAND	NExScI	char		VARCHAR2(151)	151				151s	Y				N	Y	Y	Y	Y	Path to the file in the archive	
