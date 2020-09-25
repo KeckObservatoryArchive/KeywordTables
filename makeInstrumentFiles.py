@@ -92,26 +92,27 @@ output_kw_t = Table([input_t['DBKeyword'],
                     input_t['MaxValue'], 
                     input_t['DiscreteValues']])
 
+output_kw_t.rename_column('DBKeyword', 'Keyword')
+output_kw_t.rename_column('MetadataDatatype', 'DataType')
+output_kw_t.rename_column('Units', 'Unit')
+output_kw_t.rename_column('MinValue', 'mincol')
+output_kw_t.rename_column('MaxValue', 'maxcol')
+output_kw_t.rename_column('DiscreteValues', 'discretevalcol')
+
 # Instead of 'null' nulls, we just want blanks in the keyword table:
 fill = [(masked, ' ', 'Description'), 
         (masked, ' ', 'description'), 
         (masked, ' ', 'Units'), 
         (masked, ' ', 'units'), 
         (masked, ' ', 'description'),
-        (masked, ' ', 'MinValue'), 
-        (masked, ' ', 'MaxValue'), 
-        (masked, ' ', 'DiscreteValues'), 
+        (masked, ' ', 'mincol'), 
+        (masked, ' ', 'maxcol'), 
+        (masked, ' ', 'discretevalcol'), 
         (masked, ' ', 'FITSKeyword'), 
         (masked, ' ', 'nulls'), 
         (masked, ' ', 'NullsAllowed')]
 
 
-output_kw_t.rename_column('DBKeyword', 'Keyword')
-output_kw_t.rename_column('MetadataType', 'DataType')
-output_kw_t.rename_column('Units', 'Unit')
-output_kw_t.rename_column('MinValue', 'mincol')
-output_kw_t.rename_column('MaxValue', 'maxcol')
-output_kw_t.rename_column('DiscreteValues', 'discretevalcol')
 
 # Output Keyword table if requested
 if (output_kw != ''):
@@ -170,7 +171,7 @@ for i in range(input_nrows):
                          '2',                                      #tableflg
                          i+1,                                      #groupid
                          'y',                                      #irsadef
-                         input_t['TAPPrincipal'][i],               #sel
+                         input_t['TAP_principal'][i],               #sel
                          'n',                                      #indx
                          input_t['DBKeyword'][i]])                 #label
 
