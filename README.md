@@ -38,3 +38,17 @@ As of Sep 2020,  not all keyword table functionality is actually implemented yet
 * dbIngest currently hard-codes transformations between FITSKeyword and DBKeyword (ie DATE-OBS to DATE_OBS); future ingestion code updates will use  the contents of FITSKeyword/DBKeyword to make such changes in the metadata header
 * The TAP_columns will be used when TAP_SCHEMA table output is added
 * The UI, Calib, and SpecialIngest columns are currently informational only 
+
+# makeInstrumentFiles.py
+
+To generate the NExScI configuration and SQL files:
+
+'makeInstrumentFiles.py [-h] [-d] [-kw OUTPUT_KW] [-dd OUTPUT_DD] [-db OUTPUT_DB] input_tab_file table_name'
+~                                                                    
+Where:
+
+* OUTPUT_KW = keyword table used by dbIngest
+* OUTPUT_DD = prefix for two DD files (OUTPUT_DD.for_isk to be used by dbIngest; OUTPUT_DD.for_database for initialization of DD in Oracle database using dbin)
+* OUTPUT_DB = SQL script to be run to initialize instrument table and indices / sequences / privileges
+* input_tab_file = tab-delimited keyword table
+* table_name = name of instrument table (ie KOA_DEIMOS_V3)
