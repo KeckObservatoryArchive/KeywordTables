@@ -43,8 +43,7 @@ As of Sep 2020,  not all keyword table functionality is actually implemented yet
 
 To generate the NExScI configuration and SQL files:
 
-'makeInstrumentFiles.py [-h] [-d] [-kw OUTPUT_KW] [-dd OUTPUT_DD] [-db OUTPUT_DB] input_tab_file table_name'
-~                                                                    
+`makeInstrumentFiles.py [-h] [-d] [-kw OUTPUT_KW] [-dd OUTPUT_DD] [-db OUTPUT_DB] input_tab_file table_name`                                                                  
 Where:
 
 * OUTPUT_KW = keyword table used by dbIngest
