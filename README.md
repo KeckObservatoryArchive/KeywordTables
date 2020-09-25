@@ -46,8 +46,10 @@ To generate the NExScI configuration and SQL files:
 `makeInstrumentFiles.py [-h] [-d] [-kw OUTPUT_KW] [-dd OUTPUT_DD] [-db OUTPUT_DB] input_tab_file table_name`                                                                  
 Where:
 
-* OUTPUT_KW = keyword table used by dbIngest
-* OUTPUT_DD = prefix for two DD files (OUTPUT_DD.for_isk to be used by dbIngest; OUTPUT_DD.for_database for initialization of DD in Oracle database using dbin)
-* OUTPUT_DB = SQL script to be run to initialize instrument table and indices / sequences / privileges
-* input_tab_file = tab-delimited keyword table
-* table_name = name of instrument table (ie KOA_DEIMOS_V3)
+* OUTPUT_KW = keyword table used by dbIngest ($CM_KOA_DIR/src/svc/dbIngest/data/KOA_INSTR_Keywords.tbl)
+* OUTPUT_DD = prefix for two DD files: 
+  * OUTPUT_DD.for_disk to be used by dbIngest ($CM_KOA_DIR/src/svc/dbIngest/data/KOA_INSTR_DD.tbl)
+  * OUTPUT_DD.for_database for initialization of DD in Oracle database using dbin ($CM_KOA_DIR/src/svc/sqlscripts/koa_instr_vX_scripts)
+* OUTPUT_DB = SQL script to be run to initialize instrument table and indices / sequences / privileges ($CM_KOA_DIR/src/svc/sqlscripts/koa_instr_vX.sql)
+* input_tab_file = tab-delimited keyword table from this repo, 
+* table_name = name of instrument table (ie KOA_INSTR_VX)
