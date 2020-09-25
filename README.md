@@ -33,9 +33,8 @@ The files are saved as tab-separated columns with the following information:
 | Description | Keyword definition
 | Notes | Any notes pertaining to this keyword and/or value
 
-Some notes for first implementation of this format (Sep 2020):
 
-* Not all keyword table functionality is actually implemented yet:
-** dbIngest currently hard-codes transformations between FITSKeyword and DBKeyword (ie DATE-OBS to DATE_OBS); future ingestion code updates will use  the contents of FITSKeyword/DBKeyword to make such changes in the metadata header
-** The TAP_columns will be used when TAP_SCHEMA table output is added
-** The UI, Calib, and SpecialIngest columns are currently informational only 
+As of Sep 2020,  not all keyword table functionality is actually implemented yet:
+* dbIngest currently hard-codes transformations between FITSKeyword and DBKeyword (ie DATE-OBS to DATE_OBS); future ingestion code updates will use  the contents of FITSKeyword/DBKeyword to make such changes in the metadata header
+* The TAP_columns will be used when TAP_SCHEMA table output is added
+* The UI, Calib, and SpecialIngest columns are currently informational only 
