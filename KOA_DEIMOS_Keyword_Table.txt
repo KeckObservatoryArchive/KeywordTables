@@ -26,12 +26,12 @@ DETSEC13	DETSEC13	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Mosaic det
 DETSEC14	DETSEC14	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Mosaic detector section (from HDU 14 DETSEC)	
 DETSEC15	DETSEC15	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Mosaic detector section (from HDU 15 DETSEC)	
 DETSEC16	DETSEC16	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Mosaic detector section (from HDU 16 DETSEC)	
-DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		CCD pixel scale, dispersion (arcsec/pixel)	
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		CCD pixel scale, dispersion (arcsec/pixel when OBSMODE=imaging, otherwise A/pix)	
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Date of processing for archiving	
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Version of KOA processing software	
 FCSKOAID	FCSKOAID	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		KOAID of associated Flexure Compensation System file	
 FILTER	FILTER	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y	Y	Y	Y	Y	Filter name (copied from DWFILNAM)	
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		FWHM of guide star	
+GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		FWHM of guide star	
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		UT of GUIDFWHM value	
 MJD	MJD	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Numeric version of MJD-OBS	
 NEXTEN	NEXTEN	KOA	integer		NUMBER(*,0)	16	N	Y	N	11d					Y			Y		Number of image extensions (HDUs)	Use astropy to determine # of image extensions and populate keyword with that number
@@ -45,12 +45,12 @@ UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	16s					Y	Y	Y	Y	Y	UT time of observat
 WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)	SP: G[GRATEPOS]TLTWAV +- spectral length of grating
 WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y			Y		Central wavelength (angstroms)	IM: 4000-10500 and use filter ranges/cutoffs
 WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		4000	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)	Using grating to determine range
-WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dome humidity at WXTIME	
-WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dome temperature at WXTIME	
-WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dewpoint at WXTIME	
-WXOUTHUM	WXOUTHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Outside humidity at WXTIME	
-WXOUTTMP	WXOUTTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Outside temperature at WXTIME	
-WXPRESS	WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Pressure at WXTIME	
+WXDOMHUM	WXDOMHUM	KOA	double	percent	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dome humidity at WXTIME	
+WXDOMTMP	WXDOMTMP	KOA	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dome temperature at WXTIME	
+WXDWPT	WXDWPT	KOA	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Dewpoint at WXTIME	
+WXOUTHUM	WXOUTHUM	KOA	double	percent	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Outside humidity at WXTIME	
+WXOUTTMP	WXOUTTMP	KOA	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Outside temperature at WXTIME	
+WXPRESS	WXPRESS	KOA	double	mb	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Pressure at WXTIME	
 WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Time of weather measurements	
 WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Wind directionat WXTIME	
 WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Wind speed at WXTIME	
@@ -64,7 +64,7 @@ ANTIBLM	ANTIBLM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		anti-bloo
 AUTOPANE	AUTOPANE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		autopane window	
 AUTOSHUT	AUTOSHUT	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		autoshutter	
 AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		telescope tracking status	
-AZ	AZ	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		azimuth	
+AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		azimuth	
 BAYBFAN	BAYBFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		electronic bay B fan	
 BAYCFAN	BAYCFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		electronic bay C fan	
 BINNING	BINNING	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		binning	
@@ -81,7 +81,7 @@ CHECKSUM	CHECKSUM	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		HDU che
 COOLFAN	COOLFAN	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		cooling fan	
 COOLFLOW	COOLFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		cooling flow	
 CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		current instrument	
-DARKTIME	DARKTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Time between end of CCD erase sequence and beginning of CCD readout. This is the value that should be used for dark current correction.	
+DARKTIME	DARKTIME	DEIMOS	double	sec	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		Time between end of CCD erase sequence and beginning of CCD readout. This is the value that should be used for dark current correction.	
 DATASUM	DATASUM	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		data unit checksum	
 DATE	DATE_UT	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	16s					Y			Y		file creation date	
 DATE_BEG	DATE_BEG	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		beginning datetime of exposure	
@@ -128,12 +128,12 @@ DWXL8STA	DWXL8STA	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		camera 
 DWXL8TOR	DWXL8TOR	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		camera translation stage torque	
 DWXL8TRG	DWXL8TRG	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		camera translation stage target	
 DWXL8VAL	DWXL8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		camera translation stage value	
-EL	EL	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		elevation	
-ELAPTIME	ELAPTIME	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	Y	11d		0	12500		Y	Y	Y	Y	Y	elapsed time	
+EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		elevation	
+ELAPTIME	ELAPTIME	DEIMOS	integer	sec	NUMBER(*,0)	16	Y	Y	Y	11d		0	12500		Y	Y	Y	Y	Y	elapsed time	
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y	Y	Y	Y	equinox	
 ERASECNT	ERASECNT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		erase count	
 ERASLINE	ERASLINE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		erase line	
-EXPTIME	EXPTIME	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		exposure time	
+EXPTIME	EXPTIME	DEIMOS	double	sec	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		exposure time	
 EXTEND	EXTEND	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		FITS extensions	
 FCSCCNOX	FCSCCNOX	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		FCS crosscorrection conflicts (X-axis)	
 FCSCCNOY	FCSCCNOY	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		FCS crosscorrection conflicts (Y-axis)	
@@ -235,7 +235,7 @@ IONPUMP1	IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		ion pum
 IONPUMP2	IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		ion pump 2 status	
 KEEPPREP	KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		keep prescan pixels	
 LAMPS	LAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		arclamp status	
-LATITUDE	LATITUDE	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		latitude	
+LATITUDE	LATITUDE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		latitude	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		local sidereal time	
 MJD-OBS	MJD_OBS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s	Y				Y	Y	Y	Y	Y	MJD of observation	
 MOSMODE	MOSMODE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		multi-object mode	
@@ -420,8 +420,8 @@ TDIS7VAL	TDIS7VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		driver dis
 TDIS8VAL	TDIS8VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		driver disk temperature sensor 8	
 TELESCOP	TELESCOP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		telescope	
 TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		telescope focus	
-TEMPDET	TEMPDET	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		detector temperature	
-TEMPSET	TEMPSET	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		detector temperature setpoint	
+TEMPDET	TEMPDET	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		detector temperature	
+TEMPSET	TEMPSET	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		detector temperature setpoint	
 TGRA1VAL	TGRA1VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		grating temperature sensor 1	
 TGRA2VAL	TGRA2VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		grating temperature sensor 2	
 TGRA3VAL	TGRA3VAL	DEIMOS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		grating temperature sensor 3	
@@ -434,8 +434,8 @@ TMPCINC	TMPCINC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		coolant in 
 TMPCOOLC	TMPCOOLC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		coolant temperature	
 TMPCOUTC	TMPCOUTC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		coolant out temperature	
 TMPTVCOC	TMPTVCOC	DEIMOS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		guider coolant temperature	
-TTIME	TTIME	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		exposure time	
-TUBETEMP	TUBETEMP	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		tube temperature	
+TTIME	TTIME	DEIMOS	integer	sec	NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		exposure time	
+TUBETEMP	TUBETEMP	DCS	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		tube temperature	
 TVA2SPOW	TVA2SPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		guider power status	
 TVCAMPOW	TVCAMPOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		guider camera power status	
 TVCOFLOW	TVCOFLOW	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		guider coolant flow	
@@ -486,7 +486,7 @@ VIDOFF7	VIDOFF7	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset
 VIDOFF8	VIDOFF8	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset amplifier 8	
 VIDOFF9	VIDOFF9	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		video offset amplifier 9	
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox	
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox	
+	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox	
 	UTDATETIME	NExScI	char		TIMESTAMP	11	Y	N	N	11s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	
 	L0_INGTIME	NExScI	char		TIMESTAMP	19	Y	N	N	11s	Y				N			N		Time of metadata ingestion	
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive	
