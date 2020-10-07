@@ -32,6 +32,8 @@ parser.add_argument("-d", action='store_true', default=False, dest='debug', help
 parser.add_argument("-kw", action='store', default='', dest='output_kw', help='Output Keyword Table (dbIngest style)')
 parser.add_argument("-dd", action='store', default='', dest='output_dd', help='Prefix for disk/database DD Tables')
 parser.add_argument("-db", action='store', default='', dest='output_db', help='Output DB Creation Script')
+parser.add_argument("-csv", action='store', default='', dest='output_csv', help='Output CSV file for website documentation')
+
 
 ## Positional args:
 parser.add_argument("input_tab_file", type=str, help="Input tab-delimited file")
@@ -41,13 +43,14 @@ args = parser.parse_args()
 
 input_file            = args.input_tab_file
 output_kw             = args.output_kw
+output_csv             = args.output_csv
 output_dd_FOR_DB      = args.output_dd + '.for_database'
 output_dd_FOR_DISK    = args.output_dd + '.for_disk'
 output_db             = args.output_db
 table_name            = args.table_name.upper()
 debug                 = args.debug
 
-if (output_kw == '' and args.output_dd == '' and output_db == ''):
+if (output_csv == '' and output_kw == '' and args.output_dd == '' and output_db == ''):
   printerr("Must select at least one type of output table (Keyword, DD, DB)")
   
 
@@ -57,6 +60,7 @@ if debug:
   print ("output_dd_FOR_DISK = %s" % output_dd_FOR_DISK)
   print ("output_kw = %s" % output_kw )
   print ("output_db = %s" % output_kw )
+  print ("output_csv = %s" % output_csv )
 
 
 # Read the input table: a tab-delimited ASCII version of the Excel / Google Sheets master table 
@@ -104,7 +108,6 @@ fill = [(masked, ' ', 'Description'),
         (masked, ' ', 'description'), 
         (masked, ' ', 'Units'), 
         (masked, ' ', 'units'), 
-        (masked, ' ', 'description'),
         (masked, ' ', 'mincol'), 
         (masked, ' ', 'maxcol'), 
         (masked, ' ', 'discretevalcol'), 
@@ -120,6 +123,37 @@ if (output_kw != ''):
     ascii.write( output_kw_t, output_kw, format='ipac', fast_writer=False, overwrite=True, fill_values=fill )
   except:
     printerr("Unable to write to: " + output_kw)
+
+## CSV is just a subset of keyword table
+output_csv_t = Table([input_t['DBKeyword'],
+                    input_t['Description'],
+                    input_t['MetadataDatatype'],
+                    input_t['Units'],
+                    input_t['MinValue'],
+                    input_t['MaxValue'],
+                    input_t['DiscreteValues']])
+
+output_csv_t.rename_column('DBKeyword', 'Keyword')
+output_csv_t.rename_column('MetadataDatatype', 'DataType')
+output_csv_t.rename_column('Units', 'Unit')
+output_csv_t.rename_column('MinValue', 'mincol')
+output_csv_t.rename_column('MaxValue', 'maxcol')
+output_csv_t.rename_column('DiscreteValues', 'discretevalcol')
+
+# Instead of 'null' nulls, we just want blanks in the keyword table:
+fill = [(masked, ' ', 'Description'),
+        (masked, ' ', 'description'),
+        (masked, ' ', 'Units'),
+        (masked, ' ', 'units'),
+        (masked, ' ', 'mincol'),
+        (masked, ' ', 'maxcol'),
+        (masked, ' ', 'discretevalcol')]
+# Output CSV version for website documentation if requested
+if (output_csv != ''):
+  try:
+    ascii.write( output_csv_t, output_csv, format='csv', fast_writer=False, overwrite=True, fill_values=fill )
+  except:
+    printerr("Unable to write to: " + output_csv)
 
 
 
