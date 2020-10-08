@@ -31,6 +31,7 @@ The files are saved as tab-separated columns with the following information:
 | TAP_visible | This keyword wil be exposed to the TAP service
 | TAP_principal | Value of 'principal' in TAP_SCHEMA.columns - some TAP clients use to determine whether to include in default selection
 | Description | Keyword definition
+| Example | Sample value - used for documentation
 | Notes | Any notes pertaining to this keyword and/or value
 
 
