@@ -1,328 +1,335 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char			32	N	Y	Y						Y					KOA file name		
-PROPINT	PROPINT	KOA	integer			16	N	Y	Y			0			Y					CCD1 data proprietary period time interval in months		
-DATE-OBS	DATE_OBS		date			12	N	Y	Y						Y					universal date of observation		
-DEC	CDEC		double			16	Y	Y	Y			-92	92		Y					telescope-declination		
-ELAPTIME	ELAPTIME		double			16	Y	Y	Y			0	100000		Y					elapsed-time		
-EQUINOX	EQUINOX		double			16	N	Y	Y			1855	2100		Y					telescope-equinox		
-FRAMENO	FRAMENO		integer			16	Y	Y	Y			0	9999		Y					frame-number		
-INSTRUME	INSTRUME		char			69	N	Y	Y					OSIRIS	Y					instrument's name		
-KOAIMTYP	KOAIMTYP	KOA	char			69	N	Y	Y					dark,flatlamp,flatlampoff,undefined,calib,object	Y					Image type		
-PROGID	PROGID	KOA	char			68	N	Y	N						Y					WMKO program ID		
-PROGINST	PROGINST	KOA	char			13	N	Y	N						Y					Program institution		
-PROGPI	PROGPI	KOA	char			69	N	Y	N						Y					Program principal investigator		
-PROGTITL	PROGTITL	KOA	char			211	Y	Y	N						Y					Title of observing program		
-RA	CRA		double			16	Y	Y	Y			-180	360		Y					telescope-right-ascension		
-SEMESTER	SEMESTER	KOA	char			9	N	Y	N						Y					Observing semester		
-TARGNAME	TARGNAME		char			69	Y	Y	N						Y					target-name		
-UT	UT		char			21	N	Y	Y						Y					coordinated universal time		
-UTC	UTC		char			21	N	Y	Y						Y					coordinated universal time		
-CRVAL1	CRVAL1		double			16	Y	Y	Y			??	??		Y							
-CRVAL2	CRVAL2		double			16	Y	Y	Y			??	??		Y							
-CRPIX1	CRPIX1		double			16	Y	Y	Y			??	??		Y							
-CRPIX2	CRPIX2		double			16	Y	Y	Y			??	??		Y							
-CTYPE1	CTYPE1		char			20	Y	Y	Y					(allowed values?)	Y							
-CTYPE2	CTYPE2		char			20	Y	Y	Y					(allowed values?)	Y							
-WAT0_001	WAT0_001		char			30	Y	Y	Y					allowed values?	Y							
-WAT1_001	WAT1_001		char			30	Y	Y	Y					allowed values?	Y							
-WAT2_001	WAT2_001		char			30	Y	Y	Y					allowed values?	Y							
-WCSDIM	WCSDIM		integer			16																
-LTM1_1	LTM1_1		double			16	Y	Y	Y			??	??		Y							
-LTM2_2	LTM2_2		double			16	Y	Y	Y			??	??		Y							
-CDELT1	CDELT1		double			16	Y	Y	Y			??	??		Y							
-CDELT2	CDELT2		double			16	Y	Y	Y			??	??		Y							
-CROTA2	CROTA2		double			16	Y	Y	Y			??	??		Y							
-RADECSYS	RADECSYS		char			10	Y	Y	Y					allowed values?	Y							
-AIRMASS	AIRMASS		double			16	Y	Y	N						Y							
-AOAOAMED	AOAOAMED		integer			16	Y	Y	N						Y							
-AODELAY	AODELAY		integer			16	Y	Y	N						Y							
-AODMSTAT	AODMSTAT		char			26	Y	Y	N						Y							
-AODRDTEN	AODRDTEN		double			16	Y	Y	N						Y							
-AODRENA	AODRENA		double			16	Y	Y	N						Y							
-AODTSTAT	AODTSTAT		char			15	Y	Y	N						Y							
-AOFCLBCT	AOFCLBCT		char			25	Y	Y	N						Y							
-AOFCLBFO	AOFCLBFO		double			16	Y	Y	N						Y							
-AOFCLGCT	AOFCLGCT		char			25	Y	Y	N						Y							
-AOFCLGFO	AOFCLGFO		double			16	Y	Y	N						Y							
-AOFCNGCT	AOFCNGCT		char			25	Y	Y	N						Y							
-AOFCNGFO	AOFCNGFO		double			16	Y	Y	N						Y							
-AOFCSALT	AOFCSALT		integer			16	Y	Y	N						Y							
-AOFMX	AOFMX		double			16	Y	Y	N						Y							
-AOFMY	AOFMY		double			16	Y	Y	N						Y							
-AOFOMODE	AOFOMODE		char			25	Y	Y	N						Y							
-AOLBFWHM	AOLBFWHM		double			16	Y	Y	N						Y							
-AOLPMOVE	AOLPMOVE		char			25	Y	Y	N						Y							
-AOOPSMOD	AOOPSMOD		integer			16	Y	Y	N						Y							
-AOTSDAR	AOTSDAR		char			25	Y	Y	N						Y							
-AOTSX	AOTSX		double			16	Y	Y	N						Y							
-AOTSY	AOTSY		double			16	Y	Y	N						Y							
-AOTSZ	AOTSZ		double			16	Y	Y	N						Y							
-AOTTMODE	AOTTMODE		char			25	Y	Y	N						Y							
-AOWFC0	AOWFC0		double			16	Y	Y	N						Y							
-AXESTAT	AXESTAT		char			22	Y	Y	N						Y							
-AZ	AZ		double			16	Y	Y	N						Y							
-BADPIX	BADPIX		char			57	Y	Y	N						Y							
-BITPIX	BITPIX		double			16	Y	Y	N						Y							
-BLANK	BLANK		integer			16	Y	Y	N						Y							
-CALOCAL	CALOCAL		double			16	Y	Y	N						Y							
-CELOCAL	CELOCAL		double			16	Y	Y	N						Y							
-COADDS	COADDS		integer			16	Y	Y	Y			1	1000000		Y							
-CTMP1	CTMP1		double			16	Y	Y	N						Y							
-CTMP2	CTMP2		double			16	Y	Y	N						Y							
-CTMP3	CTMP3		double			16	Y	Y	N						Y							
-CTMP4	CTMP4		double			16	Y	Y	N						Y							
-CTMP5	CTMP5		double			16	Y	Y	N						Y							
-CTMP6	CTMP6		double			16	Y	Y	N						Y							
-CTMP7	CTMP7		double			16	Y	Y	N						Y							
-CTMP8	CTMP8		double			16	Y	Y	N						Y							
-CTMPLOC1	CTMPLOC1		char			37	Y	Y	N						Y							
-CTMPLOC2	CTMPLOC2		char			37	Y	Y	N						Y							
-CTMPLOC3	CTMPLOC3		char			37	Y	Y	N						Y							
-CTMPLOC4	CTMPLOC4		char			37	Y	Y	N						Y							
-CTMPLOC5	CTMPLOC5		char			37	Y	Y	N						Y							
-CTMPLOC6	CTMPLOC6		char			37	Y	Y	N						Y							
-CTMPLOC7	CTMPLOC7		char			37	Y	Y	N						Y							
-CTMPLOC8	CTMPLOC8		char			37	Y	Y	N						Y							
-CURRINST	CURRINST		char			25	Y	Y	N						Y							
-DATAFILE	DATAFILE		char			26	Y	Y	N						Y							
-DATASET	DATASET		char			60	Y	Y	N						Y							
-DATLEVEL	DATLEVEL		integer			16	Y	Y	N						Y							
-DCOORDS	DCOORDS		char			25	Y	Y	N						Y							
-DCSSTAT	DCSSTAT		char			12	Y	Y	N						Y							
-DDEC	DDEC		double			16	Y	Y	N						Y							
-DECOFF	DECOFF		double			16	Y	Y	N						Y							
-DLSTOFF1	DLSTOFF1		double			16	Y	Y	N						Y							
-DLSTOFF2	DLSTOFF2		double			16	Y	Y	N						Y							
-DMGAIN	DMGAIN		double			16	Y	Y	N						Y							
-DMMRFN	DMMRFN		char			15	Y	Y	N						Y							
-DOMEPOSN	DOMEPOSN		double			16	Y	Y	N						Y							
-DOMESTAT	DOMESTAT		char			25	Y	Y	N						Y							
-DPWNAME1	DPWNAME1		char			25	Y	Y	N						Y							
-DPWNAME2	DPWNAME2		char			25	Y	Y	N						Y							
-DPWNAME3	DPWNAME3		char			25	Y	Y	N						Y							
-DPWNAME4	DPWNAME4		char			25	Y	Y	N						Y							
-DPWNAME5	DPWNAME5		char			25	Y	Y	N						Y							
-DPWNAME6	DPWNAME6		char			25	Y	Y	N						Y							
-DPWNAME7	DPWNAME7		char			25	Y	Y	N						Y							
-DPWSTAT1	DPWSTAT1		integer			16	Y	Y	N						Y							
-DPWSTAT2	DPWSTAT2		integer			16	Y	Y	N						Y							
-DPWSTAT3	DPWSTAT3		integer			16	Y	Y	N						Y							
-DPWSTAT4	DPWSTAT4		integer			16	Y	Y	N						Y							
-DPWSTAT5	DPWSTAT5		integer			16	Y	Y	N						Y							
-DPWSTAT6	DPWSTAT6		integer			16	Y	Y	N						Y							
-DPWSTAT7	DPWSTAT7		integer			16	Y	Y	N						Y							
-DPWSTAT8	DPWSTAT8		integer			16	Y	Y	N						Y							
-DQA_DATE	DQA_DATE		char			25	Y	Y	N						Y							
-DQA_VERS	DQA_VERS		char			15	Y	Y	N						Y							
-DRA	DRA		double			16	Y	Y	N						Y							
-DTCLP	DTCLP		char			26	Y	Y	N						Y							
-DTGAIN	DTGAIN		double			16	Y	Y	N						Y							
-DTMP1	DTMP1		double			16	Y	Y	N						Y							
-DTMP2	DTMP2		double			16	Y	Y	N						Y							
-DTMP3	DTMP3		double			16	Y	Y	N						Y							
-DTMP4	DTMP4		double			16	Y	Y	N						Y							
-DTMP5	DTMP5		double			16	Y	Y	N						Y							
-DTMP6	DTMP6		double			16	Y	Y	N						Y							
-DTMP7	DTMP7		double			16	Y	Y	N						Y							
-DTMP8	DTMP8		double			16	Y	Y	N						Y							
-DTMPLOC1	DTMPLOC1		char			37	Y	Y	N						Y							
-DTMPLOC2	DTMPLOC2		char			37	Y	Y	N						Y							
-DTMPLOC3	DTMPLOC3		char			37	Y	Y	N						Y							
-DTMPLOC4	DTMPLOC4		char			37	Y	Y	N						Y							
-DTMPLOC5	DTMPLOC5		char			37	Y	Y	N						Y							
-DTMPLOC6	DTMPLOC6		char			37	Y	Y	N						Y							
-DTMPLOC7	DTMPLOC7		char			37	Y	Y	N						Y							
-DTMPLOC8	DTMPLOC8		char			37	Y	Y	N						Y							
-DTOTOFF1	DTOTOFF1		double			16	Y	Y	N						Y							
-DTOTOFF2	DTOTOFF2		double			16	Y	Y	N						Y							
-DTRACK	DTRACK		char			25	Y	Y	N						Y							
-EL	EL		double			16	Y	Y	N						Y							
-EPWNAME1	EPWNAME1		char			25	Y	Y	N						Y							
-EPWNAME2	EPWNAME2		char			25	Y	Y	N						Y							
-EPWNAME3	EPWNAME3		char			25	Y	Y	N						Y							
-EPWNAME4	EPWNAME4		char			25	Y	Y	N						Y							
-EPWNAME5	EPWNAME5		char			25	Y	Y	N						Y							
-EPWNAME6	EPWNAME6		char			25	Y	Y	N						Y							
-EPWNAME7	EPWNAME7		char			25	Y	Y	N						Y							
-EPWNAME8	EPWNAME8		char			25	Y	Y	N						Y							
-EPWSTAT1	EPWSTAT1		integer			16	Y	Y	N						Y							
-EPWSTAT2	EPWSTAT2		integer			16	Y	Y	N						Y							
-EPWSTAT3	EPWSTAT3		integer			16	Y	Y	N						Y							
-EPWSTAT4	EPWSTAT4		integer			16	Y	Y	N						Y							
-EPWSTAT5	EPWSTAT5		integer			16	Y	Y	N						Y							
-EPWSTAT6	EPWSTAT6		integer			16	Y	Y	N						Y							
-EPWSTAT7	EPWSTAT7		integer			16	Y	Y	N						Y							
-EPWSTAT8	EPWSTAT8		integer			16	Y	Y	N						Y							
-EXTEND	EXTEND		char			25	Y	Y	N						Y							
-FILTER	FILTER		char			25	Y	Y	N						Y							
-FOCALSTN	FOCALSTN		char				Y	Y	N						Y							
-FRAMENUM	FRAMENUM		integer			16	Y	Y	N						Y							
-GAIN	GAIN		double			16	Y	Y	N						Y							
-GUIDWAVE	GUIDWAVE		double			16	Y	Y	N						Y							
-HA	HA		double			16	Y	Y	N						Y							
-ICURTMP	ICURTMP		double			16	Y	Y	N						Y							
-IF1MECH	IF1MECH		char				Y	Y	N						Y							
-IF1NAME	IF1NAME		char				Y	Y	N						Y							
-IF1RAW	IF1RAW		integer			16	Y	Y	N						Y							
-IF1STAT	IF1STAT		char				Y	Y	N						Y							
-IF1SWTCH	IF1SWTCH		integer			16	Y	Y	N						Y							
-IF2MECH	IF2MECH		char				Y	Y	N						Y							
-IF2NAME	IF2NAME		char				Y	Y	N						Y							
-IF2RAW	IF2RAW		integer			16	Y	Y	N						Y							
-IF2STAT	IF2STAT		char				Y	Y	N						Y							
-IF2SWTCH	IF2SWTCH		integer			16	Y	Y	N						Y							
-IFILTER	IFILTER		char				Y	Y	N						Y							
-IFRAME	IFRAME		integer			16	Y	Y	N						Y							
-IFRAMES	IFRAMES		integer			16	Y	Y	N						Y							
-IHTRACT	IHTRACT		integer			16	Y	Y	N						Y							
-IHTROUT	IHTROUT		double			16	Y	Y	N						Y							
-IMAGMODE	IMAGMODE		char				Y	Y	N						Y							
-INSTANGL	INSTANGL		double			16	Y	Y	N						Y							
-INSTFLIP	INSTFLIP		char				Y	Y	N						Y							
-INSTR	INSTR		char				N	Y	Y					image,spec	Y							
-ISAO	ISAO		char				Y	Y	N						Y							
-ISSKY	ISSKY		integer				Y	Y	N						Y							
-ITIME	ITIME		integer				Y	Y	Y			0	2000000		Y							
-ITRGTMP	ITRGTMP		double			16	Y	Y	N						Y							
-LGRMSWF	LGRMSWF		double			16	Y	Y	N						Y							
-LSAMPPWR	LSAMPPWR		double			16	Y	Y	N						Y							
-LSPROP	LSPROP		char				Y	Y	N						Y							
-LST	LST		char				Y	Y	N						Y							
-MJD_OBS	MJD_OBS		double			16	Y	Y	N						Y							
-NAXIS	NAXIS		integer			16	Y	Y	N						Y							
-NAXIS1	NAXIS1		integer			16	Y	Y	N						Y							
-NAXIS2	NAXIS2		integer			16	Y	Y	N						Y							
-NLINEAR	NLINEAR		integer			16	Y	Y	N						Y							
-NOISEFIL	NOISEFIL		char				Y	Y	N						Y							
-NONLIN	NONLIN		integer			16	Y	Y	N						Y							
-NPIXSAT	NPIXSAT		integer			16	Y	Y	N						Y							
-NUMREADS	NUMREADS		integer			16	Y	Y	N						Y							
-OA	OA		char				Y	Y	N						Y							
-OBAMNAME	OBAMNAME		char				Y	Y	N						Y							
-OBFMDREN	OBFMDREN		double			16	Y	Y	N						Y							
-OBFMXIM	OBFMXIM		double			16	Y	Y	N						Y							
-OBFMXPU	OBFMXPU		double			16	Y	Y	N						Y							
-OBFMYIM	OBFMYIM		double			16	Y	Y	N						Y							
-OBFMYPU	OBFMYPU		double			16	Y	Y	N						Y							
-OBFSNAME	OBFSNAME		double			16	Y	Y	N						Y							
-OBIMNAME	OBIMNAME		char				Y	Y	N						Y							
-OBJECT	OBJECT		char				Y	Y	N						Y							
-OBJPTTRN	OBJPTTRN		char				Y	Y	N						Y							
-OBLBNAME	OBLBNAME		char				Y	Y	N						Y							
-OBRT	OBRT		double			16	Y	Y	N						Y							
-OBSDNAME	OBSDNAME		char				Y	Y	N						Y							
-OBSERVER	OBSERVER		char				Y	Y	N						Y							
-OBSFNAME	OBSFNAME		char				Y	Y	N						Y							
-OBSFX	OBSFX		double			16	Y	Y	N						Y							
-OBSFY	OBSFY		double			16	Y	Y	N						Y							
-OBSFZ	OBSFZ		double			16	Y	Y	N						Y							
-OBSI	OBSI		double			16	Y	Y	N						Y							
-OBSNNAME	OBSNNAME		char				Y	Y	N						Y							
-OBSTYPE	OBSTYPE		char				Y	Y	N						Y							
-OBSWNAME	OBSWNAME		char				Y	Y	N						Y							
-OBSWSTA	OBSWSTA		char				Y	Y	N						Y							
-OBTSNAME	OBTSNAME		char				Y	Y	N						Y							
-OBTSX	OBTSX		double			16	Y	Y	N						Y							
-OBTSY	OBTSY		double			16	Y	Y	N						Y							
-OBTSZ	OBTSZ		double			16	Y	Y	N						Y							
-OBWF	OBWF		double			16	Y	Y	N						Y							
-OBWCNAME	OBWCNAME		double			16	Y	Y	N						Y							
-OBWFSTST	OBWFSTST		char				Y	Y	N						Y							
-OBWLNAME	OBWLNAME		double			16	Y	Y	N						Y							
-OBWNNAME	OBWNNAME		char				Y	Y	N						Y							
-OBWPNAME	OBWPNAME		char				Y	Y	N						Y							
-PA_IMAG	PA_IMAG		double			16	Y	Y	N						Y							
-PA_SPEC	PA_SPEC		double			16	Y	Y	N						Y							
-PARANG	PARANG		double			16	Y	Y	N						Y							
-PCIFILE	PCIFILE		char				Y	Y	N						Y							
-PONAME	PONAME		char				Y	Y	N						Y							
-PONAME1	PONAME1		char				Y	Y	N						Y							
-PONAME2	PONAME2		char				Y	Y	N						Y							
-PONAME3	PONAME3		char				Y	Y	N						Y							
-POXPOS	POXPOS		double			16	Y	Y	N						Y							
-POXPOS1	POXPOS1		double			16	Y	Y	N						Y							
-POXPOS2	POXPOS2		double			16	Y	Y	N						Y							
-POXPOS3	POXPOS3		double			16	Y	Y	N						Y							
-POYPOS	POYPOS		double			16	Y	Y	N						Y							
-POYPOS1	POYPOS1		double			16	Y	Y	N						Y							
-POYPOS2	POYPOS2		double			16	Y	Y	N						Y							
-POYPOS3	POYPOS3		double			16	Y	Y	N						Y							
-PRESSURE	PRESSURE		double			16	Y	Y	N						Y							
-RAOFF	RAOFF		double			16	Y	Y	N						Y							
-RDITIME	RDITIME		double			16	Y	Y	N						Y							
-READTIME	READTIME		double			16	Y	Y	N						Y							
-ROTCALAN	ROTCALAN		double			16	Y	Y	N						Y							
-ROTDEST	ROTDEST		double			16	Y	Y	N						Y							
-ROTMODE	ROTMODE		char				Y	Y	N						Y							
-ROTPDEST	ROTPDEST		double			16	Y	Y	N						Y							
-ROTPOSN	ROTPOSN		double			16	Y	Y	N						Y							
-ROTPPOSN	ROTPPOSN		double			16	Y	Y	N						Y							
-ROTREFAN	ROTREFAN		double			16	Y	Y	N						Y							
-SAMPMODE	SAMPMODE		integer			16	Y	Y	N						Y							
-SATURATE	SATURATE		integer			16	Y	Y	N						Y							
-SCALE	SCALE		double			16	Y	Y	N						Y							
-SCURTMP	SCURTMP		double			16	Y	Y	N						Y							
-SECFOCUS	SECFOCUS		double			16	Y	Y	N						Y							
-SECTHETX	SECTHETX		double			16	Y	Y	N						Y							
-SECTHETY	SECTHETY		double			16	Y	Y	N						Y							
-SETNUM	SETNUM		integer			16	Y	Y	N						Y							
-SFILTER	SFILTER		char				Y	Y	N						Y							
-SFRAME	SFRAME		integer			16	Y	Y	N						Y							
-SFRAMES	SFRAMES		integer			16	Y	Y	N						Y							
-SFWMECH	SFWMECH		char				Y	Y	N						Y							
-SFWNAME	SFWNAME		char				Y	Y	N						Y							
-SFWRAW	SFWRAW		double			16	Y	Y	N						Y							
-SFWSTAT	SFWSTAT		char				Y	Y	N						Y							
-SFWSWTCH	SFWSWTCH		integer			16	Y	Y	N						Y							
-SHTRACT	SHTRACT		integer			16	Y	Y	N						Y							
-SHTROUT	SHTROUT		double			16	Y	Y	N						Y							
-SHTRRANG	SHTRRANG		integer			16	Y	Y	N						Y							
-SIMPLE	SIMPLE		char				Y	Y	N						Y							
-SKYPTTRN	SKYPTTRN		char				Y	Y	N						Y							
-SLMMECH	SLMMECH		char				Y	Y	N						Y							
-SLMNAME	SLMNAME		char				Y	Y	N						Y							
-SLMRAW	SLMRAW		integer			16	Y	Y	N						Y							
-SLMSTAT	SLMSTAT		char				Y	Y	N						Y							
-SLMSWTCH	SLMSWTCH		integer			16	Y	Y	N						Y							
-SS1MECH	SS1MECH		char				Y	Y	N						Y							
-SS1NAME	SS1NAME		double			16	Y	Y	N						Y							
-SS1RAW	SS1RAW		integer			16	Y	Y	N						Y							
-SS1STAT	SS1STAT		char				Y	Y	N						Y							
-SS1SWTCH	SS1SWTCH		integer			16	Y	Y	N						Y							
-SS2MECH	SS2MECH		char				Y	Y	N						Y							
-SS2NAME	SS2NAME		double			16	Y	Y	N						Y							
-SS2RAW	SS2RAW		integer			16	Y	Y	N						Y							
-SS2STAT	SS2STAT		char				Y	Y	N						Y							
-SS2SWTCH	SS2SWTCH		integer			16	Y	Y	N						Y							
-SSCALE	SSCALE		double			16	Y	Y	N						Y							
-STRGTMP	STRGTMP		double			16	Y	Y	N						Y							
-TARGWAVE	TARGWAVE		double			16	Y	Y	N						Y							
-TELESCOP	TELESCOP		char				Y	Y	N						Y							
-TELFOCUS	TELFOCUS		double			16	Y	Y	N						Y							
-TIMFILE	TIMFILE		char				Y	Y	N						Y							
-TUBETEMP	TUBETEMP		double			16	Y	Y	N						Y							
-UTCLP	UTCLP		char				Y	Y	N						Y							
-UTGAIN	UTGAIN		double			16	Y	Y	N						Y							
-WAVEBLUE	WAVEBLUE		double			16	Y	Y	N						Y							
-WAVECNTR	WAVECNTR		double			16	Y	Y	N						Y							
-WAVERED	WAVERED		double			16	Y	Y	N						Y							
-WCDMSTAT	WCDMSTAT		char				Y	Y	N						Y							
-WCDTSTAT	WCDTSTAT		char				Y	Y	N						Y							
-WCUTSTAT	WCUTSTAT		char				Y	Y	N						Y							
-WFDAR	WFDAR		char				Y	Y	N						Y							
-WFDM	WFDM		char				Y	Y	N						Y							
-WFTT	WFTT		char				Y	Y	N						Y							
-WSCNORFN	WSCNORFN		char				Y	Y	N						Y							
-WSFRRT	WSFRRT		integer			16	Y	Y	N						Y							
-WSSMGN	WSSMGN		integer			16	Y	Y	N						Y							
-WSSMPRG	WSSMPRG		integer			16	Y	Y	N						Y							
-WSSMREP	WSSMREP		integer			16	Y	Y	N						Y							
-WXDOMHUM	WXDOMHUM		double			16	Y	Y	N						Y							
-WXDOMTMP	WXDOMTMP		double			16	Y	Y	N						Y							
-WXDWPT	WXDWPT		double			16	Y	Y	N						Y							
-WXOUTHUM	WXOUTHUM		double			16	Y	Y	N						Y							
-WXOUTTMP	WXOUTTMP		double			16	Y	Y	N						Y							
-WXPRESS	WXPRESS		double			16	Y	Y	N						Y							
-WXTIME	WXTIME		char				Y	Y	N						Y							
-WXWNDIR	WXWNDIR		double			16	Y	Y	N						Y							
-WXWNDSP	WXWNDSP		double			16	Y	Y	N						Y							
+KOAID	KOAID	KOA	char		VARCHAR2(34)	32	N	Y	Y	32s					Y					KOA file name		
+PROPINT	PROPINT	KOA	integer		NUMBER(10)	16	N	Y	Y			0			Y					CCD1 data proprietary period time interval in months		
+DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y						Y					universal date of observation		
+DEC	CDEC		double		VARCHAR2(25)	16	Y	Y	Y			-92	92		Y					telescope-declination		
+ELAPTIME	ELAPTIME		double		FLOAT(126)	16	Y	Y	Y			0	100000		Y					elapsed-time		
+EQUINOX	EQUINOX		double		FLOAT(126)	16	N	Y	Y			1855	2100		Y					telescope-equinox		
+FRAMENO	FRAMENO		integer		NUMBER(10)	16	Y	Y	Y			0	9999		Y					frame-number		
+INSTRUME	INSTRUME		char		VARCHAR2(70)	69	N	Y	Y	69s				OSIRIS	Y					instrument's name		
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(70)	69	N	Y	Y	69s				"dark,flatlamp,flatlampoff,undefined,calib,object"	Y					Image type		
+PROGID	PROGID	KOA	char		VARCHAR2(70)	68	N	Y	N	68s					Y					WMKO program ID		
+PROGINST	PROGINST	KOA	char		VARCHAR2(25)	13	N	Y	N	20s					Y					Program institution		
+PROGPI	PROGPI	KOA	char		VARCHAR2(70)	69	N	Y	N	69s					Y					Program principal investigator		
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(212)	211	Y	Y	N	211s					Y					Title of observing program		
+RA	CRA		double		VARCHAR2(25)	16	Y	Y	Y			-180	360		Y					telescope-right-ascension		
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(10)	9	N	Y	N						Y					Observing semester		
+TARGNAME	TARGNAME		char		VARCHAR2(70)	69	Y	Y	N	69s					Y					target-name		
+UT	UT		char		VARCHAR2(22)	21	N	Y	Y						Y					coordinated universal time		
+UTC	UTC		char		VARCHAR2(22)	21	N	Y	Y						Y					coordinated universal time		
+CRVAL1	CRVAL1		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CRVAL2	CRVAL2		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CRPIX1	CRPIX1		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CRPIX2	CRPIX2		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CTYPE1	CTYPE1		char		VARCHAR2(25)	20	Y	Y	Y					(allowed values?)	Y							
+CTYPE2	CTYPE2		char		VARCHAR2(25)	20	Y	Y	Y					(allowed values?)	Y							
+WAT0_001	WAT0_001		char		VARCHAR2(31)	30	Y	Y	Y					allowed values?	Y							
+WAT1_001	WAT1_001		char		VARCHAR2(31)	30	Y	Y	Y					allowed values?	Y							
+WAT2_001	WAT2_001		char		VARCHAR2(31)	30	Y	Y	Y					allowed values?	Y							
+WCSDIM	WCSDIM		integer		NUMBER(10)	16																
+LTM1_1	LTM1_1		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+LTM2_2	LTM2_2		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CDELT1	CDELT1		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CDELT2	CDELT2		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+CROTA2	CROTA2		double		FLOAT(126)	16	Y	Y	Y			??	??		Y							
+RADECSYS	RADECSYS		char		VARCHAR2(25)	10	Y	Y	Y					allowed values?	Y							
+AIRMASS	AIRMASS		double		FLOAT(126)	16	Y	Y	N						Y							
+AOAOAMED	AOAOAMED		integer		NUMBER(10)	16	Y	Y	N						Y							
+AODELAY	AODELAY		integer		NUMBER(10)	16	Y	Y	N						Y							
+AODMSTAT	AODMSTAT		char		VARCHAR2(27)	26	Y	Y	N						Y							
+AODRDTEN	AODRDTEN		double		FLOAT(126)	16	Y	Y	N						Y							
+AODRENA	AODRENA		double		FLOAT(126)	16	Y	Y	N						Y							
+AODTSTAT	AODTSTAT		char		VARCHAR2(16)	15	Y	Y	N						Y							
+AOFCLBCT	AOFCLBCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOFCLBFO	AOFCLBFO		double		FLOAT(126)	16	Y	Y	N						Y							
+AOFCLGCT	AOFCLGCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOFCLGFO	AOFCLGFO		double		FLOAT(126)	16	Y	Y	N						Y							
+AOFCNGCT	AOFCNGCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOFCNGFO	AOFCNGFO		double		FLOAT(126)	16	Y	Y	N						Y							
+AOFCSALT	AOFCSALT		integer		NUMBER(10)	16	Y	Y	N						Y							
+AOFMX	AOFMX		double		FLOAT(126)	16	Y	Y	N						Y							
+AOFMY	AOFMY		double		FLOAT(126)	16	Y	Y	N						Y							
+AOFOMODE	AOFOMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOLBFWHM	AOLBFWHM		double		FLOAT(126)	16	Y	Y	N						Y							
+AOLPMOVE	AOLPMOVE		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOOPSMOD	AOOPSMOD		integer		NUMBER(10)	16	Y	Y	N						Y							
+AOTSDAR	AOTSDAR		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOTSX	AOTSX		double		FLOAT(126)	16	Y	Y	N						Y							
+AOTSY	AOTSY		double		FLOAT(126)	16	Y	Y	N						Y							
+AOTSZ	AOTSZ		double		FLOAT(126)	16	Y	Y	N						Y							
+AOTTMODE	AOTTMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
+AOWFC0	AOWFC0		double		FLOAT(126)	16	Y	Y	N						Y							
+AXESTAT	AXESTAT		char		VARCHAR2(23)	22	Y	Y	N						Y							
+AZ	AZ		double		FLOAT(126)	16	Y	Y	N						Y							
+BADPIX	BADPIX		char		VARCHAR2(58)	57	Y	Y	N						Y							
+BITPIX	BITPIX		double		FLOAT(126)	16	Y	Y	N						Y							
+BLANK	BLANK		integer		NUMBER(10)	16	Y	Y	N						Y							
+CALOCAL	CALOCAL		double		FLOAT(126)	16	Y	Y	N						Y							
+CELOCAL	CELOCAL		double		FLOAT(126)	16	Y	Y	N						Y							
+COADDS	COADDS		integer		NUMBER(10)	16	Y	Y	Y			1	1000000		Y							
+CTMP1	CTMP1		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP2	CTMP2		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP3	CTMP3		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP4	CTMP4		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP5	CTMP5		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP6	CTMP6		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP7	CTMP7		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMP8	CTMP8		double		FLOAT(126)	16	Y	Y	N						Y							
+CTMPLOC1	CTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC2	CTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC3	CTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC4	CTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC5	CTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC6	CTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC7	CTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CTMPLOC8	CTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y							
+CURRINST	CURRINST		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DATAFILE	DATAFILE		char		VARCHAR2(27)	26	Y	Y	N						Y							
+DATASET	DATASET		char		VARCHAR2(60)	60	Y	Y	N						Y							
+DATLEVEL	DATLEVEL		integer		NUMBER(10)	16	Y	Y	N						Y							
+DCOORDS	DCOORDS		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DCSSTAT	DCSSTAT		char		VARCHAR2(26)	12	Y	Y	N						Y							
+DDEC	DDEC		double		FLOAT(126)	16	Y	Y	N						Y							
+DECOFF	DECOFF		double		FLOAT(126)	16	Y	Y	N						Y							
+DLSTOFF1	DLSTOFF1		double		FLOAT(126)	16	Y	Y	N						Y							
+DLSTOFF2	DLSTOFF2		double		FLOAT(126)	16	Y	Y	N						Y							
+DMGAIN	DMGAIN		double		FLOAT(126)	16	Y	Y	N						Y							
+DMMRFN	DMMRFN		char		VARCHAR2(24)	15	Y	Y	N						Y							
+DOMEPOSN	DOMEPOSN		double		FLOAT(126)	16	Y	Y	N						Y							
+DOMESTAT	DOMESTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME1	DPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME2	DPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME3	DPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME4	DPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME5	DPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME6	DPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWNAME7	DPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y							
+DPWSTAT1	DPWSTAT1		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT2	DPWSTAT2		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT3	DPWSTAT3		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT4	DPWSTAT4		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT5	DPWSTAT5		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT6	DPWSTAT6		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT7	DPWSTAT7		integer		NUMBER(10)	16	Y	Y	N						Y							
+DPWSTAT8	DPWSTAT8		integer		NUMBER(10)	16	Y	Y	N						Y							
+DQA_DATE	DQA_DATE		char		VARCHAR2(29)	25	Y	Y	N						Y							
+DQA_VERS	DQA_VERS		char		VARCHAR2(26)	15	Y	Y	N						Y							
+DRA	DRA		double		FLOAT(126)	16	Y	Y	N						Y							
+DTCLP	DTCLP		char		VARCHAR2(26)	26	Y	Y	N						Y							
+DTGAIN	DTGAIN		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP1	DTMP1		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP2	DTMP2		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP3	DTMP3		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP4	DTMP4		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP5	DTMP5		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP6	DTMP6		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP7	DTMP7		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMP8	DTMP8		double		FLOAT(126)	16	Y	Y	N						Y							
+DTMPLOC1	DTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC2	DTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC3	DTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC4	DTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC5	DTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC6	DTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC7	DTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTMPLOC8	DTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y							
+DTOTOFF1	DTOTOFF1		double		FLOAT(126)	16	Y	Y	N						Y							
+DTOTOFF2	DTOTOFF2		double		FLOAT(126)	16	Y	Y	N						Y							
+DTRACK	DTRACK		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EL	EL		double		FLOAT(126)	16	Y	Y	N						Y							
+EPWNAME1	EPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME2	EPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME3	EPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME4	EPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME5	EPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME6	EPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME7	EPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWNAME8	EPWNAME8		char		VARCHAR2(26)	25	Y	Y	N						Y							
+EPWSTAT1	EPWSTAT1		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT2	EPWSTAT2		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT3	EPWSTAT3		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT4	EPWSTAT4		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT5	EPWSTAT5		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT6	EPWSTAT6		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT7	EPWSTAT7		integer		NUMBER(10)	16	Y	Y	N						Y							
+EPWSTAT8	EPWSTAT8		integer		NUMBER(10)	16	Y	Y	N						Y							
+EXTEND	EXTEND		char		VARCHAR2(26)	25	Y	Y	N						Y							
+FILTER	FILTER		char		VARCHAR2(26)	25	Y	Y	N						Y							
+FOCALSTN	FOCALSTN		char		VARCHAR2(27)		Y	Y	N						Y							
+FRAMENUM	FRAMENUM		integer		NUMBER(10)	16	Y	Y	N						Y							
+GAIN	GAIN		double		FLOAT(126)	16	Y	Y	N						Y							
+GUIDWAVE	GUIDWAVE		double		FLOAT(126)	16	Y	Y	N						Y							
+HA	HA		double		FLOAT(126)	16	Y	Y	N						Y							
+ICURTMP	ICURTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+IF1MECH	IF1MECH		char		VARCHAR2(27)		Y	Y	N						Y							
+IF1NAME	IF1NAME		char		VARCHAR2(26)		Y	Y	N						Y							
+IF1RAW	IF1RAW		integer		NUMBER(10)	16	Y	Y	N						Y							
+IF1STAT	IF1STAT		char		VARCHAR2(26)		Y	Y	N						Y							
+IF1SWTCH	IF1SWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+IF2MECH	IF2MECH		char		VARCHAR2(27)		Y	Y	N						Y							
+IF2NAME	IF2NAME		char		VARCHAR2(26)		Y	Y	N						Y							
+IF2RAW	IF2RAW		integer		NUMBER(10)	16	Y	Y	N						Y							
+IF2STAT	IF2STAT		char		VARCHAR2(26)		Y	Y	N						Y							
+IF2SWTCH	IF2SWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+IFILTER	IFILTER		char		VARCHAR2(26)		Y	Y	N						Y							
+IFRAME	IFRAME		integer		NUMBER(10)	16	Y	Y	N						Y							
+IFRAMES	IFRAMES		integer		NUMBER(10)	16	Y	Y	N						Y							
+IHTRACT	IHTRACT		integer		NUMBER(10)	16	Y	Y	N						Y							
+IHTROUT	IHTROUT		double		FLOAT(126)	16	Y	Y	N						Y							
+IMAGMODE	IMAGMODE		char		VARCHAR2(26)		Y	Y	N						Y							
+INSTANGL	INSTANGL		double		FLOAT(126)	16	Y	Y	N						Y							
+INSTFLIP	INSTFLIP		char		VARCHAR2(26)		Y	Y	N						Y							
+INSTR	INSTR		char		VARCHAR2(26)		N	Y	Y					"image,spec"	Y							
+ISAO	ISAO		char		VARCHAR2(26)		Y	Y	N						Y							
+ISSKY	ISSKY		integer		NUMBER(10)		Y	Y	N						Y							
+ITIME	ITIME		integer		FLOAT(126)		Y	Y	Y			0	2000000		Y							
+ITRGTMP	ITRGTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+LGRMSWF	LGRMSWF		double		FLOAT(126)	16	Y	Y	N						Y							
+LSAMPPWR	LSAMPPWR		double		FLOAT(126)	16	Y	Y	N						Y							
+LSPROP	LSPROP		char		VARCHAR2(26)		Y	Y	N						Y							
+LST	LST		char		VARCHAR2(26)		Y	Y	N						Y							
+MJD_OBS	MJD_OBS		double		FLOAT(126)	16	Y	Y	N						Y							
+NAXIS	NAXIS		integer		NUMBER(10)	16	Y	Y	N						Y							
+NAXIS1	NAXIS1		integer		NUMBER(10)	16	Y	Y	N						Y							
+NAXIS2	NAXIS2		integer		NUMBER(10)	16	Y	Y	N						Y							
+NLINEAR	NLINEAR		integer		NUMBER(10)	16	Y	Y	N						Y							
+NOISEFIL	NOISEFIL		char		VARCHAR2(65)		Y	Y	N						Y							
+NONLIN	NONLIN		integer		NUMBER(10)	16	Y	Y	N						Y							
+NPIXSAT	NPIXSAT		integer		NUMBER(10)	16	Y	Y	N						Y							
+NUMREADS	NUMREADS		integer		NUMBER(10)	16	Y	Y	N						Y							
+OA	OA		char		VARCHAR2(29)		Y	Y	N						Y							
+OBAMNAME	OBAMNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBFMDREN	OBFMDREN		double		FLOAT(126)	16	Y	Y	N						Y							
+OBFMXIM	OBFMXIM		double		FLOAT(126)	16	Y	Y	N						Y							
+OBFMXPU	OBFMXPU		double		FLOAT(126)	16	Y	Y	N						Y							
+OBFMYIM	OBFMYIM		double		FLOAT(126)	16	Y	Y	N						Y							
+OBFMYPU	OBFMYPU		double		FLOAT(126)	16	Y	Y	N						Y							
+OBFSNAME	OBFSNAME		double		VARCHAR2(26)	16	Y	Y	N						Y							
+OBIMNAME	OBIMNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBJECT	OBJECT		char		VARCHAR2(60)		Y	Y	N						Y							
+OBJPTTRN	OBJPTTRN		char		VARCHAR2(26)		Y	Y	N						Y							
+OBLBNAME	OBLBNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBRT	OBRT		double		FLOAT(126)	16	Y	Y	N						Y							
+OBSDNAME	OBSDNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBSERVER	OBSERVER		char		VARCHAR2(60)		Y	Y	N						Y							
+OBSFNAME	OBSFNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBSFX	OBSFX		double		FLOAT(126)	16	Y	Y	N						Y							
+OBSFY	OBSFY		double		FLOAT(126)	16	Y	Y	N						Y							
+OBSFZ	OBSFZ		double		FLOAT(126)	16	Y	Y	N						Y							
+OBSI	OBSI		double		FLOAT(126)	16	Y	Y	N						Y							
+OBSNNAME	OBSNNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBSTYPE	OBSTYPE		char		VARCHAR2(26)		Y	Y	N						Y							
+OBSWNAME	OBSWNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBSWSTA	OBSWSTA		char		VARCHAR2(26)		Y	Y	N						Y							
+OBTSNAME	OBTSNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBTSX	OBTSX		double		FLOAT(126)	16	Y	Y	N						Y							
+OBTSY	OBTSY		double		FLOAT(126)	16	Y	Y	N						Y							
+OBTSZ	OBTSZ		double		FLOAT(126)	16	Y	Y	N						Y							
+OBWF	OBWF		double		FLOAT(126)	16	Y	Y	N						Y							
+OBWCNAME	OBWCNAME		double		VARCHAR2(26)	16	Y	Y	N						Y							
+OBWFSTST	OBWFSTST		char		VARCHAR2(26)		Y	Y	N						Y							
+OBWLNAME	OBWLNAME		double		VARCHAR2(26)	16	Y	Y	N						Y							
+OBWNNAME	OBWNNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+OBWPNAME	OBWPNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+PA_IMAG	PA_IMAG		double		FLOAT(126)	16	Y	Y	N						Y							
+PA_SPEC	PA_SPEC		double		FLOAT(126)	16	Y	Y	N						Y							
+PARANG	PARANG		double		FLOAT(126)	16	Y	Y	N						Y							
+PCIFILE	PCIFILE		char		VARCHAR2(50)		Y	Y	N						Y							
+PONAME	PONAME		char		VARCHAR2(26)		Y	Y	N						Y							
+PONAME1	PONAME1		char		VARCHAR2(26)		Y	Y	N						Y							
+PONAME2	PONAME2		char		VARCHAR2(26)		Y	Y	N						Y							
+PONAME3	PONAME3		char		VARCHAR2(26)		Y	Y	N						Y							
+POXPOS	POXPOS		double		FLOAT(126)	16	Y	Y	N						Y							
+POXPOS1	POXPOS1		double		FLOAT(126)	16	Y	Y	N						Y							
+POXPOS2	POXPOS2		double		FLOAT(126)	16	Y	Y	N						Y							
+POXPOS3	POXPOS3		double		FLOAT(126)	16	Y	Y	N						Y							
+POYPOS	POYPOS		double		FLOAT(126)	16	Y	Y	N						Y							
+POYPOS1	POYPOS1		double		FLOAT(126)	16	Y	Y	N						Y							
+POYPOS2	POYPOS2		double		FLOAT(126)	16	Y	Y	N						Y							
+POYPOS3	POYPOS3		double		FLOAT(126)	16	Y	Y	N						Y							
+PRESSURE	PRESSURE		double		FLOAT(126)	16	Y	Y	N						Y							
+RAOFF	RAOFF		double		FLOAT(126)	16	Y	Y	N						Y							
+RDITIME	RDITIME		double		FLOAT(126)	16	Y	Y	N						Y							
+READTIME	READTIME		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTCALAN	ROTCALAN		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTDEST	ROTDEST		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTMODE	ROTMODE		char		VARCHAR2(26)		Y	Y	N						Y							
+ROTPDEST	ROTPDEST		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTPOSN	ROTPOSN		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTPPOSN	ROTPPOSN		double		FLOAT(126)	16	Y	Y	N						Y							
+ROTREFAN	ROTREFAN		double		FLOAT(126)	16	Y	Y	N						Y							
+SAMPMODE	SAMPMODE		integer		NUMBER(10)	16	Y	Y	N						Y							
+SATURATE	SATURATE		integer		NUMBER(10)	16	Y	Y	N						Y							
+SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N						Y							
+SCURTMP	SCURTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+SECFOCUS	SECFOCUS		double		FLOAT(126)	16	Y	Y	N						Y							
+SECTHETX	SECTHETX		double		FLOAT(126)	16	Y	Y	N						Y							
+SECTHETY	SECTHETY		double		FLOAT(126)	16	Y	Y	N						Y							
+SETNUM	SETNUM		integer		NUMBER(10)	16	Y	Y	N						Y							
+SFILTER	SFILTER		char		VARCHAR2(26)		Y	Y	N						Y							
+SFRAME	SFRAME		integer		NUMBER(10)	16	Y	Y	N						Y							
+SFRAMES	SFRAMES		integer		NUMBER(10)	16	Y	Y	N						Y							
+SFWMECH	SFWMECH		char		VARCHAR2(26)		Y	Y	N						Y							
+SFWNAME	SFWNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+SFWRAW	SFWRAW		double		FLOAT(126)	16	Y	Y	N						Y							
+SFWSTAT	SFWSTAT		char		VARCHAR2(26)		Y	Y	N						Y							
+SFWSWTCH	SFWSWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+SHTRACT	SHTRACT		integer		NUMBER(10)	16	Y	Y	N						Y							
+SHTROUT	SHTROUT		double		FLOAT(126)	16	Y	Y	N						Y							
+SHTRRANG	SHTRRANG		integer		NUMBER(10)	16	Y	Y	N						Y							
+SIMPLE	SIMPLE		char		VARCHAR2(26)		Y	Y	N						Y							
+SKYPTTRN	SKYPTTRN		char		VARCHAR2(26)		Y	Y	N						Y							
+SLMMECH	SLMMECH		char		VARCHAR2(26)		Y	Y	N						Y							
+SLMNAME	SLMNAME		char		VARCHAR2(26)		Y	Y	N						Y							
+SLMRAW	SLMRAW		integer		NUMBER(10)	16	Y	Y	N						Y							
+SLMSTAT	SLMSTAT		char		VARCHAR2(26)		Y	Y	N						Y							
+SLMSWTCH	SLMSWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+SS1MECH	SS1MECH		char		VARCHAR2(27)		Y	Y	N						Y							
+SS1NAME	SS1NAME		double		VARCHAR2(26)	16	Y	Y	N						Y							
+SS1RAW	SS1RAW		integer		NUMBER(10)	16	Y	Y	N						Y							
+SS1STAT	SS1STAT		char		VARCHAR2(26)		Y	Y	N						Y							
+SS1SWTCH	SS1SWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+SS2MECH	SS2MECH		char		VARCHAR2(26)		Y	Y	N						Y							
+SS2NAME	SS2NAME		double		VARCHAR2(26)	16	Y	Y	N						Y							
+SS2RAW	SS2RAW		integer		NUMBER(10)	16	Y	Y	N						Y							
+SS2STAT	SS2STAT		char		VARCHAR2(26)		Y	Y	N						Y							
+SS2SWTCH	SS2SWTCH		integer		NUMBER(10)	16	Y	Y	N						Y							
+SSCALE	SSCALE		double		FLOAT(126)	16	Y	Y	N						Y							
+STRGTMP	STRGTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+TARGWAVE	TARGWAVE		double		FLOAT(126)	16	Y	Y	N						Y							
+TELESCOP	TELESCOP		char		VARCHAR2(26)		Y	Y	N						Y							
+TELFOCUS	TELFOCUS		double		FLOAT(126)	16	Y	Y	N						Y							
+TIMFILE	TIMFILE		char		VARCHAR2(63)		Y	Y	N						Y							
+TUBETEMP	TUBETEMP		double		FLOAT(126)	16	Y	Y	N						Y							
+UTCLP	UTCLP		char		VARCHAR2(26)		Y	Y	N						Y							
+UTGAIN	UTGAIN		double		FLOAT(126)	16	Y	Y	N						Y							
+WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	N						Y							
+WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	N						Y							
+WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	N						Y							
+WCDMSTAT	WCDMSTAT		char		VARCHAR2(26)		Y	Y	N						Y							
+WCDTSTAT	WCDTSTAT		char		VARCHAR2(26)		Y	Y	N						Y							
+WCUTSTAT	WCUTSTAT		char		VARCHAR2(26)		Y	Y	N						Y							
+WFDAR	WFDAR		char		VARCHAR2(26)		Y	Y	N						Y							
+WFDM	WFDM		char		VARCHAR2(26)		Y	Y	N						Y							
+WFTT	WFTT		char		VARCHAR2(26)		Y	Y	N						Y							
+WSCNORFN	WSCNORFN		char		VARCHAR2(40)		Y	Y	N						Y							
+WSFRRT	WSFRRT		integer		NUMBER(10)	16	Y	Y	N						Y							
+WSSMGN	WSSMGN		integer		NUMBER(10)	16	Y	Y	N						Y							
+WSSMPRG	WSSMPRG		integer		NUMBER(10)	16	Y	Y	N						Y							
+WSSMREP	WSSMREP		integer		NUMBER(10)	16	Y	Y	N						Y							
+WXDOMHUM	WXDOMHUM		double		FLOAT(126)	16	Y	Y	N						Y							
+WXDOMTMP	WXDOMTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+WXDWPT	WXDWPT		double		FLOAT(126)	16	Y	Y	N						Y							
+WXOUTHUM	WXOUTHUM		double		FLOAT(126)	16	Y	Y	N						Y							
+WXOUTTMP	WXOUTTMP		double		FLOAT(126)	16	Y	Y	N						Y							
+WXPRESS	WXPRESS		double		FLOAT(126)	16	Y	Y	N						Y							
+WXTIME	WXTIME		char		VARCHAR2(18)		Y	Y	N						Y							
+WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N						Y							
+WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N						Y							
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
+	UTDATETIME	NExScI	char		TIMESTAMP	11	Y	N	N	11s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
+	L0_INGTIME	NExScI	char		TIMESTAMP	19	Y	N	N	11s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
+	FILEURL	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N			N		URL to file in the archive		
+	SEMID	NExScI	char		VARCHAR2(21)	21	Y	N	N	21s	Y				N	Y	Y	Y	Y	SEMESTER and PROGID		
