@@ -1,0 +1,300 @@
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y				KOA data filename		
+OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y				Copy of DATAFILE	v171005_0001	May have to add .fits to DATAFILE
+PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y				WMKO program ID		
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y				Program institution		
+PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y				Program PI		
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	210s					Y	Y				Program title		"added to metadata, not header"
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				"arclamp,bias,dark,flatlamp,focus,object,trace,undefined"	Y	Y				KOA image type		
+CAMERA	CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				ESI	Y					Camera - ESI only has one		
+DATLEVEL	DATLEVEL	KOA	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					Data reduction level		
+OBSMODE	OBSMODE	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s				"high,low,image"	Y	Y				"Observing mode: low, high, or image"		
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f				0.1542	Y					"CCD pixel scale, dispersion (arcsec/pixel)"		
+DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Date of DQA run		
+DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DQA version number		
+FILTER	FILTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y				Copy of DWFILNAM		
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					FWHM of guide star		
+GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					UT of GUIDFWHM value		
+IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging median		
+IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging mean		
+IMAGESD	IMAGESD	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging standard deviation		
+NPIXSAT	NPIXSAT	KOA	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Number of pixels above saturation		
+OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Observing assistant		
+PROPINT	PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y	11d		0	9999		Y					Proprietary period		
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y	8s					Y	Y				WMKO observing schedule semester		
+SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f				"4,20,480"	Y					Slit length projected on sky (arcsec)		
+SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f				"0.3,0.5 0.75,1.0,1.13,1.25,6.0"	Y					Slit width projected on sky (arcsec)		
+SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N	18.5f				0.1542	Y					"CCD pixel scale, spatial (arcsec/pixel)"		
+SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Nominal spectral resolution		
+WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N	11d		3700	10900		Y	Y				Blue end wavelength		
+WAVECNTR	WAVECNTR	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N	11d		3700	10900		Y					Central wavelength		
+WAVERED	WAVERED	KOA	integer	Angstroms	"NUMBER(*,0)"	16	Y	Y	N	11d		3700	10900		Y	Y				Red end wavelength		
+WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dome humidity at WXTIME		
+WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dome temperature at WXTIME		
+WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dewpoint at WXTIME		
+WXOUTHUM	WXOUTHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Outside humidity at WXTIME		
+WXOUTTMP	WXOUTTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Outside temperature at WXTIME		
+WXPRESS	WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Pressure at WXTIME		
+WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Time of weather measurements		
+WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind direction at WXTIME		
+WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind speed at WXTIME		
+UTC	UTC	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y					Copy of UT		
+AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					air mass		
+AIRPRESS	AIRPRESS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					air pressure		
+AIRPWPSI	AIRPWPSI	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					compressed air power PSI		
+AMPLIST	AMPLIST	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			amplifier list		
+APMSKCAL	APMSKCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			aperature mask calibration status		
+APMSKERR	APMSKERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y		?			aperature mask error number		
+APMSKNAM	APMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y	y			aperature mask named position		
+APMSKORD	APMSKORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y		?			aperature mask ordinal position		
+APMSKRAW	APMSKRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y		?			aperature mask raw position		
+APMSKSTA	APMSKSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			aperature mask status		
+APMSKTOR	APMSKTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y		?			aperature mask torque		
+AUTOSHUT	AUTOSHUT	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					autoshutter		
+AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					telescope tracking status		
+AZ	AZ	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					azimuth		
+BINNING	BINNING	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y		y					
+BITPIX	BITPIX	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Number of bits per data pixel		
+BSCALE	BSCALE	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Default scaling factor		
+BZERO	BZERO	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Offset data range to that of unsigned short		
+CCDGAIN	CCDGAIN	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y		y			gain		
+CCDPSIZE	CCDPSIZE	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					pixel size		
+CCDSPEED	CCDSPEED	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y		y			readout speed		
+COLL1RAW	COLL1RAW	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 1 raw position		
+COLL1CAL	COLL1CAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 1 calibration		
+COLL1ERR	COLL1ERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 1 error number		
+COLL1FOP	COLL1FOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					collimator 1 fiducial		
+COLL1STA	COLL1STA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 1 status		
+COLL1TOR	COLL1TOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					collimator 1 torque		
+COLL2CAL	COLL2CAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 2 calibration		
+COLL2ERR	COLL2ERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 2 error number		
+COLL2FOP	COLL2FOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					collimator 2 fiducial		
+COLL2RAW	COLL2RAW	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 2 raw position		
+COLL2STA	COLL2STA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 2 status		
+COLL2TOR	COLL2TOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					collimator 2 torque		
+COLL3CAL	COLL3CAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 3 calibration		
+COLL3ERR	COLL3ERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 3 error number		
+COLL3FOP	COLL3FOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					collimator 3 fiducial		
+COLL3RAW	COLL3RAW	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 3 raw position		
+COLL3STA	COLL3STA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator 3 status		
+COLL3TOR	COLL3TOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					collimator 3 torque		
+COLLFLX1	COLLFLX1	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 1 flexure compensation offset		
+COLLFLX2	COLLFLX2	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 2 flexure compensation offset		
+COLLFLX3	COLLFLX3	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 3 flexure compensation offset		
+COLLFOC	COLLFOC	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					collimator focus		
+COLLFOCR	COLLFOCR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y							
+COLLFOCT	COLLFOCT	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator focus target		
+COLLMODE	COLLMODE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator control mode		
+COLLOFF1	COLLOFF1	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 1 offset error		
+COLLOFF2	COLLOFF2	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 2 offset error		
+COLLOFF3	COLLOFF3	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 3 offset error		
+COLLSTAT	COLLSTAT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator control status		
+COLLUSR1	COLLUSR1	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 1 user offset		
+COLLUSR2	COLLUSR2	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 2 user offset		
+COLLUSR3	COLLUSR3	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					collimator 3 user offset		
+CTRLFAN0	CTRLFAN0	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					contoller 0 electronics fans		
+CTRLFAN1	CTRLFAN1	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					controller 1 electronics fans		
+CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					current instrument		
+DATE	DATE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	#N/A					Y					date		
+DATE-OBS	DATE_OBS	DCS	date		date	16	N	Y	Y	#N/A					Y					date of observation		
+DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.5f					Y					declination		
+DECOFF	DECOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Declination offset		
+DETECTOR	DETECTOR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					detector		
+DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					dome status		
+DWFILCAL	DWFILCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Filter wheel calibration state		
+DWFILERR	DWFILERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					filter wheel error number		
+DWFILNAM	DWFILNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		y			filter wheel named position		
+DWFILORD	DWFILORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					Filter wheel ordinal position (conversion of DWFILRAW)		
+DWFILRAW	DWFILRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Filter wheel raw position (stage encoder counts)		
+DWFILSTA	DWFILSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Filter status		
+DWFILTOR	DWFILTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Filter torque		
+EL	EL	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					elevation		
+ELAPTIME	ELAPTIME	ESI	integer	seconds	"NUMBER(*,0)"	8	Y	Y	N	11d					Y	Y	y			elapsed time		
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y				equinox		
+ERASECNT	ERASECNT	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					erase count		
+ERASLINE	ERASLINE	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					erase line		
+EXPOSURE	EXPOSURE	ESI	integer	seconds	"NUMBER(*,0)"	8	Y	Y	N	11d					Y					exposure time		
+EXTEND	EXTEND	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					FITS dataset may contain extensions		
+FLAMP3	FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			flatlamp 3		
+FLAMP4	FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			flatlamp 4		
+FLAMP5	FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			flatlamp 5		
+FLAMP6	FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			flatlamp 6		
+FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			imaging flatlamp		
+FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			spectroscopy flatlamp		
+FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					focal station		
+FRAME	FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					reference frame		
+FRAMENO	FRAMENO	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					frame number		
+HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hour angle		
+HATCHPOS	HATCHPOS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hatch position		
+IMFLTCAL	IMFLTCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image flat calibration		
+IMFLTERR	IMFLTERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					image flat error number		
+IMFLTNAM	IMFLTNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		y			image flat named position		
+IMFLTORD	IMFLTORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					image flat ordinal position		
+IMFLTRAW	IMFLTRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					image flat raw position		
+IMFLTSTA	IMFLTSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image flat status		
+IMFLTTOR	IMFLTTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					image flat torque		
+IMTYPE	IMTYPE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image type		
+INSTANGL	INSTANGL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					instrument angle		
+INSTFLIP	INSTFLIP	DCS	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					instrument flip		
+INSTRUME	INSTRUME	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					intrument		
+IONCURMA	IONCURMA	ESI	double	mA	FLOAT(126)	16	Y	Y	N	18.5f					Y					ion pump current		
+IONPUMP	IONPUMP	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					raw ion pump current		
+KEEPPREP	KEEPPREP	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					keep prescan pixels		
+LAMPAR1	LAMPAR1	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			Ar lamp 1		
+LAMPCU1	LAMPCU1	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			Cu lamp 1		
+LAMPFAN	LAMPFAN	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y		y			lamp fan		
+LAMPNE1	LAMPNE1	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			Ne lamp 1		
+LAMPNE2	LAMPNE2	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			Ne lamp 2		
+LAMPQTZ1	LAMPQTZ1	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		y			Quartz lamp 1		
+LATITUDE	LATITUDE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					latitude		
+LDFLTCAL	LDFLTCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					low dispersion flat calibration state		
+LDFLTERR	LDFLTERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					low dispersion flat error number		
+LDFLTFOP	LDFLTFOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					low dispersion flat fiducial		
+LDFLTNAM	LDFLTNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		y			low dispersion flat named position		
+LDFLTORD	LDFLTORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					low dispersion flat ordinal position		
+LDFLTRAW	LDFLTRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					low dispersion flat raw position		
+LDFLTSTA	LDFLTSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					low dispersion flat status		
+LDFLTTOR	LDFLTTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					low dispersion flat torque		
+LST	LST	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					local sidereal time		
+MJD	MJD	DCS	double		FLOAT(126)	24	Y	Y	N	20.10f					Y					Numeric version of MJD-OBS		
+MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N	#N/A					Y					MJD of observation		
+NAXIS	NAXIS	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					number of data axes		
+NAXIS1	NAXIS1	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Length of data axis 1		
+NAXIS2	NAXIS2	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					Length of data axis 2		
+NSUBINT	NSUBINT	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					number of sub integrations		
+NUMAMPS	NUMAMPS	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					number of amplifiers		
+OBJECT	OBJECT	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y				object		
+OBSERVER	OBSERVER	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					observer		
+OBSNUM	OBSNUM	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					observation number		
+OBSTYPE	OBSTYPE	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		?			observation type		
+OUTDIR	OUTDIR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					data output directory		
+OUTFILE	OUTFILE	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					output file		
+OVRFLUSH	OVRFLUSH	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					postscan flush lines		
+PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					parallactic angle		
+PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					pointing origin name		
+PONAME1	PONAME1	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					pointing origin name 1		
+PONAME2	PONAME2	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					pointing origin name 2		
+POSTLINE	POSTLINE	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					postflush line		
+POSTPIX	POSTPIX	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					postpixels		
+POXOFF	POXOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin x offset		
+POXPOS	POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin x position		
+POXPOS1	POXPOS1	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin x position 1		
+POXPOS2	POXPOS2	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin x position 2		
+POYOFF	POYOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin y offset		
+POYPOS	POYPOS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin y position		
+POYPOS1	POYPOS1	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin y position 1		
+POYPOS2	POYPOS2	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					pointing origin y position 2		
+PREFLUSH	PREFLUSH	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					number of prescan lines to flush		
+PRELINE	PRELINE	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					number of prescan lines		
+PREPIX	PREPIX	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					prescan pixels		
+PRISMCAL	PRISMCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					prism calibration state		
+PRISMERR	PRISMERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					prism error number		
+PRISMFOP	PRISMFOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					prism fiducial		
+PRISMNAM	PRISMNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		y			prism named position		
+PRISMORD	PRISMORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					prism ordinal position		
+PRISMRAW	PRISMRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					prism raw position		
+PRISMSTA	PRISMSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					prism status		
+PRISMTOR	PRISMTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					prism torque		
+PWRBLOK	PWRBLOK	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					power block voltage		
+RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.5f					Y					right ascension		
+RAOFF	RAOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					RA offset		
+ROTBASE	ROTBASE	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator base value		
+ROTCALAN	ROTCALAN	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator calibration angle		
+ROTCASID	ROTCASID	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					cassegrain rotator module id		
+ROTDEST	ROTDEST	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator destination		
+ROTERCNT	ROTERCNT	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator error count		
+ROTERRS	ROTERRS	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N	48s					Y					rotator error status		
+ROTMODE	ROTMODE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					rotator mode		
+ROTOFF	ROTOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator offset		
+ROTPDSTS	ROTPDSTS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator physical destination		
+ROTPOSN	ROTPOSN	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator physical destination slow		
+ROTPPOSN	ROTPPOSN	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator user position		
+ROTREFAN	ROTREFAN	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator reference angle		
+ROTSEL	ROTSEL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					rotator selected		
+ROTSRVER	ROTSRVER	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator servo error		
+ROTSTST	ROTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					rotator status		
+ROTZERO	ROTZERO	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					rotator zero point		
+ROWSHFT	ROWSHFT	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					row shift for subintegration		
+SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					secondary focus		
+SECTHETX	SECTHETX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					secondary angle X		
+SECTHETY	SECTHETY	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					secondary angle Y		
+SHUTSTAT	SHUTSTAT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					shutter status		
+SIMULATE	SIMULATE	DCS	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					simulation mode		
+SLMSKCAL	SLMSKCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					slitmask calibration state		
+SLMSKERR	SLMSKERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					slitmask calibration error number		
+SLMSKNAM	SLMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y	y			slitmask named position		
+SLMSKORD	SLMSKORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					slitmask ordinal position		
+SLMSKRAW	SLMSKRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					slitmask raw position		
+SLMSKSTA	SLMSKSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					slitmask status		
+SLMSKTOR	SLMSKTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					slitmask torque		
+ST	ST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					sidereal time		
+SYNOPFMT	SYNOPFMT	ESI	char		VARCHAR2(100 BYTE)	100	Y	Y	N	100s					Y					synopsis format		
+SYNOPSIS	SYNOPSIS	ESI	char		VARCHAR2(100 BYTE)	100	Y	Y	N	100s					Y					synopsis of FITS keywords		
+TARGDEC	TARGDEC	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target declination		
+TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target epoch		
+TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target equinox		
+TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					target frame		
+TARGNAME	TARGNAME	DCS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y				target name		
+TARGPLAX	TARGPLAX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target parallax		
+TARGPMDC	TARGPMDC	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target proper motion declination		
+TARGPMRA	TARGPMRA	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target proper motion right ascension		
+TARGRA	TARGRA	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target right ascension		
+TARGRADV	TARGRADV	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					target radial velocity		
+TELESCOP	TELESCOP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					telescope name		
+TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					telescope focus		
+TEMPDET	TEMPDET	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					detector temperature		
+TMPBOX0C	TMPBOX0C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 0 electronics box temperature		
+TMPBOX1C	TMPBOX1C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 1 electronics box temperature		
+TMPCAMC	TMPCAMC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					camera exterior temperature		
+TMPCIN0C	TMPCIN0C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 0 coolant in temperature		
+TMPCIN1C	TMPCIN1C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor contoller 1 coolant in temperature		
+TMPCOLLC	TMPCOLLC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 0 collimator temperature		
+TMPCOU0C	TMPCOU0C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 0 coolant out temperature		
+TMPCOU1C	TMPCOU1C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor controller 1 cooland out temperature		
+TMPELE0C	TMPELE0C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor contoller 0 electronics temperature		
+TMPELE1C	TMPELE1C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					motor contoller 1 electronics temperature		
+TMPEXTC	TMPEXTC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					spectrograph exterior temperature		
+TMPFRM1C	TMPFRM1C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					frame 1 temperature		
+TMPFRM2C	TMPFRM2C	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					frame 2 temperature		
+TMPINTC	TMPINTC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					spectrograph interior temperature		
+TMPLAMPC	TMPLAMPC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					calibration lamp temperature		
+TMPOSSC	TMPOSSC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					oss temperature		
+TMPPRSMC	TMPPRSMC	ESI	double	C	FLOAT(126)	16	Y	Y	N	18.5f					Y					prism temperature		
+TODISK	TODISK	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					to disk		
+TTIME	TTIME	ESI	integer	seconds	"NUMBER(*,0)"	8	Y	Y	N	11d					Y					exposure time		
+TUBETEMP	TUBETEMP	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					tube temperature		
+TVFILCAL	TVFILCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider filter calibration status		
+TVFILERR	TVFILERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					guider filter error number		
+TVFILFOP	TVFILFOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					guider filter fiducial		
+TVFILNAM	TVFILNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					guider filter named position		
+TVFILORD	TVFILORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					guider filter ordinal position		
+TVFILRAW	TVFILRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					guider filter raw position		
+TVFILSTA	TVFILSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider filter status		
+TVFILTOR	TVFILTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					guider filter torque		
+TVFLIP	TVFLIP	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider flip		
+TVFOCCAL	TVFOCCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider focus calibration status		
+TVFOCERR	TVFOCERR	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					guider focus error number		
+TVFOCFOP	TVFOCFOP	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					guider focus fiducial		
+TVFOCNAM	TVFOCNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					guider focus named position		
+TVFOCORD	TVFOCORD	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					guider focus ordinal position		
+TVFOCRAW	TVFOCRAW	ESI	integer		"NUMBER(*,0)"	16	Y	Y	N	11d					Y					guider focus raw position		
+TVFOCSTA	TVFOCSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider focus status		
+TVFOCTOR	TVFOCTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					guider focus torque		
+TVPOWER	TVPOWER	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					guider focus torque		
+UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y				UTC		
+UTBFANS	UTBFANS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					utility board fans		
+UTBTEMP	UTBTEMP	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					utility board temperature		
+VOFFSET0	VOFFSET0	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					video offset amp 0		
+VOFFSET1	VOFFSET1	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					video offset amp 1		
+VOFFSET2	VOFFSET2	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					video offset amp 2		
+VOFFSET3	VOFFSET3	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					video offset amp 3		
+WINDOW	WINDOW	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y		?			window		
+XFLIP	XFLIP	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					camera x flip		
+YFLIP	YFLIP	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					camera y flip		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
+	UTDATETIME	NExScI	char		TIMESTAMP	11	Y	N	N	11s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
+	L0_INGTIME	NExScI	char		TIMESTAMP	19	Y	N	N	11s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
+	FILEURL	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N			N		URL to file in the archive		
+	SEMID	NExScI	char		VARCHAR2(21)	21	Y	N	N	21s	Y				N	Y	Y	Y	Y	SEMESTER and PROGID		
