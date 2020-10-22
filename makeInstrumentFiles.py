@@ -182,11 +182,8 @@ if (output_db != ''):
 
 # Loop over the rows and generate correct DD contents and SQL script names/types
 
-has_ra_dec = 0
 for i in range(input_nrows):
 
-    if (input_t['FITSKeyword'][i] == 'RA'):
-      has_ra_dec = 1   # We will need to know later if this table had columns named 'RA/DEC' to start or not
 
     # Database script 
     if (output_db != ''):
@@ -285,11 +282,10 @@ output_dd.close()
 # For database version: add the DD database rows
 
 # Gotta have RA/DEC rows that mimic RA2000/DEC2000, for isisql select as purposes:
-if has_ra_dec == 0:
-  input_nrows = input_nrows +1
-  output_dd_t.add_row([input_nrows, 'RA', 'RA', 'Right Ascension (J2000)', 'null', 'float', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'RA'])
-  input_nrows = input_nrows +1
-  output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', 'float', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'DEC'])
+input_nrows = input_nrows +1
+output_dd_t.add_row([input_nrows, 'RA', 'RA', 'Right Ascension (J2000)', 'null', 'float', '18.5f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'RA'])
+input_nrows = input_nrows +1
+output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', 'float', '18.5f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'DEC'])
 
 
 input_nrows = input_nrows + 1
