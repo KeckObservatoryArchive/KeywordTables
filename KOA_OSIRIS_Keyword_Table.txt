@@ -17,314 +17,315 @@ SEMESTER	SEMESTER	KOA	char		VARCHAR2(10)	9	N	Y	N						Y					Observing semester
 TARGNAME	TARGNAME		char		VARCHAR2(70)	69	Y	Y	N	69s					Y	Y			Y	target-name		
 UT	UT		char		VARCHAR2(22)	21	N	Y	Y						Y					coordinated universal time		
 UTC	UTC		char		VARCHAR2(22)	21	N	Y	Y						Y					coordinated universal time		
-CRVAL1	CRVAL1		double		FLOAT(126)	20	Y	Y	Y						Y							
-CRVAL2	CRVAL2		double		FLOAT(126)	20	Y	Y	Y						Y							
-CRPIX1	CRPIX1		double		FLOAT(126)	20	Y	Y	Y						Y							
-CRPIX2	CRPIX2		double		FLOAT(126)	20	Y	Y	Y						Y							
-CTYPE1	CTYPE1		char		VARCHAR2(25)	20	Y	Y	Y						Y							
-CTYPE2	CTYPE2		char		VARCHAR2(25)	20	Y	Y	Y						Y							
-WAT0_001	WAT0_001		char		VARCHAR2(31)	30	Y	Y	Y						Y							
-WAT1_001	WAT1_001		char		VARCHAR2(31)	30	Y	Y	Y						Y							
-WAT2_001	WAT2_001		char		VARCHAR2(31)	30	Y	Y	Y						Y							
-WCSDIM	WCSDIM		integer		NUMBER(10)	8	Y	Y	N													
-LTM1_1	LTM1_1		double		FLOAT(126)	10	Y	Y	Y						Y							
-LTM2_2	LTM2_2		double		FLOAT(126)	10	Y	Y	Y						Y							
+CRVAL1	CRVAL1		double		FLOAT(126)	20	Y	Y	Y						Y					Horizontal axis WCS value at the reference pixel		
+CRVAL2	CRVAL2		double		FLOAT(126)	20	Y	Y	Y						Y					Vertical axis WCS value at the reference pixel		
+CRPIX1	CRPIX1		double		FLOAT(126)	20	Y	Y	Y						Y					Reference pixel on the horizontal axis		
+CRPIX2	CRPIX2		double		FLOAT(126)	20	Y	Y	Y						Y					Reference pixel on the vertical axis		
+CTYPE1	CTYPE1		char		VARCHAR2(25)	20	Y	Y	Y						Y					WCS Type of the horizontal coordinate		
+CTYPE2	CTYPE2		char		VARCHAR2(25)	20	Y	Y	Y						Y					WCS Type of the vertical coordinate		
+WAT0_001	WAT0_001		char		VARCHAR2(31)	30	Y	Y	Y						Y					coordinate system		
+WAT1_001	WAT1_001		char		VARCHAR2(31)	30	Y	Y	Y						Y					coordinate system		
+WAT2_001	WAT2_001		char		VARCHAR2(31)	30	Y	Y	Y						Y					coordinate system		
+WCSDIM	WCSDIM		integer		NUMBER(10)	8	Y	Y	N											number WCS dimensions		
+LTM1_1	LTM1_1		double		FLOAT(126)	10	Y	Y	Y						Y					ccd to image transformation		
+LTM2_2	LTM2_2		double		FLOAT(126)	10	Y	Y	Y						Y					ccd to image transformation		
 CDELT1	CDELT1		double		FLOAT(126)	20	Y	Y	Y						Y							
 CDELT2	CDELT2		double		FLOAT(126)	20	Y	Y	Y						Y							
 CROTA2	CROTA2		double		FLOAT(126)	10	Y	Y	Y						Y							
-RADECSYS	RADECSYS		char		VARCHAR2(25)	10	Y	Y	Y						Y							
-AIRMASS	AIRMASS		double		FLOAT(126)	26	Y	Y	N						Y							
-AOAOAMED	AOAOAMED		integer		NUMBER(10)	13	Y	Y	N						Y							
-AODELAY	AODELAY		integer		NUMBER(10)	11	Y	Y	N						Y							
-AODMSTAT	AODMSTAT		char		VARCHAR2(27)	26	Y	Y	N						Y							
-AODRDTEN	AODRDTEN		double		FLOAT(126)	13	Y	Y	N						Y							
-AODRENA	AODRENA		double		FLOAT(126)	13	Y	Y	N						Y							
-AODTSTAT	AODTSTAT		char		VARCHAR2(16)	15	Y	Y	N						Y							
-AOFCLBCT	AOFCLBCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOFCLBFO	AOFCLBFO		double		FLOAT(126)	18	Y	Y	N						Y							
-AOFCLGCT	AOFCLGCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOFCLGFO	AOFCLGFO		double		FLOAT(126)	18	Y	Y	N						Y							
-AOFCNGCT	AOFCNGCT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOFCNGFO	AOFCNGFO		double		FLOAT(126)	19	Y	Y	N						Y							
-AOFCSALT	AOFCSALT		integer		NUMBER(10)	15	Y	Y	N						Y							
-AOFMX	AOFMX		double		FLOAT(126)	15	Y	Y	N						Y							
-AOFMY	AOFMY		double		FLOAT(126)	15	Y	Y	N						Y							
-AOFOMODE	AOFOMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOLBFWHM	AOLBFWHM		double		FLOAT(126)	18	Y	Y	N						Y							
-AOLPMOVE	AOLPMOVE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOOPSMOD	AOOPSMOD		integer		NUMBER(10)	11	Y	Y	N						Y							
-AOTSDAR	AOTSDAR		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOTSX	AOTSX		double		FLOAT(126)	16	Y	Y	N						Y							
-AOTSY	AOTSY		double		FLOAT(126)	16	Y	Y	N						Y							
-AOTSZ	AOTSZ		double		FLOAT(126)	16	Y	Y	N						Y							
-AOTTMODE	AOTTMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-AOWFC0	AOWFC0		double		FLOAT(126)	19	Y	Y	N						Y							
-AXESTAT	AXESTAT		char		VARCHAR2(23)	22	Y	Y	N						Y							
-AZ	AZ		double		FLOAT(126)	26	Y	Y	N						Y							
-BADPIX	BADPIX		char		VARCHAR2(58)	57	Y	Y	N						Y							
-BITPIX	BITPIX		double		FLOAT(126)	13	Y	Y	N						Y							
-CALOCAL	CALOCAL		double		FLOAT(126)	28	Y	Y	N						Y							
-CELOCAL	CELOCAL		double		FLOAT(126)	29	Y	Y	N						Y							
-COADDS	COADDS		integer		NUMBER(10)	11	Y	Y	Y			1	1000000		Y	Y	Y		Y			
-CTMP1	CTMP1		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP2	CTMP2		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP3	CTMP3		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP4	CTMP4		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP5	CTMP5		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP6	CTMP6		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP7	CTMP7		double		FLOAT(126)	26	Y	Y	N						Y							
-CTMP8	CTMP8		double		FLOAT(126)	14	Y	Y	N						Y							
-CTMPLOC1	CTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC2	CTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC3	CTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC4	CTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC5	CTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC6	CTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC7	CTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CTMPLOC8	CTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y							
-CURRINST	CURRINST		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DATAFILE	DATAFILE		char		VARCHAR2(27)	26	Y	Y	N						Y							
-DATASET	DATASET		char		VARCHAR2(60)	60	Y	Y	N						Y							
-DCOORDS	DCOORDS		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DCSSTAT	DCSSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
+RADECSYS	RADECSYS		char		VARCHAR2(25)	10	Y	Y	Y						Y					the system of the coordinates		
+AIRMASS	AIRMASS		double		FLOAT(126)	26	Y	Y	N						Y					air mass (1.03)		
+AOAOAMED	AOAOAMED		integer		NUMBER(10)	13	Y	Y	N						Y					AO WFC AOA camera median light level (counts)		
+AODELAY	AODELAY		integer		NUMBER(10)	11	Y	Y	N						Y					Delay after AO locks		
+AODMSTAT	AODMSTAT		char		VARCHAR2(27)	26	Y	Y	N						Y					AO deformable mirror loop state		
+AODRDTEN	AODRDTEN		double		FLOAT(126)	13	Y	Y	N						Y					AO DAR DTT CTRLOFF ENABLE		
+AODRENA	AODRENA		double		FLOAT(126)	13	Y	Y	N						Y					AO DAR_ENABLE/DISABLE		
+AODTSTAT	AODTSTAT		char		VARCHAR2(16)	15	Y	Y	N						Y					AO downlink tip/tilt loop state		
+AOFCLBCT	AOFCLBCT		char		VARCHAR2(26)	25	Y	Y	N						Y					AO FC LBWFS control		
+AOFCLBFO	AOFCLBFO		double		FLOAT(126)	18	Y	Y	N						Y					AO FC LBWFS pregain focus calc val (m)		
+AOFCLGCT	AOFCLGCT		char		VARCHAR2(26)	25	Y	Y	N						Y					AO FC LGS control		
+AOFCLGFO	AOFCLGFO		double		FLOAT(126)	18	Y	Y	N						Y					AO FC LGS pregain focus calc val (m)		
+AOFCNGCT	AOFCNGCT		char		VARCHAR2(26)	25	Y	Y	N						Y					AO FC NGS control		
+AOFCNGFO	AOFCNGFO		double		FLOAT(126)	19	Y	Y	N						Y					AO FC NGS Focus Calc Value (m)		
+AOFCSALT	AOFCSALT		integer		NUMBER(10)	15	Y	Y	N						Y					AO FC sodium alt preset (m)		
+AOFMX	AOFMX		double		FLOAT(126)	15	Y	Y	N						Y					AO field steering mirrors X position (mm)		
+AOFMY	AOFMY		double		FLOAT(126)	15	Y	Y	N						Y					AO field steering mirrors Y position (mm)		
+AOFOMODE	AOFOMODE		char		VARCHAR2(26)	25	Y	Y	N						Y					AO focus offloading mode		
+AOLBFWHM	AOLBFWHM		double		FLOAT(126)	18	Y	Y	N						Y					AO LBWFS avg fwhm		
+AOLPMOVE	AOLPMOVE		char		VARCHAR2(26)	25	Y	Y	N						Y					AO LSP MOVE ENABLE		
+AOOPSMOD	AOOPSMOD		integer		NUMBER(10)	11	Y	Y	N						Y					AO General Ops Mode FITS		
+AOTSDAR	AOTSDAR		char		VARCHAR2(26)	25	Y	Y	N						Y					AO TSS_USE_DAR?		
+AOTSX	AOTSX		double		FLOAT(126)	16	Y	Y	N						Y					AO tip/tilt sensor stage X position (mm)		
+AOTSY	AOTSY		double		FLOAT(126)	16	Y	Y	N						Y					AO tip/tilt sensor stage Y position (mm)		
+AOTSZ	AOTSZ		double		FLOAT(126)	16	Y	Y	N						Y					AO tip/tilt sensor stage Z position (mm)		
+AOTTMODE	AOTTMODE		char		VARCHAR2(26)	25	Y	Y	N						Y					AO tip/tilt offloading mode		
+AOWFC0	AOWFC0		double		FLOAT(126)	19	Y	Y	N						Y					AO WFS focus stage FSM coefficient 0		
+AXESTAT	AXESTAT		char		VARCHAR2(23)	22	Y	Y	N						Y					axes control status		
+AZ	AZ		double		FLOAT(126)	26	Y	Y	N						Y					telescope azimuth (172.67 deg)		
+BADPIX	BADPIX		char		VARCHAR2(58)	57	Y	Y	N						Y					FITS filename cont		
+BITPIX	BITPIX		double		FLOAT(126)	13	Y	Y	N						Y					number of bits per data pixel		
+CALOCAL	CALOCAL		double		FLOAT(126)	28	Y	Y	N						Y					collimation azimuth local (40.7 arcsec)		
+CELOCAL	CELOCAL		double		FLOAT(126)	29	Y	Y	N						Y					collimation elevation local (-21.8 arcsec)		
+COADDS	COADDS		integer		NUMBER(10)	11	Y	Y	Y			1	1000000		Y	Y	Y		Y	Number of coadded frames		
+CTMP1	CTMP1		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 1		
+CTMP2	CTMP2		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 2		
+CTMP3	CTMP3		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 3		
+CTMP4	CTMP4		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 4		
+CTMP5	CTMP5		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 5		
+CTMP6	CTMP6		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 6		
+CTMP7	CTMP7		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 7		
+CTMP8	CTMP8		double		FLOAT(126)	14	Y	Y	N						Y					Temperature at Sensor 8		
+CTMPLOC1	CTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 1		
+CTMPLOC2	CTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 2		
+CTMPLOC3	CTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 3		
+CTMPLOC4	CTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 4		
+CTMPLOC5	CTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 5		
+CTMPLOC6	CTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 6		
+CTMPLOC7	CTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 7		
+CTMPLOC8	CTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y					Name of the location of Temperature Sensor 8		
+CURRINST	CURRINST		char		VARCHAR2(26)	25	Y	Y	N						Y					current instrument		
+DATAFILE	DATAFILE		char		VARCHAR2(27)	26	Y	Y	N						Y					Filename for saved data image		
+DATASET	DATASET		char		VARCHAR2(60)	60	Y	Y	N						Y					dataset name		
+DCOORDS	DCOORDS		char		VARCHAR2(26)	25	Y	Y	N						Y					Dither coordinates - sky/instr		
+DCSSTAT	DCSSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					drive and control status		
 DDEC	DDEC		double		FLOAT(126)	12	Y	Y	N						Y							
-DECOFF	DECOFF		double		FLOAT(126)	30	Y	Y	N						Y							
-DLSTOFF1	DLSTOFF1		double		FLOAT(126)	12	Y	Y	N						Y							
-DLSTOFF2	DLSTOFF2		double		FLOAT(126)	12	Y	Y	N						Y							
-DMGAIN	DMGAIN		double		FLOAT(126)	15	Y	Y	N						Y							
-DMMRFN	DMMRFN		char		VARCHAR2(24)	23	Y	Y	N						Y							
-DOMEPOSN	DOMEPOSN		double		FLOAT(126)	15	Y	Y	N						Y							
-DOMESTAT	DOMESTAT		char		VARCHAR2(26)	5	Y	Y	N						Y							
-DPWNAME1	DPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME2	DPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME3	DPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME4	DPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME5	DPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME6	DPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWNAME7	DPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DPWSTAT1	DPWSTAT1		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT2	DPWSTAT2		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT3	DPWSTAT3		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT4	DPWSTAT4		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT5	DPWSTAT5		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT6	DPWSTAT6		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT7	DPWSTAT7		integer		NUMBER(10)	11	Y	Y	N						Y							
-DPWSTAT8	DPWSTAT8		integer		NUMBER(10)	11	Y	Y	N						Y							
+DECOFF	DECOFF		double		FLOAT(126)	30	Y	Y	N						Y					declination offset (0.0000 arcsec)		
+DLSTOFF1	DLSTOFF1		double		FLOAT(126)	12	Y	Y	N						Y					Offset from last dither pos-axis 1		
+DLSTOFF2	DLSTOFF2		double		FLOAT(126)	12	Y	Y	N						Y					Offset from last dither pos-axis 2		
+DMGAIN	DMGAIN		double		FLOAT(126)	15	Y	Y	N						Y					Set DM loop gain		
+DMMRFN	DMMRFN		char		VARCHAR2(24)	23	Y	Y	N						Y					Name of DM reconstructor file		
+DOMEPOSN	DOMEPOSN		double		FLOAT(126)	15	Y	Y	N						Y					dome azimuth (172.57 deg)		
+DOMESTAT	DOMESTAT		char		VARCHAR2(26)	5	Y	Y	N						Y					dome status		
+DPWNAME1	DPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 1		
+DPWNAME2	DPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 2		
+DPWNAME3	DPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 3		
+DPWNAME4	DPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 4		
+DPWNAME5	DPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 5		
+DPWNAME6	DPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 6		
+DPWNAME7	DPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 7		
+DPWNAME7	DPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 8		
+DPWSTAT1	DPWSTAT1		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 1		
+DPWSTAT2	DPWSTAT2		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 2		
+DPWSTAT3	DPWSTAT3		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 3		
+DPWSTAT4	DPWSTAT4		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 4		
+DPWSTAT5	DPWSTAT5		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 5		
+DPWSTAT6	DPWSTAT6		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 6		
+DPWSTAT7	DPWSTAT7		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 7		
+DPWSTAT8	DPWSTAT8		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 8		
 DRA	DRA		double		FLOAT(126)	12	Y	Y	N						Y							
-DTCLP	DTCLP		char		VARCHAR2(26)	25	Y	Y	N						Y							
-DTGAIN	DTGAIN		double		FLOAT(126)	15	Y	Y	N						Y							
-DTMP1	DTMP1		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP2	DTMP2		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP3	DTMP3		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP4	DTMP4		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP5	DTMP5		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP6	DTMP6		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP7	DTMP7		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMP8	DTMP8		double		FLOAT(126)	26	Y	Y	N						Y							
-DTMPLOC1	DTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC2	DTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC3	DTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC4	DTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC5	DTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC6	DTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC7	DTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTMPLOC8	DTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y							
-DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N						Y							
-DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N						Y							
+DTCLP	DTCLP		char		VARCHAR2(26)	25	Y	Y	N						Y					OPEN/CLOSE TT CLMP ctrl loop		
+DTGAIN	DTGAIN		double		FLOAT(126)	15	Y	Y	N						Y					Set TT loop gain		
+DTMP1	DTMP1		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 1		
+DTMP2	DTMP2		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 2		
+DTMP3	DTMP3		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 3		
+DTMP4	DTMP4		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 4		
+DTMP5	DTMP5		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 5		
+DTMP6	DTMP6		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 6		
+DTMP7	DTMP7		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 7		
+DTMP8	DTMP8		double		FLOAT(126)	26	Y	Y	N						Y					Temperature at Sensor 8		
+DTMPLOC1	DTMPLOC1		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 1		
+DTMPLOC2	DTMPLOC2		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 2		
+DTMPLOC3	DTMPLOC3		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 3		
+DTMPLOC4	DTMPLOC4		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 4		
+DTMPLOC5	DTMPLOC5		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 5		
+DTMPLOC6	DTMPLOC6		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 6		
+DTMPLOC7	DTMPLOC7		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 7		
+DTMPLOC8	DTMPLOC8		char		VARCHAR2(38)	37	Y	Y	N						Y					Location of Temperature Sensor 8		
+DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N						Y					Offset from start of dither-axis 1		
+DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N						Y					Offset from start of dither-axis 2		
 DTRACK	DTRACK		char		VARCHAR2(26)	25	Y	Y	N						Y							
 EL	EL		double		FLOAT(126)	24	Y	Y	N						Y							
-EPWNAME1	EPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME2	EPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME3	EPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME4	EPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME5	EPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME6	EPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME7	EPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWNAME8	EPWNAME8		char		VARCHAR2(26)	25	Y	Y	N						Y							
-EPWSTAT1	EPWSTAT1		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT2	EPWSTAT2		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT3	EPWSTAT3		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT4	EPWSTAT4		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT5	EPWSTAT5		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT6	EPWSTAT6		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT7	EPWSTAT7		integer		NUMBER(10)	11	Y	Y	N						Y							
-EPWSTAT8	EPWSTAT8		integer		NUMBER(10)	11	Y	Y	N						Y							
-EXTEND	EXTEND		char		VARCHAR2(26)	25	Y	Y	N						Y							
-FOCALSTN	FOCALSTN		char		VARCHAR2(27)	26	Y	Y	N						Y							
-FRAMENUM	FRAMENUM		integer		NUMBER(10)	11	Y	Y	N						Y							
-GAIN	GAIN		double		FLOAT(126)	14	Y	Y	N						Y							
-GUIDWAVE	GUIDWAVE		double		FLOAT(126)	20	Y	Y	N						Y							
-HA	HA		double		FLOAT(126)	30	Y	Y	N						Y							
-ICURTMP	ICURTMP		double		FLOAT(126)	30	Y	Y	N						Y							
-IF1MECH	IF1MECH		char		VARCHAR2(27)	26	Y	Y	N						Y							
-IF1NAME	IF1NAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-IF1RAW	IF1RAW		integer		NUMBER(10)	11	Y	Y	N						Y							
-IF1STAT	IF1STAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-IF1SWTCH	IF1SWTCH		integer		NUMBER(10)	12	Y	Y	N						Y							
-IF2MECH	IF2MECH		char		VARCHAR2(27)	26	Y	Y	N						Y							
-IF2NAME	IF2NAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-IF2RAW	IF2RAW		integer		NUMBER(10)	11	Y	Y	N						Y							
-IF2STAT	IF2STAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-IF2SWTCH	IF2SWTCH		integer		NUMBER(10)	12	Y	Y	N						Y							
-IFILTER	IFILTER		char		VARCHAR2(26)	25	Y	Y	N						Y							
-IFRAME	IFRAME		integer		NUMBER(10)	11	Y	Y	N						Y							
-IFRAMES	IFRAMES		integer		NUMBER(10)	11	Y	Y	N						Y							
-IHTRACT	IHTRACT		integer		NUMBER(10)	11	Y	Y	N						Y							
-IHTROUT	IHTROUT		double		FLOAT(126)	26	Y	Y	N						Y							
-IMAGMODE	IMAGMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-INSTANGL	INSTANGL		double		FLOAT(126)	13	Y	Y	N						Y							
-INSTFLIP	INSTFLIP		char		VARCHAR2(26)	25	Y	Y	N						Y							
-INSTR	INSTR		char		VARCHAR2(26)	25	N	Y	Y					imag,spec	Y	Y	Y		Y			
+EPWNAME1	EPWNAME1		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 1		
+EPWNAME2	EPWNAME2		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 2		
+EPWNAME3	EPWNAME3		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 3		
+EPWNAME4	EPWNAME4		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 4		
+EPWNAME5	EPWNAME5		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 5		
+EPWNAME6	EPWNAME6		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 6		
+EPWNAME7	EPWNAME7		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 7		
+EPWNAME8	EPWNAME8		char		VARCHAR2(26)	25	Y	Y	N						Y					Name of the device controlled by outlet 8		
+EPWSTAT1	EPWSTAT1		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 1		
+EPWSTAT2	EPWSTAT2		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 2		
+EPWSTAT3	EPWSTAT3		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 3		
+EPWSTAT4	EPWSTAT4		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 4		
+EPWSTAT5	EPWSTAT5		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 5		
+EPWSTAT6	EPWSTAT6		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 6		
+EPWSTAT7	EPWSTAT7		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 7		
+EPWSTAT8	EPWSTAT8		integer		NUMBER(10)	11	Y	Y	N						Y					Power status of outlet 8		
+EXTEND	EXTEND		char		VARCHAR2(26)	25	Y	Y	N						Y					FITS dataset may contain extensions		
+FOCALSTN	FOCALSTN		char		VARCHAR2(27)	26	Y	Y	N						Y					focal station		
+FRAMENUM	FRAMENUM		integer		NUMBER(10)	11	Y	Y	N						Y					Frame Number		
+GAIN	GAIN		double		FLOAT(126)	14	Y	Y	N						Y					Detector gain in ADU per electron		
+GUIDWAVE	GUIDWAVE		double		FLOAT(126)	20	Y	Y	N						Y					guidestar wavelength (microns)		
+HA	HA		double		FLOAT(126)	30	Y	Y	N						Y					telescope hour angle (+23:52:38.13 h)		
+ICURTMP	ICURTMP		double		FLOAT(126)	30	Y	Y	N						Y					Temperature at Channel 2		
+IF1MECH	IF1MECH		char		VARCHAR2(27)	26	Y	Y	N						Y					The overall name of the mechanism		
+IF1NAME	IF1NAME		char		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+IF1RAW	IF1RAW		integer		NUMBER(10)	11	Y	Y	N						Y					Current position of mechanism in steps		
+IF1STAT	IF1STAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+IF1SWTCH	IF1SWTCH		integer		NUMBER(10)	12	Y	Y	N						Y					Current Switch Value		
+IF2MECH	IF2MECH		char		VARCHAR2(27)	26	Y	Y	N						Y					The overall name of the mechanism		
+IF2NAME	IF2NAME		char		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+IF2RAW	IF2RAW		integer		NUMBER(10)	11	Y	Y	N						Y					Current position of mechanism in steps		
+IF2STAT	IF2STAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+IF2SWTCH	IF2SWTCH		integer		NUMBER(10)	12	Y	Y	N						Y					Current Switch Value		
+IFILTER	IFILTER		char		VARCHAR2(26)	25	Y	Y	N						Y					Imager filter		
+IFRAME	IFRAME		integer		NUMBER(10)	11	Y	Y	N						Y					Current imag frame of dither position		
+IFRAMES	IFRAMES		integer		NUMBER(10)	11	Y	Y	N						Y					Number of imag frames per spec frame		
+IHTRACT	IHTRACT		integer		NUMBER(10)	11	Y	Y	N						Y					Switch for temperature control for channel 2 (0		
+IHTROUT	IHTROUT		double		FLOAT(126)	26	Y	Y	N						Y					Heater output percentage of channel 2		
+IMAGMODE	IMAGMODE		char		VARCHAR2(26)	25	Y	Y	N						Y					Imager observation mode		
+INSTANGL	INSTANGL		double		FLOAT(126)	13	Y	Y	N						Y					porg to instrument angle (48.0 deg)		
+INSTFLIP	INSTFLIP		char		VARCHAR2(26)	25	Y	Y	N						Y					porg to instrument y flip		
+INSTR	INSTR		char		VARCHAR2(26)	25	N	Y	Y					imag,spec	Y	Y	Y		Y	Spectrometer (spec) or Imager (imag)		
 ISAO	ISAO		char		VARCHAR2(26)	25	Y	Y	N						Y							
-ISSKY	ISSKY		integer		NUMBER(10)	11	Y	Y	N						Y							
-ITIME	ITIME		integer		FLOAT(126)	13	Y	Y	Y			0	2000000		Y	Y	Y		Y			
-ITRGTMP	ITRGTMP		double		FLOAT(126)	13	Y	Y	N						Y							
-LGRMSWF	LGRMSWF		double		FLOAT(126)	15	Y	Y	N						Y							
-LSAMPPWR	LSAMPPWR		double		FLOAT(126)	18	Y	Y	N						Y							
-LSPROP	LSPROP		char		VARCHAR2(26)	25	Y	Y	N						Y							
-LST	LST		char		VARCHAR2(26)	25	Y	Y	N						Y							
-MJD_OBS	MJD_OBS		double		FLOAT(126)	26	Y	Y	N		Y				Y							
-NAXIS	NAXIS		integer		NUMBER(10)	11	Y	Y	N						Y							
-NAXIS1	NAXIS1		integer		NUMBER(10)	14	Y	Y	N						Y							
-NAXIS2	NAXIS2		integer		NUMBER(10)	14	Y	Y	N						Y							
-NOISEFIL	NOISEFIL		char		VARCHAR2(65)	64	Y	Y	N						Y							
-NUMREADS	NUMREADS		integer		NUMBER(10)	12	Y	Y	N						Y							
-OBAMNAME	OBAMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBFMDREN	OBFMDREN		double		FLOAT(126)	18	Y	Y	N						Y							
-OBFMXIM	OBFMXIM		double		FLOAT(126)	16	Y	Y	N						Y							
-OBFMXPU	OBFMXPU		double		FLOAT(126)	14	Y	Y	N						Y							
-OBFMYIM	OBFMYIM		double		FLOAT(126)	16	Y	Y	N						Y							
-OBFMYPU	OBFMYPU		double		FLOAT(126)	14	Y	Y	N						Y							
-OBFSNAME	OBFSNAME		double		VARCHAR2(26)	25	Y	Y	N						Y							
-OBIMNAME	OBIMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBJECT	OBJECT		char		VARCHAR2(60)	60	Y	Y	N						Y							
-OBJPTTRN	OBJPTTRN		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBLBNAME	OBLBNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBRT	OBRT		double		FLOAT(126)	17	Y	Y	N						Y							
-OBSDNAME	OBSDNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBSERVER	OBSERVER		char		VARCHAR2(60)	60	Y	Y	N						Y							
-OBSFNAME	OBSFNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBSFX	OBSFX		double		FLOAT(126)	17	Y	Y	N						Y							
-OBSFY	OBSFY		double		FLOAT(126)	14	Y	Y	N						Y							
-OBSFZ	OBSFZ		double		FLOAT(126)	14	Y	Y	N						Y							
-OBSI	OBSI		double		FLOAT(126)	15	Y	Y	N						Y							
-OBSNNAME	OBSNNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBSTYPE	OBSTYPE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBSWNAME	OBSWNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBSWSTA	OBSWSTA		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBTSNAME	OBTSNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBTSX	OBTSX		double		FLOAT(126)	16	Y	Y	N						Y							
-OBTSY	OBTSY		double		FLOAT(126)	14	Y	Y	N						Y							
-OBTSZ	OBTSZ		double		FLOAT(126)	15	Y	Y	N						Y							
-OBWCNAME	OBWCNAME		double		VARCHAR2(26)	25	Y	Y	N						Y							
-OBWF	OBWF		double		FLOAT(126)	16	Y	Y	N						Y							
-OBWFSTST	OBWFSTST		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBWLNAME	OBWLNAME		double		VARCHAR2(26)	25	Y	Y	N						Y							
-OBWNNAME	OBWNNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OBWPNAME	OBWPNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-PARANG	PARANG		double		FLOAT(126)	30	Y	Y	N						Y							
-PA_IMAG	PA_IMAG		double		FLOAT(126)	14	Y	Y	N						Y							
-PA_SPEC	PA_SPEC		double		FLOAT(126)	14	Y	Y	N						Y							
-PCIFILE	PCIFILE		char		VARCHAR2(50)	49	Y	Y	N						Y							
-PONAME	PONAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-PONAME1	PONAME1		char		VARCHAR2(26)	25	Y	Y	N						Y							
-PONAME2	PONAME2		char		VARCHAR2(26)	25	Y	Y	N						Y							
-PONAME3	PONAME3		char		VARCHAR2(26)	25	Y	Y	N						Y							
-POXPOS	POXPOS		double		FLOAT(126)	18	Y	Y	N						Y							
-POXPOS1	POXPOS1		double		FLOAT(126)	30	Y	Y	N						Y							
-POXPOS2	POXPOS2		double		FLOAT(126)	18	Y	Y	N						Y							
-POXPOS3	POXPOS3		double		FLOAT(126)	18	Y	Y	N						Y							
-POYPOS	POYPOS		double		FLOAT(126)	18	Y	Y	N						Y							
-POYPOS1	POYPOS1		double		FLOAT(126)	30	Y	Y	N						Y							
-POYPOS2	POYPOS2		double		FLOAT(126)	17	Y	Y	N						Y							
-POYPOS3	POYPOS3		double		FLOAT(126)	18	Y	Y	N						Y							
-PRESSURE	PRESSURE		double		FLOAT(126)	30	Y	Y	N						Y							
-RAOFF	RAOFF		double		FLOAT(126)	30	Y	Y	N						Y							
-RDITIME	RDITIME		double		FLOAT(126)	16	Y	Y	N						Y							
-READTIME	READTIME		double		FLOAT(126)	14	Y	Y	N						Y							
-ROTCALAN	ROTCALAN		double		FLOAT(126)	12	Y	Y	N						Y							
-ROTDEST	ROTDEST		double		FLOAT(126)	30	Y	Y	N						Y							
-ROTMODE	ROTMODE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-ROTPDEST	ROTPDEST		double		FLOAT(126)	30	Y	Y	N						Y							
-ROTPOSN	ROTPOSN		double		FLOAT(126)	30	Y	Y	N						Y							
-ROTPPOSN	ROTPPOSN		double		FLOAT(126)	24	Y	Y	N						Y							
-ROTREFAN	ROTREFAN		double		FLOAT(126)	12	Y	Y	N						Y							
-SAMPMODE	SAMPMODE		integer		NUMBER(10)	11	Y	Y	N						Y							
-SATURATE	SATURATE		integer		NUMBER(10)	15	Y	Y	N						Y							
-SCURTMP	SCURTMP		double		FLOAT(126)	25	Y	Y	N						Y							
-SECFOCUS	SECFOCUS		double		FLOAT(126)	29	Y	Y	N						Y							
-SECTHETX	SECTHETX		double		FLOAT(126)	14	Y	Y	N						Y							
-SECTHETY	SECTHETY		double		FLOAT(126)	16	Y	Y	N						Y							
-SETNUM	SETNUM		integer		NUMBER(10)	11	Y	Y	N						Y							
-SFILTER	SFILTER		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SFRAME	SFRAME		integer		NUMBER(10)	11	Y	Y	N						Y							
-SFRAMES	SFRAMES		integer		NUMBER(10)	11	Y	Y	N						Y							
-SFWMECH	SFWMECH		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SFWNAME	SFWNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SFWRAW	SFWRAW		double		FLOAT(126)	14	Y	Y	N						Y							
-SFWSTAT	SFWSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SFWSWTCH	SFWSWTCH		integer		NUMBER(10)	13	Y	Y	N						Y							
-SHTRACT	SHTRACT		integer		NUMBER(10)	11	Y	Y	N						Y							
-SHTROUT	SHTROUT		double		FLOAT(126)	26	Y	Y	N						Y							
-SHTRRANG	SHTRRANG		integer		NUMBER(10)	11	Y	Y	N						Y							
-SIMPLE	SIMPLE		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SKYPTTRN	SKYPTTRN		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SLMMECH	SLMMECH		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SLMNAME	SLMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SLMRAW	SLMRAW		integer		NUMBER(10)	11	Y	Y	N						Y							
-SLMSTAT	SLMSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SLMSWTCH	SLMSWTCH		integer		NUMBER(10)	11	Y	Y	N						Y							
-SS1MECH	SS1MECH		char		VARCHAR2(27)	26	Y	Y	N						Y							
-SS1NAME	SS1NAME		double		VARCHAR2(26)	25	Y	Y	N						Y							
-SS1RAW	SS1RAW		integer		NUMBER(10)	11	Y	Y	N						Y							
-SS1STAT	SS1STAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SS1SWTCH	SS1SWTCH		integer		NUMBER(10)	11	Y	Y	N						Y							
-SS2MECH	SS2MECH		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SS2NAME	SS2NAME		double		VARCHAR2(26)	25	Y	Y	N						Y							
-SS2RAW	SS2RAW		integer		NUMBER(10)	11	Y	Y	N						Y							
-SS2STAT	SS2STAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-SS2SWTCH	SS2SWTCH		integer		NUMBER(10)	11	Y	Y	N						Y							
-SSCALE	SSCALE		double		FLOAT(126)	13	Y	Y	N						Y							
-STRGTMP	STRGTMP		double		FLOAT(126)	13	Y	Y	N						Y							
-TARGWAVE	TARGWAVE		double		FLOAT(126)	15	Y	Y	N						Y							
-TELESCOP	TELESCOP		char		VARCHAR2(26)	25	Y	Y	N						Y							
-TELFOCUS	TELFOCUS		double		FLOAT(126)	30	Y	Y	N						Y							
-TIMFILE	TIMFILE		char		VARCHAR2(63)	62	Y	Y	N						Y							
-TUBETEMP	TUBETEMP		double		FLOAT(126)	17	Y	Y	N						Y							
-UTCLP	UTCLP		char		VARCHAR2(26)	25	Y	Y	N						Y							
-UTGAIN	UTGAIN		double		FLOAT(126)	15	Y	Y	N						Y							
-WCDMSTAT	WCDMSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WCDTSTAT	WCDTSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WCUTSTAT	WCUTSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WFDAR	WFDAR		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WFDM	WFDM		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WFTT	WFTT		char		VARCHAR2(26)	25	Y	Y	N						Y							
-WSCNORFN	WSCNORFN		char		VARCHAR2(40)	40	Y	Y	N						Y							
-WSFRRT	WSFRRT		integer		NUMBER(10)	14	Y	Y	N						Y							
-WSSMGN	WSSMGN		integer		NUMBER(10)	11	Y	Y	N						Y							
-WSSMPRG	WSSMPRG		integer		NUMBER(10)	11	Y	Y	N						Y							
-WSSMREP	WSSMREP		integer		NUMBER(10)	13	Y	Y	N						Y							
+ISSKY	ISSKY		integer		NUMBER(10)	11	Y	Y	N						Y					flag for sky frames (0=not sky, 1=sky)		
+ITIME	ITIME		integer		FLOAT(126)	13	Y	Y	Y			0	2000000		Y	Y	Y		Y	Integration time of each coadd		
+ITRGTMP	ITRGTMP		double		FLOAT(126)	13	Y	Y	N						Y					Desired temperature for channel 2		
+LGRMSWF	LGRMSWF		double		FLOAT(126)	15	Y	Y	N						Y					LGSAO RMS WF Residual		
+LSAMPPWR	LSAMPPWR		double		FLOAT(126)	18	Y	Y	N						Y					Amp Power (watts)		
+LSPROP	LSPROP		char		VARCHAR2(26)	25	Y	Y	N						Y					Laser Propagating		
+LST	LST		char		VARCHAR2(26)	25	Y	Y	N						Y					local apparent sidereal time (h)		
+MJD_OBS	MJD_OBS		double		FLOAT(126)	26	Y	Y	N		Y				Y					modified julian date of observation (54600.4376		
+NAXIS	NAXIS		integer		NUMBER(10)	11	Y	Y	N						Y					number of data axes		
+NAXIS1	NAXIS1		integer		NUMBER(10)	14	Y	Y	N						Y					length of data axis 1		
+NAXIS2	NAXIS2		integer		NUMBER(10)	14	Y	Y	N						Y					length of data axis 2		
+NOISEFIL	NOISEFIL		char		VARCHAR2(65)	64	Y	Y	N						Y					Filename co		
+NUMREADS	NUMREADS		integer		NUMBER(10)	12	Y	Y	N						Y					Number of reads		
+OBAMNAME	OBAMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for AFM		
+OBFMDREN	OBFMDREN		double		FLOAT(126)	18	Y	Y	N						Y					FSM Coordinated move use dar or not (.)		
+OBFMXIM	OBFMXIM		double		FLOAT(126)	16	Y	Y	N						Y					Image plane x motion for FSM (mm)		
+OBFMXPU	OBFMXPU		double		FLOAT(126)	14	Y	Y	N						Y					Pupil plane x motion for FSM (subaps)		
+OBFMYIM	OBFMYIM		double		FLOAT(126)	16	Y	Y	N						Y					Image plane y motion for FSM (mm)		
+OBFMYPU	OBFMYPU		double		FLOAT(126)	14	Y	Y	N						Y					Pupil plane y motion for FSM (subaps)		
+OBFSNAME	OBFSNAME		double		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for FSS		
+OBIMNAME	OBIMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for ISM		
+OBJECT	OBJECT		char		VARCHAR2(60)	60	Y	Y	N						Y					object name		
+OBJPTTRN	OBJPTTRN		char		VARCHAR2(26)	25	Y	Y	N						Y					Dither pattern for object frames		
+OBLBNAME	OBLBNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for LBS		
+OBRT	OBRT		double		FLOAT(126)	17	Y	Y	N						Y					User value of ROT (deg)		
+OBSDNAME	OBSDNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for SOD		
+OBSERVER	OBSERVER		char		VARCHAR2(60)	60	Y	Y	N						Y					Observer name(s)		
+OBSFNAME	OBSFNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for SFP		
+OBSFX	OBSFX		double		FLOAT(126)	17	Y	Y	N						Y					User value of SFP x axis (mm)		
+OBSFY	OBSFY		double		FLOAT(126)	14	Y	Y	N						Y					User value of SFP y axis (mm)		
+OBSFZ	OBSFZ		double		FLOAT(126)	14	Y	Y	N						Y					User value of SFP z axis (mm)		
+OBSI	OBSI		double		FLOAT(126)	15	Y	Y	N						Y					User value of SFD (mm)		
+OBSNNAME	OBSNNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for SND		
+OBSTYPE	OBSTYPE		char		VARCHAR2(26)	25	Y	Y	N						Y					Observation type: astro, star, calib		
+OBSWNAME	OBSWNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for SFW		
+OBSWSTA	OBSWSTA		char		VARCHAR2(26)	25	Y	Y	N						Y					White light power status		
+OBTSNAME	OBTSNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for TSS		
+OBTSX	OBTSX		double		FLOAT(126)	16	Y	Y	N						Y					User value of TSS x axis (mm)		
+OBTSY	OBTSY		double		FLOAT(126)	14	Y	Y	N						Y					User value of TSS y axis (mm)		
+OBTSZ	OBTSZ		double		FLOAT(126)	15	Y	Y	N						Y					User value of TSS z axis (mm)		
+OBWCNAME	OBWCNAME		double		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for WCS		
+OBWF	OBWF		double		FLOAT(126)	16	Y	Y	N						Y					User value of FCS (mm)		
+OBWFSTST	OBWFSTST		char		VARCHAR2(26)	25	Y	Y	N						Y					State of FCS as string		
+OBWLNAME	OBWLNAME		double		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for WLS		
+OBWNNAME	OBWNNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for WND		
+OBWPNAME	OBWPNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					Named position control for WPS		
+PARANG	PARANG		double		FLOAT(126)	30	Y	Y	N						Y					parallactic angle astrometric (-6.89 deg)		
+PA_IMAG	PA_IMAG		double		FLOAT(126)	14	Y	Y	N						Y					Position angle of imager on sky		
+PA_SPEC	PA_SPEC		double		FLOAT(126)	14	Y	Y	N						Y					Position angle of spectrograph on sky		
+PCIFILE	PCIFILE		char		VARCHAR2(50)	49	Y	Y	N						Y					Filename containing PCI DS		
+PONAME	PONAME		char		VARCHAR2(26)	25	Y	Y	N						Y					pointing origin name		
+PONAME1	PONAME1		char		VARCHAR2(26)	25	Y	Y	N						Y					pointing origin name 1		
+PONAME2	PONAME2		char		VARCHAR2(26)	25	Y	Y	N						Y					pointing origin name 2		
+PONAME3	PONAME3		char		VARCHAR2(26)	25	Y	Y	N						Y					pointing origin name 3		
+POXPOS	POXPOS		double		FLOAT(126)	18	Y	Y	N						Y					pointing origin xposition (-5.06 mm)		
+POXPOS1	POXPOS1		double		FLOAT(126)	30	Y	Y	N						Y					pointing origin xposition 1 (0.00 mm)		
+POXPOS2	POXPOS2		double		FLOAT(126)	18	Y	Y	N						Y					pointing origin xposition 2 (-5.07 mm)		
+POXPOS3	POXPOS3		double		FLOAT(126)	18	Y	Y	N						Y					pointing origin xposition 3 (-5.06 mm)		
+POYPOS	POYPOS		double		FLOAT(126)	18	Y	Y	N						Y					pointing origin yposition (-6.14 mm)		
+POYPOS1	POYPOS1		double		FLOAT(126)	30	Y	Y	N						Y					pointing origin yposition 1 (0.00 mm)		
+POYPOS2	POYPOS2		double		FLOAT(126)	17	Y	Y	N						Y					pointing origin yposition 2 (9.28 mm)		
+POYPOS3	POYPOS3		double		FLOAT(126)	18	Y	Y	N						Y					pointing origin yposition 3 (-6.14 mm)		
+PRESSURE	PRESSURE		double		FLOAT(126)	30	Y	Y	N						Y					Current pressure read from gauge in mTorr.		
+RAOFF	RAOFF		double		FLOAT(126)	30	Y	Y	N						Y					right ascension offset (5.0227 arcsec)		
+RDITIME	RDITIME		double		FLOAT(126)	16	Y	Y	N						Y					Integration time between start of successive re		
+READTIME	READTIME		double		FLOAT(126)	14	Y	Y	N						Y					Time in seconds to readout detector		
+ROTCALAN	ROTCALAN		double		FLOAT(126)	12	Y	Y	N						Y					rotator calibration angle (0.00 deg)		
+ROTDEST	ROTDEST		double		FLOAT(126)	30	Y	Y	N						Y					rotator user destination (48.00 deg)		
+ROTMODE	ROTMODE		char		VARCHAR2(26)	25	Y	Y	N						Y					rotator tracking mode		
+ROTPDEST	ROTPDEST		double		FLOAT(126)	30	Y	Y	N						Y					rotator physical destination (130.41 deg)		
+ROTPOSN	ROTPOSN		double		FLOAT(126)	30	Y	Y	N						Y					rotator user position (48.00 deg)		
+ROTPPOSN	ROTPPOSN		double		FLOAT(126)	24	Y	Y	N						Y					rotator physical position (130.42 deg)		
+ROTREFAN	ROTREFAN		double		FLOAT(126)	12	Y	Y	N						Y					rotator reference angle (0.00 deg)		
+SAMPMODE	SAMPMODE		integer		NUMBER(10)	11	Y	Y	N						Y					Sampling Mode: 1: UTR, 2: PseudoCDS: Subtract 2		
+SATURATE	SATURATE		integer		NUMBER(10)	15	Y	Y	N						Y					Saturation level of detector		
+SCURTMP	SCURTMP		double		FLOAT(126)	25	Y	Y	N						Y					Temperature at Channel 1		
+SECFOCUS	SECFOCUS		double		FLOAT(126)	29	Y	Y	N						Y					secondary mirror focus raw (1.515 mm)		
+SECTHETX	SECTHETX		double		FLOAT(126)	14	Y	Y	N						Y					secondary mirror thetax (arcsec)		
+SECTHETY	SECTHETY		double		FLOAT(126)	16	Y	Y	N						Y					secondary mirror thetay (arcsec)		
+SETNUM	SETNUM		integer		NUMBER(10)	11	Y	Y	N						Y					Dataset Number		
+SFILTER	SFILTER		char		VARCHAR2(26)	25	Y	Y	N						Y					Move spec fitler wheel by name		
+SFRAME	SFRAME		integer		NUMBER(10)	11	Y	Y	N						Y					Current spec frame (dither position) of set		
+SFRAMES	SFRAMES		integer		NUMBER(10)	11	Y	Y	N						Y					Number of spec frames in dataset		
+SFWMECH	SFWMECH		char		VARCHAR2(26)	25	Y	Y	N						Y					The overall name of the mechanism		
+SFWNAME	SFWNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+SFWRAW	SFWRAW		double		FLOAT(126)	14	Y	Y	N						Y					Current position of mechanism in steps		
+SFWSTAT	SFWSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+SFWSWTCH	SFWSWTCH		integer		NUMBER(10)	13	Y	Y	N						Y					Current Switch Value		
+SHTRACT	SHTRACT		integer		NUMBER(10)	11	Y	Y	N						Y					Switch for temperature control for channel 1 (0		
+SHTROUT	SHTROUT		double		FLOAT(126)	26	Y	Y	N						Y					Heater output percentage of channel 1		
+SHTRRANG	SHTRRANG		integer		NUMBER(10)	11	Y	Y	N						Y					Channel 1 Heater range: 0=Off, 1=min power, 5=m		
+SIMPLE	SIMPLE		char		VARCHAR2(26)	25	Y	Y	N						Y					file does conform to FITS standard		
+SKYPTTRN	SKYPTTRN		char		VARCHAR2(26)	25	Y	Y	N						Y					Dither pattern for sky frames		
+SLMMECH	SLMMECH		char		VARCHAR2(26)	25	Y	Y	N						Y					The overall name of the mechanism		
+SLMNAME	SLMNAME		char		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+SLMRAW	SLMRAW		integer		NUMBER(10)	11	Y	Y	N						Y					Current position of mechanism in steps		
+SLMSTAT	SLMSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+SLMSWTCH	SLMSWTCH		integer		NUMBER(10)	11	Y	Y	N						Y					Current Switch Value		
+SS1MECH	SS1MECH		char		VARCHAR2(27)	26	Y	Y	N						Y					The overall name of the mechanism		
+SS1NAME	SS1NAME		double		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+SS1RAW	SS1RAW		integer		NUMBER(10)	11	Y	Y	N						Y					Current position of mechanism in steps		
+SS1STAT	SS1STAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+SS1SWTCH	SS1SWTCH		integer		NUMBER(10)	11	Y	Y	N						Y					Current Switch Value		
+SS2MECH	SS2MECH		char		VARCHAR2(26)	25	Y	Y	N						Y					The overall name of the mechanism		
+SS2NAME	SS2NAME		double		VARCHAR2(26)	25	Y	Y	N						Y					The name of the current position		
+SS2RAW	SS2RAW		integer		NUMBER(10)	11	Y	Y	N						Y					Current position of mechanism in steps		
+SS2STAT	SS2STAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Mechanism Status (Ok,Moving,Error,Unknown)		
+SS2SWTCH	SS2SWTCH		integer		NUMBER(10)	11	Y	Y	N						Y					Current Switch Value		
+SSCALE	SSCALE		double		FLOAT(126)	13	Y	Y	N						Y					Spec Scale		
+STRGTMP	STRGTMP		double		FLOAT(126)	13	Y	Y	N						Y					Desired temperature for channel 1		
+TARGWAVE	TARGWAVE		double		FLOAT(126)	15	Y	Y	N						Y					target wavelength (microns)		
+TELESCOP	TELESCOP		char		VARCHAR2(26)	25	Y	Y	N						Y					telescope name		
+TELFOCUS	TELFOCUS		double		FLOAT(126)	30	Y	Y	N						Y					telescope focus compensated (1.419 mm)		
+TIMFILE	TIMFILE		char		VARCHAR2(63)	62	Y	Y	N						Y					Filename cont		
+TUBETEMP	TUBETEMP		double		FLOAT(126)	17	Y	Y	N						Y					tube temperature (-0.78 degC)		
+UTCLP	UTCLP		char		VARCHAR2(26)	25	Y	Y	N						Y					OPEN/CLOSE TT CLMP ctrl loop		
+UTGAIN	UTGAIN		double		FLOAT(126)	15	Y	Y	N						Y					Set TT loop gain		
+WCDMSTAT	WCDMSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Status of DM loop		
+WCDTSTAT	WCDTSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Status of down tt loop		
+WCUTSTAT	WCUTSTAT		char		VARCHAR2(26)	25	Y	Y	N						Y					Status of utt loop		
+WFDAR	WFDAR		char		VARCHAR2(26)	25	Y	Y	N						Y					Offload DAR before exposure		
+WFDM	WFDM		char		VARCHAR2(26)	25	Y	Y	N						Y					Wait for DM lock		
+WFTT	WFTT		char		VARCHAR2(26)	25	Y	Y	N						Y					Wait for tiptilt lock		
+WSCNORFN	WSCNORFN		char		VARCHAR2(40)	40	Y	Y	N						Y					Name of origin vec file		
+WSFRRT	WSFRRT		integer		NUMBER(10)	14	Y	Y	N						Y					Frame rate for WFS cam (Hz)		
+WSSMGN	WSSMGN		integer		NUMBER(10)	11	Y	Y	N						Y					WFS gain (0)		
+WSSMPRG	WSSMPRG		integer		NUMBER(10)	11	Y	Y	N						Y					WFS_SciMeas program (0)		
+WSSMREP	WSSMREP		integer		NUMBER(10)	13	Y	Y	N						Y					WFS SciMeas repetitions (increments)		
 BLANK	BLANK		integer		NUMBER(10)	13	Y	Y	N						Y							
-DATLEVEL	DATLEVEL		integer		NUMBER(10)	8	Y	Y	N						Y							
-DQA_DATE	DQA_DATE		char		VARCHAR2(29)	28	Y	Y	N						Y							
-DQA_VERS	DQA_VERS		char		VARCHAR2(26)	25	Y	Y	N						Y							
-OA	OA		char		VARCHAR2(29)	28	Y	Y	N						Y							
-WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	N						Y	Y			Y			
-WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	N						Y							
-WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	N						Y	Y			Y			
-WXDOMHUM	WXDOMHUM		double		FLOAT(126)	16	Y	Y	N						Y							
-WXDOMTMP	WXDOMTMP		double		FLOAT(126)	16	Y	Y	N						Y							
-WXDWPT	WXDWPT		double		FLOAT(126)	16	Y	Y	N						Y							
-WXOUTHUM	WXOUTHUM		double		FLOAT(126)	16	Y	Y	N						Y							
-WXOUTTMP	WXOUTTMP		double		FLOAT(126)	16	Y	Y	N						Y							
-WXPRESS	WXPRESS		double		FLOAT(126)	16	Y	Y	N						Y							
-WXTIME	WXTIME		char		VARCHAR2(18)	17	Y	Y	N						Y							
-WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N						Y							
-WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N						Y							
-NPIXSAT	NPIXSAT		integer		NUMBER(10)	10	Y	Y	N						Y							
-NONLIN	NONLIN		integer		NUMBER(10)	10	Y	Y	N						Y							
-NLINEAR	NLINEAR		integer		NUMBER(10)	10	Y	Y	N						Y							
-FILTER	FILTER		char		VARCHAR2(26)	25	Y	Y	N						Y	Y	Y		Y			
+DATLEVEL	DATLEVEL		integer		NUMBER(10)	8	Y	Y	N						Y					Data reduction level		
+DQA_DATE	DQA_DATE		char		VARCHAR2(29)	28	Y	Y	N						Y					Date of DQA run		
+DQA_VERS	DQA_VERS		char		VARCHAR2(26)	25	Y	Y	N						Y					DQA version number		
+OA	OA		char		VARCHAR2(29)	28	Y	Y	N						Y					Observing assistant		
+WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	N						Y	Y			Y	Approximate blue end wavelength (nm)		
+WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	N						Y					Approximate centralwavelength (nm)		
+WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	N						Y	Y			Y	Approximate red end wavelength (nm)		
+WXDOMHUM	WXDOMHUM		double		FLOAT(126)	16	Y	Y	N						Y					Inside dome humidity (%)		
+WXDOMTMP	WXDOMTMP		double		FLOAT(126)	16	Y	Y	N						Y					Inside dome temperature (deg C)		
+WXDWPT	WXDWPT		double		FLOAT(126)	16	Y	Y	N						Y					Dew point temperature (deg C)		
+WXOUTHUM	WXOUTHUM		double		FLOAT(126)	16	Y	Y	N						Y					Outside humidity (%)		
+WXOUTTMP	WXOUTTMP		double		FLOAT(126)	16	Y	Y	N						Y					Outside temperature (deg C)		
+WXPRESS	WXPRESS		double		FLOAT(126)	16	Y	Y	N						Y					Pressure (mb)		
+WXTIME	WXTIME		char		VARCHAR2(18)	17	Y	Y	N						Y					UT of logged weather keyword values		
+WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N						Y					Wind direction (N through E)		
+WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N						Y					Wind speed (mph)		
+NPIXSAT	NPIXSAT		integer		NUMBER(10)	10	Y	Y	N						Y					Number of pixels above saturation		
+NONLIN	NONLIN		integer		NUMBER(10)	10	Y	Y	N						Y					3 percent non-linearity level (80% full well)		
+NLINEAR	NLINEAR		integer		NUMBER(10)	10	Y	Y	N						Y					Number of pixels above 3% non-linearity level (		
+FILTER	FILTER		char		VARCHAR2(26)	25	Y	Y	N						Y	Y	Y		Y	Filter (added by KOA)		
 SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N						Y	Y			Y			
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox		
 	Dec-00	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox		
