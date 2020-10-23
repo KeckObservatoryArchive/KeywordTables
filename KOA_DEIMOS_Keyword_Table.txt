@@ -90,7 +90,7 @@ DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	32s	Y				Y	Y	Y	Y	Y	observing date
 DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		drive control system status		
 DCSVERS	DCSVERS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		drive control system version		
 DDEC	DDEC	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y			Y		differential tracking rate (dec)		
-DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	11s	Y				Y	Y	Y	Y	Y	declination		
+DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	11s	Y				Y	Y	Y	Y	Y	declination		
 DETCNFID	DETCNFID	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		mosaic detector configuration id		
 DETECTOR	DETECTOR	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		detector		
 DETLSIZE	DETLSIZE	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		detector size		
@@ -310,7 +310,7 @@ PREFLUSH	PREFLUSH	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of 
 PRELINE	PRELINE	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of prescan lines		
 PREROW	PREROW	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		number of prescan rows		
 PROGNAME	PROGNAME	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Observer assigned program ID		
-RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	11s	Y				Y	Y	Y	Y	Y	right ascension		
+RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	11s	Y				Y	Y	Y	Y	Y	right ascension		
 ROTA1GOF	ROTA1GOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 gap offset		
 ROTA1IOF	ROTA1IOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 index offset		
 ROTA1QOF	ROTA1QOF	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y			Y		rotator 1 quality offset		
