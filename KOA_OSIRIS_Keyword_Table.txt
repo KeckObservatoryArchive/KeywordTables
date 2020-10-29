@@ -169,7 +169,7 @@ IF2SWTCH	IF2SWTCH		integer		NUMBER(*,0)	12	Y	Y	N	12d					Y					Current Switch Va
 IFILTER	IFILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y					Imager filter		
 IFRAME	IFRAME		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current imag frame of dither position		
 IFRAMES	IFRAMES		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Number of imag frames per spec frame		
-IHTRACT	IHTRACT		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Switch for temperature control for channel 2 (0		
+IHTRACT	IHTRACT		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Switch for temperature control for channel 2		
 IHTROUT	IHTROUT		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Heater output percentage of channel 2		
 IMAGMODE	IMAGMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y					Imager observation mode		
 INSTANGL	INSTANGL		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					porg to instrument angle (48.0 deg)		
@@ -264,7 +264,7 @@ SFWNAME	SFWNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y					The name of the 
 SFWRAW	SFWRAW		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Current position of mechanism in steps		
 SFWSTAT	SFWSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y					Mechanism Status (Ok,Moving,Error,Unknown)		
 SFWSWTCH	SFWSWTCH		integer		NUMBER(*,0)	13	Y	Y	N	13d					Y					Current Switch Value		
-SHTRACT	SHTRACT		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Switch for temperature control for channel 1 (0		
+SHTRACT	SHTRACT		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Switch for temperature control for channel 1		
 SHTROUT	SHTROUT		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Heater output percentage of channel 1		
 SHTRRANG	SHTRRANG		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Channel 1 Heater range: 0=Off, 1=min power, 5=m		
 SIMPLE	SIMPLE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y					file does conform to FITS standard		
@@ -323,7 +323,7 @@ WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind direction (N t
 WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind speed (mph)		
 NPIXSAT	NPIXSAT		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above saturation		
 NONLIN	NONLIN		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					3 percent non-linearity level (80% full well)		
-NLINEAR	NLINEAR		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above 3% non-linearity level (		
+NLINEAR	NLINEAR		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above 3% non-linearity level		
 FILTER	FILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N	32s					Y	Y	Y		Y	Filter (added by KOA)		
 SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y			
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox		
