@@ -283,9 +283,9 @@ output_dd.close()
 
 # Gotta have RA/DEC rows that mimic RA2000/DEC2000, for isisql select as purposes:
 input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'RA', 'RA', 'Right Ascension (J2000)', 'null', 'float', '18.7f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'RA'])
+output_dd_t.add_row([input_nrows, 'RA', 'RA', 'Right Ascension (J2000)', 'null', 'float', '18.5f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'RA'])
 input_nrows = input_nrows +1
-output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', 'float', '18.7f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'DEC'])
+output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', 'float', '18.5f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'DEC'])
 
 
 input_nrows = input_nrows + 1
