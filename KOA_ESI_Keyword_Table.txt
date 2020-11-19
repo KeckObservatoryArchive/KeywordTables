@@ -123,7 +123,7 @@ FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			imaging fl
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y		?			spectroscopy flatlamp		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					focal station		
 FRAME	FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					reference frame		
-FRAMENO	FRAMENO	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					frame number		
+FRAMENO	FRAMENO	ESI	integer		"NUMBER(*,0)"	8	N	Y	N	11d					Y					frame number		
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hour angle		
 HATCHPOS	HATCHPOS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hatch position		
 IMFLTCAL	IMFLTCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image flat calibration		
@@ -136,7 +136,7 @@ IMFLTTOR	IMFLTTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					image flat tor
 IMTYPE	IMTYPE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image type		
 INSTANGL	INSTANGL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					instrument angle		
 INSTFLIP	INSTFLIP	DCS	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					instrument flip		
-INSTRUME	INSTRUME	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					intrument		
+INSTRUME	INSTRUME	ESI	char		VARCHAR2(16 BYTE)	16	N	Y	N	16s					Y					intrument		
 IONCURMA	IONCURMA	ESI	double	mA	FLOAT(126)	16	Y	Y	N	18.5f					Y					ion pump current		
 IONPUMP	IONPUMP	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					raw ion pump current		
 KEEPPREP	KEEPPREP	ESI	integer		"NUMBER(*,0)"	8	Y	Y	N	11d					Y					keep prescan pixels		
