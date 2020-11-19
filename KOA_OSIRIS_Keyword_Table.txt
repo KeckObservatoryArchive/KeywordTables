@@ -5,7 +5,7 @@ DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y	32s	Y				Y					universal date of observat
 DEC	CDEC		double		VARCHAR2(20 BYTE)	20	Y	Y	Y	11s	Y	-92	92		Y					telescope-declination		
 ELAPTIME	ELAPTIME		double		FLOAT(126)	16	Y	Y	Y	18.5f		0	100000		Y					elapsed-time		
 EQUINOX	EQUINOX		double		FLOAT(126)	16	N	Y	Y	18.5f		1855	2100		Y					telescope-equinox		
-FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	Y	Y	Y	16d		0	9999		Y	Y			Y	frame-number		
+FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame-number		
 INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				OSIRIS	Y					instrument's name		
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				dark,flatlamp,flatlampoff,undefined,calib,object	Y	Y	Y		Y	Image type		
 PROGID	PROGID	KOA	char		VARCHAR2(68 BYTE)	68	N	Y	N	68s					Y	Y			Y	WMKO program ID		
