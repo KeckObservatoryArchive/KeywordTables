@@ -93,7 +93,7 @@ FILTER	FILTER	nirc2	char		VARCHAR2(50 BYTE)		Y	Y	N					Lp + 9holeMsk,  Ks + clea
 FLIMAGIN	FLIMAGIN	dcs added	char		VARCHAR2(21 BYTE)		Y	Y	N						Y					Flat lamp control 1		
 FLSPECTR	FLSPECTR	dcs added	char		VARCHAR2(21 BYTE)		Y	Y	N						Y					Flat lamp control 2		
 FOCALSTN	FOCALSTN	dcs	char		VARCHAR2(25 BYTE)		Y	Y	N						Y					focal station		
-FRAMENO	FRAMENO	alad	integer		NUMBER(38)		Y	Y	Y			1	99999		Y					Frame number		
+FRAMENO	FRAMENO	alad	integer		NUMBER(38)		N	Y	Y			1	99999		Y					Frame number		
 FRAMES	FRAMES	legacy-2 fits	integer		NUMBER(38)		Y	Y	N						Y					Number of frames combined		
 FWIANGL	FWIANGL	nirc2	double	degrees	FLOAT(126)		Y	Y	N						Y					inner filter wheel's angular position from home		
 FWINAME	FWINAME	nirc2	char		VARCHAR2(21 BYTE)		Y	Y	N						Y					inner filter wheel's named position		
