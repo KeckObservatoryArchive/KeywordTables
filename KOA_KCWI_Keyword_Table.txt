@@ -168,7 +168,7 @@ FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Filename
 FIILESIZE_MB	FIILESIZE_MB	KOA	double	MB	FLOAT(126 BYTE)	16	N	Y	N	18.5f					Y							
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 2	off	
-FRAMENO	FRAMENO	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	Y	16d		0	9999		Y	Y			Y	frame number	1919	"Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't."
+FRAMENO	FRAMENO	KCWI	integer		"NUMBER(*,0)"	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame number	1919	"Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't."
 GAIN1	GAIN1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 0	0.172	
 GAIN2	GAIN2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 1	0.173	
 GAIN3	GAIN3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 2	0.168	
@@ -345,7 +345,7 @@ SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Secondary focu
 SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Secondary status string	HALT	
 SECTHETX	SECTHETX	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Secondary theta x	-43.4	
 SECTHETY	SECTHETY	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Secondary theta y	-219.7	
-SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Observing semester	2015A	
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y					Observing semester	2015A	
 SEQUENCE	SEQUENCE	KCWI-F	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Command sequence	1	
 SHUFROWS	SHUFROWS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					[ccdrows] number of rows in shuffle	685	
 SIG2NOIS	SIG2NOIS	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Signal to noise at center of CCD		
