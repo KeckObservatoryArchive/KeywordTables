@@ -13,7 +13,7 @@ PROGID	PROGID	KOA	char			32	N	Y	N						Y					WMKO program ID	H275LA
 PROGINST	PROGINST	KOA	char			16	N	Y	N						Y					Program institution	UH	
 PROGPI	PROGPI	KOA	char			70	N	Y	N						Y					Program PI	McConnell	
 PROGTITL	PROGTITL	KOA	char			210	Y	Y	N						Y					Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
-SEMESTER	SEMESTER	KOA	char			8	Y	Y	N						Y					Observing semester	2015A	
+SEMESTER	SEMESTER	KOA	char			8	N	Y	N						Y					Observing semester	2015A	
 ABFREQ	ABFREQ	LRIS	integer	Hz		16	Y	Y	N						Y					Antiblooming frequency	20	
 ADCBYP	ADCBYP	native	char			1	Y	Y	N						Y					ADC motor control bypass switch	F	
 ADCCAL	ADCCAL	native	char			1	Y	Y	N						Y					ADC calibration	T	
@@ -109,7 +109,7 @@ FLAMP1	FLAMP1	DCS	char			8	Y	Y	N						Y					Flat lamp 1	off
 FLAMP2	FLAMP2	DCS	char			8	Y	Y	N						Y					Flat lamp 2	off	
 FLIMAGIN	FLIMAGIN	DCS	char			8	Y	Y	N						Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char			8	Y	Y	N						Y					Flat lamp control 2	off	
-FRAMENO	FRAMENO	LRIS	integer			16	Y	Y	Y			0	9999		Y					Frame number	76	
+FRAMENO	FRAMENO	LRIS	integer			16	N	Y	Y			0	9999		Y					Frame number	76	
 GRANAME	GRANAME	native	char			32	Y	Y	N						Y					Grating name	600/10000	
 GRANGLE	GRANGLE	native	double			16	Y	Y	N						Y					Grating angle raw	33.22573471	
 GRATING	GRATING	native	integer			16	Y	Y	N						Y					Grating	2	
