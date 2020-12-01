@@ -208,40 +208,6 @@ for i in range(input_nrows):
 
 
 
-###This chunk removed now that we have added them to the original keyword tables:
-
-#### Add the IPAC-only rows to the data dictionary table (both versions):
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'CRA', 'CRA', 'Original character string RA before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CRA'])
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'CDEC', 'CDEC', 'Original character string DEC before conversion to Eq2000', 'null', 'char', '11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CDEC'])
-
-###if ("hires" in table_name.lower()):
-###  input_nrows = input_nrows +1
-###  output_dd_t.add_row([input_nrows, 'HA_D', 'HA_D', 'Original HA in decimal before conversion to sexagesimal', 'null', 'double', '12.6s', 'float(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'HA_D'])
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'UTDATETIME', 'UTDATETIME', 'Combined DATE_OBS and UT as a timestamp', 'null', 'char', '11s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'UTDATETIME'])
-
-
-###input_nrows = input_nrows +1
-###if ("hires" in table_name.lower()):
-###  output_dd_t.add_row([input_nrows, 'MD_INGTIME', 'MD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
-###  output_dd_t.add_row([input_nrows, 'DVD_INGTIME', 'DVD_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'DVD_INGTIME'])
-###else:
-###  output_dd_t.add_row([input_nrows, 'L0_INGTIME', 'L0_INGTIME', 'Time of metadata ingestion', 'null', 'char', '19.19s', 'timestamp', 'y', '2', input_nrows, 'y', 'y', 'n', 'L0_INGTIME'])
-
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'FILEHAND', 'FILEHAND', 'Path to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEHAND'])
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'FILEURL', 'FILEURL', 'URL to file in the archive', 'null', 'char', '151s', 'varchar2(151)', 'y', '2', input_nrows, 'y', 'y', 'n', 'FILEURL'])
-
-###input_nrows = input_nrows +1
-###output_dd_t.add_row([input_nrows, 'SEMID', 'SEMID', 'SEMESTER and PROGID', 'null', 'char', '11.11s', 'varchar2(11)', 'y', '2', input_nrows, 'y', 'y', 'n', 'SEMID'])
 
 
 # Output the disk-version (that dbIngest will use for dbin)
@@ -323,22 +289,6 @@ if (output_db != ''):
 
 
 
-### Removed now that these are in original keyword table:
-
-
-###  db.write("    \"CRA\" VARCHAR2(11 BYTE),\n")
-###  db.write("    \"CDEC\" VARCHAR2(11 BYTE),\n")
-###  if ("hires" in table_name.lower()):
-###    db.write("    \"HA_D\" FLOAT(126),\n")
-###  db.write("    \"UTDATETIME\" TIMESTAMP (6),\n")
-###  if ("hires" in table_name.lower()):
-###    db.write("    \"MD_INGTIME\" TIMESTAMP (6),\n")
-###    db.write("    \"DVD_INGTIME\" TIMESTAMP (6),\n")
-###  else:
-###    db.write("    \"L0_INGTIME\" TIMESTAMP (6),\n")
-###  db.write("    \"FILEHAND\" VARCHAR2(151 BYTE),\n")
-###  db.write("    \"FILEURL\" VARCHAR2(151 BYTE),\n")
-###  db.write("    \"SEMID\" VARCHAR2(21 BYTE),\n")
   db.write("  )\n")
   db.write("  TABLESPACE \"KOA_DATA\" ;\n")
   db.write("  CREATE INDEX IKOAIMTYP_" + table_name + " ON " + table_name + "(KOAIMTYP) TABLESPACE KOA_DATA;\n")
