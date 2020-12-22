@@ -110,7 +110,7 @@ DWFILRAW	DWFILRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Filter wheel r
 DWFILSTA	DWFILSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Filter status		
 DWFILTOR	DWFILTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Filter torque		
 EL	EL	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					elevation		
-ELAPTIME	YFLIP	ESI	integer	seconds	NUMBER(*,0)	8	Y	Y	N	11d					Y	Y			Y	elapsed time		
+ELAPTIME	ELAPTIME	ESI	integer	seconds	NUMBER(*,0)	8	Y	Y	N	11d					Y	Y			Y	elapsed time		
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y	Y			Y	equinox		
 ERASECNT	ERASECNT	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					erase count		
 ERASLINE	ERASLINE	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					erase line		
