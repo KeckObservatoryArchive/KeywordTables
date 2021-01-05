@@ -1,12 +1,12 @@
 FITSKeyword	FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s	Y				Y	Y			Y	KOA file name		
-PROPINT	PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	16d		0			Y	Y				CCD1 data proprietary period time interval in months		
+PROPINT	PROPINT	PROPINT	KOA	integer	months	NUMBER(*,0)	16	N	Y	Y	16d		0			Y	Y				CCD1 data proprietary period time interval in months		
 	OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y			Y	Original filename at the telescope, copied from DATAFILE keyword	v171005_0001	May have to add .fits to DATAFILE
 	FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f					Y					FITS file size in megabytes	44.8	
 DATE-OBS	DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y	32s	Y				Y					universal date of observation		
 DEC	DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f	Y				Y					declination		
-ELAPTIME	ELAPTIME	ELAPTIME		double		FLOAT(126)	16	Y	Y	Y	18.5f		0	100000		Y					elapsed-time		
-EQUINOX	EQUINOX	EQUINOX		double		FLOAT(126)	16	N	Y	Y	18.5f		1855	2100		Y					telescope-equinox		
+ELAPTIME	ELAPTIME	ELAPTIME		double	seconds	FLOAT(126)	16	Y	Y	Y	18.5f		0	100000		Y					elapsed-time		
+EQUINOX	EQUINOX	EQUINOX		double	years	FLOAT(126)	16	N	Y	Y	18.5f		1855	2100		Y					telescope-equinox		
 FRAMENO	FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame-number		
 INSTRUME	INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				OSIRIS	Y					instrument's name		
 KOAIMTYP	KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				dark,flatlamp,flatlampoff,undefined,calib,object	Y	Y	Y		Y	Image type		
@@ -19,10 +19,10 @@ SEMESTER	SEMESTER	SEMESTER	KOA	char		VARCHAR2(9 BYTE)	9	N	Y	N	9s					Y					Obser
 TARGNAME	TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	69	Y	Y	N	69s					Y	Y			Y	target-name		
 UT	UT	UT		char		VARCHAR2(21 BYTE)	21	N	Y	Y	21s					Y					coordinated universal time		
 UTC	UTC	UTC		char		VARCHAR2(21 BYTE)	21	N	Y	Y	21s					Y					coordinated universal time		
-CRVAL1	CRVAL1	CRVAL1		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Horizontal axis WCS value at the reference pixel		
-CRVAL2	CRVAL2	CRVAL2		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Vertical axis WCS value at the reference pixel		
-CRPIX1	CRPIX1	CRPIX1		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Reference pixel on the horizontal axis		
-CRPIX2	CRPIX2	CRPIX2		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Reference pixel on the vertical axis		
+CRVAL1	CRVAL1	CRVAL1		double	pixels	FLOAT(126)	20	Y	Y	Y	18.5f					Y					Horizontal axis WCS value at the reference pixel		
+CRVAL2	CRVAL2	CRVAL2		double	pixels	FLOAT(126)	20	Y	Y	Y	18.5f					Y					Vertical axis WCS value at the reference pixel		
+CRPIX1	CRPIX1	CRPIX1		double	pixels	FLOAT(126)	20	Y	Y	Y	18.5f					Y					Reference pixel on the horizontal axis		
+CRPIX2	CRPIX2	CRPIX2		double	pixels	FLOAT(126)	20	Y	Y	Y	18.5f					Y					Reference pixel on the vertical axis		
 CTYPE1	CTYPE1	CTYPE1		char		VARCHAR2(20 BYTE)	20	Y	Y	Y	20s					Y					WCS Type of the horizontal coordinate		
 CTYPE2	CTYPE2	CTYPE2		char		VARCHAR2(20 BYTE)	20	Y	Y	Y	20s					Y					WCS Type of the vertical coordinate		
 WAT0_001	WAT0_001	WAT0_001		char		VARCHAR2(30 BYTE)	30	Y	Y	Y	30s					Y					coordinate system		
@@ -62,11 +62,11 @@ AOTSZ	AOTSZ	AOTSZ		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					AO tip/tilt senso
 AOTTMODE	AOTTMODE	AOTTMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					AO tip/tilt offloading mode		
 AOWFC0	AOWFC0	AOWFC0		double		FLOAT(126)	19	Y	Y	N	18.5f					Y					AO WFS focus stage FSM coefficient 0		
 AXESTAT	AXESTAT	AXESTAT		char		VARCHAR2(22 BYTE)	22	Y	Y	N	22s					Y					axes control status		
-AZ	AZ	AZ		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					telescope azimuth (172.67 deg)		
+AZ	AZ	AZ		double	degrees	FLOAT(126)	26	Y	Y	N	18.5f					Y					telescope azimuth (172.67 deg)		
 BADPIX	BADPIX	BADPIX		char		VARCHAR2(57 BYTE)	57	Y	Y	N	57s					Y					FITS filename cont		
 BITPIX	BITPIX	BITPIX		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					number of bits per data pixel		
-CALOCAL	CALOCAL	CALOCAL		double		FLOAT(126)	28	Y	Y	N	18.5f					Y					collimation azimuth local (40.7 arcsec)		
-CELOCAL	CELOCAL	CELOCAL		double		FLOAT(126)	29	Y	Y	N	18.5f					Y					collimation elevation local (-21.8 arcsec)		
+CALOCAL	CALOCAL	CALOCAL		double	arcsec	FLOAT(126)	28	Y	Y	N	18.5f					Y					collimation azimuth local (40.7 arcsec)		
+CELOCAL	CELOCAL	CELOCAL		double	arcsec	FLOAT(126)	29	Y	Y	N	18.5f					Y					collimation elevation local (-21.8 arcsec)		
 COADDS	COADDS	COADDS		integer		NUMBER(*,0)	11	Y	Y	Y	11d		1	1000000		Y	Y	Y		Y	Number of coadded frames		
 CTMP1	CTMP1	CTMP1		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Temperature at Sensor 1		
 CTMP2	CTMP2	CTMP2		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Temperature at Sensor 2		
@@ -89,13 +89,13 @@ DATAFILE	DATAFILE	DATAFILE		char		VARCHAR2(26 BYTE)	26	Y	Y	N	26s					Y					Filen
 DATASET	DATASET	DATASET		char		VARCHAR2(60 BYTE)	60	Y	Y	N	60s					Y					dataset name		
 DCOORDS	DCOORDS	DCOORDS		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Dither coordinates - sky/instr		
 DCSSTAT	DCSSTAT	DCSSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					drive and control status		
-DDEC	DDEC	DDEC		double		FLOAT(126)	12	Y	Y	N	18.5f					Y							
-DECOFF	DECOFF	DECOFF		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					declination offset (0.0000 arcsec)		
+DDEC	DDEC	DDEC		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y							
+DECOFF	DECOFF	DECOFF		double	arcsec	FLOAT(126)	30	Y	Y	N	18.5f					Y					declination offset (0.0000 arcsec)		
 DLSTOFF1	DLSTOFF1	DLSTOFF1		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from last dither pos-axis 1		
 DLSTOFF2	DLSTOFF2	DLSTOFF2		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from last dither pos-axis 2		
 DMGAIN	DMGAIN	DMGAIN		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					Set DM loop gain		
 DMMRFN	DMMRFN	DMMRFN		char		VARCHAR2(23 BYTE)	23	Y	Y	N	23s					Y					Name of DM reconstructor file		
-DOMEPOSN	DOMEPOSN	DOMEPOSN		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					dome azimuth (172.57 deg)		
+DOMEPOSN	DOMEPOSN	DOMEPOSN		double	degrees	FLOAT(126)	15	Y	Y	N	18.5f					Y					dome azimuth (172.57 deg)		
 DOMESTAT	DOMESTAT	DOMESTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					dome status		
 DPWNAME1	DPWNAME1	DPWNAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 1		
 DPWNAME2	DPWNAME2	DPWNAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 2		
@@ -112,7 +112,7 @@ DPWSTAT5	DPWSTAT5	DPWSTAT5		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power st
 DPWSTAT6	DPWSTAT6	DPWSTAT6		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 6		
 DPWSTAT7	DPWSTAT7	DPWSTAT7		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 7		
 DPWSTAT8	DPWSTAT8	DPWSTAT8		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 8		
-DRA	DRA	DRA		double		FLOAT(126)	12	Y	Y	N	18.5f					Y							
+DRA	DRA	DRA		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y							
 DTCLP	DTCLP	DTCLP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 DTGAIN	DTGAIN	DTGAIN		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					Set TT loop gain		
 DTMP1	DTMP1	DTMP1		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Temperature at Sensor 1		
@@ -134,7 +134,7 @@ DTMPLOC8	DTMPLOC8	DTMPLOC8		char		VARCHAR2(37 BYTE)	37	Y	Y	N	37s					Y					Locat
 DTOTOFF1	DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from start of dither-axis 1		
 DTOTOFF2	DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from start of dither-axis 2		
 DTRACK	DTRACK	DTRACK		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y							
-EL	EL	EL		double		FLOAT(126)	24	Y	Y	N	18.5f					Y							
+EL	EL	EL		double	degrees	FLOAT(126)	24	Y	Y	N	18.5f					Y							
 EPWNAME1	EPWNAME1	EPWNAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 1		
 EPWNAME2	EPWNAME2	EPWNAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 2		
 EPWNAME3	EPWNAME3	EPWNAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 3		
@@ -155,7 +155,7 @@ EXTEND	EXTEND	EXTEND		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					FITS datase
 FOCALSTN	FOCALSTN	FOCALSTN		char		VARCHAR2(26 BYTE)	26	Y	Y	N	26s					Y					focal station		
 FRAMENUM	FRAMENUM	FRAMENUM		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Frame Number		
 GAIN	GAIN	GAIN		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Detector gain in ADU per electron		
-GUIDWAVE	GUIDWAVE	GUIDWAVE		double		FLOAT(126)	20	Y	Y	N	18.5f					Y					guidestar wavelength (microns)		
+GUIDWAVE	GUIDWAVE	GUIDWAVE		double	microns	FLOAT(126)	20	Y	Y	N	18.5f					Y					guidestar wavelength (microns)		
 HA	HA	HA		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					telescope hour angle (+23:52:38.13 h)		
 ICURTMP	ICURTMP	ICURTMP		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					Temperature at Channel 2		
 IF1MECH	IF1MECH	IF1MECH		char		VARCHAR2(26 BYTE)	26	Y	Y	N	26s					Y					The overall name of the mechanism		
@@ -174,7 +174,7 @@ IFRAMES	IFRAMES	IFRAMES		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Number of i
 IHTRACT	IHTRACT	IHTRACT		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Switch for temperature control for channel 2		
 IHTROUT	IHTROUT	IHTROUT		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Heater output percentage of channel 2		
 IMAGMODE	IMAGMODE	IMAGMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Imager observation mode		
-INSTANGL	INSTANGL	INSTANGL		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					porg to instrument angle (48.0 deg)		
+INSTANGL	INSTANGL	INSTANGL		double	degrees	FLOAT(126)	13	Y	Y	N	18.5f					Y					porg to instrument angle (48.0 deg)		
 INSTFLIP	INSTFLIP	INSTFLIP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					porg to instrument y flip		
 INSTR	INSTR	INSTR		char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s				imag,spec	Y	Y	Y		Y	Spectrometer (spec) or Imager (imag)		
 ISAO	ISAO	ISAO		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y							
@@ -185,10 +185,10 @@ LGRMSWF	LGRMSWF	LGRMSWF		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					LGSAO RMS W
 LSAMPPWR	LSAMPPWR	LSAMPPWR		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					Amp Power (watts)		
 LSPROP	LSPROP	LSPROP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Laser Propagating		
 LST	LST	LST		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					local apparent sidereal time (h)		
-MJD_OBS	MJD-OBS	MJD_OBS		double		FLOAT(126)	26	Y	Y	N	18.5f	Y				Y					modified julian date of observation (54600.4376		
-NAXIS	NAXIS	MJD_OBS		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					number of data axes		
-NAXIS1	NAXIS1	NAXIS1		integer		NUMBER(*,0)	14	Y	Y	N	14d					Y					length of data axis 1		
-NAXIS2	NAXIS2	NAXIS2		integer		NUMBER(*,0)	14	Y	Y	N	14d					Y					length of data axis 2		
+MJD_OBS	MJD-OBS	MJD_OBS		double	days	FLOAT(126)	26	Y	Y	N	18.5f	Y				Y					modified julian date of observation (54600.4376		
+NAXIS	NAXIS	NAXIS		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					number of data axes		
+NAXIS1	NAXIS1	NAXIS1		integer	pixels	NUMBER(*,0)	14	Y	Y	N	14d					Y					length of data axis 1		
+NAXIS2	NAXIS2	NAXIS2		integer	pixels	NUMBER(*,0)	14	Y	Y	N	14d					Y					length of data axis 2		
 NOISEFIL	NOISEFIL	NOISEFIL		char		VARCHAR2(64 BYTE)	64	Y	Y	N	64s					Y					Filename co		
 NUMREADS	NUMREADS	NUMREADS		integer		NUMBER(*,0)	12	Y	Y	N	12d					Y					Number of reads		
 OBAMNAME	OBAMNAME	OBAMNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for AFM		
@@ -206,56 +206,56 @@ OBRT	OBRT	OBRT		double		FLOAT(126)	17	Y	Y	N	18.5f					Y					User value of ROT (d
 OBSDNAME	OBSDNAME	OBSDNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for SOD		
 OBSERVER	OBSERVER	OBSERVER		char		VARCHAR2(60 BYTE)	60	Y	Y	N	60s					Y					Observer name(s)		
 OBSFNAME	OBSFNAME	OBSFNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for SFP		
-OBSFX	OBSFX	OBSFX		double		FLOAT(126)	17	Y	Y	N	18.5f					Y					User value of SFP x axis (mm)		
-OBSFY	OBSFY	OBSFY		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of SFP y axis (mm)		
-OBSFZ	OBSFZ	OBSFZ		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of SFP z axis (mm)		
-OBSI	OBSI	OBSI		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					User value of SFD (mm)		
+OBSFX	OBSFX	OBSFX		double	mm	FLOAT(126)	17	Y	Y	N	18.5f					Y					User value of SFP x axis (mm)		
+OBSFY	OBSFY	OBSFY		double	mm	FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of SFP y axis (mm)		
+OBSFZ	OBSFZ	OBSFZ		double	mm	FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of SFP z axis (mm)		
+OBSI	OBSI	OBSI		double	mm	FLOAT(126)	15	Y	Y	N	18.5f					Y					User value of SFD (mm)		
 OBSNNAME	OBSNNAME	OBSNNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for SND		
 OBSTYPE	OBSTYPE	OBSTYPE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Observation type: astro, star, calib		
 OBSWNAME	OBSWNAME	OBSWNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for SFW		
 OBSWSTA	OBSWSTA	OBSWSTA		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					White light power status		
 OBTSNAME	OBTSNAME	OBTSNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for TSS		
-OBTSX	OBTSX	OBTSX		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of TSS x axis (mm)		
-OBTSY	OBTSY	OBTSY		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of TSS y axis (mm)		
-OBTSZ	OBTSZ	OBTSZ		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					User value of TSS z axis (mm)		
+OBTSX	OBTSX	OBTSX		double	mm	FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of TSS x axis (mm)		
+OBTSY	OBTSY	OBTSY		double	mm	FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of TSS y axis (mm)		
+OBTSZ	OBTSZ	OBTSZ		double	mm	FLOAT(126)	15	Y	Y	N	18.5f					Y					User value of TSS z axis (mm)		
 OBWCNAME	OBWCNAME	OBWCNAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WCS		
-OBWF	OBWF	OBWF		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of FCS (mm)		
+OBWF	OBWF	OBWF		double	mm	FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of FCS (mm)		
 OBWFSTST	OBWFSTST	OBWFSTST		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					State of FCS as string		
 OBWLNAME	OBWLNAME	OBWLNAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WLS		
 OBWNNAME	OBWNNAME	OBWNNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WND		
 OBWPNAME	OBWPNAME	OBWPNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WPS		
-PARANG	PARANG	PARANG		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					parallactic angle astrometric (-6.89 deg)		
-PA_IMAG	PA_IMAG	PA_IMAG		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Position angle of imager on sky		
-PA_SPEC	PA_SPEC	PA_SPEC		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Position angle of spectrograph on sky		
+PARANG	PARANG	PARANG		double	degrees	FLOAT(126)	30	Y	Y	N	18.5f					Y					parallactic angle astrometric (-6.89 deg)		
+PA_IMAG	PA_IMAG	PA_IMAG		double	degrees	FLOAT(126)	14	Y	Y	N	18.5f					Y					Position angle of imager on sky		
+PA_SPEC	PA_SPEC	PA_SPEC		double	degrees	FLOAT(126)	14	Y	Y	N	18.5f					Y					Position angle of spectrograph on sky		
 PCIFILE	PCIFILE	PCIFILE		char		VARCHAR2(49 BYTE)	49	Y	Y	N	49s					Y					Filename containing PCI DS		
 PONAME	PONAME	PONAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					pointing origin name		
 PONAME1	PONAME1	PONAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					pointing origin name 1		
 PONAME2	PONAME2	PONAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					pointing origin name 2		
 PONAME3	PONAME3	PONAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					pointing origin name 3		
-POXPOS	POXPOS	POXPOS		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition (-5.06 mm)		
-POXPOS1	POXPOS1	POXPOS1		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					pointing origin xposition 1 (0.00 mm)		
-POXPOS2	POXPOS2	POXPOS2		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition 2 (-5.07 mm)		
-POXPOS3	POXPOS3	POXPOS3		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition 3 (-5.06 mm)		
-POYPOS	POYPOS	POYPOS		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin yposition (-6.14 mm)		
-POYPOS1	POYPOS1	POYPOS1		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					pointing origin yposition 1 (0.00 mm)		
-POYPOS2	POYPOS2	POYPOS2		double		FLOAT(126)	17	Y	Y	N	18.5f					Y					pointing origin yposition 2 (9.28 mm)		
-POYPOS3	POYPOS3	POYPOS3		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin yposition 3 (-6.14 mm)		
-PRESSURE	PRESSURE	PRESSURE		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					Current pressure read from gauge in mTorr.		
-RAOFF	RAOFF	RAOFF		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					right ascension offset (5.0227 arcsec)		
+POXPOS	POXPOS	POXPOS		double	mm	FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition (-5.06 mm)		
+POXPOS1	POXPOS1	POXPOS1		double	mm	FLOAT(126)	30	Y	Y	N	18.5f					Y					pointing origin xposition 1 (0.00 mm)		
+POXPOS2	POXPOS2	POXPOS2		double	mm	FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition 2 (-5.07 mm)		
+POXPOS3	POXPOS3	POXPOS3		double	mm	FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin xposition 3 (-5.06 mm)		
+POYPOS	POYPOS	POYPOS		double	mm	FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin yposition (-6.14 mm)		
+POYPOS1	POYPOS1	POYPOS1		double	mm	FLOAT(126)	30	Y	Y	N	18.5f					Y					pointing origin yposition 1 (0.00 mm)		
+POYPOS2	POYPOS2	POYPOS2		double	mm	FLOAT(126)	17	Y	Y	N	18.5f					Y					pointing origin yposition 2 (9.28 mm)		
+POYPOS3	POYPOS3	POYPOS3		double	mm	FLOAT(126)	18	Y	Y	N	18.5f					Y					pointing origin yposition 3 (-6.14 mm)		
+PRESSURE	PRESSURE	PRESSURE		double	mTorr	FLOAT(126)	30	Y	Y	N	18.5f					Y					Current pressure read from gauge in mTorr.		
+RAOFF	RAOFF	RAOFF		double	arcsec	FLOAT(126)	30	Y	Y	N	18.5f					Y					right ascension offset (5.0227 arcsec)		
 RDITIME	RDITIME	RDITIME		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Integration time between start of successive re		
 READTIME	READTIME	READTIME		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Time in seconds to readout detector		
-ROTCALAN	ROTCALAN	ROTCALAN		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					rotator calibration angle (0.00 deg)		
-ROTDEST	ROTDEST	ROTDEST		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator user destination (48.00 deg)		
+ROTCALAN	ROTCALAN	ROTCALAN		double	degrees	FLOAT(126)	12	Y	Y	N	18.5f					Y					rotator calibration angle (0.00 deg)		
+ROTDEST	ROTDEST	ROTDEST		double	degrees	FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator user destination (48.00 deg)		
 ROTMODE	ROTMODE	ROTMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					rotator tracking mode		
-ROTPDEST	ROTPDEST	ROTPDEST		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator physical destination (130.41 deg)		
-ROTPOSN	ROTPOSN	ROTPOSN		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator user position (48.00 deg)		
-ROTPPOSN	ROTPPOSN	ROTPPOSN		double		FLOAT(126)	24	Y	Y	N	18.5f					Y					rotator physical position (130.42 deg)		
-ROTREFAN	ROTREFAN	ROTREFAN		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					rotator reference angle (0.00 deg)		
+ROTPDEST	ROTPDEST	ROTPDEST		double	degrees	FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator physical destination (130.41 deg)		
+ROTPOSN	ROTPOSN	ROTPOSN		double	degrees	FLOAT(126)	30	Y	Y	N	18.5f					Y					rotator user position (48.00 deg)		
+ROTPPOSN	ROTPPOSN	ROTPPOSN		double	degrees	FLOAT(126)	24	Y	Y	N	18.5f					Y					rotator physical position (130.42 deg)		
+ROTREFAN	ROTREFAN	ROTREFAN		double	degrees	FLOAT(126)	12	Y	Y	N	18.5f					Y					rotator reference angle (0.00 deg)		
 SAMPMODE	SAMPMODE	SAMPMODE		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Sampling Mode: 1: UTR, 2: PseudoCDS: Subtract 2		
 SATURATE	SATURATE	SATURATE		integer		NUMBER(*,0)	15	Y	Y	N	15d					Y					Saturation level of detector		
 SCURTMP	SCURTMP	SCURTMP		double		FLOAT(126)	25	Y	Y	N	18.5f					Y					Temperature at Channel 1		
-SECFOCUS	SECFOCUS	SECFOCUS		double		FLOAT(126)	29	Y	Y	N	18.5f					Y					secondary mirror focus raw (1.515 mm)		
-SECTHETX	SECTHETX	SECTHETX		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					secondary mirror thetax (arcsec)		
+SECFOCUS	SECFOCUS	SECFOCUS		double	arcsec	FLOAT(126)	29	Y	Y	N	18.5f					Y					secondary mirror focus raw (1.515 mm)		
+SECTHETX	SECTHETX	SECTHETX		double	arcsec	FLOAT(126)	14	Y	Y	N	18.5f					Y					secondary mirror thetax (arcsec)		
 SECTHETY	SECTHETY	SECTHETY		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					secondary mirror thetay (arcsec)		
 SETNUM	SETNUM	SETNUM		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Dataset Number		
 SFILTER	SFILTER	SFILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Move spec fitler wheel by name		
@@ -288,11 +288,11 @@ SS2STAT	SS2STAT	SS2STAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Mechanis
 SS2SWTCH	SS2SWTCH	SS2SWTCH		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current Switch Value		
 SSCALE	SSCALE	SSCALE		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					Spec Scale		
 STRGTMP	STRGTMP	STRGTMP		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					Desired temperature for channel 1		
-TARGWAVE	TARGWAVE	TARGWAVE		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					target wavelength (microns)		
+TARGWAVE	TARGWAVE	TARGWAVE		double	microns	FLOAT(126)	15	Y	Y	N	18.5f					Y					target wavelength (microns)		
 TELESCOP	TELESCOP	TELESCOP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					telescope name		
-TELFOCUS	TELFOCUS	TELFOCUS		double		FLOAT(126)	30	Y	Y	N	18.5f					Y					telescope focus compensated (1.419 mm)		
+TELFOCUS	TELFOCUS	TELFOCUS		double	mm	FLOAT(126)	30	Y	Y	N	18.5f					Y					telescope focus compensated (1.419 mm)		
 TIMFILE	TIMFILE	TIMFILE		char		VARCHAR2(62 BYTE)	62	Y	Y	N	62s					Y					Filename cont		
-TUBETEMP	TUBETEMP	TUBETEMP		double		FLOAT(126)	17	Y	Y	N	18.5f					Y					tube temperature (-0.78 degC)		
+TUBETEMP	TUBETEMP	TUBETEMP		double	celcius	FLOAT(126)	17	Y	Y	N	18.5f					Y					tube temperature (-0.78 degC)		
 UTCLP	UTCLP	UTCLP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	UTGAIN		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					Set TT loop gain		
 WCDMSTAT	WCDMSTAT	WCDMSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Status of DM loop		
@@ -303,7 +303,7 @@ WFDM	WFDM	WFDM		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Wait for DM lock
 WFTT	WFTT	WFTT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Wait for tiptilt lock		
 WSCNORFN	WSCNORFN	WSCNORFN		char		VARCHAR2(40 BYTE)	40	Y	Y	N	40s					Y					Name of origin vec file		
 WSFRRT	WSFRRT	WSFRRT		integer		NUMBER(*,0)	14	Y	Y	N	14d					Y					Frame rate for WFS cam (Hz)		
-WSSMGN	WSSMGN	WSSMGN		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					WFS gain (0)		
+WSSMGN	WSSMGN	WSSMGN		integer	hertz	NUMBER(*,0)	11	Y	Y	N	11d					Y					WFS gain (0)		
 WSSMPRG	WSSMPRG	WSSMPRG		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					WFS_SciMeas program (0)		
 WSSMREP	WSSMREP	WSSMREP		integer		NUMBER(*,0)	13	Y	Y	N	13d					Y					WFS SciMeas repetitions (increments)		
 BLANK	BLANK	BLANK		integer		NUMBER(*,0)	13	Y	Y	N	13d					Y							
@@ -315,21 +315,21 @@ WAVEBLUE	WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y	Approx
 WAVECNTR	WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Approximate centralwavelength (nm)		
 WAVERED	WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y	Approximate red end wavelength (nm)		
 WXDOMHUM	WXDOMHUM	WXDOMHUM		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Inside dome humidity (%)		
-WXDOMTMP	WXDOMTMP	WXDOMTMP		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Inside dome temperature (deg C)		
-WXDWPT	WXDWPT	WXDWPT		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dew point temperature (deg C)		
+WXDOMTMP	WXDOMTMP	WXDOMTMP		double	celcius	FLOAT(126)	16	Y	Y	N	18.5f					Y					Inside dome temperature (deg C)		
+WXDWPT	WXDWPT	WXDWPT		double	celcius	FLOAT(126)	16	Y	Y	N	18.5f					Y					Dew point temperature (deg C)		
 WXOUTHUM	WXOUTHUM	WXOUTHUM		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Outside humidity (%)		
-WXOUTTMP	WXOUTTMP	WXOUTTMP		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Outside temperature (deg C)		
-WXPRESS	WXPRESS	WXPRESS		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Pressure (mb)		
+WXOUTTMP	WXOUTTMP	WXOUTTMP		double	celcius	FLOAT(126)	16	Y	Y	N	18.5f					Y					Outside temperature (deg C)		
+WXPRESS	WXPRESS	WXPRESS		double	mb	FLOAT(126)	16	Y	Y	N	18.5f					Y					Pressure (mb)		
 WXTIME	WXTIME	WXTIME		char		VARCHAR2(17 BYTE)	17	Y	Y	N	17s					Y					UT of logged weather keyword values		
 WXWNDIR	WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind direction (N through E)		
-WXWNDSP	WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind speed (mph)		
+WXWNDSP	WXWNDSP	WXWNDSP		double	mph	FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind speed (mph)		
 NPIXSAT	NPIXSAT	NPIXSAT		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above saturation		
 NONLIN	NONLIN	NONLIN		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					3 percent non-linearity level (80% full well)		
 NLINEAR	NLINEAR	NLINEAR		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above 3% non-linearity level		
 FILTER	FILTER	FILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y	Y	Y		Y	Filter (added by KOA)		
 SCALE	SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y			
 		RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox		
-		DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox		
+		Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox		
 		UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp		
 		L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion		
 		FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N	151s	Y				N	Y			Y	Path to the file in the archive		
