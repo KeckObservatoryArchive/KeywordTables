@@ -97,7 +97,7 @@ CTRLFAN0	CTRLFAN0	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					contoller 0 el
 CTRLFAN1	CTRLFAN1	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					controller 1 electronics fans		
 CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					current instrument		
 DATE	DATE_UT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					date		
-DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	32s	Y				Y	Y	Y		Y	observing date		
+DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	32s	Y				Y	Y	Y		Y	observing date		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					declination		
 DECOFF	DECOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Declination offset		
 DETECTOR	DETECTOR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					detector		
