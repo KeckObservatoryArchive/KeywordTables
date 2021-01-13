@@ -221,6 +221,8 @@ for r in range(len(fixme_t)):
     fixme_t['description'][r] = ''
   if (fixme_t['units'][r] == '0.0'):
     fixme_t['units'][r] = ''
+  if (fixme_t['sel'][r] == '0.0'):
+    fixme_t['sel'][r] = ''
 ascii.write(fixme_t, output_dd_FOR_DISK + '.tmp2', format='ipac', fast_writer=False, overwrite=True)
 
 # Make a version with the header which will be needed by dbIngest
@@ -275,6 +277,8 @@ for r in range(len(fixme_t)):
     fixme_t['description'][r] = ''
   if (fixme_t['units'][r] == '0.0'):
     fixme_t['units'][r] = ''
+  if (fixme_t['sel'][r] == '0.0'):
+    fixme_t['sel'][r] = 'n'
 ascii.write(fixme_t, output_dd_FOR_DB, format='ipac', fast_writer=False, overwrite=True)
 
 # Finish the SQL script
