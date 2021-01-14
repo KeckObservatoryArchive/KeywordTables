@@ -1,114 +1,114 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Air mass (1.41)	1.34436133	
-AMPID1	AMPID1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"amp Id number, readout sequence 0"	0	
-AMPID2	AMPID2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"amp Id number, readout sequence 1"	1	
-AMPID3	AMPID3	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"amp Id number, readout sequence 2"	2	
-AMPID4	AMPID4	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"amp Id number, readout sequence 3"	3	
-AMPMNUM	AMPMNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of detector readout mode	0	
+AMPID1	AMPID1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 0	0	
+AMPID2	AMPID2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 1	1	
+AMPID3	AMPID3	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 2	2	
+AMPID4	AMPID4	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 3	3	
+AMPMNUM	AMPMNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of detector readout mode	0	
 AMPMODE	AMPMODE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					name of detector readout mode	ALL	
-AMPNAME1	AMPNAME1	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					"amp name, readout sequence 0"	E	
-AMPNAME2	AMPNAME2	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					"amp name, readout sequence 1"	F	
-AMPNAME3	AMPNAME3	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					"amp name, readout sequence 2"	H	
-AMPNAME4	AMPNAME4	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					"amp name, readout sequence 3"	G	
-ASEC1	ASEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF AMPSEC [CCDpix], readout sequence 0"	"[1:2048,1:2056]"	
-ASEC2	ASEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF AMPSEC [CCDpix], readout sequence 1"	"[1:2048,1:2056]"	
-ASEC3	ASEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF AMPSEC [CCDpix], readout sequence 2"	"[1:2048,1:2056]"	
-ASEC4	ASEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF AMPSEC [CCDpix], readout sequence 3"	"[1:2048,1:2056]"	
+AMPNAME1	AMPNAME1	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					amp name, readout sequence 0	E	
+AMPNAME2	AMPNAME2	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					amp name, readout sequence 1	F	
+AMPNAME3	AMPNAME3	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					amp name, readout sequence 2	H	
+AMPNAME4	AMPNAME4	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					amp name, readout sequence 3	G	
+ASEC1	ASEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF AMPSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
+ASEC2	ASEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF AMPSEC [CCDpix], readout sequence 1	[1:2048,1:2056]	
+ASEC3	ASEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF AMPSEC [CCDpix], readout sequence 2	[1:2048,1:2056]	
+ASEC4	ASEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF AMPSEC [CCDpix], readout sequence 3	[1:2048,1:2056]	
 AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Guider active	yes	
 AUTFWHM	AUTFWHM	DCS	double	pixels	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Guider fwhm	0.934575	
-AUTOSHUT	AUTOSHUT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					automatic shutter operation	1	
+AUTOSHUT	AUTOSHUT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					automatic shutter operation	1	
 AUTXCENT	AUTXCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Guider x centroid	-56.8	
 AUTYCENT	AUTYCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Guider y centroid	-91.7	
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Azimuth	-20.47	
 BALPHA	BALPHA	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue grating incidence angle	15.6187191	
 BARTANG	BARTANG	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Articulation Stage Angle	22.6413898	
-BARTENC	BARTENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Articulation Stage Encoder Value	219800	
+BARTENC	BARTENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Articulation Stage Encoder Value	219800	
 BBETA	BBETA	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue grating diffraction angle	7.0226712	
 BCCDTMP	BCCDTMP	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue CCD Temperature	169.805	
-BCNTRL1	BCNTRL1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 1 Control Mode	1	
-BCNTRL2	BCNTRL2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 2 Control Mode	1	
+BCNTRL1	BCNTRL1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Control Mode	1	
+BCNTRL2	BCNTRL2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Control Mode	1	
 BCWAVE	BCWAVE	KCWI	double	angstroms	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Central Wavelength	4499.959961	
 BFILTNAM	BFILTNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	Blue Filter name	KBlue	Does this have an allowed list of values we should check?  [ACL]  No Check needed
-BFILTNUM	BFILTNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Filter number (0-5)	3	
-BFOCENC	BFOCENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Focus Stage Encoder Value	-1899	
-BFOCHM	BFOCHM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Focus Stage Homed? 0-no, 1-yes"	1	
+BFILTNUM	BFILTNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Filter number (0-5)	3	
+BFOCENC	BFOCENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Focus Stage Encoder Value	-1899	
+BFOCHM	BFOCHM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Focus Stage Homed? 0-no, 1-yes	1	
 BFOCMM	BFOCMM	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Focus Stage Position in mm	-1.899	
 BFPNAME	BFPNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Filter pusher position name	Mount	
-BFPPOS	BFPPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Filter pusher position num (0-2)	2	
+BFPPOS	BFPPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Filter pusher position num (0-2)	2	
 BFTNAME	BFTNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Filter transfer position name	Beam	
-BFTPOS	BFTPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Filter transfer position num (0-1)	1	
+BFTPOS	BFTPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Filter transfer position num (0-1)	1	
 BGPNAME	BGPNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grating pusher position name	Mount	
-BGPPOS	BGPPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Grating pusher position num (0-2)	2	
+BGPPOS	BGPPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating pusher position num (0-2)	2	
 BGPRESS	BGPRESS	KCWI	double	Torr	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Pressure Gauge Pressure	0.0001	
 BGRANGLE	BGRANGLE	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Grating Angle	28.6187191	
 BGRATNAM	BGRATNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	Blue Grating name	BL	
-BGRATNUM	BGRATNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Grating number (0-5)	2	
-BGRENC	BGRENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Grating rotator encoder position (counts)	-10993	
-BGROTNAM	BGROTNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grating rotator position name	28.619	"Floating point or string since the description says name?  Both, so use string"
-BGROTNUM	BGROTNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Grating rotator position num (0-2)	2	
+BGRATNUM	BGRATNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating number (0-5)	2	
+BGRENC	BGRENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating rotator encoder position (counts)	-10993	
+BGROTNAM	BGROTNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grating rotator position name	28.619	Floating point or string since the description says name?  Both, so use string
+BGROTNUM	BGROTNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating rotator position num (0-2)	2	
 BGTNAME	BGTNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grating transfer position name	Beam	
-BGTPOS	BGTPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Grating transfer position num (0-1)	1	
-BHTR1ST	BHTR1ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 1 Status	UNKNOWN	"If not unknown, will this a string or integer?  String (OK)"
-BHTR2ST	BHTR2ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 2 Status	UNKNOWN	"If not unknown, will this a string or integer?"
+BGTPOS	BGTPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating transfer position num (0-1)	1	
+BHTR1ST	BHTR1ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 1 Status	UNKNOWN	If not unknown, will this a string or integer?  String (OK)
+BHTR2ST	BHTR2ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 2 Status	UNKNOWN	If not unknown, will this a string or integer?
 BIASFN	BIASFN	KCWI-F	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Bias filename	0	
-BINNING	BINNING	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					"binning: serial/axis1, parallel/axis2"	"2,2"	
-BINPUT1	BINPUT1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 1 Input Sensor	7	
-BINPUT2	BINPUT2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 2 Input Sensor	1	
-BITPIX	BITPIX	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of bits per data pixel	16	
-BMXCURM1	BMXCURM1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 1 Max Current Mode	1	
-BMXCURM2	BMXCURM2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 2 Max Current Mode	1	
-BNASENC	BNASENC	KCWI	integer		"NUMBER(*,0)"	32	Y	Y	N	32d					Y					Blue NandS Mask Stage Encoder Value	90001	
+BINNING	BINNING	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					binning: serial/axis1, parallel/axis2	2,2	
+BINPUT1	BINPUT1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Input Sensor	7	
+BINPUT2	BINPUT2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Input Sensor	1	
+BITPIX	BITPIX	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of bits per data pixel	16	
+BMXCURM1	BMXCURM1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Max Current Mode	1	
+BMXCURM2	BMXCURM2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Max Current Mode	1	
+BNASENC	BNASENC	KCWI	integer		NUMBER(*,0)	32	Y	Y	N	32d					Y					Blue NandS Mask Stage Encoder Value	90001	
 BNASNAM	BNASNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue NandS Mask Stage Position Name	Open	
-BPUPEN1	BPUPEN1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 1 Power-up Enabled?	0	
-BPUPEN2	BPUPEN2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Heater 2 Power-up Enabled?	1	
+BPUPEN1	BPUPEN1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Power-up Enabled?	0	
+BPUPEN2	BPUPEN2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Power-up Enabled?	1	
 BPWAVE	BPWAVE	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Peak Wavelength (Ang)	4499.85791	
-BRANGE1	BRANGE1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Heater 1 Power Range (0-Off, 1-Lo, 2-Md)"	0	
-BRANGE2	BRANGE2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Heater 2 Power Range (0-Off, 1-Lo, 2-Md)"	2	
-BRESIST1	BRESIST1	KCWI	integer	Ohms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Heater 1 Resistance (1-25, 2-50)"	1	
-BRESIST2	BRESIST2	KCWI	integer	Ohms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Heater 2 Resistance (1-25, 2-50)"	1	
-BSCALE	BSCALE	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					default scaling factor	1	
-BSEC1	BSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF BIASSEC [FITSpix], readout sequence 0"	"[1054:1150,1:1028]"	
-BSEC2	BSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF BIASSEC [FITSpix], readout sequence 1"	"[1247:1151,1:1028]"	
-BSEC3	BSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF BIASSEC [FITSpix], readout sequence 2"	"[1054:1150,2200:1173]"	
-BSEC4	BSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF BIASSEC [FITSpix], readout sequence 4"	"[1247:1151,2200:1173]"	
+BRANGE1	BRANGE1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Power Range (0-Off, 1-Lo, 2-Md)	0	
+BRANGE2	BRANGE2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Power Range (0-Off, 1-Lo, 2-Md)	2	
+BRESIST1	BRESIST1	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Resistance (1-25, 2-50)	1	
+BRESIST2	BRESIST2	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 2 Resistance (1-25, 2-50)	1	
+BSCALE	BSCALE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					default scaling factor	1	
+BSEC1	BSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF BIASSEC [FITSpix], readout sequence 0	[1054:1150,1:1028]	
+BSEC2	BSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF BIASSEC [FITSpix], readout sequence 1	[1247:1151,1:1028]	
+BSEC3	BSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF BIASSEC [FITSpix], readout sequence 2	[1054:1150,2200:1173]	
+BSEC4	BSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF BIASSEC [FITSpix], readout sequence 4	[1247:1151,2200:1173]	
 BTMPHTP1	BTMPHTP1	KCWI	double	%	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Heater 1 Output	0	Whole number or a floating point percentage?  Float
 BTMPHTP2	BTMPHTP2	KCWI	double	%	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Heater 2 Output	0	Whole number or a floating point percentage?
 BTRGTMP1	BTRGTMP1	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Heater 2 setpoint	160	
 BTRGTMP2	BTRGTMP2	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Heater 2 setpoint	150	
 BVCURR	BVCURR	KCWI	double	amps	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Vac-Ion Current	5.40E-06	
-BVHVON	BVHVON	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Blue Vac-Ion HV on? 0-no, 1-yes"	1	
+BVHVON	BVHVON	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Vac-Ion HV on? 0-no, 1-yes	1	
 BVPRESS	BVPRESS	KCWI	double	Torr	FLOAT(126)	16	Y	Y	N	18.5f					Y					Blue Vac-Ion Pressure	1.30E-07	
-BVVOLT	BVVOLT	KCWI	integer	volts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Blue Vac-Ion Voltage	5000	
+BVVOLT	BVVOLT	KCWI	integer	volts	NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Vac-Ion Voltage	5000	
 BZERO	BZERO	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					offset data range to that of unsigned short	32768	
 CALHANG	CALHANG	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					CAL Hex Pupil angle	0.017591	
 CALHNAM	CALHNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Hex Pupil position name	Flat	
-CALHPOS	CALHPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Hex Pupil position number (0-3)	1	
+CALHPOS	CALHPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Hex Pupil position number (0-3)	1	
 CALHSPD	CALHSPD	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					CAL Hex Pupil rotation speed	0	
-CALHSTAT	CALHSTAT	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"CAL Hex Pupil status (Moving, OK)"	OK	
+CALHSTAT	CALHSTAT	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Hex Pupil status (Moving, OK)	OK	
 CALLANG	CALLANG	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					CAL Linear Polarizer angle	0.035188	
-CALLENC	CALLENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Linear Polarizer encoder position (counts)	5	
+CALLENC	CALLENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Linear Polarizer encoder position (counts)	5	
 CALLNAM	CALLNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Linear Polarizer position name	Home	
-CALLPOS	CALLPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Linear Polarizer position number (0-4)	0	
-CALMENC	CALMENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Mirror encoder position (counts)	486384	
+CALLPOS	CALLPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Linear Polarizer position number (0-4)	0	
+CALMENC	CALMENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Mirror encoder position (counts)	486384	
 CALMNAM	CALMNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Mirror position name	Mirror	
-CALMOFF	CALMOFF	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Mirror offset	0	
-CALMPOS	CALMPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Mirror position number (0-2)	1	
-CALMZERO	CALMZERO	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Mirror zero	0	
-CALPENC	CALPENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Pupil encoder position (counts)	12502	
+CALMOFF	CALMOFF	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Mirror offset	0	
+CALMPOS	CALMPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Mirror position number (0-2)	1	
+CALMZERO	CALMZERO	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Mirror zero	0	
+CALPENC	CALPENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Pupil encoder position (counts)	12502	
 CALPNAM	CALPNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Pupil Lens position name	Sky	
-CALPPOS	CALPPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Pupil Lens position number (0-2)	0	
+CALPPOS	CALPPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Pupil Lens position number (0-2)	0	
 CALTYPE	CALTYPE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Type of image according to CAL server	cflat	
-CALXENC	CALXENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL X encoder position (counts)	279865	
+CALXENC	CALXENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL X encoder position (counts)	279865	
 CALXNAM	CALXNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL X axis position	FlatA	
-CALXOFF	CALXOFF	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL X offset	0	
-CALXPOS	CALXPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL X axis position number (0-13)	6	
-CALXZERO	CALXZERO	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL X zero	0	
-CALYENC	CALYENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Y encoder position (counts)	123498	
+CALXOFF	CALXOFF	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL X offset	0	
+CALXPOS	CALXPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL X axis position number (0-13)	6	
+CALXZERO	CALXZERO	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL X zero	0	
+CALYENC	CALYENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Y encoder position (counts)	123498	
 CALYNAM	CALYNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Y axis position	FlatA	
-CALYOFF	CALYOFF	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Y offset	0	
-CALYPOS	CALYPOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Y axis position number (0-13)	6	
-CALYZERO	CALYZERO	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Y zero	0	
-CAMERA	CAMERA	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	32s					Y	Y			Y	"Camera chip: FPC for imaging (KF), BLUE (KB) or RED (KR) for spectroscopy"	BLUE	
+CALYOFF	CALYOFF	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Y offset	0	
+CALYPOS	CALYPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Y axis position number (0-13)	6	
+CALYZERO	CALYZERO	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Y zero	0	
+CAMERA	CAMERA	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	32s					Y	Y			Y	Camera chip: FPC for imaging (KF), BLUE (KB) or RED (KR) for spectroscopy	BLUE	
 CAMIP	CAMIP	KCWI-F	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					Camera IP number	192.168.1.30	
 CAMMODEL	CAMMODEL	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Camera model	GT3300 (02-2622A)	
 CAMSN	CAMSN	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Camera serial number	02-2622A-07106	
@@ -118,8 +118,8 @@ CCDGAIN1	CCDGAIN1	KCWI-F	double	e/DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					Gain LL
 CCDGAIN2	CCDGAIN2	KCWI-F	double	e/DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					Gain LR	1.238	
 CCDGAIN3	CCDGAIN3	KCWI-F	double	e/DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					Gain UL	1.255	
 CCDGAIN4	CCDGAIN4	KCWI-F	double	e/DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					Gain UR	1.237	
-CCDMODE	CCDMODE	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CCD speed mode (slow-0 fast-1)	1	
-CCDSPEED	CCDSPEED	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CCD readout speed	1	
+CCDMODE	CCDMODE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD speed mode (slow-0 fast-1)	1	
+CCDSPEED	CCDSPEED	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD readout speed	1	
 CCDSUM	CCDSUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					IRAF ccdsum	2 2	
 CD1_1	CD1_1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
 CD1_2	CD1_2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
@@ -130,35 +130,35 @@ CRPIX1	CRPIX1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel
 CRPIX2	CRPIX2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel		
 CRVAL1	CRVAL1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel value		
 CRVAL2	CRVAL2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel value		
-CSEC1	CSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF CCDSEC [CCDpix], readout sequence 0"	"[1:2048,1:2056]"	
-CSEC2	CSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF CCDSEC [CCDpix], readout sequence 1"	"[4096:2049,1:2056]"	
-CSEC3	CSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF CCDSEC [CCDpix], readout sequence 2"	"[1:2048,4112:2057]"	
-CSEC4	CSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF CCDSEC [CCDpix], readout sequence 3"	"[4096:2049,4112:2057]"	
+CSEC1	CSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
+CSEC2	CSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 1	[4096:2049,1:2056]	
+CSEC3	CSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 2	[1:2048,4112:2057]	
+CSEC4	CSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 3	[4096:2049,4112:2057]	
 CTYPE1	CTYPE1	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Coordinate type and projection (RA)		
 CTYPE2	CTYPE2	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Coordinate type and projection (DEC)		
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Current instrument	KCWI	
 DATASUM	DATASUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					data unit checksum updated 2016-10-13T20:33:41	1985548719	
-DATE	DDATE	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
+DATE	DATE_UT	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
 DATE-BEG	DATE_BEG	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s	Y				Y					exposure begin	2016-11-02T12:47:05.068	
 DATE-END	DATE_END	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s	Y				Y					exposure end	2016-11-02T12:47:05.468	
-DATE-OBS	DATE_OBS	DCS	char		VARCHAR2(12 BYTE)	12	N	Y	Y	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	"This should be in YYYY-MM-DD format, right?  [ACL]  Correct"
+DATE-OBS	DATE_OBS	DCS	char		DATE	12	N	Y	Y	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	This should be in YYYY-MM-DD format, right?  [ACL]  Correct
 DATEPCLR	DATEPCLR	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					most recent erase	2016-11-02T12:47:05.068	
 DATEREND	DATEREND	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					readout end	2016-11-02T12:47:12.365	
-DATLEVEL	DATLEVEL	KOA	integer		"NUMBER(*,0)"	16	N	Y	N	16d					Y					Data reduction level		
+DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	16	N	Y	N	16d					Y					Data reduction level		
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Diff Dec rate	0	
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s	Y				Y					DCS Dec	+52:49:25.5	Confirm that this is in sexagesimal and not decimal? [ACL]  Yes
 DECBASE	DECBASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Dec base	+52:49:12.1	
 DECOFF	DECOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Dec offset	13.3	
-DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"CCD pixel scale, dispersion"		
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					CCD pixel scale, dispersion		
 DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Dome azimuth	290.2737915	
 DOMESTST	DOMESTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Dome status string	TRACK	
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DQA version number		
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Diff RA rate	0	
-DSEC1	DSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF DATASEC [FITSpix], readout sequence 0"	"[30:1053,1:1028]"	
-DSEC2	DSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF DATASEC [FITSpix], readout sequence 1"	"[2271:1248,1:1028]"	
-DSEC3	DSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF DATASEC [FITSpix], readout sequence 3"	"[30:1053,2200:1173]"	
-DSEC4	DSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					"IRAF DATASEC [FITSpix], readout sequence 4"	"[2271:1248,2200:1173]"	
+DSEC1	DSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF DATASEC [FITSpix], readout sequence 0	[30:1053,1:1028]	
+DSEC2	DSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF DATASEC [FITSpix], readout sequence 1	[2271:1248,1:1028]	
+DSEC3	DSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF DATASEC [FITSpix], readout sequence 3	[30:1053,2200:1173]	
+DSEC4	DSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF DATASEC [FITSpix], readout sequence 4	[2271:1248,2200:1173]	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Elevation	53.68	
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y	18.5f		0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f		1855	2100		Y	Y			Y	Telescope equinox	2000	
@@ -168,17 +168,17 @@ FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Filename
 FIILESIZE_MB	FIILESIZE_MB	KOA	double	MB	FLOAT(126 BYTE)	16	N	Y	N	18.5f					Y							
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 2	off	
-FRAMENO	FRAMENO	KCWI	integer		"NUMBER(*,0)"	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame number	1919	"Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't."
+FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
 GAIN1	GAIN1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 0	0.172	
 GAIN2	GAIN2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 1	0.173	
 GAIN3	GAIN3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 2	0.168	
 GAIN4	GAIN4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 3	0.174	
-GAINMUL	GAINMUL	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"gain multiplier (1,2,5,10)"	10	
+GAINMUL	GAINMUL	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					gain multiplier (1,2,5,10)	10	
 GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f					Y					FWHM of guide star		
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Guiding status	TRUE	
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					UT of GUIDFWHM value		
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Telescope hour angle	+03:01:18.99	
-HATNUM	HATNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Instrument hatch position number (0,1)"	0	
+HATNUM	HATNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Instrument hatch position number (0,1)	0	
 HATPOS	HATPOS	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Instrument hatch position name	Closed	
 HEART_01	HEART_01	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					dcs2.UTC		
 HEART_02	HEART_02	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					kbds.UPTIME		
@@ -193,50 +193,50 @@ HEART_10	HEART_10	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					kp2s.UPTIM
 HEART_11	HEART_11	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					kp3s.UPTIME		
 HEART_12	HEART_12	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					kt1s.UPTIME		
 HEART_13	HEART_13	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					kt2s.UPTIME		
-IDLECLOK	IDLECLOK	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					idle clocking	1	Ineger or floating point?  Integer
-IFUENC	IFUENC	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					IFU encoder position (counts)	440394	
+IDLECLOK	IDLECLOK	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					idle clocking	1	Ineger or floating point?  Integer
+IFUENC	IFUENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					IFU encoder position (counts)	440394	
 IFUNAM	IFUNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	IFU position name	Large	
-IFUNUM	IFUNUM	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					IFU position number (0-5)	1	
-IFUOFF	IFUOFF	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					IFU position offset	0	
-IFUZERO	IFUZERO	KCWI-F	integer	counts	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					IFU position zero	0	
+IFUNUM	IFUNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					IFU position number (0-5)	1	
+IFUOFF	IFUOFF	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					IFU position offset	0	
+IFUZERO	IFUZERO	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N	16d					Y					IFU position zero	0	
 IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging mean		
 IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging median		
 IMAGESD	IMAGESD	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Imaging standard deviation		
-IMGNUM	IMGNUM	KCWI-F	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Image number	1	
+IMGNUM	IMGNUM	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Image number	1	
 IMTYPE	IMTYPE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Image type		
-INSEQ	INSEQ	KCWI-F	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Number in sequence	1	
+INSEQ	INSEQ	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Number in sequence	1	
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y	68s					Y	Y			Y	Instrument name	KCWI	
 INTGAIN	INTGAIN	KCWI	double	e-DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					intrinsic gain	1.45	
-INTSPEED	INTSPEED	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CCD integrator speed	1	
-KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s	Y				Y	Y			Y	KOA data filename	"KB.20170208_00008.fits, KR.20170208_00009.fits"	
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				"object, bias, dark, arclamp, flatlamp, domeflat, twilightflat, contbars"	Y	Y			Y	KOA image type	object	
+INTSPEED	INTSPEED	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD integrator speed	1	
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s	Y				Y	Y			Y	KOA data filename	KB.20170208_00008.fits, KR.20170208_00009.fits	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				object, bias, dark, arclamp, flatlamp, domeflat, twilightflat, contbars	Y	Y			Y	KOA image type	object	
 LMP0NAM	LMP0NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Lamp 0 name	FeAr	
-LMP0ONT	LMP0ONT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Lamp 0 ON duration (s)	9516	
-LMP0SHST	LMP0SHST	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 0 shutter (0-closed, 1-open)"	0	
-LMP0STAT	LMP0STAT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 0 status (0-off, 1-on)"	0	
+LMP0ONT	LMP0ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 0 ON duration (s)	9516	
+LMP0SHST	LMP0SHST	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 0 shutter (0-closed, 1-open)	0	
+LMP0STAT	LMP0STAT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 0 status (0-off, 1-on)	0	
 LMP1NAM	LMP1NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Lamp 1 name	ThAr	
-LMP1ONT	LMP1ONT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Lamp 1 ON duration (s)	31637	
-LMP1SHST	LMP1SHST	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 1 shutter (0-closed, 1-open)"	0	
-LMP1STAT	LMP1STAT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 1 status (0-off, 1-on)"	0	
+LMP1ONT	LMP1ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 1 ON duration (s)	31637	
+LMP1SHST	LMP1SHST	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 1 shutter (0-closed, 1-open)	0	
+LMP1STAT	LMP1STAT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 1 status (0-off, 1-on)	0	
 LMP2NAM	LMP2NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Lamp 2 name	Aux	
-LMP2ONT	LMP2ONT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Lamp 2 ON duration (s)	0	
-LMP2SHST	LMP2SHST	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 2 shutter (0-closed, 1-open)"	0	
-LMP2STAT	LMP2STAT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 2 status (0-off, 1-on)"	0	
+LMP2ONT	LMP2ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 2 ON duration (s)	0	
+LMP2SHST	LMP2SHST	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 2 shutter (0-closed, 1-open)	0	
+LMP2STAT	LMP2STAT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 2 status (0-off, 1-on)	0	
 LMP3NAM	LMP3NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Lamp 3 name	Continuum A	
-LMP3ONT	LMP3ONT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					CAL Lamp 3 ON duration (s)	28776	
-LMP3STAT	LMP3STAT	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"CAL Lamp 3 status (0-off, 1-on)"	1	
+LMP3ONT	LMP3ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 3 ON duration (s)	28776	
+LMP3STAT	LMP3STAT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 3 status (0-off, 1-on)	1	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Local sidereal time	39:51.6	
 MJD	MJD	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Modified Julian day	57800.67666	
 NAMPSXY	NAMPSXY	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					active video inputs along axis1 axis2	2 2	
-NAXIS	NAXIS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of data axes	2	
-NAXIS1	NAXIS1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					length of data axis 1	2300	
-NAXIS2	NAXIS2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					length of data axis 2	2200	
-NPIXSAT	NPIXSAT	KOA	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Number of saturated pixels		
-NSHFDN	NSHFDN	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of shuffle downs	0	
-NSHFUP	NSHFUP	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of shuffle ups	0	
-NUMCLOS	NUMCLOS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of shutter closes	1	
-NUMOPEN	NUMOPEN	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of shutter opens	1	
-NVIDINP	NVIDINP	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					number of active video inputs	4	
+NAXIS	NAXIS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of data axes	2	
+NAXIS1	NAXIS1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					length of data axis 1	2300	
+NAXIS2	NAXIS2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					length of data axis 2	2200	
+NPIXSAT	NPIXSAT	KOA	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Number of saturated pixels		
+NSHFDN	NSHFDN	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of shuffle downs	0	
+NSHFUP	NSHFUP	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of shuffle ups	0	
+NUMCLOS	NUMCLOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of shutter closes	1	
+NUMOPEN	NUMOPEN	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of shutter opens	1	
+NVIDINP	NVIDINP	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					number of active video inputs	4	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Observing assistant		
 OBJECT	OBJECT	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y			Y	Object name	centering	
 OBSERVER	OBSERVER	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Observer name	matmat	
@@ -246,77 +246,77 @@ OUTFILE	OUTFILE	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					filename pre
 PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Parallactic angle (deg)	147.23	
 PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Parallactic angle telescope	0	
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Point origin name	SLIT	
-PPRECLR	PPRECLR	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					parallel pre-clear (erase)	1	Integer or a string?  Integer
+PPRECLR	PPRECLR	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					parallel pre-clear (erase)	1	Integer or a string?  Integer
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	WMKO program ID	H275	
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program Institution	UH	
 PROGNAME	PROGNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					WMKO program ID		
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program PI	McConnell	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
-PROPINT	PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y	16d		0			Y	Y			Y	Proprietary period		
-PWNAMEA1	PWNAMEA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 1 name"	FPCam	
-PWNAMEA2	PWNAMEA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 2 name"	Magiq	
-PWNAMEA3	PWNAMEA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 3 name"	Glycol	
-PWNAMEA4	PWNAMEA4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 4 name"	Lkshore1	
-PWNAMEA5	PWNAMEA5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 5 name"	BPGauge	
-PWNAMEA6	PWNAMEA6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 6 name"	BVacIon	
-PWNAMEA7	PWNAMEA7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 7 name"	Hatch	
-PWNAMEA8	PWNAMEA8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank A, Port 8 name"	BShutter	
-PWNAMEB1	PWNAMEB1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 1 name"	HeatExchanger	
-PWNAMEB2	PWNAMEB2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 2 name"	BDet	
-PWNAMEB3	PWNAMEB3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 3 name"	Unused	
-PWNAMEB4	PWNAMEB4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 4 name"	Lkshore2	
-PWNAMEB5	PWNAMEB5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 5 name"	Lantrnx1	
-PWNAMEB6	PWNAMEB6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 6 name"	Unused	
-PWNAMEB7	PWNAMEB7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 7 name"	PB2:BEX;BMS	
-PWNAMEB8	PWNAMEB8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank B, Port 8 name"	Unused	
-PWNAMEC1	PWNAMEC1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 1 name"	CalLamps	
-PWNAMEC2	PWNAMEC2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 2 name"	Unused	
-PWNAMEC3	PWNAMEC3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 3 name"	Unused	
-PWNAMEC4	PWNAMEC4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 4 name"	Unused	
-PWNAMEC5	PWNAMEC5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 5 name"	Unused	
-PWNAMEC6	PWNAMEC6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 6 name"	Unused	
-PWNAMEC7	PWNAMEC7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 7 name"	Unused	
-PWNAMEC8	PWNAMEC8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Power Bank C, Port 8 name"	PB1:CAL;ROT	
-PWSTATA1	PWSTATA1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 1 on? 0-no, 1-yes"	0	
-PWSTATA2	PWSTATA2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 2 on? 0-no, 1-yes"	0	
-PWSTATA3	PWSTATA3	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 3 on? 0-no, 1-yes"	0	
-PWSTATA4	PWSTATA4	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 4 on? 0-no, 1-yes"	1	
-PWSTATA5	PWSTATA5	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 5 on? 0-no, 1-yes"	1	
-PWSTATA6	PWSTATA6	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 6 on? 0-no, 1-yes"	1	
-PWSTATA7	PWSTATA7	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 7 on? 0-no, 1-yes"	1	
-PWSTATA8	PWSTATA8	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank A, Port 8 on? 0-no, 1-yes"	1	
-PWSTATB1	PWSTATB1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 1 on? 0-no, 1-yes"	1	
-PWSTATB2	PWSTATB2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 2 on? 0-no, 1-yes"	1	
-PWSTATB3	PWSTATB3	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 3 on? 0-no, 1-yes"	0	
-PWSTATB4	PWSTATB4	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 4 on? 0-no, 1-yes"	1	
-PWSTATB5	PWSTATB5	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 5 on? 0-no, 1-yes"	1	
-PWSTATB6	PWSTATB6	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 6 on? 0-no, 1-yes"	0	
-PWSTATB7	PWSTATB7	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 7 on? 0-no, 1-yes"	1	
-PWSTATB8	PWSTATB8	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank B, Port 8 on? 0-no, 1-yes"	0	
-PWSTATC1	PWSTATC1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 1 on? 0-no, 1-yes"	1	
-PWSTATC2	PWSTATC2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 2 on? 0-no, 1-yes"	0	
-PWSTATC3	PWSTATC3	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 3 on? 0-no, 1-yes"	0	
-PWSTATC4	PWSTATC4	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 4 on? 0-no, 1-yes"	0	
-PWSTATC5	PWSTATC5	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 5 on? 0-no, 1-yes"	0	
-PWSTATC6	PWSTATC6	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 6 on? 0-no, 1-yes"	0	
-PWSTATC7	PWSTATC7	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 7 on? 0-no, 1-yes"	0	
-PWSTATC8	PWSTATC8	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Power Bank C, Port 8 on? 0-no, 1-yes"	1	
+PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	16d		0			Y	Y			Y	Proprietary period		
+PWNAMEA1	PWNAMEA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 1 name	FPCam	
+PWNAMEA2	PWNAMEA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 2 name	Magiq	
+PWNAMEA3	PWNAMEA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 3 name	Glycol	
+PWNAMEA4	PWNAMEA4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 4 name	Lkshore1	
+PWNAMEA5	PWNAMEA5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 5 name	BPGauge	
+PWNAMEA6	PWNAMEA6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 6 name	BVacIon	
+PWNAMEA7	PWNAMEA7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 7 name	Hatch	
+PWNAMEA8	PWNAMEA8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 8 name	BShutter	
+PWNAMEB1	PWNAMEB1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 1 name	HeatExchanger	
+PWNAMEB2	PWNAMEB2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 2 name	BDet	
+PWNAMEB3	PWNAMEB3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 3 name	Unused	
+PWNAMEB4	PWNAMEB4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 4 name	Lkshore2	
+PWNAMEB5	PWNAMEB5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 5 name	Lantrnx1	
+PWNAMEB6	PWNAMEB6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 6 name	Unused	
+PWNAMEB7	PWNAMEB7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 7 name	PB2:BEX;BMS	
+PWNAMEB8	PWNAMEB8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank B, Port 8 name	Unused	
+PWNAMEC1	PWNAMEC1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 1 name	CalLamps	
+PWNAMEC2	PWNAMEC2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 2 name	Unused	
+PWNAMEC3	PWNAMEC3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 3 name	Unused	
+PWNAMEC4	PWNAMEC4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 4 name	Unused	
+PWNAMEC5	PWNAMEC5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 5 name	Unused	
+PWNAMEC6	PWNAMEC6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 6 name	Unused	
+PWNAMEC7	PWNAMEC7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 7 name	Unused	
+PWNAMEC8	PWNAMEC8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank C, Port 8 name	PB1:CAL;ROT	
+PWSTATA1	PWSTATA1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 1 on? 0-no, 1-yes	0	
+PWSTATA2	PWSTATA2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 2 on? 0-no, 1-yes	0	
+PWSTATA3	PWSTATA3	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 3 on? 0-no, 1-yes	0	
+PWSTATA4	PWSTATA4	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 4 on? 0-no, 1-yes	1	
+PWSTATA5	PWSTATA5	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 5 on? 0-no, 1-yes	1	
+PWSTATA6	PWSTATA6	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 6 on? 0-no, 1-yes	1	
+PWSTATA7	PWSTATA7	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 7 on? 0-no, 1-yes	1	
+PWSTATA8	PWSTATA8	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank A, Port 8 on? 0-no, 1-yes	1	
+PWSTATB1	PWSTATB1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 1 on? 0-no, 1-yes	1	
+PWSTATB2	PWSTATB2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 2 on? 0-no, 1-yes	1	
+PWSTATB3	PWSTATB3	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 3 on? 0-no, 1-yes	0	
+PWSTATB4	PWSTATB4	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 4 on? 0-no, 1-yes	1	
+PWSTATB5	PWSTATB5	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 5 on? 0-no, 1-yes	1	
+PWSTATB6	PWSTATB6	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 6 on? 0-no, 1-yes	0	
+PWSTATB7	PWSTATB7	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 7 on? 0-no, 1-yes	1	
+PWSTATB8	PWSTATB8	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank B, Port 8 on? 0-no, 1-yes	0	
+PWSTATC1	PWSTATC1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 1 on? 0-no, 1-yes	1	
+PWSTATC2	PWSTATC2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 2 on? 0-no, 1-yes	0	
+PWSTATC3	PWSTATC3	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 3 on? 0-no, 1-yes	0	
+PWSTATC4	PWSTATC4	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 4 on? 0-no, 1-yes	0	
+PWSTATC5	PWSTATC5	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 5 on? 0-no, 1-yes	0	
+PWSTATC6	PWSTATC6	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 6 on? 0-no, 1-yes	0	
+PWSTATC7	PWSTATC7	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 7 on? 0-no, 1-yes	0	
+PWSTATC8	PWSTATC8	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Power Bank C, Port 8 on? 0-no, 1-yes	1	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s	Y				Y					DCS RA	19:15.0	
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS RA base	19:19.8	
 RADECSYS	RADECSYS	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					WCS coordinate system		
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS RA offset	-73.1	
-RCNTRL1	RCNTRL1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 1 Control Mode	1	
-RCNTRL2	RCNTRL2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 2 Control Mode	1	
+RCNTRL1	RCNTRL1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Control Mode	1	
+RCNTRL2	RCNTRL2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Control Mode	1	
 RDNOISE1	RDNOISE1	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N	18.5f					Y					Read Noise LL	50	
 RDNOISE2	RDNOISE2	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N	18.5f					Y					Read Noise LR	48.5	
 RDNOISE3	RDNOISE3	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N	18.5f					Y					Read Noise UL	49.7	
 RDNOISE4	RDNOISE4	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N	18.5f					Y					Read Noise UR	49.1	
-RHTR1ST	RHTR1ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Red Heater 1 Status	UNKNOWN	"If not unknown, will this int or string? All values have been UNKNOWN so far.  Assume OK is good value."
-RHTR2ST	RHTR2ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Red Heater 2 Status	UNKNOWN	"If not unknown, will this int or string?"
-RINPUT1	RINPUT1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 1 Input Sensor	1	
-RINPUT2	RINPUT2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 2 Input Sensor	2	
-RMXCURM1	RMXCURM1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 1 Max Current Mode	4	
-RMXCURM2	RMXCURM2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 2 Max Current Mode	3	
+RHTR1ST	RHTR1ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Red Heater 1 Status	UNKNOWN	If not unknown, will this int or string? All values have been UNKNOWN so far.  Assume OK is good value.
+RHTR2ST	RHTR2ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Red Heater 2 Status	UNKNOWN	If not unknown, will this int or string?
+RINPUT1	RINPUT1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Input Sensor	1	
+RINPUT2	RINPUT2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Input Sensor	2	
+RMXCURM1	RMXCURM1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Max Current Mode	4	
+RMXCURM2	RMXCURM2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Max Current Mode	3	
 ROTBASE	ROTBASE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Rotator base	-1.96	
 ROTDEST	ROTDEST	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Rotator user destination	182.7	
 ROTDETS1	ROTDETS1	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Rotator time stamp 1	14:22.9	
@@ -330,12 +330,12 @@ ROTPPOSN	ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Rot
 ROTREFAN	ROTREFAN	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Rotator reference angle (deg)		
 ROTSEL	ROTSEL	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					DCS Selected rotator	none	
 ROTSTST	ROTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Rotator state string	NSPEC	
-RPUPEN1	RPUPEN1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 1 Power-up Enabled?	0	
-RPUPEN2	RPUPEN2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Red Heater 2 Power-up Enabled?	0	
-RRANGE1	RRANGE1	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Red Heater 1 Power Range (0-Off, 1-Lo, 2-Md)"	0	
-RRANGE2	RRANGE2	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Red Heater 2 Power Range (0-Off, 1-Lo, 2-Md)"	0	
-RRESIST1	RRESIST1	KCWI	integer	Ohms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Red Heater 1 Resistance (1-25, 2-50)"	1	
-RRESIST2	RRESIST2	KCWI	integer	Ohms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					"Red Heater 2 Resistance (1-25, 2-50)"	1	
+RPUPEN1	RPUPEN1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Power-up Enabled?	0	
+RPUPEN2	RPUPEN2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Power-up Enabled?	0	
+RRANGE1	RRANGE1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Power Range (0-Off, 1-Lo, 2-Md)	0	
+RRANGE2	RRANGE2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Power Range (0-Off, 1-Lo, 2-Md)	0	
+RRESIST1	RRESIST1	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 1 Resistance (1-25, 2-50)	1	
+RRESIST2	RRESIST2	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N	16d					Y					Red Heater 2 Resistance (1-25, 2-50)	1	
 RTMPHTP1	RTMPHTP1	KCWI	double	%	FLOAT(126)	16	Y	Y	N	18.5f					Y					Red Heater 1 Output	0	Whole number or a floating point percentage?  Float
 RTMPHTP2	RTMPHTP2	KCWI	double	%	FLOAT(126)	16	Y	Y	N	18.5f					Y					Red Heater 2 Output	0	Whole number or a floating point percentage?
 RTRGTMP1	RTRGTMP1	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N	18.5f					Y					Red Heater 2 setpoint	226.85	
@@ -346,15 +346,15 @@ SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Secondary
 SECTHETX	SECTHETX	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Secondary theta x	-43.4	
 SECTHETY	SECTHETY	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Secondary theta y	-219.7	
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y					Observing semester	2015A	
-SEQUENCE	SEQUENCE	KCWI-F	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Command sequence	1	
-SHUFROWS	SHUFROWS	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					[ccdrows] number of rows in shuffle	685	
+SEQUENCE	SEQUENCE	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Command sequence	1	
+SHUFROWS	SHUFROWS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					[ccdrows] number of rows in shuffle	685	
 SIG2NOIS	SIG2NOIS	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Signal to noise at center of CCD		
 SIMPLE	SIMPLE	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					file does conform to FITS standard	TRUE	
 SKYPA	SKYPA	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					ROS Sky PA		
 SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f					Y					Slit length on sky		
 SLITWIDT	SLITWIDT	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Slit width on sky		
-SPATSCAL	SPATSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"CCD pixel scal, spatial"		
-SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Nominal spectral resolution		"Are there limits or allowed values for this??? [ACL]  There will be discrete value, but no need to verify."
+SPATSCAL	SPATSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					CCD pixel scal, spatial		
+SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Nominal spectral resolution		Are there limits or allowed values for this??? [ACL]  There will be discrete value, but no need to verify.
 STACKING	STACKING	KCWI-F	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					Stacking status	F	
 STATEID	STATEID	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y	Y		Y	State ID		
 STATENAM	STATENAM	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y			Y	User defined state name		
@@ -367,48 +367,48 @@ TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Telescope focu
 TERTDEST	TERTDEST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Tertiary user destination	rnas	
 TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Tertiary user position	rnas	
 TERTSTST	TERTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Tertiary status string	LOCK	
-TMPA1	TMPA1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 1 value"	169.805	
-TMPA2	TMPA2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 2 value"	288.517	
-TMPA3	TMPA3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 3 value"	293.362	
-TMPA4	TMPA4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 4 value"	167.717	
-TMPA5	TMPA5	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 5 value"	148.584	
-TMPA6	TMPA6	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 6 value"	107.677	
-TMPA7	TMPA7	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 7 value"	290.505	
-TMPA8	TMPA8	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank A, Sensor 8 value"	290.992	
-TMPB1	TMPB1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 1 value"	287.292	
-TMPB2	TMPB2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 2 value"	289.68	
-TMPB3	TMPB3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 3 value"	290.888	
-TMPB4	TMPB4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 4 value"	286.921	
-TMPB5	TMPB5	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 5 value"	292.716	
-TMPB6	TMPB6	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 6 value"	291.022	
-TMPB7	TMPB7	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 7 value"	300.41	
-TMPB8	TMPB8	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					"Temperature Bank B, Sensor 8 value"	286.923	
-TMPLOCA1	TMPLOCA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 1 name"	Blue CCD A	
-TMPLOCA2	TMPLOCA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 2 name"	Blue Cam B	
-TMPLOCA3	TMPLOCA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 3 name"	Blue Shutter	
-TMPLOCA4	TMPLOCA4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 4 name"	Blue InvPl	
-TMPLOCA5	TMPLOCA5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 5 name"	Blue Strap Bot	
-TMPLOCA6	TMPLOCA6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 6 name"	Blue Strap Top	
-TMPLOCA7	TMPLOCA7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 7 name"	Blue Case	
-TMPLOCA8	TMPLOCA8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank A, Sensor 8 name"	Bench Bot	
-TMPLOCB1	TMPLOCB1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 1 name"	Bench Top A	
-TMPLOCB2	TMPLOCB2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 2 name"	IFU Base B	
-TMPLOCB3	TMPLOCB3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 3 name"	Cab rear	
-TMPLOCB4	TMPLOCB4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 4 name"	KMG Weld	
-TMPLOCB5	TMPLOCB5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 5 name"	Cal Base	
-TMPLOCB6	TMPLOCB6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 6 name"	Collim	
-TMPLOCB7	TMPLOCB7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 7 name"	Cab int	
-TMPLOCB8	TMPLOCB8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					"Temperature Bank B, Sensor 8 name"	Blue Fill	
+TMPA1	TMPA1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 1 value	169.805	
+TMPA2	TMPA2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 2 value	288.517	
+TMPA3	TMPA3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 3 value	293.362	
+TMPA4	TMPA4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 4 value	167.717	
+TMPA5	TMPA5	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 5 value	148.584	
+TMPA6	TMPA6	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 6 value	107.677	
+TMPA7	TMPA7	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 7 value	290.505	
+TMPA8	TMPA8	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank A, Sensor 8 value	290.992	
+TMPB1	TMPB1	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 1 value	287.292	
+TMPB2	TMPB2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 2 value	289.68	
+TMPB3	TMPB3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 3 value	290.888	
+TMPB4	TMPB4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 4 value	286.921	
+TMPB5	TMPB5	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 5 value	292.716	
+TMPB6	TMPB6	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 6 value	291.022	
+TMPB7	TMPB7	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 7 value	300.41	
+TMPB8	TMPB8	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Temperature Bank B, Sensor 8 value	286.923	
+TMPLOCA1	TMPLOCA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 1 name	Blue CCD A	
+TMPLOCA2	TMPLOCA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 2 name	Blue Cam B	
+TMPLOCA3	TMPLOCA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 3 name	Blue Shutter	
+TMPLOCA4	TMPLOCA4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 4 name	Blue InvPl	
+TMPLOCA5	TMPLOCA5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 5 name	Blue Strap Bot	
+TMPLOCA6	TMPLOCA6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 6 name	Blue Strap Top	
+TMPLOCA7	TMPLOCA7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 7 name	Blue Case	
+TMPLOCA8	TMPLOCA8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank A, Sensor 8 name	Bench Bot	
+TMPLOCB1	TMPLOCB1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 1 name	Bench Top A	
+TMPLOCB2	TMPLOCB2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 2 name	IFU Base B	
+TMPLOCB3	TMPLOCB3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 3 name	Cab rear	
+TMPLOCB4	TMPLOCB4	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 4 name	KMG Weld	
+TMPLOCB5	TMPLOCB5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 5 name	Cal Base	
+TMPLOCB6	TMPLOCB6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 6 name	Collim	
+TMPLOCB7	TMPLOCB7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 7 name	Cab int	
+TMPLOCB8	TMPLOCB8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Temperature Bank B, Sensor 8 name	Blue Fill	
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Servos tracking status	yes	
-TRCKMODE	TRCKMODE	KCWI	integer		"NUMBER(*,0)"	16	Y	Y	N	16d					Y					ROS Tracking mode		
+TRCKMODE	TRCKMODE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					ROS Tracking mode		
 TRIGTIME	TRIGTIME	KCWI-F	double	seconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					Trigger time	1	
 TTIME	TTIME	KCWI	double	seconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					target exposure time	0.4	
 TUBETEMP	TUBETEMP	DCS	double	Celsius	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Tube temperature	0.55	
-UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y			Y	DCS Universal Time	14:23.1	
+UT	UT	DCS	char		TIMESTAMP	16	N	Y	Y	30s					Y	Y			Y	DCS Universal Time	14:23.1	
 VIMBA	VIMBA	KCWI-F	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					VIMBA SDK Version	1.3.0	
-WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y	Y			Y	Blue end wavelength		
-WAVECNTR	WAVECNTR	KOA	integer	angstroms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y					Central wavelength		
-WAVERED	WAVERED	KOA	integer	angstroms	"NUMBER(*,0)"	16	Y	Y	N	16d					Y	Y			Y	Red end wavelength		
+WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N	16d					Y	Y			Y	Blue end wavelength		
+WAVECNTR	WAVECNTR	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N	16d					Y					Central wavelength		
+WAVERED	WAVERED	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N	16d					Y	Y			Y	Red end wavelength		
 WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dome humidity at WXTIME		
 WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dome temperature at WXTIME		
 WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Dewpoint at WXTIME		
@@ -421,10 +421,9 @@ WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Wind speed at WX
 XPOSURE	XPOSURE	KCWI	double	seconds	FLOAT(126)	16	Y	Y	N	18.5f					Y					shutter open duration	0.4	
 CCDCFG	CCDCFG	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					CCD configuration		
 GROUPID	GROUPID	KCWI	char		VARCHAR2(30 BYTE)	30	Y	Y	N	30s					Y					Group association ID		
-	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.7f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
-	FILEURL	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N	151s	Y				N			N		URL to file in the archive		
 	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N	21s	Y				N	Y	Y	Y	Y	SEMESTER and PROGID		
