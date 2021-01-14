@@ -179,7 +179,7 @@ INSTFLIP	INSTFLIP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					porg to instru
 INSTR	INSTR		char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s				imag,spec	Y	Y	Y		Y	Spectrometer (spec) or Imager (imag)		
 ISAO	ISAO		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y							
 ISSKY	ISSKY		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					flag for sky frames (0=not sky, 1=sky)		
-ITIME	ITIME		integer		FLOAT(126)	13	Y	Y	Y	18.5f		0	2000000		Y	Y	Y		Y	Integration time of each coadd		
+ITIME	ITIME		double		FLOAT(126)	13	Y	Y	Y	18.5f		0	2000000		Y	Y	Y		Y	Integration time of each coadd		
 ITRGTMP	ITRGTMP		double		FLOAT(126)	13	Y	Y	N	18.5f					Y					Desired temperature for channel 2		
 LGRMSWF	LGRMSWF		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					LGSAO RMS WF Residual		
 LSAMPPWR	LSAMPPWR		double		FLOAT(126)	18	Y	Y	N	18.5f					Y					Amp Power (watts)		
@@ -197,7 +197,7 @@ OBFMXIM	OBFMXIM		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Image plane x motio
 OBFMXPU	OBFMXPU		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Pupil plane x motion for FSM (subaps)		
 OBFMYIM	OBFMYIM		double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Image plane y motion for FSM (mm)		
 OBFMYPU	OBFMYPU		double		FLOAT(126)	14	Y	Y	N	18.5f					Y					Pupil plane y motion for FSM (subaps)		
-OBFSNAME	OBFSNAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for FSS		
+OBFSNAME	OBFSNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for FSS		
 OBIMNAME	OBIMNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for ISM		
 OBJECT	OBJECT		char		VARCHAR2(60 BYTE)	60	Y	Y	N	60s					Y					object name		
 OBJPTTRN	OBJPTTRN		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Dither pattern for object frames		
@@ -218,10 +218,10 @@ OBTSNAME	OBTSNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position
 OBTSX	OBTSX		double	mm	FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of TSS x axis (mm)		
 OBTSY	OBTSY		double	mm	FLOAT(126)	14	Y	Y	N	18.5f					Y					User value of TSS y axis (mm)		
 OBTSZ	OBTSZ		double	mm	FLOAT(126)	15	Y	Y	N	18.5f					Y					User value of TSS z axis (mm)		
-OBWCNAME	OBWCNAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WCS		
+OBWCNAME	OBWCNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WCS		
 OBWF	OBWF		double	mm	FLOAT(126)	16	Y	Y	N	18.5f					Y					User value of FCS (mm)		
 OBWFSTST	OBWFSTST		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					State of FCS as string		
-OBWLNAME	OBWLNAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WLS		
+OBWLNAME	OBWLNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WLS		
 OBWNNAME	OBWNNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WND		
 OBWPNAME	OBWPNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Named position control for WPS		
 PARANG	PARANG		double	degrees	FLOAT(126)	30	Y	Y	N	18.5f					Y					parallactic angle astrometric (-6.89 deg)		
@@ -277,12 +277,12 @@ SLMRAW	SLMRAW		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current position of m
 SLMSTAT	SLMSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Mechanism Status (Ok,Moving,Error,Unknown)		
 SLMSWTCH	SLMSWTCH		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current Switch Value		
 SS1MECH	SS1MECH		char		VARCHAR2(26 BYTE)	26	Y	Y	N	26s					Y					The overall name of the mechanism		
-SS1NAME	SS1NAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					The name of the current position		
+SS1NAME	SS1NAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					The name of the current position		
 SS1RAW	SS1RAW		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current position of mechanism in steps		
 SS1STAT	SS1STAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Mechanism Status (Ok,Moving,Error,Unknown)		
 SS1SWTCH	SS1SWTCH		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current Switch Value		
 SS2MECH	SS2MECH		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					The overall name of the mechanism		
-SS2NAME	SS2NAME		double		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					The name of the current position		
+SS2NAME	SS2NAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					The name of the current position		
 SS2RAW	SS2RAW		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current position of mechanism in steps		
 SS2STAT	SS2STAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Mechanism Status (Ok,Moving,Error,Unknown)		
 SS2SWTCH	SS2SWTCH		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Current Switch Value		
