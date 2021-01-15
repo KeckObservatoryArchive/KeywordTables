@@ -1,4 +1,14 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s	Y				Y	Y			Y	KOA data filename	KB.20170208_00008.fits, KR.20170208_00009.fits	
+PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	16d		0			Y	Y			Y	Proprietary period		
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.5f					Y							
+TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N	8s					Y					Keck telescope designation	Keck II	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				object, bias, dark, arclamp, flatlamp, domeflat, twilightflat, contbars	Y	Y			Y	KOA image type	object	
+PROGNAME	PROGNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					WMKO program ID		
+PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	WMKO program ID	H275	
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program Institution	UH	
+PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program PI	McConnell	
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Air mass (1.41)	1.34436133	
 AMPID1	AMPID1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 0	0	
 AMPID2	AMPID2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					amp Id number, readout sequence 1	1	
@@ -165,7 +175,6 @@ EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f		1855	2100		Y	Y			Y	Telesc
 EXPTIME	EXPTIME	KCWI-F	double	s	FLOAT(126)	16	Y	Y	N	18.5f					Y					Exposure time	0.001	
 EXTEND	EXTEND	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					FITS dataset may contain extensions	TRUE	
 FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y					Filename	/s/sdata1400/kcwirun/2017feb16/kf170216_000001.fits	
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.5f					Y							
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Flat lamp control 2	off	
 FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	N	Y	Y	16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
@@ -208,8 +217,6 @@ INSEQ	INSEQ	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Number in sequenc
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y	68s					Y	Y			Y	Instrument name	KCWI	
 INTGAIN	INTGAIN	KCWI	double	e-DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					intrinsic gain	1.45	
 INTSPEED	INTSPEED	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD integrator speed	1	
-KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s	Y				Y	Y			Y	KOA data filename	KB.20170208_00008.fits, KR.20170208_00009.fits	
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				object, bias, dark, arclamp, flatlamp, domeflat, twilightflat, contbars	Y	Y			Y	KOA image type	object	
 LMP0NAM	LMP0NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					CAL Lamp 0 name	FeAr	
 LMP0ONT	LMP0ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 0 ON duration (s)	9516	
 LMP0SHST	LMP0SHST	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CAL Lamp 0 shutter (0-closed, 1-open)	0	
@@ -247,12 +254,6 @@ PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					DCS Paralla
 PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N	18.5f					Y					Parallactic angle telescope	0	
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DCS Point origin name	SLIT	
 PPRECLR	PPRECLR	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					parallel pre-clear (erase)	1	Integer or a string?  Integer
-PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	WMKO program ID	H275	
-PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program Institution	UH	
-PROGNAME	PROGNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					WMKO program ID		
-PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program PI	McConnell	
-PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
-PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	16d		0			Y	Y			Y	Proprietary period		
 PWNAMEA1	PWNAMEA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 1 name	FPCam	
 PWNAMEA2	PWNAMEA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 2 name	Magiq	
 PWNAMEA3	PWNAMEA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Power Bank A, Port 3 name	Glycol	
@@ -362,7 +363,6 @@ TARGDEC	TARGDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Target De
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y			Y	DCS Target name	AEGIS_26850	
 TARGRA	TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Target RA	19:19.8	
 TELAPSE	TELAPSE	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					[s] dark current duration	0.3999999	
-TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N	8s					Y					Keck telescope designation	Keck II	
 TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Telescope focus	-0.00127984	
 TERTDEST	TERTDEST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Tertiary user destination	rnas	
 TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Tertiary user position	rnas	
