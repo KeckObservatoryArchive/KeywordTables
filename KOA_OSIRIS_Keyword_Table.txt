@@ -31,9 +31,9 @@ WAT2_001	WAT2_001		char		VARCHAR2(30 BYTE)	30	Y	Y	Y	30s					Y					coordinate sys
 WCSDIM	WCSDIM		integer		NUMBER(*,0)	8	Y	Y	N	8d										number WCS dimensions		
 LTM1_1	LTM1_1		double		FLOAT(126)	10	Y	Y	Y	18.5f					Y					ccd to image transformation		
 LTM2_2	LTM2_2		double		FLOAT(126)	10	Y	Y	Y	18.5f					Y					ccd to image transformation		
-CDELT1	CDELT1		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y							
-CDELT2	CDELT2		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y							
-CROTA2	CROTA2		double		FLOAT(126)	10	Y	Y	Y	18.5f					Y							
+CDELT1	CDELT1		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Size projected into detector pixel in axis1		
+CDELT2	CDELT2		double		FLOAT(126)	20	Y	Y	Y	18.5f					Y					Size projected into detector pixel in axis2		
+CROTA2	CROTA2		double		FLOAT(126)	10	Y	Y	Y	18.5f					Y					Rotation of horizontal and vertical axes		
 RADECSYS	RADECSYS		char		VARCHAR2(10 BYTE)	10	Y	Y	Y	10s					Y					the system of the coordinates		
 AIRMASS	AIRMASS		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					air mass (1.03)		
 AOAOAMED	AOAOAMED		integer		NUMBER(*,0)	13	Y	Y	N	13d					Y					AO WFC AOA camera median light level (counts)		
@@ -89,7 +89,7 @@ DATAFILE	DATAFILE		char		VARCHAR2(26 BYTE)	26	Y	Y	N	26s					Y					Filename for s
 DATASET	DATASET		char		VARCHAR2(60 BYTE)	60	Y	Y	N	60s					Y					dataset name		
 DCOORDS	DCOORDS		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Dither coordinates - sky/instr		
 DCSSTAT	DCSSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					drive and control status		
-DDEC	DDEC		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y							
+DDEC	DDEC		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y					Differential tracking rate (DEC)		
 DECOFF	DECOFF		double	arcsec	FLOAT(126)	30	Y	Y	N	18.5f					Y					declination offset (0.0000 arcsec)		
 DLSTOFF1	DLSTOFF1		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from last dither pos-axis 1		
 DLSTOFF2	DLSTOFF2		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from last dither pos-axis 2		
@@ -112,7 +112,7 @@ DPWSTAT5	DPWSTAT5		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of o
 DPWSTAT6	DPWSTAT6		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 6		
 DPWSTAT7	DPWSTAT7		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 7		
 DPWSTAT8	DPWSTAT8		integer		NUMBER(*,0)	11	Y	Y	N	11d					Y					Power status of outlet 8		
-DRA	DRA		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y							
+DRA	DRA		double	arcsec	FLOAT(126)	12	Y	Y	N	18.5f					Y					Differential tracking rate (RA)		
 DTCLP	DTCLP		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 DTGAIN	DTGAIN		double		FLOAT(126)	15	Y	Y	N	18.5f					Y					Set TT loop gain		
 DTMP1	DTMP1		double		FLOAT(126)	26	Y	Y	N	18.5f					Y					Temperature at Sensor 1		
@@ -133,8 +133,8 @@ DTMPLOC7	DTMPLOC7		char		VARCHAR2(37 BYTE)	37	Y	Y	N	37s					Y					Location of Te
 DTMPLOC8	DTMPLOC8		char		VARCHAR2(37 BYTE)	37	Y	Y	N	37s					Y					Location of Temperature Sensor 8		
 DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from start of dither-axis 1		
 DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N	18.5f					Y					Offset from start of dither-axis 2		
-DTRACK	DTRACK		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y							
-EL	EL		double	degrees	FLOAT(126)	24	Y	Y	N	18.5f					Y							
+DTRACK	DTRACK		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Differential tracking enabled		
+EL	EL		double	degrees	FLOAT(126)	24	Y	Y	N	18.5f					Y					Telescope elevation		
 EPWNAME1	EPWNAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 1		
 EPWNAME2	EPWNAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 2		
 EPWNAME3	EPWNAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y					Name of the device controlled by outlet 3		
@@ -327,7 +327,7 @@ NPIXSAT	NPIXSAT		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels ab
 NONLIN	NONLIN		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					3 percent non-linearity level (80% full well)		
 NLINEAR	NLINEAR		integer		NUMBER(*,0)	10	Y	Y	N	10d					Y					Number of pixels above 3% non-linearity level		
 FILTER	FILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y	Y	Y		Y	Filter (added by KOA)		
-SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y			
+SCALE	SCALE		double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y	Plate scale		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox		
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp		
