@@ -167,7 +167,7 @@ if (output_csv != ''):
 # instead of relying on dbin to do it for us
 
 dd_col_names = ('cntr', 'name', 'original_name', 'description', 'units', 'intype', 'format', 'dbtype', 'nulls', 'tableflg', 'groupid', 'irsadef', 'sel', 'indx', 'label')
-dd_col_types = ('i4', 'S12', 'S12', 'S80', 'S20', 'S20', 'S10', 'S20', 'S6', 'i4', 'S6', 'S6', 'S6', 'S6', 'S12')
+dd_col_types = ('i4', 'S12', 'S12', 'S200', 'S20', 'S20', 'S10', 'S20', 'S6', 'i4', 'S6', 'S6', 'S6', 'S6', 'S12')
   
 output_dd_t = Table(names=dd_col_names, dtype=dd_col_types)
 
