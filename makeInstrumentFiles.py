@@ -257,15 +257,15 @@ output_dd_t.add_row([input_nrows, 'DEC', 'DEC', 'Declination (J2000)', 'null', '
 
 
 input_nrows = input_nrows + 1
-output_dd_t.add_row([input_nrows, 'X', 'X', '', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'X'])
+output_dd_t.add_row([input_nrows, 'X', 'X', 'Spatial Coordinate X', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'X'])
 input_nrows = input_nrows + 1
-output_dd_t.add_row([input_nrows, 'Y', 'Y', '', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'Y'])
+output_dd_t.add_row([input_nrows, 'Y', 'Y', 'Spatial Coordinate Y', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'Y'])
 input_nrows = input_nrows + 1
-output_dd_t.add_row([input_nrows, 'Z', 'Z', '', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'Z'])
+output_dd_t.add_row([input_nrows, 'Z', 'Z', 'Spatial Coordinate Z', 'null', 'double', '12.6f', 'FLOAT(126)', 'y', '2', input_nrows, 'y', 'y', 'n', 'Z'])
 input_nrows = input_nrows + 1
-output_dd_t.add_row([input_nrows, 'SPT_IND', 'SPT_IND', '', 'null', 'integer', '12d', 'NUMBER(38)', 'y', '2', input_nrows, 'y', 'y', 'n', 'SPT_IND'])
+output_dd_t.add_row([input_nrows, 'SPT_IND', 'SPT_IND', 'Spatial Index', 'null', 'integer', '12d', 'NUMBER(38)', 'y', '2', input_nrows, 'y', 'y', 'n', 'SPT_IND'])
 input_nrows = input_nrows + 1
-output_dd_t.add_row([input_nrows, 'CNTR', 'CNTR', '', 'null', 'integer', '12d', 'NUMBER(38)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CNTR'])
+output_dd_t.add_row([input_nrows, 'CNTR', 'CNTR', 'Internal counter', 'null', 'integer', '12d', 'NUMBER(38)', 'y', '2', input_nrows, 'y', 'y', 'n', 'CNTR'])
 
 if (output_dd_FOR_DB != ''):
   ascii.write( output_dd_t, output_dd_FOR_DB + '.tmp', format='ipac', fast_writer=False, overwrite=True, fill_values=fill)
