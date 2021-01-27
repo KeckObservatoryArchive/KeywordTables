@@ -1,19 +1,19 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y		Y	Unique identifier for each file		
-OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y			Y	Original filename at the telescope, copied from DATAFILE keyword	v171005_0001	May have to add .fits to DATAFILE
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y		Y	Unique identifier for each file	ES.20201203.77326.fits	
+OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y			Y	Original filename at the telescope	e201204_0078.fits	May have to add .fits to DATAFILE
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f					Y					FITS file size in megabytes	44.8	
-PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	WMKO program ID		
-PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program institution		
-PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program PI		
-PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	210s					Y	Y			Y	Program title		added to metadata, not header
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				arclamp,bias,dark,flatlamp,focus,object,trace,undefined	Y	Y	Y		Y	KOA image type		
+PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	WMKO assigned program identification code	ENG	
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program institution	KECK	
+PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y			Y	Program principal investigator	J. Doe	
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	210s					Y	Y			Y	Program title	ESI Engineering Night	added to metadata, not header
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s				arclamp,bias,dark,flatlamp,focus,object,trace,undefined	Y	Y	Y		Y	Type of observation: 'object' for science files, other values are calibration files	object, flatlamp	
 CAMERA	CAMERA	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s				ESI	Y					Camera - ESI only has one		
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					Data reduction level		
-OBSMODE	OBSMODE	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s				high,low,image	Y	Y			Y	Observing mode: low, high, or image		
+OBSMODE	OBSMODE	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s				high,low,image	Y	Y			Y	Observing mode: low, high, or image	low, high, image	
 DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f				0.1542	Y					CCD pixel scale, dispersion (arcsec/pixel)		
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DQA version number		
-FILTER	FILTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	Copy of DWFILNAM		
+FILTER	FILTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	Copy of DWFILNAM: filter wheel named position	Clear_S	
 GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					UT of GUIDFWHM value		
 IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Imaging median		
@@ -27,9 +27,9 @@ SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f				4,20,480	Y					Sl
 SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f				0.3,0.5 0.75,1.0,1.13,1.25,6.0	Y					Slit width projected on sky (arcsec)		
 SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N	18.8f				0.1542	Y					CCD pixel scale, spatial (arcsec/pixel)		
 SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Nominal spectral resolution		
-WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y	Y			Y	Blue end wavelength		
-WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y					Central wavelength		
-WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y	Y			Y	Red end wavelength		
+WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y	Y			Y	Blue end wavelength (Angstroms)	3900	
+WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y					Central wavelength (Angstroms)		
+WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y	Y			Y	Red end wavelength (Angstroms)	10900	
 WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Dome humidity at WXTIME		
 WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Dome temperature at WXTIME		
 WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Dewpoint at WXTIME		
@@ -44,9 +44,9 @@ AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					air mass
 AIRPRESS	AIRPRESS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					air pressure		
 AIRPWPSI	AIRPWPSI	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					compressed air power PSI		
 AMPLIST	AMPLIST	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					amplifier list		
-APMSKCAL	APMSKCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y	Y			Y	aperature mask calibration status		
+APMSKCAL	APMSKCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y	Y			Y	aperature mask calibration status	Homed	
 APMSKERR	APMSKERR	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					aperature mask error number		
-APMSKNAM	APMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	aperature mask named position		
+APMSKNAM	APMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	aperature mask named position	Decker, 2b	
 APMSKORD	APMSKORD	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					aperature mask ordinal position		
 APMSKRAW	APMSKRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					aperature mask raw position		
 APMSKSTA	APMSKSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					aperature mask status		
@@ -97,7 +97,7 @@ CTRLFAN0	CTRLFAN0	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					contoller 0 el
 CTRLFAN1	CTRLFAN1	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					controller 1 electronics fans		
 CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					current instrument		
 DATE	DATE_UT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					date		
-DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	32s	Y				Y	Y	Y		Y	observing date		
+DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	32s	Y				Y	Y	Y		Y	observing date (UT)	2019-01-15	
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					declination		
 DECOFF	DECOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Declination offset		
 DETECTOR	DETECTOR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					detector		
@@ -110,8 +110,8 @@ DWFILRAW	DWFILRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Filter wheel r
 DWFILSTA	DWFILSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Filter status		
 DWFILTOR	DWFILTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Filter torque		
 EL	EL	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					elevation		
-ELAPTIME	ELAPTIME	ESI	integer	seconds	NUMBER(*,0)	8	Y	Y	N	11d					Y	Y			Y	elapsed time		
-EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y	equinox		
+ELAPTIME	ELAPTIME	ESI	integer	seconds	NUMBER(*,0)	8	Y	Y	N	11d					Y	Y			Y	elapsed time	10	
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f					Y	Y			Y	equinox	1950, 2000	
 ERASECNT	ERASECNT	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					erase count		
 ERASLINE	ERASLINE	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					erase line		
 EXPOSURE	EXPOSURE	ESI	integer	seconds	NUMBER(*,0)	8	Y	Y	N	11d					Y					exposure time		
@@ -124,7 +124,7 @@ FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					imaging fla
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					spectroscopy flatlamp		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					focal station		
 FRAME	FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					reference frame		
-FRAMENO	FRAMENO	ESI	integer		NUMBER(*,0)	8	N	Y	N	11d					Y	Y			Y	frame number		
+FRAMENO	FRAMENO	ESI	integer		NUMBER(*,0)	8	N	Y	N	11d					Y	Y			Y	frame number	15	
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hour angle		
 HATCHPOS	HATCHPOS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					hatch position		
 IMFLTCAL	IMFLTCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					image flat calibration		
@@ -164,7 +164,7 @@ NAXIS1	NAXIS1	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Length of data axi
 NAXIS2	NAXIS2	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Length of data axis 2		
 NSUBINT	NSUBINT	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					number of sub integrations		
 NUMAMPS	NUMAMPS	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					number of amplifiers		
-OBJECT	OBJECT	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y			Y	object		
+OBJECT	OBJECT	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y			Y	object	sky, G93-48 B	
 OBSERVER	OBSERVER	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					observer		
 OBSNUM	OBSNUM	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					observation number		
 OBSTYPE	OBSTYPE	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					observation type		
@@ -223,7 +223,7 @@ SHUTSTAT	SHUTSTAT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					shutter sta
 SIMULATE	SIMULATE	DCS	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					simulation mode		
 SLMSKCAL	SLMSKCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					slitmask calibration state		
 SLMSKERR	SLMSKERR	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					slitmask calibration error number		
-SLMSKNAM	SLMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	slitmask named position		
+SLMSKNAM	SLMSKNAM	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	slitmask named position	slot 41, Peg	
 SLMSKORD	SLMSKORD	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					slitmask ordinal position		
 SLMSKRAW	SLMSKRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					slitmask raw position		
 SLMSKSTA	SLMSKSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					slitmask status		
@@ -235,7 +235,7 @@ TARGDEC	TARGDEC	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target declinati
 TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target epoch		
 TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target equinox		
 TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					target frame		
-TARGNAME	TARGNAME	DCS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y			Y	target name		
+TARGNAME	TARGNAME	DCS	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y	Y			Y	target name	M92, sky	
 TARGPLAX	TARGPLAX	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target parallax		
 TARGPMDC	TARGPMDC	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target proper motion declination		
 TARGPMRA	TARGPMRA	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					target proper motion right ascension		
@@ -282,7 +282,7 @@ TVFOCRAW	TVFOCRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					guider focus r
 TVFOCSTA	TVFOCSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider focus status		
 TVFOCTOR	TVFOCTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					guider focus torque		
 TVPOWER	TVPOWER	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					guider focus torque		
-UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y			Y	UTC		
+UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y			Y	coordinated universal time	22:10:02 00:01:45	
 UTBFANS	UTBFANS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					utility board fans		
 UTBTEMP	UTBTEMP	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					utility board temperature		
 VOFFSET0	VOFFSET0	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					video offset amp 0		
@@ -292,9 +292,9 @@ VOFFSET3	VOFFSET3	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					video offset am
 WINDOW	WINDOW	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					window		
 XFLIP	XFLIP	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					camera x flip		
 YFLIP	YFLIP	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					camera y flip		
-	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox		
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox		
-	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion		
-	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y			Y	Path to the file in the archive		
-	SEMID	NExScI	char		VARCHAR2(21)	21	Y	N	N	21s	Y				N	Y			Y	SEMESTER and PROGID		
+	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y			Y	Path to the file in the archive	/koadata36/ESI/19990822/lev0/ES.19990822.70889.fits	
+	SEMID	NExScI	char		VARCHAR2(21)	21	Y	N	N	21s	Y				N	Y			Y	SEMESTER and PROGID	2019A_ENG	
