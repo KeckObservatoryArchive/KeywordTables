@@ -6,7 +6,7 @@ FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f					Y					FITS f
 DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y	32s	Y				Y					observing date (UT)		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f	Y				Y					declination		
 ELAPTIME	ELAPTIME		double	seconds	FLOAT(126)	16	Y	Y	Y	18.5f		0	100000		Y					elapsed-time		
-EQUINOX	EQUINOX		double	years	FLOAT(126)	16	N	Y	Y	18.5f		1855	2100		Y					telescope-equinox		
+EQUINOX	EQUINOX		double	years	FLOAT(126)	16	N	Y	Y	18.5f		0	2100		Y					telescope-equinox		
 FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	N	Y	Y	16d		0	9999		Y	Y			Y	Frame number	14	
 INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				OSIRIS	Y					instrument's name		
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y	69s				dark,flatlamp,flatlampoff,undefined,calib,object	Y	Y	Y		Y	Type of observation: 'object' for science files, other values are calibration files	object, flatlamp	
