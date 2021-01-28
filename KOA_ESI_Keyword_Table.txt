@@ -54,7 +54,7 @@ APMSKTOR	APMSKTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					aperature mask
 AUTOSHUT	AUTOSHUT	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					autoshutter		
 AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					telescope tracking status		
 AZ	AZ	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					azimuth		
-BINNING	BINNING	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y							
+BINNING	BINNING	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					The amount of on-chip binning to be performed along each readout axis of a CCD.		
 BITPIX	BITPIX	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Number of bits per data pixel		
 BSCALE	BSCALE	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Default scaling factor		
 BZERO	BZERO	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					Offset data range to that of unsigned short		
@@ -83,7 +83,7 @@ COLLFLX1	COLLFLX1	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					collimator 1 fl
 COLLFLX2	COLLFLX2	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					collimator 2 flexure compensation offset		
 COLLFLX3	COLLFLX3	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					collimator 3 flexure compensation offset		
 COLLFOC	COLLFOC	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					collimator focus		
-COLLFOCR	COLLFOCR	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y							
+COLLFOCR	COLLFOCR	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					focus		
 COLLFOCT	COLLFOCT	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					collimator focus target		
 COLLMODE	COLLMODE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					collimator control mode		
 COLLOFF1	COLLOFF1	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					collimator 1 offset error		
