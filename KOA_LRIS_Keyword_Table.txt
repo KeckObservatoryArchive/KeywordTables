@@ -1,0 +1,274 @@
+FITSKeyword	DBKeyword	SOURCE	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	DESCRIPTION	Example	Notes
+KOAID	KOAID	KOA	char			32	N	Y	Y						Y					KOA data file name	LR.20150424.44113.fits	
+PROPINT	PROPINT	KOA	integer			16	N	Y	Y			0			Y					Proprietary period		
+INSTRUME	INSTRUME	DCS	char			32	N	Y	Y					LRIS,LRISBLUE	Y					Instrument name	LRIS	
+DATE-OBS	DATE_OBS	DCS	date			16	N	Y	Y						Y					Universal date of observation	4/24/2015	
+DEC	CDEC	native	char			24	Y	Y	Y			-90	95		Y					Telescope declination	+27:58:22.6	
+RA	CRA	LRIS	char			24	Y	Y	N						Y					Telescope right ascension	00:06.1	
+EQUINOX	EQUINOX	DCS	double			16	Y	Y	N			1855	2100		Y					Telescope equinox	2000	
+UT	UT	LRIS	char			24	N	Y	Y						Y					Universal time	15:13.4	
+UTC	UTC	LRIS	char			24	N	Y	Y						Y					Universal time	15:13.4	
+KOAIMTYP	KOAIMTYP	KOA	char			32	N	Y	Y					undefined,focus,bias,flatlamp,polcal,object,arclamp,dark	Y					KOA image type	object	
+PROGID	PROGID	KOA	char			32	N	Y	N						Y					WMKO program ID	H275LA	
+PROGINST	PROGINST	KOA	char			16	N	Y	N						Y					Program institution	UH	
+PROGPI	PROGPI	KOA	char			70	N	Y	N						Y					Program PI	McConnell	
+PROGTITL	PROGTITL	KOA	char			210	Y	Y	N						Y					Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
+SEMESTER	SEMESTER	KOA	char			8	N	Y	N						Y					Observing semester	2015A	
+ABFREQ	ABFREQ	LRIS	integer	Hz		16	Y	Y	N						Y					Antiblooming frequency	20	
+ADCBYP	ADCBYP	native	char			1	Y	Y	N						Y					ADC motor control bypass switch	F	
+ADCCAL	ADCCAL	native	char			1	Y	Y	N						Y					ADC calibration	T	
+ADCCMT	ADCCMT	native	char			70	Y	Y	N						Y					ADC comment		
+ADCCON	ADCCON	native	char			1	Y	Y	N						Y					ADC motor control	F	
+ADCDCC	ADCDCC	native	char			70	Y	Y	N						Y					ADC disconnected cables	hand paddle	
+ADCENC	ADCENC	native	integer			16	Y	Y	N						Y					ADC load encoder position	131769	
+ADCERR	ADCERR	native	integer			16	Y	Y	N						Y					ADC modify error number	0	
+ADCGTE	ADCGTE	native	integer			16	Y	Y	N						Y					ADC galil position error	0	
+ADCLCK	ADCLCK	native	char			70	Y	Y	N						Y					ADC motion keyword lockout	unlocked	
+ADCLIM	ADCLIM	native	integer			16	Y	Y	N						Y					ADC limit switch status	0	
+ADCMOD	ADCMOD	native	integer			16	Y	Y	N						Y						3	
+ADCNEED	ADCNEED	native	char			1	Y	Y	N						Y					ADC needed	T	
+ADCPRENA	ADCPRENA	native	integer			16	Y	Y	N						Y					ADC prism calc enable disable flag	1	
+ADCRAW	ADCRAW	native	integer			16	Y	Y	N						Y					ADC raw position	-2635095	
+ADCRCD	ADCRCD	native	char			70	Y	Y	N						Y					ADC remote control disablers		
+ADCSTA	ADCSTA	native	integer			16	Y	Y	N						Y					ADC overall status	10	
+ADCSVA	ADCSVA	native	double			16	Y	Y	N						Y					ADC servo val tracking error	-0.00181328	
+ADCSVR	ADCSVR	native	integer			16	Y	Y	N						Y					ADC servo raw tracking error	-22	
+ADCSVX	ADCSVX	native	double			16	Y	Y	N						Y					ADC servo vax tracking error	-0.00000103	
+ADCTVA	ADCTVA	native	double			16	Y	Y	N						Y					ADC separation target	891.9317017	
+ADCTVX	ADCTVX	native	double			16	Y	Y	N						Y					ADC zenith distance target	0.73286438	
+ADCVAL	ADCVAL	native	double			16	Y	Y	N						Y					ADC separation	891.946228	
+ADCVAX	ADCVAX	native	double			16	Y	Y	N						Y					ADC zenith distance	0.73287266	
+ADCVEL	ADCVEL	native	double			16	Y	Y	N						Y					ADC prism separation rate	0.11625	
+ADCVEX	ADCVEX	native	double			16	Y	Y	N						Y					ADC zenith distance rate	0.00013348	
+ADCWAVE0	ADCWAVE0	native	double			16	Y	Y	N						Y					ADC lower wavelength	3400	
+ADCWAVE1	ADCWAVE1	native	double			16	Y	Y	N						Y					ADC upper wavelength	9000	
+AIRMASS	AIRMASS	DCS	double			16	Y	Y	N						Y					Air mass (1.41)	1.34436133	
+AMPLIST	AMPLIST	LRIS	char			32	Y	Y	N						Y					Readout amplifiers	4,4,0,0	
+AMPMODE	AMPMODE	LRIS	char			32	Y	Y	N						Y					Description of amplifiers used	DUAL:L+R	
+AMPPSIZE	AMPPSIZE	LRIS	char			32	Y	Y	N						Y					Access in pixels	[1:1024,1:4096]	
+ANTIBLM	ANTIBLM	LRIS	char			8	Y	Y	N						Y					Antiblooming frequency	off	
+ARGON	ARGON	native	char			8	Y	Y	N						Y						off	
+AUTOERAS	AUTOERAS	native	char			1	Y	Y	N						Y					Automatic erase	T	
+AUTOSHUT	AUTOSHUT	LRIS	char			1	Y	Y	N						Y					Automatic shutter	T	
+AZ	AZ	DCS	double	degrees		16	Y	Y	N						Y					Telescope azimuth	290.1968935	
+BINNING	BINNING	LRIS	char			8	Y	Y	N						Y					Binning	2,1	
+BITPIX	BITPIX	LRIS	integer			16	Y	Y	N						Y					Bits per pixel	16	
+BLUFILT	BLUFILT	native	char			24	Y	Y	N						Y						clear	
+BLUFNUM	BLUFNUM	native	integer			16	Y	Y	N						Y					Blue filter number	5	
+BLUFOCUS	BLUFOCUS	native	double			16	Y	Y	N						Y					Blue camera focus	-3560.296875	
+BLUFTRAN	BLUFTRAN	native	char			32	Y	Y	N						Y					Blue filter transfport name	stowed	
+BSCALE	BSCALE	LRIS	double			16	Y	Y	N						Y					Scaling factor	1	
+BTRAN	BTRAN	native	integer			16	Y	Y	N						Y					Blue filter transport	0	
+BZERO	BZERO	LRIS	double			16	Y	Y	N						Y					Offset data	32768	
+CADMIUM	CADMIUM	native	char			8	Y	Y	N						Y						off	
+CCDGAIN	CCDGAIN	LRIS	char			8	Y	Y	N						Y					CCD gain used	high	
+CCDGN01	CCDGN01	KOA	double			16	Y	Y	N						Y					CCD gain amp location 1		
+CCDGN02	CCDGN02	KOA	double			16	Y	Y	N						Y					CCD gain amp location 2		
+CCDGN03	CCDGN03	KOA	double			16	Y	Y	N						Y					CCD gain amp location 3		
+CCDGN04	CCDGN04	KOA	double			16	Y	Y	N						Y					CCD gain amp location 4		
+CCDRN01	CCDRN01	KOA	double			16	Y	Y	N						Y					CCD read noise amp location 1		
+CCDRN02	CCDRN02	KOA	double			16	Y	Y	N						Y					CCD read noise amp location 2		
+CCDRN03	CCDRN03	KOA	double			16	Y	Y	N						Y					CCD read noise amp location 3		
+CCDRN04	CCDRN04	KOA	double			16	Y	Y	N						Y					CCD read noise amp location 4		
+CCDSPEED	CCDSPEED	LRIS	char			16	Y	Y	N						Y					CCD readout speed	normal	
+CCDSUM	CCDSUM	LRIS	char			8	Y	Y	N						Y					CCD sum	2 1	
+CHECKSUM	CHECKSUM	LRIS	char			32	Y	Y	N						Y					Checksum of header	VgiZXegYVegYVegY	
+CTRL0ERR	CTRL0ERR	native	integer			16	Y	Y	N						Y					ADC controller 0 error number	-5414	
+CTRL0MSG	CTRL0MSG	native	char			70	Y	Y	N						Y					ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
+CURRINST	CURRINST	DCS	char			32	Y	Y	N						Y					Current instrument	LRISADC	
+DATASUM	DATASUM	LRIS	integer			16	Y	Y	N						Y					Data unit checksum	0	
+DATE	DATE	LRIS	char			24	Y	Y	N						Y					Universal date and time of observation	2015-04-24T12:25:14	
+DATE_BEG	DATE_BEG	LRIS	char			24	Y	Y	N						Y					UNIX timestamp of beginning of observation	2015-04-24T12:15:12	
+DATE_END	DATE_END	LRIS	char			24	Y	Y	N						Y					UNIX timestamp of end of observation	2015-04-24T12:25:12	
+DATLEVEL	DATLEVEL	KOA	integer			16	N	Y	N						Y					Data reduction level		
+DDEC	DDEC	native	double	arcsec/sec		16	Y	Y	N						Y					Diff declination rate	0	
+DETCNFID	DETCNFID	native	integer			16	Y	Y	N						Y					Detector configuration ID	2010	
+DETECTOR	DETECTOR	LRIS	char			70	Y	Y	N						Y					Detector name	LRIS-R Science mosaic Mark 2: CCD  #1: 19-3  CCD #2: 19-2	
+DETLSIZE	DETLSIZE	LRIS	char			32	Y	Y	N						Y					Unbinned size of layout	[1:4096,1:4096]	
+DEUTERI	DEUTERI	native	char			16	Y	Y	N						Y						off	
+DICHNAME	DICHNAME	native	char			16	Y	Y	N						Y					Dichroic clamp name	680	
+DICHROIC	DICHROIC	native	integer			16	Y	Y	N						Y					Dichroic retainer name	5	
+DICHTRAN	DICHTRAN	native	char			32	Y	Y	N						Y					Dichroic transport name	deployed	
+DISP0ERR	DISP0ERR	native	integer			16	Y	Y	N						Y					ADC dispatcher 0 error number	0	
+DISP0STA	DISP0STA	native	integer			16	Y	Y	N						Y					ADC dispatcher status	0	
+DISPSCAL	DISPSCAL	KOA	double			16	Y	Y	N						Y					CCD pixel scale, dispersion		
+DOMEPOSN	DOMEPOSN	DCS	double	degrees		16	Y	Y	N						Y					Dome azimuth	290.2737915	
+DQA_DATE	DQA_DATE	KOA	char			24	Y	Y	N						Y					Date of DQA run		
+DQA_VERS	DQA_VERS	KOA	char			8	Y	Y	N						Y					DQA version number		
+DRA	DRA	DCS	double	s/sec		16	Y	Y	N						Y					Differential right ascension rate	0	
+DTRACK	DTRACK	DCS	char			32	Y	Y	N						Y					Differential tracking enabled	disabled	
+DTRAN	DTRAN	native	integer			16	Y	Y	N						Y					Dichroic transport	1	
+EL	EL	DCS	double	degrees		16	Y	Y	N						Y					Telescope elevation	48.0124342	
+ELAPTIME	ELAPTIME	LRIS	double			16	Y	Y	Y			0			Y					Elapsed time	600	
+ERASECNT	ERASECNT	LRIS	integer			16	Y	Y	N						Y					Erase count	1	
+ERASLINE	ERASLINE	LRIS	integer			16	Y	Y	N						Y					Erase line	0	
+EXPTIME	EXPTIME	LRIS	double			16	Y	Y	N						Y					Exposure time	600.0216065	
+EXTEND	EXTEND	LRIS	char			1	Y	Y	N						Y					FITS dataset may contain extensions	T	
+FEARGON	FEARGON	native	char			8	Y	Y	N						Y						off	
+FLAMP1	FLAMP1	DCS	char			8	Y	Y	N						Y					Flat lamp 1	off	
+FLAMP2	FLAMP2	DCS	char			8	Y	Y	N						Y					Flat lamp 2	off	
+FLIMAGIN	FLIMAGIN	DCS	char			8	Y	Y	N						Y					Flat lamp control 1	off	
+FLSPECTR	FLSPECTR	DCS	char			8	Y	Y	N						Y					Flat lamp control 2	off	
+FRAMENO	FRAMENO	LRIS	integer			16	N	Y	Y			0	9999		Y					Frame number	76	
+GRANAME	GRANAME	native	char			32	Y	Y	N						Y					Grating name	600/10000	
+GRANGLE	GRANGLE	native	double			16	Y	Y	N						Y					Grating angle raw	33.22573471	
+GRATING	GRATING	native	integer			16	Y	Y	N						Y					Grating	2	
+GRISM	GRISM	native	integer			16	Y	Y	N						Y					Grism	1	
+GRISNAME	GRISNAME	native	char			32	Y	Y	N						Y					Grism name	300/5000	
+GRISTRAN	GRISTRAN	native	char			32	Y	Y	N						Y					Grism transport name	deployed	
+GTRAN	GTRAN	native	integer			16	Y	Y	N						Y					Grism transport	1	
+GUIDFWHM	GUIDFWHM	KOA	double	arcsec		16	Y	Y	N						Y					FWHM of guide star		
+GUIDTIME	GUIDTIME	KOA	char			16	Y	Y	N						Y					UT of GUIDFWHM value		
+HA	HA	DCS	char			24	Y	Y	N						Y					Telescope hour angle	+03:01:18.99	
+HALOGEN	HALOGEN	native	char			8	Y	Y	N						Y						off	
+IM01MD00	IM01MD00	KOA	double			16	Y	Y	N						Y					Imaging mean ccd 1 amp location 0		
+IM01MN00	IM01MN00	KOA	double			16	Y	Y	N						Y					Imaging median ccd 1 amp location 0		
+IM01SD00	IM01SD00	KOA	double			16	Y	Y	N						Y					Imaging standard deviation ccd 1 amp location 0		
+IM01MD01	IM01MD01	KOA	double			16	Y	Y	N						Y					Imaging mean ccd 1 amp location 1		
+IM01MN01	IM01MN01	KOA	double			16	Y	Y	N						Y					Imaging median ccd 1 amp location 1		
+IM01SD01	IM01SD01	KOA	double			16	Y	Y	N						Y					Imaging standard deviation ccd 1 amp location 1		
+IM02MD02	IM02MD02	KOA	double			16	Y	Y	N						Y					Imaging mean ccd 2 amp location 2		
+IM02MN02	IM02MN02	KOA	double			16	Y	Y	N						Y					Imaging median ccd 2 amp location 2		
+IM02SD02	IM02SD02	KOA	double			16	Y	Y	N						Y					Imaging standard deviation ccd 2 amp location 2		
+IM02MD03	IM02MD03	KOA	double			16	Y	Y	N						Y					Imaging mean ccd 2 amp location 3		
+IM02MN03	IM02MN03	KOA	double			16	Y	Y	N						Y					Imaging median ccd 2 amp location 3		
+IM02SD03	IM02SD03	KOA	double			16	Y	Y	N						Y					Imaging standard deviation ccd 2 amp location 3		
+IMTYPE	IMTYPE	LRIS	char			32	Y	Y	N						Y						MOSAIC	
+KEEPPREP	KEEPPREP	LRIS	integer			16	Y	Y	N						Y					Keep prescan pixels	1	
+KRYPTON	KRYPTON	native	char			8	Y	Y	N						Y						off	
+LAMPS	LAMPS	native	char			16	Y	Y	N						Y							
+LSERCLKD	LSERCLKD	native	integer			16	Y	Y	N						Y					Last serial clock delay	160	
+MERCURY	MERCURY	native	char			8	Y	Y	N						Y						off	
+MJD-OBS	MJD_OBS	native	double			16	Y	Y	N						Y					Modified julian date of observation	57136.51057	
+MPPMODE	MPPMODE	native	char			1	Y	Y	N						Y					MPP readout mode	F	
+MSWAVE	MSWAVE	native	double			16	Y	Y	N						Y					Grating multislit wavelength	9305.146484	
+NAXIS	NAXIS	LRIS	integer			16	Y	Y	N						Y					Number of data axes	0	
+NEON	NEON	native	char			8	Y	Y	N						Y						off	
+NPIXSAT	NPIXSAT	KOA	integer			16	Y	Y	N						Y					Number of saturated pixels		
+NSUBINT	NSUBINT	LRIS	integer			16	Y	Y	N						Y					Number of subexposures	0	
+NUMAMPS	NUMAMPS	LRIS	integer			16	Y	Y	N						Y					Number of readout amplifiers	4	
+NVIDINP	NVIDINP	LRIS	integer			16	Y	Y	N						Y					Number of video inputs	4	
+OA	OA	KOA	char			32	Y	Y	N						Y					Observing assistant		
+OFNAME	OFNAME	KOA	char			32	N	Y	N						Y					Original filename	r150424_123.fits	
+OBJECT	OBJECT	LRIS	char			70	Y	Y	N						Y					Object's name	NGC 4889	
+OBSERVER	OBSERVER	LRIS	char			70	Y	Y	N						Y					Observer's name(s)	McConnell	
+OBSMODE	OBSMODE	KOA	char			16	N	Y	Y					IMAGING, SPEC	Y					Imaging or Spec mode		
+OBSTYPE	OBSTYPE	LRIS	char			32	Y	Y	N						Y					Type of observation	dark	
+OUTDIR	OUTDIR	LRIS	char			70	Y	Y	N						Y					Readout directory	/sdata243/lris9/2015apr24	
+OUTFILE	OUTFILE	LRIS	char			70	Y	Y	N						Y					Readout filename prefix	r150424_	
+OVRFLUSH	OVRFLUSH	LRIS	integer			16	Y	Y	N						Y					Postscan flush lines	0	
+PANE	PANE	LRIS	char			32	Y	Y	N						Y					Mosaic pane	0,0,4096,4096	
+PANE1	PANE1	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 1	0,0,0,0	
+PANE10	PANE10	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 10	0,0,0,0	
+PANE11	PANE11	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 11	0,0,0,0	
+PANE12	PANE12	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 12	0,0,0,0	
+PANE13	PANE13	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 13	0,0,0,0	
+PANE14	PANE14	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 14	0,0,0,0	
+PANE15	PANE15	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 15	0,0,0,0	
+PANE16	PANE16	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 16	0,0,0,0	
+PANE2	PANE2	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 2	0,0,0,0	
+PANE3	PANE3	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 3	0,0,0,0	
+PANE4	PANE4	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 4	0,0,0,0	
+PANE5	PANE5	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 5	0,0,0,0	
+PANE6	PANE6	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 6	0,0,0,0	
+PANE7	PANE7	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 7	0,0,0,0	
+PANE8	PANE8	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 8	0,0,0,0	
+PANE9	PANE9	LRIS	char	pixels		32	Y	Y	N						Y					Mosaic readout window 9	0,0,0,0	
+PANEFITS	PANEFITS	LRIS	char			48	Y	Y	N						Y					Pane fits hdu format	1HDU/pane/amp	
+PANELIST	PANELIST	LRIS	char			32	Y	Y	N						Y					Bitmask list of up to 16 panes	PANE	
+PANERROR	PANERROR	LRIS	char			32	Y	Y	N						Y					List of active panes	NO_ERROR	
+PMFM	PMFM	native	double			16	Y	Y	N						Y					Telescope focus	0	
+PONAME	PONAME	native	char			32	Y	Y	N						Y					Pointing origin name	REF	
+POSTLINE	POSTLINE	LRIS	integer			16	Y	Y	N						Y					Postscan lines	20	
+POSTPIX	POSTPIX	LRIS	integer			16	Y	Y	N						Y					Postscan pixels	80	
+POW24V	POW24V	native	double			16	Y	Y	N						Y					ADC electronics 24 volt power supply volt	25.95382881	
+PRECOL	PRECOL	LRIS	integer			16	Y	Y	N						Y					Prescan columns	7	
+PREFLUSH	PREFLUSH	LRIS	integer			16	Y	Y	N						Y					Prescan flush lines	0	
+PRELINE	PRELINE	LRIS	integer			16	Y	Y	N						Y					Presan lines	0	
+PREROW	PREROW	LRIS	integer			16	Y	Y	N						Y					Prescan rows	0	
+PT01MN00	PT01MN00	KOA	double			16	Y	Y	N						Y					Post scan median ccd 1 amp location 0		
+PT01MD00	PT01MD00	KOA	double			16	Y	Y	N						Y					Post scan mean ccd 1 amp location 0		
+PT01SD00	PT01SD00	KOA	double			16	Y	Y	N						Y					Post scan standard deviation ccd 1 amp location 0		
+PT01MN01	PT01MN01	KOA	double			16	Y	Y	N						Y					Post scan median ccd 1 amp location 1		
+PT01MD01	PT01MD01	KOA	double			16	Y	Y	N						Y					Post scan mean ccd 1 amp location 1		
+PT01SD01	PT01SD01	KOA	double			16	Y	Y	N						Y					Post scan standard deviation ccd 1 amp location 1		
+PT02MN02	PT02MN02	KOA	double			16	Y	Y	N						Y					Post scan median ccd 2 amp location 2		
+PT02MD02	PT02MD02	KOA	double			16	Y	Y	N						Y					Post scan mean ccd 2 amp location 2		
+PT02SD02	PT02SD02	KOA	double			16	Y	Y	N						Y					Post scan standard deviation ccd 2 amp location 2		
+PT02MN03	PT02MN03	KOA	double			16	Y	Y	N						Y					Post scan median ccd 2 amp location 3		
+PT02MD03	PT02MD03	KOA	double			16	Y	Y	N						Y					Post scan mean ccd 2 amp location 3		
+PT02SD03	PT02SD03	KOA	double			16	Y	Y	N						Y					Post scan standard deviation ccd 2 amp location 3		
+REDFILT	REDFILT	native	char			32	Y	Y	Y						Y					Red filter name	Clear	
+REDFNUM	REDFNUM	native	integer			16	Y	Y	N						Y					Red filter number	1	
+REDFOCUS	REDFOCUS	native	double			16	Y	Y	N						Y					Red focus position	-0.65876257	
+ROTMODE	ROTMODE	DCS	char			32	Y	Y	N						Y					Rotator mode	position angle	
+ROTPOSN	ROTPOSN	DCS	double			16	Y	Y	N						Y					Rotator position	-10.00028084	
+ROTPPOSN	ROTPPOSN	native	double			16	Y	Y	N						Y					Rotator physical position	-101.5810847	
+ROWSHFT	ROWSHFT	LRIS	integer			16	Y	Y	N						Y					Row shift per subintegration	0	
+SECFOCUS	SECFOCUS	DCS	double			16	Y	Y	N						Y					Secondary focus	-0.00044643	
+SECTHETX	SECTHETX	native	double			16	Y	Y	N						Y					Secondary mirror theta x	-0.00173903	
+SECTHETY	SECTHETY	native	double			16	Y	Y	N						Y					Secondary mirror theta y	-0.00021283	
+SHBLCLTM	SHBLCLTM	native	double			16	Y	Y	N						Y					Shutter blade closing time	0.0224	
+SHBLOPTM	SHBLOPTM	native	double			16	Y	Y	N						Y					Shutter blade operning time	0.0368	
+SHCLOCNT	SHCLOCNT	native	integer			16	Y	Y	N						Y					Shutter closing count	1	
+SHLATCLO	SHLATCLO	native	double			16	Y	Y	N						Y						0.0344	
+SHLATOPN	SHLATOPN	native	double			16	Y	Y	N						Y					Shutter latency on opening	0.0192	
+SHOPNCNT	SHOPNCNT	native	integer			16	Y	Y	N						Y						1	
+SIG2NOIS	SIG2NOIS	KOA	double			16	Y	Y	Y						Y							
+SIMPLE	SIMPLE	LRIS	char			1	Y	Y	N						Y					File conforms to FITS standard	T	
+SIMULATE	SIMULATE	native	char			1	Y	Y	N						Y					DCS simulation	F	
+SKYPA	SKYPA	KOA	double	degrees		16	Y	Y	N						Y					Slit sky position angle		
+SLITGRAB	SLITGRAB	native	char			32	Y	Y	N						Y					Slitmask transport name	deployed	
+SLITLEN	SLITLEN	KOA	double	arcsec		16	Y	Y	N						Y					Slit length on sky		
+SLITMASK	SLITMASK	native	integer			16	Y	Y	N						Y					Slitmask	3	
+SLITNAME	SLITNAME	LRIS	char			32	Y	Y	N						Y					Slit name	long_0.7	
+SLITWIDT	SLITWIDT	KOA	double	arcsec		16	Y	Y	N						Y					Slit width on sky		
+SPATSCAL	SPATSCAL	KOA	double			16	Y	Y	N						Y					CCD pixel scal, spatial		
+SPECRES	SPECRES	KOA	double			16	Y	Y	N						Y					Nominal spectral resolution		
+ST	ST	native	char			24	Y	Y	N						Y					Sidereal time	02:10.3	
+TARGNAME	TARGNAME	LRIS	char			70	Y	Y	N						Y					Target name	NGC4889	
+TELESCOP	TELESCOP	DCS	char			70	Y	Y	N						Y					Telescope name	Keck I	
+TELFOCUS	TELFOCUS	DCS	double			16	Y	Y	N						Y					Telescope focus	-0.00127984	
+TEMP1C	TEMP1C	native	double			16	Y	Y	N						Y					ADC temperature 1 celsius	-100	
+TEMP2C	TEMP2C	native	double			16	Y	Y	N						Y					ADC temperature 2 celsius	-100	
+TEMPDET	TEMPDET	LRIS	double			16	Y	Y	N						Y					Detector temperature	-99.40118408	
+TEMPELC	TEMPELC	native	double			16	Y	Y	N						Y					ADC temperature electronics celsius	21.94820595	
+TEMPSET	TEMPSET	LRIS	double			16	Y	Y	N						Y					CCD desired dewar temperature	-99.99365997	
+TODISK	TODISK	native	char			1	Y	Y	N						Y					Write to disk	T	
+TRAPDOOR	TRAPDOOR	native	char			24	Y	Y	N						Y					Trapdoor status	open	
+TTIME	TTIME	native	integer	sec		16	Y	Y	N						Y					Total exposure time	600	
+TUBETEMP	TUBETEMP	native	double			16	Y	Y	N						Y					Tube temperature	1.41816	
+TV1FILT	TV1FILT	native	integer			16	Y	Y	N						Y					Offset guider filter	-999999999	
+TV1FPOS	TV1FPOS	native	double			16	Y	Y	N						Y					Offset guider positions	218.7006683	
+TV2FILT	TV2FILT	native	integer			16	Y	Y	N						Y					Slit viewing guider filter	-999999999	
+UTBM15V	UTBM15V	LRIS	double	ADC		16	Y	Y	N						Y					CCD minus 15 volts	-16.2165184	
+UTBP15V	UTBP15V	LRIS	double	ADC		16	Y	Y	N						Y					CCD plus 15 volts	16.3839283	
+UTBP30V	UTBP30V	LRIS	double	ADC		16	Y	Y	N						Y					CCD plus 30 volts	34.78017426	
+UTBP5V	UTBP5V	LRIS	double	ADC		16	Y	Y	N						Y					CCD plus 5 volts	4.94217348	
+UTBTEMP	UTBTEMP	LRIS	double	celsius		16	Y	Y	N						Y					Temperature of CCD controller	1.5	
+UTC-END	UTC-END	LRIS	char			24	Y	Y	N						Y					UTC time of end of exposure	25:13.5	
+VIDINACT	VIDINACT	native	integer			16	Y	Y	N						Y					Vidinact	15	
+VIDOFF1	VIDOFF1	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 1	1611	
+VIDOFF2	VIDOFF2	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 2	1876	
+VIDOFF3	VIDOFF3	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 3	1540	
+VIDOFF4	VIDOFF4	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 4	1822	
+VOFFSET0	VOFFSET0	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 1	1799	
+VOFFSET1	VOFFSET1	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 2	1842	
+VOFFSET2	VOFFSET2	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 3	1933	
+VOFFSET3	VOFFSET3	LRIS	integer			16	Y	Y	N						Y					Video offset amplifier 4	1762	
+WAVEBLUE	WAVEBLUE	KOA	integer	angstroms		16	Y	Y	N						Y					Blue end wavelength		
+WAVECNTR	WAVECNTR	KOA	integer	angstroms		16	Y	Y	N						Y					Central wavelength		
+WAVELEN	WAVELEN	native	double			16	Y	Y	N						Y						9000.488281	
+WAVERED	WAVERED	KOA	integer	angstroms		16	Y	Y	N						Y					Red end wavelength		
+WINDOW	WINDOW	LRIS	char			32	Y	Y	N						Y					Window	0,0,0,2048,4096	
+WXDOMHUM	WXDOMHUM	KOA	double			16	Y	Y	N						Y					Dome humidity at WXTIME		
+WXDOMTMP	WXDOMTMP	KOA	double			16	Y	Y	N						Y					Dome temperature at WXTIME		
+WXDWPT	WXDWPT	KOA	double			16	Y	Y	N						Y					Dewpoint at WXTIME		
+WXOUTHUM	WXOUTHUM	KOA	double			16	Y	Y	N						Y					Outside humidity at WXTIME		
+WXOUTTMP	WXOUTTMP	KOA	double			16	Y	Y	N						Y					Outside temperature at WXTIME		
+WXPRESS	WXPRESS	KOA	double			16	Y	Y	N						Y					Pressure at WXTIME		
+WXTIME	WXTIME	KOA	char			16	Y	Y	N						Y					Time of weather measurements		
+WXWNDIR	WXWNDIR	KOA	double			16	Y	Y	N						Y					Wind directionat WXTIME		
+WXWNDSP	WXWNDSP	KOA	double			16	Y	Y	N						Y					Wind speed at WXTIME		
+XENON	XENON	native	char			8	Y	Y	N						Y						off	
+ZINC	ZINC	native	char			8	Y	Y	N						Y						off	
