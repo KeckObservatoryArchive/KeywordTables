@@ -66,8 +66,8 @@ DARKOPEN	DARKOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	dark-slide-op
 DARKTIME	DARKTIME		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	time between end of CCD erase sequence and beginning of CCD readout		
 DATASUM	DATASUM		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	data unit checksum		
 DATE	DATE_UT		timestamp		TIMESTAMP	24	Y	N	N									1	0	universal date and time of observation		
-DATE-BEG	DATE_BEG		timestamp		TIMESTAMP	24	N	Y	Y									1	0	unix system date and time of beginning of exposure		
-DATE-END	DATE_END		timestamp		TIMESTAMP	24	N	Y	Y									1	0	unix system date and time of end of exposure		
+DATE-BEG	DATE_BEG		timestamp		TIMESTAMP	24	Y	Y	Y									1	0	unix system date and time of beginning of exposure		
+DATE-END	DATE_END		timestamp		TIMESTAMP	24	Y	Y	Y									1	0	unix system date and time of end of exposure		
 DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y									1	1	universal date of observation		
 DATLEVEL	DATLEVEL		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	data reduction level		
 DCSSTAT	DCSSTAT		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	drive-and-control-status		
