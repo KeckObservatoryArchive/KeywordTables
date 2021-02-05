@@ -1,4 +1,4 @@
-FITSKeyword	DBKeyword	SOURCE	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	DESCRIPTION	Example	Notes
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	DESCRIPTION	Example	Notes
 KOAID	KOAID	KOA	char			32	N	Y	Y						Y					KOA data file name	LR.20150424.44113.fits	
 PROPINT	PROPINT	KOA	integer			16	N	Y	Y			0			Y					Proprietary period		
 INSTRUME	INSTRUME	DCS	char			32	N	Y	Y					LRIS,LRISBLUE	Y					Instrument name	LRIS	
