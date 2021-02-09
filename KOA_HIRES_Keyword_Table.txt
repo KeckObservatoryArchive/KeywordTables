@@ -1,38 +1,43 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-ABFREQ	ABFREQ		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	antiblooming-frequency in Hz		
-ACPOWER	ACPOWER		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	ac-power on		
+KOAID	KOAID		char		VARCHAR2(33 BYTE)	30	Y	Y	N				T,F,1,0					1	1	Unique KOA file name		
+PROPINT1	PROPINT1		integer		NUMBER(*,0)	16	Y	N	N									1	0	Proprietary Period Interval for CCD01		
+PROPINT2	PROPINT2		integer		NUMBER(*,0)	16	Y	N	N									1	0	Proprietary Period Interval for CCD02		
+PROPINT3	PROPINT3		integer		NUMBER(*,0)	16	Y	N	N									1	0	Proprietary Period Interval for CCD03		
+PROPMIN	PROPMIN		integer		NUMBER(*,0)	16	Y	N	N									1	1	Proprietary Period Interval		
+ABFREQ	ABFREQ		integer		NUMBER(*,0)	16	Y	Y	N									1	0	antiblooming-frequency in Hz		
+ACPOWER	ACPOWER		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	ac-power on		
 AIRMASS	AIRMASS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	air-mass		
 AIRPRESS	AIRPRESS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	air-pressure in mbar		
 AMPLIST	AMPLIST		char		VARCHAR2(69 BYTE)	68	Y	Y	Y									1	1	readout-amplifiers		
-AMPMODE	AMPMODE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"SINGLE:A, SINGLE:B, DUAL:A+B"					1	1	Description of amplifiers used		
+AMPMODE	AMPMODE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				SINGLE:A, SINGLE:B, DUAL:A+B					1	1	Description of amplifiers used		
 AMPPSIZE	AMPPSIZE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	access in pixels (CCD)		
 ANTIBLM	ANTIBLM		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	0	antiblooming		
 ARCFOCUS	ARCFOCUS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ThAr FWHM in pixel averaged over mosaic		
 ARCRES	ARCRES		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ThAr computed resolution		
-AUTOSHUT	AUTOSHUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	automatic-shutter		
+AUTOSHUT	AUTOSHUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	automatic-shutter		
 AZ	AZ		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	telescope-azimuth		
-BCCVCLOS	BCCVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	blue-collimator-cover-closed		
-BCCVOPEN	BCCVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	blue-collimator-cover-open		
+BCCVCLOS	BCCVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	blue-collimator-cover-closed		
+BCCVOPEN	BCCVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	blue-collimator-cover-open		
 BINNING	BINNING		char		VARCHAR2(9 BYTE)	8	Y	Y	Y									1	1	binning		
-BITPIX	BITPIX		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of bits per data pixel		
+BITPIX	BITPIX		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of bits per data pixel		
 BSCALE	BSCALE		double		FLOAT(126)	16	Y	Y	Y	18.8f		100000						1	0	default scaling factor		
 BZERO	BZERO		double		FLOAT(126)	16	Y	Y	Y	18.8f		100000						1	0	offset data		
-C1CVCLOS	C1CVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	corrector1-cover-closed		
-C1CVOPEN	C1CVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	corrector1-cover-open		
-C2CVCLOS	C2CVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	corrector2-cover-closed		
-C2CVOPEN	C2CVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	corrector2-cover-open		
-CACVCLOS	CACVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	camera-cover-closed		
-CACVOPEN	CACVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	camera-cover-open		
-CAFCAL	CAFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	camera-focus-calibration		
-CAFCON	CAFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	camera-focus-control		
+C1CVCLOS	C1CVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	corrector1-cover-closed		
+C1CVOPEN	C1CVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	corrector1-cover-open		
+C2CVCLOS	C2CVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	corrector2-cover-closed		
+C2CVOPEN	C2CVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	corrector2-cover-open		
+CACVCLOS	CACVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	camera-cover-closed		
+CACVOPEN	CACVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	camera-cover-open		
+CAFCAL	CAFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	camera-focus-calibration		
+CAFCON	CAFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	camera-focus-control		
 CAFNAME	CAFNAME		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	camera-focus-name		
 CAFOCUS	CAFOCUS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	camera-focus-location in um		
-CAFRAW	CAFRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	camera-focus-raw-position		
-CAMCON	CAMCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	camera-cover-control		
+CAFRAW	CAFRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	camera-focus-raw-position		
+CAMCON	CAMCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	camera-cover-control		
 CATCUR1	CATCUR1		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	cathode1-current		
 CATCUR2	CATCUR2		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	cathode2-current		
-CATON	CATON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	cathode-power-control		
-CCDGAIN	CCDGAIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"low, high, T, F"					1	1	CCD gain used		
+CATON	CATON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	cathode-power-control		
+CCDGAIN	CCDGAIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				low, high, T, F					1	1	CCD gain used		
 CCDGN01	CCDGN01		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 01 gain (e-/DN)		
 CCDGN02	CCDGN02		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 02 gain (e-/DN)		
 CCDGN03	CCDGN03		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 03 gain (e-/DN)		
@@ -47,94 +52,90 @@ CCDRN04	CCDRN04		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 
 CCDRN05	CCDRN05		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 05 readout noise (e-)		
 CCDRN06	CCDRN06		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD video input - 06 readout noise (e-)		
 CCDSPEED	CCDSPEED		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	1	CCD readout speed		
-CCDSUM	CCDSUM		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	0			
-	CDEC		char		VARCHAR2(21 BYTE)	21	Y	N	N									1	0	Original character string DEC before conversion to Eq2000		
+CCDSUM	CCDSUM		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	0	ccd on-chip summing		
 CHECKSUM	CHECKSUM		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	checksum of header		
-COFCAL	COFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	collimator-focus-calibration		
-COFCON	COFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	collimator-focus-control		
+COFCAL	COFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	collimator-focus-calibration		
+COFCON	COFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	collimator-focus-control		
 COFNAME	COFNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	collimator-focus-name		
 COFOCUS	COFOCUS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	collimator-focus-location		
-COFRAW	COFRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	collimator-focus-raw-position		
-COLLBLUE	COLLBLUE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	1	collimator-select-blue		
-COLLBRAK	COLLBRAK		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	collimator-brake		
-COLLCON	COLLCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	collimator-control		
-COLLRED	COLLRED		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	1	collimator-select-red		
-COOLFLOW	COOLFLOW		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	external-coolant-flow		
-	CRA		char		VARCHAR2(21 BYTE)	21	Y	Y	Y				"T,F"					1	0	Original character string RA before conversion to Eq2000		
-DARKCLOS	DARKCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	dark-slide-closed		
-DARKOPEN	DARKOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	dark-slide-open		
+COFRAW	COFRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	collimator-focus-raw-position		
+COLLBLUE	COLLBLUE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	1	collimator-select-blue		
+COLLBRAK	COLLBRAK		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	collimator-brake		
+COLLCON	COLLCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	collimator-control		
+COLLRED	COLLRED		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	1	collimator-select-red		
+COOLFLOW	COOLFLOW		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	external-coolant-flow		
+DARKCLOS	DARKCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	dark-slide-closed		
+DARKOPEN	DARKOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	dark-slide-open		
 DARKTIME	DARKTIME		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	time between end of CCD erase sequence and beginning of CCD readout		
 DATASUM	DATASUM		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	data unit checksum		
 DATE	DATE_UT		timestamp		TIMESTAMP	24	Y	N	N									1	0	universal date and time of observation		
 DATE-BEG	DATE_BEG		timestamp		TIMESTAMP	24	Y	Y	Y									1	0	unix system date and time of beginning of exposure		
 DATE-END	DATE_END		timestamp		TIMESTAMP	24	Y	Y	Y									1	0	unix system date and time of end of exposure		
 DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y									1	1	universal date of observation		
-DATLEVEL	DATLEVEL		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	data reduction level		
+DATLEVEL	DATLEVEL		integer		NUMBER(*,0)	16	Y	Y	N									1	0	data reduction level		
 DCSSTAT	DCSSTAT		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	drive-and-control-status		
-DEC	DEC		double		VARCHAR2(17 BYTE)	16	Y	N	N	18.5f								1	1	Decimal J2000 Dec		
-DECKCAL	DECKCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	decker-calibration		
-DECKCON	DECKCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	decker-control		
+DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f	Y				Y			1	0	declination		
+DECKCAL	DECKCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	decker-calibration		
+DECKCON	DECKCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	decker-control		
 DECKLOC	DECKLOC		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	decker-location in mm		
-DECKNAME	DECKNAME		char		VARCHAR2(69 BYTE)	68	Y	Y	Y				"null, home, undefined, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, B1, B2, B3, B4, B5, C1, C2, C3, C4, C5, D1, D2, D3, D4, D5, E1, E2, E3, E4, E5"					1	1	decker-name		
-DECKRAW	DECKRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	decker-raw-position		
-DETCNFID	DETCNFID		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	mosaic detector configuration ID		
+DECKNAME	DECKNAME		char		VARCHAR2(69 BYTE)	68	Y	Y	Y				null, home, undefined, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, B1, B2, B3, B4, B5, C1, C2, C3, C4, C5, D1, D2, D3, D4, D5, E1, E2, E3, E4, E5					1	1	decker-name		
+DECKRAW	DECKRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	decker-raw-position		
+DETCNFID	DETCNFID		integer		NUMBER(*,0)	16	Y	Y	N									1	0	mosaic detector configuration ID		
 DETECTOR	DETECTOR		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	detector name		
 DETLSIZE	DETLSIZE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	The unbinned size of the ideal layout of the entire mosaic in IRAF section notat		
-DISPSCAL	DISPSCAL		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	"CCD pixel scale, dispersion"		
+DISPSCAL	DISPSCAL		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD pixel scale, dispersion		
 DOMESTAT	DOMESTAT		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	dome-status		
-DOOR	DOOR		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	door status		
+DOOR	DOOR		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	door status		
 DQA_DATE	DQA_DATE		timestamp		TIMESTAMP	23	Y	Y	N									1	0	Date/UT Time of DQA run		
 DQA_VERS	DQA_VERS		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	0	DQA version number		
 DWRN2LV	DWRN2LV		double		FLOAT(126)	16	Y	Y	Y	18.8f		100000						1	0	ccd dewar nitrogen level in percent		
 ECHANGL	ECHANGL		double		FLOAT(126)	16	Y	Y	Y	18.8f		45						1	1	echelle-angle		
-ECHCAL	ECHCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	echelle-calibration		
-ECHCON	ECHCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	echelle-control		
+ECHCAL	ECHCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	echelle-calibration		
+ECHCON	ECHCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	echelle-control		
 ECHNAME	ECHNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	echelle-name		
 ECHPIX	ECHPIX		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	echelle-pixel-position		
-ECHRAW	ECHRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	echelle-raw-position in encoder counts		
-ECOVCLOS	ECOVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	echelle-cover-closed		
-ECOVOPEN	ECOVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	echelle-cover-open		
+ECHRAW	ECHRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	echelle-raw-position in encoder counts		
+ECOVCLOS	ECOVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	echelle-cover-closed		
+ECOVOPEN	ECOVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	echelle-cover-open		
 EL	EL		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	telescope-elevation		
-ELAPTIME	ELAPTIME		integer		"NUMBER(*,0)"	16	Y	Y	Y			12500						1	1	elapsed-time		
+ELAPTIME	ELAPTIME		integer		NUMBER(*,0)	16	Y	Y	Y			12500						1	1	elapsed-time		
 EQUINOX	EQUINOX		double		FLOAT(126)	16	Y	Y	N	18.5f								1	0	telescope-equinox		
 ERAMODE	ERAMODE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	mosaic erase mode		
-ERASECNT	ERASECNT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	erase-count		
-ERASLINE	ERASLINE		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F,0,1"					1	0	erase-line		
-EXM0DOVF	EXM0DOVF		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of overflow samples for the EXM0DSUM value		
-EXM0DSUM	EXM0DSUM		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	sum of dark counts from exposure meter #0 since the exposure began		
-EXM0FWMP	EXM0FWMP		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	flux weighted midpoint of an EXM0 exposure		
-EXM0LOVF	EXM0LOVF		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of overflow samples for the EXM0LSUM value		
-EXM0LSUM	EXM0LSUM		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	sum of light counts from exposure meter #0 since the exposure began		
-EXM0MIDP	EXM0MIDP		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	geometric midpoint of an exposure		
+ERASECNT	ERASECNT		integer		NUMBER(*,0)	16	Y	Y	N									1	0	erase-count		
+ERASLINE	ERASLINE		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F,0,1					1	0	erase-line		
+EXM0DOVF	EXM0DOVF		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of overflow samples for the EXM0DSUM value		
+EXM0DSUM	EXM0DSUM		integer		NUMBER(*,0)	16	Y	Y	N									1	0	sum of dark counts from exposure meter #0 since the exposure began		
+EXM0FWMP	EXM0FWMP		integer		NUMBER(*,0)	16	Y	Y	N									1	0	flux weighted midpoint of an EXM0 exposure		
+EXM0LOVF	EXM0LOVF		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of overflow samples for the EXM0LSUM value		
+EXM0LSUM	EXM0LSUM		integer		NUMBER(*,0)	16	Y	Y	N									1	0	sum of light counts from exposure meter #0 since the exposure began		
+EXM0MIDP	EXM0MIDP		integer		NUMBER(*,0)	16	Y	Y	N									1	0	geometric midpoint of an exposure		
 EXM0MOD	EXM0MOD		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	exposure meter #0 exposure control mode		
-EXM0SSUM	EXM0SSUM		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	sum of exposure signal from exposure meter #0 since the exposure began		
+EXM0SSUM	EXM0SSUM		integer		NUMBER(*,0)	16	Y	Y	N									1	0	sum of exposure signal from exposure meter #0 since the exposure began		
 EXM0STA	EXM0STA		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	exposure meter #0 status		
-EXM0TARG	EXM0TARG		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	exposure meter #0 target for exposure cutoff		
-EXM0TOVF	EXM0TOVF		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of total overflow samples taken during the exposure		
-EXPOSURE	EXPOSURE		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	exposure-time in s; value identical to TTIME		
+EXM0TARG	EXM0TARG		integer		NUMBER(*,0)	16	Y	Y	N									1	0	exposure meter #0 target for exposure cutoff		
+EXM0TOVF	EXM0TOVF		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of total overflow samples taken during the exposure		
+EXPOSURE	EXPOSURE		integer		NUMBER(*,0)	16	Y	Y	N									1	0	exposure-time in s; value identical to TTIME		
 EXPTIME	EXPTIME		double		FLOAT(126)	16	Y	Y	Y	18.8f		12500						1	0	exposure time in s; interval during which the shutter was open		
-EXTEND	EXTEND		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	FITS dataset may contain extensions		
-FIL1CAL	FIL1CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	filter1-calibration		
-FIL1CON	FIL1CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	filter1-control		
+EXTEND	EXTEND		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	FITS dataset may contain extensions		
+FIL1CAL	FIL1CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	filter1-calibration		
+FIL1CON	FIL1CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	filter1-control		
 FIL1NAME	FIL1NAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	filter1-name		
-FIL1POS	FIL1POS		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	filter1-discrete-position in of 12		
-FIL1RAW	FIL1RAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	filter1-raw-position in encoder counts		
-FIL2CAL	FIL2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	filter2-calibration		
-FIL2CON	FIL2CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	filter2-control		
+FIL1POS	FIL1POS		integer		NUMBER(*,0)	16	Y	Y	N									1	0	filter1-discrete-position in of 12		
+FIL1RAW	FIL1RAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	filter1-raw-position in encoder counts		
+FIL2CAL	FIL2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	filter2-calibration		
+FIL2CON	FIL2CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	filter2-control		
 FIL2NAME	FIL2NAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	filter2-name		
-FIL2POS	FIL2POS		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	filter2-discrete-position in of 12		
-FIL2RAW	FIL2RAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	filter2-raw-position in encoder counts		
-FILEHAND	FILEHAND		char		VARCHAR2(151 BYTE)	16	Y	Y	N									1	1			
+FIL2POS	FIL2POS		integer		NUMBER(*,0)	16	Y	Y	N									1	0	filter2-discrete-position in of 12		
+FIL2RAW	FIL2RAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	filter2-raw-position in encoder counts		
 FLUSHMOD	FLUSHMOD		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0			
 FRAME	FRAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	telescope coordinate frame		
-FRAMENO	FRAMENO		integer		"NUMBER(*,0)"	16	Y	Y	N									1	1	frame-number		
-GUIDFWHM	GUIDFWHM		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0			
+FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	Y	Y	N									1	1	frame-number		
+GUIDFWHM	GUIDFWHM		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	FWHM of guide star		
 GUIDTIME	GUIDTIME		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	UT of logged GUIDFWHM value		
 HA	HA		char		VARCHAR2(17 BYTE)	16	Y	Y	N									1	0	telescope-hour-angle		
-	HA_D		double		FLOAT(126)		Y	Y	N	18.8f								1	0			
-HATCLOS	HATCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	hatch-closed		
-HATCON	HATCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	hatch-control		
-HATOPEN	HATOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	hatch-open		
+HATCLOS	HATCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	hatch-closed		
+HATCON	HATCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	hatch-control		
+HATOPEN	HATOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	hatch-open		
 IM01MD01	IM01MD01		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 01 median value (DN)		
 IM01MD02	IM01MD02		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 02 median value (DN)		
 IM01MD03	IM01MD03		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 03 median value (DN)		
@@ -153,56 +154,55 @@ IM01SD03	IM01SD03		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels s
 IM01SD04	IM01SD04		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 04 std. dev (DN)		
 IM01SD05	IM01SD05		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 05 std. dev (DN)		
 IM01SD06	IM01SD06		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Imaging pixels sub-exposure 01 video input 06 std. dev (DN)		
-IMAGETYP	IMAGETYP		char		VARCHAR2(69 BYTE)	68	Y	Y	Y				"bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus"					1	1	Image type (science or calibration file)		
+IMAGETYP	IMAGETYP		char		VARCHAR2(69 BYTE)	68	Y	Y	Y				bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus					1	1	Image type (science or calibration file)		
 IMTYPE	IMTYPE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	image type set by the observer		
 INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	instrument name		
-INSTSTAT	INSTSTAT		integer		"NUMBER(*,0)"	8	Y	Y	N									1	0	instrument status		
-IODCON	IODCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	iodine-cell-control		
-IODIN	IODIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	1	iodine cell not in light path		
-IODOUT	IODOUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	1	iodine cell out of light path		
+INSTSTAT	INSTSTAT		integer		NUMBER(*,0)	8	Y	Y	N									1	0	instrument status		
+IODCON	IODCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	iodine-cell-control		
+IODIN	IODIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	1	iodine cell not in light path		
+IODOUT	IODOUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	1	iodine cell out of light path		
 IROT2ANG	IROT2ANG		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	image-rotator-encoder2-angle		
-IROT2CAL	IROT2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F"					1	0	image-rotator-encoder2-calibration		
-IROTCAL	IROTCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F"					1	0	image rotator calibration		
-IROTCON	IROTCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	image-rotator-control		
-IROTCVOP	IROTCVOP		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	image-rotator-cover-open		
-IROTIN	IROTIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	image rotator not in light path		
-IROTOUT	IROTOUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	image rotator out of light path		
-KEEPPREP	KEEPPREP		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F,1,0"					1	0	keep-prescan-pixels		
-KOAID	KOAID		char		VARCHAR2(33 BYTE)	30	Y	Y	N				"T,F,1,0"					1	1	Unique KOA file name		
-LAMPCAT1	LAMPCAT1		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	hollow-cathode-lamp1		
-LAMPCAT2	LAMPCAT2		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	hollow-cathode-lamp2		
-LAMPDEUT	LAMPDEUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	deuterium-lamp		
-LAMPLSR	LAMPLSR		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	laser-power		
+IROT2CAL	IROT2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F					1	0	image-rotator-encoder2-calibration		
+IROTCAL	IROTCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F					1	0	image rotator calibration		
+IROTCON	IROTCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	image-rotator-control		
+IROTCVOP	IROTCVOP		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	image-rotator-cover-open		
+IROTIN	IROTIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	image rotator not in light path		
+IROTOUT	IROTOUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	image rotator out of light path		
+KEEPPREP	KEEPPREP		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F,1,0					1	0	keep-prescan-pixels		
+KOAID	KOAID		char		VARCHAR2(33 BYTE)	30	Y	Y	N				T,F,1,0					1	1	Unique KOA file name		
+LAMPCAT1	LAMPCAT1		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	hollow-cathode-lamp1		
+LAMPCAT2	LAMPCAT2		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	hollow-cathode-lamp2		
+LAMPDEUT	LAMPDEUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	deuterium-lamp		
+LAMPLSR	LAMPLSR		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	laser-power		
 LAMPNAME	LAMPNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	lamp name		
-LAMPQTZ2	LAMPQTZ2		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	quartz-lamp2		
-LFILCAL	LFILCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	lamp-filter-calibration		
-LFILCON	LFILCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	lamp-filter-control		
+LAMPQTZ2	LAMPQTZ2		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	quartz-lamp2		
+LFILCAL	LFILCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	lamp-filter-calibration		
+LFILCON	LFILCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	lamp-filter-control		
 LFILNAME	LFILNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	lamp-filter-name		
-LFILPOS	LFILPOS		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	lamp-filter-discrete-position in of 12		
-LFILRAW	LFILRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	lamp-filter-raw-position in encoder counts		
-LIGHTS	LIGHTS		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F"					1	0	Interior lights status		
-LMIRRIN	LMIRRIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	comparison-lamp-mirror-in		
-LMIRROUT	LMIRROUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	comparison-lamp-mirror-out		
-LSELCAL	LSELCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	lamp-select-calibration		
-LSELCON	LSELCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	lamp-select-control		
+LFILPOS	LFILPOS		integer		NUMBER(*,0)	16	Y	Y	N									1	0	lamp-filter-discrete-position in of 12		
+LFILRAW	LFILRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	lamp-filter-raw-position in encoder counts		
+LIGHTS	LIGHTS		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F					1	0	Interior lights status		
+LMIRRIN	LMIRRIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	comparison-lamp-mirror-in		
+LMIRROUT	LMIRROUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	comparison-lamp-mirror-out		
+LSELCAL	LSELCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	lamp-select-calibration		
+LSELCON	LSELCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	lamp-select-control		
 LSELNAME	LSELNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	lamp-select-name		
-LSELRAW	LSELRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	lamp-select-raw-position		
+LSELRAW	LSELRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	lamp-select-raw-position		
 MJD	MJD		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	modified-julian-date		
-MOSMODE	MOSMODE		char		VARCHAR2(17 BYTE)	16	Y	Y	Y				"null, Spectral, Direct, Longslit, CCD1, CCD2, CCD3, NoCCD, B, G, R, [B, G], [B, R], [G, R], [B, G, R]"					1	1	CCD readout mode		
-NAXIS	NAXIS		integer		"NUMBER(*,0)"	16	Y	Y	Y			3						1	0	number of data axes		
-NPIXSAT	NPIXSAT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of saturated pixels (65536 DN)		
-NSUBINT	NSUBINT		integer		"NUMBER(*,0)"	16	Y	Y	Y			20						1	0	number-of-subintegrations		
-NUMAMPS	NUMAMPS		integer		"NUMBER(*,0)"	16	Y	Y	N			16						1	0	number-of-readout-amplifiers		
-NVIDINP	NVIDINP		integer		"NUMBER(*,0)"	16	Y	Y	Y			16						1	1	number of video inputs		
+MOSMODE	MOSMODE		char		VARCHAR2(17 BYTE)	16	Y	Y	Y				null, Spectral, Direct, Longslit, CCD1, CCD2, CCD3, NoCCD, B, G, R, [B, G], [B, R], [G, R], [B, G, R]					1	1	CCD readout mode		
+NAXIS	NAXIS		integer		NUMBER(*,0)	16	Y	Y	Y			3						1	0	number of data axes		
+NPIXSAT	NPIXSAT		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of saturated pixels (65536 DN)		
+NSUBINT	NSUBINT		integer		NUMBER(*,0)	16	Y	Y	Y			20						1	0	number-of-subintegrations		
+NUMAMPS	NUMAMPS		integer		NUMBER(*,0)	16	Y	Y	N			16						1	0	number-of-readout-amplifiers		
+NVIDINP	NVIDINP		integer		NUMBER(*,0)	16	Y	Y	Y			16						1	1	number of video inputs		
 OA	OA		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	observing assistant		
 OBJECT	OBJECT		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	object name		
 OBSERVER	OBSERVER		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	observer name		
-OBSNUM	OBSNUM		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	observation number		
+OBSNUM	OBSNUM		integer		NUMBER(*,0)	16	Y	Y	N									1	0	observation number		
 OBSTYPE	OBSTYPE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	type of observation		
-OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N									1	1	Original filename		
 OUTDIR	OUTDIR		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	readout-directory		
 OUTFILE	OUTFILE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	readout-filename prefix		
-OVRFLUSH	OVRFLUSH		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	0	postscan-flush-lines		
+OVRFLUSH	OVRFLUSH		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	0	postscan-flush-lines		
 PANE	PANE		char		VARCHAR2(25 BYTE)	24	Y	N	N									1	0	mosaic-pane; Defines window for readout		
 PANE1	PANE1		char		VARCHAR2(25 BYTE)	24	Y	N	N									1	0	Mosaic readout window 1		
 PANE10	PANE10		char		VARCHAR2(25 BYTE)	24	Y	N	N									1	0	Mosaic readout window 10		
@@ -224,26 +224,22 @@ PANEFITS	PANEFITS		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	pane-fits-hdu-fo
 PANELIST	PANELIST		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	bitmask describing the list of up to 16 PANEn keywords to be used when windowing		
 PANERROR	PANERROR		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	gives a list of active PANEs (from PANELIST) which were inconsistent at the time		
 PARANG	PARANG		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	parallactic-angle-astrometric		
-PEXPELAP	PEXPELAP		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0			
-PEXPTIME	PEXPTIME		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0			
+PEXPELAP	PEXPELAP		integer		NUMBER(*,0)	16	Y	Y	N									1	0			
+PEXPTIME	PEXPTIME		integer		NUMBER(*,0)	16	Y	Y	N									1	0			
 PMT0MPOW	PMT0MPOW		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	photomultiplier tube #0 master power		
-PMT0OVL	PMT0OVL		char		VARCHAR2(17 BYTE)	16	Y	Y	Y				"T,F,true,false"					1	0	photomultiplier tube #0 ambient light overload signal		
+PMT0OVL	PMT0OVL		char		VARCHAR2(17 BYTE)	16	Y	Y	Y				T,F,true,false					1	0	photomultiplier tube #0 ambient light overload signal		
 PMT0TPOW	PMT0TPOW		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	photomultiplier tube #0 tube power		
-POSTLINE	POSTLINE		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	0	postscan-lines (rows)		
-POSTPIX	POSTPIX		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	1	postscan-pixels in pixel col		
-PRECOL	PRECOL		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	1	prescan-columns in pixel col		
-PREFLUSH	PREFLUSH		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	0	prescan-flush-lines (rows)		
-PRELINE	PRELINE		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	0	prescan-lines (rows)		
-PREROW	PREROW		integer		"NUMBER(*,0)"	16	Y	Y	Y			2048						1	0			
+POSTLINE	POSTLINE		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	0	postscan-lines (rows)		
+POSTPIX	POSTPIX		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	1	postscan-pixels in pixel col		
+PRECOL	PRECOL		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	1	prescan-columns in pixel col		
+PREFLUSH	PREFLUSH		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	0	prescan-flush-lines (rows)		
+PRELINE	PRELINE		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	0	prescan-lines (rows)		
+PREROW	PREROW		integer		NUMBER(*,0)	16	Y	Y	Y			2048						1	0	number of prescan rows		
 PROGID	PROGID		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	WMKO program ID		
 PROGINST	PROGINST		char		VARCHAR2(9 BYTE)	9	Y	N	N									1	1	Program institution		
 PROGPI	PROGPI		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	Program principal investigator		
 PROGTITL	PROGTITL		char		VARCHAR2(211 BYTE)	210	Y	N	N									1	1	Title of observing program		
 PROP0STA	PROP0STA		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	Propeller mirror #0 status		
-PROPINT1	PROPINT1		integer		"NUMBER(*,0)"	16	Y	N	N									1	0	Proprietary Period Interval for CCD01		
-PROPINT2	PROPINT2		integer		"NUMBER(*,0)"	16	Y	N	N									1	0	Proprietary Period Interval for CCD02		
-PROPINT3	PROPINT3		integer		"NUMBER(*,0)"	16	Y	N	N									1	0	Proprietary Period Interval for CCD03		
-PROPMIN	PROPMIN		integer		"NUMBER(*,0)"	16	Y	N	N									1	1	Proprietary Period Interval		
 PT01MD01	PT01MD01		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Overscan pixels sub-exposure 01 video input 01 median value		
 PT01MD02	PT01MD02		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Overscan pixels sub-exposure 01 video input 02 median value		
 PT01MD03	PT01MD03		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Overscan pixels sub-exposure 01 video input 03 median value		
@@ -266,37 +262,35 @@ PWRBLOK	PWRBLOK		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ccd-dewar-heater-v
 PWRBLOK1	PWRBLOK1		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Power to heater block in the dewar.		
 PWRBLOK2	PWRBLOK2		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0			
 PWRBLOK3	PWRBLOK3		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0			
-RA	RA		double		FLOAT(126)	16	Y	Y	N	18.5f								1	1	Decimal J2000 RA		
-RCCVCLOS	RCCVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	red-collimator-cover-closed		
-RCCVOPEN	RCCVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	red-collimator-cover-open		
+RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f	Y				Y			1	0	right ascention		
+RCCVCLOS	RCCVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	red-collimator-cover-closed		
+RCCVOPEN	RCCVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	red-collimator-cover-open		
 RELHUM	RELHUM		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	relative-humidity in percent		
 RESN2LV	RESN2LV		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Reservoir nitrogen level		
-ROQUAL	ROQUAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"Good,Bad"					1	1	Electronics readout quality (to check for glitched files).		
+ROQUAL	ROQUAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				Good,Bad					1	1	Electronics readout quality (to check for glitched files).		
 ROTDEST	ROTDEST		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	rotator destination in encoder counts		
 ROTMODE	ROTMODE		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	rotator mode		
 ROTPOSN	ROTPOSN		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	rotator position		
-ROWSHFT	ROWSHFT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	row-shift-per-subintegrations		
+ROWSHFT	ROWSHFT		integer		NUMBER(*,0)	16	Y	Y	N									1	0	row-shift-per-subintegrations		
 SEMESTER	SEMESTER		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	0	observing semester		
-	SEMID		char		VARCHAR2(21 BYTE)	16	Y	N	N									1	1			
 SHBLOPTM	SHBLOPTM		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	shutter-blade-opening-time in s		
-SHCLOCNT	SHCLOCNT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of times the shutter has closed for the most recently started exposure		
+SHCLOCNT	SHCLOCNT		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of times the shutter has closed for the most recently started exposure		
 SHLATCLO	SHLATCLO		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	shutter-latency-on-closing in s		
-SHOPNCNT	SHOPNCNT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	number of times the shutter has opened for the most recently started exposure		
+SHOPNCNT	SHOPNCNT		integer		NUMBER(*,0)	16	Y	Y	N									1	0	number of times the shutter has opened for the most recently started exposure		
 SIG2NOIS	SIG2NOIS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	1	signal-to-noise ratio at WAVECNTR		
-SIMPLE	SIMPLE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	file conforms to FITS standard		
+SIMPLE	SIMPLE		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	file conforms to FITS standard		
 SKYPA	SKYPA		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	HIRES slit sky position angle (deg)		
-SLITCAL	SLITCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	slit-calibration		
-SLITCON	SLITCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	slit-control		
+SLITCAL	SLITCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	slit-calibration		
+SLITCON	SLITCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	slit-control		
 SLITLEN	SLITLEN		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Slit length on sky (arcsec)		
 SLITNAME	SLITNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	slit-name		
-SLITRAW	SLITRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	slit-raw-position in encoder counts		
+SLITRAW	SLITRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	slit-raw-position in encoder counts		
 SLITWID	SLITWID		double		FLOAT(126)	16	Y	Y	Y	18.8f		25						1	1	slit-width		
 SLITWIDT	SLITWIDT		double		FLOAT(126)	16	Y	Y	N	18.8f								1	1	Slit width on sky (arcsec)		
-SPATSCAL	SPATSCAL		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	"CCD pixel scale, spatial"		
+SPATSCAL	SPATSCAL		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	CCD pixel scale, spatial		
 SPECRES	SPECRES		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Nominal spectral resolution		
-	spt_ind		integer		"NUMBER(*,0)"		Y	Y	N									1	0			
 ST	ST		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	local-apparent-sidereal-time		
-SUBEXP	SUBEXP		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F,TRUE,FALSE"					1	0	0		
+SUBEXP	SUBEXP		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F,TRUE,FALSE					1	0	0		
 TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	1	target-name		
 TELESCOP	TELESCOP		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	telescope-name		
 TELFOCUS	TELFOCUS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Telescope focus		
@@ -312,28 +306,28 @@ TEMPLAMP	TEMPLAMP		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	lamp-enclosure-t
 TEMPOUT	TEMPOUT		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	outside-temperature (C)		
 TEMPSET	TEMPSET		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ccd desired dewar temperature (C)		
 TEMPTV	TEMPTV		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	tv-enclosure-temperature (C)		
-TTIME	TTIME		integer		"NUMBER(*,0)"	16	Y	Y	Y			12500						1	0	total exposure time (sec)		
-TVACAL	TVACAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-aperture-calibration		
-TVACON	TVACON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv aperture control		
+TTIME	TTIME		integer		NUMBER(*,0)	16	Y	Y	Y			12500						1	0	total exposure time (sec)		
+TVACAL	TVACAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-aperture-calibration		
+TVACON	TVACON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv aperture control		
 TVANAME	TVANAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	tv aperture name		
-TVARAW	TVARAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-aperture-raw-position in counts		
-TVF1CAL	TVF1CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-filter1-calibration		
-TVF1CON	TVF1CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-filter1-control		
+TVARAW	TVARAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-aperture-raw-position in counts		
+TVF1CAL	TVF1CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-filter1-calibration		
+TVF1CON	TVF1CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-filter1-control		
 TVF1NAME	TVF1NAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	tv-filter1-name		
-TVF1POS	TVF1POS		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-filter1-discrete-position in of 8		
-TVF1RAW	TVF1RAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-filter1-raw-position in counts		
-TVF2CAL	TVF2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-filter2-calibration		
-TVF2CON	TVF2CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-filter2-control		
+TVF1POS	TVF1POS		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-filter1-discrete-position in of 8		
+TVF1RAW	TVF1RAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-filter1-raw-position in counts		
+TVF2CAL	TVF2CAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-filter2-calibration		
+TVF2CON	TVF2CON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-filter2-control		
 TVF2NAME	TVF2NAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	tv-filter2-name		
-TVF2POS	TVF2POS		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-filter2-discrete-position in of 8		
-TVF2RAW	TVF2RAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-filter2-raw-position in counts		
-TVFCAL	TVFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-focus-calibration		
-TVFCON	TVFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-focus-control		
+TVF2POS	TVF2POS		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-filter2-discrete-position in of 8		
+TVF2RAW	TVF2RAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-filter2-raw-position in counts		
+TVFCAL	TVFCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-focus-calibration		
+TVFCON	TVFCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-focus-control		
 TVFNAME	TVFNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	tv-focus-name		
 TVFOCUS	TVFOCUS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	tv-focus-location in um		
-TVFRAW	TVFRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	tv-focus-raw-position in counts		
-TVON	TVON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	tv-controller-power		
-UPSON	UPSON		char		VARCHAR2(9 BYTE)	8	Y	Y	N				"T,F"					1	0	ups-power on		
+TVFRAW	TVFRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	tv-focus-raw-position in counts		
+TVON	TVON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	tv-controller-power		
+UPSON	UPSON		char		VARCHAR2(9 BYTE)	8	Y	Y	N				T,F					1	0	ups-power on		
 UT	UT		char		VARCHAR2(17 BYTE)	16	N	Y	Y									1	1	coordinated universal time		
 UT_END	UT_END		char		VARCHAR2(17 BYTE)	16	Y	Y	Y									1	0	UT time of end of exposure		
 UTB15VEN	UTB15VEN		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	ccd-15-volts-enable		
@@ -343,19 +337,18 @@ UTBP15V	UTBP15V		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ccd-plus-15-volts 
 UTBP30V	UTBP30V		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ccd-plus-30-volts in ADC value		
 UTBP5V	UTBP5V		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	ccd-plus-5-volts in ADC value		
 UTBTEMP	UTBTEMP		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	temperature of the CCD controller utility board		
-UTDATETIME	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N									1	0			
-VIDINACT	VIDINACT		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0			
-VIDINBEG	VIDINBEG		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	bitmask indicating which of the video inputs in the mosaic were shifted at the b		
-VIDINEND	VIDINEND		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	bitmask indicating which of the video inputs in the mosaic were shifted at the e		
-VIDOFF1	VIDOFF1		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-0		
-VIDOFF2	VIDOFF2		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-1		
-VIDOFF3	VIDOFF3		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-2		
-VIDOFF4	VIDOFF4		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-3		
-VIDOFF5	VIDOFF5		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-4		
-VIDOFF6	VIDOFF6		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	video-offset-amplifier-5		
-WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	1	"Echelle blaze, image blue end (A)"		
-WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	0	"Echelle blaze, image center (A)"		
-WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	1	"Echelle blaze, image red end (A)"		
+VIDINACT	VIDINACT		integer		NUMBER(*,0)	16	Y	Y	N									1	0			
+VIDINBEG	VIDINBEG		integer		NUMBER(*,0)	16	Y	Y	N									1	0	bitmask indicating which of the video inputs in the mosaic were shifted at the b		
+VIDINEND	VIDINEND		integer		NUMBER(*,0)	16	Y	Y	N									1	0	bitmask indicating which of the video inputs in the mosaic were shifted at the e		
+VIDOFF1	VIDOFF1		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-0		
+VIDOFF2	VIDOFF2		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-1		
+VIDOFF3	VIDOFF3		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-2		
+VIDOFF4	VIDOFF4		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-3		
+VIDOFF5	VIDOFF5		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-4		
+VIDOFF6	VIDOFF6		integer		NUMBER(*,0)	16	Y	Y	N									1	0	video-offset-amplifier-5		
+WAVEBLUE	WAVEBLUE		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	1	Echelle blaze, image blue end (A)		
+WAVECNTR	WAVECNTR		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	0	Echelle blaze, image center (A)		
+WAVERED	WAVERED		double		FLOAT(126)	16	Y	Y	Y	18.8f		20000						1	1	Echelle blaze, image red end (A)		
 WINDOW	WINDOW		char		VARCHAR2(31 BYTE)	30	Y	Y	N									1	1	window		
 WXDOMHUM	WXDOMHUM		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	humidity level inside the dome		
 WXDOMTMP	WXDOMTMP		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	temperature inside the dome		
@@ -366,16 +359,25 @@ WXPRESS	WXPRESS		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	Pressure
 WXTIME	WXTIME		char		VARCHAR2(17 BYTE)	16	Y	N	N									1	0	Timestamp of weather recordings		
 WXWNDIR	WXWNDIR		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	direction of wind		
 WXWNDSP	WXWNDSP		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	speed of wind		
-XCOVCLOS	XCOVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	cross-disperser-cover-closed		
-XCOVOPEN	XCOVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	cross-disperser-cover-open		
+XCOVCLOS	XCOVCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	cross-disperser-cover-closed		
+XCOVOPEN	XCOVOPEN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	cross-disperser-cover-open		
 XDANGL	XDANGL		double		FLOAT(126)	16	Y	Y	Y	18.8f		45						1	1	cross-disperser-angle		
-XDCAL	XDCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	cross-disperser-calibration		
-XDCON	XDCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				"T,F"					1	0	cross-disperser-control		
+XDCAL	XDCAL		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	cross-disperser-calibration		
+XDCON	XDCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y				T,F					1	0	cross-disperser-control		
 XDDELTAD	XDDELTAD		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	cross-disperser-blaze in deg		
 XDISPERS	XDISPERS		char		VARCHAR2(9 BYTE)	8	Y	N	N									1	1	cross-disperser		
 XDNAME	XDNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									1	0	cross-disperser-name		
 XDPIX	XDPIX		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	cross-disperser-pixel-position in pixel row		
-XDRAW	XDRAW		integer		"NUMBER(*,0)"	16	Y	Y	N									1	0	cross-disperser-raw-position in encoder counts		
+XDRAW	XDRAW		integer		NUMBER(*,0)	16	Y	Y	N									1	0	cross-disperser-raw-position in encoder counts		
 XDSIGMAI	XDSIGMAI		double		FLOAT(126)	16	Y	Y	N	18.8f								1	0	cross-disperser-groove-density (line/mm)		
-XFLIP	XFLIP		integer		"NUMBER(*,0)"	8	Y	Y	N									1	0	camera-x-flip		
-YFLIP	YFLIP		integer		"NUMBER(*,0)"	8	Y	N	N									1	0	camera-y-flip		
+XFLIP	XFLIP		integer		NUMBER(*,0)	8	Y	Y	N									1	0	camera-x-flip		
+YFLIP	YFLIP		integer		NUMBER(*,0)	8	Y	N	N									1	0	camera-y-flip		
+OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N									1	1	Original filename		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	HA_D		double		FLOAT(126)		Y	Y	N	18.8f								1	0	telescope-hour-angle		
+	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N									1	0			
+	MD_INGTIME		timestamp		TIMESTAMP	16	Y	Y	N									1	0			
+	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N									1	0	DATE_OBS and UT combined as a timestamp		
+	FILEHAND		char		VARCHAR2(151 BYTE)	16	Y	Y	N									1	1	Path to the file in the archive		
+	SEMID		char		VARCHAR2(21 BYTE)	16	Y	N	N									1	1	SEMESTER and PROGID		
