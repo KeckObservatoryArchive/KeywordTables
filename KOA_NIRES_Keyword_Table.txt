@@ -219,7 +219,7 @@ WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Wind direction 
 WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Wind speed at WXTIME		
 XOFFSET	XOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		dither pattern X offset	0	
 XREFSUB	XREFSUB	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Subtract reference pixels along columns		
-Y	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N	18.5f	Y				Y			Y		modified julian date of observation		
+MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N	18.5f	Y				Y			Y		modified julian date of observation		
 YOFFSET	YOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		YOFFSET dither pattern Y/Nod offset	0	
 YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Subtract reference pixels along rows		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
