@@ -58,9 +58,9 @@ DWRTMP6	DWRTMP6	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch C4 tempera
 DWRTMP7	DWRTMP7	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D1 temperature (K)	75.518	
 DWRTMP8	DWRTMP8	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D2 temperature (K)	78.331	
 DWRTMP9	DWRTMP9	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D3 temperature (K)	75.433	
-EL	EL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y	Y	telescope elevation		
+EL	EL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y		telescope elevation		
 ELAPTIME	ELAPTIME	KOA	double	seconds	FLOAT(126)	24	Y	Y	Y	18.8f					Y	Y		Y	Y	Total integration time (ITIME * COADDS)	2	
-EQUINOX	EQUINOX	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y	Y	telescope equinox		
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y		telescope equinox		
 EXTEND	EXTEND	NIRES	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y			Y		FITS dataset may contain extensions	T	
 FCA	FCA	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model amplitude parameter	5.21	
 FCANAMOR	FCANAMOR	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model anamorphic factor	1.46	
@@ -75,10 +75,10 @@ FCSON	FCSON	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Enable model-based fle
 FCSVOLT1	FCSVOLT1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 1 voltage	0	
 FCSVOLT2	FCSVOLT2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 2 voltage	0	
 FCTHETXY	FCTHETXY	NIRES	char		VARCHAR2(32)	32	Y	Y	N	32s					Y			Y		Absolute rotation angles (microradians BYTE)	0.0 0.0	
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f								Y	Y	FITS file size in megabytes	44.8	
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f								Y		FITS file size in megabytes	44.8	
 FILTER	FILTER	KOA	char		VARCHAR2(8)	8	Y	Y	N	8s				null/Kp	Y	Y		Y	Y	Filter (null for spec, Kp for image BYTE)		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		focal station		
-FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y		Copy of FRAMENUM		
+FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y	Y	Copy of FRAMENUM		
 FRAMENUM	FRAMENUM	NIRES	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y		Image frame number	39	
 GAIN	GAIN	NIRES	double	e/DN	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Detector gain, e/DN	0.3	
 GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
@@ -106,7 +106,7 @@ NUMFS	NUMFS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of Fowler pair
 NUMREADS	NUMREADS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of reads per coadd	2	
 NUMUTRS	NUMUTRS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		SDSU NUTR value	1	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Observing assistant		
-OBJECT	OBJECT	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y		Y	Y	Object name	MIRA sky	
+OBJECT	OBJECT	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y		Y		Object name	MIRA sky	
 OBSERVER	OBSERVER	NIRES	char		VARCHAR2(68)	68	Y	Y	N	68s					Y			Y		Observer name(s BYTE)	Matthews/Cromer	
 OBSTYPE	OBSTYPE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Observation type	astro	What are allowed values?
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Original file name at the telescope, copied from DATAFILE keyword	v171005_0001	
@@ -151,7 +151,7 @@ POYPOS6	POYPOS6	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin
 POYPOS7	POYPOS7	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 7		
 POYPOS8	POYPOS8	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 8		
 POYPOS9	POYPOS9	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 9		
-PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y		Y	Y	WMKO assigned program identification code		
+PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y		Y		WMKO assigned program identification code		
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program institution		
 PROGNAME	PROGNAME	NIRES	char		VARCHAR2(8 BYTE)	16	Y	Y	N	16s					Y			Y	Y	Observer assigned program ID		
 PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program principal investigator		
@@ -227,3 +227,4 @@ YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Subtract reference
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
+	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N	21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	
