@@ -58,8 +58,8 @@ BGROTNAM	BGROTNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grati
 BGROTNUM	BGROTNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating rotator position num (0-2)	2	
 BGTNAME	BGTNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Blue Grating transfer position name	Beam	
 BGTPOS	BGTPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Grating transfer position num (0-1)	1	
-BHTR1ST	BHTR1ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 1 Status	UNKNOWN	If not unknown, will this a string or integer?  String (OK)
-BHTR2ST	BHTR2ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9.9s					Y					Blue Heater 2 Status	UNKNOWN	If not unknown, will this a string or integer?
+BHTR1ST	BHTR1ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9s					Y					Blue Heater 1 Status	UNKNOWN	If not unknown, will this a string or integer?  String (OK)
+BHTR2ST	BHTR2ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	9s					Y					Blue Heater 2 Status	UNKNOWN	If not unknown, will this a string or integer?
 BIASFN	BIASFN	KCWI-F	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Bias filename	0	
 BINNING	BINNING	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					binning: serial/axis1, parallel/axis2	2,2	
 BINPUT1	BINPUT1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					Blue Heater 1 Input Sensor	7	
