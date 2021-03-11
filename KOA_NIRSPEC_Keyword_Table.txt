@@ -387,7 +387,7 @@ WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N											Wind direction (N th
 WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N											Wind speed (mph)		
 XENON	XENON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N											Xenon lamp status		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427
+	Dec2000	NExScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion	
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N	151s	Y				N	Y		Y	Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits
