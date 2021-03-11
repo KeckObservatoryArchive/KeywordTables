@@ -1,5 +1,5 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID		char		VARCHAR2(33 BYTE)	30	Y	Y	N					T,F,1,0				Y	Y	Unique KOA file name		
+KOAID	KOAID	KOA	char		VARCHAR(30 BYTES)	30	N	Y	Y	30s					Y			Y	Y	Unique identifier for each file		
 PROPINT1	PROPINT1		integer		NUMBER(*,0)	16	Y	N	N									Y	N	Proprietary Period Interval for CCD01		
 PROPINT2	PROPINT2		integer		NUMBER(*,0)	16	Y	N	N									Y	N	Proprietary Period Interval for CCD02		
 PROPINT3	PROPINT3		integer		NUMBER(*,0)	16	Y	N	N									Y	N	Proprietary Period Interval for CCD03		
@@ -169,7 +169,6 @@ IROTCVOP	IROTCVOP		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	image-rotator-c
 IROTIN	IROTIN		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	image rotator not in light path		
 IROTOUT	IROTOUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	image rotator out of light path		
 KEEPPREP	KEEPPREP		char		VARCHAR2(9 BYTE)	8	Y	Y	N					T,F,1,0				Y	N	keep-prescan-pixels		
-KOAID	KOAID		char		VARCHAR2(33 BYTE)	30	Y	Y	N					T,F,1,0				Y	Y	Unique KOA file name		
 LAMPCAT1	LAMPCAT1		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	hollow-cathode-lamp1		
 LAMPCAT2	LAMPCAT2		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	hollow-cathode-lamp2		
 LAMPDEUT	LAMPDEUT		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	deuterium-lamp		
