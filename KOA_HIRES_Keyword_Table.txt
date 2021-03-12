@@ -188,7 +188,7 @@ LSELCON	LSELCON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	lamp-select-contr
 LSELNAME	LSELNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									Y	N	lamp-select-name		
 LSELRAW	LSELRAW		integer		NUMBER(*,0)	16	Y	Y	N									Y	N	lamp-select-raw-position		
 MJD	MJD		double		FLOAT(126)	16	Y	Y	N	18.8f								Y	N	modified-julian-date		
-MOSMODE	MOSMODE		char		VARCHAR2(17 BYTE)	16	Y	Y	Y					null, Spectral, Direct, Longslit, CCD1, CCD2, CCD3, NoCCD, B, G, R, [B, G], [B, R], [G, R], [B, G, R]				Y	Y	CCD readout mode		
+MOSMODE	MOSMODE		char		VARCHAR2(17 BYTE)	16	Y	Y	Y					["null", "Spectral", "Direct", "Longslit", "CCD1", "CCD2", "CCD3", "NoCCD", "B", "G", "R", "B, G", "B, R", "G, R", "B, G, R"]				Y	Y	CCD readout mode		
 NAXIS	NAXIS		integer		NUMBER(*,0)	16	Y	Y	Y			0	3					Y	N	number of data axes		
 NPIXSAT	NPIXSAT		integer		NUMBER(*,0)	16	Y	Y	N									Y	N	number of saturated pixels (65536 DN)		
 NSUBINT	NSUBINT		integer		NUMBER(*,0)	16	Y	Y	Y			0	20					Y	N	number-of-subintegrations		
