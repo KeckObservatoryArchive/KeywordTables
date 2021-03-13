@@ -177,7 +177,7 @@ IMAGEMD	IMAGEMD	Added	double	DN	FLOAT(126)	32	Y	Y	N											Imaging pixels, me
 IMAGEMN	IMAGEMN	Added	double	DN	FLOAT(126)	32	Y	Y	N											Imaging pixels, mean (DN)		
 IMAGESD	IMAGESD	Added	double	DN	FLOAT(126)	32	Y	Y	N											Imaging pixels, standard deviation (DN)		
 INSTANGL	INSTANGL	Native	double		FLOAT(126)	32	Y	Y	N											prog-to-instrument angle		
-INSTRUME	INSTRUME	Native	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	Y					NIRSPEC						Instrument name		
+INSTRUME	INSTRUME	Native	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	Y					NIRSPEC,NIRSPAO						Instrument name		
 INSTSTAT	INSTSTAT	Added	integer	n/a	NUMBER(*,0)	16	Y	Y	N											KOA instrument status		
 IROTLOC	IROTLOC	Native	double		FLOAT(126)	32	Y	Y	N											Step position of Image rotator		
 IROTPOS	IROTPOS	Native	double	degrees	FLOAT(126)	32	Y	Y	N											Image rotator position		
