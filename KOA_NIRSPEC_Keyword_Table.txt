@@ -7,8 +7,8 @@ UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y			00:00.0	00:00.0					
 KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y					arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type		
 IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Observation type		
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N					SCAM,SPEC					Y	Camera name		
-DEC	CDEC	CDEC	native	char	VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination		
-RA	CRA	CRA	LRIS	char	VARCHAR2(24 BYTE)	32	Y	Y	N						Y			Y		Telescope right ascension		
+DEC	CDEC	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination		
+RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	32	Y	Y	N						Y			Y		Telescope right ascension		
 EQUINOX	Dec2000	Native	double	year	FLOAT(126)	32	Y	Y	N											telescope equinox (2000.0)		
 FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y				9999						Y	copy of FILENUM		
 FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N											Frame number		
@@ -169,7 +169,7 @@ HEART_09	HEART_09	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat ac
 HEART_10	HEART_10	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat active		
 HEART_11	HEART_11	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat active		
 HEART_12	HEART_12	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat active		
-HEART_13	HEART_13	Na	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat active		
+HEART_13	HEART_13	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Heartbeat active		
 HRPSTYPE	HRPSTYPE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N											Vertical reference pixel subtraction type		
 HXRGCFG1	HXRGCFG1	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N											ASIC Regs		
 HXRGCFG2	HXRGCFG2	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N											ASIC Regs		
@@ -312,7 +312,7 @@ SCAMPA	SCAMPA	Native	double	degrees	FLOAT(126)	32	Y	Y	N											Scam position 
 SCFLTTMP	SCFLTTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N											SCAM filter temperature		
 SCIFILT1	SCIFILT1	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Filter 1 position		
 SCIFILT2	SCIFILT2	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Filter 2 position		
-SCRIPTNA	SCRIPTNA	Naative	char		VARCHAR2(72 BYTE)	72	Y	Y	N											Name of current script		
+SCRIPTNA	SCRIPTNA	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N											Name of current script		
 SECFOCUS	SECFOCUS	Native	double	mm	FLOAT(126)	32	Y	Y	N											secondary mirror focus raw (1.325 mm)		
 SECSTST	SECSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											DCS Secondary status string		
 SECTHETX	SECTHETX	Native	double	arcsec	FLOAT(126)	32	Y	Y	N											DCS secondary theta x		
@@ -369,7 +369,7 @@ VRPSTYPE	VRPSTYPE	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N											Vertical ref
 WCDMSTAT	WCDMSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N											Status of DM loop		
 WCDTSTAT	WCDTSTAT	Native	char		VARCHAR2(25 BYTE)	25	Y	Y	N											Status of down tt loop		
 WCSDIM	WCSDIM	Native	integer		NUMBER(*,0)	16	Y	Y	N											Number of WCS dimensions		
-WCSNAME	WCSNAME	Na	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Descriptive name of this WCS		
+WCSNAME	WCSNAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Descriptive name of this WCS		
 WCUTSTAT	WCUTSTAT	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Status of up tt loop		
 WSCNORFN	WSCNORFN	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N											Name of origin vec file		
 WSFRRT	WSFRRT	Native	integer		NUMBER(*,0)	16	Y	Y	N											Frame rate for WFS cam (Hz)		
