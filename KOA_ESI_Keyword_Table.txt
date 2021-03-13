@@ -24,7 +24,7 @@ OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Observing assistant
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	11d		0	9999		Y					Proprietary period		
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y	8s					Y	Y				WMKO observing schedule semester		
 SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f				4,20,480	Y					Slit length projected on sky (arcsec)		
-SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f				0.3,0.5 0.75,1.0,1.13,1.25,6.0	Y					Slit width projected on sky (arcsec)		
+SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f				0.3,0.5,0.75,1.0,1.13,1.25,6.0	Y					Slit width projected on sky (arcsec)		
 SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N	18.8f				0.1542	Y					CCD pixel scale, spatial (arcsec/pixel)		
 SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Nominal spectral resolution		
 WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N	11d		3700	10900		Y	Y			Y	Blue end wavelength (Angstroms)	3900	
