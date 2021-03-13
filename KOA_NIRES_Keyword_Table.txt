@@ -36,7 +36,7 @@ DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		drive and co
 DCSVERS	DCSVERS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		drive and control version		
 DEC	CDEC	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope declination		
 DISPNAME	DISPNAME	NIRES	char		VARCHAR2(64 BYTE)	64	Y	Y	N	64s					Y			Y		FITS file name for spec display		
-DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f				0.15/0.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f				0.150.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
 DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		dome azimuth		
 DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		dome status		
 DPATCSYS	DPATCSYS	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Dither pattern coordinate system	inst	
@@ -76,7 +76,7 @@ FCSVOLT1	FCSVOLT1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 1 voltag
 FCSVOLT2	FCSVOLT2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 2 voltage	0	
 FCTHETXY	FCTHETXY	NIRES	char		VARCHAR2(32)	32	Y	Y	N	32s					Y			Y		Absolute rotation angles (microradians BYTE)	0.0 0.0	
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f								Y		FITS file size in megabytes	44.8	
-FILTER	FILTER	KOA	char		VARCHAR2(8)	8	Y	Y	N	8s				null/Kp	Y	Y		Y	Y	Filter (null for spec, Kp for image BYTE)		
+FILTER	FILTER	KOA	char		VARCHAR2(8)	8	Y	Y	N	8s				null,Kp	Y	Y		Y	Y	Filter (null for spec, Kp for image BYTE)		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		focal station		
 FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y	Y	Copy of FRAMENUM		
 FRAMENUM	FRAMENUM	NIRES	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y		Image frame number	39	
@@ -89,10 +89,10 @@ IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging mean
 IMAGESD	IMAGESD	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging standard deviation		
 INSTANGL	INSTANGL	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		porg to instrument angle		
 INSTFLIP	INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		porg to instrumentt y flip		
-INSTR	INSTR	NIRES	char		VARCHAR2(8)	8	N	Y	Y	8s				spec/imag	Y	Y		Y	Y	Instrument name (spec or imag BYTE)	imag	
+INSTR	INSTR	NIRES	char		VARCHAR2(8)	8	N	Y	Y	8s				spec,imag	Y	Y		Y	Y	Instrument name (spec or imag BYTE)	imag	
 INSTRUME	INSTRUME	NIRES	char		VARCHAR2(68 BYTE)	68	N	Y	Y	68s					Y			Y		Instrument name	NIRES	
 ITIME	ITIME	NIRES	double	seconds	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Integration time between reads	2	
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				object/bias/dark/domeflat/domearc/undefined	Y	Y	Y	Y	Y	Type of observation: 'object' for science files, other values are calibration files		
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				object,bias,dark,domeflat,domearc,undefined	Y	Y	Y	Y	Y	Type of observation: 'object' for science files, other values are calibration files		
 LINCOEFF	LINCOEFF	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		linear coefficient file	/usr/kroot/rel/default/data/lin.fits	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		local apparent sidereal time	hh:mm:ss.ss	
 LTM1_1	LTM1_1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		CCD to image pixel scale in X	1	
