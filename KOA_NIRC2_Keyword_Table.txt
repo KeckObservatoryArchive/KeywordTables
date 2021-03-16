@@ -272,8 +272,8 @@ TARGWAVE	TARGWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N	18.8f					Y					target 
 TELESCOP	TELESCOP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					telescope name		
 TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N	18.8f					Y					telescope focus compensated (0		
 TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N	18.8f					Y					tube temperature (2.93 degC)		
-UT	UT	added	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s		00:00.0	00:00.0		Y				Y	copy of UTC		
-UTC	UTC	dcs	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s		00:00.0	00:00.0		Y					coordinated universal str (h)		
+UT	UT	added	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y				Y	copy of UTC		
+UTC	UTC	dcs	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y					coordinated universal str (h)		
 UTCLP	UTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	ao	double		FLOAT(126)	24	Y	Y	N	18.8f					Y					Set TT loop gain		
 WAT0_001	WAT0_001		char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					coordinate system		

@@ -1,9 +1,9 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description		
 KOAID	KOAID	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y										Y	Unique identifier for each file		
 PROPINT	PROPINT	Added	integer	months	NUMBER(*,0)	16	Y	Y	Y				9999							Proprietary period in months		
-DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y			1/1/99	1/1/30						Y	universal date of observation		
-UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y			00:00.0	00:00.0						Y	DCS Universal Time		
-UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y			00:00.0	00:00.0							DCS Coordinated Universal Time		
+DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y										Y	universal date of observation		
+UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y										Y	DCS Universal Time		
+UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y											DCS Coordinated Universal Time		
 KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y					arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type		
 IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Observation type		
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N					SCAM,SPEC					Y	Camera name		
