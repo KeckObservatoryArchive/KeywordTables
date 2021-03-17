@@ -153,7 +153,7 @@ POYPOS8	POYPOS8	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin
 POYPOS9	POYPOS9	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 9		
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y		Y		WMKO assigned program identification code		
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program institution		
-PROGNAME	PROGNAME	NIRES	char		VARCHAR2(8 BYTE)	16	Y	Y	N	16s					Y			Y	Y	Observer assigned program ID		
+PROGNAME	PROGNAME	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y	Y	Observer assigned program ID		
 PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program principal investigator		
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	210s					Y	Y		Y	Y	Program title		
 PROPINT	PROPINT	KOA	integer		INTEGER	16	N	Y	Y	11d		0	9999		Y	Y		Y		Proprietary period		
