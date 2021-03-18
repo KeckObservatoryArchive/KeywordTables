@@ -131,15 +131,15 @@ CCDGAIN4	CCDGAIN4	KCWI-F	double	e/DN	FLOAT(126)	16	Y	Y	N	18.5f					Y					Gain UR
 CCDMODE	CCDMODE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD speed mode (slow-0 fast-1)	1	
 CCDSPEED	CCDSPEED	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					CCD readout speed	1	
 CCDSUM	CCDSUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					IRAF ccdsum	2 2	
-CD1_1	CD1_1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
-CD1_2	CD1_2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
-CD2_1	CD2_1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
-CD2_2	CD2_2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
+CD1_1	CD1_1	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
+CD1_2	CD1_2	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
+CD2_1	CD2_1	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
+CD2_2	CD2_2	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					WCS coordinate transformation matrix		
 CHECKSUM	CHECKSUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					HDU checksum updated 2016-10-13T20:33:41	3dT5AbQ26bQ2AbQ2	
-CRPIX1	CRPIX1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel		
-CRPIX2	CRPIX2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel		
-CRVAL1	CRVAL1	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel value		
-CRVAL2	CRVAL2	KOA	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					Reference pixel value		
+CRPIX1	CRPIX1	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					Reference pixel		
+CRPIX2	CRPIX2	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					Reference pixel		
+CRVAL1	CRVAL1	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					Reference pixel value		
+CRVAL2	CRVAL2	KOA	double		FLOAT(126)	24	Y	Y	N	18.5f					Y					Reference pixel value		
 CSEC1	CSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
 CSEC2	CSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 1	[4096:2049,1:2056]	
 CSEC3	CSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					IRAF CCDSEC [CCDpix], readout sequence 2	[1:2048,4112:2057]	
@@ -183,7 +183,7 @@ GAIN2	GAIN2	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for am
 GAIN3	GAIN3	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 2	0.168	
 GAIN4	GAIN4	KCWI	double		FLOAT(126)	16	Y	Y	N	18.5f					Y					gain (e-/DN) for amp 3	0.174	
 GAINMUL	GAINMUL	KCWI	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y					gain multiplier (1,2,5,10)	10	
-GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.5f					Y					FWHM of guide star		
+GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N	18.5f					Y					FWHM of guide star		
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					DCS Guiding status	TRUE	
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					UT of GUIDFWHM value		
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Telescope hour angle	+03:01:18.99	
