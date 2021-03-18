@@ -14,7 +14,7 @@ DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f				0.1542	Y					CCD pixe
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					DQA version number		
 FILTER	FILTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y	Y			Y	Copy of DWFILNAM: filter wheel named position	Clear_S	
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					FWHM of guide star		
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y					FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y					UT of GUIDFWHM value		
 IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Imaging median		
 IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Imaging mean		

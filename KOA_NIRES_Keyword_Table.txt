@@ -81,7 +81,7 @@ FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		focal stat
 FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y	Y	Copy of FRAMENUM		
 FRAMENUM	FRAMENUM	NIRES	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y		Image frame number	39	
 GAIN	GAIN	NIRES	double	e/DN	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Detector gain, e/DN	0.3	
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		UT of GUIDFWHM value	05:19:08.91	
 HA	HA	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope hour angle		
 IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging median		

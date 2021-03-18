@@ -110,7 +110,7 @@ GRSDIST	GRSDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N	18.8f					Y					grism slider
 GRSNAME	GRSNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s				medres, lowres, clear	Y				Y	grism slider's named position		
 GRSRAW	GRSRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N	20d					Y					grism slider's encoder position		
 GRSSTAT	GRSSTAT	nirc2-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					grism slider's current state		
-GUIDFWHM	GUIDFWHM	added	double	arcseconds	FLOAT(126)	16	Y	Y	N	18.8f					Y					FWHM of NIRSPEC guide star		
+GUIDFWHM	GUIDFWHM	added	double	arcseconds	FLOAT(126)	24	Y	Y	N	18.8f					Y					FWHM of NIRSPEC guide star		
 GUIDTIME	GUIDTIME	added	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					UT of logger GUIDFWHM value		
 GUIDWAVE	GUIDWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N	18.8f					Y					guidestar wavelength (microns)		
 HA	HA	dcs	double		FLOAT(126)	20	Y	Y	N	18.8f					Y					telescope hour angle (+00:00:0)		

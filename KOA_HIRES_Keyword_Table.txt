@@ -130,7 +130,7 @@ FIL2RAW	FIL2RAW		integer		NUMBER(*,0)	16	Y	Y	N									Y	N	filter2-raw-position 
 FLUSHMOD	FLUSHMOD		char		VARCHAR2(17 BYTE)	16	Y	N	N									Y	N			
 FRAME	FRAME		char		VARCHAR2(69 BYTE)	68	Y	N	N									Y	N	telescope coordinate frame		
 FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	Y	Y	N									Y	Y	frame-number		
-GUIDFWHM	GUIDFWHM		double		FLOAT(126)	16	Y	Y	N	18.8f								Y	N	FWHM of guide star		
+GUIDFWHM	GUIDFWHM		double		FLOAT(126)	24	Y	Y	N	18.8f								Y	N	FWHM of guide star		
 GUIDTIME	GUIDTIME		char		VARCHAR2(17 BYTE)	16	Y	N	N									Y	N	UT of logged GUIDFWHM value		
 HA	HA		char		VARCHAR2(17 BYTE)	16	Y	Y	N									Y	N	telescope-hour-angle		
 HATCLOS	HATCLOS		char		VARCHAR2(9 BYTE)	8	Y	Y	Y					T,F				Y	N	hatch-closed		
