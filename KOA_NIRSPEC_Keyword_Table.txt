@@ -17,7 +17,7 @@ DISPERS	DISPERS	Added	char		VARCHAR2(16 BYTE)	16	Y	Y	N										Y	Dispersion lev
 DISPSCAL	DISPSCAL	Added	double		FLOAT(126)	32	Y	Y	N											Detector pixel scale, dispersion (hi 0.144, low 0.190)		
 ELAPTIME	ELAPTIME	Added	double	seconds	FLOAT(126)	32	Y	Y	Y			-15	9999						Y	TRUITIME * COADDS		
 FILTER	FILTER	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N										Y	Science filter selection		
-SLITNAME	SLITNAME	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	Y					42x0.380, 42x0.570, 42x0.760, 0.144x12, 0.288x12, 0.432x12, 0.576x12, 0.720x12, 0.288x24, 0.432x24, 0.576x24, 0.720x24, 0.013x1.13, 0.027x1.13, 0.041x1.13, 0.054x1.13, 0.068x1.13, 0.027x2.26, 0.041x2.26, 0.054x2.26, 0.068x2.26, 3.96x0.036, 3.96x0.054, 3.96x0.072, UNKNOWN					Y	Slit Name		
+SLITNAME	SLITNAME	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N					42x0.380, 42x0.570, 42x0.760, 0.144x12, 0.288x12, 0.432x12, 0.576x12, 0.720x12, 0.288x24, 0.432x24, 0.576x24, 0.720x24, 0.013x1.13, 0.027x1.13, 0.041x1.13, 0.054x1.13, 0.068x1.13, 0.027x2.26, 0.041x2.26, 0.054x2.26, 0.068x2.26, 3.96x0.036, 3.96x0.054, 3.96x0.072, UNKNOWN					Y	Slit Name		
 SLITLEN	SLITLEN	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N											Slit length projected on sky (arcsec)		
 SLITWIDT	SLITWIDT	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N											Slit width projected on sky (arcsec)		
 PSCALE	PSCALE	Native	double	arcsec/pix	FLOAT(126)	32	Y	Y	N											Pixel scale for science camera		
