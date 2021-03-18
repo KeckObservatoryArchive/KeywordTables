@@ -132,7 +132,7 @@ FRAMES	FRAMES	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N	8d					Y			Y		Total number of
 GROUPS	GROUPS	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N	8d					Y			Y		Number of sampling groups		
 GROUPS0	GROUPS0	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N	8d					Y			Y		Requested number of groups		
 GRPDONE	GRPDONE	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N	8d					Y			Y		Groups actually completed in this coadd		
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR(32 BYTES)	32	Y	Y	N	32s					Y			Y		UT of GUIDFWHM value		
 GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		guidestar wavelength		
 HA	HA	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		telescope hour angle		
