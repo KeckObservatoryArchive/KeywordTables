@@ -117,7 +117,7 @@ GRISM	GRISM	native	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y			Y		Grism	1
 GRISNAME	GRISNAME	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N						Y			Y	Y	Grism name	300/5000	
 GRISTRAN	GRISTRAN	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N						Y			Y		Grism transport name	deployed	
 GTRAN	GTRAN	native	integer		NUMBER(*,0)	16	Y	Y	N	16d					Y			Y		Grism transport	1	
-GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	16	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
+GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N						Y			Y		UT of GUIDFWHM value		
 HA	HA	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N						Y			Y		Telescope hour angle	+03:01:18.99	
 HALOGEN	HALOGEN	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N						Y			Y			off	
