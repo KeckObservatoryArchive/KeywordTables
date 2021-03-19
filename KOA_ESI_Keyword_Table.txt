@@ -39,7 +39,7 @@ WXPRESS	WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Pressure at WXTI
 WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					Time of weather measurements		
 WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Wind direction at WXTIME		
 WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N	18.2f					Y					Wind speed at WXTIME		
-UTC	UTC	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y					Copy of UT		
+UTC	UTC	KOA	time		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y					Copy of UT		
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					air mass		
 AIRPRESS	AIRPRESS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					air pressure		
 AIRPWPSI	AIRPWPSI	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					compressed air power PSI		
@@ -98,7 +98,7 @@ CTRLFAN1	CTRLFAN1	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					controller 1 e
 CURRINST	CURRINST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					current instrument		
 DATE	DATE_UT	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					date		
 DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	32s	Y				Y	Y	Y		Y	observing date (UT)	2019-01-15	
-DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					declination		
+DEC	CDEC	DCS	angle		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					declination		
 DECOFF	DECOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					Declination offset		
 DETECTOR	DETECTOR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N	72s					Y					detector		
 DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					dome status		
@@ -197,7 +197,7 @@ PRISMRAW	PRISMRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					prism raw posi
 PRISMSTA	PRISMSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					prism status		
 PRISMTOR	PRISMTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					prism torque		
 PWRBLOK	PWRBLOK	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					power block voltage		
-RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					right ascension		
+RA	CRA	DCS	angle		VARCHAR2(16 BYTE)	16	Y	Y	N	18.8f					Y					right ascension		
 RAOFF	RAOFF	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					RA offset		
 ROTBASE	ROTBASE	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					rotator base value		
 ROTCALAN	ROTCALAN	DCS	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					rotator calibration angle		
@@ -282,7 +282,7 @@ TVFOCRAW	TVFOCRAW	ESI	integer		NUMBER(*,0)	16	Y	Y	N	11d					Y					guider focus r
 TVFOCSTA	TVFOCSTA	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					guider focus status		
 TVFOCTOR	TVFOCTOR	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					guider focus torque		
 TVPOWER	TVPOWER	ESI	char		VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y					guider focus torque		
-UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y			Y	coordinated universal time	22:10:02 00:01:45	
+UT	UT	DCS	time		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y			Y	coordinated universal time	22:10:02 00:01:45	
 UTBFANS	UTBFANS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y					utility board fans		
 UTBTEMP	UTBTEMP	ESI	double		FLOAT(126)	16	Y	Y	N	18.8f					Y					utility board temperature		
 VOFFSET0	VOFFSET0	ESI	integer		NUMBER(*,0)	8	Y	Y	N	11d					Y					video offset amp 0		
