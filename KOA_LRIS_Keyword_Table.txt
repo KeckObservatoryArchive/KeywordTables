@@ -3,11 +3,11 @@ KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y						Y			Y	Y	Unique identifier 
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y	16d		0			Y			Y		Proprietary period		
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y					LRIS,LRISBLUE	Y			Y	Y	Instrument name	LRIS	
 DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	30s					Y			Y	Y	Universal date of observation	4/24/2015	
-DEC	CDEC	native	angle		VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination	+27:58:22.6	
-RA	CRA	LRIS	angle		VARCHAR2(24 BYTE)	24	Y	Y	N						Y			Y		Telescope right ascension	00:06.1	
+DEC	CDEC	native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination	+27:58:22.6	
+RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N						Y			Y		Telescope right ascension	00:06.1	
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N	18.5f		1855	2100		Y			Y		Telescope equinox	2000	
-UT	UT	LRIS	time		VARCHAR2(24 BYTE)	24	N	Y	Y						Y			Y	Y	Universal time	15:13.4	
-UTC	UTC	LRIS	time		VARCHAR2(24 BYTE)	24	N	Y	Y						Y			Y		Universal time	15:13.4	
+UT	UT	LRIS	char		VARCHAR2(24 BYTE)	24	N	Y	Y						Y			Y	Y	Universal time	15:13.4	
+UTC	UTC	LRIS	char		VARCHAR2(24 BYTE)	24	N	Y	Y						Y			Y		Universal time	15:13.4	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y					undefined,focus,bias,flatlamp,polcal,object,arclamp,dark	Y			Y	Y	KOA image type	object	
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N						Y			Y		WMKO program ID	H275LA	
 PROGINST	PROGINST	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	N						Y			Y	Y	Program institution	UH	

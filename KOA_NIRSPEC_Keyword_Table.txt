@@ -2,13 +2,13 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y										Y	Unique identifier for each file		
 PROPINT	PROPINT	Added	integer	months	NUMBER(*,0)	16	Y	Y	Y				9999							Proprietary period in months		
 DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y										Y	universal date of observation		
-UT	UT	Native	time	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y										Y	DCS Universal Time		
-UTC	UTC	Added	time	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y											DCS Coordinated Universal Time		
+UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y										Y	DCS Universal Time		
+UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y											DCS Coordinated Universal Time		
 KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y					arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type		
 IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Observation type		
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N					SCAM,SPEC					Y	Camera name		
-DEC	CDEC	Native	angle		VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination		
-RA	CRA	LRIS	angle		VARCHAR2(24 BYTE)	32	Y	Y	N						Y			Y		Telescope right ascension		
+DEC	CDEC	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y			-90	95		Y			Y		Telescope declination		
+RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	32	Y	Y	N						Y			Y		Telescope right ascension		
 EQUINOX	Dec2000	Native	double	year	FLOAT(126)	32	Y	Y	N											telescope equinox (2000.0)		
 FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y				9999						Y	copy of FILENUM		
 FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N											Frame number		

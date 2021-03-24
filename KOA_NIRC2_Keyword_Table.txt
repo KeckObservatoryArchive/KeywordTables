@@ -59,7 +59,7 @@ CRVAL2	CRVAL2		double		FLOAT(126)	20	Y	Y	N	18.8f					Y					Vertical axis WCS val
 CTYPE1	CTYPE1		char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					WCS Type of the horizontal coordinate		
 CTYPE2	CTYPE2		char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					WCS Type of the vertical coordinate		
 CURRINST	CURRINST	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					current instrument		
-DATE-OBS	DATE_OBS	dcs	date		DATE	24	N	Y	Y	32s					Y				Y	universal date of observation		
+DATE-OBS	DATE_OBS	dcs	char		DATE	24	N	Y	Y	32s					Y				Y	universal date of observation		
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	N	Y	N	16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N	18.8f					Y					diff decl rate		
@@ -272,8 +272,8 @@ TARGWAVE	TARGWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N	18.8f					Y					target 
 TELESCOP	TELESCOP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					telescope name		
 TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N	18.8f					Y					telescope focus compensated (0		
 TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N	18.8f					Y					tube temperature (2.93 degC)		
-UT	UT	added	time		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y				Y	copy of UTC		
-UTC	UTC	dcs	time		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y					coordinated universal str (h)		
+UT	UT	added	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y				Y	copy of UTC		
+UTC	UTC	dcs	char		VARCHAR2(25 BYTE)	25	N	Y	Y	25s					Y					coordinated universal str (h)		
 UTCLP	UTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	ao	double		FLOAT(126)	24	Y	Y	N	18.8f					Y					Set TT loop gain		
 WAT0_001	WAT0_001		char		VARCHAR2(20 BYTE)	20	Y	Y	N	20s					Y					coordinate system		
