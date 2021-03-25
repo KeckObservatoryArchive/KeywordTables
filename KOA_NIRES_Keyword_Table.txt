@@ -1,230 +1,230 @@
-FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y	Y	Y	Y	Unique identifier for each file		
-AIRMASS	AIRMASS	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		air mass		
-AXESTAT	AXESTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		axes control status		
-AZ	AZ	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope azimuth		
-BADPIX	BADPIX	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Bad pixel map file name	/kroot/rel/default/data/badbadpix.fits	
-BITPIX	BITPIX	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		number of bits per data pixel	-32	
-CALOCAL	CALOCAL	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		collimation azimuth local		
-CD1_1	CD1_1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Degrees of RA per pixel in x	0	
-CD1_2	CD1_2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		degrees of RA per pixel in y	0	
-CD2_1	CD2_1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Degrees of DEC per pixel in x	0	
-CD2_2	CD2_2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Degrees of DEC per pixel in y	0	
-CELOCAL	CELOCAL	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		collimation elevation local		
-CHNAME1	CHNAME1	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Location where temp is controlled by channel A	TD1 T40 H2RG mount	
-CHNAME10	CHNAME10	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch D4 location name	TD10 T2 Fill neck main LN2 tank	
-CHNAME2	CHNAME2	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Location where temp is controlled by channel B	TD2 T27 H2RG mount	
-CHNAME3	CHNAME3	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch C1 location name	NC	
-CHNAME4	CHNAME4	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch C2 location name	NC	
-CHNAME5	CHNAME5	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch C3 location name	TD5 T20 Auxiliary tank front	
-CHNAME6	CHNAME6	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch C4 location name	TD6 T22 Camera rear	
-CHNAME7	CHNAME7	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch D1 location name	TD7 T26 Rear bulkhead top	
-CHNAME8	CHNAME8	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch D2 location name	TD8 T25 H1 cold finger	
-CHNAME9	CHNAME9	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Ch D3 location name	TD9 T23 Camera front	
-COADDS	COADDS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of coadded frames	1	
-CRPIX1	CRPIX1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		X coordinate of center pixel	1033	
-CRPIX2	CRPIX2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Y coordinate of center pixel	1035	
-CRVAL1	CRVAL1	NIRES	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		RA of center pixel (degrees)	0	
-CRVAL2	CRVAL2	NIRES	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		DEC of center pixel (degrees)	0	
-CTYPE1	CTYPE1	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Coordinate type of WCS axis 1	RA---TAN	
-CTYPE2	CTYPE2	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Coordinate type of WCS axis 2	DEC--TAN	
-CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		current instrument		
-DATAFILE	DATAFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		image saved data file name	v171005_0001	
-DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	16s	Y				Y	Y	Y	Y	Y	universal date of observation	YYYY-MM-DD	
-DATLEVEL	DATLEVEL	KOA	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Data reduction level		
-DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		drive and control status		
-DCSVERS	DCSVERS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		drive and control version		
-DEC	CDEC	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope declination		
-DISPNAME	DISPNAME	NIRES	char		VARCHAR2(64 BYTE)	64	Y	Y	N	64s					Y			Y		FITS file name for spec display		
-DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f				0.150.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
-DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		dome azimuth		
-DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		dome status		
-DPATCSYS	DPATCSYS	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Dither pattern coordinate system	inst	
-DPATIPOS	DPATIPOS	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Index of dataset positions	0	
-DPATIREP	DPATIREP	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Index of repeats	0	
-DPATMODE	DPATMODE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Dither pattern mode of movement	relative	
-DPATNAME	DPATNAME	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Dataset pattern name	none	
-DPATNPOS	DPATNPOS	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Number of positions in the dither pattern	0	
-DPATSTPX	DPATSTPX	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Dither pattern step size in X	0	
-DPATSTPY	DPATSTPY	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Dither pattern step size in Y	0	
-DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Date of DQA run		
-DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		DQA version number		
-DTHCOORD	DTHCOORD	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		dither pattern coordinates		
-DWRTMP10	DWRTMP10	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D4 temperature (K)	280.392	
-DWRTMP3	DWRTMP3	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch C1 temperature (K)	0	
-DWRTMP4	DWRTMP4	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch C2 temperature (K)	0	
-DWRTMP5	DWRTMP5	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch C3 temperature (K)	79.367	
-DWRTMP6	DWRTMP6	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch C4 temperature (K)	75.316	
-DWRTMP7	DWRTMP7	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D1 temperature (K)	75.518	
-DWRTMP8	DWRTMP8	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D2 temperature (K)	78.331	
-DWRTMP9	DWRTMP9	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch D3 temperature (K)	75.433	
-EL	EL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y		telescope elevation		
-ELAPTIME	ELAPTIME	KOA	double	seconds	FLOAT(126)	24	Y	Y	Y	18.8f					Y	Y		Y	Y	Total integration time (ITIME * COADDS)	2	
-EQUINOX	EQUINOX	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y		telescope equinox		
-EXTEND	EXTEND	NIRES	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N	8s					Y			Y		FITS dataset may contain extensions	T	
-FCA	FCA	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model amplitude parameter	5.21	
-FCANAMOR	FCANAMOR	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model anamorphic factor	1.46	
-FCK	FCK	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model k parameter	0.196	
-FCPA_EL	FCPA_EL	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Position angle and elevation in degrees	0.0 0.0	
-FCPH	FCPH	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Flexure model phase in degrees	64.2	
-FCSACTIV	FCSACTIV	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		servo/online/enable flag	0	
-FCSLOC1	FCSLOC1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 1 location	1.1	
-FCSLOC2	FCSLOC2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 2 location	2.2	
-FCSMECH	FCSMECH	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Mechanism name	FCS	
-FCSON	FCSON	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Enable model-based flexure compensation	0	
-FCSVOLT1	FCSVOLT1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 1 voltage	0	
-FCSVOLT2	FCSVOLT2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch 2 voltage	0	
-FCTHETXY	FCTHETXY	NIRES	char		VARCHAR2(32)	32	Y	Y	N	32s					Y			Y		Absolute rotation angles (microradians BYTE)	0.0 0.0	
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N	18.8f								Y		FITS file size in megabytes	44.8	
-FILTER	FILTER	KOA	char		VARCHAR2(8)	8	Y	Y	N	8s				null,Kp	Y	Y		Y	Y	Filter (null for spec, Kp for image BYTE)		
-FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		focal station		
-FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y	Y	Copy of FRAMENUM		
-FRAMENUM	FRAMENUM	NIRES	integer		INTEGER	8	N	Y	Y	11d		0	9999		Y			Y		Image frame number	39	
-GAIN	GAIN	NIRES	double	e/DN	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Detector gain, e/DN	0.3	
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		FWHM of guide star		
-GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		UT of GUIDFWHM value	05:19:08.91	
-HA	HA	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope hour angle		
-IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging median		
-IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging mean		
-IMAGESD	IMAGESD	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Imaging standard deviation		
-INSTANGL	INSTANGL	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		porg to instrument angle		
-INSTFLIP	INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		porg to instrumentt y flip		
-INSTR	INSTR	NIRES	char		VARCHAR2(8)	8	N	Y	Y	8s				spec,imag	Y	Y		Y	Y	Instrument name (spec or imag BYTE)	imag	
-INSTRUME	INSTRUME	NIRES	char		VARCHAR2(68 BYTE)	68	N	Y	Y	68s					Y			Y		Instrument name	NIRES	
-ITIME	ITIME	NIRES	double	seconds	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Integration time between reads	2	
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s				object,bias,dark,domeflat,domearc,undefined	Y	Y	Y	Y	Y	Type of observation: 'object' for science files, other values are calibration files		
-LINCOEFF	LINCOEFF	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		linear coefficient file	/usr/kroot/rel/default/data/lin.fits	
-LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		local apparent sidereal time	hh:mm:ss.ss	
-LTM1_1	LTM1_1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		CCD to image pixel scale in X	1	
-LTM2_2	LTM2_2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		CCD to image pixel scale in Y	1	
-NAXIS	NAXIS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		number of data axes	2	
-NAXIS1	NAXIS1	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		length of data axis 1	1024	
-NAXIS2	NAXIS2	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		lengthh of data axis 2	1024	
-NOISEFIL	NOISEFIL	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Read noise frame file name	/kroot/rel/default/data/h2rg_var.fits	
-NPIXSAT	NPIXSAT	KOA	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of pixels above saturation		
-NUMFS	NUMFS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of Fowler pairs	1	
-NUMREADS	NUMREADS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Number of reads per coadd	2	
-NUMUTRS	NUMUTRS	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		SDSU NUTR value	1	
-OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Observing assistant		
-OBJECT	OBJECT	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y		Y		Object name	MIRA sky	
-OBSERVER	OBSERVER	NIRES	char		VARCHAR2(68)	68	Y	Y	N	68s					Y			Y		Observer name(s BYTE)	Matthews/Cromer	
-OBSTYPE	OBSTYPE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Observation type	astro	What are allowed values?
-OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Original file name at the telescope, copied from DATAFILE keyword	v171005_0001	
-OUTDIR	OUTDIR	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Original output directory		
-OUTPUT1	OUTPUT1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch A heater output percentage	0	
-OUTPUT2	OUTPUT2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch B heater output percentage	0	
-PA	PA	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		position angle of current target	0	
-PARANG	PARANG	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		parallactic angle astrometric		
-PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		parallactic angle telescope		
-PATTERN	PATTERN	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Dither pattern	none	
-PCIFILE	PCIFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		PCI .lod file name	/kroot/src/kss/nires/sdsu/ARC46_DSP/pci.lod	
-PMFM	PMFM	ACS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pmfm		
-PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name		
-PONAME1	PONAME1	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 1		
-PONAME2	PONAME2	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 2		
-PONAME3	PONAME3	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 3		
-PONAME4	PONAME4	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 4		
-PONAME5	PONAME5	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 5		
-PONAME6	PONAME6	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 6		
-PONAME7	PONAME7	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 7		
-PONAME8	PONAME8	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 8		
-PONAME9	PONAME9	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		pointing origin name 9		
-POXOFF	POXOFF	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin x offset		
-POXPOS	POXPOS	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition		
-POXPOS1	POXPOS1	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 1		
-POXPOS2	POXPOS2	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 2		
-POXPOS3	POXPOS3	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 3		
-POXPOS4	POXPOS4	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 4		
-POXPOS5	POXPOS5	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 5		
-POXPOS6	POXPOS6	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 6		
-POXPOS7	POXPOS7	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 7		
-POXPOS8	POXPOS8	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 8		
-POXPOS9	POXPOS9	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin xposition 9		
-POYOFF	POYOFF	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin y offset		
-POYPOS	POYPOS	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition		
-POYPOS1	POYPOS1	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 1		
-POYPOS2	POYPOS2	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 2		
-POYPOS3	POYPOS3	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 3		
-POYPOS4	POYPOS4	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 4		
-POYPOS5	POYPOS5	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 5		
-POYPOS6	POYPOS6	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 6		
-POYPOS7	POYPOS7	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 7		
-POYPOS8	POYPOS8	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 8		
-POYPOS9	POYPOS9	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		pointing origin yposition 9		
-PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y	32s					Y	Y		Y		WMKO assigned program identification code		
-PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program institution		
-PROGNAME	PROGNAME	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y	Y	Observer assigned program ID		
-PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N	32s					Y	Y		Y	Y	Program principal investigator		
-PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N	210s					Y	Y		Y	Y	Program title		
-PROPINT	PROPINT	KOA	integer		INTEGER	16	N	Y	Y	11d		0	9999		Y	Y		Y		Proprietary period		
-PSCALE	PSCALE	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Pixel scale for science camera	0.21	
-RA	CRA	DCS	double	degrees	FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope right ascension		
-RADECSYS	RADECSYS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Coordinate system		
-RDITIME	RDITIME	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Time between start of successive reads	14	
-REGTMP1	REGTMP1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Temperature at channel A	77.708	
-REGTMP2	REGTMP2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Temperature at channel B	77.828	
-ROTCALAN	ROTCALAN	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator calibration angle		
-ROTDEST	ROTDEST	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator user destination		
-ROTMODE	ROTMODE	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		rotator tracking mode		
-ROTPDEST	ROTPDEST	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator physical destination		
-ROTPOSN	ROTPOSN	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator user position		
-ROTPPOSN	ROTPPOSN	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator physical position		
-ROTREFAN	ROTREFAN	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		rotator reference angle		
-SAMPMODE	SAMPMODE	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Sampling mode	3	
-SATURATE	SATURATE	NIRES	integer		INTEGER	16	Y	Y	N	11d					Y			Y		Detector saturation DN level	33000	
-SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		secondary mirror focus raw		
-SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y	8s					Y			Y		WMKO observing schedule semester		
-SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y	Y	Slit length projected on sky (arcsec)		18.1/null
-SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y	Y	Slit width projected on sky (arcsec)		0.5/null
-SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	24	Y	Y	N	18.8f					Y	Y		Y	Y	CCD pixel scale, spatial (arcsec/pixel)		0.15/0.12
-SPECRES	SPECRES	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Nominal spectral resolution		2700/null
-TARGDEC	TARGDEC	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target declination		
-TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target epoch		
-TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target equinox		
-TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	24s					Y			Y		target frrame		
-TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y	Y		Y	Y	target name		
-TARGPLAX	TARGPLAX	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target parallax		
-TARGPMDC	TARGPMDC	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target proper motion dec		
-TARGPMRA	TARGPMRA	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target proper motion ra		
-TARGRA	TARGRA	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target right asciension		
-TARGRADV	TARGRADV	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		target radial velocity		
-TARGTMP1	TARGTMP1	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch A desired temperature	74	
-TARGTMP2	TARGTMP2	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Ch B desired temperature	74	
-TELESCOP	TELESCOP	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Telescope name	Keck II	
-TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		telescope focus compensated		
-TIMFILE	TIMFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N	68s					Y			Y		Timing board .lod file name	/kroot/src/kss/nires/sdsu/dsp/lod/nires_h1.lod	
-TMP1RANG	TMP1RANG	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Ch A heater range	0	
-TMPACT1	TMPACT1	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Channeel A control (0:off,1:on)	1	
-TMPACT2	TMPACT2	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Channeel B control (0:off,1:on)	1	
-TUBETEMP	TUBETEMP	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		tube temperature		
-TVANGL	TVANGL	DCS	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		porg to ttv angle (1.2 deg)		
-TVFLIP	TVFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		porg to tv y flip		
-UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y	Y		Y	Y	Copy of UTC		
-UTC	UTC	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	16s					Y			Y		coordinated universal time		
-WAT0_001	WAT0_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		Pixel coordinate system	system=image	
-WAT1_001	WAT1_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		WCS projection for axis 1	wtype=tan axtype=ra	
-WAT2_001	WAT2_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N	32s					Y			Y		WCS projection for axis 2	wtype=tan axtype=dec	
-WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	INTEGER	16	Y	Y	N	11d					Y	Y		Y	Y	Blue end wavelength		9400/19500
-WAVECNTR	WAVECNTR	KOA	integer	angstroms	INTEGER	16	Y	Y	N	11d					Y			Y		Central wavelength		16950/21225
-WAVERED	WAVERED	KOA	integer	angstroms	INTEGER	16	Y	Y	N	11d					Y	Y		Y	Y	Red end wavelength		24500/22950
-WCSDIM	WCSDIM	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Number of WCS dimensions	2	
-WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Dome humidity at WXTIME		
-WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Dome temperature at WXTIME		
-WXDWPT	WXDWPT	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Dewpoint at WXTIME		
-WXOUTHUM	WXOUTHUM	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Outside humidity at WXTIME		
-WXOUTTMP	WXOUTTMP	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Outside temperature at WXTIME		
-WXPRESS	WXPRESS	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Pressure at WXTIME		
-WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N	16s					Y			Y		Time of weather measurements	05:19:08.91	
-WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Wind direction at WXTIME		
-WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		Wind speed at WXTIME		
-XOFFSET	XOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		dither pattern X offset	0	
-XREFSUB	XREFSUB	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Subtract reference pixels along columns		
-MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N	18.5f	Y				Y			Y		modified julian date of observation		
-YOFFSET	YOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N	18.8f					Y			Y		YOFFSET dither pattern Y/Nod offset	0	
-YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N	11d					Y			Y		Subtract reference pixels along rows		
-	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N	18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N	18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
-	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
-	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N	30s	Y				N			N		Time of metadata ingestion		
-	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N	151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
-	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N	21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	Y	Y	Y	Unique identifier for each file		
+AIRMASS	AIRMASS	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		air mass		
+AXESTAT	AXESTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		axes control status		
+AZ	AZ	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope azimuth		
+BADPIX	BADPIX	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Bad pixel map file name	/kroot/rel/default/data/badbadpix.fits	
+BITPIX	BITPIX	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		number of bits per data pixel	-32	
+CALOCAL	CALOCAL	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		collimation azimuth local		
+CD1_1	CD1_1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Degrees of RA per pixel in x	0	
+CD1_2	CD1_2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		degrees of RA per pixel in y	0	
+CD2_1	CD2_1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Degrees of DEC per pixel in x	0	
+CD2_2	CD2_2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Degrees of DEC per pixel in y	0	
+CELOCAL	CELOCAL	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		collimation elevation local		
+CHNAME1	CHNAME1	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Location where temp is controlled by channel A	TD1 T40 H2RG mount	
+CHNAME10	CHNAME10	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch D4 location name	TD10 T2 Fill neck main LN2 tank	
+CHNAME2	CHNAME2	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Location where temp is controlled by channel B	TD2 T27 H2RG mount	
+CHNAME3	CHNAME3	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch C1 location name	NC	
+CHNAME4	CHNAME4	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch C2 location name	NC	
+CHNAME5	CHNAME5	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch C3 location name	TD5 T20 Auxiliary tank front	
+CHNAME6	CHNAME6	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch C4 location name	TD6 T22 Camera rear	
+CHNAME7	CHNAME7	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch D1 location name	TD7 T26 Rear bulkhead top	
+CHNAME8	CHNAME8	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch D2 location name	TD8 T25 H1 cold finger	
+CHNAME9	CHNAME9	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Ch D3 location name	TD9 T23 Camera front	
+COADDS	COADDS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Number of coadded frames	1	
+CRPIX1	CRPIX1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		X coordinate of center pixel	1033	
+CRPIX2	CRPIX2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Y coordinate of center pixel	1035	
+CRVAL1	CRVAL1	NIRES	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		RA of center pixel (degrees)	0	
+CRVAL2	CRVAL2	NIRES	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		DEC of center pixel (degrees)	0	
+CTYPE1	CTYPE1	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Coordinate type of WCS axis 1	RA---TAN	
+CTYPE2	CTYPE2	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Coordinate type of WCS axis 2	DEC--TAN	
+CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		current instrument		
+DATAFILE	DATAFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		image saved data file name	v171005_0001	
+DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	date	16s	Y				Y	Y	Y	Y	Y	universal date of observation	YYYY-MM-DD	
+DATLEVEL	DATLEVEL	KOA	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Data reduction level		
+DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		drive and control status		
+DCSVERS	DCSVERS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		drive and control version		
+DEC	CDEC	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope declination		
+DISPNAME	DISPNAME	NIRES	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s					Y			Y		FITS file name for spec display		
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f				0.150.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
+DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		dome azimuth		
+DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		dome status		
+DPATCSYS	DPATCSYS	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dither pattern coordinate system	inst	
+DPATIPOS	DPATIPOS	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Index of dataset positions	0	
+DPATIREP	DPATIREP	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Index of repeats	0	
+DPATMODE	DPATMODE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dither pattern mode of movement	relative	
+DPATNAME	DPATNAME	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dataset pattern name	none	
+DPATNPOS	DPATNPOS	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Number of positions in the dither pattern	0	
+DPATSTPX	DPATSTPX	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Dither pattern step size in X	0	
+DPATSTPY	DPATSTPY	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Dither pattern step size in Y	0	
+DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Date of DQA run		
+DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		DQA version number		
+DTHCOORD	DTHCOORD	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		dither pattern coordinates		
+DWRTMP10	DWRTMP10	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch D4 temperature (K)	280.392	
+DWRTMP3	DWRTMP3	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch C1 temperature (K)	0	
+DWRTMP4	DWRTMP4	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch C2 temperature (K)	0	
+DWRTMP5	DWRTMP5	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch C3 temperature (K)	79.367	
+DWRTMP6	DWRTMP6	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch C4 temperature (K)	75.316	
+DWRTMP7	DWRTMP7	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch D1 temperature (K)	75.518	
+DWRTMP8	DWRTMP8	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch D2 temperature (K)	78.331	
+DWRTMP9	DWRTMP9	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch D3 temperature (K)	75.433	
+EL	EL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y	Y		Y		telescope elevation		
+ELAPTIME	ELAPTIME	KOA	double	seconds	FLOAT(126)	24	Y	Y	Y		18.8f					Y	Y		Y	Y	Total integration time (ITIME * COADDS)	2	
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y	Y		Y		telescope equinox		
+EXTEND	EXTEND	NIRES	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		FITS dataset may contain extensions	T	
+FCA	FCA	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Flexure model amplitude parameter	5.21	
+FCANAMOR	FCANAMOR	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Flexure model anamorphic factor	1.46	
+FCK	FCK	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Flexure model k parameter	0.196	
+FCPA_EL	FCPA_EL	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Position angle and elevation in degrees	0.0 0.0	
+FCPH	FCPH	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Flexure model phase in degrees	64.2	
+FCSACTIV	FCSACTIV	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		servo/online/enable flag	0	
+FCSLOC1	FCSLOC1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch 1 location	1.1	
+FCSLOC2	FCSLOC2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch 2 location	2.2	
+FCSMECH	FCSMECH	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Mechanism name	FCS	
+FCSON	FCSON	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Enable model-based flexure compensation	0	
+FCSVOLT1	FCSVOLT1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch 1 voltage	0	
+FCSVOLT2	FCSVOLT2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch 2 voltage	0	
+FCTHETXY	FCTHETXY	NIRES	char		VARCHAR2(32)	32	Y	Y	N		32s					Y			Y		Absolute rotation angles (microradians BYTE)	0.0 0.0	
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.8f								Y		FITS file size in megabytes	44.8	
+FILTER	FILTER	KOA	char		VARCHAR2(8)	8	Y	Y	N		8s				null,Kp	Y	Y		Y	Y	Filter (null for spec, Kp for image BYTE)		
+FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		focal station		
+FRAMENO	FRAMENO	KOA	integer		INTEGER	8	N	Y	Y		11d		0	9999		Y			Y	Y	Copy of FRAMENUM		
+FRAMENUM	FRAMENUM	NIRES	integer		INTEGER	8	N	Y	Y		11d		0	9999		Y			Y		Image frame number	39	
+GAIN	GAIN	NIRES	double	e/DN	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Detector gain, e/DN	0.3	
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		FWHM of guide star		
+GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		UT of GUIDFWHM value	5:19:09	
+HA	HA	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope hour angle		
+IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Imaging median		
+IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Imaging mean		
+IMAGESD	IMAGESD	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Imaging standard deviation		
+INSTANGL	INSTANGL	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		porg to instrument angle		
+INSTFLIP	INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		porg to instrumentt y flip		
+INSTR	INSTR	NIRES	char		VARCHAR2(8)	8	N	Y	Y		8s				spec,imag	Y	Y		Y	Y	Instrument name (spec or imag BYTE)	imag	
+INSTRUME	INSTRUME	NIRES	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y			Y		Instrument name	NIRES	
+ITIME	ITIME	NIRES	double	seconds	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Integration time between reads	2	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object,bias,dark,domeflat,domearc,undefined	Y	Y	Y	Y	Y	Type of observation: 'object' for science files, other values are calibration files		
+LINCOEFF	LINCOEFF	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		linear coefficient file	/usr/kroot/rel/default/data/lin.fits	
+LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		local apparent sidereal time	hh:mm:ss.ss	
+LTM1_1	LTM1_1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		CCD to image pixel scale in X	1	
+LTM2_2	LTM2_2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		CCD to image pixel scale in Y	1	
+NAXIS	NAXIS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		number of data axes	2	
+NAXIS1	NAXIS1	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		length of data axis 1	1024	
+NAXIS2	NAXIS2	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		lengthh of data axis 2	1024	
+NOISEFIL	NOISEFIL	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Read noise frame file name	/kroot/rel/default/data/h2rg_var.fits	
+NPIXSAT	NPIXSAT	KOA	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Number of pixels above saturation		
+NUMFS	NUMFS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Number of Fowler pairs	1	
+NUMREADS	NUMREADS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Number of reads per coadd	2	
+NUMUTRS	NUMUTRS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		SDSU NUTR value	1	
+OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observing assistant		
+OBJECT	OBJECT	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y		Y		Object name	MIRA sky	
+OBSERVER	OBSERVER	NIRES	char		VARCHAR2(68)	68	Y	Y	N		68s					Y			Y		Observer name(s BYTE)	Matthews/Cromer	
+OBSTYPE	OBSTYPE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observation type	astro	What are allowed values?
+OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Original file name at the telescope, copied from DATAFILE keyword	v171005_0001	
+OUTDIR	OUTDIR	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Original output directory		
+OUTPUT1	OUTPUT1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch A heater output percentage	0	
+OUTPUT2	OUTPUT2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch B heater output percentage	0	
+PA	PA	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		position angle of current target	0	
+PARANG	PARANG	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		parallactic angle astrometric		
+PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		parallactic angle telescope		
+PATTERN	PATTERN	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Dither pattern	none	
+PCIFILE	PCIFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		PCI .lod file name	/kroot/src/kss/nires/sdsu/ARC46_DSP/pci.lod	
+PMFM	PMFM	ACS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pmfm		
+PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name		
+PONAME1	PONAME1	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 1		
+PONAME2	PONAME2	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 2		
+PONAME3	PONAME3	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 3		
+PONAME4	PONAME4	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 4		
+PONAME5	PONAME5	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 5		
+PONAME6	PONAME6	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 6		
+PONAME7	PONAME7	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 7		
+PONAME8	PONAME8	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 8		
+PONAME9	PONAME9	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		pointing origin name 9		
+POXOFF	POXOFF	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin x offset		
+POXPOS	POXPOS	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition		
+POXPOS1	POXPOS1	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 1		
+POXPOS2	POXPOS2	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 2		
+POXPOS3	POXPOS3	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 3		
+POXPOS4	POXPOS4	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 4		
+POXPOS5	POXPOS5	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 5		
+POXPOS6	POXPOS6	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 6		
+POXPOS7	POXPOS7	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 7		
+POXPOS8	POXPOS8	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 8		
+POXPOS9	POXPOS9	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin xposition 9		
+POYOFF	POYOFF	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin y offset		
+POYPOS	POYPOS	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition		
+POYPOS1	POYPOS1	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 1		
+POYPOS2	POYPOS2	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 2		
+POYPOS3	POYPOS3	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 3		
+POYPOS4	POYPOS4	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 4		
+POYPOS5	POYPOS5	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 5		
+POYPOS6	POYPOS6	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 6		
+POYPOS7	POYPOS7	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 7		
+POYPOS8	POYPOS8	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 8		
+POYPOS9	POYPOS9	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		pointing origin yposition 9		
+PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y		Y		WMKO assigned program identification code		
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y		Y	Y	Program institution		
+PROGNAME	PROGNAME	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y	Y	Observer assigned program ID		
+PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y		Y	Y	Program principal investigator		
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		210s					Y	Y		Y	Y	Program title		
+PROPINT	PROPINT	KOA	integer		INTEGER	16	N	Y	Y		11d		0	9999		Y	Y		Y		Proprietary period		
+PSCALE	PSCALE	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Pixel scale for science camera	0.21	
+RA	CRA	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope right ascension		
+RADECSYS	RADECSYS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Coordinate system		
+RDITIME	RDITIME	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Time between start of successive reads	14	
+REGTMP1	REGTMP1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Temperature at channel A	77.708	
+REGTMP2	REGTMP2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Temperature at channel B	77.828	
+ROTCALAN	ROTCALAN	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator calibration angle		
+ROTDEST	ROTDEST	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator user destination		
+ROTMODE	ROTMODE	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		rotator tracking mode		
+ROTPDEST	ROTPDEST	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator physical destination		
+ROTPOSN	ROTPOSN	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator user position		
+ROTPPOSN	ROTPPOSN	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator physical position		
+ROTREFAN	ROTREFAN	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		rotator reference angle		
+SAMPMODE	SAMPMODE	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Sampling mode	3	
+SATURATE	SATURATE	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Detector saturation DN level	33000	
+SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		secondary mirror focus raw		
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y		8s					Y			Y		WMKO observing schedule semester		
+SLITLEN	SLITLEN	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N		18.8f					Y	Y		Y	Y	Slit length projected on sky (arcsec)		18.1/null
+SLITWIDT	SLITWIDT	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N		18.8f					Y	Y		Y	Y	Slit width projected on sky (arcsec)		0.5/null
+SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	24	Y	Y	N		18.8f					Y	Y		Y	Y	CCD pixel scale, spatial (arcsec/pixel)		0.15/0.12
+SPECRES	SPECRES	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Nominal spectral resolution		2700/null
+TARGDEC	TARGDEC	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target declination		
+TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target epoch		
+TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target equinox		
+TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		target frrame		
+TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y		Y	Y	target name		
+TARGPLAX	TARGPLAX	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target parallax		
+TARGPMDC	TARGPMDC	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target proper motion dec		
+TARGPMRA	TARGPMRA	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target proper motion ra		
+TARGRA	TARGRA	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target right asciension		
+TARGRADV	TARGRADV	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		target radial velocity		
+TARGTMP1	TARGTMP1	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch A desired temperature	74	
+TARGTMP2	TARGTMP2	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch B desired temperature	74	
+TELESCOP	TELESCOP	NIRES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Telescope name	Keck II	
+TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope focus compensated		
+TIMFILE	TIMFILE	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Timing board .lod file name	/kroot/src/kss/nires/sdsu/dsp/lod/nires_h1.lod	
+TMP1RANG	TMP1RANG	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Ch A heater range	0	
+TMPACT1	TMPACT1	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Channeel A control (0:off,1:on)	1	
+TMPACT2	TMPACT2	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Channeel B control (0:off,1:on)	1	
+TUBETEMP	TUBETEMP	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		tube temperature		
+TVANGL	TVANGL	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		porg to ttv angle (1.2 deg)		
+TVFLIP	TVFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		porg to tv y flip		
+UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y	Y		Y	Y	Copy of UTC		
+UTC	UTC	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y			Y		coordinated universal time		
+WAT0_001	WAT0_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Pixel coordinate system	system=image	
+WAT1_001	WAT1_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		WCS projection for axis 1	wtype=tan axtype=ra	
+WAT2_001	WAT2_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		WCS projection for axis 2	wtype=tan axtype=dec	
+WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	INTEGER	16	Y	Y	N		11d					Y	Y		Y	Y	Blue end wavelength		9400/19500
+WAVECNTR	WAVECNTR	KOA	integer	angstroms	INTEGER	16	Y	Y	N		11d					Y			Y		Central wavelength		16950/21225
+WAVERED	WAVERED	KOA	integer	angstroms	INTEGER	16	Y	Y	N		11d					Y	Y		Y	Y	Red end wavelength		24500/22950
+WCSDIM	WCSDIM	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Number of WCS dimensions	2	
+WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Dome humidity at WXTIME		
+WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Dome temperature at WXTIME		
+WXDWPT	WXDWPT	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Dewpoint at WXTIME		
+WXOUTHUM	WXOUTHUM	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Outside humidity at WXTIME		
+WXOUTTMP	WXOUTTMP	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Outside temperature at WXTIME		
+WXPRESS	WXPRESS	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Pressure at WXTIME		
+WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Time of weather measurements	5:19:09	
+WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Wind direction at WXTIME		
+WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Wind speed at WXTIME		
+XOFFSET	XOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		dither pattern X offset	0	
+XREFSUB	XREFSUB	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Subtract reference pixels along columns		
+MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N		18.5f	Y				Y			Y		modified julian date of observation		
+YOFFSET	YOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		YOFFSET dither pattern Y/Nod offset	0	
+YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Subtract reference pixels along rows		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
+	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
+	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
+	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
+	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	
