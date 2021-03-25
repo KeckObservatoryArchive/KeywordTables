@@ -177,6 +177,7 @@ IMAGMODE	IMAGMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Imager observ
 INSTANGL	INSTANGL		double	degrees	FLOAT(126)	13	Y	Y	N		18.5f					Y					porg to instrument angle (48.0 deg)		
 INSTFLIP	INSTFLIP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					porg to instrument y flip		
 INSTR	INSTR		char		VARCHAR2(25 BYTE)	25	N	Y	Y		25s				imag,spec	Y	Y	Y		Y	Spectrometer (spec) or Imager (imag)	imag,spec	
+ISAO	ISAO		char		VARCHAR2(25 BYTE)	25	Y	Y	N	25s					Y							
 ISSKY	ISSKY		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					flag for sky frames (0=not sky, 1=sky)		
 ITIME	ITIME		double		FLOAT(126)	13	Y	Y	Y		18.5f		0	2000000		Y	Y	Y		Y	Integration time of each coadd	10000	
 ITRGTMP	ITRGTMP		double		FLOAT(126)	13	Y	Y	N		18.5f					Y					Desired temperature for channel 2		
@@ -305,6 +306,7 @@ WSFRRT	WSFRRT		integer		NUMBER(*,0)	14	Y	Y	N		14d					Y					Frame rate for WFS c
 WSSMGN	WSSMGN		integer	hertz	NUMBER(*,0)	11	Y	Y	N		11d					Y					WFS gain (0)		
 WSSMPRG	WSSMPRG		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					WFS_SciMeas program (0)		
 WSSMREP	WSSMREP		integer		NUMBER(*,0)	13	Y	Y	N		13d					Y					WFS SciMeas repetitions (increments)		
+BLANK	BLANK		integer		NUMBER(*,0)	13	Y	Y	N	13d					Y							
 DATLEVEL	DATLEVEL		integer		NUMBER(*,0)	8	Y	Y	N		8d					Y					Data reduction level		
 DQA_DATE	DQA_DATE		char		VARCHAR2(28 BYTE)	28	Y	Y	N		28s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					DQA version number		
