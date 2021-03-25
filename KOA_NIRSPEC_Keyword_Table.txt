@@ -7,8 +7,8 @@ UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time											DCS Coo
 KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y						arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type	
 IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Observation type	
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N						SCAM,SPEC					Y	Camera name	
-DEC	CDEC	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination	
-RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	32	Y	Y	N	angle						Y			Y		Telescope right ascension	
+DEC	CDEC	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination	
+RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle						Y			Y		Telescope right ascension	
 EQUINOX	Dec2000	Native	double	year	FLOAT(126)	32	Y	Y	N												telescope equinox (2000.0)	
 FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y					9999						Y	copy of FILENUM	
 FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N												Frame number	

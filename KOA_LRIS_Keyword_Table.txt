@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y							Y			Y	Y	Unique identifier for each file	LR.20150424.44113.fits				
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y			Y		Proprietary period					
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y						LRIS,LRISBLUE	Y			Y	Y	Instrument name	LRIS				
-DATE-OBS	DATE_OBS	DCS	date		DATE	16	N	Y	Y	date	30s					Y			Y	Y	Universal date of observation	4/24/2015				
+DATE-OBS	DATE_OBS	DCS	date		DATE	24	N	Y	Y	date	30s					Y			Y	Y	Universal date of observation	4/24/2015				
 DEC	CDEC	native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination	#N/A				
 RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle						Y			Y		Telescope right ascension	00:06.1				
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y			Y		Telescope equinox	2000				
