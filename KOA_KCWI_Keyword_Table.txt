@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file	KB.20170208_00008.fits, KR.20170208_00009.fits	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.5f					Y							
-TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s					Y					Keck telescope designation	Keck II	
+TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Keck telescope designation	Keck II	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		69s				object, bias, dark, arclamp, flatlamp, fpc, domeflat, twilightflat, contbars	Y	Y			Y	KOA image type	object	
 PROGNAME	PROGNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					WMKO program ID		
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				WMKO program ID	H275	
@@ -177,7 +177,7 @@ EXTEND	EXTEND	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					FITS dataset may
 FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Filename	/s/sdata1400/kcwirun/2017feb16/kf170216_000001.fits	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 2	off	
-FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	N	Y	Y		16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
+FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
 GAIN1	GAIN1	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 0	0.172	
 GAIN2	GAIN2	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 1	0.173	
 GAIN3	GAIN3	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 2	0.168	
@@ -346,7 +346,7 @@ SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Secondary foc
 SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Secondary status string	HALT	
 SECTHETX	SECTHETX	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Secondary theta x	-43.4	
 SECTHETY	SECTHETY	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Secondary theta y	-219.7	
-SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y					Observing semester	2015A	
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing semester	2015A	
 SEQUENCE	SEQUENCE	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Command sequence	1	
 SHUFROWS	SHUFROWS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					[ccdrows] number of rows in shuffle	685	
 SIG2NOIS	SIG2NOIS	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Signal to noise at center of CCD		

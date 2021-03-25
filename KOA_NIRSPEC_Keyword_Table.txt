@@ -119,11 +119,11 @@ DISPPOS	DISPPOS	Native	double		FLOAT(126)	32	Y	Y	N												Cross Disperser po
 DMGAIN	DMGAIN	Native	double		FLOAT(126)	32	Y	Y	N												Set DM loop gain	
 DMMRFN	DMMRFN	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Name of DM reconstructor file	
 DOMEPOSN	DOMEPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												dome azimuth (302.81 deg)	
-DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	N	N	N												DCS dome status string	
+DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	Y	N	N												DCS dome status string	
 DQA_DATE	DQA_DATE	Added	char		TIMESTAMP(6)	32	N	Y	N												Date of DQA run	
 DQA_VERS	DQA_VERS	Added	char	n/a	VARCHAR2(8 BYTE)	8	N	Y	N												DQA version number	
 DRA	DRA	Native	double	seconds/sec	FLOAT(126)	32	Y	Y	N												differential right ascension rate	
-DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	N	N	N												DRAIN (0x600A) voltage	
+DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	Y	N	N												DRAIN (0x600A) voltage	
 DSUB	DSUB	Native	double	volts	FLOAT(126)	32	Y	Y	N												DSUB (0x6002) voltage	
 DTCLP	DTCLP	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												OPEN/CLOSE TT CLMP ctrl loop	
 DTGAIN	DTGAIN	Native	double	n/a	FLOAT(126)	32	Y	Y	N												Set TT loop gain	
@@ -181,7 +181,7 @@ INSTRUME	INSTRUME	Native	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	Y						NIRSPEC,NIRSPA
 INSTSTAT	INSTSTAT	Added	integer	n/a	NUMBER(*,0)	16	Y	Y	N												KOA instrument status	
 IROTLOC	IROTLOC	Native	double		FLOAT(126)	32	Y	Y	N												Step position of Image rotator	
 IROTPOS	IROTPOS	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Image rotator position	
-ISAO	ISAO	Added	char	n/a	VARCHAR2(8 BYTE)	8	N	Y	N						yes, no						Is adaptive optics in use?	
+ISAO	ISAO	Added	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N						yes, no						Is adaptive optics in use?	
 ITIME	ITIME	Native	integer	milliseconds	NUMBER(*,0)	16	Y	Y	N												Integration time per coadd	
 JADEFILE	JADEFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Jade	
 JADENAME	JADENAME	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Name of Jade	

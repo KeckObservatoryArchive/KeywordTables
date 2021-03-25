@@ -13,7 +13,7 @@ PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N							Y			Y		WMKO program ID	
 PROGINST	PROGINST	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	N							Y			Y	Y	Program institution	UH				
 PROGPI	PROGPI	KOA	char		VARCHAR2(70 BYTE)	70	N	Y	N							Y			Y	Y	Program PI	McConnell				
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N							Y			Y	Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies				
-SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N							Y			Y		Observing semester	2015A				
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Observing semester	2015A				
 ABFREQ	ABFREQ	LRIS	integer	Hz	NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Antiblooming frequency	20				
 ADCBYP	ADCBYP	native	char		VARCHAR2(1 BYTE)	1	Y	Y	N							Y			Y		ADC motor control bypass switch	F				
 ADCCAL	ADCCAL	native	char		VARCHAR2(1 BYTE)	1	Y	Y	N							Y			Y		ADC calibration	T				
@@ -109,7 +109,7 @@ FLAMP1	FLAMP1	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp 1	off
 FLAMP2	FLAMP2	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp 2	off				
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp control 1	off				
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp control 2	off				
-FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	N	Y	Y		16d		0	9999		Y			Y	Y	Frame number	76				
+FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y			Y	Y	Frame number	76				
 GRANAME	GRANAME	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y	Y	Grating name	600/10000				
 GRANGLE	GRANGLE	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Grating angle raw	33.22573471				
 GRATING	GRATING	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Grating	2				
@@ -152,7 +152,7 @@ OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Observing assistant
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N							Y			Y		Original filename	r150424_123.fits				
 OBJECT	OBJECT	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Object's name	NGC 4889				
 OBSERVER	OBSERVER	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Observer's name(s)	McConnell				
-OBSMODE	OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y						IMAGING, SPEC	Y			Y		Imaging or Spec mode					
+OBSMODE	OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y						IMAGING, SPEC	Y			Y		Imaging or Spec mode					
 OBSTYPE	OBSTYPE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Type of observation	dark				
 OUTDIR	OUTDIR	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Readout directory	/sdata243/lris9/2015apr24				
 OUTFILE	OUTFILE	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Readout filename prefix	r150424_				

@@ -1,7 +1,7 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	Y		Y	Unique identifier for each file	ES.20201203.77326.fits	
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y			Y	Original filename at the telescope	e201204_0078.fits	May have to add .fits to DATAFILE
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	WMKO assigned program identification code	ENG	
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program institution	KECK	
 PROGPI	PROGPI	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program principal investigator	J. Doe	
@@ -124,7 +124,7 @@ FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					imaging fl
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					spectroscopy flatlamp		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					focal station		
 FRAME	FRAME	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					reference frame		
-FRAMENO	FRAMENO	ESI	integer		NUMBER(*,0)	8	N	Y	N		11d					Y	Y			Y	frame number	15	
+FRAMENO	FRAMENO	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y	Y			Y	frame number	15	
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					hour angle		
 HATCHPOS	HATCHPOS	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					hatch position		
 IMFLTCAL	IMFLTCAL	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					image flat calibration		
@@ -137,7 +137,7 @@ IMFLTTOR	IMFLTTOR	ESI	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					image flat to
 IMTYPE	IMTYPE	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					image type		
 INSTANGL	INSTANGL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y					instrument angle		
 INSTFLIP	INSTFLIP	DCS	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					instrument flip		
-INSTRUME	INSTRUME	ESI	char		VARCHAR2(16 BYTE)	16	N	Y	N		16s					Y					intrument		
+INSTRUME	INSTRUME	ESI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					intrument		
 IONCURMA	IONCURMA	ESI	double	mA	FLOAT(126)	16	Y	Y	N		18.8f					Y					ion pump current		
 IONPUMP	IONPUMP	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					raw ion pump current		
 KEEPPREP	KEEPPREP	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y					keep prescan pixels		
