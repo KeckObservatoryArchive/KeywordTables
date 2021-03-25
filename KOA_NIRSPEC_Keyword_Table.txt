@@ -144,8 +144,8 @@ FLAT	FLAT	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Flat lamp: 1=on, 0=
 FLIMAGIN	FLIMAGIN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS dome lamp imaging mode	
 FLSPECTR	FLSPECTR	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS dome lamp spectra mode	
 FOCALSTN	FOCALSTN	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N												focal station	
-FREQ.SPE	FREQ_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp Filtering Frequence setting 1-4	
-GAIN.SPE	GAIN_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp gain setting 1-4	
+FREQ_SPE	FREQ_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp Filtering Frequence setting 1-4	
+GAIN_SPE	GAIN_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp gain setting 1-4	
 GROUPID	GROUPID	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Identifier for a group of images	
 GROUPS	GROUPS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Requested number of sampling groups	
 GRPDONE	GRPDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of completed groups in last coadd	
