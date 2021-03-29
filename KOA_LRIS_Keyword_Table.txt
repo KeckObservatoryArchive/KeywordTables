@@ -1,5 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	DESCRIPTION	Example	Notes			
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y							Y			Y	Y	Unique identifier for each file	LR.20150424.44113.fits				
+SEMID	SEMID	KOA	char		VARCHAR2(21)	21	Y	N	N		21s	N				N	Y	Y	Y	Y	SEMESTER and PROGID		
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y			Y		Proprietary period					
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y						LRIS,LRISBLUE	Y			Y	Y	Instrument name	LRIS				
 DATE-OBS	DATE_OBS	DCS	date		DATE	24	N	Y	Y	date	30s					Y			Y	Y	Universal date of observation	4/24/2015				

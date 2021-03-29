@@ -1,5 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	added	char		VARCHAR2(30 BYTE)	30	N	Y	Y		30s					Y				Y	Unique identifier for each file		
+SEMID	SEMID	KOA	char		VARCHAR2(21)	21	Y	N	N		21s	N				N	Y	Y	Y	Y	SEMESTER and PROGID		
 PROPINT	PROPINT	added	integer	months	NUMBER(38)	16	N	Y	Y		16d		0	9999		Y					Proprietary period in months		
 AIRMASS	AIRMASS	dcs	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					air mass (1.41)		
 AOAOAMED	AOAOAMED	ao	integer		NUMBER(38)	20	Y	Y	N		20d				open, closed	Y					AO WFC AOA camera median light		

@@ -1,5 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR(32 BYTES)	32	N	Y	Y		32s					Y			Y	Y	Unique identifier for each file		
+SEMID	SEMID	KOA	char		VARCHAR2(21)	21	Y	N	N		21s	N				N	Y	Y	Y	Y	SEMESTER and PROGID		
 OFNAME	OFNAME	KOA	char		VARCHAR(32 BYTES)	32	N	Y	N		32s					Y			Y		DATAFILE?	v171005_0001	May have to add .fits to DATAFILE
 COADDS	COADDS	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y	Y	Number of coadds		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s	Y				Y					declination		

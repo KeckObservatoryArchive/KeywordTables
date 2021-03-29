@@ -1,5 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	Y	Y	Y	Unique identifier for each file	DE.20190107.22495.fits	
+SEMID	SEMID	KOA	char		VARCHAR2(21)	21	Y	N	N		21s	N				N	Y	Y	Y	Y	SEMESTER and PROGID		
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y		Y	Y	Original filename at the telescope, copied from DATAFILE keyword	d0107_0051.fits	
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.8f					Y			Y		FITS file size in megabytes	44.8	
 PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y	Y	Y	Y	WMKO assigned program identification code	2019A_ENG	
