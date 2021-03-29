@@ -4,7 +4,7 @@ PROPINT	PROPINT	KOA	integer	months	NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				CCD1 da
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y			Y	Original filename at the telescope, copied from DATAFILE keyword	v171005_0001	May have to add .fits to DATAFILE
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 DATE-OBS	DATE_OBS		date		DATE	12	N	Y	Y	date	32s	Y				Y				Y	observing date (UT)		
-DEC	CDEC	DCS	char		VARCHAR2(20 BYTE)	20	Y	Y	N		18.8f	Y				Y					declination		
+DEC	CDEC	DCS	double		FLOAT(126)	20	Y	Y	N		18.8f	Y				Y					declination		
 ELAPTIME	ELAPTIME		double	seconds	FLOAT(126)	16	Y	Y	Y		18.5f		0	100000		Y				Y	elapsed-time		
 EQUINOX	EQUINOX		double	years	FLOAT(126)	16	N	Y	Y		18.5f		0	2100		Y					telescope-equinox		
 FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	Frame number	14	
@@ -14,7 +14,7 @@ PROGID	PROGID	KOA	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y	Y			Y	WMKO assigne
 PROGINST	PROGINST	KOA	char		VARCHAR2(13 BYTE)	13	N	Y	N		13s					Y	Y			Y	Program institution	KECK	
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	N		69s					Y	Y			Y	Program principal investigator	J. Doe	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(211 BYTE)	211	Y	Y	N		211s					Y	Y			Y	Program title	OSIRIS Engineering Night	
-RA	CRA	DCS	char		VARCHAR2(20 BYTE)	20	Y	Y	N		18.8f	Y				Y					right ascension		
+RA	CRA	DCS	double		FLOAT(126)	20	Y	Y	N		18.8f	Y				Y					right ascension		
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(9 BYTE)	9	N	Y	N		9s					Y					Observing semester		
 TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	69	Y	Y	N		69s					Y	Y			Y	Target name	sky	
 UT	UT		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s					Y				Y	coordinated universal time		

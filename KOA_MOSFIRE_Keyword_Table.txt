@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOA	char		VARCHAR(32 BYTES)	32	N	Y	Y		32s					Y			Y	Y	Unique identifier for each file		
 OFNAME	OFNAME	KOA	char		VARCHAR(32 BYTES)	32	N	Y	N		32s					Y			Y		DATAFILE?	v171005_0001	May have to add .fits to DATAFILE
 COADDS	COADDS	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y	Y	Number of coadds		
-DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s	Y				Y					declination		
+DEC	CDEC	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f	Y				Y					declination		
 ELAPTIME	ELAPTIME	KOA	double	seconds	FLOAT(126)	24	Y	Y	Y		18.8f					Y			Y	Y	Total integration time (TRUITIME * COADDS)	2	
 EQUINOX	EQUINOX	DCS	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		telescope equinox		
 FILTER	FILTER	MOSFIRE	char		VARCHAR(32 BYTES)	32	Y	Y	N		32s					Y			Y	Y	Filter name		
@@ -19,7 +19,7 @@ PROGPI	PROGPI	KOA	char		VARCHAR(32 BYTES)	32	N	Y	N		32s					Y			Y	Y	Program PI
 PROGTITL	PROGTITL	KOA	char		VARCHAR(210 BYTES)	210	Y	Y	N		210s					Y			Y	Y	Program title		
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0	9999		Y			Y		Proprietary period		
 PSCALE	PSCALE	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y	Y	Pixel scale for science camera		
-RA	CRA	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		16s	Y				Y					right ascension		
+RA	CRA	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f	Y				Y					right ascension		
 SAMPMODE	SAMPMODE	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y		Sampling Mode (1:Single, 2:CDS, 3:MCDS, 4:UTR)		
 SEMESTER	SEMESTER	KOA	char		VARCHAR(8 BYTES)	8	N	Y	N		8s					Y			Y	Y	WMKO observing schedule semester		
 TARGNAME	TARGNAME	DCS	char		VARCHAR(32 BYTES)	32	Y	Y	N		32s					Y			Y		target name		
