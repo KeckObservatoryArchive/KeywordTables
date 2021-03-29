@@ -174,6 +174,7 @@ EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				Telesc
 EXPTIME	EXPTIME	KCWI-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
 EXTEND	EXTEND	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					FITS dataset may contain extensions	TRUE	
 FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Filename	/s/sdata1400/kcwirun/2017feb16/kf170216_000001.fits	
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 2	off	
 FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
