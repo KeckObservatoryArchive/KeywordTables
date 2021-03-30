@@ -37,7 +37,7 @@ DCSSTAT	DCSSTAT	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		drive and c
 DCSVERS	DCSVERS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		drive and control version		
 DEC	CDEC	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope declination		
 DISPNAME	DISPNAME	NIRES	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s					Y			Y		FITS file name for spec display		
-DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f				0.150.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f				0.15/0.12	Y			Y		CCD pixel scale, dispersion (arcsec/pixel)		
 DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		dome azimuth		
 DOMESTAT	DOMESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		dome status		
 DPATCSYS	DPATCSYS	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dither pattern coordinate system	inst	
