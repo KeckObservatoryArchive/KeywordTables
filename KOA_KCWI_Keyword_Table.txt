@@ -1,6 +1,7 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file	KB.20170208_00008.fits, KR.20170208_00009.fits	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Keck telescope designation	Keck II	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		69s				object, bias, dark, arclamp, flatlamp, fpc, domeflat, twilightflat, contbars	Y	Y			Y	KOA image type	object	
 PROGNAME	PROGNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					WMKO program ID		
@@ -174,7 +175,6 @@ EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				Telesc
 EXPTIME	EXPTIME	KCWI-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
 EXTEND	EXTEND	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					FITS dataset may contain extensions	TRUE	
 FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Filename	/s/sdata1400/kcwirun/2017feb16/kf170216_000001.fits	
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 2	off	
 FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
