@@ -328,7 +328,6 @@ TVFRAW	TVFRAW		integer		NUMBER(*,0)	16	Y	Y	N										Y	N	tv-focus-raw-position 
 TVON	TVON		char		VARCHAR2(9 BYTE)	8	Y	Y	Y						T,F				Y	N	tv-controller-power		
 UPSON	UPSON		char		VARCHAR2(9 BYTE)	8	Y	Y	N						T,F				Y	N	ups-power on		
 UT	UT		char		VARCHAR2(17 BYTE)	16	N	Y	Y										Y	Y	coordinated universal time		
-UT-END	UT_END		char		VARCHAR2(17 BYTE)	16	Y	Y	Y										Y	N	UT time of end of exposure		
 UTB15VEN	UTB15VEN		char		VARCHAR2(17 BYTE)	16	Y	N	N										Y	N	ccd-15-volts-enable		
 UTB30VEN	UTB30VEN		char		VARCHAR2(17 BYTE)	16	Y	N	N										Y	N	ccd-30-volts-enable		
 UTBM15V	UTBM15V		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	ccd-minus-15-volts in ADC value		
@@ -336,6 +335,7 @@ UTBP15V	UTBP15V		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	ccd-plus-15-volts
 UTBP30V	UTBP30V		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	ccd-plus-30-volts in ADC value		
 UTBP5V	UTBP5V		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	ccd-plus-5-volts in ADC value		
 UTBTEMP	UTBTEMP		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	temperature of the CCD controller utility board		
+UT-END	UT_END		char		VARCHAR2(17 BYTE)	16	Y	Y	Y										Y	N	UT time of end of exposure		
 VIDINACT	VIDINACT		integer		NUMBER(*,0)	16	Y	Y	N										Y	N			
 VIDINBEG	VIDINBEG		integer		NUMBER(*,0)	16	Y	Y	N										Y	N	bitmask indicating which of the video inputs in the mosaic were shifted at the b		
 VIDINEND	VIDINEND		integer		NUMBER(*,0)	16	Y	Y	N										Y	N	bitmask indicating which of the video inputs in the mosaic were shifted at the e		
