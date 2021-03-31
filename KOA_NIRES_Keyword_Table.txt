@@ -199,7 +199,7 @@ TMPACT2	TMPACT2	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Channeel B contro
 TUBETEMP	TUBETEMP	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		tube temperature		
 TVANGL	TVANGL	DCS	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		porg to ttv angle (1.2 deg)		
 TVFLIP	TVFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		porg to tv y flip		
-UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	time	16s					Y	Y		Y	Y	Copy of UTC		
+UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y	Y		Y	Y	Copy of UTC		
 UTC	UTC	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y			Y		coordinated universal time		
 WAT0_001	WAT0_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Pixel coordinate system	system=image	
 WAT1_001	WAT1_001	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		WCS projection for axis 1	wtype=tan axtype=ra	
@@ -223,7 +223,7 @@ MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	24	Y	Y	N		18.5f	Y				Y			Y		modified juli
 YOFFSET	YOFFSET	NIRES	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		YOFFSET dither pattern Y/Nod offset	0	
 YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Subtract reference pixels along rows		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
