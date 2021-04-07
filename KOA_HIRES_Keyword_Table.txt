@@ -87,7 +87,7 @@ DETLSIZE	DETLSIZE		char		VARCHAR2(69 BYTE)	68	Y	N	N										Y	N	The unbinned si
 DISPSCAL	DISPSCAL		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	CCD pixel scale, dispersion		
 DOMESTAT	DOMESTAT		char		VARCHAR2(17 BYTE)	16	Y	N	N										Y	N	dome-status		
 DOOR	DOOR		char		VARCHAR2(9 BYTE)	8	Y	Y	Y						T,F				Y	N	door status		
-DQA_DATE	DQA_DATE		char		TIMESTAMP	23	Y	Y	N										Y	N	Date/UT Time of DQA run		
+DQA_DATE	DQA_DATE		char		VARCHAR(23 BYTE)	23	Y	Y	N										Y	N	Date/UT Time of DQA run		
 DQA_VERS	DQA_VERS		char		VARCHAR2(9 BYTE)	8	Y	N	N										Y	N	DQA version number		
 DWRN2LV	DWRN2LV		double		FLOAT(126)	16	Y	Y	Y		18.8f		0	100000					Y	N	ccd dewar nitrogen level in percent		
 ECHANGL	ECHANGL		double		FLOAT(126)	16	Y	Y	Y		18.8f		-45	45					Y	Y	echelle-angle		
@@ -374,10 +374,9 @@ XFLIP	XFLIP		integer		NUMBER(*,0)	8	Y	Y	N										Y	N	camera-x-flip
 YFLIP	YFLIP		integer		NUMBER(*,0)	8	Y	N	N										Y	N	camera-y-flip		
 OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N										Y	Y	Original filename		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858	
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	HA_D		double		FLOAT(126)		Y	Y	N		18.8f								Y	N	telescope-hour-angle		
 	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
 	MD_INGTIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
-	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N	DATE_OBS and UT combined as a timestamp		
 	FILEHAND		char		VARCHAR2(151 BYTE)	16	Y	Y	N										Y	Y	Path to the file in the archive		
 	SEMID		char		VARCHAR2(21 BYTE)	16	Y	N	N										Y	Y	SEMESTER and PROGID		
