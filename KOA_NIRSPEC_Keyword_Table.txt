@@ -121,7 +121,7 @@ DMGAIN	DMGAIN	Native	double		FLOAT(126)	32	Y	Y	N												Set DM loop gain
 DMMRFN	DMMRFN	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Name of DM reconstructor file		
 DOMEPOSN	DOMEPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												dome azimuth (302.81 deg)		
 DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	N	N	N												DCS dome status string		
-DQA_DATE	DQA_DATE	Added	char		TIMESTAMP(6)	32	N	Y	N												Date of DQA run		
+DQA_DATE	DQA_DATE	Added	char		VARCHAR2(32 BYTE)	32	N	Y	N												Date of DQA run		
 DQA_VERS	DQA_VERS	Added	char	n/a	VARCHAR2(8 BYTE)	8	N	Y	N												DQA version number		
 DRA	DRA	Native	double	seconds/sec	FLOAT(126)	32	Y	Y	N												differential right ascension rate		
 DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	N	N	N												DRAIN (0x600A) voltage		
