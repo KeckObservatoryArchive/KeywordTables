@@ -1,5 +1,5 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char		VARCHAR(30 BYTES)	30	N	Y	Y		30s					Y			Y	Y	Unique identifier for each file		
+KOAID	KOAID	KOA	char		VARCHAR(30 BYTE)	30	N	Y	Y		30s					Y			Y	Y	Unique identifier for each file		
 PROPINT1	PROPINT1		integer		NUMBER(*,0)	16	N	N	N										Y	N	Proprietary Period Interval for CCD01		
 PROPINT2	PROPINT2		integer		NUMBER(*,0)	16	N	N	N										Y	N	Proprietary Period Interval for CCD02		
 PROPINT3	PROPINT3		integer		NUMBER(*,0)	16	N	N	N										Y	N	Proprietary Period Interval for CCD03		
