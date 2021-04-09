@@ -78,7 +78,7 @@ CTRL0ERR	CTRL0ERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC contr
 CTRL0MSG	CTRL0MSG	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Current instrument	LRISADC	
 DATASUM	DATASUM	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Data unit checksum	0	
-DATE	DATE	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		Universal date and time of observation	2015-04-24T12:25:14	
+DATE	DATE_UT	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		Universal date and time of observation	2015-04-24T12:25:14	
 DATE_BEG	DATE_BEG	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		UNIX timestamp of beginning of observation	2015-04-24T12:15:12	
 DATE_END	DATE_END	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		UNIX timestamp of end of observation	2015-04-24T12:25:12	
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	16	N	Y	N		16d					Y			Y		Data reduction level		
