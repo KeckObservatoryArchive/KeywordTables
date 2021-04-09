@@ -136,7 +136,7 @@ LTM1_1	LTM1_1		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					ccd to image transfo
 LTM2_2	LTM2_2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					ccd to image transformation		
 MAXWAVE	MAXWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					maximum wavelength of passband		
 MINWAVE	MINWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					minimum wavelength of passband		
-MJD-OBS	MJD-OBS	dcs	double	days	FLOAT(126)	20	Y	Y	N		18.8f					Y					modified julian date of observation		
+MJD-OBS	MJD_OBS	dcs	double	days	FLOAT(126)	20	Y	Y	N		18.8f					Y					modified julian date of observation		
 MLSKYCTS	MLSKYCTS	legacy	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Sky counts		
 MULTISAM	MULTISAM	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Number of multiple reads		
 MZP	MZP	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Adopted magnitude zero pointeger		
