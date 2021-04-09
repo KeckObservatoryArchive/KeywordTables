@@ -247,7 +247,7 @@ UTBP15V	UTBP15V	LRIS	double	ADC	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		CCD plus 1
 UTBP30V	UTBP30V	LRIS	double	ADC	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		CCD plus 30 volts	34.78017426	
 UTBP5V	UTBP5V	LRIS	double	ADC	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		CCD plus 5 volts	4.94217348	
 UTBTEMP	UTBTEMP	LRIS	double	celsius	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Temperature of CCD controller	1.5	
-UTC-END	UTC-END	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		UTC time of end of exposure	25:13.5	
+UTC-END	UTC_END	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		UTC time of end of exposure	25:13.5	
 VIDINACT	VIDINACT	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Vidinact	15	
 VIDOFF1	VIDOFF1	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Video offset amplifier 1	1611	
 VIDOFF2	VIDOFF2	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Video offset amplifier 2	1876	
