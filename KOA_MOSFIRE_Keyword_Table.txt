@@ -1,7 +1,7 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR(32 BYTE)	32	N	Y	Y		32s					Y			Y	Y	Unique identifier for each file		
-SEMID	SEMID	KOA	char		VARCHAR2(21)	21	Y	N	N		21s	N				N	Y	Y	Y	Y	SEMESTER and PROGID		
 OFNAME	OFNAME	KOA	char		VARCHAR(32 BYTE)	32	N	Y	N		32s					Y			Y		DATAFILE?	v171005_0001	May have to add .fits to DATAFILE
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 COADDS	COADDS	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y	Y	Number of coadds		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s	Y				Y					declination		
 ELAPTIME	ELAPTIME	KOA	double	seconds	FLOAT(126)	24	Y	Y	Y		18.8f					Y			Y	Y	Total integration time (TRUITIME * COADDS)	2	
@@ -365,8 +365,7 @@ WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Wind speed at 
 XOFFSET	XOFFSET	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		dither pattern X offset		
 YOFFSET	YOFFSET	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		dither pattern Y/Nod offset		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858	
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
-	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y		Y	Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
 	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y		Y	Y	SEMESTER and PROGID	2019B_ENG	
