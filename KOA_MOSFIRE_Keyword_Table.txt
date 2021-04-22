@@ -64,7 +64,7 @@ CURRINST	CURRINST	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		current in
 DARENABL	DARENABL	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		Status code of watchdarcorr		
 DATAFILE	DATAFILE	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		Datafile name		
 DATASEC	DATASEC	MOSFIRE	char		VARCHAR(24 BYTE)	24	Y	Y	N		24s					Y			Y		Current datasection of the frame		
-DATE-OBS	DATE_OBS	DCS	char		VARCHAR(32 BYTE)	32	N	Y	Y	date	32s					Y			Y		universal date of observation		
+DATE-OBS	DATE_OBS	DCS	char		DATE	32	N	Y	Y	date	32s					Y			Y		universal date of observation		
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		Data reduction level		
 DCSSTAT	DCSSTAT	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		drive and control status		
 DCSVERS	DCSVERS	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		drive and control version		
