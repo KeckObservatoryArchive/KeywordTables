@@ -43,9 +43,9 @@ SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y		8s					Y			Y		WMKO observi
 SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N		18.4f					Y			Y		CCD pixel scale, spatial (arcsec/pixel)		
 SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Nominal spectral resolution		Get with Luca/Carlos to calculate
 UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	time	16s					Y	Y	Y	Y	Y	UT time of observation, in format HH:MM:SS.XX		
-WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		3000	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)		SP: G[GRATEPOS]TLTWAV +- spectral length of grating
-WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		3000	11000		Y			Y		Central wavelength (angstroms)		IM: 4000-10500 and use filter ranges/cutoffs
-WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		3000	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)		Using grating to determine range
+WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)		SP: G[GRATEPOS]TLTWAV +- spectral length of grating
+WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y			Y		Central wavelength (angstroms)		IM: 4000-10500 and use filter ranges/cutoffs
+WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)		Using grating to determine range
 WXDOMHUM	WXDOMHUM	KOA	double	percent	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dome humidity at WXTIME		
 WXDOMTMP	WXDOMTMP	KOA	double	C	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dome temperature at WXTIME		
 WXDWPT	WXDWPT	KOA	double	C	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dewpoint at WXTIME		
