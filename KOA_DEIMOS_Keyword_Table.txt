@@ -486,7 +486,7 @@ VIDOFF7	VIDOFF7	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		video offse
 VIDOFF8	VIDOFF8	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		video offset amplifier 8		
 VIDOFF9	VIDOFF9	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		video offset amplifier 9		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
