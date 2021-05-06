@@ -294,7 +294,7 @@ WINDOW	WINDOW	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					window
 XFLIP	XFLIP	ESI	char	boolean	VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					camera x flip		
 YFLIP	YFLIP	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y					camera y flip		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N		151s	Y				N	Y			Y	Path to the file in the archive	/koadata36/ESI/19990822/lev0/ES.19990822.70889.fits	

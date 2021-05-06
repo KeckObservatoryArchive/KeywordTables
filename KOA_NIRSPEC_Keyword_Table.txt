@@ -10,7 +10,7 @@ IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Observation typ
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N						SCAM,SPEC					Y	Camera name		
 DEC	CDEC	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination		
 RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle						Y			Y		Telescope right ascension		
-EQUINOX	Dec2000	Native	double	year	FLOAT(126)	32	Y	Y	N												telescope equinox (2000.0)		
+EQUINOX	EQUINOX	Native	double	year	FLOAT(126)	32	Y	Y	N												telescope equinox (2000.0)		
 FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y					9999						Y	copy of FILENUM		
 FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N												Frame number		
 ECHLPOS	ECHLPOS	Native	double		FLOAT(126)	32	Y	Y	N												Echelle position		
@@ -388,7 +388,7 @@ WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N												Wind direction (N t
 WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N												Wind speed (mph)		
 XENON	XENON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												Xenon lamp status		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858	
-	Dec2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	DEC2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y		Y	Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
