@@ -276,27 +276,27 @@ BSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout s
 BSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
 BSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
 BSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
-CALOCAL		LRIS	double		FLOAT(126)	16		Y	N							Y					collimation-azimuth-local	-21.3	
-CCDCFG		LRIS	char		VARCHAR2(16 BYTE)	16		Y	N							Y					CCD config: XYSGGAA	10100	
-CD1_1		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					RA per pixel in x	-6.53E-07	
-CD1_2		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					RA per pixel in y	3.73E-08	
-CD2_1		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					DEC per pixel in x	3.73E-08	
-CD2_2		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					DEC per pixel in y	-6.53E-07	
-CELOCAL		LRIS	double		FLOAT(126)	16		Y	N							Y					collimation-elevation-local	22.7	
-CNAME1		LRIS	char		VARCHAR2(32 BYTE)	32		Y	N							Y					Descriptive name of WCS axis 1	Right Ascension	
-CNAME2		LRIS	char		VARCHAR2(32 BYTE)	33		Y	N							Y					Descriptive name of WCS axis 2	Declination	
-CRPIX1		LRIS	double	pixels	FLOAT(126)	26		Y	N							Y					X coordinate of center pixel	17.570086	
-CRPIX2		LRIS	double	pixels	FLOAT(126)	26		Y	N							Y					Y coordinate of center pixel	208.884317	
-CRVAL1		LRIS	double	degrees	FLOAT(126)	26		Y	N							Y					RA of center pixel	230	
-CRVAL2		LRIS	double	degrees	FLOAT(126)	26		Y	N							Y					DEC of center pixel	0.0387	
-CSEC1		LRIS	char		VARCHAR2(32 BYTE)	32		Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
-CSEC2		LRIS	char		VARCHAR2(32 BYTE)	33		Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
-CSEC3		LRIS	char		VARCHAR2(32 BYTE)	34		Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
-CSEC4		LRIS	char		VARCHAR2(32 BYTE)	35		Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
-CTYPE1		LRIS	char		VARCHAR2(16 BYTE)	16		Y	N							Y					Coordinate type of WCS axis 1	RA---TAN	
-CTYPE2		LRIS	char		VARCHAR2(16 BYTE)	17		Y	N							Y					Coordinate type of WCS axis 2	DEC--TAN	
-CUNIT1		LRIS	char		VARCHAR2(16 BYTE)	18		Y	N							Y					Physical unit of WCS axis 1	deg	
-CUNIT2		LRIS	char		VARCHAR2(16 BYTE)	19		Y	N							Y					Physical unit of WCS axis 2	deg	
+CALOCAL		LRIS	double		FLOAT(126)	16	Y	Y	N							Y					collimation-azimuth-local	-21.3	
+CCDCFG		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					CCD config: XYSGGAA	10100	
+CD1_1		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					RA per pixel in x	-6.53E-07	
+CD1_2		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					RA per pixel in y	3.73E-08	
+CD2_1		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					DEC per pixel in x	3.73E-08	
+CD2_2		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					DEC per pixel in y	-6.53E-07	
+CELOCAL		LRIS	double		FLOAT(126)	16	Y	Y	N							Y					collimation-elevation-local	22.7	
+CNAME1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					Descriptive name of WCS axis 1	Right Ascension	
+CNAME2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					Descriptive name of WCS axis 2	Declination	
+CRPIX1		LRIS	double	pixels	FLOAT(126)	26	Y	Y	N							Y					X coordinate of center pixel	17.570086	
+CRPIX2		LRIS	double	pixels	FLOAT(126)	26	Y	Y	N							Y					Y coordinate of center pixel	208.884317	
+CRVAL1		LRIS	double	degrees	FLOAT(126)	26	Y	Y	N							Y					RA of center pixel	230	
+CRVAL2		LRIS	double	degrees	FLOAT(126)	26	Y	Y	N							Y					DEC of center pixel	0.0387	
+CSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
+CSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+CSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+CSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+CTYPE1		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Coordinate type of WCS axis 1	RA---TAN	
+CTYPE2		LRIS	char		VARCHAR2(16 BYTE)	17	Y	Y	N							Y					Coordinate type of WCS axis 2	DEC--TAN	
+CUNIT1		LRIS	char		VARCHAR2(16 BYTE)	18	Y	Y	N							Y					Physical unit of WCS axis 1	deg	
+CUNIT2		LRIS	char		VARCHAR2(16 BYTE)	19	Y	Y	N							Y					Physical unit of WCS axis 2	deg	
 DATE-BEG		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure begin	2021-05-10T04:02:27.663	
 DATE-END		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure end	2021-05-10T04:02:27.664	
 DATEERAS		LRIS	char		VARCHAR2(24 BYTE)	25	Y	Y	N							Y					most recent special erase/flush/purge	2021-05-10T04:02:27.665	
