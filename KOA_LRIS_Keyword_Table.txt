@@ -1,10 +1,10 @@
-FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	DESCRIPTION	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y							Y			Y	Y	Unique identifier for each file	LR.20150424.44113.fits	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y			Y		Proprietary period		
-FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	N	Y	N		18.8f					Y					FITS file size in megabytes	44.8	
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y						LRIS,LRISBLUE	Y			Y	Y	Instrument name	LRIS	
-DATE-OBS	DATE_OBS	DCS	date		DATE	24	N	Y	Y	date	30s					Y			Y	Y	Universal date of observation	4/24/2015	
-DEC	CDEC	native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination	    	
+DATE-OBS	DATE_OBS	DCS	date		DATE	24	N	Y	Y	date	30s					Y			Y	Y	Universal date of observation	4/24/15	
+DEC	CDEC	native	char		VARCHAR2(24 BYTE)	24	Y	Y	Y	angle			-90	95		Y			Y		Telescope declination	#N/A	
 RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle						Y			Y		Telescope right ascension	00:06.1	
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y			Y		Telescope equinox	2000	
 UT	UT	LRIS	char		VARCHAR2(24 BYTE)	24	N	Y	Y	time						Y			Y	Y	Universal time	15:13.4	
@@ -14,7 +14,7 @@ PROGID	PROGID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N							Y			Y		WMKO program ID	
 PROGINST	PROGINST	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	N							Y			Y	Y	Program institution	UH	
 PROGPI	PROGPI	KOA	char		VARCHAR2(70 BYTE)	70	N	Y	N							Y			Y	Y	Program PI	McConnell	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N							Y			Y	Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
-SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Observing semester	2015A	
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N							Y			Y		Observing semester	2015A	
 ABFREQ	ABFREQ	LRIS	integer	Hz	NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Antiblooming frequency	20	
 ADCBYP	ADCBYP	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC motor control bypass switch	F	
 ADCCAL	ADCCAL	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC calibration	T	
@@ -25,13 +25,13 @@ ADCENC	ADCENC	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC load enco
 ADCERR	ADCERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC modify error number	0	
 ADCGTE	ADCGTE	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC galil position error	0	
 ADCLCK	ADCLCK	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC motion keyword lockout	unlocked	
-ADCLIM	ADCLIM	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC limit switch status	0	
-ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y			3	
+ADCLIM	ADCLIM	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC limit switch status	0	
+ADCMOD	ADCMOD	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y			3	
 ADCNEED	ADCNEED	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC needed	T	
-ADCPRENA	ADCPRENA	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC prism calc enable disable flag	1	
+ADCPRENA	ADCPRENA	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC prism calc enable disable flag	1	
 ADCRAW	ADCRAW	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC raw position	-2635095	
 ADCRCD	ADCRCD	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC remote control disablers		
-ADCSTA	ADCSTA	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC overall status	10	
+ADCSTA	ADCSTA	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC overall status	10	
 ADCSVA	ADCSVA	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo val tracking error	-0.00181328	
 ADCSVR	ADCSVR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC servo raw tracking error	-22	
 ADCSVX	ADCSVX	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo vax tracking error	-0.00000103	
@@ -110,7 +110,7 @@ FLAMP1	FLAMP1	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp 1	off
 FLAMP2	FLAMP2	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp 2	off	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Flat lamp control 2	off	
-FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y			Y	Y	Frame number	76	
+FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	N	Y	Y		16d		0	9999		Y			Y	Y	Frame number	76	
 GRANAME	GRANAME	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y	Y	Grating name	600/10000	
 GRANGLE	GRANGLE	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Grating angle raw	33.22573471	
 GRATING	GRATING	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Grating	2	
@@ -120,20 +120,8 @@ GRISTRAN	GRISTRAN	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Grism tra
 GTRAN	GTRAN	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Grism transport	1	
 GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		FWHM of guide star		
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		UT of GUIDFWHM value		
-HA	HA	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		Telescope hour angle	    	
+HA	HA	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		Telescope hour angle	#N/A	
 HALOGEN	HALOGEN	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y			off	
-IM01MD00	IM01MD00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging mean ccd 1 amp location 0		
-IM01MN00	IM01MN00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging median ccd 1 amp location 0		
-IM01SD00	IM01SD00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging standard deviation ccd 1 amp location 0		
-IM01MD01	IM01MD01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging mean ccd 1 amp location 1		
-IM01MN01	IM01MN01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging median ccd 1 amp location 1		
-IM01SD01	IM01SD01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging standard deviation ccd 1 amp location 1		
-IM02MD02	IM02MD02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging mean ccd 2 amp location 2		
-IM02MN02	IM02MN02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging median ccd 2 amp location 2		
-IM02SD02	IM02SD02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging standard deviation ccd 2 amp location 2		
-IM02MD03	IM02MD03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging mean ccd 2 amp location 3		
-IM02MN03	IM02MN03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging median ccd 2 amp location 3		
-IM02SD03	IM02SD03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging standard deviation ccd 2 amp location 3		
 IMTYPE	IMTYPE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y			MOSAIC	
 KEEPPREP	KEEPPREP	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Keep prescan pixels	1	
 KRYPTON	KRYPTON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y			off	
@@ -153,7 +141,7 @@ OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Observing assistant
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N							Y			Y		Original filename	r150424_123.fits	
 OBJECT	OBJECT	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Object's name	NGC 4889	
 OBSERVER	OBSERVER	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Observer's name(s)	McConnell	
-OBSMODE	OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y						IMAGING, SPEC	Y			Y		Imaging or Spec mode		
+OBSMODE	OBSMODE	KOA	char		VARCHAR2(16 BYTE)	16	N	Y	Y						IMAGING, SPEC	Y			Y		Imaging or Spec mode		
 OBSTYPE	OBSTYPE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Type of observation	dark	
 OUTDIR	OUTDIR	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Readout directory	/sdata243/lris9/2015apr24	
 OUTFILE	OUTFILE	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		Readout filename prefix	r150424_	
@@ -187,18 +175,6 @@ PRECOL	PRECOL	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Prescan columns
 PREFLUSH	PREFLUSH	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Prescan flush lines	0	
 PRELINE	PRELINE	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Presan lines	0	
 PREROW	PREROW	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Prescan rows	0	
-PT01MN00	PT01MN00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan median ccd 1 amp location 0		
-PT01MD00	PT01MD00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan mean ccd 1 amp location 0		
-PT01SD00	PT01SD00	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan standard deviation ccd 1 amp location 0		
-PT01MN01	PT01MN01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan median ccd 1 amp location 1		
-PT01MD01	PT01MD01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan mean ccd 1 amp location 1		
-PT01SD01	PT01SD01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan standard deviation ccd 1 amp location 1		
-PT02MN02	PT02MN02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan median ccd 2 amp location 2		
-PT02MD02	PT02MD02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan mean ccd 2 amp location 2		
-PT02SD02	PT02SD02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan standard deviation ccd 2 amp location 2		
-PT02MN03	PT02MN03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan median ccd 2 amp location 3		
-PT02MD03	PT02MD03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan mean ccd 2 amp location 3		
-PT02SD03	PT02SD03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Post scan standard deviation ccd 2 amp location 3		
 REDFILT	REDFILT	native	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y			Y	Y	Red filter name	Clear	
 REDFNUM	REDFNUM	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Red filter number	1	
 REDFOCUS	REDFOCUS	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Red focus position	-0.65876257	
@@ -215,7 +191,6 @@ SHCLOCNT	SHCLOCNT	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Shutter c
 SHLATCLO	SHLATCLO	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y			0.0344	
 SHLATOPN	SHLATOPN	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Shutter latency on opening	0.0192	
 SHOPNCNT	SHOPNCNT	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y			1	
-SIG2NOIS	SIG2NOIS	KOA	double		FLOAT(126)	16	Y	Y	Y		18.8f					Y			Y				
 SIMPLE	SIMPLE	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		File conforms to FITS standard	T	
 SIMULATE	SIMULATE	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		DCS simulation	F	
 SKYPA	SKYPA	KOA	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Slit sky position angle		
@@ -274,8 +249,132 @@ WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Wind speed at 
 XENON	XENON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y			off	
 ZINC	ZINC	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y			off	
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858	
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	Dec-00	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y		Y	Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
 	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y		Y	Y	SEMESTER and PROGID	2019B_ENG	
+AMPID1		LRIS	integer		NUMBER(*,0)	8	Y	Y	N							Y					amp Id number, readout sequence 0	1	
+AMPID2		LRIS	integer		NUMBER(*,0)	8	Y	Y	N							Y					amp Id number, readout sequence 1	3	
+AMPID3		LRIS	integer		NUMBER(*,0)	8	Y	Y	N							Y					amp Id number, readout sequence 2	0	
+AMPID4		LRIS	integer		NUMBER(*,0)	8	Y	Y	N							Y					amp Id number, readout sequence 3	2	
+AMPMNUM		LRIS	integer		NUMBER(*,0)	8	Y	Y	N							Y					number of detector readout mode	0	
+AMPNAME1		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 0	L2	
+AMPNAME2		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 1	U2	
+AMPNAME3		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 2	L1	
+AMPNAME4		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 3	U1	
+ASEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
+ASEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+ASEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+ASEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+AUTACTIV		DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					DCS guider active	no	
+AUTFWHM		DCS	double	pixels	FLOAT(126)	16	Y	Y	N							Y					DCS guider fwhm	1.36815	
+AUTXCENT		DCS	double	arcseconds	FLOAT(126)	17	Y	Y	N							Y					DCS guider x centroid	-100	
+AUTYCENT		DCS	double	arcseconds	FLOAT(126)	18	Y	Y	N							Y					DCS guider y centroid	30.7	
+AXESTAT		DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					DCS axes control status	not controlling	
+BSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
+BSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+BSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+BSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+CALOCAL		LRIS	double		FLOAT(126)	16		Y	N							Y					collimation-azimuth-local	-21.3	
+CCDCFG		LRIS	char		VARCHAR2(16 BYTE)	16		Y	N							Y					CCD config: XYSGGAA	10100	
+CD1_1		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					RA per pixel in x	-6.53E-07	
+CD1_2		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					RA per pixel in y	3.73E-08	
+CD2_1		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					DEC per pixel in x	3.73E-08	
+CD2_2		LRIS	double	degrees	FLOAT(126)	24		Y	N							Y					DEC per pixel in y	-6.53E-07	
+CELOCAL		LRIS	double		FLOAT(126)	16		Y	N							Y					collimation-elevation-local	22.7	
+CNAME1		LRIS	char		VARCHAR2(32 BYTE)	32		Y	N							Y					Descriptive name of WCS axis 1	Right Ascension	
+CNAME2		LRIS	char		VARCHAR2(32 BYTE)	33		Y	N							Y					Descriptive name of WCS axis 2	Declination	
+CRPIX1		LRIS	double	pixels	FLOAT(126)	26		Y	N							Y					X coordinate of center pixel	17.570086	
+CRPIX2		LRIS	double	pixels	FLOAT(126)	26		Y	N							Y					Y coordinate of center pixel	208.884317	
+CRVAL1		LRIS	double	degrees	FLOAT(126)	26		Y	N							Y					RA of center pixel	230	
+CRVAL2		LRIS	double	degrees	FLOAT(126)	26		Y	N							Y					DEC of center pixel	0.0387	
+CSEC1		LRIS	char		VARCHAR2(32 BYTE)	32		Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
+CSEC2		LRIS	char		VARCHAR2(32 BYTE)	33		Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+CSEC3		LRIS	char		VARCHAR2(32 BYTE)	34		Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+CSEC4		LRIS	char		VARCHAR2(32 BYTE)	35		Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+CTYPE1		LRIS	char		VARCHAR2(16 BYTE)	16		Y	N							Y					Coordinate type of WCS axis 1	RA---TAN	
+CTYPE2		LRIS	char		VARCHAR2(16 BYTE)	17		Y	N							Y					Coordinate type of WCS axis 2	DEC--TAN	
+CUNIT1		LRIS	char		VARCHAR2(16 BYTE)	18		Y	N							Y					Physical unit of WCS axis 1	deg	
+CUNIT2		LRIS	char		VARCHAR2(16 BYTE)	19		Y	N							Y					Physical unit of WCS axis 2	deg	
+DATE-BEG		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure begin	2021-05-10T04:02:27.663	
+DATE-END		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure end	2021-05-10T04:02:27.664	
+DATEERAS		LRIS	char		VARCHAR2(24 BYTE)	25	Y	Y	N							Y					most recent special erase/flush/purge	2021-05-10T04:02:27.665	
+DATEREND		LRIS	char		VARCHAR2(24 BYTE)	26	Y	Y	N							Y					readout end	 +00:02:19.3	
+DECBASE		DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	Y							Y					DCS DEC base	 +00:02:19.3	
+DECOFF		DCS	double	arcseconds	FLOAT(126)	16	Y	Y	Y							Y					DCS DEC offset	0	
+DOMESTST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS dome status string	FAULT	
+DSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
+DSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	Y							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+DSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	Y							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+DSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	Y							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+FOCALSTN		DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					focal station	cass (cassegrain)	
+FPOWER		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Dome flat lamp commanded intensity	0	
+GAIN1		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					gain (e-/DN) for amp 0	0	
+GAIN2		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					gain (e-/DN) for amp 1	0	
+GAIN3		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					gain (e-/DN) for amp 2	0	
+GAIN4		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					gain (e-/DN) for amp 3	0	
+GAINMUL		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					gain multiplier (1,2,5,10)	1	
+GROUPID		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					Identifier for a goup of images		
+GUIDING		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS guiding status	FALSE	
+GUIDWAVE		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					Guide star wavelength	0.65	
+HEADREV		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Header config version	112419	
+HEART_01		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					lredccd.UPTIME	Heartbeat active	
+HEART_02		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	Y							Y					lredccd.DISP0CLK	Heartbeat active	
+HEART_03		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	Y							Y					lrisheaders.UPTIME	Heartbeat active	
+HEART_04		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	Y							Y					lrisplus.UPTIME	Heartbeat active	
+INSTANGL		LRIS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					Pointing origin to instrument angle	180	
+INSTREV		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Instrument revision	REDMARK4	
+INTGAIN		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					Intrinisic gain (e-/DN)	1	
+LST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS Local Sidereal Time		
+MJD		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					DCS Modified Julian Day	59344.16837	
+NAMPSXY		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Active video inputs along axis1 axis2	2 2	
+NAXIS1		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Length of data axis 1	4234	
+NAXIS2		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Length of data axis 2	2124	
+NSHFDN		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Number of shuffle downs	0	
+NSHFUP		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Number of shuffle ups	0	
+NUMCLOS		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Number of shutter closes	0	
+NUMOPEN		LRIS	integer		NUMBER(*,0)	8	Y	Y	Y							Y					Number of shutter opens	0	
+PA		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS rotator position angle	-90	
+PARANG		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS parallactiv angle astrometric	0	
+PARANTEL		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS parallactic angle telescope	0	
+PMGAIN		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Primary mirror gain	0.1	
+PMMODE		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Primary mirror control mode	standby	
+PMRMSRES		DCS	double	nanometers	FLOAT(126)	16	Y	Y	Y							Y					Primary mirror residual RMS	99.97552	
+PMSNAP		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Primary mirror config snapshot	9647	
+PMTEMP		DCS	double	celcius	FLOAT(126)	16	Y	Y	Y							Y					Primary mirror temperature	999	
+POXPOS		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Pointing origin x position	10.95	
+POYPOS		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Pointing origin y position	-268.58	
+PROGNAME		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Observing program identifier	ENG	
+RABASE		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS RA base		
+RADECSYS		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Celestial coordinate system	ICRS	
+RAOFF		DCS	double	arcseconds	FLOAT(126)	16	Y	Y	Y							Y					DCS RA offset	0	
+ROTBASE		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS rotator base	-0.03	
+ROTCALAN		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					Rotator calibration angle	0	
+ROTDEST		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS rotator user destination	-90	
+ROTDETS1		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS rotator time stamp 1		
+ROTDETS2		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS rotator time stamp 2		
+ROTPDEST		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS rotator physical destination	-90.62	
+ROTREFAN		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					DCS rotator reference angle	-0.62	
+ROTSEL		DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	Y							Y					DCS selected rotator	cass (cassegrain)	
+ROTSTST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS rotator state string	INPOS	
+ROTZERO		DCS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					Rotator zero angle	0	
+SCRIPTNA		LRIS	char		VARCHAR2(64 BYTE)	64	Y	Y	Y							Y					Name of the current script		
+SECSTST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS secondary status string	INPOS	
+STATEID		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					Instrument configuration identifier		
+STATENAM		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					Instrument configuration name		
+TARGDEC		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS target DEC	 +00:00:00.0	
+TARGEPOC		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Target epoch	0	
+TARGEQUI		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Target equinox	0	
+TARGFRAM		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Target frame	mount az/el	
+TARGPMDC		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Target proper motion DEC	0	
+TARGPMRA		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Target proper motion RA	0	
+TARGRA		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS target RA	00:00.0	
+TARGWAVE		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Target wavelength	0.65	
+TELAPSE		LRIS	double	seconds	FLOAT(126)	16	Y	Y	Y							Y					Dark current duration	12.2317	
+TERTDEST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS tertiary user destination	stowed	
+TERTPOSN		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS tertiary user position	mirrorup	
+TERTSTST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS tertiary status string	IN POSITION	
+TRACKING		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS servos tracking status	no	
+WCSNAME		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Descriptive name of this WCS	RA/Dec	
+XPOSURE		LRIS	double	seconds	FLOAT(126)	16	Y	Y	Y							Y					Shutter open duration	8.231704	
