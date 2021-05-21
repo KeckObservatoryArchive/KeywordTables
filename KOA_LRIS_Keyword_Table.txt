@@ -16,22 +16,22 @@ PROGPI	PROGPI	KOA	char		VARCHAR2(70 BYTE)	70	N	Y	N							Y			Y	Y	Program PI	McCo
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N							Y			Y	Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N							Y			Y		Observing semester	2015A	
 ABFREQ	ABFREQ	LRIS	integer	Hz	NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Antiblooming frequency	20	
-ADCBYP	ADCBYP	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC motor control bypass switch	F	
-ADCCAL	ADCCAL	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC calibration	T	
+ADCBYP	ADCBYP	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		ADC motor control bypass switch	F	
+ADCCAL	ADCCAL	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		ADC calibration	T	
 ADCCMT	ADCCMT	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC comment		
-ADCCON	ADCCON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC motor control	F	
+ADCCON	ADCCON	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		ADC motor control	F	
 ADCDCC	ADCDCC	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC disconnected cables	hand paddle	
 ADCENC	ADCENC	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC load encoder position	131769	
 ADCERR	ADCERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC modify error number	0	
 ADCGTE	ADCGTE	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC galil position error	0	
 ADCLCK	ADCLCK	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC motion keyword lockout	unlocked	
-ADCLIM	ADCLIM	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC limit switch status	0	
-ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y			3	
-ADCNEED	ADCNEED	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC needed	T	
-ADCPRENA	ADCPRENA	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC prism calc enable disable flag	1	
+ADCLIM	ADCLIM	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC limit switch status	0	
+ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y			3	
+ADCNEED	ADCNEED	native	char		VARCHAR2(8 BYTE)	16	Y	Y	N							Y			Y		ADC needed	T	
+ADCPRENA	ADCPRENA	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC prism calc enable disable flag	1	
 ADCRAW	ADCRAW	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC raw position	-2635095	
 ADCRCD	ADCRCD	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC remote control disablers		
-ADCSTA	ADCSTA	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC overall status	10	
+ADCSTA	ADCSTA	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC overall status	10	
 ADCSVA	ADCSVA	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo val tracking error	-0.00181328	
 ADCSVR	ADCSVR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC servo raw tracking error	-22	
 ADCSVX	ADCSVX	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo vax tracking error	-0.00000103	
@@ -47,10 +47,10 @@ AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Air mass (1.41
 AMPLIST	AMPLIST	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Readout amplifiers	4,4,0,0	
 AMPMODE	AMPMODE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Description of amplifiers used	DUAL:L+R	
 AMPPSIZE	AMPPSIZE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Access in pixels	[1:1024,1:4096]	
-ANTIBLM	ANTIBLM	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Antiblooming frequency	off	
-ARGON	ARGON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y			off	
-AUTOERAS	AUTOERAS	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Automatic erase	T	
-AUTOSHUT	AUTOSHUT	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Automatic shutter	T	
+ANTIBLM	ANTIBLM	LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		Antiblooming frequency	off	
+ARGON	ARGON	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y			off	
+AUTOERAS	AUTOERAS	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		Automatic erase	T	
+AUTOSHUT	AUTOSHUT	LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		Automatic shutter	T	
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Telescope azimuth	290.1968935	
 BINNING	BINNING	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		Binning	2,1	
 BITPIX	BITPIX	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Bits per pixel	16	
