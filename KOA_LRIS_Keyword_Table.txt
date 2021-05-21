@@ -264,18 +264,18 @@ AMPNAME2		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequ
 AMPNAME3		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 2	L1	
 AMPNAME4		LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					amp name, readout sequence 3	U1	
 ASEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
-ASEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
-ASEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
-ASEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+ASEC2		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+ASEC3		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+ASEC4		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
 AUTACTIV		DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					DCS guider active	no	
 AUTFWHM		DCS	double	pixels	FLOAT(126)	16	Y	Y	N							Y					DCS guider fwhm	1.36815	
-AUTXCENT		DCS	double	arcseconds	FLOAT(126)	17	Y	Y	N							Y					DCS guider x centroid	-100	
-AUTYCENT		DCS	double	arcseconds	FLOAT(126)	18	Y	Y	N							Y					DCS guider y centroid	30.7	
+AUTXCENT		DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N							Y					DCS guider x centroid	-100	
+AUTYCENT		DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N							Y					DCS guider y centroid	30.7	
 AXESTAT		DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					DCS axes control status	not controlling	
 BSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
-BSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
-BSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
-BSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+BSEC2		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+BSEC3		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+BSEC4		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
 CALOCAL		LRIS	double		FLOAT(126)	16	Y	Y	N							Y					collimation-azimuth-local	-21.3	
 CCDCFG		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					CCD config: XYSGGAA	10100	
 CD1_1		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					RA per pixel in x	-6.53E-07	
@@ -284,30 +284,30 @@ CD2_1		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					DEC per pixel in x	3.
 CD2_2		LRIS	double	degrees	FLOAT(126)	24	Y	Y	N							Y					DEC per pixel in y	-6.53E-07	
 CELOCAL		LRIS	double		FLOAT(126)	16	Y	Y	N							Y					collimation-elevation-local	22.7	
 CNAME1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					Descriptive name of WCS axis 1	Right Ascension	
-CNAME2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					Descriptive name of WCS axis 2	Declination	
+CNAME2		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					Descriptive name of WCS axis 2	Declination	
 CRPIX1		LRIS	double	pixels	FLOAT(126)	26	Y	Y	N							Y					X coordinate of center pixel	17.570086	
 CRPIX2		LRIS	double	pixels	FLOAT(126)	26	Y	Y	N							Y					Y coordinate of center pixel	208.884317	
 CRVAL1		LRIS	double	degrees	FLOAT(126)	26	Y	Y	N							Y					RA of center pixel	230	
 CRVAL2		LRIS	double	degrees	FLOAT(126)	26	Y	Y	N							Y					DEC of center pixel	0.0387	
 CSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
-CSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
-CSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
-CSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+CSEC2		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+CSEC3		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+CSEC4		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
 CTYPE1		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Coordinate type of WCS axis 1	RA---TAN	
-CTYPE2		LRIS	char		VARCHAR2(16 BYTE)	17	Y	Y	N							Y					Coordinate type of WCS axis 2	DEC--TAN	
-CUNIT1		LRIS	char		VARCHAR2(16 BYTE)	18	Y	Y	N							Y					Physical unit of WCS axis 1	deg	
-CUNIT2		LRIS	char		VARCHAR2(16 BYTE)	19	Y	Y	N							Y					Physical unit of WCS axis 2	deg	
+CTYPE2		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Coordinate type of WCS axis 2	DEC--TAN	
+CUNIT1		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Physical unit of WCS axis 1	deg	
+CUNIT2		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Physical unit of WCS axis 2	deg	
 DATE-BEG		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure begin	2021-05-10T04:02:27.663	
 DATE-END		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					exposure end	2021-05-10T04:02:27.664	
-DATEERAS		LRIS	char		VARCHAR2(24 BYTE)	25	Y	Y	N							Y					most recent special erase/flush/purge	2021-05-10T04:02:27.665	
-DATEREND		LRIS	char		VARCHAR2(24 BYTE)	26	Y	Y	N							Y					readout end	 +00:02:19.3	
+DATEERAS		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					most recent special erase/flush/purge	2021-05-10T04:02:27.665	
+DATEREND		LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					readout end	 +00:02:19.3	
 DECBASE		DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	Y							Y					DCS DEC base	 +00:02:19.3	
 DECOFF		DCS	double	arcseconds	FLOAT(126)	16	Y	Y	Y							Y					DCS DEC offset	0	
 DOMESTST		DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS dome status string	FAULT	
 DSEC1		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					IRAF DATASEC, readout sequence 0	[8:2064,1:2064]	
-DSEC2		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	Y							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
-DSEC3		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	Y							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
-DSEC4		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	Y							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
+DSEC2		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					IRAF DATASEC, readout sequence 1	[4227:2171,1:2064]	
+DSEC3		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					IRAF DATASEC, readout sequence 2	[8:2064,4248:2185]	
+DSEC4		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					IRAF DATASEC, readout sequence 3	[4227:2171,4248:2185]	
 FOCALSTN		DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					focal station	cass (cassegrain)	
 FPOWER		DCS	double		FLOAT(126)	16	Y	Y	Y							Y					Dome flat lamp commanded intensity	0	
 GAIN1		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					gain (e-/DN) for amp 0	0	
@@ -320,9 +320,9 @@ GUIDING		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					DCS guiding status	FA
 GUIDWAVE		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					Guide star wavelength	0.65	
 HEADREV		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Header config version	112419	
 HEART_01		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					lredccd.UPTIME	Heartbeat active	
-HEART_02		LRIS	char		VARCHAR2(32 BYTE)	33	Y	Y	Y							Y					lredccd.DISP0CLK	Heartbeat active	
-HEART_03		LRIS	char		VARCHAR2(32 BYTE)	34	Y	Y	Y							Y					lrisheaders.UPTIME	Heartbeat active	
-HEART_04		LRIS	char		VARCHAR2(32 BYTE)	35	Y	Y	Y							Y					lrisplus.UPTIME	Heartbeat active	
+HEART_02		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					lredccd.DISP0CLK	Heartbeat active	
+HEART_03		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					lrisheaders.UPTIME	Heartbeat active	
+HEART_04		LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	Y							Y					lrisplus.UPTIME	Heartbeat active	
 INSTANGL		LRIS	double	degrees	FLOAT(126)	16	Y	Y	Y							Y					Pointing origin to instrument angle	180	
 INSTREV		LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y							Y					Instrument revision	REDMARK4	
 INTGAIN		LRIS	double		FLOAT(126)	16	Y	Y	Y							Y					Intrinisic gain (e-/DN)	1	
