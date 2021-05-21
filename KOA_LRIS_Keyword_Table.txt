@@ -25,13 +25,13 @@ ADCENC	ADCENC	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC load enco
 ADCERR	ADCERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC modify error number	0	
 ADCGTE	ADCGTE	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC galil position error	0	
 ADCLCK	ADCLCK	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC motion keyword lockout	unlocked	
-ADCLIM	ADCLIM	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC limit switch status	0	
-ADCMOD	ADCMOD	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y			3	
+ADCLIM	ADCLIM	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC limit switch status	0	
+ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y			3	
 ADCNEED	ADCNEED	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		ADC needed	T	
-ADCPRENA	ADCPRENA	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC prism calc enable disable flag	1	
+ADCPRENA	ADCPRENA	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC prism calc enable disable flag	1	
 ADCRAW	ADCRAW	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC raw position	-2635095	
 ADCRCD	ADCRCD	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC remote control disablers		
-ADCSTA	ADCSTA	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		16d					Y			Y		ADC overall status	10	
+ADCSTA	ADCSTA	native	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		ADC overall status	10	
 ADCSVA	ADCSVA	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo val tracking error	-0.00181328	
 ADCSVR	ADCSVR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC servo raw tracking error	-22	
 ADCSVX	ADCSVX	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		ADC servo vax tracking error	-0.00000103	
@@ -75,7 +75,7 @@ CCDSPEED	CCDSPEED	LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y			Y		CCD readout
 CCDSUM	CCDSUM	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y			Y		CCD sum	2 1	
 CHECKSUM	CHECKSUM	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Checksum of header	VgiZXegYVegYVegY	
 CTRL0ERR	CTRL0ERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC controller 0 error number	-5414	
-CTRL0MSG	CTRL0MSG	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N							Y			Y		ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
+CTRL0MSG	CTRL0MSG	native	char		VARCHAR2(80 BYTE)	80	Y	Y	N							Y			Y		ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y			Y		Current instrument	LRISADC	
 DATASUM	DATASUM	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Data unit checksum	0	
 DATE	DATE_UT	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y			Y		Universal date and time of observation	2015-04-24T12:25:14	
