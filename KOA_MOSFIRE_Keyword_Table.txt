@@ -14,23 +14,23 @@ KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR(32 BYTE)	32	N	Y	Y		32s				object,arclamp,dar
 MGTNAME	MGTNAME	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y	Y	Grating Turret position name		
 OBJECT	OBJECT	MOSFIRE	char		VARCHAR(64 BYTE)	64	Y	Y	N		64s					Y			Y		Object name		
 OBSMODE	OBSMODE	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y	Y	obsering mode as filter-grating mode combinatio		X-imaging or X-spectroscopy
-PROGID	PROGID	KOA	char		VARCHAR(32 BYTE)	32	N	Y	N		32s					Y			Y		WMKO program ID		
+PROGID	PROGID	KOA	char		VARCHAR(32 BYTE)	32	N	Y	N		32s					Y			Y	Y	WMKO program ID		
 PROGINST	PROGINST	KOA	char		VARCHAR(32 BYTE)	32	N	Y	N		32s					Y			Y	Y	Program institution		
 PROGPI	PROGPI	KOA	char		VARCHAR(32 BYTE)	32	N	Y	N		32s					Y			Y	Y	Program PI		
 PROGTITL	PROGTITL	KOA	char		VARCHAR(210 BYTE)	210	Y	Y	N		210s					Y			Y	Y	Program title		
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0	9999		Y			Y		Proprietary period		
 PSCALE	PSCALE	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y	Y	Pixel scale for science camera		
 RA	CRA	DCS	double	degrees	FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		telescope right ascension		
-SAMPMODE	SAMPMODE	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y		Sampling Mode (1:Single, 2:CDS, 3:MCDS, 4:UTR)		
+SAMPMODE	SAMPMODE	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	Y		8d					Y			Y	Y	Sampling Mode (1:Single, 2:CDS, 3:MCDS, 4:UTR)		
 SEMESTER	SEMESTER	KOA	char		VARCHAR(8 BYTE)	8	N	Y	N		8s					Y			Y	Y	WMKO observing schedule semester		
-TARGNAME	TARGNAME	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		target name		
+TARGNAME	TARGNAME	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y	Y	target name		
 TELESCOP	TELESCOP	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		telescope name		
 TRUITIME	TRUITIME	MOSFIRE	double	sec	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y	Y	True integration time in seconds per coadd		
 UT	UT	KOA	char		VARCHAR(16 BYTE)	16	N	Y	Y	time	16s					Y			Y	Y	Copy of UTC		
-UTC	UTC	DCS	char		VARCHAR(16 BYTE)	16	N	Y	Y	time	16s					Y			Y	Y	coordinated universal time		
-WAVEBLUE	WAVEBLUE	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y		Blue end wavelength		
-WAVECNTR	WAVECNTR	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y	Y	Central wavelength		
-WAVERED	WAVERED	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y		Red end wavelength		
+UTC	UTC	DCS	char		VARCHAR(16 BYTE)	16	N	Y	Y	time	16s					Y			Y		coordinated universal time		
+WAVEBLUE	WAVEBLUE	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y	Y	Blue end wavelength		
+WAVECNTR	WAVECNTR	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y		Central wavelength		
+WAVERED	WAVERED	KOA	double	microns	FLOAT(126)	24	Y	Y	N		18.8f		0.9	2.5		Y			Y	Y	Red end wavelength		
 ABORTED	ABORTED	MOSFIRE	char	boolean	VARCHAR(8 BYTE)	8	Y	Y	N		8s					Y			Y		Exposure was stopped before completion		
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		air mass		
 ASICCFG	ASICCFG	MOSFIRE	char		VARCHAR(72 BYTE)	72	Y	Y	N		72s					Y			Y		Sidecar config file		
@@ -64,7 +64,7 @@ CURRINST	CURRINST	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		current in
 DARENABL	DARENABL	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		Status code of watchdarcorr		
 DATAFILE	DATAFILE	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		Datafile name		
 DATASEC	DATASEC	MOSFIRE	char		VARCHAR(24 BYTE)	24	Y	Y	N		24s					Y			Y		Current datasection of the frame		
-DATE-OBS	DATE_OBS	DCS	char		DATE	32	N	Y	Y	date	32s					Y			Y		universal date of observation		
+DATE-OBS	DATE_OBS	DCS	char		DATE	32	N	Y	Y	date	32s					Y			Y	Y	universal date of observation		
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		Data reduction level		
 DCSSTAT	DCSSTAT	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		drive and control status		
 DCSVERS	DCSVERS	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		drive and control version		
@@ -154,7 +154,7 @@ LONGSTRN	LONGSTRN	MOSFIRE	char		VARCHAR(24 BYTE)	24	Y	Y	N		24s					Y			Y		The OG
 LST	LST	DCS	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		local apparent sidereal time		
 LTM1_1	LTM1_1	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		CCD to image pixel scale in X		
 LTM2_2	LTM2_2	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		CCD to image pixel scale in Y		
-MASKNAME	MASKNAME	MOSFIRE	char		VARCHAR(64 BYTE)	64	Y	Y	N		64s					Y			Y		Name of the current slit mask		
+MASKNAME	MASKNAME	MOSFIRE	char		VARCHAR(64 BYTE)	64	Y	Y	N		64s					Y			Y	Y	Name of the current slit mask		
 MDCMECH	MDCMECH	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dust Cover mechanism name		
 MDCNAME	MDCNAME	MOSFIRE	char		VARCHAR(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dust Cover position name		
 MDCRAW	MDCRAW	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		Dust Cover location		
