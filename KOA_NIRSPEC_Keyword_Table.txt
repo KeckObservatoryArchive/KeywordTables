@@ -1,392 +1,392 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y											Y	Unique identifier for each file		
-PROPINT	PROPINT	Added	integer	months	NUMBER(*,0)	16	Y	Y	Y					9999							Proprietary period in months		
+KOAID	KOAID	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y		32s									Y	Unique identifier for each file		
+PROPINT	PROPINT	Added	integer	months	NUMBER(*,0)	16	Y	Y	Y		16d			9999							Proprietary period in months		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
 DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y	date										Y	universal date of observation		
-UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time										Y	DCS Universal Time		
-UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time											DCS Coordinated Universal Time		
-KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y						arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type		
-IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Observation type		
-CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N						SCAM,SPEC					Y	Camera name		
-RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle						Y					Telescope right ascension		
-DEC	CDEC	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	angle			-90	95		Y					Telescope declination		
-EQUINOX	EQUINOX	Native	double	year	FLOAT(126)	32	Y	Y	N												telescope equinox (2000.0)		
-FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y					9999						Y	copy of FILENUM		
-FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N												Frame number		
-ECHLPOS	ECHLPOS	Native	double		FLOAT(126)	32	Y	Y	N												Echelle position		
-DISPERS	DISPERS	Added	char		VARCHAR2(16 BYTE)	16	Y	Y	N											Y	Dispersion level (hi ech>100, else low)		
-DISPSCAL	DISPSCAL	Added	double		FLOAT(126)	32	Y	Y	N												Detector pixel scale, dispersion (hi 0.144, low 0.190)		
-ELAPTIME	ELAPTIME	Added	double	seconds	FLOAT(126)	32	Y	Y	Y				-15	9999						Y	TRUITIME * COADDS		
-FILTER	FILTER	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N											Y	Science filter selection		
-SLITNAME	SLITNAME	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N						42x0.380, 42x0.570, 42x0.760, 0.144x12, 0.288x12, 0.432x12, 0.576x12, 0.720x12, 0.288x24, 0.432x24, 0.576x24, 0.720x24, 0.013x1.13, 0.027x1.13, 0.041x1.13, 0.054x1.13, 0.068x1.13, 0.027x2.26, 0.041x2.26, 0.054x2.26, 0.068x2.26, 3.96x0.036, 3.96x0.054, 3.96x0.072, UNKNOWN					Y	Slit Name		
-SLITLEN	SLITLEN	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N												Slit length projected on sky (arcsec)		
-SLITWIDT	SLITWIDT	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N												Slit width projected on sky (arcsec)		
-PSCALE	PSCALE	Native	double	arcsec/pix	FLOAT(126)	32	Y	Y	N												Pixel scale for science camera		
-SPATSCAL	SPATSCAL	Added	double	arcsec/pixel	FLOAT(126)	32	Y	Y	N												CCD pixel scale, spatial (arcsec/pixel)		
-SPECRES	SPECRES	Added	double		FLOAT(126)	32	Y	Y	N												Nominal spectral resolution		
-WAVEBLUE	WAVEBLUE	Added	double	Microns	FLOAT(126)	32	Y	Y	Y				0.8	15						Y	Approximate blue end wavelength		
-WAVECNTR	WAVECNTR	Added	double	Microns	FLOAT(126)	32	Y	Y	Y				0.8	15							Approximate central wavelength		
-WAVERED	WAVERED	Added	double	Microns	FLOAT(126)	32	Y	Y	Y				0.8	15						Y	Approximate red end wavelength		
-OFNAME	OFNAME	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Output file name		
-OUTDIR	OUTDIR	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N												Original File Name		
-SEMESTER	SEMESTER	Added	char		VARCHAR2(8 BYTE)	8	N	Y	Y												Semester - from PROGNAME or DATE-OBS		
-PROGNAME	PROGNAME	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Observing program identifier		
-PROGID	PROGID	Added	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	N												WMKO ID for observing program		
-PROGINST	PROGINST	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y											Y	Program institution		
-PROGPI	PROGPI	Added	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	N											Y	Program principal investigator		
-PROGTITL	PROGTITL	Added	char	n/a	VARCHAR2(216 BYTE)	216	Y	Y	N											Y	Program title - concatination of PROGTL1-3 from FITS header		
-ABORTED	ABORTED	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												Exposure was stopped before completion		
-AIRMASS	AIRMASS	Native	double	none	FLOAT(126)	32	Y	Y	N												Air mass		
-AOAOAMED	AOAOAMED	Native	integer		NUMBER(*,0)	16	Y	Y	N												AO WFC AOA camera median light level (counts)		
-AODMSTAT	AODMSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO deformable mirror loop state		
-AODRDTEN	AODRDTEN	Native	double		FLOAT(126)	32	Y	Y	N												AO DAR DTT CTRLOFF ENABLE		
-AODRENA	AODRENA	Native	double		FLOAT(126)	32	Y	Y	N												AO DAR_ENABLE/DISABLE		
-AODTSTAT	AODTSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO downlink tip/tilt loop state		
-AOFCLBCT	AOFCLBCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO FC LBWFS control		
-AOFCLBFO	AOFCLBFO	Native	double		FLOAT(126)	32	Y	Y	N												AO FC LBWFS pregain focus calc		
-AOFCLGCT	AOFCLGCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO FC LGS control		
-AOFCLGFO	AOFCLGFO	Native	double		FLOAT(126)	32	Y	Y	N												AO FC LGS pregain focus calc v		
-AOFCNGCT	AOFCNGCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO FC NGS control		
-AOFCNGFO	AOFCNGFO	Native	double		FLOAT(126)	32	Y	Y	N												AO FC NGS Focus Calc Value (m)		
-AOFCSALT	AOFCSALT	Native	double		FLOAT(126)	32	Y	Y	N												AO FC sodium alt preset (m)		
-AOFMX	AOFMX	Native	double		FLOAT(126)	32	Y	Y	N												AO field steering mirrors X po		
-AOFMY	AOFMY	Native	double		FLOAT(126)	32	Y	Y	N												AO field steering mirrors Y po		
-AOFOMODE	AOFOMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO focus offloading mode		
-AOLBFWHM	AOLBFWHM	Native	double		FLOAT(126)	32	Y	Y	N												AO LBWFS avg fwhm		
-AOLPMOVE	AOLPMOVE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO LSP MOVE ENABLE		
-AOOPSMOD	AOOPSMOD	Native	integer		NUMBER(*,0)	16	Y	Y	N												AO General Ops Mode FITS		
-AOTSDAR	AOTSDAR	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO TSS_USE_DAR?		
-AOTSX	AOTSX	Native	double		FLOAT(126)	32	Y	Y	N												AO tip/tilt sensor stage X pos		
-AOTSY	AOTSY	Native	double		FLOAT(126)	32	Y	Y	N												AO tip/tilt sensor stage Y pos		
-AOTSZ	AOTSZ	Native	double		FLOAT(126)	32	Y	Y	N												AO tip/tilt sensor stage Z pos		
-AOTTMODE	AOTTMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												AO tip/tilt offloading mode		
-AOWFC0	AOWFC0	Native	double		FLOAT(126)	32	Y	Y	N												AO WFS focus stage FSM coeffic		
-ARGON	ARGON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N												Argon lamp: 1=on, 0=off		
-ASIC1TMP	ASIC1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SPEC ASIC temperature		
-ASIC2TMP	ASIC2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SCAM ASIC temperature		
-ASICCFG	ASICCFG	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Sidecar configuration file name		
-AUTACTIV	AUTACTIV	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS guider active		
-AUTFWHM	AUTFWHM	Native	double	pixels	FLOAT(126)	32	Y	Y	N												DCS guider FWHM		
-AUTXCENT	AUTXCENT	Native	double	arcsec	FLOAT(126)	32	Y	Y	N												DCS guider x centroid		
-AUTYCENT	AUTYCENT	Native	double	arcsec	FLOAT(126)	32	Y	Y	N												DCS guider y centroid		
-AXESTAT	AXESTAT	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												axes control status		
-AZ	AZ	Native	double	degrees	FLOAT(126)	32	Y	Y	N												telescope azimuth (-57.25 deg)		
-BADPIX	BADPIX	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												FITS filename containing bad pixel		
-BITPIX	BITPIX	Native	integer		NUMBER(*,0)	16	Y	Y	N												Bits per pixel		
-BNCH1TMP	BNCH1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Bench heater temperature		
-BNCH2TMP	BNCH2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Bench heater temperature		
-BSCALE	BSCALE	Native	double		FLOAT(126)	32	Y	Y	N												Scaling factor		
-BZERO	BZERO	Native	double		FLOAT(126)	32	Y	Y	N												Scaling zero-point		
-CALCPOS	CALCPOS	Native	integer	n/a	INTEGER	16	Y	Y	N												Cal. Cover Position, 0=out, 1=in		
-CALMPOS	CALMPOS	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N												Cal. Mirror Position, 0=out, 1=in		
-CALOCAL	CALOCAL	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N												collimation azimuth local (5.5 arcsec)		
-CALPPOS	CALPPOS	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N												Cal. Pinhole Position, 0=out, 1=in		
-CD1_1	CD1_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Degrees of RA per pixel in x		
-CD1_2	CD1_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Degrees of RA per pixel in x		
-CD2_1	CD2_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Degrees of DEC per pixel in x		
-CD2_2	CD2_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Degrees of DEC per pixel in y		
-CELLDRAN	CELLDRAN	Native	double	volts	FLOAT(126)	32	Y	Y	N												CELLDRAIN (0x6008) voltage		
-CELOCAL	CELOCAL	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N												collimation elevation local (24.7 arcsec)		
-CH1TMP	CH1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												CCR 1050 temperature		
-CH2TMP	CH2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												CCR 350 temperature		
-CNAME1	CNAME1	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Descriptive name of WCS axis 1		
-CNAME2	CNAME2	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Descriptive name of WCS axis 2		
-CNTSPERS	CNTSPERS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Data written in counts per second		
-COADD	COADD	Added	integer		NUMBER(*,0)	16	Y	Y	N												Copy of COADDS (spec) or COADDS2 (scam)		
-COADDONE	COADDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of completed coadds		
-COADDS	COADDS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of coadds		
-CRASH	CRASH	Added	char		VARCHAR2(7 BYTE)	8	Y	Y	N						Yes,No						NIRSPEC server crash detected?		
-CRPIX1	CRPIX1	Native	double	degrees	FLOAT(126)	32	Y	Y	N												X coordinate of center pixel		
-CRPIX2	CRPIX2	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Y coordinate of center pixel		
-CRVAL1	CRVAL1	Native	double	degrees	FLOAT(126)	32	Y	Y	N												RA of center pixel		
-CRVAL2	CRVAL2	Native	double	degrees	FLOAT(126)	32	Y	Y	N												DEC of center pixel		
-CRYOTEMP	CRYOTEMP	Native	double		FLOAT(126)	32	Y	Y	N												PICNIC cold head temperature		
-CTYPE1	CTYPE1	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N												Coordinate type of WCS axis 1		
-CTYPE2	CTYPE2	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N												Coordinate type of WCS axis 2		
-CUNIT1	CUNIT1	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Physical unit of WCS axis 1		
-CUNIT2	CUNIT2	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Physical unit of WCS axis 2		
-CURRINST	CURRINST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												current instrument		
-DATAFILE	DATAFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Datafile name		
-DATLEVEL	DATLEVEL	Added	integer	n/a	NUMBER(*,0)	16	N	Y	N												Data reduction level		
-DCSSTAT	DCSSTAT	Native	char	n/a	VARCHAR2(25 BYTE)	24	Y	Y	N												drive and control status		
-DCSVERS	DCSVERS	Native	char	n/a	VARCHAR2(25 BYTE)	24	Y	Y	N												drive and control version		
-DDEC	DDEC	Native	double	arcseconds/sec	FLOAT(126)	32	Y	Y	N												differential declination rate		
-DECBASE	DECBASE	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS DEC base		
-DECOFF	DECOFF	Native	double		FLOAT(126)	32	Y	Y	N												DCS DEC offset		
-DETBIAS	DETBIAS	Native	integer	DN	NUMBER(*,0)	16	Y	Y	N												Detector bias setting (0-4096)		
-DETGAIN	DETGAIN	Added	double		FLOAT(126)	32	Y	Y	N												Detector gain		
-DETRN	DETRN	Added	double		FLOAT(126)	32	Y	Y	N												Detector read noise		
-DISPPOS	DISPPOS	Native	double		FLOAT(126)	32	Y	Y	N												Cross Disperser position		
-DMGAIN	DMGAIN	Native	double		FLOAT(126)	32	Y	Y	N												Set DM loop gain		
-DMMRFN	DMMRFN	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Name of DM reconstructor file		
-DOMEPOSN	DOMEPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												dome azimuth (302.81 deg)		
-DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	Y	N	N												DCS dome status string		
-DQA_DATE	DQA_DATE	Added	char		TIMESTAMP(6)	32	N	Y	N												Date of DQA run		
-DQA_VERS	DQA_VERS	Added	char	n/a	VARCHAR2(8 BYTE)	8	N	Y	N												DQA version number		
-DRA	DRA	Native	double	seconds/sec	FLOAT(126)	32	Y	Y	N												differential right ascension rate		
-DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	Y	N	N												DRAIN (0x600A) voltage		
-DSUB	DSUB	Native	double	volts	FLOAT(126)	32	Y	Y	N												DSUB (0x6002) voltage		
-DTCLP	DTCLP	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												OPEN/CLOSE TT CLMP ctrl loop		
-DTGAIN	DTGAIN	Native	double	n/a	FLOAT(126)	32	Y	Y	N												Set TT loop gain		
-DTRACK	DTRACK	Added	char		VARCHAR2(11 BYTE)	16	Y	Y	N												differential tracking enabled		
-DTSENSOR	DTSENSOR	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												Select WFS or STRAP		
-EL	EL	Native	double	degrees	FLOAT(126)	32	Y	Y	N												telescope elevation (52.31 deg)		
-ENDX	ENDX	Native	integer		NUMBER(*,0)	16	Y	Y	N												Sub-array end x pixel		
-ENDY	ENDY	Native	integer		NUMBER(*,0)	16	Y	Y	N												Sub-array end y pixel		
-ETALON	ETALON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N												Etalon lamp: 1=on, 0=off		
-EXTEND	EXTEND	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												FITS dataset may contain extensions		
-FEUMPOS	FEUMPOS	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												FEU fold mirror position		
-FIL1POS	FIL1POS	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Filter 1 Position		
-FIL2POS	FIL2POS	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Filter 2 Position		
-FILENAME	FILENAME	Native	char	n/a	VARCHAR2(31 BYTE)	32	Y	Y	N												Original File Name		
-FILENUM	FILENUM	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Frame Number		
-FILENUM2	FILENUM2	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Frame Number		
-FLAT	FLAT	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N												Flat lamp: 1=on, 0=off		
-FLIMAGIN	FLIMAGIN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS dome lamp imaging mode		
-FLSPECTR	FLSPECTR	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS dome lamp spectra mode		
-FOCALSTN	FOCALSTN	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N												focal station		
-FREQ_SPE	FREQ_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp Filtering Frequence setting 1-4		
-GAIN_SPE	GAIN_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Preamp gain setting 1-4		
-GROUPID	GROUPID	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Identifier for a group of images		
-GROUPS	GROUPS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Requested number of sampling groups		
-GRPDONE	GRPDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of completed groups in last coadd		
-GUIDFWHM	GUIDFWHM	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N												FWHM of NIRSPEC guide star		
-GUIDING	GUIDING	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS guiding status		
-GUIDTIME	GUIDTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												UT of logger GUIDFWHM value		
-GUIDWAVE	GUIDWAVE	Native	double		FLOAT(126)	32	Y	Y	N												guiderstar-wavelength		
-HA	HA	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	Y	Y	N												telescope hour angle (+02:36:45.01 h)		
-HALOGEN	HALOGEN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Halogen (flat) lamp status		
-HALOLEV	HALOLEV	Native	integer	pct	NUMBER(*,0)	16	Y	Y	N												Halogen lamp intensity		
-HATCH	HATCH	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Hatch position		
-HEART_01	HEART_01	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_02	HEART_02	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_03	HEART_03	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_04	HEART_04	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_05	HEART_05	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_06	HEART_06	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_07	HEART_07	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_08	HEART_08	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_09	HEART_09	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_10	HEART_10	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_11	HEART_11	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_12	HEART_12	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HEART_13	HEART_13	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Heartbeat active		
-HRPSTYPE	HRPSTYPE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Vertical reference pixel subtraction type		
-HXRGCFG1	HXRGCFG1	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N												ASIC Regs		
-HXRGCFG2	HXRGCFG2	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N												ASIC Regs		
-IMAGEMD	IMAGEMD	Added	double	DN	FLOAT(126)	32	Y	Y	N												Imaging pixels, median (DN)		
-IMAGEMN	IMAGEMN	Added	double	DN	FLOAT(126)	32	Y	Y	N												Imaging pixels, mean (DN)		
-IMAGESD	IMAGESD	Added	double	DN	FLOAT(126)	32	Y	Y	N												Imaging pixels, standard deviation (DN)		
-INSTANGL	INSTANGL	Native	double		FLOAT(126)	32	Y	Y	N												prog-to-instrument angle		
-INSTRUME	INSTRUME	Native	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	Y						NIRSPEC,NIRSPAO						Instrument name		
-INSTSTAT	INSTSTAT	Added	integer	n/a	NUMBER(*,0)	16	Y	Y	N												KOA instrument status		
-IROTLOC	IROTLOC	Native	double		FLOAT(126)	32	Y	Y	N												Step position of Image rotator		
-IROTPOS	IROTPOS	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Image rotator position		
-ISAO	ISAO	Added	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N						yes, no						Is adaptive optics in use?		
-ITIME	ITIME	Native	integer	milliseconds	NUMBER(*,0)	16	Y	Y	N												Integration time per coadd		
-JADEFILE	JADEFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Jade		
-JADENAME	JADENAME	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Name of Jade		
-KRYPTON	KRYPTON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N												Krypton lamp: 1=on, 0=off		
-LGRMSWF	LGRMSWF	Native	double		FLOAT(126)	32	Y	Y	N												LGSAO RMS WF Residual		
-LNCANTMP	LNCANTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												LN2 can temperature		
-LSAMPPWR	LSAMPPWR	Native	double	watts	FLOAT(126)	32	Y	Y	N												Amp Power (watts)		
-LSPROP	LSPROP	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Laser Propagating		
-LST	LST	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	Y	N	N												local apparent sidereal time (h)		
-LTM1_1	LTM1_1	Native	double		FLOAT(126)	32	Y	Y	N												CCD to image pixel scale in X		
-LTM2_2	LTM2_2	Native	double		FLOAT(126)	32	Y	Y	N												CCD to image pixel scale in Y		
-MJD	MJD	Native	double	days	FLOAT(126)	32	Y	Y	N												DCS modified julian day		
-MULTISCA	MULTISCA	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of multiple reads (scam)		
-MULTISPE	MULTISPE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of multiple reads (spec)		
-NAXIS	NAXIS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Numbe of data axes		
-NAXIS1	NAXIS1	Native	integer		NUMBER(*,0)	16	Y	Y	N												Length of data axis 1		
-NAXIS2	NAXIS2	Native	integer		NUMBER(*,0)	16	Y	Y	N												Length of data axis 2		
-NEON	NEON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												Neon lamp status		
-NLINEAR	NLINEAR	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N												Number of pixels above linearity		
-NPIXSAT	NPIXSAT	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N												Number of saturated pixels (65535 DN)		
-NUMREADS	NUMREADS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Requested number of reads		
-OA	OA	Added	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N												Observing assistant		
-OBAMNAME	OBAMNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for AFM		
-OBFMDREN	OBFMDREN	Native	double	n/a	FLOAT(126)	32	Y	Y	N												FSM Coordinated move use dar		
-OBFMXIM	OBFMXIM	Native	double	mm	FLOAT(126)	32	Y	Y	N												Image plane x motion for FSM (0.61 mm)		
-OBFMXPU	OBFMXPU	Native	double		FLOAT(126)	32	Y	Y	N												Pupil plane x motion for FSM (0.00 subaps)		
-OBFMYIM	OBFMYIM	Native	double	mm	FLOAT(126)	32	Y	Y	N												Image plane y motion for FSM (-0.70 mm)		
-OBFMYPU	OBFMYPU	Native	double		FLOAT(126)	32	Y	Y	N												Pupil plane y motion for FSM (		
-OBFSNAME	OBFSNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for FSS		
-OBIMNAME	OBIMNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for ISM		
-OBJECT	OBJECT	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N												Object name		
-OBLBNAME	OBLBNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for LBS		
-OBLBX	OBLBX	Native	double	mm	FLOAT(126)	32	Y	Y	N												User-value-of-LBS-x-axis		
-OBLBY	OBLBY	Native	double	mm	FLOAT(126)	32	Y	Y	N												User-value-of-LBS-y-axis		
-OBRT	OBRT	Native	double	degrees	FLOAT(126)	32	Y	Y	N												User value of ROT (31.4380 deg)		
-OBSDNAME	OBSDNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for SOD		
-OBSERVER	OBSERVER	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N												Observer		
-OBSFNAME	OBSFNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for SFP		
-OBSFX	OBSFX	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of SFP x axis (-119.00 mm)		
-OBSFY	OBSFY	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of SFP y axis (0.00 mm)		
-OBSFZ	OBSFZ	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of SFP z axis (0.00 mm)		
-OBSI	OBSI	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of SFD (mm)		
-OBSMODE	OBSMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N						Spectroscopy,Imaging						Observing mode		
-OBSNNAME	OBSNNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for SND		
-OBSTYPE	OBSTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Observation type		
-OBSWNAME	OBSWNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for SFW		
-OBSWSTA	OBSWSTA	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												White light power status		
-OBTSNAME	OBTSNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												Named position control for TSS		
-OBTSX	OBTSX	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of TSS x axis (mm)		
-OBTSY	OBTSY	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of TSS y axis (mm)		
-OBTSZ	OBTSZ	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of TSS z axis (mm)		
-OBWCNAME	OBWCNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for WCS		
-OBWF	OBWF	Native	double	mm	FLOAT(126)	32	Y	Y	N												User value of FCS (-6.102 mm)		
-OBWFSTST	OBWFSTST	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												State of FCS as string		
-OBWLNAME	OBWLNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for WLS		
-OBWNNAME	OBWNNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for WND		
-OBWPNAME	OBWPNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												Named position control for WPS		
-PA	PA	Native	double		FLOAT(126)	32	Y	Y	N												DCS Rotator position angle		
-PARANG	PARANG	Native	double	degrees	FLOAT(126)	32	Y	Y	N												parallactic angle astrometric (103.85 deg)		
-PARANTEL	PARANTEL	Native	double	degrees	FLOAT(126)	32	Y	Y	N												parallactic angle telescope (103.83 deg)		
-PERSFILE	PERSFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N														
-PLATETMP	PLATETMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Optical plate temperature		
-PONAME	PONAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												pointing origin name		
-PONAME1	PONAME1	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 1		
-PONAME2	PONAME2	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 2		
-PONAME3	PONAME3	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 3		
-PONAME4	PONAME4	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 4		
-PONAME5	PONAME5	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 5		
-PONAME6	PONAME6	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 6		
-PONAME7	PONAME7	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 7		
-PONAME8	PONAME8	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 8		
-PONAME9	PONAME9	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N												pointing origin name 9		
-POXOFF	POXOFF	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin x offset (0.00 mm)		
-POXPOS	POXPOS	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition (-0.22 mm)		
-POXPOS1	POXPOS1	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 1 (-0.85 mm)		
-POXPOS2	POXPOS2	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 2 (-0.22 mm)		
-POXPOS3	POXPOS3	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 3 (-2.68 mm)		
-POXPOS4	POXPOS4	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 4 (0.39 mm)		
-POXPOS5	POXPOS5	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 5 (-0.57 mm)		
-POXPOS6	POXPOS6	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 6 (3.42 mm)		
-POXPOS7	POXPOS7	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 7 (-3.18 mm)		
-POXPOS8	POXPOS8	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 8 (-0.05 mm)		
-POXPOS9	POXPOS9	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin xposition 9 (-0.47 mm)		
-POYOFF	POYOFF	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin y offset (0.00 mm)		
-POYPOS	POYPOS	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition (-0.13 mm)		
-POYPOS1	POYPOS1	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 1 (1.16 mm)		
-POYPOS2	POYPOS2	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 2 (-0.13 mm)		
-POYPOS3	POYPOS3	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 3 (53.23 mm)		
-POYPOS4	POYPOS4	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 4 (-0.90 mm)		
-POYPOS5	POYPOS5	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 5 (-54.47 mm)		
-POYPOS6	POYPOS6	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 6 (0.57 mm)		
-POYPOS7	POYPOS7	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 7 (-1.13 mm)		
-POYPOS8	POYPOS8	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 8 (5.36 mm)		
-POYPOS9	POYPOS9	Native	double	mm	FLOAT(126)	32	Y	Y	N												pointing origin yposition 9 (-5.83 mm)		
-Q1OFFSET	Q1OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N												PICNIC Quadrant 1 preamp offset		
-Q2OFFSET	Q2OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N												PICNIC Quadrant 2 preamp offset		
-Q3OFFSET	Q3OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N												PICNIC Quadrant 3 preamp offset		
-Q4OFFSET	Q4OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N												PICNIC Quadrant 4 preamp offset		
-RABASE	RABASE	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS RA base		
-RADECSYS	RADECSYS	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Coordinate system		
-RAOFF	RAOFF	Native	double	arcsec	FLOAT(126)	32	Y	Y	N												DCS RA offset		
-RDITIME	RDITIME	Native	double		FLOAT(126)	32	Y	Y	N												Time between sampling groups in seconds		
-READDONE	READDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of completed reads in last group		
-READTIME	READTIME	Native	double	seconds	FLOAT(126)	32	Y	Y	N												Detector readout time		
-RESETS	RESETS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of resets before exposure		
-ROOTNAME	ROOTNAME	Native	char	n/a	VARCHAR2(31 BYTE)	32	Y	Y	N												File Root Name		
-ROTBASE	ROTBASE	Native	double	degrees	FLOAT(126)	32	Y	Y	N												DCS ratotator base		
-ROTCALAN	ROTCALAN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												rotator calibration angle (0.00 deg)		
-ROTDEST	ROTDEST	Native	double	degrees	FLOAT(126)	32	Y	Y	N												DCS rotator user destination		
-ROTDETS1	ROTDETS1	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS rotator time stamp 1		
-ROTDETS2	ROTDETS2	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS rotator time stamp 2		
-ROTMODE	ROTMODE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS rotator tracking mode		
-ROTPDEST	ROTPDEST	Native	double	degrees	FLOAT(126)	32	Y	Y	N												DCS rotator physical destination		
-ROTPOSN	ROTPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												rotator user position (217.69 deg)		
-ROTPPOSN	ROTPPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												rotator physical position (61.54 deg)		
-ROTREFAN	ROTREFAN	Native	double	degrees	FLOAT(126)	32	Y	Y	N												rotator reference angle (0.00 deg)		
-ROTSEL	ROTSEL	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS selected rotator		
-ROTSTST	ROTSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS Rotator state string		
-ROTZERO	ROTZERO	Native	double	degrees	FLOAT(126)	32	Y	Y	N												rotator-zero-angle		
-RTMOTTMP	RTMOTTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Rotator motor temperature		
-RTTOPTMP	RTTOPTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Rotator top temperature		
-SAMPMODE	SAMPMODE	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N												1=Single; 2=CDS; 3=MCDS		
-SAMPRATE	SAMPRATE	Native	integer	KHz	NUMBER(*,0)	16	Y	Y	N												Scam sampling rate in KHz		
-SCAM1TMP	SCAM1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SCAM detector temperature		
-SCAM2TMP	SCAM2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SCAM detector temperature		
-SCAMFILT	SCAMFILT	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												SCAM filter position		
-SCAMPA	SCAMPA	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Scam position angle		
-SCFLTTMP	SCFLTTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SCAM filter temperature		
-SCIFILT1	SCIFILT1	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Filter 1 position		
-SCIFILT2	SCIFILT2	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Filter 2 position		
-SCRIPTNA	SCRIPTNA	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Name of current script		
-SECFOCUS	SECFOCUS	Native	double	mm	FLOAT(126)	32	Y	Y	N												secondary mirror focus raw (1.325 mm)		
-SECSTST	SECSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS Secondary status string		
-SECTHETX	SECTHETX	Native	double	arcsec	FLOAT(126)	32	Y	Y	N												DCS secondary theta x		
-SECTHETY	SECTHETY	Native	double	arcsec	FLOAT(126)	32	Y	Y	N												DCS secondary theta y		
-SETNUM	SETNUM	Native	integer		NUMBER(*,0)	16	Y	Y	N												Dataset number		
-SIG2NOIS	SIG2NOIS	Added	double		FLOAT(126)	32	Y	Y	N												Signal to noise estimage near image spectral center		
-SIMPLE	SIMPLE	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												File does conform to FITS standard		
-SLITANG	SLITANG	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Apparent slit angle on SCAM		
-SLITCENT	SLITCENT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												X/Y center of the slit on SCAM		
-SLITPA	SLITPA	Native	double	degrees	FLOAT(126)	32	Y	Y	N												Slit position angle		
-SLITPOS	SLITPOS	Native	integer		NUMBER(*,0)	16	Y	Y	N												Slit Position		
-SLITX	SLITX	Native	double		FLOAT(126)	32	Y	Y	N												X pixel of the center of the slit		
-SLITY	SLITY	Native	double		FLOAT(126)	32	Y	Y	N												Y pixel of the center of the slit		
-SPEC1TMP	SPEC1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SPEC detector temperature		
-SPEC2TMP	SPEC2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												SPEC detector temperature		
-STARTX	STARTX	Native	integer		NUMBER(*,0)	16	Y	Y	N												Sub-array start x pixel		
-STARTY	STARTY	Native	integer		NUMBER(*,0)	16	Y	Y	N												Sub-array start y pixel		
-STATEID	STATEID	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Instrument configuration identifier		
-STATENAM	STATENAM	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Instrument configuration name		
-TARGDEC	TARGDEC	Native	char	dd:mm:ss.s	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS target DEC		
-TARGEPOC	TARGEPOC	Native	double		FLOAT(126)	32	Y	Y	N												target epoch (2000.000000)		
-TARGEQUI	TARGEQUI	Native	double		FLOAT(126)	32	Y	Y	N												target equinox (2000.000000)		
-TARGFRAM	TARGFRAM	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N												target frame		
-TARGNAME	TARGNAME	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N											Y	DCS Target name		
-TARGPLAX	TARGPLAX	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N												target parallax (0.0 arcsec)		
-TARGPMDC	TARGPMDC	Native	double	arcsec/yr	FLOAT(126)	32	Y	Y	N												target proper motion dec (0.000 arcsec/yr)		
-TARGPMRA	TARGPMRA	Native	double	s/yr	FLOAT(126)	32	Y	Y	N												target proper motion ra (0.0000 s/yr)		
-TARGRA	TARGRA	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												DCS targer RA		
-TARGRADV	TARGRADV	Native	double	km/s	FLOAT(126)	32	Y	Y	N												target radial velocity (0.000000 km/s)		
-TARGWAVE	TARGWAVE	Native	double		FLOAT(126)	32	Y	Y	N												target-wavelength		
-TELESCOP	TELESCOP	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS telescope name		
-TELFOCUS	TELFOCUS	Native	double	mm	FLOAT(126)	32	Y	Y	N												DCS telescope focus		
-TERTDEST	TERTDEST	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS Tertiary user destination		
-TERTPOSN	TERTPOSN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS Tertiary user position		
-TERTSTST	TERTSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												DCS Tertiary status string		
-TIMFILE	TIMFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												HxRG MCD code		
-TMATMP	TMATMP	Native	double	degK	FLOAT(126)	32	Y	Y	N												Three mirror antistigmat temperature		
-TRACKING	TRACKING	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												DCS Servos tracking status		
-TRUITIME	TRUITIME	Native	double	seconds	FLOAT(126)	32	Y	Y	N												Actual coadd integration time		
-TUBETEMP	TUBETEMP	Native	double	degreesC	FLOAT(126)	32	Y	Y	N												tube temperature (2.90 degC)		
-UTCLP	UTCLP	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												OPEN/CLOSE TT CLMP ctrl loop		
-UTEND	UTEND	Native	char	hh:mm:ss	VARCHAR2(16 BYTE)	16	Y	Y	N												UT end time of exposure		
-UTGAIN	UTGAIN	Native	double		FLOAT(126)	32	Y	Y	N												Set TT loop gain		
-UTSTART	UTSTART	Native	char	hh:mm:ss	VARCHAR2(16 BYTE)	16	Y	Y	N												UT start time of exposure		
-VBIASGAT	VBIASGAT	Native	double	volts	FLOAT(126)	32	Y	Y	N												VBIASGATE (0x6004) voltage		
-VBIASPWR	VBIASPWR	Native	double	volts	FLOAT(126)	32	Y	Y	N												VBIAS0PWER (0x6006) voltage		
-VDD	VDD	Native	double	volts	FLOAT(126)	32	Y	Y	N												VDD (0x600E) voltage		
-VDDA	VDDA	Native	double	volts	FLOAT(126)	32	Y	Y	N												VDDA (0x600C) voltage		
-VPRAMRF1	VPRAMRF1	Native	double	volts	FLOAT(126)	32	Y	Y	N												VPREAMPREF1 (0x60138) voltage		
-VPREMDRF	VPREMDRF	Native	double	volts	FLOAT(126)	32	Y	Y	N												VPREMIDREF (0x6034) voltage		
-VREFMAIN	VREFMAIN	Native	double	volts	FLOAT(126)	32	Y	Y	N												VREFMAIN (0x602C) voltage		
-VRESET	VRESET	Native	double	volts	FLOAT(126)	32	Y	Y	N												VRESET (0x6000) voltage		
-VRPSTYPE	VRPSTYPE	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N												Vertical reference pixel subtraction type		
-WCDMSTAT	WCDMSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N												Status of DM loop		
-WCDTSTAT	WCDTSTAT	Native	char		VARCHAR2(25 BYTE)	25	Y	Y	N												Status of down tt loop		
-WCSDIM	WCSDIM	Native	integer		NUMBER(*,0)	16	Y	Y	N												Number of WCS dimensions		
-WCSNAME	WCSNAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Descriptive name of this WCS		
-WCUTSTAT	WCUTSTAT	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N												Status of up tt loop		
-WSCNORFN	WSCNORFN	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N												Name of origin vec file		
-WSFRRT	WSFRRT	Native	integer		NUMBER(*,0)	16	Y	Y	N												Frame rate for WFS cam (Hz)		
-WSSMGN	WSSMGN	Native	integer		NUMBER(*,0)	16	Y	Y	N												WFS gain		
-WSSMPRG	WSSMPRG	Native	integer		NUMBER(*,0)	16	Y	Y	N												WFS_SciMeas program		
-WSSMREP	WSSMREP	Native	integer		NUMBER(*,0)	16	Y	Y	N												WFS SciMeas repetitions		
-WXDOMHUM	WXDOMHUM	Added	double		FLOAT(126)	32	Y	Y	N												Inside dome humidity (%)		
-WXDOMTMP	WXDOMTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N												Inside dome temperature (deg C)		
-WXDWPT	WXDWPT	Added	double	degreesC	FLOAT(126)	32	Y	Y	N												Dew point temperature (deg C)		
-WXOUTHUM	WXOUTHUM	Added	double		FLOAT(126)	32	Y	Y	N												Outside humidity (%)		
-WXOUTTMP	WXOUTTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N												Outside temperature (deg C)		
-WXPRESS	WXPRESS	Added	double	mb	FLOAT(126)	32	Y	Y	N												Pressure (mb)		
-WXTIME	WXTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N												UT of logged weather keyword values		
-WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N												Wind direction (N through E)		
-WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N												Wind speed (mph)		
-XENON	XENON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N												Xenon lamp status		
+UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s									Y	DCS Universal Time		
+UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s										DCS Coordinated Universal Time		
+KOAIMTYP	KOAIMTYP	Added	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	Y		24s				arclamp, dark, flatlamp, flatlampoff, object, undefined					Y	KOA data file image type		
+IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Observation type		
+CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s				SCAM,SPEC					Y	Camera name		
+RA	CRA	LRIS	char		VARCHAR2(24 BYTE)	24	Y	Y	N	angle	24s					Y					Telescope right ascension		
+DEC	CDEC	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	Y	angle	32s		-90	95		Y					Telescope declination		
+EQUINOX	EQUINOX	Native	double	year	FLOAT(126)	32	Y	Y	N		18.8f										telescope equinox (2000.0)		
+FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y		16d			9999						Y	copy of FILENUM		
+FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Frame number		
+ECHLPOS	ECHLPOS	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Echelle position		
+DISPERS	DISPERS	Added	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s									Y	Dispersion level (hi ech>100, else low)		
+DISPSCAL	DISPSCAL	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Detector pixel scale, dispersion (hi 0.144, low 0.190)		
+ELAPTIME	ELAPTIME	Added	double	seconds	FLOAT(126)	32	Y	Y	Y		18.8f		-15	9999						Y	TRUITIME * COADDS		
+FILTER	FILTER	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s									Y	Science filter selection		
+SLITNAME	SLITNAME	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N		32s				42x0.380, 42x0.570, 42x0.760, 0.144x12, 0.288x12, 0.432x12, 0.576x12, 0.720x12, 0.288x24, 0.432x24, 0.576x24, 0.720x24, 0.013x1.13, 0.027x1.13, 0.041x1.13, 0.054x1.13, 0.068x1.13, 0.027x2.26, 0.041x2.26, 0.054x2.26, 0.068x2.26, 3.96x0.036, 3.96x0.054, 3.96x0.072, UNKNOWN					Y	Slit Name		
+SLITLEN	SLITLEN	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										Slit length projected on sky (arcsec)		
+SLITWIDT	SLITWIDT	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										Slit width projected on sky (arcsec)		
+PSCALE	PSCALE	Native	double	arcsec/pix	FLOAT(126)	32	Y	Y	N		18.8f										Pixel scale for science camera		
+SPATSCAL	SPATSCAL	Added	double	arcsec/pixel	FLOAT(126)	32	Y	Y	N		18.8f										CCD pixel scale, spatial (arcsec/pixel)		
+SPECRES	SPECRES	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Nominal spectral resolution		
+WAVEBLUE	WAVEBLUE	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate blue end wavelength		
+WAVECNTR	WAVECNTR	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15							Approximate central wavelength		
+WAVERED	WAVERED	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate red end wavelength		
+OFNAME	OFNAME	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Output file name		
+OUTDIR	OUTDIR	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Original File Name		
+SEMESTER	SEMESTER	Added	char		VARCHAR2(8 BYTE)	8	N	Y	Y		8s										Semester - from PROGNAME or DATE-OBS		
+PROGNAME	PROGNAME	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Observing program identifier		
+PROGID	PROGID	Added	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	N		72s										WMKO ID for observing program		
+PROGINST	PROGINST	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y		32s									Y	Program institution		
+PROGPI	PROGPI	Added	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	N		72s									Y	Program principal investigator		
+PROGTITL	PROGTITL	Added	char	n/a	VARCHAR2(216 BYTE)	216	Y	Y	N		216s									Y	Program title - concatination of PROGTL1-3 from FITS header		
+ABORTED	ABORTED	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Exposure was stopped before completion		
+AIRMASS	AIRMASS	Native	double	none	FLOAT(126)	32	Y	Y	N		18.8f										Air mass		
+AOAOAMED	AOAOAMED	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										AO WFC AOA camera median light level (counts)		
+AODMSTAT	AODMSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO deformable mirror loop state		
+AODRDTEN	AODRDTEN	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO DAR DTT CTRLOFF ENABLE		
+AODRENA	AODRENA	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO DAR_ENABLE/DISABLE		
+AODTSTAT	AODTSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO downlink tip/tilt loop state		
+AOFCLBCT	AOFCLBCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO FC LBWFS control		
+AOFCLBFO	AOFCLBFO	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO FC LBWFS pregain focus calc		
+AOFCLGCT	AOFCLGCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO FC LGS control		
+AOFCLGFO	AOFCLGFO	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO FC LGS pregain focus calc v		
+AOFCNGCT	AOFCNGCT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO FC NGS control		
+AOFCNGFO	AOFCNGFO	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO FC NGS Focus Calc Value (m)		
+AOFCSALT	AOFCSALT	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO FC sodium alt preset (m)		
+AOFMX	AOFMX	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO field steering mirrors X po		
+AOFMY	AOFMY	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO field steering mirrors Y po		
+AOFOMODE	AOFOMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO focus offloading mode		
+AOLBFWHM	AOLBFWHM	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO LBWFS avg fwhm		
+AOLPMOVE	AOLPMOVE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO LSP MOVE ENABLE		
+AOOPSMOD	AOOPSMOD	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										AO General Ops Mode FITS		
+AOTSDAR	AOTSDAR	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO TSS_USE_DAR?		
+AOTSX	AOTSX	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO tip/tilt sensor stage X pos		
+AOTSY	AOTSY	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO tip/tilt sensor stage Y pos		
+AOTSZ	AOTSZ	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO tip/tilt sensor stage Z pos		
+AOTTMODE	AOTTMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										AO tip/tilt offloading mode		
+AOWFC0	AOWFC0	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										AO WFS focus stage FSM coeffic		
+ARGON	ARGON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Argon lamp: 1=on, 0=off		
+ASIC1TMP	ASIC1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SPEC ASIC temperature		
+ASIC2TMP	ASIC2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SCAM ASIC temperature		
+ASICCFG	ASICCFG	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Sidecar configuration file name		
+AUTACTIV	AUTACTIV	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS guider active		
+AUTFWHM	AUTFWHM	Native	double	pixels	FLOAT(126)	32	Y	Y	N		18.8f										DCS guider FWHM		
+AUTXCENT	AUTXCENT	Native	double	arcsec	FLOAT(126)	32	Y	Y	N		18.8f										DCS guider x centroid		
+AUTYCENT	AUTYCENT	Native	double	arcsec	FLOAT(126)	32	Y	Y	N		18.8f										DCS guider y centroid		
+AXESTAT	AXESTAT	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										axes control status		
+AZ	AZ	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										telescope azimuth (-57.25 deg)		
+BADPIX	BADPIX	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										FITS filename containing bad pixel		
+BITPIX	BITPIX	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Bits per pixel		
+BNCH1TMP	BNCH1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Bench heater temperature		
+BNCH2TMP	BNCH2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Bench heater temperature		
+BSCALE	BSCALE	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Scaling factor		
+BZERO	BZERO	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Scaling zero-point		
+CALCPOS	CALCPOS	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Cal. Cover Position, 0=out, 1=in		
+CALMPOS	CALMPOS	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Cal. Mirror Position, 0=out, 1=in		
+CALOCAL	CALOCAL	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										collimation azimuth local (5.5 arcsec)		
+CALPPOS	CALPPOS	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Cal. Pinhole Position, 0=out, 1=in		
+CD1_1	CD1_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
+CD1_2	CD1_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
+CD2_1	CD2_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in x		
+CD2_2	CD2_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in y		
+CELLDRAN	CELLDRAN	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										CELLDRAIN (0x6008) voltage		
+CELOCAL	CELOCAL	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										collimation elevation local (24.7 arcsec)		
+CH1TMP	CH1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										CCR 1050 temperature		
+CH2TMP	CH2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										CCR 350 temperature		
+CNAME1	CNAME1	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Descriptive name of WCS axis 1		
+CNAME2	CNAME2	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Descriptive name of WCS axis 2		
+CNTSPERS	CNTSPERS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Data written in counts per second		
+COADD	COADD	Added	integer		NUMBER(*,0)	16	Y	Y	N		16d										Copy of COADDS (spec) or COADDS2 (scam)		
+COADDONE	COADDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of completed coadds		
+COADDS	COADDS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of coadds		
+CRASH	CRASH	Added	char		VARCHAR2(7 BYTE)	8	Y	Y	N		8s				Yes,No						NIRSPEC server crash detected?		
+CRPIX1	CRPIX1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										X coordinate of center pixel		
+CRPIX2	CRPIX2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Y coordinate of center pixel		
+CRVAL1	CRVAL1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										RA of center pixel		
+CRVAL2	CRVAL2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DEC of center pixel		
+CRYOTEMP	CRYOTEMP	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										PICNIC cold head temperature		
+CTYPE1	CTYPE1	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 1		
+CTYPE2	CTYPE2	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 2		
+CUNIT1	CUNIT1	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Physical unit of WCS axis 1		
+CUNIT2	CUNIT2	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Physical unit of WCS axis 2		
+CURRINST	CURRINST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										current instrument		
+DATAFILE	DATAFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Datafile name		
+DATLEVEL	DATLEVEL	Added	integer	n/a	NUMBER(*,0)	16	N	Y	N		16d										Data reduction level		
+DCSSTAT	DCSSTAT	Native	char	n/a	VARCHAR2(25 BYTE)	24	Y	Y	N		24s										drive and control status		
+DCSVERS	DCSVERS	Native	char	n/a	VARCHAR2(25 BYTE)	24	Y	Y	N		24s										drive and control version		
+DDEC	DDEC	Native	double	arcseconds/sec	FLOAT(126)	32	Y	Y	N		18.8f										differential declination rate		
+DECBASE	DECBASE	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS DEC base		
+DECOFF	DECOFF	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										DCS DEC offset		
+DETBIAS	DETBIAS	Native	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d										Detector bias setting (0-4096)		
+DETGAIN	DETGAIN	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Detector gain		
+DETRN	DETRN	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Detector read noise		
+DISPPOS	DISPPOS	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Cross Disperser position		
+DMGAIN	DMGAIN	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Set DM loop gain		
+DMMRFN	DMMRFN	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Name of DM reconstructor file		
+DOMEPOSN	DOMEPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										dome azimuth (302.81 deg)		
+DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	Y	N	N		16s										DCS dome status string		
+DQA_DATE	DQA_DATE	Added	char		TIMESTAMP(6)	32	N	Y	N		30s										Date of DQA run		
+DQA_VERS	DQA_VERS	Added	char	n/a	VARCHAR2(8 BYTE)	8	N	Y	N		8s										DQA version number		
+DRA	DRA	Native	double	seconds/sec	FLOAT(126)	32	Y	Y	N		18.8f										differential right ascension rate		
+DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	Y	N	N		18.8f										DRAIN (0x600A) voltage		
+DSUB	DSUB	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										DSUB (0x6002) voltage		
+DTCLP	DTCLP	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										OPEN/CLOSE TT CLMP ctrl loop		
+DTGAIN	DTGAIN	Native	double	n/a	FLOAT(126)	32	Y	Y	N		18.8f										Set TT loop gain		
+DTRACK	DTRACK	Added	char		VARCHAR2(11 BYTE)	16	Y	Y	N		16s										differential tracking enabled		
+DTSENSOR	DTSENSOR	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Select WFS or STRAP		
+EL	EL	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										telescope elevation (52.31 deg)		
+ENDX	ENDX	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Sub-array end x pixel		
+ENDY	ENDY	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Sub-array end y pixel		
+ETALON	ETALON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Etalon lamp: 1=on, 0=off		
+EXTEND	EXTEND	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										FITS dataset may contain extensions		
+FEUMPOS	FEUMPOS	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										FEU fold mirror position		
+FIL1POS	FIL1POS	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Filter 1 Position		
+FIL2POS	FIL2POS	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Filter 2 Position		
+FILENAME	FILENAME	Native	char	n/a	VARCHAR2(31 BYTE)	32	Y	Y	N		32s										Original File Name		
+FILENUM	FILENUM	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Frame Number		
+FILENUM2	FILENUM2	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Frame Number		
+FLAT	FLAT	Native	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										Flat lamp: 1=on, 0=off		
+FLIMAGIN	FLIMAGIN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS dome lamp imaging mode		
+FLSPECTR	FLSPECTR	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS dome lamp spectra mode		
+FOCALSTN	FOCALSTN	Native	char	n/a	VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal station		
+FREQ_SPE	FREQ_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Preamp Filtering Frequence setting 1-4		
+GAIN_SPE	GAIN_SPE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Preamp gain setting 1-4		
+GROUPID	GROUPID	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Identifier for a group of images		
+GROUPS	GROUPS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Requested number of sampling groups		
+GRPDONE	GRPDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of completed groups in last coadd		
+GUIDFWHM	GUIDFWHM	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										FWHM of NIRSPEC guide star		
+GUIDING	GUIDING	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS guiding status		
+GUIDTIME	GUIDTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logger GUIDFWHM value		
+GUIDWAVE	GUIDWAVE	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										guiderstar-wavelength		
+HA	HA	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										telescope hour angle (+02:36:45.01 h)		
+HALOGEN	HALOGEN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Halogen (flat) lamp status		
+HALOLEV	HALOLEV	Native	integer	pct	NUMBER(*,0)	16	Y	Y	N		16d										Halogen lamp intensity		
+HATCH	HATCH	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Hatch position		
+HEART_01	HEART_01	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_02	HEART_02	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_03	HEART_03	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_04	HEART_04	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_05	HEART_05	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_06	HEART_06	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_07	HEART_07	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_08	HEART_08	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_09	HEART_09	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_10	HEART_10	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_11	HEART_11	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_12	HEART_12	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HEART_13	HEART_13	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Heartbeat active		
+HRPSTYPE	HRPSTYPE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Vertical reference pixel subtraction type		
+HXRGCFG1	HXRGCFG1	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s										ASIC Regs		
+HXRGCFG2	HXRGCFG2	Native	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s										ASIC Regs		
+IMAGEMD	IMAGEMD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, median (DN)		
+IMAGEMN	IMAGEMN	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, mean (DN)		
+IMAGESD	IMAGESD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, standard deviation (DN)		
+INSTANGL	INSTANGL	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										prog-to-instrument angle		
+INSTRUME	INSTRUME	Native	char	n/a	VARCHAR2(72 BYTE)	72	N	Y	Y		72s				NIRSPEC,NIRSPAO						Instrument name		
+INSTSTAT	INSTSTAT	Added	integer	n/a	NUMBER(*,0)	16	Y	Y	N		16d										KOA instrument status		
+IROTLOC	IROTLOC	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Step position of Image rotator		
+IROTPOS	IROTPOS	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Image rotator position		
+ISAO	ISAO	Added	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s				yes, no						Is adaptive optics in use?		
+ITIME	ITIME	Native	integer	milliseconds	NUMBER(*,0)	16	Y	Y	N		16d										Integration time per coadd		
+JADEFILE	JADEFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Jade		
+JADENAME	JADENAME	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Name of Jade		
+KRYPTON	KRYPTON	Native	char	n/a	VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Krypton lamp: 1=on, 0=off		
+LGRMSWF	LGRMSWF	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										LGSAO RMS WF Residual		
+LNCANTMP	LNCANTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										LN2 can temperature		
+LSAMPPWR	LSAMPPWR	Native	double	watts	FLOAT(126)	32	Y	Y	N		18.8f										Amp Power (watts)		
+LSPROP	LSPROP	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Laser Propagating		
+LST	LST	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	Y	N	N		24s										local apparent sidereal time (h)		
+LTM1_1	LTM1_1	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										CCD to image pixel scale in X		
+LTM2_2	LTM2_2	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										CCD to image pixel scale in Y		
+MJD	MJD	Native	double	days	FLOAT(126)	32	Y	Y	N		18.8f										DCS modified julian day		
+MULTISCA	MULTISCA	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of multiple reads (scam)		
+MULTISPE	MULTISPE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of multiple reads (spec)		
+NAXIS	NAXIS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Numbe of data axes		
+NAXIS1	NAXIS1	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 1		
+NAXIS2	NAXIS2	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 2		
+NEON	NEON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Neon lamp status		
+NLINEAR	NLINEAR	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d										Number of pixels above linearity		
+NPIXSAT	NPIXSAT	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d										Number of saturated pixels (65535 DN)		
+NUMREADS	NUMREADS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Requested number of reads		
+OA	OA	Added	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Observing assistant		
+OBAMNAME	OBAMNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for AFM		
+OBFMDREN	OBFMDREN	Native	double	n/a	FLOAT(126)	32	Y	Y	N		18.8f										FSM Coordinated move use dar		
+OBFMXIM	OBFMXIM	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										Image plane x motion for FSM (0.61 mm)		
+OBFMXPU	OBFMXPU	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Pupil plane x motion for FSM (0.00 subaps)		
+OBFMYIM	OBFMYIM	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										Image plane y motion for FSM (-0.70 mm)		
+OBFMYPU	OBFMYPU	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Pupil plane y motion for FSM (		
+OBFSNAME	OBFSNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for FSS		
+OBIMNAME	OBIMNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for ISM		
+OBJECT	OBJECT	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Object name		
+OBLBNAME	OBLBNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for LBS		
+OBLBX	OBLBX	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User-value-of-LBS-x-axis		
+OBLBY	OBLBY	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User-value-of-LBS-y-axis		
+OBRT	OBRT	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										User value of ROT (31.4380 deg)		
+OBSDNAME	OBSDNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for SOD		
+OBSERVER	OBSERVER	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Observer		
+OBSFNAME	OBSFNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for SFP		
+OBSFX	OBSFX	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFP x axis (-119.00 mm)		
+OBSFY	OBSFY	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFP y axis (0.00 mm)		
+OBSFZ	OBSFZ	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFP z axis (0.00 mm)		
+OBSI	OBSI	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFD (mm)		
+OBSMODE	OBSMODE	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s				Spectroscopy,Imaging						Observing mode		
+OBSNNAME	OBSNNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for SND		
+OBSTYPE	OBSTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Observation type		
+OBSWNAME	OBSWNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for SFW		
+OBSWSTA	OBSWSTA	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										White light power status		
+OBTSNAME	OBTSNAME	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Named position control for TSS		
+OBTSX	OBTSX	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of TSS x axis (mm)		
+OBTSY	OBTSY	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of TSS y axis (mm)		
+OBTSZ	OBTSZ	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of TSS z axis (mm)		
+OBWCNAME	OBWCNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for WCS		
+OBWF	OBWF	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of FCS (-6.102 mm)		
+OBWFSTST	OBWFSTST	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										State of FCS as string		
+OBWLNAME	OBWLNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for WLS		
+OBWNNAME	OBWNNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for WND		
+OBWPNAME	OBWPNAME	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for WPS		
+PA	PA	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										DCS Rotator position angle		
+PARANG	PARANG	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										parallactic angle astrometric (103.85 deg)		
+PARANTEL	PARANTEL	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										parallactic angle telescope (103.83 deg)		
+PERSFILE	PERSFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s												
+PLATETMP	PLATETMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Optical plate temperature		
+PONAME	PONAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										pointing origin name		
+PONAME1	PONAME1	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 1		
+PONAME2	PONAME2	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 2		
+PONAME3	PONAME3	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 3		
+PONAME4	PONAME4	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 4		
+PONAME5	PONAME5	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 5		
+PONAME6	PONAME6	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 6		
+PONAME7	PONAME7	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 7		
+PONAME8	PONAME8	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 8		
+PONAME9	PONAME9	Native	char		VARCHAR2(25 BYTE)	24	Y	Y	N		24s										pointing origin name 9		
+POXOFF	POXOFF	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin x offset (0.00 mm)		
+POXPOS	POXPOS	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition (-0.22 mm)		
+POXPOS1	POXPOS1	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 1 (-0.85 mm)		
+POXPOS2	POXPOS2	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 2 (-0.22 mm)		
+POXPOS3	POXPOS3	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 3 (-2.68 mm)		
+POXPOS4	POXPOS4	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 4 (0.39 mm)		
+POXPOS5	POXPOS5	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 5 (-0.57 mm)		
+POXPOS6	POXPOS6	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 6 (3.42 mm)		
+POXPOS7	POXPOS7	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 7 (-3.18 mm)		
+POXPOS8	POXPOS8	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 8 (-0.05 mm)		
+POXPOS9	POXPOS9	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin xposition 9 (-0.47 mm)		
+POYOFF	POYOFF	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin y offset (0.00 mm)		
+POYPOS	POYPOS	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition (-0.13 mm)		
+POYPOS1	POYPOS1	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 1 (1.16 mm)		
+POYPOS2	POYPOS2	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 2 (-0.13 mm)		
+POYPOS3	POYPOS3	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 3 (53.23 mm)		
+POYPOS4	POYPOS4	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 4 (-0.90 mm)		
+POYPOS5	POYPOS5	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 5 (-54.47 mm)		
+POYPOS6	POYPOS6	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 6 (0.57 mm)		
+POYPOS7	POYPOS7	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 7 (-1.13 mm)		
+POYPOS8	POYPOS8	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 8 (5.36 mm)		
+POYPOS9	POYPOS9	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										pointing origin yposition 9 (-5.83 mm)		
+Q1OFFSET	Q1OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										PICNIC Quadrant 1 preamp offset		
+Q2OFFSET	Q2OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										PICNIC Quadrant 2 preamp offset		
+Q3OFFSET	Q3OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										PICNIC Quadrant 3 preamp offset		
+Q4OFFSET	Q4OFFSET	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										PICNIC Quadrant 4 preamp offset		
+RABASE	RABASE	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS RA base		
+RADECSYS	RADECSYS	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Coordinate system		
+RAOFF	RAOFF	Native	double	arcsec	FLOAT(126)	32	Y	Y	N		18.8f										DCS RA offset		
+RDITIME	RDITIME	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Time between sampling groups in seconds		
+READDONE	READDONE	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of completed reads in last group		
+READTIME	READTIME	Native	double	seconds	FLOAT(126)	32	Y	Y	N		18.8f										Detector readout time		
+RESETS	RESETS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of resets before exposure		
+ROOTNAME	ROOTNAME	Native	char	n/a	VARCHAR2(31 BYTE)	32	Y	Y	N		32s										File Root Name		
+ROTBASE	ROTBASE	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DCS ratotator base		
+ROTCALAN	ROTCALAN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										rotator calibration angle (0.00 deg)		
+ROTDEST	ROTDEST	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DCS rotator user destination		
+ROTDETS1	ROTDETS1	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS rotator time stamp 1		
+ROTDETS2	ROTDETS2	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS rotator time stamp 2		
+ROTMODE	ROTMODE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS rotator tracking mode		
+ROTPDEST	ROTPDEST	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DCS rotator physical destination		
+ROTPOSN	ROTPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										rotator user position (217.69 deg)		
+ROTPPOSN	ROTPPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										rotator physical position (61.54 deg)		
+ROTREFAN	ROTREFAN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										rotator reference angle (0.00 deg)		
+ROTSEL	ROTSEL	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS selected rotator		
+ROTSTST	ROTSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS Rotator state string		
+ROTZERO	ROTZERO	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										rotator-zero-angle		
+RTMOTTMP	RTMOTTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Rotator motor temperature		
+RTTOPTMP	RTTOPTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Rotator top temperature		
+SAMPMODE	SAMPMODE	Native	char	n/a	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										1=Single; 2=CDS; 3=MCDS		
+SAMPRATE	SAMPRATE	Native	integer	KHz	NUMBER(*,0)	16	Y	Y	N		16d										Scam sampling rate in KHz		
+SCAM1TMP	SCAM1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SCAM detector temperature		
+SCAM2TMP	SCAM2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SCAM detector temperature		
+SCAMFILT	SCAMFILT	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										SCAM filter position		
+SCAMPA	SCAMPA	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Scam position angle		
+SCFLTTMP	SCFLTTMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SCAM filter temperature		
+SCIFILT1	SCIFILT1	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Filter 1 position		
+SCIFILT2	SCIFILT2	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Filter 2 position		
+SCRIPTNA	SCRIPTNA	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Name of current script		
+SECFOCUS	SECFOCUS	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										secondary mirror focus raw (1.325 mm)		
+SECSTST	SECSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS Secondary status string		
+SECTHETX	SECTHETX	Native	double	arcsec	FLOAT(126)	32	Y	Y	N		18.8f										DCS secondary theta x		
+SECTHETY	SECTHETY	Native	double	arcsec	FLOAT(126)	32	Y	Y	N		18.8f										DCS secondary theta y		
+SETNUM	SETNUM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Dataset number		
+SIG2NOIS	SIG2NOIS	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Signal to noise estimage near image spectral center		
+SIMPLE	SIMPLE	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										File does conform to FITS standard		
+SLITANG	SLITANG	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Apparent slit angle on SCAM		
+SLITCENT	SLITCENT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										X/Y center of the slit on SCAM		
+SLITPA	SLITPA	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Slit position angle		
+SLITPOS	SLITPOS	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Slit Position		
+SLITX	SLITX	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										X pixel of the center of the slit		
+SLITY	SLITY	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Y pixel of the center of the slit		
+SPEC1TMP	SPEC1TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SPEC detector temperature		
+SPEC2TMP	SPEC2TMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										SPEC detector temperature		
+STARTX	STARTX	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Sub-array start x pixel		
+STARTY	STARTY	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Sub-array start y pixel		
+STATEID	STATEID	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Instrument configuration identifier		
+STATENAM	STATENAM	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Instrument configuration name		
+TARGDEC	TARGDEC	Native	char	dd:mm:ss.s	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS target DEC		
+TARGEPOC	TARGEPOC	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										target epoch (2000.000000)		
+TARGEQUI	TARGEQUI	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										target equinox (2000.000000)		
+TARGFRAM	TARGFRAM	Native	char	n/a	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										target frame		
+TARGNAME	TARGNAME	Native	char	n/a	VARCHAR2(72 BYTE)	72	Y	Y	N		72s									Y	DCS Target name		
+TARGPLAX	TARGPLAX	Native	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										target parallax (0.0 arcsec)		
+TARGPMDC	TARGPMDC	Native	double	arcsec/yr	FLOAT(126)	32	Y	Y	N		18.8f										target proper motion dec (0.000 arcsec/yr)		
+TARGPMRA	TARGPMRA	Native	double	s/yr	FLOAT(126)	32	Y	Y	N		18.8f										target proper motion ra (0.0000 s/yr)		
+TARGRA	TARGRA	Native	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS targer RA		
+TARGRADV	TARGRADV	Native	double	km/s	FLOAT(126)	32	Y	Y	N		18.8f										target radial velocity (0.000000 km/s)		
+TARGWAVE	TARGWAVE	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										target-wavelength		
+TELESCOP	TELESCOP	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS telescope name		
+TELFOCUS	TELFOCUS	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										DCS telescope focus		
+TERTDEST	TERTDEST	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS Tertiary user destination		
+TERTPOSN	TERTPOSN	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS Tertiary user position		
+TERTSTST	TERTSTST	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										DCS Tertiary status string		
+TIMFILE	TIMFILE	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										HxRG MCD code		
+TMATMP	TMATMP	Native	double	degK	FLOAT(126)	32	Y	Y	N		18.8f										Three mirror antistigmat temperature		
+TRACKING	TRACKING	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										DCS Servos tracking status		
+TRUITIME	TRUITIME	Native	double	seconds	FLOAT(126)	32	Y	Y	N		18.8f										Actual coadd integration time		
+TUBETEMP	TUBETEMP	Native	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										tube temperature (2.90 degC)		
+UTCLP	UTCLP	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										OPEN/CLOSE TT CLMP ctrl loop		
+UTEND	UTEND	Native	char	hh:mm:ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT end time of exposure		
+UTGAIN	UTGAIN	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Set TT loop gain		
+UTSTART	UTSTART	Native	char	hh:mm:ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT start time of exposure		
+VBIASGAT	VBIASGAT	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VBIASGATE (0x6004) voltage		
+VBIASPWR	VBIASPWR	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VBIAS0PWER (0x6006) voltage		
+VDD	VDD	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VDD (0x600E) voltage		
+VDDA	VDDA	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VDDA (0x600C) voltage		
+VPRAMRF1	VPRAMRF1	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VPREAMPREF1 (0x60138) voltage		
+VPREMDRF	VPREMDRF	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VPREMIDREF (0x6034) voltage		
+VREFMAIN	VREFMAIN	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VREFMAIN (0x602C) voltage		
+VRESET	VRESET	Native	double	volts	FLOAT(126)	32	Y	Y	N		18.8f										VRESET (0x6000) voltage		
+VRPSTYPE	VRPSTYPE	Native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vertical reference pixel subtraction type		
+WCDMSTAT	WCDMSTAT	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Status of DM loop		
+WCDTSTAT	WCDTSTAT	Native	char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s										Status of down tt loop		
+WCSDIM	WCSDIM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of WCS dimensions		
+WCSNAME	WCSNAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Descriptive name of this WCS		
+WCUTSTAT	WCUTSTAT	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Status of up tt loop		
+WSCNORFN	WSCNORFN	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Name of origin vec file		
+WSFRRT	WSFRRT	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Frame rate for WFS cam (Hz)		
+WSSMGN	WSSMGN	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										WFS gain		
+WSSMPRG	WSSMPRG	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										WFS_SciMeas program		
+WSSMREP	WSSMREP	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										WFS SciMeas repetitions		
+WXDOMHUM	WXDOMHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Inside dome humidity (%)		
+WXDOMTMP	WXDOMTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Inside dome temperature (deg C)		
+WXDWPT	WXDWPT	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Dew point temperature (deg C)		
+WXOUTHUM	WXOUTHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Outside humidity (%)		
+WXOUTTMP	WXOUTTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Outside temperature (deg C)		
+WXPRESS	WXPRESS	Added	double	mb	FLOAT(126)	32	Y	Y	N		18.8f										Pressure (mb)		
+WXTIME	WXTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logged weather keyword values		
+WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Wind direction (N through E)		
+WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N		18.8f										Wind speed (mph)		
+XENON	XENON	Native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s										Xenon lamp status		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
 	DEC2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
