@@ -376,6 +376,6 @@ OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N										Y	Y	Original filename
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	HA_D		double		FLOAT(126)		Y	Y	N		18.8f								Y	N	telescope-hour-angle		
 	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
-	MD_INGTIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
+	MD_INGTIME		timestamp		TIMESTAMP	16	Y	Y	N										N	N			
 	FILEHAND		char		VARCHAR2(151 BYTE)	16	Y	Y	N										Y	Y	Path to the file in the archive		
 	SEMID		char		VARCHAR2(21 BYTE)	16	Y	N	N										Y	Y	SEMESTER and PROGID		
