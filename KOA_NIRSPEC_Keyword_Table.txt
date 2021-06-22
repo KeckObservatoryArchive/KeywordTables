@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	Added	char	n/a	VARCHAR2(32 BYTE)	32	N	Y	Y		32s						Y			Y	Unique identifier for each file		
 PROPINT	PROPINT	Added	integer	months	NUMBER(*,0)	16	Y	Y	Y		16d			9999			Y				Proprietary period in months		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
-DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y	date							Y			Y	universal date of observation		
+DATE-OBS	DATE_OBS	Native	date		DATE	32	N	Y	Y	date	30s						Y			Y	universal date of observation		
 UT	UT	Native	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s									Y	DCS Universal Time		
 UTC	UTC	Added	char	hh:mm:ss.ss	VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s										DCS Coordinated Universal Time		
 KOAIMTYP	KOAIMTYP	Added	char		VARCHAR2(24 BYTE)	24	Y	Y	Y		24s				arclamp, dark, flatlamp, flatlampoff, object, undefined		Y			Y	KOA data file image type		
