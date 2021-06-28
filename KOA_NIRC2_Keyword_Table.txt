@@ -64,7 +64,7 @@ DATE-OBS	DATE_OBS	dcs	char		DATE	24	N	Y	Y	date	32s					Y				Y	universal date of 
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					diff decl rate		
-DEC	CDEC	dcs	double	degrees	FLOAT(126)	20	Y	Y	Y		18.8f					Y					telescope declination		
+DEC	CDEC	DCS	char	degrees	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope declination		
 DECOFF	DECOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					declination offset		
 DETBIAS	DETBIAS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Detector bias setting (0-4096)		
 DETGAIN	DETGAIN	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector gain		
@@ -229,7 +229,7 @@ Q1OFFSET	Q1OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadran
 Q2OFFSET	Q2OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 2 preamp offset		
 Q3OFFSET	Q3OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 3 preamp offset		
 Q4OFFSET	Q4OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 4 preamp offset		
-RA	CRA	dcs	double		FLOAT(126)	20	Y	Y	Y		18.8f		-180	365		Y					telescope right ascension 		
+RA	CRA	DCS	char	degrees	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope right ascension		
 RADECSYS	RADECSYS		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					The system of the coordinates		
 RAOFF	RAOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					right ascension offset 		
 ROOTNAME	ROOTNAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					File prefix		
