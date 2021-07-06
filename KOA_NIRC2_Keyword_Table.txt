@@ -1,7 +1,8 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	added	char		VARCHAR2(30 BYTE)	30	N	Y	Y		30s					Y				Y	Unique identifier for each file		
 PROPINT	PROPINT	added	integer	months	NUMBER(38)	16	N	Y	Y		16d		0	9999		Y					Proprietary period in months		
-AIRMASS	AIRMASS	dcs	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					air mass (1.41)		
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
+AIRMASS	AIRMASS	dcs	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					air mass	1.41	
 AOAOAMED	AOAOAMED	ao	integer		NUMBER(38)	20	Y	Y	N		20d				open, closed	Y					AO WFC AOA camera median light		
 AOCOMODE	AOCOMODE	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO coma offloading mode		
 AODELAY	AODELAY	nirc2	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Delay after AO locks		
@@ -13,14 +14,14 @@ AOFCC0LG	AOFCC0LG	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO F
 AOFCC0N2	AOFCC0N2	ao-legacy	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC C0 NIRC2		
 AOFCCOOS	AOFCCOOS	ao-legacy	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO-FC-C0-OSIRIS		
 AOFCLBCT	AOFCLBCT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO FC LBWFS control		
-AOFCLBFO	AOFCLBFO	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC LBWFS pregain focus calc		
+AOFCLBFO	AOFCLBFO	ao	double	m	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC LBWFS pregain focus calc val 		
 AOFCLGCT	AOFCLGCT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO FC LGS control		
-AOFCLGFO	AOFCLGFO	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC LGS pregain focus calc v		
+AOFCLGFO	AOFCLGFO	ao	double	m	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC LGS pregain focus calc val 		
 AOFCNGCT	AOFCNGCT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO FC NGS control		
-AOFCNGFO	AOFCNGFO	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC NGS Focus Calc Value (m)		
-AOFCSALT	AOFCSALT	ao	integer		NUMBER(38)	20	Y	Y	N		20d					Y					AO FC sodium alt preset (m)		
-AOFMX	AOFMX	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO field steering mirrors X po		
-AOFMY	AOFMY	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO field steering mirrors Y po		
+AOFCNGFO	AOFCNGFO	ao	double	m	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO FC NGS Focus Calc Value		
+AOFCSALT	AOFCSALT	ao	integer	m	NUMBER(38)	20	Y	Y	N		20d					Y					AO FC sodium alt preset 		
+AOFMX	AOFMX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO field steering mirrors X position 		
+AOFMY	AOFMY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO field steering mirrors Y position		
 AOFOMODE	AOFOMODE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO focus offloading mode		
 AOLBFWHM	AOLBFWHM	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO LBWFS avg fwhm		
 AOLPMOVE	AOLPMOVE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO LSP MOVE ENABLE		
@@ -29,19 +30,19 @@ AOOPSMODE	AOOPSMODE	ao-legacy	integer		NUMBER(38)	20	Y	Y	N		20d					Y					AO Gen
 AOSTAT	AOSTAT	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO control status		
 AOSTST	AOSTST	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO state		
 AOTSDAR	AOTSDAR	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO TSS_USE_DAR		
-AOTSX	AOTSX	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage X pos		
-AOTSY	AOTSY	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage Y pos		
-AOTSZ	AOTSZ	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage Z pos		
+AOTSX	AOTSX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage X position		
+AOTSY	AOTSY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage Y position		
+AOTSZ	AOTSZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor stage Z position		
 AOTTMODE	AOTTMODE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO tip/tilt offloading mode		
-AOWFC0	AOWFC0	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO WFS focus stage FSM coeffic		
+AOWFC0	AOWFC0	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO WFS focus stage FSM coefficient 0		
 ARGONPWR	ARGONPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Argon lamp control		
 AXESTAT	AXESTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					axes control status		
-AZ	AZ	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope azimuth (58.00 deg)		
+AZ	AZ	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope azimuth	58	
 BITPIX	BITPIX	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Bits per pixel		
 BSCALE	BSCALE	alad	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Scaling factor		
 BZERO	BZERO	alad	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Scaling zero-pointeger		
 CALOCAL	CALOCAL	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					collimation azimuth local		
-CAMDIST	CAMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					camera slider's distance from from home (mm)		
+CAMDIST	CAMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					camera slider's distance from from home 		
 CAMNAME	CAMNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y				Y	camera slider's named position		
 CAMRAW	CAMRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					camera slider's encoder position		
 CAMSTAT	CAMSTAT	legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					camera slider's current state		
@@ -63,7 +64,7 @@ DATE-OBS	DATE_OBS	dcs	char		DATE	24	N	Y	Y	date	32s					Y				Y	universal date of 
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					diff decl rate		
-DEC	CDEC	dcs	double	degrees	FLOAT(126)	20	Y	Y	Y		18.8f					Y					telescope declination		
+DEC	CDEC	DCS	char	degrees	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope declination		
 DECOFF	DECOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					declination offset		
 DETBIAS	DETBIAS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Detector bias setting (0-4096)		
 DETGAIN	DETGAIN	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector gain		
@@ -73,7 +74,7 @@ DISPERS	DISPERS	added	char		VARCHAR2(10 BYTE)	10	Y	Y	N		10s					Y					Dispersion
 DISPSCAL	DISPSCAL	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector pixel scale, dispersion		
 DMGAIN	DMGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set DM loop gain		
 DMMRFN	DMMRFN	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Name of DM reconstructor file		
-DOMEPOSN	DOMEPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					dome azimuth (147.64 deg)		
+DOMEPOSN	DOMEPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					dome azimuth 	147.63	
 DOMESTAT	DOMESTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					dome status		
 DQA_DATE	DQA_DATE	added	char		TIMESTAMP	23	N	Y	N		30s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS	added	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s					Y					DQA version number		
@@ -82,10 +83,10 @@ DTCLP	DTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					OPEN/CLOSE TT CLM
 DTGAIN	DTGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set TT loop gain		
 DTRACK	DTRACK	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				disable, enable	Y					differential tracking enabled		
 EFFITIME	EFFITIME	nirc2	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Effective itme for reduced frame		
-EFFWAVE	EFFWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					effective wavelength of passba		
-EL	EL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope elevation (45.00 deg)		
+EFFWAVE	EFFWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					effective wavelength of passband		
+EL	EL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope elevation 	45	
 ELAPTIME	ELAPTIME	added	double	seconds	FLOAT(126)	16	Y	Y	Y		18.5f		0	9999		Y				Y	copy of ITIME		
-EQUINOX	EQUINOX	dcs	double	year	FLOAT(126)	20	Y	Y	N		18.5f					Y					telescope equinox (2000.0)		
+EQUINOX	EQUINOX	dcs	double	year	FLOAT(126)	20	Y	Y	N		18.5f					Y					telescope equinox 	2000	
 EXPSTART	EXPSTART	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					current instrument		
 EXPSTOP	EXPSTOP	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					Exposure stop str (UT)		
 FILENAME	FILENAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					Original File name		
@@ -106,19 +107,19 @@ FWONUM	FWONUM	nirc2	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Outer_Filter_Ord
 FWORAW	FWORAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					outer filter wheel's encoder position		
 FWOSTAT	FWOSTAT	nirc2-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					outer filter wheel's current state		
 GAIN	GAIN	alad	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Detector Gain Setting		
-GRSDIST	GRSDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					grism slider's distance from home (mm)		
+GRSDIST	GRSDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					grism slider's distance from home 		
 GRSNAME	GRSNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				medres, lowres, clear	Y				Y	grism slider's named position		
 GRSRAW	GRSRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					grism slider's encoder position		
 GRSSTAT	GRSSTAT	nirc2-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					grism slider's current state		
 GUIDFWHM	GUIDFWHM	added	double	arcseconds	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star		
 GUIDTIME	GUIDTIME	added	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
-GUIDWAVE	GUIDWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					guidestar wavelength (microns)		
-HA	HA	dcs	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope hour angle (+00:00:0)		
-IMAGEMD	IMAGEMD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, median (DN)		
-IMAGEMN	IMAGEMN	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, mean (DN)		
-IMAGESD	IMAGESD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, standard deviation (DN)		
+GUIDWAVE	GUIDWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					guidestar wavelength 		
+HA	HA	dcs	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope hour angle	#ERROR!	
+IMAGEMD	IMAGEMD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, median 		
+IMAGEMN	IMAGEMN	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, mean 		
+IMAGESD	IMAGESD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					Imaging pixels, standard deviation		
 IMAGETYP	IMAGETYP	nirc2	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					ImageType		
-INSTANGL	INSTANGL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					porg to instrument angle (48.0		
+INSTANGL	INSTANGL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					porg to instrument angle	48	
 INSTFLIP	INSTFLIP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				yes,no	Y					porg to instrument y flip		
 INSTRUME	INSTRUME	added	char		VARCHAR2(24 BYTE)	24	N	Y	Y		24s				NIRC2	Y					Instrument name		
 INSTSTAT	INSTSTAT	added	integer		NUMBER(38)	8	Y	Y	N		8d					Y					KOA instrument status		
@@ -128,26 +129,26 @@ KOAIMTYP	KOAIMTYP		char		VARCHAR2(68 BYTE)	68	Y	Y	Y		68s				object, flatlamp, fl
 KRYPTPWR	KRYPTPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Krypton lamp control		
 LAMPPWR	LAMPPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Spectral lamp control		
 LGRMSWF	LGRMSWF	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					LGSAO RMS WF Residual		
-LSAMPPWR	LSAMPPWR	ao	double	watts	FLOAT(126)	24	Y	Y	N		18.8f					Y					Amp Power (watts)		
+LSAMPPWR	LSAMPPWR	ao	double	watts	FLOAT(126)	24	Y	Y	N		18.8f					Y					Amp Power 		
 LSPROP	LSPROP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Laser Propagating		
-LST	LST	dcs	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					local apparent sidereal str		
+LST	LST	dcs	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					local apparent sidereal time		
 LTM1_1	LTM1_1		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					ccd to image transformation		
 LTM2_2	LTM2_2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					ccd to image transformation		
 MAXWAVE	MAXWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					maximum wavelength of passband		
 MINWAVE	MINWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					minimum wavelength of passband		
-MJD-OBS	MJD-OBS	dcs	double	days	FLOAT(126)	20	Y	Y	N		18.8f					Y					modified julian date of observation		
+MJD-OBS	MJD_OBS	dcs	double	days	FLOAT(126)	20	Y	Y	N		18.8f					Y					modified julian date of observation		
 MLSKYCTS	MLSKYCTS	legacy	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Sky counts		
 MULTISAM	MULTISAM	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Number of multiple reads		
 MZP	MZP	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Adopted magnitude zero pointeger		
 MZPALT	MZPALT	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Alternate magnitude zero pointeger		
 MZPALTSR	MZPALTSR	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Source of the alternate zero pointeger		
-MZPSRC	MZPSRC	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Source of the adopted zero poin		
+MZPSRC	MZPSRC	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Source of the adopted zero pointeger		
 NAXIS	NAXIS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of axes		
 NAXIS1	NAXIS1	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of pixels in axis 1		
 NAXIS2	NAXIS2	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of pixels in axis 2		
 NEONPWR	NEONPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Neon lamp control		
 NLINEAR	NLINEAR	added	integer	DN	NUMBER(38)	16	Y	Y	N		16d					Y					Number of pixels above linearity		
-NPIXSAT	NPIXSAT	added	integer	DN	NUMBER(38)	16	Y	Y	N		16d					Y					Number of saturated pixels (65535 DN)		
+NPIXSAT	NPIXSAT	added	integer	DN	NUMBER(38)	16	Y	Y	N		16d					Y					Number of saturated pixels 	65535	
 OA	OA	added	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observing assistant		
 OBAMNAME	OBAMNAME	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Named position control for AFM		
 OBASNAME	OBASNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Name position control for AFS		
@@ -165,24 +166,24 @@ OBFSNAME	OBFSNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named posit
 OBIMNAME	OBIMNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for ISM		
 OBJECT	OBJECT	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Object name		
 OBLBNAME	OBLBNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for LBS		
-OBRT	OBRT	ao	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of ROT (deg)		
+OBRT	OBRT	ao	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of ROT 		
 OBRTNAME	OBRTNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for ROT		
 OBSDNAME	OBSDNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SOD		
 OBSERVER	OBSERVER	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Observer		
 OBSFNAME	OBSFNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SFP		
-OBSFX	OBSFX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP x axis (mm)		
-OBSFY	OBSFY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP y axis (mm)		
-OBSFZ	OBSFZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP z axis (mm)		
-OBSI	OBSI	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFD (mm)		
+OBSFX	OBSFX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP x axis 		
+OBSFY	OBSFY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP y axis		
+OBSFZ	OBSFZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP z axis 		
+OBSI	OBSI	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFD		
 OBSNNAME	OBSNNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SND		
 OBSWNAME	OBSWNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SFW		
 OBSWSTA	OBSWSTA	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				on,off	Y					White light power status		
 OBTSNAME	OBTSNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for TSS		
-OBTSX	OBTSX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS x axis (mm)		
-OBTSY	OBTSY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS y axis (mm)		
-OBTSZ	OBTSZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS z axis (mm)		
+OBTSX	OBTSX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS x axis 		
+OBTSY	OBTSY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS y axis 		
+OBTSZ	OBTSZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of TSS z axis 		
 OBWCNAME	OBWCNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WCS		
-OBWF	OBWF	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of FCS (mm)		
+OBWF	OBWF	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of FCS		
 OBWFNAME	OBWFNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for FCS		
 OBWFSTST	OBWFSTST	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					State of FCS as string		
 OBWLNAME	OBWLNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WLS		
@@ -191,7 +192,7 @@ OBWPNAME	OBWPNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named posit
 OFNAME	OFNAME		char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Original filename		
 OUTDIR	OUTDIR	alad	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Original directory		
 PARANG	PARANG	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					parallactic angle astrometric		
-PARANTEL	PARANTEL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					parallactic angle telescope (0		
+PARANTEL	PARANTEL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					parallactic angle telescope 		
 PIXSCAL1	PIXSCAL1		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Pixel scale of the horizontal		
 PIXSCAL2	PIXSCAL2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Pixel scale of the vertical		
 PLATESCL	PLATESCL	legacy 2-fits	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Platescale in arcsec/pixel		
@@ -216,11 +217,11 @@ PROGID	PROGID	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					WMKO ID for 
 PROGINST	PROGINST	added	char		VARCHAR2(9 BYTE)	9	N	N	N		9s					Y				Y	Program institution		
 PROGPI	PROGPI	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y				Y	Program principal investigator		
 PROGTITL	PROGTITL	added	char		VARCHAR2(210 BYTE)	210	Y	Y	N		210s					Y				Y	Program title - concatination of PROGTL1, PROGTL2, PROGTL3 from FITS header		
-PSIDIST	PSIDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Inner preslit's distance from home (mm)		
+PSIDIST	PSIDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Inner preslit's distance from home		
 PSINAME	PSINAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Inner preslit's named position		
 PSIRAW	PSIRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					Inner preslit's encoder position		
 PSISTAT	PSISTAT	mech-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Inner preslit current state		
-PSODIST	PSODIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Outer preslit's distance from home (mm)		
+PSODIST	PSODIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Outer preslit's distance from home 		
 PSONAME	PSONAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Outer preslit's named position		
 PSORAW	PSORAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					Outer preslit's encoder position		
 PSOSTAT	PSOSTAT	mech-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Outer preslit current state		
@@ -228,82 +229,82 @@ Q1OFFSET	Q1OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadran
 Q2OFFSET	Q2OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 2 preamp offset		
 Q3OFFSET	Q3OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 3 preamp offset		
 Q4OFFSET	Q4OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 4 preamp offset		
-RA	CRA	dcs	double		FLOAT(126)	20	Y	Y	Y		18.8f		-180	365		Y					telescope right ascension (03:		
+RA	CRA	DCS	char	degrees	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope right ascension		
 RADECSYS	RADECSYS		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					The system of the coordinates		
-RAOFF	RAOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					right ascension offset (0.0 ar		
+RAOFF	RAOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					right ascension offset 		
 ROOTNAME	ROOTNAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					File prefix		
-ROTCALAN	ROTCALAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator calibration angle (0.0		
-ROTDEST	ROTDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user destination (0.00		
+ROTCALAN	ROTCALAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator calibration angle		
+ROTDEST	ROTDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user destination 		
 ROTMODE	ROTMODE	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					rotator tracking mode		
-ROTPDEST	ROTPDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical destination (		
-ROTPOSN	ROTPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user position (0.00 de		
-ROTPPOSN	ROTPPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical position (90.		
-ROTREFAN	ROTREFAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator reference angle (0.00		
+ROTPDEST	ROTPDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical destination 		
+ROTPOSN	ROTPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user position 		
+ROTPPOSN	ROTPPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical position 		
+ROTREFAN	ROTREFAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator reference angle		
 SAMPMODE	SAMPMODE	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					1=Single; 2=CDS; 3=MCDS		
 SAMPRATE	SAMPRATE	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Pixel rate in kps		
-SECFOCUS	SECFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror focus raw (0.		
-SECTHETX	SECTHETX	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetax (arcse		
-SECTHETY	SECTHETY	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetay (arcse		
+SECFOCUS	SECFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror focus raw 		
+SECTHETX	SECTHETX	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetax 		
+SECTHETY	SECTHETY	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetay 		
 SEMESTER	SEMESTER	added	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Semester		
-SHRDIST	SHRDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Shutter's distance from home (mm)		
+SHRDIST	SHRDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Shutter's distance from home 		
 SHRNAME	SHRNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Shutter's named position		
 SHRRAW	SHRRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					shutter's encoder position		
 SHRSTAT	SHRSTAT	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Shutter State		
 SIG2NOIS	SIG2NOIS	added	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Signal to noise estimage near image spectral center		
 SIMPLE	SIMPLE	alad	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Tape is in Fits format		
-SLITLEN	SLITLEN	added	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Slit length projected on sky (arcsec)		
+SLITLEN	SLITLEN	added	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Slit length projected on sky		
 SLITMM	SLITMM	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Slit position		
 SLITNAME	SLITNAME	nirc2	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s				corona1000 , corona150, corona1500, corona200, corona2000, corona300, corona400, corona600, corona800, none, slit10 , slit120, slit160, slit20, slit30, slit40, slit60, slit80, Unknown	Y					Selected Slit Name		
 SLITTILT	SLITTILT	nirc2	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Tilt_of_slit_in_image		
-SLITWIDT	SLITWIDT	added	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Slit width projected on sky (arcsec)		
-SLMDIST	SLMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					slit mask's distance from home (mm)		
+SLITWIDT	SLITWIDT	added	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Slit width projected on sky 		
+SLMDIST	SLMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					slit mask's distance from home 		
 SLMNAME	SLMNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					slit mask's named position		
 SLMRAW	SLMRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					slit mask's encoder position		
 SLMSTAT	SLMSTAT	mech-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					slit mask's current state		
-SLSDIST	SLSDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					slit slide's distance from home (mm)		
+SLSDIST	SLSDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					slit slide's distance from home 		
 SLSNAME	SLSNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y				Y	slit slide's named position		
 SLSRAW	SLSRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					slit slide's encoder position		
 SLSSTAT	SLSSTAT	mech-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					slit sliter's current state		
-SPATSCAL	SPATSCAL	added	double	arcsec/pixel	FLOAT(126)	20	Y	Y	N		18.8f					Y					CCD pixel scale, spatial (arcsec/pixel)		
+SPATSCAL	SPATSCAL	added	double	arcsec/pixel	FLOAT(126)	20	Y	Y	N		18.8f					Y					CCD pixel scale, spatial		
 SPECRES	SPECRES	added	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Nominal spectral resolution		
 STAPDQMN	STAPDQMN	nirc2-legacy	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					strAP Quad Mean APD counts		
 TARGNAME	TARGNAME	dcs	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y				Y	target name		
-TARGWAVE	TARGWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					target wavelength (microns)		
+TARGWAVE	TARGWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					target wavelength		
 TELESCOP	TELESCOP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					telescope name		
-TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope focus compensated (0		
-TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N		18.8f					Y					tube temperature (2.93 degC)		
+TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope focus compensated 		
+TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N		18.8f					Y					tube temperature 		
 UT	UT	added	char		VARCHAR2(25 BYTE)	25	N	Y	Y	time	25s					Y				Y	copy of UTC		
-UTC	UTC	dcs	char		VARCHAR2(25 BYTE)	25	N	Y	Y	time	25s					Y					coordinated universal str (h)		
+UTC	UTC	dcs	char		VARCHAR2(25 BYTE)	25	N	Y	Y	time	25s					Y					coordinated universal time		
 UTCLP	UTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set TT loop gain		
 WAT0_001	WAT0_001		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					coordinate system		
 WAT1_001	WAT1_001		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					coordinate system		
 WAT2_001	WAT2_001		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					coordinate system		
-WAVEBLUE	WAVEBLUE	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y				Y	Approximate blue end wavelength (A)		
-WAVECNTR	WAVECNTR	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y					Approximate central wavelength (A)		
-WAVERED	WAVERED	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y				Y	Approximate red end wavelength (A)		
+WAVEBLUE	WAVEBLUE	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y				Y	Approximate blue end wavelength 		
+WAVECNTR	WAVECNTR	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y					Approximate central wavelength 		
+WAVERED	WAVERED	added	double	Microns	FLOAT(126)	16	Y	Y	Y		18.8f		0.8	15		Y				Y	Approximate red end wavelength 		
 WCDMSTAT	WCDMSTAT	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Status of DM loop		
 WCDTSTAT	WCDTSTAT	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Status of down tt loop		
 WCSDIM	WCSDIM		integer		NUMBER(38)	20	Y	Y	N		20d					Y					number WCS dimensions		
 WCUTSTAT	WCUTSTAT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Status of utt loop		
 WSCNORFN	WSCNORFN	ao	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Name of origin vec file		
-WSFRRT	WSFRRT	ao	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Frame rate for WFS cam (Hz)		
+WSFRRT	WSFRRT	ao	integer	Hz	NUMBER(38)	20	Y	Y	N		20d					Y					Frame rate for WFS cam		
 WSGAIN	WSGAIN	ao-legacy	integer		NUMBER(38)	20	Y	Y	N		20d					Y					WFS camera gain servrity		
-WSSMGN	WSSMGN	ao	integer		NUMBER(38)	24	Y	Y	N		24d					Y					WFS gain (0)		
-WSSMPRG	WSSMPRG	ao	integer		NUMBER(38)	24	Y	Y	N		24d					Y					WFS_SciMeas program (0)		
+WSSMGN	WSSMGN	ao	integer		NUMBER(38)	24	Y	Y	N		24d					Y					WFS gain		
+WSSMPRG	WSSMPRG	ao	integer		NUMBER(38)	24	Y	Y	N		24d					Y					WFS_SciMeas program		
 WSSMREP	WSSMREP	ao	integer		NUMBER(38)	24	Y	Y	N		24d					Y					WFS SciMeas repetitions (incre		
-WXDOMHUM	WXDOMHUM	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome humidity (%)		
-WXDOMTMP	WXDOMTMP	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome temperature (deg C)		
-WXDWPT	WXDWPT	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Dew point temperature (deg C)		
-WXOUTHUM	WXOUTHUM	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside humidity (%)		
-WXOUTTMP	WXOUTTMP	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside temperature (deg C)		
-WXPRESS	WXPRESS	added	double	mb	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pressure (mb)		
+WXDOMHUM	WXDOMHUM	added	double	percent	FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome humidity 		
+WXDOMTMP	WXDOMTMP	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome temperature 		
+WXDWPT	WXDWPT	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Dew point temperature		
+WXOUTHUM	WXOUTHUM	added	double	percent	FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside humidity 		
+WXOUTTMP	WXOUTTMP	added	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside temperature 		
+WXPRESS	WXPRESS	added	double	mb	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pressure		
 WXTIME	WXTIME	added	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logged weather keyword values		
 WXWNDIR	WXWNDIR	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind direction (N through E)		
-WXWNDSP	WXWNDSP	added	double	mph	FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind speed (mph)		
+WXWNDSP	WXWNDSP	added	double	mph	FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind speed 		
 XENONPWR	XENONPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Xeon lamp control		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
-	Dec2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y			Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
