@@ -49,7 +49,7 @@ BFTNAME	BFTNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Blue Filter
 BFTPOS	BFTPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Filter transfer position num (0-1)	1	
 BGPNAME	BGPNAME	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Blue Grating pusher position name	Mount	
 BGPPOS	BGPPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Grating pusher position num (0-2)	2	
-BGPRESS	BGPRESS	KCWI	double	Torr	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Pressure Gauge Pressure	0.0001	
+BGPRESS	BGPRESS	KCWI	double	Torr	FLOAT(126)	24	Y	Y	N		18.5f					Y					Blue Pressure Gauge Pressure	0.0001	
 BGRANGLE	BGRANGLE	KCWI	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Grating Angle	28.6187191	
 BGRATNAM	BGRATNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	Blue Grating name	BL	
 BGRATNUM	BGRATNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Grating number (0-5)	2	
