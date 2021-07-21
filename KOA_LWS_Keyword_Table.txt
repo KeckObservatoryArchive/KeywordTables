@@ -1,0 +1,26 @@
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	KOA	char		VARCHAR(30 BYTE)	30	N	Y	Y		30s					Y				Y	Unique identifier for each file		
+OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N		32s										Original filename		
+PROPINT	PROPINT		integer		"NUMBER(*,0)"	16	N	N	N		16d										Proprietary Period Interval		
+DATE-OBS	DATE_OBS		char		DATE	12	N	Y	Y	date	30s									Y	universal date of observation		
+DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s	Y				Y					declination		
+ELAPTIME	ELAPTIME		integer		"NUMBER(*,0)"	16	Y	Y	Y		16d		Y	Y	elapsed-time					Y			
+EQUINOX	EQUINOX		double		FLOAT(126)	16	Y	Y	N		18.5f										telescope-equinox		
+FRAMENO	FRAMENO		integer		"NUMBER(*,0)"	16	Y	Y	N		16d									Y	frame-number		
+INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	68	N	N	N		68s							Y			instrument name		
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y							Y				Y	KOA image type	object	
+PROGID	PROGID		char		VARCHAR2(69 BYTE)	68	N	N	N		68s									Y	WMKO program ID		
+PROGINST	PROGINST		char		VARCHAR2(9 BYTE)	9	N	N	N		9s									Y	Program institution		
+PROGPI	PROGPI		char		VARCHAR2(69 BYTE)	68	N	N	N		68s									Y	Program principal investigator		
+PROGTITL	PROGTITL		char		VARCHAR2(211 BYTE)	210	Y	N	N		210s									Y	Title of observing program		
+RA	CRA	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s	Y				Y					right ascension		
+SEMESTER	SEMESTER		char		VARCHAR2(9 BYTE)	8	Y	N	N		8s										observing semester		
+TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s									Y	target-name		
+UT	UT		char		VARCHAR2(17 BYTE)	16	N	Y	Y		16s									Y	coordinated universal time		
+UTC	UTC		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s					Y					coordinated universal time		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y			Y	RA in decimal degrees, J2000 equinox	57.20858	
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y			Y	Declination in decimal degrees, J2000 equinox	-27.90427	
+	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
+	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y			Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
+	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	ITIME	ITIME		double		FLOAT(126)	13	Y	Y	Y		18.5f		0	2000000		Y	Y	Y		Y	Integration time of each coadd	10000	
