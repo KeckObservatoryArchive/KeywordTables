@@ -18,6 +18,8 @@ UT	UT		char		VARCHAR2(17 BYTE)	16	N	Y	Y		16s						Y			Y	coordinated universal ti
 UTC	UTC		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s						Y				coordinated universal time		
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s						Y				right ascension		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s						Y				declination		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s						Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s								N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s						Y			Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
