@@ -225,6 +225,5 @@ YREFSUB	YREFSUB	NIRES	integer		INTEGER	8	Y	Y	N		11d					Y			Y		Subtract referenc
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
-	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
 	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	
