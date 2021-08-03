@@ -26,7 +26,7 @@ ADCERR	ADCERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC modify er
 ADCGTE	ADCGTE	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC galil position error	0	
 ADCLCK	ADCLCK	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		ADC motion keyword lockout	unlocked	
 ADCLIM	ADCLIM	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC limit switch status	0	
-ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y			3	
+ADCMOD	ADCMOD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Software control mode	3	
 ADCNEED	ADCNEED	native	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		ADC needed	T	
 ADCPRENA	ADCPRENA	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC prism calc enable disable flag	1	
 ADCRAW	ADCRAW	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC raw position	-2635095	
@@ -48,7 +48,7 @@ AMPLIST	AMPLIST	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y	Y	Y	Y	Readout
 AMPMODE	AMPMODE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y	Y	Y	Y	Description of amplifiers used	DUAL:L+R	
 AMPPSIZE	AMPPSIZE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Access in pixels	[1:1024,1:4096]	
 ANTIBLM	ANTIBLM	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Antiblooming frequency	off	
-ARGON	ARGON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+ARGON	ARGON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Argon lamp status	off	
 AUTOERAS	AUTOERAS	native	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		Automatic erase	T	
 AUTOSHUT	AUTOSHUT	LRIS	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		Automatic shutter	T	
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Telescope azimuth	290.1968935	
@@ -61,7 +61,7 @@ BLUFTRAN	BLUFTRAN	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Blue f
 BSCALE	BSCALE	LRIS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Scaling factor	1	
 BTRAN	BTRAN	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Blue filter transport	0	
 BZERO	BZERO	LRIS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Offset data	32768	
-CADMIUM	CADMIUM	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+CADMIUM	CADMIUM	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Cadmium lamp status	off	
 CCDGAIN	CCDGAIN	LRIS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y	Y	Y	Y	Y	CCD gain used	high	
 CCDGN01	CCDGN01	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		CCD gain amp location 1		
 CCDGN02	CCDGN02	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		CCD gain amp location 2		
@@ -86,7 +86,7 @@ DDEC	DDEC	native	double	arcsec/sec	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Diff de
 DETCNFID	DETCNFID	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Detector configuration ID	2010	
 DETECTOR	DETECTOR	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Detector name	LRIS-R Science mosaic Mark 2: CCD  #1: 19-3  CCD #2: 19-2	
 DETLSIZE	DETLSIZE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Unbinned size of layout	[1:4096,1:4096]	
-DEUTERI	DEUTERI	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y			off	
+DEUTERI	DEUTERI	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Deuterium lamp status	off	
 DICHNAME	DICHNAME	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y	Y		Y	Y	Dichroic clamp name	680	
 DICHROIC	DICHROIC	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Dichroic retainer name	5	
 DICHTRAN	DICHTRAN	native	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Dichroic transport name	deployed	
@@ -105,7 +105,7 @@ ERASECNT	ERASECNT	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Erase count
 ERASLINE	ERASLINE	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Erase line	0	
 EXPTIME	EXPTIME	LRIS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Exposure time	600.0216065	
 EXTEND	EXTEND	LRIS	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		FITS dataset may contain extensions	T	
-FEARGON	FEARGON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+FEARGON	FEARGON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Iron/Argon lamp status	off	
 FLAMP1	FLAMP1	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Flat lamp 1	off	
 FLAMP2	FLAMP2	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Flat lamp 2	off	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Flat lamp control 1	off	
@@ -136,15 +136,15 @@ IM02MN03	IM02MN03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging medi
 IM02SD03	IM02SD03	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Imaging standard deviation ccd 2 amp location 3		
 IMTYPE	IMTYPE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y			MOSAIC	
 KEEPPREP	KEEPPREP	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Keep prescan pixels	1	
-KRYPTON	KRYPTON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+KRYPTON	KRYPTON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Krypton lamp status	off	
 LAMPS	LAMPS	native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y				
 LSERCLKD	LSERCLKD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Last serial clock delay	160	
-MERCURY	MERCURY	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+MERCURY	MERCURY	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Mercury lamp status	off	
 MJD-OBS	MJD_OBS	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Modified julian date of observation	57136.51057	
 MPPMODE	MPPMODE	native	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		MPP readout mode	F	
 MSWAVE	MSWAVE	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Grating multislit wavelength	9305.146484	
 NAXIS	NAXIS	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Number of data axes	0	
-NEON	NEON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+NEON	NEON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Neon lamp status	off	
 NPIXSAT	NPIXSAT	KOA	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Number of saturated pixels		
 NSUBINT	NSUBINT	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Number of subexposures	0	
 NUMAMPS	NUMAMPS	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y	Y	Y	Y	Y	Number of readout amplifiers	4	
@@ -259,7 +259,7 @@ VOFFSET2	VOFFSET2	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Video offse
 VOFFSET3	VOFFSET3	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Video offset amplifier 4	1762	
 WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y	Y		Y	Y	Blue end wavelength		
 WAVECNTR	WAVECNTR	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Central wavelength		
-WAVELEN	WAVELEN	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y			9000.488281	
+WAVELEN	WAVELEN	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Grating wavelength	9000.488281	
 WAVERED	WAVERED	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y	Y		Y	Y	Red end wavelength		
 WINDOW	WINDOW	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y	Y	Y	Y	Window	0,0,0,2048,4096	
 WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Dome humidity at WXTIME		
@@ -271,8 +271,8 @@ WXPRESS	WXPRESS	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Pressure at WX
 WXTIME	WXTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		Time of weather measurements		
 WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Wind directionat WXTIME		
 WXWNDSP	WXWNDSP	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Wind speed at WXTIME		
-XENON	XENON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
-ZINC	ZINC	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y			off	
+XENON	XENON	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Xenon lamp status	off	
+ZINC	ZINC	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Zinc lamp status	off	
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				N	Y		Y	Y	RA in decimal degrees, J2000 equinox		
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				N	Y		Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
