@@ -157,7 +157,7 @@ FLAMP3	FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 3
 FLAMP4	FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 4		
 FLAMP5	FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 5		
 FLAMP6	FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 6		
-FLAMPS	FLAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		imaging flatlamp		
+FLAMPS	FLAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		imaging flatlamp		
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		spectroscopy flatlamp		
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		focal station		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s					Y			Y		Telescope focal station		
@@ -346,7 +346,7 @@ ROTPDSTS	ROTPDSTS	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotat
 ROTPOSN	ROTPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator user position		
 ROTPPOSN	ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator physical position		
 ROTREFAN	ROTREFAN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		rotator reference angle		
-ROTSEL	ROTSEL	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		rotator selected		
+ROTSEL	ROTSEL	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		rotator selected		
 ROTSRVER	ROTSRVER	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator servo error		
 ROTSTST	ROTSTST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		rotator status		
 ROTZERO	ROTZERO	DCS	double		FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		rotator zero point		
