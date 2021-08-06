@@ -153,10 +153,10 @@ FCSRMSYD	FCSRMSYD	DEIMOS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FCS corre
 FCSRMSYM	FCSRMSYM	DEIMOS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FCS correction mean (Y-axis)		
 FCSSKIPS	FCSSKIPS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		FCS skip counter value		
 FCSTRACK	FCSTRACK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FCS tracking status		
-FLAMP3	FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 3		
-FLAMP4	FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 4		
-FLAMP5	FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 5		
-FLAMP6	FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 6		
+FLAMP3	FLAMP3	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 3		
+FLAMP4	FLAMP4	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 4		
+FLAMP5	FLAMP5	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 5		
+FLAMP6	FLAMP6	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 6		
 FLAMPS	FLAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		imaging flatlamp		
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		spectroscopy flatlamp		
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		focal station		
@@ -234,7 +234,7 @@ INSTRUME	INSTRUME	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y	Y		Y	Y	intr
 IONPUMP1	IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 1 status		
 IONPUMP2	IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 2 status		
 KEEPPREP	KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		keep prescan pixels		
-LAMPS	LAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		arclamp status		
+LAMPS	LAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		arclamp status		
 LATITUDE	LATITUDE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		latitude		
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		local sidereal time		
 MJD-OBS	MJD_OBS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y	Y	Y	Y	Y	MJD of observation		
