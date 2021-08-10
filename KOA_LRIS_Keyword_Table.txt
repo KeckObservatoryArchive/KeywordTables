@@ -219,7 +219,6 @@ LINECNT	LINECNT	LRIS	integer		NUMBER(*,0)	16	Y	N	N		16d					Y					Archon configu
 LSERCLKD	LSERCLKD	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		Last serial clock delay	160	
 LST	LST	LRIS	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					DCS Local sidereal time	56:21.6	
 MERCURY	MERCURY	native	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y			Y		Mercury lamp status	off	
-MJD	MJD	LRIS	double		FLOAT(126)	24	Y	N	N		18.5f					Y					DCS Modified Julian day	59423.95206	
 MJD-OBS	MJD_OBS	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Modified julian date of observation	57136.51057	
 MPPMODE	MPPMODE	native	char		VARCHAR2(8 BYTE)	1	Y	Y	N		1s					Y			Y		MPP readout mode	F	
 MSWAVE	MSWAVE	native	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Grating multislit wavelength	9305.146484	
