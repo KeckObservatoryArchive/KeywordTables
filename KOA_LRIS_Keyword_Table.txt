@@ -237,7 +237,6 @@ NUMCLOS	NUMCLOS	LRIS	integer		NUMBER(*,0)	8	Y	N	N		8d					Y					number of shutte
 NUMOPEN	NUMOPEN	LRIS	integer		NUMBER(*,0)	8	Y	N	N		8d					Y					number of shutter opens	1	
 NVIDINP	NVIDINP	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y	Y	Y	Y	Y	Number of video inputs	4	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observing assistant		
-OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y			Y		Original filename	r150424_123.fits	
 OBJECT	OBJECT	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y	Y		Y	Y	Object's name	NGC 4889	
 OBSERVER	OBSERVER	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Observer's name(s)	McConnell	
 OBSMODE	OBSMODE	KOA,LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y		16s				IMAGING, SPEC, Imaging, Spectroscopy	Y	Y		Y	Y	Imaging or Spec mode		
