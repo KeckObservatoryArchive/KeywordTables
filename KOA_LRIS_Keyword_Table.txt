@@ -114,7 +114,7 @@ CSEC2	CSEC2	LRIS	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					IRAF DATASEC [F
 CSEC3	CSEC3	LRIS	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 2	[1:2057,4128:2065]	
 CSEC4	CSEC4	LRIS	char		VARCHAR2(24 BYTE)	24	Y	N	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 3	[4114:2058,4128:2065]	
 CTRL0ERR	CTRL0ERR	native	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		ADC controller 0 error number	-5414	
-CTRL0MSG	CTRL0MSG	native	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
+CTRL0MSG	CTRL0MSG	native	char		VARCHAR2(78 BYTE)	78	Y	Y	N		78s					Y			Y		ADC controller 0 message	Software deadman switch activated (sent ST to axes), and has been cl	
 CTYPE1	CTYPE1	LRIS	char		VARCHAR2(16 BYTE)	16	Y	N	N		16s					Y					Coordinate type of WCS axis 1	RA---TAN	
 CTYPE2	CTYPE2	LRIS	char		VARCHAR2(16 BYTE)	16	Y	N	N		16s					Y					Coordinate type of WCS axis 2	DEC--TAN	
 CUNIT1	CUNIT1	LRIS	char		VARCHAR2(16 BYTE)	16	Y	N	N		16s					Y					Physical unit of WCS axis 1	deg	
