@@ -1,23 +1,23 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char		VARCHAR(30 BYTE)	30	N	Y	Y		30s						Y			Y	Unique identifier for each file		
-OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N		32s						Y				Original filename		
+KOAID	KOAID	KOA	char		VARCHAR(33 BYTE)	33	N	Y	Y		33s						Y			Y	Unique identifier for each file		
+OFNAME	OFNAME		char		VARCHAR2(32 BYTE)	32	Y	N	N		32s						Y				"Original filename at the telescope, copied from DATAFILE keyword"		
 PROPINT	PROPINT		integer		"NUMBER(*,0)"	16	N	N	N		16d						y				Proprietary Period Interval		
 DATE-OBS	DATE_OBS		char		DATE	12	N	Y	Y	date	30s						Y			Y	universal date of observation		
-ELAPTIME	ELAPTIME		integer		"NUMBER(*,0)"	16	Y	Y	Y		16d						Y		Y	Y	elapsed-time		
+ELAPTIME	ELAPTIME		double		FLOAT(126)	16	Y	Y	Y		18.5f						Y		Y	Y	elapsed-time		
 EQUINOX	EQUINOX		double		FLOAT(126)	16	Y	Y	N		18.5f						Y				telescope-equinox		
 FRAMENO	FRAMENO		integer		"NUMBER(*,0)"	16	Y	Y	N		16d						Y			Y	frame-number		
-INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	68	N	N	N		68s						Y				instrument name		
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y								Y			Y	KOA image type	object	
-PROGID	PROGID		char		VARCHAR2(69 BYTE)	68	N	N	N		68s						Y			Y	WMKO program ID		
+INSTRUME	INSTRUME		char		VARCHAR2(25 BYTE)	25	N	N	N		25s						Y				instrument name		
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y		69s						Y			Y	KOA image type	object	
+PROGID	PROGID		char		VARCHAR2(69 BYTE)	69	N	N	N		69s						Y			Y	WMKO program ID		
 PROGINST	PROGINST		char		VARCHAR2(9 BYTE)	9	N	N	N		9s						Y			Y	Program institution		
-PROGPI	PROGPI		char		VARCHAR2(69 BYTE)	68	N	N	N		68s						Y			Y	Program principal investigator		
+PROGPI	PROGPI		char		VARCHAR2(69 BYTE)	69	N	N	N		69s						Y			Y	Program principal investigator		
 PROGTITL	PROGTITL		char		VARCHAR2(211 BYTE)	210	Y	N	N		210s						Y			Y	Title of observing program		
 SEMESTER	SEMESTER		char		VARCHAR2(9 BYTE)	8	Y	N	N		8s						Y				observing semester		
-TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s						Y			Y	target-name		
-UT	UT		char		VARCHAR2(17 BYTE)	16	N	Y	Y		16s						Y			Y	coordinated universal time		
-UTC	UTC		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s						Y				coordinated universal time		
-RA	CRA	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s						Y				right ascension		
-DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s						Y				declination		
+TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	69	Y	N	N		69s						Y			Y	target-name		
+UT	UT		char		VARCHAR2(26 BYTE)	26	N	Y	Y		26s						Y			Y	coordinated universal time		
+UTC	UTC		char		VARCHAR2(26 BYTE)	26	N	Y	Y	time	26s						Y				coordinated universal time		
+RA	CRA	DCS	char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s						Y				right ascension		
+DEC	CDEC	DCS	char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s						Y				declination		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s						Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	

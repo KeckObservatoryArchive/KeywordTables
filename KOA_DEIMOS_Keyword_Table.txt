@@ -42,9 +42,9 @@ SEMESTER	SEMESTER	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	Y		8s					Y			Y		WMKO observi
 SPATSCAL	SPATSCAL	KOA	double	arcsec/pix	FLOAT(126)	16	Y	Y	N		18.4f					Y			Y		CCD pixel scale, spatial (arcsec/pixel)		
 SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		Nominal spectral resolution		Get with Luca/Carlos to calculate
 UT	UT	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	Y	time	16s					Y	Y	Y	Y	Y	UT time of observation, in format HH:MM:SS.XX		
-WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)		SP: G[GRATEPOS]TLTWAV +- spectral length of grating
-WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y			Y		Central wavelength (angstroms)		IM: 4000-10500 and use filter ranges/cutoffs
-WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		2600	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)		Using grating to determine range
+WAVEBLUE	WAVEBLUE	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		1000	11000		Y	Y	Y	Y	Y	Wavelength at blue end (angstroms)		SP: G[GRATEPOS]TLTWAV +- spectral length of grating
+WAVECNTR	WAVECNTR	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		1000	11000		Y			Y		Central wavelength (angstroms)		IM: 4000-10500 and use filter ranges/cutoffs
+WAVERED	WAVERED	KOA	integer	Angstroms	NUMBER(*,0)	16	Y	Y	N		11d		1000	11000		Y	Y	Y	Y	Y	Wavelength at red end (angstroms)		Using grating to determine range
 WXDOMHUM	WXDOMHUM	KOA	double	percent	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dome humidity at WXTIME		
 WXDOMTMP	WXDOMTMP	KOA	double	C	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dome temperature at WXTIME		
 WXDWPT	WXDWPT	KOA	double	C	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		Dewpoint at WXTIME		
@@ -153,11 +153,11 @@ FCSRMSYD	FCSRMSYD	DEIMOS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FCS corre
 FCSRMSYM	FCSRMSYM	DEIMOS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FCS correction mean (Y-axis)		
 FCSSKIPS	FCSSKIPS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		FCS skip counter value		
 FCSTRACK	FCSTRACK	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FCS tracking status		
-FLAMP3	FLAMP3	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 3		
-FLAMP4	FLAMP4	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 4		
-FLAMP5	FLAMP5	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 5		
-FLAMP6	FLAMP6	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		flatlamp 6		
-FLAMPS	FLAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		imaging flatlamp		
+FLAMP3	FLAMP3	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 3		
+FLAMP4	FLAMP4	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 4		
+FLAMP5	FLAMP5	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 5		
+FLAMP6	FLAMP6	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		flatlamp 6		
+FLAMPS	FLAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		imaging flatlamp		
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		spectroscopy flatlamp		
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		focal station		
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s					Y			Y		Telescope focal station		
@@ -234,7 +234,7 @@ INSTRUME	INSTRUME	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y	Y		Y	Y	intr
 IONPUMP1	IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 1 status		
 IONPUMP2	IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 2 status		
 KEEPPREP	KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		keep prescan pixels		
-LAMPS	LAMPS	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		arclamp status		
+LAMPS	LAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		arclamp status		
 LATITUDE	LATITUDE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		latitude		
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		local sidereal time		
 MJD-OBS	MJD_OBS	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y	Y	Y	Y	Y	MJD of observation		
@@ -346,7 +346,7 @@ ROTPDSTS	ROTPDSTS	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotat
 ROTPOSN	ROTPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator user position		
 ROTPPOSN	ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator physical position		
 ROTREFAN	ROTREFAN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		rotator reference angle		
-ROTSEL	ROTSEL	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		rotator selected		
+ROTSEL	ROTSEL	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		rotator selected		
 ROTSRVER	ROTSRVER	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator servo error		
 ROTSTST	ROTSTST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		rotator status		
 ROTZERO	ROTZERO	DCS	double		FLOAT(126)	16	Y	Y	N		18.2f					Y			Y		rotator zero point		
