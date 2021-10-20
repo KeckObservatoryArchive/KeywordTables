@@ -33,7 +33,7 @@ LTM1_1	LTM1_1		double		FLOAT(126)	10	Y	Y	Y		18.5f					Y					ccd to image transfo
 LTM2_2	LTM2_2		double		FLOAT(126)	10	Y	Y	Y		18.5f					Y					ccd to image transformation		
 CDELT1	CDELT1		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Size projected into detector pixel in axis1		
 CDELT2	CDELT2		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Size projected into detector pixel in axis2		
-CROTA2	CROTA2		double		FLOAT(126)	10	Y	Y	Y		18.5f					Y					Rotation of horizontal and vertical axes		
+CROTA2	CROTA2		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Rotation of horizontal and vertical axes		
 RADECSYS	RADECSYS		char		VARCHAR2(10 BYTE)	10	Y	Y	Y		10s					Y					the system of the coordinates		
 AIRMASS	AIRMASS		double		FLOAT(126)	26	Y	Y	N		18.5f					Y					air mass (1.03)		
 AOAOAMED	AOAOAMED		double		FLOAT(126)	18	Y	Y	N		18.5f					Y					AO WFC AOA camera median light level (counts)		
