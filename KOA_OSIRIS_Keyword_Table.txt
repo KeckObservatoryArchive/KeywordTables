@@ -178,7 +178,7 @@ INSTANGL	INSTANGL		double	degrees	FLOAT(126)	13	Y	Y	N		18.5f					Y					porg to i
 INSTFLIP	INSTFLIP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					porg to instrument y flip		
 INSTR	INSTR		char		VARCHAR2(25 BYTE)	25	N	Y	Y		25s				imag,spec	Y	Y	Y		Y	Spectrometer (spec) or Imager (imag)	imag,spec	
 ISSKY	ISSKY		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					flag for sky frames (0=not sky, 1=sky)		
-ITIME	ITIME		double		FLOAT(126)	13	Y	Y	Y		18.5f		0	2000000		Y	Y	Y		Y	Integration time of each coadd	10000	
+ITIME	ITIME		double		FLOAT(126)	13	Y	Y	Y		18.5f		0	3000100		Y	Y	Y		Y	Integration time of each coadd	10000	
 ITRGTMP	ITRGTMP		double		FLOAT(126)	13	Y	Y	N		18.5f					Y					Desired temperature for channel 2		
 LGRMSWF	LGRMSWF		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					LGSAO RMS WF Residual		
 LSAMPPWR	LSAMPPWR		double		FLOAT(126)	18	Y	Y	N		18.5f					Y					Amp Power (watts)		
