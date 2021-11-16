@@ -1,5 +1,5 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	KOA	char		VARCHAR(30 BYTE)	30	N	Y	Y		30s								Y	Y	Unique identifier for each file		
+KOAID	KOAID	KOA	char		VARCHAR(32 BYTE)	32	N	Y	Y		32s								Y	Y	Unique identifier for each file		
 PROPINT	PROPINT		integer		NUMBER(*,0)	16	N	N	N		16d								Y	Y	Proprietary Period Interval		
 ABFREQ	ABFREQ		integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	antiblooming-frequency in Hz		
 ACPOWER	ACPOWER		char		VARCHAR2(9 BYTE)	8	Y	Y	Y		8s				T,F				Y	N	ac-power on		
