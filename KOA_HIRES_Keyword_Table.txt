@@ -151,7 +151,7 @@ IM01SD03	IM01SD03		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	Imaging pixels 
 IM01SD04	IM01SD04		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	Imaging pixels sub-exposure 01 video input 04 std. dev (DN)		
 IM01SD05	IM01SD05		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	Imaging pixels sub-exposure 01 video input 05 std. dev (DN)		
 IM01SD06	IM01SD06		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	Imaging pixels sub-exposure 01 video input 06 std. dev (DN)		
-IMAGETYP	IMAGETYP		char		VARCHAR2(69 BYTE)	68	Y	Y	Y		68s				bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus				Y	Y	Image type (science or calibration file)		
+KOAIMTYP	KOAIMTYP		char		VARCHAR2(69 BYTE)	68	Y	Y	Y		68s				bias, bias_lamp_on, dark, dark_lamp_on, trace, flatlamp, arclamp, object, object_lamp_on, undefined, focus				Y	Y	Image type (science or calibration file)		
 IMTYPE	IMTYPE		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	image type set by the observer		
 INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	68	N	N	N		68s								Y	N	instrument name		
 INSTSTAT	INSTSTAT		integer		NUMBER(*,0)	8	Y	Y	N		8d								Y	N	instrument status		
