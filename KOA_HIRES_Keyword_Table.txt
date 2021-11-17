@@ -1,5 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR(32 BYTE)	32	N	Y	Y		32s								Y	Y	Unique identifier for each file		
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
 PROPINT	PROPINT		integer		NUMBER(*,0)	16	N	N	N		16d								Y	Y	Proprietary Period Interval		
 ABFREQ	ABFREQ		integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	antiblooming-frequency in Hz		
 ACPOWER	ACPOWER		char		VARCHAR2(9 BYTE)	8	Y	Y	Y		8s				T,F				Y	N	ac-power on		
@@ -371,8 +372,8 @@ YFLIP	YFLIP		integer		NUMBER(*,0)	8	Y	N	N		8d								Y	N	camera-y-flip
 OFNAME	OFNAME		char		VARCHAR2(69 BYTE)	32	Y	N	N		32s								Y	Y	Original filename		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y		Y	Y	RA in decimal degrees, J2000 equinox	57.20858	
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	Declination in decimal degrees, J2000 equinox	-27.90427	
-	HA_D		double		FLOAT(126)		Y	Y	N		18.8f								Y	N	telescope-hour-angle		
-	UTDATETIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
-	L0_INGTIME		timestamp		TIMESTAMP	16	Y	Y	N										Y	N			
-	FILEHAND		char		VARCHAR2(151 BYTE)	16	Y	Y	N										Y	Y	Path to the file in the archive		
-	SEMID		char		VARCHAR2(21 BYTE)	16	Y	N	N										Y	Y	SEMESTER and PROGID		
+	HA_D	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y		Y	Y	telescop hour-angle		
+	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y			Y	Combined DATE_OBS and UT as a timestamp	2019-01-01 22:10:02 00:01:45	
+	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y			Y	Path to the file in the archive	/koadata23/OSIRIS/20210113/lev0/OS.20210113.17299.fits	
+	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y			Y	SEMESTER and PROGID	2019B_ENG	
