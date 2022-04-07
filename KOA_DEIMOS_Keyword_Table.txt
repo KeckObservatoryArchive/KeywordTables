@@ -231,8 +231,8 @@ IMTYPE	IMTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		image type
 INSTANGL	INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		instrument angle		
 INSTFLIP	INSTFLIP	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		instrument flip		
 INSTRUME	INSTRUME	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y	Y		Y	Y	intrument		
-IONPUMP1	IONPUMP1	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 1 status		
-IONPUMP2	IONPUMP2	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		ion pump 2 status		
+IONPUMP1	IONPUMP1	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		ion pump 1 status		
+IONPUMP2	IONPUMP2	DEIMOS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		ion pump 2 status		
 KEEPPREP	KEEPPREP	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		keep prescan pixels		
 LAMPS	LAMPS	DEIMOS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		arclamp status		
 LATITUDE	LATITUDE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		latitude		
