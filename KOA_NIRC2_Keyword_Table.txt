@@ -125,7 +125,7 @@ INSTRUME	INSTRUME	added	char		VARCHAR2(24 BYTE)	24	N	Y	Y		24s				NIRC2	Y					Ins
 INSTSTAT	INSTSTAT	added	integer		NUMBER(38)	8	Y	Y	N		8d					Y					KOA instrument status		
 ISAO	ISAO	added	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s				yes,no	Y					Adaptive optics		
 ITIME	ITIME	nirc2	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Integration time per coadd		
-KOAIMTYP	KOAIMTYP		char		VARCHAR2(68 BYTE)	68	Y	Y	Y		68s				object, flatlamp, flatlampoff, unknown, dark,bias, arclamp, undefined	Y				Y	Image type - calibration or science frame		
+KOAIMTYP	KOAIMTYP		char		VARCHAR2(68 BYTE)	68	Y	Y	Y		68s				object, flatlamp, flatlampoff, unknown, dark, bias, arclamp, undefined, calib	Y				Y	Image type - calibration or science frame		
 KRYPTPWR	KRYPTPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Krypton lamp control		
 LAMPPWR	LAMPPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Spectral lamp control		
 LGRMSWF	LGRMSWF	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					LGSAO RMS WF Residual		
