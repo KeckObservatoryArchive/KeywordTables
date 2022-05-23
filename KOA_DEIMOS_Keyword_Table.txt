@@ -338,7 +338,7 @@ ROTATVEL	ROTATVEL	DEIMOS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator v
 ROTBASE	ROTBASE	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator base value		
 ROTDEST	ROTDEST	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator destination		
 ROTERCNT	ROTERCNT	DCS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		rotator error count		
-ROTERRS	ROTERRS	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		rotator error status		
+ROTERRS	ROTERRS	DCS	char		VARCHAR2(35 BYTE)	35	Y	Y	N		35s					Y			Y		rotator error status		
 ROTMODE	ROTMODE	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y			Y		rotator mode		
 ROTOFF	ROTOFF	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator offset		
 ROTPDEST	ROTPDEST	DCS	double		FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		rotator physical destination		
