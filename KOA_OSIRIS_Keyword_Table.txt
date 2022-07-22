@@ -412,7 +412,7 @@ SYSGAIN	SYSGAIN		double		FLOAT(126)	16	Y	Y	N							Y					System gain in e-/ADU	2
 TARGDEC	TARGDEC		double		FLOAT(126)	16	Y	Y	N							Y					target declination	-29.00311111
 TARGEPOC	TARGEPOC		double		FLOAT(126)	16	Y	Y	N							Y					target epoch (2000.000000)	2000
 TARGEQUI	TARGEQUI		double		FLOAT(126)	16	Y	Y	N							Y					target equinox (2000.000000)	2000
-TARGFRAM	TARGFRAM		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					target frame	FK5
+TARGFRAM	TARGFRAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					target frame	FK5
 TARGPLAX	TARGPLAX		double		FLOAT(126)	16	Y	Y	N							Y					target parallax (0.0 arcsec)	0
 TARGPMDC	TARGPMDC		double		FLOAT(126)	16	Y	Y	N							Y					target proper motion dec (0.000 arcsec/yr)	0
 TARGPMRA	TARGPMRA		double		FLOAT(126)	16	Y	Y	N							Y					target proper motion ra (0.0000 s/yr)	0
