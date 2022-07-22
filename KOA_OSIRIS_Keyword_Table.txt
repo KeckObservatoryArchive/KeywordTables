@@ -286,26 +286,26 @@ PCSFLZ	PCSFLZ		double		FLOAT(126)	16	Y	Y	N							Y					LZ POSITION ("mm")	0.0000
 PCSFNAME	PCSFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PCU NAMED_POSTION	user_def
 PCSFX	PCSFX		double		FLOAT(126)	16	Y	Y	N							Y					X POSITION ("mm")	0.000000
 PCSFY	PCSFY		double		FLOAT(126)	16	Y	Y	N							Y					Y POSITION ("mm")	0.000000
-PONAME	PONAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N		25s					Y					pointing origin nameg
-PONAME1	PONAME1		char		VARCHAR2(16 BYTE)	16	Y	Y	N		25s					Y					pointing origin name 1g
-PONAME2	PONAME2		char		VARCHAR2(16 BYTE)	16	Y	Y	N		25s					Y					pointing origin name 2g
-PONAME3	PONAME3		char		VARCHAR2(16 BYTE)	16	Y	Y	N		25s					Y					pointing origin name 3g
-PONAME4	PONAME4		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 4	REF-N
-PONAME5	PONAME5		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 5	REF-L
-PONAME6	PONAME6		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 6	TFS
-PONAME7	PONAME7		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 7	USER1
-PONAME8	PONAME8		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 8	USER2
-PONAME9	PONAME9		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 9	WFC
-PONAME10	PONAME10		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 10	K-ospec
-PONAME11	PONAME11		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 11	K-osimg
-PONAME12	PONAME12		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 12	H-osimg
-PONAME13	PONAME13		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 13	H-ospec
-PONAME14	PONAME14		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 14	IRT
-PONAME15	PONAME15		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 15	H2-osimg
-PONAME16	PONAME16		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 16	H2-ospec
-PONAME17	PONAME17		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 17	<udf>
-PONAME18	PONAME18		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 18	<udf>
-PONAME19	PONAME19		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 19	<udf>
+PONAME	PONAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin nameg
+PONAME1	PONAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 1g
+PONAME2	PONAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 2g
+PONAME3	PONAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 3g
+PONAME4	PONAME4		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 4	REF-N
+PONAME5	PONAME5		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 5	REF-L
+PONAME6	PONAME6		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 6	TFS
+PONAME7	PONAME7		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 7	USER1
+PONAME8	PONAME8		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 8	USER2
+PONAME9	PONAME9		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 9	WFC
+PONAME10	PONAME10		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 10	K-ospec
+PONAME11	PONAME11		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 11	K-osimg
+PONAME12	PONAME12		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 12	H-osimg
+PONAME13	PONAME13		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 13	H-ospec
+PONAME14	PONAME14		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 14	IRT
+PONAME15	PONAME15		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 15	H2-osimg
+PONAME16	PONAME16		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 16	H2-ospec
+PONAME17	PONAME17		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 17	<udf>
+PONAME18	PONAME18		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 18	<udf>
+PONAME19	PONAME19		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 19	<udf>
 POXOFF	POXOFF		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin x offset (0.00 mm)	0
 POXPOS	POXPOS		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition (-5.06 mm)g
 POXPOS1	POXPOS1		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 1 (0.00 mm)g
