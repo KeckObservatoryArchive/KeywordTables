@@ -101,7 +101,7 @@ CTMPLOC8	CTMPLOC8		char		VARCHAR2(37 BYTE)	37	Y	Y	N		37s					Y					Name of the l
 CURRINST	CURRINST		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					current instrumentg
 DATAFILE	DATAFILE		char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s					Y					Original filename at the telescopeg
 DATASEC	DATASEC		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Current datasection of the frame	[1:2048, 1:2048]
-DATASET	DATASET		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					dataset nameg
+DATASET	DATASET		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					dataset name
 DATLEVEL	DATLEVEL		integer		NUMBER(*,0)	8	Y	Y	N		8d					Y					Data reduction levelg
 DCOORDS	DCOORDS		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Dither coordinates - sky/instrg
 DCSSTAT	DCSSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					drive and control statusg
@@ -245,7 +245,7 @@ OBFMYIM	OBFMYIM		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Image plane y moti
 OBFMYPU	OBFMYPU		double		FLOAT(126)	14	Y	Y	N		18.5f					Y					Pupil plane y motion for FSM (subaps)g
 OBFSNAME	OBFSNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for FSSg
 OBIMNAME	OBIMNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for ISMg
-OBJECT	OBJECT		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					object nameg
+OBJECT	OBJECT		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					object name
 OBJPTTRN	OBJPTTRN		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Dither pattern for object framesg
 OBLBNAME	OBLBNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for LBSg
 OBLBX	OBLBX		double		FLOAT(126)	16	Y	Y	N							Y					User value of LBS x axis (mm)	-2.42
@@ -286,7 +286,7 @@ PCSFLZ	PCSFLZ		double		FLOAT(126)	16	Y	Y	N							Y					LZ POSITION ("mm")	0.0000
 PCSFNAME	PCSFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PCU NAMED_POSTION	user_def
 PCSFX	PCSFX		double		FLOAT(126)	16	Y	Y	N							Y					X POSITION ("mm")	0.000000
 PCSFY	PCSFY		double		FLOAT(126)	16	Y	Y	N							Y					Y POSITION ("mm")	0.000000
-PONAME	PONAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin nameg
+PONAME	PONAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name
 PONAME1	PONAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 1g
 PONAME2	PONAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 2g
 PONAME3	PONAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 3g
@@ -374,7 +374,7 @@ SECFOCUS	SECFOCUS		double	arcsec	FLOAT(126)	29	Y	Y	N		18.5f					Y					secondary 
 SECTHETX	SECTHETX		double	arcsec	FLOAT(126)	14	Y	Y	N		18.5f					Y					secondary mirror thetax (arcsec)g
 SECTHETY	SECTHETY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					secondary mirror thetay (arcsec)g
 SETNUM	SETNUM		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Dataset Numberg
-SFILTER	SFILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Move spec fitler wheel by nameg
+SFILTER	SFILTER		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Move spec fitler wheel by name
 SFRAME	SFRAME		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Current spec frame (dither position) of setg
 SFRAMES	SFRAMES		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Number of spec frames in datasetg
 SFWMECH	SFWMECH		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					The overall name of the mechanismg
@@ -419,7 +419,7 @@ TARGPMRA	TARGPMRA		double		FLOAT(126)	16	Y	Y	N							Y					target proper motion 
 TARGRA	TARGRA		double		FLOAT(126)	16	Y	Y	N							Y					target right ascension	266.419625
 TARGRADV	TARGRADV		double		FLOAT(126)	16	Y	Y	N							Y					target radial velocity (0.000000 km/s)	0
 TARGWAVE	TARGWAVE		double	microns	FLOAT(126)	15	Y	Y	N		18.5f					Y					target wavelength (microns)g
-TELESCOP	TELESCOP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					telescope nameg
+TELESCOP	TELESCOP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					telescope name
 TELFOCUS	TELFOCUS		double	mm	FLOAT(126)	30	Y	Y	N		18.5f					Y					telescope focus compensated (1.419 mm)g
 TIMFILE	TIMFILE		char		VARCHAR2(62 BYTE)	62	Y	Y	N		62s					Y					Filename contg
 TKENRUP	TKENRUP		integer		NUMBER(*,0)	16	Y	Y	N							Y					Enable SC ROI updates	1
