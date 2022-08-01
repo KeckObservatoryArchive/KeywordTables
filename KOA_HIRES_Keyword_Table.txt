@@ -233,7 +233,7 @@ PREFLUSH	PREFLUSH		integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	2048					Y	N	prescan-fl
 PRELINE	PRELINE		integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	2048					Y	N	prescan-lines (rows)		
 PREROW	PREROW		integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	2048					Y	N	number of prescan rows		
 PROGID	PROGID		char		VARCHAR2(69 BYTE)	68	N	N	N		68s								Y	Y	WMKO program ID		
-PROGINST	PROGINST		char		VARCHAR2(9 BYTE)	9	N	N	N		9s								Y	Y	Program institution		
+PROGINST	PROGINST		char		VARCHAR2(32 BYTE)	32	N	N	N		32s								Y	Y	Program institution		
 PROGPI	PROGPI		char		VARCHAR2(69 BYTE)	68	N	N	N		68s								Y	Y	Program principal investigator		
 PROGTITL	PROGTITL		char		VARCHAR2(211 BYTE)	210	Y	N	N		210s								Y	Y	Title of observing program		
 PROP0STA	PROP0STA		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	Propeller mirror #0 status		

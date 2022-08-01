@@ -214,7 +214,7 @@ POYPOS1	POYPOS1	dcs-legacy	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					pointe
 POYPOS2	POYPOS2	dcs-legacy	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					pointegering origin yposition 2		
 POYPOS3	POYPOS3	dcs-legacy	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					pointegering origin yposition 3		
 PROGID	PROGID	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					WMKO ID for observing program		
-PROGINST	PROGINST	added	char		VARCHAR2(9 BYTE)	9	N	N	N		9s					Y				Y	Program institution		
+PROGINST	PROGINST	added	char		VARCHAR2(32 BYTE)	32	N	N	N		32s					Y				Y	Program institution		
 PROGPI	PROGPI	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y				Y	Program principal investigator		
 PROGTITL	PROGTITL	added	char		VARCHAR2(210 BYTE)	210	Y	Y	N		210s					Y				Y	Program title - concatination of PROGTL1, PROGTL2, PROGTL3 from FITS header		
 PSIDIST	PSIDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Inner preslit's distance from home		
