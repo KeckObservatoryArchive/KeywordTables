@@ -163,7 +163,7 @@ DTMPLOC8	DTMPLOC8		char		VARCHAR2(37 BYTE)	37	Y	Y	N		37s					Y					Location of T
 DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from start of dither-axis 1g
 DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from start of dither-axis 2g
 DTRACK	DTRACK		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Differential tracking enabledg
-DTSENSOR	DTSENSOR		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					Select WFS or STRAP or NIRTTS or STRAP NIRTT	STRAP
+DTSENSOR	DTSENSOR		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Select WFS or STRAP or NIRTTS or STRAP NIRTT	STRAP
 ENDX	ENDX		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array end x pixel	2047
 ENDY	ENDY		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array end y pixel	2047
 EL	EL		double	degrees	FLOAT(126)	24	Y	Y	N		18.5f					Y					Telescope elevationg
