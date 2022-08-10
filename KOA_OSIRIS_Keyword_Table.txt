@@ -8,14 +8,14 @@ DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s	Y				Y					declination
 ELAPTIME	ELAPTIME		double	seconds	FLOAT(126)	16	Y	Y	Y		18.5f		0	100000		Y				Y	elapsed-time
 EQUINOX	EQUINOX		double	years	FLOAT(126)	16	N	Y	Y		18.5f		0	2100		Y					telescope-equinox
 FRAMENO	FRAMENO		integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	Frame number	14
-IGNORDRD	IGNORDRD		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of discarded initial reads	0
+IGNORDRD	IGNORDRD		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of discarded initial reads	0
 INSTRUME	INSTRUME		char		VARCHAR2(69 BYTE)	69	N	Y	Y		69s				OSIRIS	Y					instrument's name
-IORIENT	IORIENT		double		FLOAT(126)	16	Y	Y	N							Y					Imag orientation wrt spec	-43.4
-ITIME0	ITIME0		integer		NUMBER(*,0)	16	Y	Y	N							Y					Requested itime in microseconds per coadd	2000000
+IORIENT	IORIENT		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Imag orientation wrt spec	-43.4
+ITIME0	ITIME0		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Requested itime in microseconds per coadd	2000000
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	Y		69s				dark,flatlamp,flatlampoff,undefined,calib,object	Y	Y	Y		Y	Type of observation: 'object' for science files, other values are calibration files	object, flatlamp
-PROGNAME	PROGNAME		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					Program name	U119
+PROGNAME	PROGNAME		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					Program name	U119
 PROGID	PROGID	KOA	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y	Y			Y	WMKO assigned program identification code	ENG
-PROGINST	PROGINST	KOA	char		VARCHAR2(13 BYTE)	13	N	Y	N		13s					Y	Y			Y	Program institution	KECK
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program institution	KECK
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	69	N	Y	N		69s					Y	Y			Y	Program principal investigator	J. Doe
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(211 BYTE)	211	Y	Y	N		211s					Y	Y			Y	Program title	OSIRIS Engineering Night
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	20	Y	Y	N		16s	Y				Y					right ascensiong
@@ -23,9 +23,9 @@ SEMESTER	SEMESTER	KOA	char		VARCHAR2(9 BYTE)	9	N	Y	N		9s					Y					Observing sem
 TARGNAME	TARGNAME		char		VARCHAR2(69 BYTE)	69	Y	Y	N		69s					Y	Y			Y	Target name	sky
 UT	UT		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s					Y				Y	coordinated universal timeg
 UTC	UTC		char		VARCHAR2(21 BYTE)	21	N	Y	Y	time	21s					Y					coordinated universal timeg
-CELLDRAN	CELLDRAN		integer		NUMBER(*,0)	16	Y	Y	N							Y					Celldrain (pix src follower) in V (from ASIC)	0
-CLKSPEED	CLKSPEED		integer		NUMBER(*,0)	16	Y	Y	N							Y					Pixel clocking speed in kHz	100
-COADDS0	COADDS0		integer		NUMBER(*,0)	16	Y	Y	N							Y					Requested number of coadditions	10
+CELLDRAN	CELLDRAN		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Celldrain (pix src follower) in V (from ASIC)	0
+CLKSPEED	CLKSPEED		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Pixel clocking speed in kHz	100
+COADDS0	COADDS0		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Requested number of coadditions	10
 CRVAL1	CRVAL1		double	pixels	FLOAT(126)	20	Y	Y	Y		18.5f					Y					Horizontal axis WCS value at the reference pixelg
 CRVAL2	CRVAL2		double	pixels	FLOAT(126)	20	Y	Y	Y		18.5f					Y					Vertical axis WCS value at the reference pixelg
 CRPIX1	CRPIX1		double	pixels	FLOAT(126)	20	Y	Y	Y		18.5f					Y					Reference pixel on the horizontal axisg
@@ -36,14 +36,14 @@ WAT0_001	WAT0_001		char		VARCHAR2(30 BYTE)	30	Y	Y	Y		30s					Y					coordinate sy
 WAT1_001	WAT1_001		char		VARCHAR2(30 BYTE)	30	Y	Y	Y		30s					Y					coordinate systemg
 WAT2_001	WAT2_001		char		VARCHAR2(30 BYTE)	30	Y	Y	Y		30s					Y					coordinate systemg
 WCSDIM	WCSDIM		integer		NUMBER(*,0)	8	Y	Y	N		8d										number WCS dimensionsg
-LONGSTRN	LONGSTRN		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					The OGIP Long String Convention may be used.	OGIP 1.0
+LONGSTRN	LONGSTRN		char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					The OGIP Long String Convention may be used.	OGIP 1.0
 LTM1_1	LTM1_1		double		FLOAT(126)	10	Y	Y	Y		18.5f					Y					ccd to image transformationg
 LTM2_2	LTM2_2		double		FLOAT(126)	10	Y	Y	Y		18.5f					Y					ccd to image transformationg
 CDELT1	CDELT1		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Size projected into detector pixel in axis1g
 CDELT2	CDELT2		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Size projected into detector pixel in axis2g
 CROTA2	CROTA2		double		FLOAT(126)	20	Y	Y	Y		18.5f					Y					Rotation of horizontal and vertical axesg
 RADECSYS	RADECSYS		char		VARCHAR2(10 BYTE)	10	Y	Y	Y		10s					Y					the system of the coordinatesg
-ABORTED	ABORTED		char		VARCHAR(9 BYTE)	8	Y	Y	N							Y					Exposure was stopped before completion	F
+ABORTED	ABORTED		char		VARCHAR(9 BYTE)	9	Y	Y	N		9s					Y					Exposure was stopped before completion	F
 AIRMASS	AIRMASS		double		FLOAT(126)	26	Y	Y	N		18.5f					Y					air mass (1.03)g
 AOAOAMED	AOAOAMED		double		FLOAT(126)	18	Y	Y	N		18.5f					Y					AO WFC AOA camera median light level (counts)g
 AODELAY	AODELAY		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Delay after AO locksg
@@ -62,8 +62,8 @@ AOFMX	AOFMX		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					AO field steering mirr
 AOFMY	AOFMY		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					AO field steering mirrors Y position (mm)g
 AOFOMODE	AOFOMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					AO focus offloading modeg
 AOLBFWHM	AOLBFWHM		double		FLOAT(126)	18	Y	Y	N		18.5f					Y					AO LBWFS avg fwhmg
-AOLBXOFF	AOLBXOFF		integer		NUMBER(*,0)	16	Y	Y	N							Y					AO LBWFS image xoffset	92
-AOLBYOFF	AOLBYOFF		integer		NUMBER(*,0)	16	Y	Y	N							Y					AO LBWFS image xoffset	114
+AOLBXOFF	AOLBXOFF		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					AO LBWFS image xoffset	92
+AOLBYOFF	AOLBYOFF		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					AO LBWFS image xoffset	114
 AOLPMOVE	AOLPMOVE		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					AO LSP MOVE ENABLEg
 AOOPSMOD	AOOPSMOD		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					AO General Ops Mode FITSg
 AOTSDAR	AOTSDAR		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					AO TSS_USE_DAR?g
@@ -76,9 +76,9 @@ AXESTAT	AXESTAT		char		VARCHAR2(22 BYTE)	22	Y	Y	N		22s					Y					axes control st
 AZ	AZ		double	degrees	FLOAT(126)	26	Y	Y	N		18.5f					Y					telescope azimuth (172.67 deg)g
 BADPIX	BADPIX		char		VARCHAR2(57 BYTE)	57	Y	Y	N		57s					Y					FITS filename contg
 BITPIX	BITPIX		double		FLOAT(126)	13	Y	Y	N		18.5f					Y					number of bits per data pixelg
-BSCALE	BSCALE		integer		NUMBER(*,0)	16	Y	Y	N							Y					Linear factor in scaling equation	1
-BUNIT	BUNIT		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Physical units of the array values	ADU per coadd
-BZERO	BZERO		integer		NUMBER(*,0)	16	Y	Y	N							Y					Zero point in scaling equation	0
+BSCALE	BSCALE		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Linear factor in scaling equation	1
+BUNIT	BUNIT		char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Physical units of the array values	ADU per coadd
+BZERO	BZERO		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Zero point in scaling equation	0
 CALOCAL	CALOCAL		double	arcsec	FLOAT(126)	28	Y	Y	N		18.5f					Y					collimation azimuth local (40.7 arcsec)g
 CELOCAL	CELOCAL		double	arcsec	FLOAT(126)	29	Y	Y	N		18.5f					Y					collimation elevation local (-21.8 arcsec)g
 COADDS	COADDS		integer		NUMBER(*,0)	11	Y	Y	Y		11d		1	1000000		Y	Y	Y		Y	Number of coadded frames	1,22
@@ -100,19 +100,19 @@ CTMPLOC7	CTMPLOC7		char		VARCHAR2(37 BYTE)	37	Y	Y	N		37s					Y					Name of the l
 CTMPLOC8	CTMPLOC8		char		VARCHAR2(37 BYTE)	37	Y	Y	N		37s					Y					Name of the location of Temperature Sensor 8g
 CURRINST	CURRINST		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					current instrumentg
 DATAFILE	DATAFILE		char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s					Y					Original filename at the telescopeg
-DATASEC	DATASEC		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Current datasection of the frame	[1:2048, 1:2048]
+DATASEC	DATASEC		char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Current datasection of the frame	[1:2048, 1:2048]
 DATASET	DATASET		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					dataset name
 DATLEVEL	DATLEVEL		integer		NUMBER(*,0)	8	Y	Y	N		8d					Y					Data reduction levelg
 DCOORDS	DCOORDS		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Dither coordinates - sky/instrg
 DCSSTAT	DCSSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					drive and control statusg
-DCSVERS	DCSVERS		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					drive and control version	TCSU
+DCSVERS	DCSVERS		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					drive and control version	TCSU
 DDEC	DDEC		double	arcsec	FLOAT(126)	12	Y	Y	N		18.5f					Y					Differential tracking rate (DEC)g
 DECOFF	DECOFF		double	arcsec	FLOAT(126)	30	Y	Y	N		18.5f					Y					declination offset (0.0000 arcsec)g
-DETENDX	DETENDX		integer		NUMBER(*,0)	16	Y	Y	N							Y					End Column for subarray (1-based)	2048
-DETENDY	DETENDY		integer		NUMBER(*,0)	16	Y	Y	N							Y					End Row for subarray (1-based)	2048
-DETGAIN	DETGAIN		double		FLOAT(126)	16	Y	Y	N							Y					Detector gain factor	5.65685
-DETSTRTX	DETSTRTX		integer		NUMBER(*,0)	16	Y	Y	N							Y					Start Column for subarray (1-based)	1
-DETSTRTY	DETSTRTY		integer		NUMBER(*,0)	16	Y	Y	N							Y					Start Row for subarray (1-based)	1
+DETENDX	DETENDX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					End Column for subarray (1-based)	2048
+DETENDY	DETENDY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					End Row for subarray (1-based)	2048
+DETGAIN	DETGAIN		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Detector gain factor	5.65685
+DETSTRTX	DETSTRTX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Start Column for subarray (1-based)	1
+DETSTRTY	DETSTRTY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Start Row for subarray (1-based)	1
 DLSTOFF1	DLSTOFF1		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from last dither pos-axis 1g
 DLSTOFF2	DLSTOFF2		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from last dither pos-axis 2g
 DMGAIN	DMGAIN		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					Set DM loop gaing
@@ -126,7 +126,7 @@ DPWNAME4	DPWNAME4		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the d
 DPWNAME5	DPWNAME5		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the device controlled by outlet 5g
 DPWNAME6	DPWNAME6		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the device controlled by outlet 6g
 DPWNAME7	DPWNAME7		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the device controlled by outlet 7g
-DPWNAME8	DPWNAME8		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Name of the device controlled by outlet 8	EC Cooling System
+DPWNAME8	DPWNAME8		char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Name of the device controlled by outlet 8	EC Cooling System
 DPWSTAT1	DPWSTAT1		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of outlet 1g
 DPWSTAT2	DPWSTAT2		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of outlet 2g
 DPWSTAT3	DPWSTAT3		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of outlet 3g
@@ -138,12 +138,12 @@ DPWSTAT8	DPWSTAT8		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of 
 DQA_DATE	DQA_DATE		char		VARCHAR2(28 BYTE)	28	Y	Y	N		28s					Y					Date of DQA rung
 DQA_VERS	DQA_VERS		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					DQA version numberg
 DRA	DRA		double	arcsec	FLOAT(126)	12	Y	Y	N		18.5f					Y					Differential tracking rate (RA)g
-DRAIN	DRAIN		integer		NUMBER(*,0)	16	Y	Y	N							Y					Drain (output buffer) in V, obtained from ASIC	0
-DSUB	DSUB		double		FLOAT(126)	16	Y	Y	N							Y					Substrate voltage in V, obtained from ASIC	0.6002
+DRAIN	DRAIN		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Drain (output buffer) in V, obtained from ASIC	0
+DSUB	DSUB		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Substrate voltage in V, obtained from ASIC	0.6002
 DTCLP	DTCLP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					OPEN/CLOSE TT CLMP ctrl loopg
 DTGAIN	DTGAIN		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					Set TT loop gaing
-DTGAINDB	DTGAINDB		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Detector gain in dB	15.05 db (low)
-DTGAINNM	DTGAINNM		integer		NUMBER(*,0)	16	Y	Y	N							Y					Detector gain setting [0-15]	9
+DTGAINDB	DTGAINDB		char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Detector gain in dB	15.05 db (low)
+DTGAINNM	DTGAINNM		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Detector gain setting [0-15]	9
 DTMP1	DTMP1		double		FLOAT(126)	26	Y	Y	N		18.5f					Y					Temperature at Sensor 1g
 DTMP2	DTMP2		double		FLOAT(126)	26	Y	Y	N		18.5f					Y					Temperature at Sensor 2g
 DTMP3	DTMP3		double		FLOAT(126)	26	Y	Y	N		18.5f					Y					Temperature at Sensor 3g
@@ -164,8 +164,8 @@ DTOTOFF1	DTOTOFF1		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from star
 DTOTOFF2	DTOTOFF2		double		FLOAT(126)	12	Y	Y	N		18.5f					Y					Offset from start of dither-axis 2g
 DTRACK	DTRACK		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Differential tracking enabledg
 DTSENSOR	DTSENSOR		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Select WFS or STRAP or NIRTTS or STRAP NIRTT	STRAP
-ENDX	ENDX		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array end x pixel	2047
-ENDY	ENDY		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array end y pixel	2047
+ENDX	ENDX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Sub-array end x pixel	2047
+ENDY	ENDY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Sub-array end y pixel	2047
 EL	EL		double	degrees	FLOAT(126)	24	Y	Y	N		18.5f					Y					Telescope elevationg
 EPWNAME1	EPWNAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the device controlled by outlet 1g
 EPWNAME2	EPWNAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Name of the device controlled by outlet 2g
@@ -184,24 +184,24 @@ EPWSTAT6	EPWSTAT6		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of 
 EPWSTAT7	EPWSTAT7		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of outlet 7g
 EPWSTAT8	EPWSTAT8		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Power status of outlet 8g
 EXTEND	EXTEND		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					FITS dataset may contain extensionsg
-EXTNAME	EXTNAME		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					Extension Name	SCI
-EXTVER	EXTVER		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number assigned to this FITS extension	1
-FLAMP1	FLAMP1		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					lamp1 off on	off
-FLAMP2	FLAMP2		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					lamp2 off on	off
+EXTNAME	EXTNAME		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					Extension Name	SCI
+EXTVER	EXTVER		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number assigned to this FITS extension	1
+FLAMP1	FLAMP1		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					lamp1 off on	off
+FLAMP2	FLAMP2		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					lamp2 off on	off
 FOCALSTN	FOCALSTN		char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s					Y					focal station
-FPOWER	FPOWER		double		FLOAT(126)	16	Y	Y	N							Y					both set power	14.0000
+FPOWER	FPOWER		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					both set power	14.0000
 FRAMENUM	FRAMENUM		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Frame Number
 GAIN	GAIN		double		FLOAT(126)	14	Y	Y	N		18.5f					Y					Detector gain in ADU per electron
-GROUPS	GROUPS		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of sampling groups	2
-GROUPS0	GROUPS0		integer		NUMBER(*,0)	16	Y	Y	N							Y					Requested number of groups	2
-GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N							Y					Guide star FWHM value	0.9272260957
-GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Guide star FWHM measure time	10:10:48
+GROUPS	GROUPS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of sampling groups	2
+GROUPS0	GROUPS0		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Requested number of groups	2
+GUIDFWHM	GUIDFWHM	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Guide star FWHM value	0.9272260957
+GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Guide star FWHM measure time	10:10:48
 GUIDWAVE	GUIDWAVE		double	microns	FLOAT(126)	20	Y	Y	N		18.5f					Y					guidestar wavelength (microns)g
 HA	HA		double		FLOAT(126)	30	Y	Y	N		18.5f					Y					telescope hour angle (+23:52:38.13 h)g
-HRPSTYPE	HRPSTYPE		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Horizontal reference pixel subtraction type	none
-HXRGCFG1	HXRGCFG1		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					ASIC Regs 0x4010:0x4017	0002 0020 0001 0000 0000 0000 0000 0000
-HXRGCFG2	HXRGCFG2		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					ASIC Regs 0x4018:0x401F	0000 0000 0009 0000 0005 0000 0003 0001
-HXRGVERS	HXRGVERS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					HxRG timing code version	66.159
+HRPSTYPE	HRPSTYPE		char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Horizontal reference pixel subtraction type	none
+HXRGCFG1	HXRGCFG1		char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					ASIC Regs 0x4010:0x4017	0002 0020 0001 0000 0000 0000 0000 0000
+HXRGCFG2	HXRGCFG2		char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					ASIC Regs 0x4018:0x401F	0000 0000 0009 0000 0005 0000 0003 0001
+HXRGVERS	HXRGVERS		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					HxRG timing code version	66.159
 ICURTMP	ICURTMP		double		FLOAT(126)	30	Y	Y	N		18.5f					Y					Temperature at Channel 2g
 IF1MECH	IF1MECH		char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s					Y					The overall name of the mechanismg
 IF1NAME	IF1NAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					The name of the current positiong
@@ -233,7 +233,7 @@ MJD-OBS	MJD_OBS		double	days	FLOAT(126)	26	Y	Y	N		18.5f	Y				Y					modified juli
 NAXIS	NAXIS		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					number of data axesg
 NAXIS1	NAXIS1		integer	pixels	NUMBER(*,0)	14	Y	Y	N		14d					Y					length of data axis 1g
 NAXIS2	NAXIS2		integer	pixels	NUMBER(*,0)	14	Y	Y	N		14d					Y					length of data axis 2g
-NGROUP	NGROUP		integer		NUMBER(*,0)	16	Y	Y	N							Y					Groups actually completed in this coadd	2
+NGROUP	NGROUP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Groups actually completed in this coadd	2
 NOISEFIL	NOISEFIL		char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s					Y					Filename cog
 NUMREADS	NUMREADS		integer		NUMBER(*,0)	12	Y	Y	N		12d					Y					Number of readsg
 OA	OA		char		VARCHAR2(28 BYTE)	28	Y	Y	N		28s					Y					Observing assistantg
@@ -248,8 +248,8 @@ OBIMNAME	OBIMNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named positio
 OBJECT	OBJECT		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					object name
 OBJPTTRN	OBJPTTRN		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Dither pattern for object framesg
 OBLBNAME	OBLBNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for LBSg
-OBLBX	OBLBX		double		FLOAT(126)	16	Y	Y	N							Y					User value of LBS x axis (mm)	-2.42
-OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N							Y					User value of LBS y axis (mm)	-0.53
+OBLBX	OBLBX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of LBS x axis (mm)	-2.42
+OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of LBS y axis (mm)	-0.53
 OBRT	OBRT		double		FLOAT(126)	17	Y	Y	N		18.5f					Y					User value of ROT (deg)g
 OBSDNAME	OBSDNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for SODg
 OBSERVER	OBSERVER		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					Observer name(s)g
@@ -262,10 +262,10 @@ OBSNNAME	OBSNNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named positio
 OBSTYPE	OBSTYPE		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Observation type: astro, star, calibg
 OBSWNAME	OBSWNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for SFWg
 OBSWSTA	OBSWSTA		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					White light power statusg
-OBTD	OBTD		double		FLOAT(126)	16	Y	Y	N							Y					User value of TTD (mm)	-0.01
-OBTDNAME	OBTDNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Named position control for TTD	open
-OBTF	OBTF		double		FLOAT(126)	16	Y	Y	N							Y					User value of TTF (mm)	-10.49
-OBTFNAME	OBTFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Named position control for TTF	hBand
+OBTD	OBTD		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of TTD (mm)	-0.01
+OBTDNAME	OBTDNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Named position control for TTD	open
+OBTF	OBTF		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of TTF (mm)	-10.49
+OBTFNAME	OBTFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Named position control for TTF	hBand
 OBTSNAME	OBTSNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for TSSg
 OBTSX	OBTSX		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of TSS x axis (mm)g
 OBTSY	OBTSY		double	mm	FLOAT(126)	14	Y	Y	N		18.5f					Y					User value of TSS y axis (mm)g
@@ -276,90 +276,90 @@ OBWFSTST	OBWFSTST		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					State of FCS 
 OBWLNAME	OBWLNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for WLSg
 OBWNNAME	OBWNNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for WNDg
 OBWPNAME	OBWPNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for WPSg
-OUTDIR	OUTDIR		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Output directory	/s/sdata1100/osiris8/220524/IMAG/raw
+OUTDIR	OUTDIR		char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Output directory	/s/sdata1100/osiris8/220524/IMAG/raw
 PA_IMAG	PA_IMAG		double	degrees	FLOAT(126)	14	Y	Y	N		18.5f					Y					Position angle of imager on skyg
 PA_SPEC	PA_SPEC		double	degrees	FLOAT(126)	14	Y	Y	N		18.5f					Y					Position angle of spectrograph on skyg
 PARANG	PARANG		double	degrees	FLOAT(126)	30	Y	Y	N		18.5f					Y					parallactic angle astrometric (-6.89 deg)g
-PARANTEL	PARANTEL		double		FLOAT(126)	16	Y	Y	N							Y					parallactic angle telescope (16.72 deg)	16.72108347
+PARANTEL	PARANTEL		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					parallactic angle telescope (16.72 deg)	16.72108347
 PCIFILE	PCIFILE		char		VARCHAR2(49 BYTE)	49	Y	Y	N		49s					Y					Filename containing PCI DSg
-PCSFLZ	PCSFLZ		double		FLOAT(126)	16	Y	Y	N							Y					LZ POSITION ("mm")	0.000000
-PCSFNAME	PCSFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PCU NAMED_POSTION	user_def
-PCSFX	PCSFX		double		FLOAT(126)	16	Y	Y	N							Y					X POSITION ("mm")	0.000000
-PCSFY	PCSFY		double		FLOAT(126)	16	Y	Y	N							Y					Y POSITION ("mm")	0.000000
+PCSFLZ	PCSFLZ		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					LZ POSITION ("mm")	0.000000
+PCSFNAME	PCSFNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					PCU NAMED_POSTION	user_def
+PCSFX	PCSFX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					X POSITION ("mm")	0.000000
+PCSFY	PCSFY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Y POSITION ("mm")	0.000000
 PONAME	PONAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name
 PONAME1	PONAME1		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 1g
 PONAME2	PONAME2		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 2g
 PONAME3	PONAME3		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 3g
-PONAME4	PONAME4		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 4	REF-N
-PONAME5	PONAME5		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 5	REF-L
-PONAME6	PONAME6		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 6	TFS
-PONAME7	PONAME7		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 7	USER1
-PONAME8	PONAME8		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 8	USER2
-PONAME9	PONAME9		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 9	WFC
-PONAME10	PONAME10		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 10	K-ospec
-PONAME11	PONAME11		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 11	K-osimg
-PONAME12	PONAME12		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 12	H-osimg
-PONAME13	PONAME13		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 13	H-ospec
-PONAME14	PONAME14		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 14	IRT
-PONAME15	PONAME15		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 15	H2-osimg
-PONAME16	PONAME16		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 16	H2-ospec
-PONAME17	PONAME17		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 17	<udf>
-PONAME18	PONAME18		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 18	<udf>
-PONAME19	PONAME19		char		VARCHAR2(25 BYTE)	25	Y	Y	N							Y					pointing origin name 19	<udf>
-POXOFF	POXOFF		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin x offset (0.00 mm)	0
+PONAME4	PONAME4		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 4	REF-N
+PONAME5	PONAME5		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 5	REF-L
+PONAME6	PONAME6		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 6	TFS
+PONAME7	PONAME7		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 7	USER1
+PONAME8	PONAME8		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 8	USER2
+PONAME9	PONAME9		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 9	WFC
+PONAME10	PONAME10		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 10	K-ospec
+PONAME11	PONAME11		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 11	K-osimg
+PONAME12	PONAME12		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 12	H-osimg
+PONAME13	PONAME13		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 13	H-ospec
+PONAME14	PONAME14		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 14	IRT
+PONAME15	PONAME15		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 15	H2-osimg
+PONAME16	PONAME16		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 16	H2-ospec
+PONAME17	PONAME17		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 17	<udf>
+PONAME18	PONAME18		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 18	<udf>
+PONAME19	PONAME19		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					pointing origin name 19	<udf>
+POXOFF	POXOFF		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin x offset (0.00 mm)	0
 POXPOS	POXPOS		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition (-5.06 mm)g
 POXPOS1	POXPOS1		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 1 (0.00 mm)g
 POXPOS2	POXPOS2		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 2 (-5.07 mm)g
 POXPOS3	POXPOS3		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 3 (-5.06 mm)g
-POXPOS4	POXPOS4		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 4 (-8.52 mm)	-0.00852
-POXPOS5	POXPOS5		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 5 (-8.57 mm)	-0.00857
-POXPOS6	POXPOS6		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 6 (-4.94 mm)	-0.00494325
-POXPOS7	POXPOS7		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 7 (3.45 mm)	0.00345061
-POXPOS8	POXPOS8		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 8 (-5.61 mm)	-0.00561
-POXPOS9	POXPOS9		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 9 (1.85 mm)	0.00185
-POXPOS10	POXPOS10		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 10 (2.94 mm)	0.00294
-POXPOS11	POXPOS11		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 11 (3.21 mm)	0.00321
-POXPOS12	POXPOS12		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 12 (1.96 mm)	0.00196
-POXPOS13	POXPOS13		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 13 (1.82 mm)	0.00182
-POXPOS14	POXPOS14		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 14 (0.00 mm)	0
-POXPOS15	POXPOS15		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 15 (3.21 mm)	0.00321
-POXPOS16	POXPOS16		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 16 (2.94 mm)	0.00294
-POXPOS17	POXPOS17		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 17 (0.00 mm)	0
-POXPOS18	POXPOS18		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 18 (0.00 mm)	0
-POXPOS19	POXPOS19		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition 19 (0.00 mm)	0
-POYOFF	POYOFF		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin y offset (0.00 mm)	0
+POXPOS4	POXPOS4		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 4 (-8.52 mm)	-0.00852
+POXPOS5	POXPOS5		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 5 (-8.57 mm)	-0.00857
+POXPOS6	POXPOS6		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 6 (-4.94 mm)	-0.00494325
+POXPOS7	POXPOS7		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 7 (3.45 mm)	0.00345061
+POXPOS8	POXPOS8		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 8 (-5.61 mm)	-0.00561
+POXPOS9	POXPOS9		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 9 (1.85 mm)	0.00185
+POXPOS10	POXPOS10		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 10 (2.94 mm)	0.00294
+POXPOS11	POXPOS11		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 11 (3.21 mm)	0.00321
+POXPOS12	POXPOS12		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 12 (1.96 mm)	0.00196
+POXPOS13	POXPOS13		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 13 (1.82 mm)	0.00182
+POXPOS14	POXPOS14		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 14 (0.00 mm)	0
+POXPOS15	POXPOS15		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 15 (3.21 mm)	0.00321
+POXPOS16	POXPOS16		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 16 (2.94 mm)	0.00294
+POXPOS17	POXPOS17		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 17 (0.00 mm)	0
+POXPOS18	POXPOS18		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 18 (0.00 mm)	0
+POXPOS19	POXPOS19		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin xposition 19 (0.00 mm)	0
+POYOFF	POYOFF		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin y offset (0.00 mm)	0
 POYPOS	POYPOS		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition (-6.14 mm)g
 POYPOS1	POYPOS1		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 1 (0.00 mm)g
 POYPOS2	POYPOS2		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 2 (9.28 mm)g
 POYPOS3	POYPOS3		double	mm	FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 3 (-6.14 mm)g
-POYPOS4	POYPOS4		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 4 (2.21 mm)	0.00221
-POYPOS5	POYPOS5		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 5 (2.15 mm)	0.00215
-POYPOS6	POYPOS6		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 6 (-3.12 mm)	-0.00311629
-POYPOS7	POYPOS7		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 7 (4.62 mm)	0.00461917
-POYPOS8	POYPOS8		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 8 (-8.19 mm)	-0.00819
-POYPOS9	POYPOS9		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 9 (6.82 mm)	0.00682
-POYPOS10	POYPOS10		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 10 (5.04 mm)	0.00504
-POYPOS11	POYPOS11		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 11 (-11.01 mm)	-0.01101
-POYPOS12	POYPOS12		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 12 (-7.95 mm)	-0.00795
-POYPOS13	POYPOS13		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 13 (7.85 mm)	0.00785
-POYPOS14	POYPOS14		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 14 (0.00 mm)	0
-POYPOS15	POYPOS15		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 15 (-11.01 mm)	-0.01101
-POYPOS16	POYPOS16		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 16 (5.04 mm)	0.00504
-POYPOS17	POYPOS17		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 17 (0.00 mm)	0
-POYPOS18	POYPOS18		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 18 (0.00 mm)	0
-POYPOS19	POYPOS19		double		FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition 19 (0.00 mm)	0
+POYPOS4	POYPOS4		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 4 (2.21 mm)	0.00221
+POYPOS5	POYPOS5		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 5 (2.15 mm)	0.00215
+POYPOS6	POYPOS6		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 6 (-3.12 mm)	-0.00311629
+POYPOS7	POYPOS7		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 7 (4.62 mm)	0.00461917
+POYPOS8	POYPOS8		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 8 (-8.19 mm)	-0.00819
+POYPOS9	POYPOS9		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 9 (6.82 mm)	0.00682
+POYPOS10	POYPOS10		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 10 (5.04 mm)	0.00504
+POYPOS11	POYPOS11		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 11 (-11.01 mm)	-0.01101
+POYPOS12	POYPOS12		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 12 (-7.95 mm)	-0.00795
+POYPOS13	POYPOS13		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 13 (7.85 mm)	0.00785
+POYPOS14	POYPOS14		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 14 (0.00 mm)	0
+POYPOS15	POYPOS15		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 15 (-11.01 mm)	-0.01101
+POYPOS16	POYPOS16		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 16 (5.04 mm)	0.00504
+POYPOS17	POYPOS17		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 17 (0.00 mm)	0
+POYPOS18	POYPOS18		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 18 (0.00 mm)	0
+POYPOS19	POYPOS19		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					pointing origin yposition 19 (0.00 mm)	0
 PRESSURE	PRESSURE		double	mTorr	FLOAT(126)	30	Y	Y	N		18.5f					Y					Current pressure read from gauge in mTorr.g
-PSCALE	PSCALE		double		FLOAT(126)	16	Y	Y	N							Y					Pixel scale for science camera	0.01
+PSCALE	PSCALE		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Pixel scale for science camera	0.01
 RAOFF	RAOFF		double	arcsec	FLOAT(126)	30	Y	Y	N		18.5f					Y					right ascension offset (5.0227 arcsec)g
 RDITIME	RDITIME		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Integration time between start of successive reg
-READS	READS		integer		NUMBER(*,0)	16	Y	Y	N							Y					Reads actually completed in this coadd	2
-READS0	READS0		integer		NUMBER(*,0)	16	Y	Y	N							Y					Requested sampling mode reads	1
+READS	READS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Reads actually completed in this coadd	2
+READS0	READS0		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Requested sampling mode reads	1
 READTIME	READTIME		double		FLOAT(126)	14	Y	Y	N		18.5f					Y					Time in seconds to readout detectorg
-RESETS	RESETS		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of resets before exposure	1
-RMPDROP	RMPDROP		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of drop frames in ramp	0
-RMPGROUP	RMPGROUP		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of groups in ramp	2
-RMPREADS	RMPREADS		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of reads in ramp	1
-RMPRESET	RMPRESET		integer		NUMBER(*,0)	16	Y	Y	N							Y					Number of resets in ramp	1
+RESETS	RESETS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of resets before exposure	1
+RMPDROP	RMPDROP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of drop frames in ramp	0
+RMPGROUP	RMPGROUP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of groups in ramp	2
+RMPREADS	RMPREADS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of reads in ramp	1
+RMPRESET	RMPRESET		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number of resets in ramp	1
 ROTCALAN	ROTCALAN		double	degrees	FLOAT(126)	12	Y	Y	N		18.5f					Y					rotator calibration angle (0.00 deg)g
 ROTDEST	ROTDEST		double	degrees	FLOAT(126)	30	Y	Y	N		18.5f					Y					rotator user destination (48.00 deg)g
 ROTMODE	ROTMODE		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					rotator tracking modeg
@@ -403,80 +403,80 @@ SS2RAW	SS2RAW		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Current position of 
 SS2STAT	SS2STAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Mechanism Status (Ok,Moving,Error,Unknown)g
 SS2SWTCH	SS2SWTCH		integer		NUMBER(*,0)	11	Y	Y	N		11d					Y					Current Switch Valueg
 SSCALE	SSCALE		double		FLOAT(126)	13	Y	Y	N		18.5f					Y					Spec Scaleg
-STARTX	STARTX		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array start x pixel	0
-STARTY	STARTY		integer		NUMBER(*,0)	16	Y	Y	N							Y					Sub-array start y pixel	0
-STCNGN	STCNGN		double		FLOAT(126)	16	Y	Y	N							Y					STRAP centroid gain	1.000
-STINTTIM	STINTTIM		integer		NUMBER(*,0)	16	Y	Y	N							Y					STRAP Set int time (milli-sec)	1
+STARTX	STARTX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Sub-array start x pixel	0
+STARTY	STARTY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Sub-array start y pixel	0
+STCNGN	STCNGN		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					STRAP centroid gain	1.000
+STINTTIM	STINTTIM		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					STRAP Set int time (milli-sec)	1
 STRGTMP	STRGTMP		double		FLOAT(126)	13	Y	Y	N		18.5f					Y					Desired temperature for channel 1g
-SYSGAIN	SYSGAIN		double		FLOAT(126)	16	Y	Y	N							Y					System gain in e-/ADU	2.15
-TARGDEC	TARGDEC		double		FLOAT(126)	16	Y	Y	N							Y					target declination	-29.00311111
-TARGEPOC	TARGEPOC		double		FLOAT(126)	16	Y	Y	N							Y					target epoch (2000.000000)	2000
-TARGEQUI	TARGEQUI		double		FLOAT(126)	16	Y	Y	N							Y					target equinox (2000.000000)	2000
-TARGFRAM	TARGFRAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					target frame	FK5
-TARGPLAX	TARGPLAX		double		FLOAT(126)	16	Y	Y	N							Y					target parallax (0.0 arcsec)	0
-TARGPMDC	TARGPMDC		double		FLOAT(126)	16	Y	Y	N							Y					target proper motion dec (0.000 arcsec/yr)	0
-TARGPMRA	TARGPMRA		double		FLOAT(126)	16	Y	Y	N							Y					target proper motion ra (0.0000 s/yr)	0
-TARGRA	TARGRA		double		FLOAT(126)	16	Y	Y	N							Y					target right ascension	266.419625
-TARGRADV	TARGRADV		double		FLOAT(126)	16	Y	Y	N							Y					target radial velocity (0.000000 km/s)	0
+SYSGAIN	SYSGAIN		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					System gain in e-/ADU	2.15
+TARGDEC	TARGDEC		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target declination	-29.00311111
+TARGEPOC	TARGEPOC		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target epoch (2000.000000)	2000
+TARGEQUI	TARGEQUI		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target equinox (2000.000000)	2000
+TARGFRAM	TARGFRAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					target frame	FK5
+TARGPLAX	TARGPLAX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target parallax (0.0 arcsec)	0
+TARGPMDC	TARGPMDC		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target proper motion dec (0.000 arcsec/yr)	0
+TARGPMRA	TARGPMRA		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target proper motion ra (0.0000 s/yr)	0
+TARGRA	TARGRA		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target right ascension	266.419625
+TARGRADV	TARGRADV		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target radial velocity (0.000000 km/s)	0
 TARGWAVE	TARGWAVE		double	microns	FLOAT(126)	15	Y	Y	N		18.5f					Y					target wavelength (microns)g
 TELESCOP	TELESCOP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					telescope name
 TELFOCUS	TELFOCUS		double	mm	FLOAT(126)	30	Y	Y	N		18.5f					Y					telescope focus compensated (1.419 mm)g
 TIMFILE	TIMFILE		char		VARCHAR2(62 BYTE)	62	Y	Y	N		62s					Y					Filename contg
-TKENRUP	TKENRUP		integer		NUMBER(*,0)	16	Y	Y	N							Y					Enable SC ROI updates	1
-TKSPCACT	TKSPCACT		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					trick SPOC Active	false
-TKSPCCBX	TKSPCCBX		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC CentOff X buffered in pixels	0.282396
-TKSPCCBY	TKSPCCBY		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC CentOff Y buffered in pixels	-0.405508
-TKSPCCIX	TKSPCCIX		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC CentOff X immediate in pixels	0.266652
-TKSPCCIY	TKSPCCIY		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC CentOff Y immediate in pixels	-0.374159
-TKSPCER1	TKSPCER1		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC Status Error1 count	0
-TKSPCER2	TKSPCER2		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC Active Error1 count	0
-TKSPCRCX	TKSPCRCX		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI center X in pixels	1135
-TKSPCRCY	TKSPCRCY		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI center Y in pixels	1029
-TKSPCRLX	TKSPCRLX		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI Loc X in pixels	1127
-TKSPCRLY	TKSPCRLY		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI Loc Y in pixels	1021
-TKSPCSTS	TKSPCSTS		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC Status	0
-TKSPCSX	TKSPCSX		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC Star Xim in meters	-0.007460
-TKSPCSY	TKSPCSY		double		FLOAT(126)	16	Y	Y	N							Y					trick SPOC Star Yim in meters	-0.010327
-TKSPCSZX	TKSPCSZX		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI size X in pixels	16
-TKSPCSZY	TKSPCSZY		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC ROI size Y in pixels	16
-TKSPCTRG	TKSPCTRG		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC Camera Trig	0
-TKSPCWN1	TKSPCWN1		integer		NUMBER(*,0)	16	Y	Y	N							Y					trick SPOC Warning1 Count	0
-TRKCNGN	TRKCNGN		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT centroid gain	0.025
-TRKMASTR	TRKMASTR		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT Master (1)	1
-TRKNMAD1	TRKNMAD1		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 COADD (0)	1
-TRKRO1AL	TRKRO1AL		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 AL (0)	0
-TRKRO1CM	TRKRO1CM		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT ROI1 CM	0.000
-TRKRO1DL	TRKRO1DL		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 DELAY (0)	0
-TRKRO1FO	TRKRO1FO		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT ROI1 FOC	0.000
-TRKRO1PI	TRKRO1PI		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT ROI1 PI	764.000
-TRKRO1PR	TRKRO1PR		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 PERIOD (0)	1
-TRKRO1XP	TRKRO1XP		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 XPOS (0)	924
-TRKRO1XS	TRKRO1XS		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 XSIZE (0)	16
-TRKRO1YP	TRKRO1YP		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 YPOS (0)	738
-TRKRO1YS	TRKRO1YS		integer		NUMBER(*,0)	16	Y	Y	N							Y					NIRTT ROI1 YSIZE (0)	16
-TRKWTX1	TRKWTX1		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorX ROI1	0.000
-TRKWTX2	TRKWTX2		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorX ROI2	0.000
-TRKWTX3	TRKWTX3		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorX ROI3	0.000
-TRKWTXST	TRKWTXST		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorX ST	1.000
-TRKWTY1	TRKWTY1		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorY ROI1	0.000
-TRKWTY2	TRKWTY2		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorY ROI2	0.000
-TRKWTY3	TRKWTY3		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorY ROI3	0.000
-TRKWTYST	TRKWTYST		double		FLOAT(126)	16	Y	Y	N							Y					NIRTT weighting factorY ST	1.000
-TRUITIME	TRUITIME		integer		FLOAT(126)	16	Y	Y	N							Y					Actual integratime time of each coadd	0
+TKENRUP	TKENRUP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Enable SC ROI updates	1
+TKSPCACT	TKSPCACT		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					trick SPOC Active	false
+TKSPCCBX	TKSPCCBX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC CentOff X buffered in pixels	0.282396
+TKSPCCBY	TKSPCCBY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC CentOff Y buffered in pixels	-0.405508
+TKSPCCIX	TKSPCCIX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC CentOff X immediate in pixels	0.266652
+TKSPCCIY	TKSPCCIY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC CentOff Y immediate in pixels	-0.374159
+TKSPCER1	TKSPCER1		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC Status Error1 count	0
+TKSPCER2	TKSPCER2		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC Active Error1 count	0
+TKSPCRCX	TKSPCRCX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI center X in pixels	1135
+TKSPCRCY	TKSPCRCY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI center Y in pixels	1029
+TKSPCRLX	TKSPCRLX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI Loc X in pixels	1127
+TKSPCRLY	TKSPCRLY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI Loc Y in pixels	1021
+TKSPCSTS	TKSPCSTS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC Status	0
+TKSPCSX	TKSPCSX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC Star Xim in meters	-0.007460
+TKSPCSY	TKSPCSY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					trick SPOC Star Yim in meters	-0.010327
+TKSPCSZX	TKSPCSZX		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI size X in pixels	16
+TKSPCSZY	TKSPCSZY		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC ROI size Y in pixels	16
+TKSPCTRG	TKSPCTRG		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC Camera Trig	0
+TKSPCWN1	TKSPCWN1		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					trick SPOC Warning1 Count	0
+TRKCNGN	TRKCNGN		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT centroid gain	0.025
+TRKMASTR	TRKMASTR		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT Master (1)	1
+TRKNMAD1	TRKNMAD1		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 COADD (0)	1
+TRKRO1AL	TRKRO1AL		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 AL (0)	0
+TRKRO1CM	TRKRO1CM		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT ROI1 CM	0.000
+TRKRO1DL	TRKRO1DL		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 DELAY (0)	0
+TRKRO1FO	TRKRO1FO		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT ROI1 FOC	0.000
+TRKRO1PI	TRKRO1PI		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT ROI1 PI	764.000
+TRKRO1PR	TRKRO1PR		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 PERIOD (0)	1
+TRKRO1XP	TRKRO1XP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 XPOS (0)	924
+TRKRO1XS	TRKRO1XS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 XSIZE (0)	16
+TRKRO1YP	TRKRO1YP		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 YPOS (0)	738
+TRKRO1YS	TRKRO1YS		integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					NIRTT ROI1 YSIZE (0)	16
+TRKWTX1	TRKWTX1		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorX ROI1	0.000
+TRKWTX2	TRKWTX2		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorX ROI2	0.000
+TRKWTX3	TRKWTX3		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorX ROI3	0.000
+TRKWTXST	TRKWTXST		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorX ST	1.000
+TRKWTY1	TRKWTY1		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorY ROI1	0.000
+TRKWTY2	TRKWTY2		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorY ROI2	0.000
+TRKWTY3	TRKWTY3		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorY ROI3	0.000
+TRKWTYST	TRKWTYST		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					NIRTT weighting factorY ST	1.000
+TRUITIME	TRUITIME		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Actual integratime time of each coadd	0
 TUBETEMP	TUBETEMP		double	celsius	FLOAT(126)	17	Y	Y	N		18.5f					Y					tube temperature (-0.78 degC)g
-TVANGL	TVANGL		double		FLOAT(126)	16	Y	Y	N							Y					porg to tv angle (180.0 deg)	180
-TVFLIP	TVFLIP		char		VARCHAR2(9 BYTE)	8	Y	Y	N							Y					porg to tv y flip	no
+TVANGL	TVANGL		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					porg to tv angle (180.0 deg)	180
+TVFLIP	TVFLIP		char		VARCHAR2(9 BYTE)	9	Y	Y	N		9s					Y					porg to tv y flip	no
 UTCLP	UTCLP		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					OPEN/CLOSE TT CLMP ctrl loopg
 UTGAIN	UTGAIN		double		FLOAT(126)	15	Y	Y	N		18.5f					Y					Set TT loop gaing
-VBIASGAT	VBIASGAT		double		FLOAT(126)	16	Y	Y	N							Y					Gate voltage of SCA in V, obtained from ASIC	2.0996
-VBIASPWR	VBIASPWR		double		FLOAT(126)	16	Y	Y	N							Y					Source voltage of SCA in V, obtained from ASIC	3.3
-VDD	VDD		double		FLOAT(126)	16	Y	Y	N							Y					Digital SCA power supply in V (from ASIC)	3.2453
-VDDA	VDDA		double		FLOAT(126)	16	Y	Y	N							Y					Analog SCA supply voltage in V (from ASIC)	3.2453
-VPRAMRF1	VPRAMRF1		double		FLOAT(126)	16	Y	Y	N							Y					Ref volt 1 for internal preamp DAC in V (ASIC)	1.2512
-VPREMDRF	VPREMDRF		double		FLOAT(126)	16	Y	Y	N							Y					Mid ADC ref volt from bias blk in V (from ASIC)	1.0362
-VREFMAIN	VREFMAIN		double		FLOAT(126)	16	Y	Y	N							Y					Ref voltage from bias block in V (from ASIC)	1.4995
-VRESET	VRESET		double		FLOAT(126)	16	Y	Y	N							Y					Reset voltage in V, obtained from ASIC	0.3011
-VRPSTYPE	VRPSTYPE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Vertical reference pixel subtraction type	channel
+VBIASGAT	VBIASGAT		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Gate voltage of SCA in V, obtained from ASIC	2.0996
+VBIASPWR	VBIASPWR		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Source voltage of SCA in V, obtained from ASIC	3.3
+VDD	VDD		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Digital SCA power supply in V (from ASIC)	3.2453
+VDDA	VDDA		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Analog SCA supply voltage in V (from ASIC)	3.2453
+VPRAMRF1	VPRAMRF1		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Ref volt 1 for internal preamp DAC in V (ASIC)	1.2512
+VPREMDRF	VPREMDRF		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Mid ADC ref volt from bias blk in V (from ASIC)	1.0362
+VREFMAIN	VREFMAIN		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Ref voltage from bias block in V (from ASIC)	1.4995
+VRESET	VRESET		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Reset voltage in V, obtained from ASIC	0.3011
+VRPSTYPE	VRPSTYPE		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Vertical reference pixel subtraction type	channel
 WCDMSTAT	WCDMSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Status of DM loopg
 WCDTSTAT	WCDTSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Status of down tt loopg
 WCUTSTAT	WCUTSTAT		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Status of utt loopg
