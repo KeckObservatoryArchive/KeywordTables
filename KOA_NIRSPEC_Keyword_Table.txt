@@ -9,7 +9,7 @@ KOAIMTYP	KOAIMTYP	Added	char		VARCHAR2(24 BYTE)	24	Y	Y	Y		24s				arclamp, dark, 
 IMTYPE	IMTYPE	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Observation type		
 CAMERA	CAMERA	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s				SCAM,SPEC		Y			Y	Camera name		
 RA	CRA	Lative	char	deg	VARCHAR2(24 BYTE)	24	Y	Y	N	angle	24s										Telescope right ascension		
-DEC	CDEC	Native	char	deg	VARCHAR2(32 BYTE)	32	Y	Y	Y	angle	32s		-90	95							Telescope declination		
+DEC	CDEC	Native	char	deg	VARCHAR2(32 BYTE)	32	Y	Y	Y	angle	32s										Telescope declination		
 EQUINOX	EQUINOX	Native	double	year	FLOAT(126)	32	Y	Y	N		18.8f										telescope equinox (2000.0)		
 FRAMENO	FRAMENO	Added	integer		NUMBER(*,0)	16	Y	Y	Y		16d			9999			Y			Y	copy of FILENUM		
 FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Frame number		
@@ -121,7 +121,7 @@ DMGAIN	DMGAIN	Native	double		FLOAT(126)	32	Y	Y	N		18.8f										Set DM loop gai
 DMMRFN	DMMRFN	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Name of DM reconstructor file		
 DOMEPOSN	DOMEPOSN	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										dome azimuth (302.81 deg)		
 DOMESTST	DOMESTST	Native	char		VARCHAR2(16 BYTE)	16	Y	N	N		16s										DCS dome status string		
-DQA_DATE	DQA_DATE	Added	char		TIMESTAMP	32	N	Y	N		30s										Date of DQA run		
+DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s										Date of DQA run		
 DQA_VERS	DQA_VERS	Added	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s										DQA version number		
 DRA	DRA	Native	double	seconds/sec	FLOAT(126)	32	Y	Y	N		18.8f										differential right ascension rate		
 DRAIN	DRAIN	Native	double	volts	FLOAT(126)	32	Y	N	N		18.8f										DRAIN (0x600A) voltage		
