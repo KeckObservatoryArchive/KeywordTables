@@ -1,70 +1,65 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example Notes
+KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file KP.20170208_00008.fits	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, fpc, domeflat, twiflat, contbars, undefined	Y	Y			Y	KOA image type	object
 ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking	 
-AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR	 
-AIRMASS	AIRMASS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Airmass	 
 AMPON	AMPON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										LFC: Amount of time amplifier on	 
 AMPSEC	AMPSEC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										amplifier section	 
-AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Guider active	 
-AUTFWHM	AUTFWHM	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[pix] DCS Guider fwhm	 
-AUTXCENT	AUTXCENT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS Guider x centroid	 
-AUTYCENT	AUTYCENT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS Guider y centroid	 
-AXESTAT	AXESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS axes control status	 
-AZ	AZ	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Azimuth	 
 BITPIX	BITPIX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										array data type	 
-CAL-OBJ	CAL-OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration source from Octagon position	 
 CALMON	CALMON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration intensity monitor position	 
-CALOCAL	CALOCAL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										collimation-azimuth-local	 
 CAMERAS	CAMERAS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Detectors in assembly request	 
 CA_HK	CA_HK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 
+CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 CCDGAIN	CCDGAIN	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Current measured amplifier gain in e-/DN Abby S	 
-CELOCAL	CELOCAL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										collimation-elevation-local	 
 COMMENT	COMMENT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-CURRINST	CURRINST	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Instrument	 
 DATALVL	DATALVL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Data Product Base Level	 
 DATE	DATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										End of exposure from kpfexpose.ENDTIME	 
-DATE-BEG	DATE-BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Start of exposure from kpfexpose.STARTTIME	 
+DATE-BEG	DATE-BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Start of exposure from kpfexpose.STARTT	 
 DATE-END	DATE-END	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										End of exposure from kpfexpose.ENDTIME	 
 DATE-MID	DATE-MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted	 
-DATE-OBS	DATE-OBS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Start of exposure from kpfexpose.STARTTIME	 
-DDEC	DDEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec/s] DCS Diff Dec rate	 
-DEC	DEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Dec	 
-DECBASE	DECBASE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Dec base	 
-DECOFF	DECOFF	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS Dec offset	 
-DOMEPOSN	DOMEPOSN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Dome user position	 
-DOMESTST	DOMESTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Dome status string	 
-DRA	DRA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[s/s] DCS Diff RA rate	 
-DTRACK	DTRACK	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 
-EL	EL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Elevation	 
-ELASPED	ELASPED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Actual exposure time from kpfexpose.ELAPSED	 
-EQUINOX	EQUINOX	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Equinox	 
-EXPTIME	EXPTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Requested exposure time	 
+DATE-OBS	DATE-OBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Date dcs1.DATE	 
+DEC	DEC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] Declination	 
+ELASPED	ELASPED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 
+EQUINOX	EQUINOX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Equinox	 
+EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 
+EXPTIME	EXPTIME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Requested exposure time	 
 EXTEND	EXTEND	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d											 
 EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3	 
-FFFW	FFFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield FW Position	 
-FFSHTR	FFSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field fiber shutter at exposure midpoint	 
-FFSOURCE	FFSOURCE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field broad band power status	 
 FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating mode	 
-FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal-station	 
 FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Position of FIU Fold mirror	 
-FRAMENO	FRAMENO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
+FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d											 
+GAIN00	GAIN00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 0	 
+GAIN01	GAIN01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 1	 
+GAIN02	GAIN02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 2	 
+GAIN03	GAIN03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 3	 
 GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups	 
-GFRAMENO	GFRAMENO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green Frame number from kpfgreen.FRAMENO	 
+GFRAMENO	GFRAMENO	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Green Frame number from kpfgreen.FRAMENO	 
+GRACF	GRACF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Last user-chosen ACF key Kwd green ACF	 
+GRACFFI	GRACFFI	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ACF file from ACF key Kwd green ACFFILE	 
+GRACFMD5	GRACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										MD5 sum for ACFFILE; 'unknown' if path not know	 
+GRCAMD_V	GRCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd green CAMD_VER	 
+GRCDS0	GRCDS0	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS0	 
+GRCDS1	GRCDS1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS1	 
+GRCDS2	GRCDS2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS2	 
+GRCDS3	GRCDS3	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green CDS3	 
 GRDATE	GRDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write time Kwd green DATE	 
 GRDATE-B	GRDATE-B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd green DATE-BEG	 
 GRDATE-E	GRDATE-E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd green DATE-END	 
 GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 
 GREENFN	GREENFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 GRELAPS	GRELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd green ELAPSED	 
+GREXPTI	GREXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd green EXPTIME	 
 GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd green FILENAME	 
+GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										co	 
+GRFRAME	GRFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green FRAMENO	 
+GRHDRSHI	GRHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd green HDRSHI	 
 GROBJECT	GROBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd green OBJECT	 
 GROBSERV	GROBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd green OBSERVER	 
 GRPROGNA	GRPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd green PROGNAME	 
-GUIDING	GUIDING	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Guiding status	 
-GUIDWAVE	GUIDWAVE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										guidestar-wavelength	 
-HA	HA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Hour angle	 
+GRSHUTT	GRSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd green SHUTTEN	 
+GRTEST	GRTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd green TEST	 
+GRTM_ZO	GRTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd green TM_ZONE	 
 HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU	 
 HDUVERS	HDUVERS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d											 
 HEART_01	HEART_01	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpf_hk.DISP0CLK	 
@@ -77,27 +72,28 @@ HEART_07	HEART_07	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfgreen.DI
 HEART_08	HEART_08	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfgreen.DISP3CLK	 
 HEART_09	HEART_09	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfguide.DISP1CLK	 
 HEART_10	HEART_10	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfguide.DISP2CLK	 
-HEART_11	HEART_11	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP1CLK	 
-HEART_12	HEART_12	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP2CLK	 
-HEART_13	HEART_13	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP3CLK	 
-HEART_14	HEART_14	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP4CLK	 
-HEART_15	HEART_15	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP5CLK	 
-HEART_16	HEART_16	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP6CLK	 
-HEART_17	HEART_17	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP7CLK	 
-HEART_18	HEART_18	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmot.DISP1CLK	 
-HEART_19	HEART_19	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP1CLK	 
-HEART_20	HEART_20	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP2CLK	 
-HEART_21	HEART_21	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP3CLK	 
-HEART_22	HEART_22	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP4CLK	 
-HEART_23	HEART_23	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP5CLK	 
-HEART_24	HEART_24	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP6CLK	 
-HEART_25	HEART_25	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP7CLK	 
-HEART_26	HEART_26	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP8CLK	 
-HEART_27	HEART_27	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP9CLK	 
-HEART_28	HEART_28	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfssd.DISP1CLK	 
-HEART_29	HEART_29	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfvac.DISP1CLK	 
-HEART_30	HEART_30	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfvac.DISP2CLK	 
-INSTANGL	INSTANGL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										porg-to-instrument angle	 
+HEART_11	HEART_11	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpflamps.DISP1CLK	 
+HEART_12	HEART_12	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP1CLK	 
+HEART_13	HEART_13	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP2CLK	 
+HEART_14	HEART_14	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP3CLK	 
+HEART_15	HEART_15	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP4CLK	 
+HEART_16	HEART_16	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP5CLK	 
+HEART_17	HEART_17	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP6CLK	 
+HEART_18	HEART_18	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmet.DISP7CLK	 
+HEART_19	HEART_19	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfmot.DISP1CLK	 
+HEART_20	HEART_20	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP1CLK	 
+HEART_21	HEART_21	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP2CLK	 
+HEART_22	HEART_22	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP3CLK	 
+HEART_23	HEART_23	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP4CLK	 
+HEART_24	HEART_24	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP5CLK	 
+HEART_25	HEART_25	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP6CLK	 
+HEART_26	HEART_26	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP7CLK	 
+HEART_27	HEART_27	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP8CLK	 
+HEART_28	HEART_28	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfpower.DISP9CLK	 
+HEART_29	HEART_29	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfssd.DISP1CLK	 
+HEART_30	HEART_30	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfvac.DISP1CLK	 
+HEART_31	HEART_31	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										kpfvac.DISP2CLK	 
+INSTRUME	INSTRUME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Selected instrument	 
 LFCCEOFR	LFCCEOFR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										CEO Filtered Setpoint Freq	 
 LFCCWFER	LFCCWFER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										CW Freq Error: Ref-Actual	 
 LFCCWFRF	LFCCWFRF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										CW Freq Reference	 
@@ -108,76 +104,61 @@ LFCFR	LFCFR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										LFC filtered Offs
 LFCFREF	LFCFREF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										LFC filtered Offset Freq RR Comb setpoint	 
 LFCFRREF	LFCFRREF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										LFC filtered Offset Freq RR Filter setpoint	 
 LFCMODE	LFCMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										LFC Operation Mode	 
-LST	LST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Local sidereal time	 
+MJD-OBS	MJD-OBS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Modified Julian day	 
 NAXIS	NAXIS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of array dimensions	 
 NAXIS1	NAXIS1	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										length of dimension 1	 
 NAXIS2	NAXIS2	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										length of dimension 2	 
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing assistant	
 OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-OCTBB	OCTBB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Octagon broad band power status	 
+OFFSET00	OFFSET00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 0	 
+OFFSET01	OFFSET01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 1	 
+OFFSET02	OFFSET02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 2	 
+OFFSET03	OFFSET03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 3	 
 OFNAME	OFNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Filename of output file	 
-OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters open at exposure midpoint	 
 OUTDIR	OUTDIR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Output directory for file in OFNAME	 
 OUTFILE	OUTFILE	KPF	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					filename prefix kpf	
-PARANG	PARANG	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Parallactic angle astrometric	 
-PARANTEL	PARANTEL	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Parallactic angle telescope	 
 PCOUNT	PCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of group parameters	 
-PMFM	PMFM	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[nm] Primary mirror focus mode	 
-PMGAIN	PMGAIN	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Primary mirror gain	 
-PMMODE	PMMODE	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Primary mirror control mode	 
-PMRMSRES	PMRMSRES	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[nm] Primary mirror residual RMS	 
-PMSNAP	PMSNAP	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Primary mirror config snapshot	 
-PMTEMP	PMTEMP	ACS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[c] Primary mirror temperature	 
-PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Point origin name	 
-POXPOS	POXPOS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										pointing-origin-x-position	 
-POYPOS	POYPOS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										pointing-origin-y-position	 
-PRES	PRES	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										hPa Pressure at Vaisala kpfmet.PRES	 
-RA	RA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS RA	 
-RABASE	RABASE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS RA base	 
-RAOFF	RAOFF	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS RA offset	 
+RA	RA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[h] Right ascension	 
+RDACF	RDACF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Last user-chosen ACF key Kwd red ACF	 
+RDACFFI	RDACFFI	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ACF file from ACF key Kwd red ACFFILE	 
+RDACFMD5	RDACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										MD5 sum for ACFFILE; 'unknown' if path not know	 
+RDCAMD_V	RDCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd red CAMD_VER	 
+RDCDS0	RDCDS0	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS0	 
+RDCDS1	RDCDS1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS1	 
+RDCDS2	RDCDS2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS2	 
+RDCDS3	RDCDS3	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red CDS3	 
 RDDATE	RDDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write time Kwd red DATE	 
 RDDATE-B	RDDATE-B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd red DATE-BEG	 
 RDDATE-E	RDDATE-E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd red DATE-END	 
 RDELAPS	RDELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd red ELAPSED	 
+RDEXPTI	RDEXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd red EXPTIME	 
 RDFILENA	RDFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd red FILENAME	 
+RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										contro	 
+RDFRAME	RDFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red FRAMENO	 
+RDHDRSHI	RDHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd red HDRSHIFT	 
 RDOBJECT	RDOBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd red OBJECT	 
 RDOBSERV	RDOBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd red OBSERVER	 
 RDPROGNA	RDPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd red PROGNAME	 
+RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd red SHUTTEN	 
+RDTEST	RDTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd red TEST	 
+RDTM_ZO	RDTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd red TM_ZONE	 
 RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 
 REDFN	REDFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-RELH	RELH	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Relative humidity at Vaisala kpfmet.RELH	 
-RFRAMENO	RFRAMENO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red Frame number from kpfred.FRAMENO	 
-ROTCALAN	ROTCALAN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										rotator-calibration-angle	 
-ROTZERO	ROTZERO	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										rotator-zero-angle	 
-SCIFBILL	SCIFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber LED back illuminator power	 
-SCISEL	SCISEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science Select shutter at exposure midpoint	 
-SCRAMSHT	SCRAMSHT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Scrambler shutter at exposure midpoint	 
-SECFOCUS	SECFOCUS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[mm] DCS Secondary focus	 
-SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Secondary status string	 
-SECTHETX	SECTHETX	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS Secondary theta x	 
-SECTHETY	SECTHETY	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[asec] DCS Secondary theta y	 
-SIMCALFW	SIMCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simual Cal FW Position	 
-SIMCALSH	SIMCALSH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simult Cal shutter at exposure midpoint	 
+RFRAMENO	RFRAMENO	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Red Frame number from kpfred.FRAMENO	 
 SIMPLE	SIMPLE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										conforms to FITS standard	 
-SKYFBILL	SKYFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber LED back illuminator power	 
-SKYSEL	SKYSEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky Select Shutter at exposure midpoint	 
-SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for exposure	 
-SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Position	 
-TARGDEC	TARGDEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Target Dec	 
-TARGEPOC	TARGEPOC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-epoch	 
-TARGEQUI	TARGEQUI	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-equinox	 
-TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-frame	 
-TARGNAME	TARGNAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Target name	 
-TARGPMDC	TARGPMDC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-proper-motion-dec	 
-TARGPMRA	TARGPMRA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-proper-motion-ra	 
-TARGRA	TARGRA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Target RA	 
-TARGWAVE	TARGWAVE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-wavelength	 
-TELESCOP	TELESCOP	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Telescope name	 
-TELFOCUS	TELFOCUS	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[mm] DCS Telescope focus	 
-TERTDEST	TERTDEST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Tertiary user destination	 
-TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Tertiary user position	 
-TERTSTST	TERTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Tertiary status string	 
+TARGDEC	TARGDEC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	 
+TARGEPOC	TARGEPOC	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target epoch	 
+TARGEQUI	TARGEQUI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target equinox	 
+TARGFRAM	TARGFRAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-frame	 
+TARGNAME	TARGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Target name	 
+TARGPLAX	TARGPLAX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec] target parallax	 
+TARGPMDC	TARGPMDC	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec/yr] target proper motion dec	 
+TARGPMRA	TARGPMRA	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										[s/yr] target proper motion ra	 
+TARGRA	TARGRA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[h] DCS Target RA	 
+TARGRADV	TARGRADV	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										[km/s] target radial velocity	 
+TARGWAVE	TARGWAVE	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										target-wavelength	 
+TELESCOP	TELESCOP	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Telescope	 
 TFIELDS	TFIELDS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of table fields	 
 TFORM1	TFORM1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TFORM2	TFORM2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
@@ -186,12 +167,7 @@ TFORM4	TFORM4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s
 TFORM5	TFORM5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TFORM6	TFORM6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TFORM7	TFORM7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-THARAU	THARAU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status	 
-THARD	THARD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status	 
 TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	 
-TRACKING	TRACKING	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Servos tracking status	 
-TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras sent triggers	 
 TTYPE1	TTYPE1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TTYPE2	TTYPE2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TTYPE3	TTYPE3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
@@ -199,7 +175,5 @@ TTYPE4	TTYPE4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s
 TTYPE5	TTYPE5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TTYPE6	TTYPE6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
 TTYPE7	TTYPE7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 
-TUBETEMP	TUBETEMP	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[degC] DCS Tube temperature	 
-UNEAU	UNEAU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold UNe power status	 
-UNEDAY	UNEDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily UNe power status	 
+UT	UT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Universal Time	 
 XTENSION	XTENSION	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										binary table extension	 
