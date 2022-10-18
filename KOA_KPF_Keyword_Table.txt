@@ -252,7 +252,7 @@ XPIXSIZE	XPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										X pixel size, u
 XTENSION	XTENSION	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										binary table extension	 
 YDETSIZE	YDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector Y size, pix	 
 YPIXSIZE	YPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Y pixel size, um	 
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox
+	DEC2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox
