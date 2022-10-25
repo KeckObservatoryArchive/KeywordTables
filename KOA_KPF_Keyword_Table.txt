@@ -14,7 +14,7 @@ AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guider
 AUTFWHM	AUTFWHM	DCS	double	pixels	FLOAT(126)	16	Y	Y	N		18.5f					Y					[pix] DCS Guider fwhm	 	 
 AUTXCENT	AUTXCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Guider x centroid	 	 
 AUTYCENT	AUTYCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Guider y centroid	 	 
-AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS axes control status	 	 
+AXESTAT	AXESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS axes control status	 	 
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Azimuth	 	 
 BITPIX	BITPIX	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					array data type	 	 
 BLCLAMP	BLCLAMP	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Baseline clamp; 0=Off,1=On	 	 
@@ -49,7 +49,7 @@ DATEUSER	DATEUSER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of cal
 DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level	 	 
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec/s] DCS Diff Dec rate	 	 
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[deg] Declination	 	 
-DECBASE	DECBASE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Dec base	 	 
+DECBASE	DECBASE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Dec base	 	 
 DECOFF	DECOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Dec offset	 	 
 DIFFPTDW	DIFFPTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between pri mirro temp dewpt	 	 
 DIFFSTDW	DIFFSTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between sec mirro temp dewpt	 	 
@@ -58,7 +58,7 @@ DOMESTST	DOMESTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Dome s
 DQA_DATE	DQA_DATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess time	 	 
 DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess code version	 	 
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[s/s] DCS Diff RA rate	 	 
-DTRACK	DTRACK	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 	 
+DTRACK	DTRACK	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 	 
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Elevation	 	 
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time	 	 
 ELASPED	ELASPED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 	 
@@ -87,7 +87,7 @@ FLIPCOLS	FLIPCOLS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net column flip
 FLIPCOLX	FLIPCOLX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External column flip	 	 
 FLIPROWS	FLIPROWS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net row flip	 	 
 FLIPROWX	FLIPROWX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External row flip	 	 
-FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										focal-station	 	 
+FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal-station	 	 
 FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Position of FIU Fold mirror	 	 
 FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	Observation number	 	 
 GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups	 	 
@@ -98,7 +98,7 @@ GUIDFWHM	GUIDFWHM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Guide sta
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guiding status	 	 
 GUIDTIME	GUIDTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Guide star FWHM measure time	 	 
 GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										guidestar-wavelength	 	 
-HA	HA	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Hour angle	 	 
+HA	HA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Hour angle	 	 
 HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU	 	 
 HCLSN	HCLSN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										S/N of lamp in use	 	 
 HKFBILL	HKFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca H and K fiber LED back illuminator power	 	 
@@ -156,7 +156,7 @@ RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at V
 ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle	 	 
 ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle	 	 
 SBELEV	SBELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] bottom shutter elevation	 	 
-SBVIGNE	SBVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										bottom shutter vignette (t/f)	 	 
+SBVIGNE	SBVIGNE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										bottom shutter vignette (t/f)	 	 
 SCI-OBJ	SCI_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber source	 	 
 SCIFB	SCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber (1a) on	 	 
 SCIFBILL	SCIFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber LED back illuminator power	 	 
@@ -180,11 +180,11 @@ SKYSEL	SKYSEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky Select Shut
 SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for exposure	 	 
 SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Position	 	 
 STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation	 	 
-STVIGNE	STVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	 	 
-TARGDEC	TARGDEC	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	 	 
+STVIGNE	STVIGNE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	 	 
+TARGDEC	TARGDEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	 	 
 TARGEPOC	TARGEPOC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target epoch	 	 
 TARGEQUI	TARGEQUI	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target equinox	 	 
-TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										target-frame	 	 
+TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-frame	 	 
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	DCS Target name	 	 
 TARGPLAX	TARGPLAX	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec] target parallax	 	 
 TARGPMDC	TARGPMDC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec/yr] target proper motion dec	 	 
@@ -231,7 +231,7 @@ VACSCFB	VACSCFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber
 VACSCREQ	VACSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) requested	 	 
 VACSKFB	VACSKFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) on	 	 
 VACSKREQ	VACSKREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) requested	 	 
-VIGNETTE	VIGNETTE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										dome vignette (t/f)	 	 
+VIGNETTE	VIGNETTE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										dome vignette (t/f)	 	 
 VSSID	VSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed ID	 	 
 VSSPEED	VSSPEED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed	 	 
 WINDOW	WINDOW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										hbeg hend vbeg vend	 	 
