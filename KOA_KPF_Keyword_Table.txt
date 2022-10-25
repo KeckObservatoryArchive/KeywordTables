@@ -34,7 +34,6 @@ CBIN	CBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(column binning)
 CDELT1U	CDELT1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column binning	 	 
 CDELT2U	CDELT2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row binning	 	 
 CELOCAL	CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-elevation-local	 	 
-COMMENT	COMMENT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 CRVAL1U	CRVAL1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column origin	 	 
 CRVAL2U	CRVAL2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row origin	 	 
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Selected instrument	 	 
