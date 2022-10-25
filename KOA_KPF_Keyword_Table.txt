@@ -1,255 +1,255 @@
-FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file KP.20170208_00008.fits	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, fpc, domeflat, twiflat, contbars, undefined	Y	Y			Y	KOA image type	object
-ACQMETHD	ACQMETHD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Acquire method		8
-ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking		8
-AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR		8
+ACQMETHD	ACQMETHD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Acquire method	
+ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking	
+AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR	
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Airmass
-AMPCONF	AMPCONF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier and speed		8
-AMPID	AMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier ID		8
-ANDORKIT	ANDORKIT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Andorkit revision		8
-ANDORSW	ANDORSW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SW info		8
+AMPCONF	AMPCONF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier and speed	
+AMPID	AMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier ID	
+ANDORKIT	ANDORKIT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Andorkit revision	
+ANDORSW	ANDORSW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SW info	
 AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guider active
 AUTFWHM	AUTFWHM	DCS	double	pixels	FLOAT(126)	16	Y	Y	N		18.5f					Y					[pix] DCS Guider fwhm
 AUTXCENT	AUTXCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Guider x centroid
 AUTYCENT	AUTYCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Guider y centroid
-AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS axes control status		8
+AXESTAT	AXESTAT	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS axes control status	
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Azimuth
 BITPIX	BITPIX	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					array data type
-BLCLAMP	BLCLAMP	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Baseline clamp; 0=Off,1=On		8
-BLOFFSET	BLOFFSET	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Baseline offset		8
+BLCLAMP	BLCLAMP	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Baseline clamp; 0=Off,1=On	
+BLOFFSET	BLOFFSET	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Baseline offset	
 BSCALE	BSCALE	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					
 BZERO	BZERO	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					
-CAFBS	CAFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) on		8
-CAL-OBJ	CAL_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration fiber source		8
-CALMON	CALMON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration intensity monitor position		8
-CALOCAL	CALOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-azimuth-local		8
-CAMERAS	CAMERAS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Detectors in assembly request		8
-CAMID	CAMID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Hardware info		8
-CAREQ	CAREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) requested		8
-CA_HK	CA_HK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?		8
-CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-CBIN	CBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(column binning)		8
-CDELT1U	CDELT1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column binning		8
-CDELT2U	CDELT2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row binning		8
-CELOCAL	CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-elevation-local		8
-COMMENT	COMMENT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-CRVAL1U	CRVAL1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column origin		8
-CRVAL2U	CRVAL2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row origin		8
+CAFBS	CAFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) on	
+CAL-OBJ	CAL_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration fiber source	
+CALMON	CALMON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration intensity monitor position	
+CALOCAL	CALOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-azimuth-local	
+CAMERAS	CAMERAS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Detectors in assembly request	
+CAMID	CAMID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Hardware info	
+CAREQ	CAREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) requested	
+CA_HK	CA_HK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	
+CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+CBIN	CBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(column binning)	
+CDELT1U	CDELT1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column binning	
+CDELT2U	CDELT2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row binning	
+CELOCAL	CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-elevation-local	
+COMMENT	COMMENT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+CRVAL1U	CRVAL1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column origin	
+CRVAL2U	CRVAL2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row origin	
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Selected instrument
-CURRTEMP	CURRTEMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Camera temperature, degC		8
-DATALVL	DATALVL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Data Product Base Level		8
+CURRTEMP	CURRTEMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Camera temperature, degC	
+DATALVL	DATALVL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Data Product Base Level	
 DATE	DATE_UT	KPF	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					End of exposure from kpfexpose.ENDTIME
 DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					Exposure begin
 DATE-END	DATE_END	KPF	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					Exposure end
-DATE-MID	DATE_MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted		8
+DATE-MID	DATE_MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted	
 DATE-OBS	DATE_OBS	DCS	char		DATE	12	N	Y	Y	date	12s	Y				Y	Y			Y	Date dcs1.DATE
-DATEACQU	DATEACQU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to acq thread		8
-DATEUSER	DATEUSER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to user's fits proc		8
-DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level		8
+DATEACQU	DATEACQU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to acq thread	
+DATEUSER	DATEUSER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to user's fits proc	
+DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level	
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec/s] DCS Diff Dec rate
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[deg] Declination
-DECBASE	DECBASE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Dec base		8
+DECBASE	DECBASE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Dec base	
 DECOFF	DECOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Dec offset
-DIFFPTDW	DIFFPTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between pri mirro temp dewpt		8
-DIFFSTDW	DIFFSTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between sec mirro temp dewpt		8
+DIFFPTDW	DIFFPTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between pri mirro temp dewpt	
+DIFFSTDW	DIFFSTDW	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[decC] Diff between sec mirro temp dewpt	
 DOMEPOSN	DOMEPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Dome user position
 DOMESTST	DOMESTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Dome status string
-DQA_DATE	DQA_DATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess time		8
-DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess code version		8
+DQA_DATE	DQA_DATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess time	
+DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data quality assess code version	
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[s/s] DCS Diff RA rate
-DTRACK	DTRACK	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS differential tracking status		8
+DTRACK	DTRACK	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Elevation
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time
-ELASPED	ELASPED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED		8
-EMGAIN	EMGAIN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										EM Gain		8
+ELASPED	ELASPED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	
+EMGAIN	EMGAIN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										EM Gain	
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				DCS Equinox
-EXPFBILL	EXPFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Exposure meter fiber LED back illuminator power		8
-EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?		8
-EXPOSURE	EXPOSURE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Exposure time, s		8
-EXPSCIFB	EXPSCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) on		8
-EXPSCREQ	EXPSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) requested		8
-EXPSKYFB	EXPSKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (9) on		8
+EXPFBILL	EXPFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Exposure meter fiber LED back illuminator power	
+EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	
+EXPOSURE	EXPOSURE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Exposure time, s	
+EXPSCIFB	EXPSCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) on	
+EXPSCREQ	EXPSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) requested	
+EXPSKYFB	EXPSKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (9) on	
 EXPTIME	EXPTIME	KPF-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Requested exposure time
 EXTEND	EXTEND	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					
-EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3		8
-FFFB	FFFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield fiber (10ab) on		8
-FFFW	FFFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield FW Position		8
-FFREQ	FFREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield fiber (10ab) requested		8
-FFSHTR	FFSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field fiber shutter at exposure midpoint		8
-FFSOURCE	FFSOURCE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field broad band power status		8
-FICALFBS	FICALFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) on		8
-FICALREQ	FICALREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) requested		8
-FIRMWARE	FIRMWARE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Firmware info		8
-FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating mode		8
-FLIPCOLS	FLIPCOLS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net column flip		8
-FLIPCOLX	FLIPCOLX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External column flip		8
-FLIPROWS	FLIPROWS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net row flip		8
-FLIPROWX	FLIPROWX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External row flip		8
-FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										focal-station		8
-FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Position of FIU Fold mirror		8
+EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3	
+FFFB	FFFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield fiber (10ab) on	
+FFFW	FFFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield FW Position	
+FFREQ	FFREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield fiber (10ab) requested	
+FFSHTR	FFSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field fiber shutter at exposure midpoint	
+FFSOURCE	FFSOURCE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field broad band power status	
+FICALFBS	FICALFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) on	
+FICALREQ	FICALREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) requested	
+FIRMWARE	FIRMWARE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Firmware info	
+FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating mode	
+FLIPCOLS	FLIPCOLS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net column flip	
+FLIPCOLX	FLIPCOLX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External column flip	
+FLIPROWS	FLIPROWS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net row flip	
+FLIPROWX	FLIPROWX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External row flip	
+FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										focal-station	
+FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Position of FIU Fold mirror	
 FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	Observation number
-GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups		8
-GRACFFLN	GRACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green acf file loaded		8
-GRACFMD5	GRACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green MD5 sum for the acf file		8
-GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?		8
-GUIDFWHM	GUIDFWHM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Guide star FWHM value		8
+GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups	
+GRACFFLN	GRACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green acf file loaded	
+GRACFMD5	GRACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green MD5 sum for the acf file	
+GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	
+GUIDFWHM	GUIDFWHM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Guide star FWHM value	
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guiding status
-GUIDTIME	GUIDTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Guide star FWHM measure time		8
-GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										guidestar-wavelength		8
-HA	HA	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Hour angle		8
-HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU		8
-HCLSN	HCLSN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										S/N of lamp in use		8
-HKFBILL	HKFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca H and K fiber LED back illuminator power		8
-HSSID	HSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Horiz. shift speed ID		8
-IDNUM	IDNUM	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										UCAM image id		8
-IMTYPE	IMTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image Type		8
-INDEXING	INDEXING	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sets CRVALiU, sgn(CDELTiU)		8
-INSTANGL	INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										porg-to-instrument angle		8
+GUIDTIME	GUIDTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Guide star FWHM measure time	
+GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										guidestar-wavelength	
+HA	HA	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										DCS Hour angle	
+HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU	
+HCLSN	HCLSN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										S/N of lamp in use	
+HKFBILL	HKFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca H and K fiber LED back illuminator power	
+HSSID	HSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Horiz. shift speed ID	
+IDNUM	IDNUM	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										UCAM image id	
+IMTYPE	IMTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image Type	
+INDEXING	INDEXING	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sets CRVALiU, sgn(CDELTiU)	
+INSTANGL	INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										porg-to-instrument angle	
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name
-INSTSLCT	INSTSLCT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Selected Instrument		8
+INSTSLCT	INSTSLCT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Selected Instrument	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Local sidereal time
-MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										Modified Julian day		8
+MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										Modified Julian day	
 NAXIS	NAXIS	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of array dimensions
 NAXIS1	NAXIS1	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 1
 NAXIS2	NAXIS2	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 2
-OA	OA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Observing Assistant name		8
+OA	OA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Observing Assistant name	
 OBJECT	OBJECT	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name
-OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observatory name		8
+OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observatory name	
 OBSERVER	OBSERVER	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer name
-OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation		8
-OBSTYPE	OBSTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image type		8
-OCTAGON	OCTAGON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										selected octagon value		8
-OCTBB	OCTBB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Octagon broad band power status		8
+OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation	
+OBSTYPE	OBSTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image type	
+OCTAGON	OCTAGON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										selected octagon value	
+OCTBB	OCTBB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Octagon broad band power status	
 OFNAME	OFNAME	KPF	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Original file name
-OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters open at exposure midpoint		8
+OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters open at exposure midpoint	
 OUTDIR	OUTDIR	KPF	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					Output directory for file in OFNAME
 OUTFILE	OUTFILE	KPF	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					filename prefix kpf	
 PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Parallactic angle astrometric
 PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Parallactic angle telescope
-PCOUNT	PCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of group parameters		8
-PMFM	PMFM	ACS	integer		NUMBER(*,0)	8	Y	Y	N		16d										PMFM value		8
+PCOUNT	PCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of group parameters	
+PMFM	PMFM	ACS	integer		NUMBER(*,0)	8	Y	Y	N		16d										PMFM value	
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Point origin name
-PONAME1	PONAME1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Point origin name1		8
-POXPOS	POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										pointing-origin-x-position		8
-POYPOS	POYPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-y-position		8
-PREAMPID	PREAMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Preamp Gain ID		8
-PRES	PRES	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										[hPa] Pressure at Vaisala kpfmet.PRES		8
-PRIMTEMP	PRIMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope pri temperature		8
+PONAME1	PONAME1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Point origin name1	
+POXPOS	POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										pointing-origin-x-position	
+POYPOS	POYPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-y-position	
+PREAMPID	PREAMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Preamp Gain ID	
+PRES	PRES	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										[hPa] Pressure at Vaisala kpfmet.PRES	
+PRIMTEMP	PRIMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope pri temperature	
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Program ID
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program institution
-PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name		8
+PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name	
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program principal investigator
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	KOA: Program title set
-PROGTL1	PROGTL1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 1		8
-PROGTL2	PROGTL2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 2		8
-PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 3		8
+PROGTL1	PROGTL1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 1	
+PROGTL2	PROGTL2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 2	
+PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 3	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[h] Right ascension
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS RA offset
-RBIN	RBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(row binning)		8
-RDACFFLN	RDACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red acf file loaded		8
-RDACFMD5	RDACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red MD5 sum for the acf file		8
-RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?		8
-RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at Vaisala kpfmet.RELH		8
-ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle		8
-ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle		8
-SBELEV	SBELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] bottom shutter elevation		8
-SBVIGNE	SBVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										bottom shutter vignette (t/f)		8
-SCI-OBJ	SCI_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber source		8
-SCIFB	SCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber (1a) on		8
-SCIFBILL	SCIFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber LED back illuminator power		8
-SCISEL	SCISEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science Select shutter at exposure midpoint		8
-SCRAMSHT	SCRAMSHT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Scrambler shutter at exposure midpoint		8
+RBIN	RBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(row binning)	
+RDACFFLN	RDACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red acf file loaded	
+RDACFMD5	RDACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red MD5 sum for the acf file	
+RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	
+RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at Vaisala kpfmet.RELH	
+ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle	
+ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle	
+SBELEV	SBELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] bottom shutter elevation	
+SBVIGNE	SBVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										bottom shutter vignette (t/f)	
+SCI-OBJ	SCI_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber source	
+SCIFB	SCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber (1a) on	
+SCIFBILL	SCIFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science fiber LED back illuminator power	
+SCISEL	SCISEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Science Select shutter at exposure midpoint	
+SCRAMSHT	SCRAMSHT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Scrambler shutter at exposure midpoint	
 SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] Secondary focus
-SECMTEMP	SECMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope sec temperature		8
+SECMTEMP	SECMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope sec temperature	
 SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Secondary status string
 SECTHETX	SECTHETX	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Secondary theta x
 SECTHETY	SECTHETY	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Secondary theta y
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Calculated SEMESTER from UT DATE-OBS
-SICALFB	SICALFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SimCal fiber (3ab) on		8
-SICALREQ	SICALREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SimCal fiber (3ab) requested		8
-SIMCALFW	SIMCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simual Cal FW Position		8
-SIMCALSH	SIMCALSH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simult Cal shutter at exposure midpoint		8
+SICALFB	SICALFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SimCal fiber (3ab) on	
+SICALREQ	SICALREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SimCal fiber (3ab) requested	
+SIMCALFW	SIMCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simual Cal FW Position	
+SIMCALSH	SIMCALSH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Simult Cal shutter at exposure midpoint	
 SIMPLE	SIMPLE	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					conforms to FITS standard
-SKY-OBJ	SKY_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber source		8
-SKYFB	SKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber (2a) on		8
-SKYFBILL	SKYFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber LED back illuminator power		8
-SKYSEL	SKYSEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky Select Shutter at exposure midpoint		8
-SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for exposure		8
-SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Position		8
-STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation		8
-STVIGNE	STVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)		8
-TARGDEC	TARGDEC	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec		8
-TARGEPOC	TARGEPOC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target epoch		8
-TARGEQUI	TARGEQUI	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target equinox		8
-TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										target-frame		8
+SKY-OBJ	SKY_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber source	
+SKYFB	SKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber (2a) on	
+SKYFBILL	SKYFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber LED back illuminator power	
+SKYSEL	SKYSEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky Select Shutter at exposure midpoint	
+SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for exposure	
+SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Position	
+STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation	
+STVIGNE	STVIGNE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	
+TARGDEC	TARGDEC	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	
+TARGEPOC	TARGEPOC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target epoch	
+TARGEQUI	TARGEQUI	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target equinox	
+TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										target-frame	
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	DCS Target name
-TARGPLAX	TARGPLAX	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec] target parallax		8
-TARGPMDC	TARGPMDC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec/yr] target proper motion dec		8
-TARGPMRA	TARGPMRA	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[s/yr] target proper motion ra		8
+TARGPLAX	TARGPLAX	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec] target parallax	
+TARGPMDC	TARGPMDC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec/yr] target proper motion dec	
+TARGPMRA	TARGPMRA	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[s/yr] target proper motion ra	
 TARGRA	TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					[h] DCS Target RA
-TARGRADV	TARGRADV	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[km/s] target radial velocity		8
-TARGWAVE	TARGWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										target-wavelength		8
+TARGRADV	TARGRADV	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[km/s] target radial velocity	
+TARGWAVE	TARGWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										target-wavelength	
 TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Telescope
 TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] Telescope focus
 TERTDEST	TERTDEST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertiary user destination
 TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertiary user position
 TERTSTST	TERTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Tertiary status string
-TFIELDS	TFIELDS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of table fields		8
-TFORM1	TFORM1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM2	TFORM2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM3	TFORM3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM4	TFORM4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM5	TFORM5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM6	TFORM6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TFORM7	TFORM7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-THARDAY	THARDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status		8
-THARGD	THARGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status		8
-TIMEERR	TIMEERR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										resp from time serv		8
-TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure		8
+TFIELDS	TFIELDS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of table fields	
+TFORM1	TFORM1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM2	TFORM2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM3	TFORM3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM4	TFORM4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM5	TFORM5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM6	TFORM6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TFORM7	TFORM7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+THARDAY	THARDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status	
+THARGD	THARGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status	
+TIMEERR	TIMEERR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										resp from time serv	
+TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status
-TRIGMODE	TRIGMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Trigger Mode		8
-TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras that were sent triggers		8
-TTYPE1	TTYPE1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE2	TTYPE2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE3	TTYPE3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE4	TTYPE4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE5	TTYPE5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE6	TTYPE6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TTYPE7	TTYPE7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s												8
-TUBEFLEX	TUBEFLEX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[arcsec] Telescope tube flexure		8
+TRIGMODE	TRIGMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Trigger Mode	
+TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras that were sent triggers	
+TTYPE1	TTYPE1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE2	TTYPE2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE3	TTYPE3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE4	TTYPE4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE5	TTYPE5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE6	TTYPE6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TTYPE7	TTYPE7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											
+TUBEFLEX	TUBEFLEX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[arcsec] Telescope tube flexure	
 TUBETEMP	TUBETEMP	DCS	double	Celsius	FLOAT(126)	16	Y	Y	N		18.5f					Y					[degC] Telescope tube temperature
-UNEDAY	UNEDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily UNe power status		8
-UNEGD	UNEGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold UNe power status		8
-USBINFO	USBINFO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										USB device		8
+UNEDAY	UNEDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily UNe power status	
+UNEGD	UNEGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold UNe power status	
+USBINFO	USBINFO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										USB device	
 UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y	Y			Y	DCS Universal Time
-UTC	UTC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: UTC keyword set from UT keyword		8
-VACSCFB	VACSCFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) on		8
-VACSCREQ	VACSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) requested		8
-VACSKFB	VACSKFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) on		8
-VACSKREQ	VACSKREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) requested		8
-VIGNETTE	VIGNETTE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										dome vignette (t/f)		8
-VSSID	VSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed ID		8
-VSSPEED	VSSPEED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed		8
-WINDOW	WINDOW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										hbeg hend vbeg vend		8
-WXDOMHUM	WXDOMHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome humidity		8
-WXDOMTMP	WXDOMTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome temperature		8
-WXDWPT	WXDWPT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Weather dewpoint		8
-WXOUTHUM	WXOUTHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside humidity		8
-WXOUTTMP	WXOUTTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside temperature		8
-WXPRESS	WXPRESS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather pressure		8
-WXTIME	WXTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Weather measurement time		8
-WXWNDIR	WXWNDIR	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind direction		8
-WXWNDSP	WXWNDSP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind speed		8
-XDETSIZE	XDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector X size, pix		8
-XPIXSIZE	XPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										X pixel size, um		8
-XTENSION	XTENSION	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										binary table extension		8
-YDETSIZE	YDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector Y size, pix		8
-YPIXSIZE	YPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Y pixel size, um		8
+UTC	UTC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: UTC keyword set from UT keyword	
+VACSCFB	VACSCFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) on	
+VACSCREQ	VACSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) requested	
+VACSKFB	VACSKFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) on	
+VACSKREQ	VACSKREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) requested	
+VIGNETTE	VIGNETTE	DCS	char		VARCHAR2(16 BYTE)	32	Y	Y	N		32s										dome vignette (t/f)	
+VSSID	VSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed ID	
+VSSPEED	VSSPEED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed	
+WINDOW	WINDOW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										hbeg hend vbeg vend	
+WXDOMHUM	WXDOMHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome humidity	
+WXDOMTMP	WXDOMTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome temperature	
+WXDWPT	WXDWPT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Weather dewpoint	
+WXOUTHUM	WXOUTHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside humidity	
+WXOUTTMP	WXOUTTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside temperature	
+WXPRESS	WXPRESS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather pressure	
+WXTIME	WXTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Weather measurement time	
+WXWNDIR	WXWNDIR	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind direction	
+WXWNDSP	WXWNDSP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind speed	
+XDETSIZE	XDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector X size, pix	
+XPIXSIZE	XPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										X pixel size, um	
+XTENSION	XTENSION	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										binary table extension	
+YDETSIZE	YDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector Y size, pix	
+YPIXSIZE	YPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Y pixel size, um	
 	DEC2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion
