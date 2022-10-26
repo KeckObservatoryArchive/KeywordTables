@@ -29,7 +29,7 @@ CAMERAS	CAMERAS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Detectors in asse
 CAMID	CAMID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Hardware info	 	 
 CAREQ	CAREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) requested	 	 
 CA_HK	CA_HK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	 
-CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(64 BYTE)	32	Y	Y	N		32s											 	 
+CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s											 	 
 CBIN	CBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(column binning)	 	 
 CDELT1U	CDELT1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column binning	 	 
 CDELT2U	CDELT2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row binning	 	 
@@ -39,11 +39,11 @@ CRVAL2U	CRVAL2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row origin
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Selected instrument	 	 
 CURRTEMP	CURRTEMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Camera temperature, degC	 	 
 DATALVL	DATALVL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Data Product Base Level	 	 
-DATE	DATE_UT	KPF	char		VARCHAR2(32 BYTE)	24	Y	Y	N		24s	Y				Y					End of exposure from kpfexpose.ENDTIME	 	 
-DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(32 BYTE)	24	Y	Y	N		24s	Y				Y					Exposure begin	 	 
-DATE-END	DATE_END	KPF	char		VARCHAR2(32 BYTE)	24	Y	Y	N		24s	Y				Y					Exposure end	 	 
+DATE	DATE_UT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					End of exposure from kpfexpose.ENDTIME	 	 
+DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Exposure begin	 	 
+DATE-END	DATE_END	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Exposure end	 	 
 DATE-MID	DATE_MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted	 	 
-DATE-OBS	DATE_OBS	DCS	char		VARCHAR2(32 BYTE)	12	N	Y	Y	date	12s	Y				Y	Y			Y	Date dcs1.DATE	 	 
+DATE-OBS	DATE_OBS	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y	date	32s	Y				Y	Y			Y	Date dcs1.DATE	 	 
 DATEACQU	DATEACQU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to acq thread	 	 
 DATEUSER	DATEUSER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to user's fits proc	 	 
 DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level	 	 
@@ -207,7 +207,7 @@ TFORM6	TFORM6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s
 TFORM7	TFORM7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 THARDAY	THARDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status	 	 
 THARGD	THARGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status	 	 
-TIMEERR	TIMEERR	KPF	char		VARCHAR2(64 BYTE)	32	Y	Y	N		32s										resp from time serv	 	 
+TIMEERR	TIMEERR	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s										resp from time serv	 	 
 TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	 	 
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	 	 
