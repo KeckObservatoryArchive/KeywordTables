@@ -2,14 +2,10 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file KP.20170208_00008.fits		 
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		 
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, fpc, domeflat, twiflat, contbars, undefined	Y	Y			Y	KOA image type	object	 
-ACQMETHD	ACQMETHD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Acquire method	 	 
 ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking	 	 
 AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR	 	 
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Airmass	 	 
-AMPCONF	AMPCONF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier and speed	 	 
-AMPID	AMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Amplifier ID	 	 
-ANDORKIT	ANDORKIT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Andorkit revision	 	 
-ANDORSW	ANDORSW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SW info	 	 
+AMPSEC	AMPSEC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										amplifier section	 	 
 AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guider active	 	 
 AUTFWHM	AUTFWHM	DCS	double	pixels	FLOAT(126)	16	Y	Y	N		18.5f					Y					[pix] DCS Guider fwhm	 	 
 AUTXCENT	AUTXCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS Guider x centroid	 	 
@@ -17,35 +13,22 @@ AUTYCENT	AUTYCENT	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[as
 AXESTAT	AXESTAT	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS axes control status	 	 
 AZ	AZ	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Azimuth	 	 
 BITPIX	BITPIX	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					array data type	 	 
-BLCLAMP	BLCLAMP	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Baseline clamp; 0=Off,1=On	 	 
-BLOFFSET	BLOFFSET	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Baseline offset	 	 
-BSCALE	BSCALE	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y						 	 
-BZERO	BZERO	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f					Y						 	 
 CAFBS	CAFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) on	 	 
 CAL-OBJ	CAL_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration fiber source	 	 
 CALMON	CALMON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Calibration intensity monitor position	 	 
 CALOCAL	CALOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-azimuth-local	 	 
 CAMERAS	CAMERAS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Detectors in assembly request	 	 
-CAMID	CAMID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Hardware info	 	 
 CAREQ	CAREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca HK fibers (6,7) requested	 	 
 CA_HK	CA_HK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	 
-CA_HKFN	CA_HKFN	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s											 	 
-CBIN	CBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(column binning)	 	 
-CDELT1U	CDELT1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column binning	 	 
-CDELT2U	CDELT2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row binning	 	 
+CCDGAIN	CCDGAIN	KPF	double	e/Dn	FLOAT(126)	16	Y	Y	N		18.5f					Y					Current measured amplifier gain in e-/DN Abby S	 	 
 CELOCAL	CELOCAL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										collimation-elevation-local	 	 
-CRVAL1U	CRVAL1U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Column origin	 	 
-CRVAL2U	CRVAL2U	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Row origin	 	 
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Selected instrument	 	 
-CURRTEMP	CURRTEMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Camera temperature, degC	 	 
 DATALVL	DATALVL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Data Product Base Level	 	 
 DATE	DATE_UT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					End of exposure from kpfexpose.ENDTIME	 	 
-DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Exposure begin	 	 
-DATE-END	DATE_END	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Exposure end	 	 
+DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Start of exposure from kpfexpose	 	 
+DATE-END	DATE_END	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					End of exposure from kpfexpose.ENDTIME	 	 
 DATE-MID	DATE_MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted	 	 
-DATE-OBS	DATE_OBS	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y	date	32s	Y				Y	Y			Y	Date dcs1.DATE	 	 
-DATEACQU	DATEACQU	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to acq thread	 	 
-DATEUSER	DATEUSER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Time of call to user's fits proc	 	 
+DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	date	32s	Y				Y	Y			Y	Date dcs1.DATE	 	 
 DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level	 	 
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec/s] DCS Diff Dec rate	 	 
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[deg] Declination	 	 
@@ -60,17 +43,23 @@ DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data q
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[s/s] DCS Diff RA rate	 	 
 DTRACK	DTRACK	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 	 
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Elevation	 	 
+ELAPSED	ELAPSED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 	 
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time	 	 
-ELASPED	ELASPED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 	 
-EMGAIN	EMGAIN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										EM Gain	 	 
+EMDATE-B	EMDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Date-Beg of first observation Kwd expmeter	 	 
+EMDATE-E	EMDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Date-End of last observation Kwd expmeter	 	 
+EMFILEN	EMFILEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Output fil	 	 
+EMFRAME	EMFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Frame number from kpf_expmeter Kwd expmeter FRA	 	 
+EMSEQBEG	EMSEQBEG	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Sequence number of first observation Kwd expmet	 	 
+EMSEQEND	EMSEQEND	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Sequence number of last observation Kwd expmete	 	 
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				DCS Equinox	 	 
 EXPFBILL	EXPFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Exposure meter fiber LED back illuminator power	 	 
 EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	 
-EXPOSURE	EXPOSURE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Exposure time, s	 	 
+EXPMETFN	EXPMETFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 EXPSCIFB	EXPSCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) on	 	 
 EXPSCREQ	EXPSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) requested	 	 
 EXPSKYFB	EXPSKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (9) on	 	 
 EXPTIME	EXPTIME	KPF-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Requested exposure time	 	 
+EXTENAME	EXTENAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 EXTEND	EXTEND	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y						 	 
 EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3	 	 
@@ -81,19 +70,40 @@ FFSHTR	FFSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field fibe
 FFSOURCE	FFSOURCE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flat field broad band power status	 	 
 FICALFBS	FICALFBS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) on	 	 
 FICALREQ	FICALREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU Cal fibers (4,5) requested	 	 
-FIRMWARE	FIRMWARE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Firmware info	 	 
 FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating mode	 	 
-FLIPCOLS	FLIPCOLS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net column flip	 	 
-FLIPCOLX	FLIPCOLX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External column flip	 	 
-FLIPROWS	FLIPROWS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Net row flip	 	 
-FLIPROWX	FLIPROWX	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										External row flip	 	 
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal-station	 	 
-FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Position of FIU Fold mirror	 	 
-FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	Observation number	 	 
+FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Named Position of FIU Fold mirror	 	 
+FOLDVAL	FOLDVAL	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Position of FIU Fold mirror in mm	 	 
+FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y		 	 
+GAIN00	GAIN00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 0	 	 
+GAIN01	GAIN01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 1	 	 
+GAIN02	GAIN02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 2	 	 
+GAIN03	GAIN03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 3	 	 
 GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups	 	 
 GRACFFLN	GRACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green acf file loaded	 	 
 GRACFMD5	GRACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green MD5 sum for the acf file	 	 
+GRCAMD_V	GRCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd green CAMD_VER	 	 
+GRCDS0	GRCDS0	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS0	 	 
+GRCDS1	GRCDS1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS1	 	 
+GRCDS2	GRCDS2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd green CDS2	 	 
+GRCDS3	GRCDS3	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green CDS3	 	 
+GRDATE	GRDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write time Kwd green DATE	 	 
+GRDATE-B	GRDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd green DATE-BEG	 	 
+GRDATE-E	GRDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd green DATE-END	 	 
 GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	 
+GREENFN	GREENFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+GRELAPS	GRELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd green ELAPSED	 	 
+GREXPTI	GREXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd green EXPTIME	 	 
+GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd green FILENAME	 	 
+GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										control	 	 
+GRFRAME	GRFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green FRAMENO	 	 
+GRHDRSHI	GRHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd green HDRSHI	 	 
+GROBJECT	GROBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd green OBJECT	 	 
+GROBSERV	GROBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd green OBSERVER	 	 
+GRPROGNA	GRPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd green PROGNAME	 	 
+GRSHUTT	GRSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd green SHUTTEN	 	 
+GRTEST	GRTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd green TEST	 	 
+GRTM_ZO	GRTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd green TM_ZONE	 	 
 GUIDFWHM	GUIDFWHM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Guide star FWHM value	 	 
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guiding status	 	 
 GUIDTIME	GUIDTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Guide star FWHM measure time	 	 
@@ -101,27 +111,28 @@ GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										guidestar-wave
 HA	HA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Hour angle	 	 
 HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU	 	 
 HCLSN	HCLSN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										S/N of lamp in use	 	 
+HDUVERS	HDUVERS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d											 	 
 HKFBILL	HKFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca H and K fiber LED back illuminator power	 	 
-HSSID	HSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Horiz. shift speed ID	 	 
-IDNUM	IDNUM	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										UCAM image id	 	 
 IMTYPE	IMTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image Type	 	 
-INDEXING	INDEXING	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sets CRVALiU, sgn(CDELTiU)	 	 
-INSTANGL	INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										porg-to-instrument angle	 	 
+INSTANGL	INSTANGL	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										porg-to-instrument angle	 	 
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	 	 
 INSTSLCT	INSTSLCT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Selected Instrument	 	 
+KWFILENM	KWFILENM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Filename of keyword	 	 
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Local sidereal time	 	 
 MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										Modified Julian day	 	 
 NAXIS	NAXIS	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of array dimensions	 	 
 NAXIS1	NAXIS1	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 1	 	 
 NAXIS2	NAXIS2	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 2	 	 
 OA	OA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Observing Assistant name	 	 
-OBJECT	OBJECT	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	 	 
 OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observatory name	 	 
-OBSERVER	OBSERVER	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer name	 	 
+OBSERVER	OBSERVER	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer names	 	 
 OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation	 	 
-OBSTYPE	OBSTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image type	 	 
 OCTAGON	OCTAGON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										selected octagon value	 	 
 OCTBB	OCTBB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Octagon broad band power status	 	 
+OFFSET00	OFFSET00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 0	 	 
+OFFSET01	OFFSET01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 1	 	 
+OFFSET02	OFFSET02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 2	 	 
+OFFSET03	OFFSET03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 3	 	 
 OFNAME	OFNAME	KPF	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Original file name	 	 
 OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters open at exposure midpoint	 	 
 OUTDIR	OUTDIR	KPF	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					Output directory for file in OFNAME	 	 
@@ -132,14 +143,13 @@ PCOUNT	PCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of group par
 PMFM	PMFM	ACS	integer		NUMBER(*,0)	8	Y	Y	N		16d										PMFM value	 	 
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Point origin name	 	 
 PONAME1	PONAME1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Point origin name1	 	 
-POXPOS	POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										pointing-origin-x-position	 	 
+POXPOS	POXPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-x-position	 	 
 POYPOS	POYPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-y-position	 	 
-PREAMPID	PREAMPID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Preamp Gain ID	 	 
 PRES	PRES	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										[hPa] Pressure at Vaisala kpfmet.PRES	 	 
 PRIMTEMP	PRIMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope pri temperature	 	 
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Program ID	 	 
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program institution	 	 
-PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name	 	 
+PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name from kpfexpose	 	 
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program principal investigator	 	 
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	KOA: Program title set	 	 
 PROGTL1	PROGTL1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 1	 	 
@@ -148,10 +158,30 @@ PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[h] Right ascension	 	 
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base	 	 
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS RA offset	 	 
-RBIN	RBIN	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										lg_2(row binning)	 	 
 RDACFFLN	RDACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red acf file loaded	 	 
 RDACFMD5	RDACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red MD5 sum for the acf file	 	 
+RDCAMD_V	RDCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd red CAMD_VER	 	 
+RDCDS0	RDCDS0	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS0	 	 
+RDCDS1	RDCDS1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS1	 	 
+RDCDS2	RDCDS2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Kwd red CDS2	 	 
+RDCDS3	RDCDS3	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red CDS3	 	 
+RDDATE	RDDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write time Kwd red DATE	 	 
+RDDATE-B	RDDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd red DATE-BEG	 	 
+RDDATE-E	RDDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd red DATE-END	 	 
+RDELAPS	RDELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd red ELAPSED	 	 
+RDEXPTI	RDEXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd red EXPTIME	 	 
+RDFILENA	RDFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd red FILENAME	 	 
+RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										controller	 	 
+RDFRAME	RDFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red FRAMENO	 	 
+RDHDRSHI	RDHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd red HDRSHIFT	 	 
+RDOBJECT	RDOBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd red OBJECT	 	 
+RDOBSERV	RDOBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd red OBSERVER	 	 
+RDPROGNA	RDPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd red PROGNAME	 	 
+RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd red SHUTTEN	 	 
+RDTEST	RDTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd red TEST	 	 
+RDTM_ZO	RDTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd red TM_ZONE	 	 
 RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	 
+REDFN	REDFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at Vaisala kpfmet.RELH	 	 
 ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle	 	 
 ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle	 	 
@@ -177,7 +207,7 @@ SKY-OBJ	SKY_OBJ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber sou
 SKYFB	SKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber (2a) on	 	 
 SKYFBILL	SKYFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky fiber LED back illuminator power	 	 
 SKYSEL	SKYSEL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sky Select Shutter at exposure midpoint	 	 
-SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for exposure	 	 
+SRCSHTTR	SRCSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Source shutters commanded for expos	 	 
 SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Position	 	 
 STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation	 	 
 STVIGNE	STVIGNE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	 	 
@@ -199,32 +229,864 @@ TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertia
 TERTSTST	TERTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Tertiary status string	 	 
 TFIELDS	TFIELDS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of table fields	 	 
 TFORM1	TFORM1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM10	TFORM10	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM100	TFORM100	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM101	TFORM101	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM102	TFORM102	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM103	TFORM103	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM104	TFORM104	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM105	TFORM105	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM106	TFORM106	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM107	TFORM107	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM108	TFORM108	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM109	TFORM109	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM11	TFORM11	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM110	TFORM110	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM111	TFORM111	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM112	TFORM112	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM113	TFORM113	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM114	TFORM114	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM115	TFORM115	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM116	TFORM116	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM117	TFORM117	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM118	TFORM118	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM119	TFORM119	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM12	TFORM12	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM120	TFORM120	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM121	TFORM121	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM122	TFORM122	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM123	TFORM123	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM124	TFORM124	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM125	TFORM125	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM126	TFORM126	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM127	TFORM127	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM128	TFORM128	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM129	TFORM129	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM13	TFORM13	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM130	TFORM130	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM131	TFORM131	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM132	TFORM132	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM133	TFORM133	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM134	TFORM134	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM135	TFORM135	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM136	TFORM136	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM137	TFORM137	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM138	TFORM138	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM139	TFORM139	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM14	TFORM14	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM140	TFORM140	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM141	TFORM141	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM142	TFORM142	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM143	TFORM143	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM144	TFORM144	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM145	TFORM145	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM146	TFORM146	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM147	TFORM147	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM148	TFORM148	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM149	TFORM149	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM15	TFORM15	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM150	TFORM150	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM151	TFORM151	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM152	TFORM152	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM153	TFORM153	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM154	TFORM154	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM155	TFORM155	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM156	TFORM156	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM157	TFORM157	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM158	TFORM158	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM159	TFORM159	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM16	TFORM16	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM160	TFORM160	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM161	TFORM161	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM162	TFORM162	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM163	TFORM163	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM164	TFORM164	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM165	TFORM165	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM166	TFORM166	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM167	TFORM167	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM168	TFORM168	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM169	TFORM169	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM17	TFORM17	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM170	TFORM170	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM171	TFORM171	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM172	TFORM172	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM173	TFORM173	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM174	TFORM174	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM175	TFORM175	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM176	TFORM176	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM177	TFORM177	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM178	TFORM178	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM179	TFORM179	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM18	TFORM18	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM180	TFORM180	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM181	TFORM181	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM182	TFORM182	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM183	TFORM183	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM184	TFORM184	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM185	TFORM185	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM186	TFORM186	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM187	TFORM187	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM188	TFORM188	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM189	TFORM189	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM19	TFORM19	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM190	TFORM190	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM191	TFORM191	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM192	TFORM192	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM193	TFORM193	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM194	TFORM194	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM195	TFORM195	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM196	TFORM196	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM197	TFORM197	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM198	TFORM198	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM199	TFORM199	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM2	TFORM2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM20	TFORM20	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM200	TFORM200	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM201	TFORM201	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM202	TFORM202	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM203	TFORM203	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM204	TFORM204	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM205	TFORM205	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM206	TFORM206	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM207	TFORM207	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM208	TFORM208	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM209	TFORM209	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM21	TFORM21	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM210	TFORM210	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM211	TFORM211	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM212	TFORM212	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM213	TFORM213	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM214	TFORM214	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM215	TFORM215	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM216	TFORM216	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM217	TFORM217	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM218	TFORM218	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM219	TFORM219	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM22	TFORM22	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM220	TFORM220	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM221	TFORM221	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM222	TFORM222	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM223	TFORM223	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM224	TFORM224	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM225	TFORM225	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM226	TFORM226	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM227	TFORM227	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM228	TFORM228	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM229	TFORM229	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM23	TFORM23	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM230	TFORM230	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM231	TFORM231	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM232	TFORM232	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM233	TFORM233	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM234	TFORM234	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM235	TFORM235	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM236	TFORM236	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM237	TFORM237	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM238	TFORM238	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM239	TFORM239	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM24	TFORM24	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM240	TFORM240	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM241	TFORM241	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM242	TFORM242	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM243	TFORM243	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM244	TFORM244	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM245	TFORM245	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM246	TFORM246	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM247	TFORM247	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM248	TFORM248	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM249	TFORM249	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM25	TFORM25	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM250	TFORM250	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM251	TFORM251	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM252	TFORM252	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM253	TFORM253	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM254	TFORM254	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM255	TFORM255	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM256	TFORM256	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM257	TFORM257	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM258	TFORM258	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM259	TFORM259	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM26	TFORM26	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM260	TFORM260	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM261	TFORM261	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM262	TFORM262	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM263	TFORM263	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM264	TFORM264	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM265	TFORM265	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM266	TFORM266	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM267	TFORM267	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM268	TFORM268	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM269	TFORM269	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM27	TFORM27	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM270	TFORM270	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM271	TFORM271	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM272	TFORM272	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM273	TFORM273	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM274	TFORM274	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM275	TFORM275	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM276	TFORM276	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM277	TFORM277	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM278	TFORM278	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM279	TFORM279	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM28	TFORM28	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM280	TFORM280	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM281	TFORM281	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM282	TFORM282	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM283	TFORM283	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM284	TFORM284	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM285	TFORM285	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM286	TFORM286	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM287	TFORM287	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM288	TFORM288	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM289	TFORM289	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM29	TFORM29	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM290	TFORM290	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM291	TFORM291	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM292	TFORM292	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM293	TFORM293	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM294	TFORM294	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM295	TFORM295	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM296	TFORM296	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM297	TFORM297	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM298	TFORM298	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM299	TFORM299	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM3	TFORM3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM30	TFORM30	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM300	TFORM300	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM301	TFORM301	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM302	TFORM302	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM303	TFORM303	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM304	TFORM304	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM305	TFORM305	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM306	TFORM306	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM307	TFORM307	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM308	TFORM308	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM309	TFORM309	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM31	TFORM31	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM310	TFORM310	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM311	TFORM311	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM312	TFORM312	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM313	TFORM313	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM314	TFORM314	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM315	TFORM315	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM316	TFORM316	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM317	TFORM317	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM318	TFORM318	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM319	TFORM319	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM32	TFORM32	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM320	TFORM320	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM321	TFORM321	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM322	TFORM322	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM323	TFORM323	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM324	TFORM324	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM325	TFORM325	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM326	TFORM326	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM327	TFORM327	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM328	TFORM328	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM329	TFORM329	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM33	TFORM33	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM330	TFORM330	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM331	TFORM331	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM332	TFORM332	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM333	TFORM333	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM334	TFORM334	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM335	TFORM335	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM336	TFORM336	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM337	TFORM337	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM338	TFORM338	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM339	TFORM339	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM34	TFORM34	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM340	TFORM340	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM341	TFORM341	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM342	TFORM342	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM343	TFORM343	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM344	TFORM344	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM345	TFORM345	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM346	TFORM346	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM347	TFORM347	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM348	TFORM348	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM349	TFORM349	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM35	TFORM35	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM350	TFORM350	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM351	TFORM351	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM352	TFORM352	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM353	TFORM353	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM354	TFORM354	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM355	TFORM355	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM356	TFORM356	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM357	TFORM357	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM358	TFORM358	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM359	TFORM359	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM36	TFORM36	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM360	TFORM360	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM361	TFORM361	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM362	TFORM362	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM363	TFORM363	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM364	TFORM364	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM365	TFORM365	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM366	TFORM366	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM367	TFORM367	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM368	TFORM368	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM369	TFORM369	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM37	TFORM37	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM370	TFORM370	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM371	TFORM371	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM372	TFORM372	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM373	TFORM373	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM374	TFORM374	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM375	TFORM375	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM376	TFORM376	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM377	TFORM377	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM378	TFORM378	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM379	TFORM379	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM38	TFORM38	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM380	TFORM380	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM381	TFORM381	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM382	TFORM382	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM383	TFORM383	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM384	TFORM384	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM385	TFORM385	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM386	TFORM386	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM387	TFORM387	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM388	TFORM388	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM389	TFORM389	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM39	TFORM39	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM390	TFORM390	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM391	TFORM391	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM392	TFORM392	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM393	TFORM393	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM394	TFORM394	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM395	TFORM395	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM396	TFORM396	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM397	TFORM397	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM398	TFORM398	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM399	TFORM399	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM4	TFORM4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM40	TFORM40	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM400	TFORM400	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM401	TFORM401	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM402	TFORM402	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM403	TFORM403	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM404	TFORM404	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM405	TFORM405	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM406	TFORM406	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM407	TFORM407	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM408	TFORM408	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM409	TFORM409	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM41	TFORM41	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM410	TFORM410	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM411	TFORM411	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM412	TFORM412	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM413	TFORM413	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM414	TFORM414	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM415	TFORM415	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM416	TFORM416	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM417	TFORM417	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM418	TFORM418	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM419	TFORM419	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM42	TFORM42	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM420	TFORM420	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM421	TFORM421	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM422	TFORM422	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM423	TFORM423	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM43	TFORM43	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM44	TFORM44	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM45	TFORM45	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM46	TFORM46	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM47	TFORM47	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM48	TFORM48	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM49	TFORM49	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM5	TFORM5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM50	TFORM50	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM51	TFORM51	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM52	TFORM52	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM53	TFORM53	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM54	TFORM54	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM55	TFORM55	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM56	TFORM56	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM57	TFORM57	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM58	TFORM58	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM59	TFORM59	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM6	TFORM6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM60	TFORM60	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM61	TFORM61	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM62	TFORM62	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM63	TFORM63	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM64	TFORM64	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM65	TFORM65	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM66	TFORM66	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM67	TFORM67	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM68	TFORM68	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM69	TFORM69	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TFORM7	TFORM7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM70	TFORM70	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM71	TFORM71	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM72	TFORM72	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM73	TFORM73	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM74	TFORM74	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM75	TFORM75	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM76	TFORM76	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM77	TFORM77	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM78	TFORM78	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM79	TFORM79	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM8	TFORM8	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM80	TFORM80	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM81	TFORM81	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM82	TFORM82	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM83	TFORM83	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM84	TFORM84	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM85	TFORM85	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM86	TFORM86	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM87	TFORM87	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM88	TFORM88	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM89	TFORM89	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM9	TFORM9	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM90	TFORM90	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM91	TFORM91	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM92	TFORM92	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM93	TFORM93	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM94	TFORM94	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM95	TFORM95	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM96	TFORM96	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM97	TFORM97	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM98	TFORM98	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TFORM99	TFORM99	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 THARDAY	THARDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status	 	 
 THARGD	THARGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status	 	 
 TIMEERR	TIMEERR	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s										resp from time serv	 	 
 TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	 	 
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	 	 
-TRIGMODE	TRIGMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Trigger Mode	 	 
 TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras that were sent triggers	 	 
 TTYPE1	TTYPE1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE10	TTYPE10	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE100	TTYPE100	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE101	TTYPE101	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE102	TTYPE102	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE103	TTYPE103	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE104	TTYPE104	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE105	TTYPE105	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE106	TTYPE106	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE107	TTYPE107	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE108	TTYPE108	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE109	TTYPE109	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE11	TTYPE11	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE110	TTYPE110	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE111	TTYPE111	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE112	TTYPE112	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE113	TTYPE113	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE114	TTYPE114	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE115	TTYPE115	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE116	TTYPE116	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE117	TTYPE117	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE118	TTYPE118	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE119	TTYPE119	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE12	TTYPE12	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE120	TTYPE120	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE121	TTYPE121	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE122	TTYPE122	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE123	TTYPE123	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE124	TTYPE124	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE125	TTYPE125	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE126	TTYPE126	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE127	TTYPE127	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE128	TTYPE128	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE129	TTYPE129	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE13	TTYPE13	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE130	TTYPE130	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE131	TTYPE131	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE132	TTYPE132	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE133	TTYPE133	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE134	TTYPE134	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE135	TTYPE135	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE136	TTYPE136	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE137	TTYPE137	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE138	TTYPE138	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE139	TTYPE139	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE14	TTYPE14	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE140	TTYPE140	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE141	TTYPE141	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE142	TTYPE142	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE143	TTYPE143	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE144	TTYPE144	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE145	TTYPE145	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE146	TTYPE146	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE147	TTYPE147	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE148	TTYPE148	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE149	TTYPE149	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE15	TTYPE15	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE150	TTYPE150	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE151	TTYPE151	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE152	TTYPE152	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE153	TTYPE153	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE154	TTYPE154	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE155	TTYPE155	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE156	TTYPE156	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE157	TTYPE157	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE158	TTYPE158	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE159	TTYPE159	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE16	TTYPE16	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE160	TTYPE160	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE161	TTYPE161	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE162	TTYPE162	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE163	TTYPE163	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE164	TTYPE164	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE165	TTYPE165	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE166	TTYPE166	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE167	TTYPE167	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE168	TTYPE168	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE169	TTYPE169	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE17	TTYPE17	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE170	TTYPE170	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE171	TTYPE171	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE172	TTYPE172	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE173	TTYPE173	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE174	TTYPE174	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE175	TTYPE175	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE176	TTYPE176	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE177	TTYPE177	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE178	TTYPE178	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE179	TTYPE179	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE18	TTYPE18	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE180	TTYPE180	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE181	TTYPE181	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE182	TTYPE182	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE183	TTYPE183	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE184	TTYPE184	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE185	TTYPE185	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE186	TTYPE186	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE187	TTYPE187	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE188	TTYPE188	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE189	TTYPE189	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE19	TTYPE19	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE190	TTYPE190	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE191	TTYPE191	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE192	TTYPE192	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE193	TTYPE193	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE194	TTYPE194	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE195	TTYPE195	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE196	TTYPE196	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE197	TTYPE197	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE198	TTYPE198	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE199	TTYPE199	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE2	TTYPE2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE20	TTYPE20	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE200	TTYPE200	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE201	TTYPE201	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE202	TTYPE202	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE203	TTYPE203	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE204	TTYPE204	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE205	TTYPE205	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE206	TTYPE206	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE207	TTYPE207	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE208	TTYPE208	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE209	TTYPE209	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE21	TTYPE21	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE210	TTYPE210	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE211	TTYPE211	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE212	TTYPE212	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE213	TTYPE213	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE214	TTYPE214	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE215	TTYPE215	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE216	TTYPE216	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE217	TTYPE217	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE218	TTYPE218	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE219	TTYPE219	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE22	TTYPE22	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE220	TTYPE220	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE221	TTYPE221	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE222	TTYPE222	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE223	TTYPE223	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE224	TTYPE224	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE225	TTYPE225	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE226	TTYPE226	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE227	TTYPE227	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE228	TTYPE228	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE229	TTYPE229	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE23	TTYPE23	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE230	TTYPE230	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE231	TTYPE231	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE232	TTYPE232	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE233	TTYPE233	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE234	TTYPE234	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE235	TTYPE235	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE236	TTYPE236	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE237	TTYPE237	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE238	TTYPE238	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE239	TTYPE239	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE24	TTYPE24	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE240	TTYPE240	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE241	TTYPE241	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE242	TTYPE242	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE243	TTYPE243	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE244	TTYPE244	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE245	TTYPE245	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE246	TTYPE246	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE247	TTYPE247	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE248	TTYPE248	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE249	TTYPE249	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE25	TTYPE25	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE250	TTYPE250	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE251	TTYPE251	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE252	TTYPE252	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE253	TTYPE253	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE254	TTYPE254	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE255	TTYPE255	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE256	TTYPE256	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE257	TTYPE257	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE258	TTYPE258	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE259	TTYPE259	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE26	TTYPE26	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE260	TTYPE260	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE261	TTYPE261	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE262	TTYPE262	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE263	TTYPE263	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE264	TTYPE264	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE265	TTYPE265	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE266	TTYPE266	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE267	TTYPE267	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE268	TTYPE268	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE269	TTYPE269	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE27	TTYPE27	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE270	TTYPE270	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE271	TTYPE271	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE272	TTYPE272	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE273	TTYPE273	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE274	TTYPE274	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE275	TTYPE275	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE276	TTYPE276	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE277	TTYPE277	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE278	TTYPE278	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE279	TTYPE279	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE28	TTYPE28	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE280	TTYPE280	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE281	TTYPE281	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE282	TTYPE282	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE283	TTYPE283	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE284	TTYPE284	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE285	TTYPE285	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE286	TTYPE286	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE287	TTYPE287	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE288	TTYPE288	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE289	TTYPE289	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE29	TTYPE29	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE290	TTYPE290	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE291	TTYPE291	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE292	TTYPE292	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE293	TTYPE293	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE294	TTYPE294	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE295	TTYPE295	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE296	TTYPE296	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE297	TTYPE297	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE298	TTYPE298	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE299	TTYPE299	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE3	TTYPE3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE30	TTYPE30	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE300	TTYPE300	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE301	TTYPE301	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE302	TTYPE302	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE303	TTYPE303	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE304	TTYPE304	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE305	TTYPE305	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE306	TTYPE306	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE307	TTYPE307	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE308	TTYPE308	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE309	TTYPE309	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE31	TTYPE31	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE310	TTYPE310	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE311	TTYPE311	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE312	TTYPE312	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE313	TTYPE313	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE314	TTYPE314	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE315	TTYPE315	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE316	TTYPE316	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE317	TTYPE317	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE318	TTYPE318	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE319	TTYPE319	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE32	TTYPE32	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE320	TTYPE320	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE321	TTYPE321	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE322	TTYPE322	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE323	TTYPE323	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE324	TTYPE324	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE325	TTYPE325	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE326	TTYPE326	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE327	TTYPE327	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE328	TTYPE328	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE329	TTYPE329	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE33	TTYPE33	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE330	TTYPE330	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE331	TTYPE331	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE332	TTYPE332	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE333	TTYPE333	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE334	TTYPE334	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE335	TTYPE335	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE336	TTYPE336	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE337	TTYPE337	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE338	TTYPE338	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE339	TTYPE339	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE34	TTYPE34	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE340	TTYPE340	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE341	TTYPE341	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE342	TTYPE342	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE343	TTYPE343	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE344	TTYPE344	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE345	TTYPE345	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE346	TTYPE346	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE347	TTYPE347	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE348	TTYPE348	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE349	TTYPE349	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE35	TTYPE35	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE350	TTYPE350	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE351	TTYPE351	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE352	TTYPE352	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE353	TTYPE353	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE354	TTYPE354	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE355	TTYPE355	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE356	TTYPE356	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE357	TTYPE357	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE358	TTYPE358	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE359	TTYPE359	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE36	TTYPE36	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE360	TTYPE360	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE361	TTYPE361	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE362	TTYPE362	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE363	TTYPE363	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE364	TTYPE364	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE365	TTYPE365	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE366	TTYPE366	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE367	TTYPE367	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE368	TTYPE368	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE369	TTYPE369	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE37	TTYPE37	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE370	TTYPE370	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE371	TTYPE371	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE372	TTYPE372	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE373	TTYPE373	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE374	TTYPE374	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE375	TTYPE375	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE376	TTYPE376	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE377	TTYPE377	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE378	TTYPE378	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE379	TTYPE379	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE38	TTYPE38	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE380	TTYPE380	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE381	TTYPE381	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE382	TTYPE382	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE383	TTYPE383	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE384	TTYPE384	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE385	TTYPE385	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE386	TTYPE386	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE387	TTYPE387	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE388	TTYPE388	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE389	TTYPE389	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE39	TTYPE39	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE390	TTYPE390	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE391	TTYPE391	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE392	TTYPE392	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE393	TTYPE393	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE394	TTYPE394	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE395	TTYPE395	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE396	TTYPE396	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE397	TTYPE397	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE398	TTYPE398	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE399	TTYPE399	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE4	TTYPE4	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE40	TTYPE40	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE400	TTYPE400	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE401	TTYPE401	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE402	TTYPE402	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE403	TTYPE403	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE404	TTYPE404	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE405	TTYPE405	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE406	TTYPE406	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE407	TTYPE407	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE408	TTYPE408	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE409	TTYPE409	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE41	TTYPE41	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE410	TTYPE410	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE411	TTYPE411	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE412	TTYPE412	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE413	TTYPE413	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE414	TTYPE414	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE415	TTYPE415	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE416	TTYPE416	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE417	TTYPE417	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE418	TTYPE418	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE419	TTYPE419	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE42	TTYPE42	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE420	TTYPE420	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE421	TTYPE421	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE422	TTYPE422	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE423	TTYPE423	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE43	TTYPE43	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE44	TTYPE44	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE45	TTYPE45	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE46	TTYPE46	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE47	TTYPE47	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE48	TTYPE48	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE49	TTYPE49	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE5	TTYPE5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE50	TTYPE50	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE51	TTYPE51	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE52	TTYPE52	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE53	TTYPE53	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE54	TTYPE54	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE55	TTYPE55	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE56	TTYPE56	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE57	TTYPE57	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE58	TTYPE58	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE59	TTYPE59	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE6	TTYPE6	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE60	TTYPE60	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE61	TTYPE61	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE62	TTYPE62	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE63	TTYPE63	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE64	TTYPE64	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE65	TTYPE65	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE66	TTYPE66	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE67	TTYPE67	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE68	TTYPE68	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE69	TTYPE69	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TTYPE7	TTYPE7	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE70	TTYPE70	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE71	TTYPE71	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE72	TTYPE72	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE73	TTYPE73	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE74	TTYPE74	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE75	TTYPE75	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE76	TTYPE76	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE77	TTYPE77	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE78	TTYPE78	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE79	TTYPE79	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE8	TTYPE8	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE80	TTYPE80	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE81	TTYPE81	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE82	TTYPE82	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE83	TTYPE83	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE84	TTYPE84	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE85	TTYPE85	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE86	TTYPE86	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE87	TTYPE87	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE88	TTYPE88	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE89	TTYPE89	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE9	TTYPE9	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE90	TTYPE90	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE91	TTYPE91	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE92	TTYPE92	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE93	TTYPE93	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE94	TTYPE94	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE95	TTYPE95	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE96	TTYPE96	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE97	TTYPE97	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE98	TTYPE98	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
+TTYPE99	TTYPE99	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	 
 TUBEFLEX	TUBEFLEX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[arcsec] Telescope tube flexure	 	 
 TUBETEMP	TUBETEMP	DCS	double	Celsius	FLOAT(126)	16	Y	Y	N		18.5f					Y					[degC] Telescope tube temperature	 	 
 UNEDAY	UNEDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily UNe power status	 	 
 UNEGD	UNEGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold UNe power status	 	 
-USBINFO	USBINFO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										USB device	 	 
+UNIXBEG	UNIXBEG	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Unix timestamp used for start time	 	 
+UNIXEND	UNIXEND	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Unix timestamp used for end time	 	 
 UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y	Y			Y	DCS Universal Time	 	 
 UTC	UTC	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: UTC keyword set from UT keyword	 	 
 VACSCFB	VACSCFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (1b) on	 	 
@@ -232,23 +1094,19 @@ VACSCREQ	VACSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fib
 VACSKFB	VACSKFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) on	 	 
 VACSKREQ	VACSKREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vac Sci fiber (2b) requested	 	 
 VIGNETTE	VIGNETTE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										dome vignette (t/f)	 	 
-VSSID	VSSID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed ID	 	 
-VSSPEED	VSSPEED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Vert shift speed	 	 
-WINDOW	WINDOW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										hbeg hend vbeg vend	 	 
+WAVEBLUE	WAVEBLUE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										wavelength (angstroms) based on detectors used.	 	 
+WAVECNTR	WAVECNTR	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										wavelength (angstroms) based on detectors used.	 	 
+WAVERED	WAVERED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										wavelength (angstroms) based on detectors used.	 	 
 WXDOMHUM	WXDOMHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome humidity	 	 
 WXDOMTMP	WXDOMTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dome temperature	 	 
-WXDWPT	WXDWPT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Weather dewpoint	 	 
+WXDWPT	WXDWPT	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather dewpoint	 	 
 WXOUTHUM	WXOUTHUM	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside humidity	 	 
 WXOUTTMP	WXOUTTMP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather outside temperature	 	 
 WXPRESS	WXPRESS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather pressure	 	 
 WXTIME	WXTIME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Weather measurement time	 	 
 WXWNDIR	WXWNDIR	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind direction	 	 
 WXWNDSP	WXWNDSP	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										KOA: Weather wind speed	 	 
-XDETSIZE	XDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector X size, pix	 	 
-XPIXSIZE	XPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										X pixel size, um	 	 
 XTENSION	XTENSION	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										binary table extension	 	 
-YDETSIZE	YDETSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										detector Y size, pix	 	 
-YPIXSIZE	YPIXSIZE	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Y pixel size, um	 	 
 	DEC2000	NExScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox	 	 
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive	 	 
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion	 	 
