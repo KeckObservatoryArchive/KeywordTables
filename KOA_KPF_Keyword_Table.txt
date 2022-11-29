@@ -91,11 +91,11 @@ GRDATE	GRDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write
 GRDATE-B	GRDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd green DATE-BEG	 	
 GRDATE-E	GRDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd green DATE-END	 	
 GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
-GREENFN	GREENFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
+GREENFN	GREENFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s											 	
 GRELAPS	GRELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd green ELAPSED	 	
 GREXPTI	GREXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd green EXPTIME	 	
 GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd green FILENAME	 	
-GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										control	 	
+GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										control	 	
 GRFRAME	GRFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green FRAMENO	 	
 GRHDRSHI	GRHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd green HDRSHI	 	
 GROBJECT	GROBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd green OBJECT	 	
@@ -171,7 +171,7 @@ RDDATE-E	RDDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-clo
 RDELAPS	RDELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd red ELAPSED	 	
 RDEXPTI	RDEXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd red EXPTIME	 	
 RDFILENA	RDFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd red FILENAME	 	
-RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										controller	 	
+RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										controller	 	
 RDFRAME	RDFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red FRAMENO	 	
 RDHDRSHI	RDHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd red HDRSHIFT	 	
 RDOBJECT	RDOBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd red OBJECT	 	
@@ -181,7 +181,7 @@ RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabl
 RDTEST	RDTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd red TEST	 	
 RDTM_ZO	RDTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd red TM_ZONE	 	
 RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
-REDFN	REDFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
+REDFN	REDFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s											 	
 RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at Vaisala kpfmet.RELH	 	
 ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle	 	
 ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle	 	
