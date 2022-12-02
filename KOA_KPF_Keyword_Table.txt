@@ -43,23 +43,15 @@ DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data q
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[s/s] DCS Diff RA rate	 	
 DTRACK	DTRACK	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Elevation	 	
-ELAPSED	ELAPSED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 	
+ELAPSED	ELAPSED	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Actual exposure time from kpfexpose.ELAPSED	 	
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time	 	
-EMDATE-B	EMDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Date-Beg of first observation Kwd expmeter	 	
-EMDATE-E	EMDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Date-End of last observation Kwd expmeter	 	
-EMFILEN	EMFILEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Output fil	 	
-EMFRAME	EMFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Frame number from kpf_expmeter Kwd expmeter FRA	 	
-EMSEQBEG	EMSEQBEG	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Sequence number of first observation Kwd expmet	 	
-EMSEQEND	EMSEQEND	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Sequence number of last observation Kwd expmete	 	
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				DCS Equinox	 	
 EXPFBILL	EXPFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Exposure meter fiber LED back illuminator power	 	
 EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
-EXPMETFN	EXPMETFN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
 EXPSCIFB	EXPSCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) on	 	
 EXPSCREQ	EXPSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) requested	 	
 EXPSKYFB	EXPSKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (9) on	 	
 EXPTIME	EXPTIME	KPF-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Requested exposure time	 	
-EXTENAME	EXTENAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
 EXTEND	EXTEND	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y						 	
 EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
 FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3	 	
@@ -80,6 +72,8 @@ GAIN01	GAIN01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 1
 GAIN02	GAIN02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 2	 	
 GAIN03	GAIN03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 3	 	
 GCOUNT	GCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of groups	 	
+GRACF	GRACF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Last user-chosen ACF key Kwd green ACF	 	
+GRACFFI	GRACFFI	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ACF file from ACF key Kwd green ACFFILE	 	
 GRACFFLN	GRACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green acf file loaded	 	
 GRACFMD5	GRACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Green MD5 sum for the acf file	 	
 GRCAMD_V	GRCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd green CAMD_VER	 	
@@ -95,10 +89,9 @@ GREENFN	GREENFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s
 GRELAPS	GRELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd green ELAPSED	 	
 GREXPTI	GREXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd green EXPTIME	 	
 GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd green FILENAME	 	
-GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										control	 	
+GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										co	 	
 GRFRAME	GRFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green FRAMENO	 	
 GRHDRSHI	GRHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd green HDRSHI	 	
-GROBJECT	GROBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd green OBJECT	 	
 GROBSERV	GROBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd green OBSERVER	 	
 GRPROGNA	GRPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd green PROGNAME	 	
 GRSHUTT	GRSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd green SHUTTEN	 	
@@ -124,6 +117,7 @@ NAXIS	NAXIS	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of array dim
 NAXIS1	NAXIS1	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 1	 	
 NAXIS2	NAXIS2	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimension 2	 	
 OA	OA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Observing Assistant name	 	
+OBJECT	OBJECT	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object	 	
 OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observatory name	 	
 OBSERVER	OBSERVER	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer names	 	
 OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation	 	
@@ -143,8 +137,8 @@ PCOUNT	PCOUNT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of group par
 PMFM	PMFM	ACS	integer		NUMBER(*,0)	8	Y	Y	N		16d										PMFM value	 	
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Point origin name	 	
 PONAME1	PONAME1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Point origin name1	 	
-POXPOS	POXPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-x-position	 	
-POYPOS	POYPOS	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										pointing-origin-y-position	 	
+POXPOS	POXPOS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										pointing-origin-x-position	 	
+POYPOS	POYPOS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										pointing-origin-y-position	 	
 PRES	PRES	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										[hPa] Pressure at Vaisala kpfmet.PRES	 	
 PRIMTEMP	PRIMTEMP	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[degC] Telescope pri temperature	 	
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Program ID	 	
@@ -158,6 +152,8 @@ PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[h] Right ascension	 	
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base	 	
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS RA offset	 	
+RDACF	RDACF	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Last user-chosen ACF key Kwd red ACF	 	
+RDACFFI	RDACFFI	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ACF file from ACF key Kwd red ACFFILE	 	
 RDACFFLN	RDACFFLN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red acf file loaded	 	
 RDACFMD5	RDACFMD5	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Red MD5 sum for the acf file	 	
 RDCAMD_V	RDCAMD_V	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										camerad build date Kwd red CAMD_VER	 	
@@ -174,7 +170,6 @@ RDFILENA	RDFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filena
 RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										controller	 	
 RDFRAME	RDFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red FRAMENO	 	
 RDHDRSHI	RDHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd red HDRSHIFT	 	
-RDOBJECT	RDOBJECT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Object name Kwd red OBJECT	 	
 RDOBSERV	RDOBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd red OBSERVER	 	
 RDPROGNA	RDPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd red PROGNAME	 	
 RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd red SHUTTEN	 	
