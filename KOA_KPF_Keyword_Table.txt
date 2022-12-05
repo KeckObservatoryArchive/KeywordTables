@@ -28,7 +28,7 @@ DATE	DATE_UT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					End of exposur
 DATE-BEG	DATE_BEG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					Start of exposure from kpfexpose	 	
 DATE-END	DATE_END	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s	Y				Y					End of exposure from kpfexpose.ENDTIME	 	
 DATE-MID	DATE_MID	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Halfway point of the exposure, unweighted	 	
-DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	date	32s	Y				Y	Y			Y	Date dcs1.DATE	 	
+DATE-OBS	DATE_OBS	DCS	char		DATE	32	N	Y	Y	date	32s	Y				Y	Y			Y	Date dcs1.DATE	 	
 DATLEVEL	DATLEVEL	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										KOA: Data reduction level	 	
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec/s] DCS Diff Dec rate	 	
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[deg] Declination	 	
@@ -92,7 +92,7 @@ GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filena
 GRFIRMWA	GRFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										co	 	
 GRFRAME	GRFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd green FRAMENO	 	
 GRHDRSHI	GRHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd green HDRSHI	 	
-GROBSERV	GROBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd green OBSERVER	 	
+GROBSERV	GROBSERV	KPF	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s										Observer name Kwd green OBSERVER	 	
 GRPROGNA	GRPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd green PROGNAME	 	
 GRSHUTT	GRSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd green SHUTTEN	 	
 GRTEST	GRTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd green TEST	 	
@@ -119,7 +119,7 @@ NAXIS2	NAXIS2	KPF	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of dimensi
 OA	OA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Observing Assistant name	 	
 OBJECT	OBJECT	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object	 	
 OBSERVAT	OBSERVAT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observatory name	 	
-OBSERVER	OBSERVER	KPF	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer names	 	
+OBSERVER	OBSERVER	KPF	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer names	 	
 OBSMODE	OBSMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation	 	
 OCTAGON	OCTAGON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										selected octagon value	 	
 OCTBB	OCTBB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Octagon broad band power status	 	
@@ -170,7 +170,7 @@ RDFILENA	RDFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filena
 RDFIRMWA	RDFIRMWA	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										controller	 	
 RDFRAME	RDFRAME	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Kwd red FRAMENO	 	
 RDHDRSHI	RDHDRSHI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of HDR right-shift bits Kwd red HDRSHIFT	 	
-RDOBSERV	RDOBSERV	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Observer name Kwd red OBSERVER	 	
+RDOBSERV	RDOBSERV	KPF	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s										Observer name Kwd red OBSERVER	 	
 RDPROGNA	RDPROGNA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name Kwd red PROGNAME	 	
 RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabled Kwd red SHUTTEN	 	
 RDTEST	RDTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd red TEST	 	
