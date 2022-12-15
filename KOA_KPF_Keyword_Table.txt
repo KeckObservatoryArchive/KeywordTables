@@ -66,7 +66,7 @@ FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal-station	 	
 FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Named Position of FIU Fold mirror	 	
 FOLDVAL	FOLDVAL	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Position of FIU Fold mirror in mm	 	
-FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y		 	
+FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d					Y	Y			Y		 	
 GAIN00	GAIN00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 0	 	
 GAIN01	GAIN01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 1	 	
 GAIN02	GAIN02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 2	 	
