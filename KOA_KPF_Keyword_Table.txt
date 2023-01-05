@@ -52,8 +52,8 @@ EXPSCIFB	EXPSCIFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Scienc
 EXPSCREQ	EXPSCREQ	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (8ab) requested	 	
 EXPSKYFB	EXPSKYFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ExpM Science fiber (9) on	 	
 EXPTIME	EXPTIME	KPF-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Requested exposure time	 	
-EXTEND	EXTEND	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y						 	
-EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
+EXTEND	EXTEND	KPF	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					The extension end.	 	
+EXTNAME	EXTNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										The extension name.	 	
 FAVER	FAVER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Written by FITSAssemble version 1.3	 	
 FFFB	FFFB	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield fiber (10ab) on	 	
 FFFW	FFFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Flatfield FW Position	 	
@@ -66,7 +66,7 @@ FIUMODE	FIUMODE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FIU operating
 FOCALSTN	FOCALSTN	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										focal-station	 	
 FOLDNAM	FOLDNAM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Named Position of FIU Fold mirror	 	
 FOLDVAL	FOLDVAL	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Position of FIU Fold mirror in mm	 	
-FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d					Y	Y			Y		 	
+FRAMENO	FRAMENO	KPF	integer		NUMBER(*,0)	16	Y	Y	Y		16d					Y	Y			Y	The frame number from the start of KPF.	 	
 GAIN00	GAIN00	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 0	 	
 GAIN01	GAIN01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 1	 	
 GAIN02	GAIN02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										gain for AD chan 2	 	
@@ -85,7 +85,7 @@ GRDATE	GRDATE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										FITS file write
 GRDATE-B	GRDATE_B	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-open time Kwd green DATE-BEG	 	
 GRDATE-E	GRDATE_E	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Shutter-close time Kwd green DATE-END	 	
 GREEN	GREEN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
-GREENFN	GREENFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s											 	
+GREENFN	GREENFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										The GREEN detector frame number from the start of KPF.	 	
 GRELAPS	GRELAPS	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Shutter-elapsed time Kwd green ELAPSED	 	
 GREXPTI	GREXPTI	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										exposure time in msec Kwd green EXPTIME	 	
 GRFILENA	GRFILENA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										this filename Kwd green FILENAME	 	
@@ -104,7 +104,7 @@ GUIDWAVE	GUIDWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										guidestar-wave
 HA	HA	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS Hour angle	 	
 HATCH	HATCH	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Status of the hatch on the exterior of the FIU	 	
 HCLSN	HCLSN	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										S/N of lamp in use	 	
-HDUVERS	HDUVERS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d											 	
+HDUVERS	HDUVERS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										The HDU version.	 	
 HKFBILL	HKFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Ca H and K fiber LED back illuminator power	 	
 IMTYPE	IMTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image Type	 	
 INSTANGL	INSTANGL	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										porg-to-instrument angle	 	
@@ -176,7 +176,7 @@ RDSHUTT	RDSHUTT	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										shutter was enabl
 RDTEST	RDTEST	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										test fitskey from modes file Kwd red TEST	 	
 RDTM_ZO	RDTM_ZO	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										time zone Kwd red TM_ZONE	 	
 RED	RED	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
-REDFN	REDFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s											 	
+REDFN	REDFN	KPF	char		VARCHAR2(96 BYTE)	96	Y	Y	N		96s										The RED detector frame number from the start of KPF.	 	
 RELH	RELH	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										Relative humidity at Vaisala kpfmet.RELH	 	
 ROTCALAN	ROTCALAN	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-calibration-angle	 	
 ROTZERO	ROTZERO	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										rotator-zero-angle	 	
@@ -226,7 +226,7 @@ TFIELDS	TFIELDS	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										number of table f
 THARDAY	THARDAY	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Daily ThAr power status	 	
 THARGD	THARGD	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Gold ThAr power status	 	
 TIMEERR	TIMEERR	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s										resp from time serv	 	
-TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s											 	
+TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										The time system.	 	
 TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	 	
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	 	
 TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras that were sent triggers	 	
