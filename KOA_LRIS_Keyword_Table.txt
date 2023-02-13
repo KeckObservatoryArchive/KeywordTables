@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y		Y	Y	Unique identifier for each file	LR.20150424.44113.fits	
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y		Y		Proprietary period		
-INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				LRIS,LRISBLUE	Y	Y		Y	Y	Instrument name	LRIS	
+INSTRUME	INSTRUME	DCS	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				LRIS,LRISBLUE,LRISpBLUE	Y	Y		Y	Y	Instrument name	LRIS	
 DATE-OBS	DATE_OBS	DCS	char		DATE	16	N	Y	Y	date	32s	Y				Y	Y		Y	Y	observing date		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y	Y		Y		declination		
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y	Y		Y		right ascension		
