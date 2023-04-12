@@ -22,7 +22,7 @@ ALMULSAM	ALMULSAM		integer		NUMBER(16)	16	Y	Y	N							Y					Numbers of samples	8
 ALOBJECT	ALOBJECT		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Object name	Dark_03_04_12s	
 ALOBSERV	ALOBSERV		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Observer name	Engineering	
 ALOUTDIR	ALOUTDIR		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Data directory	/usr/local/caltech/nirc2/data/nirc1/2023mar21/	
-ALRTNAME	ALRTNAME		integer		NUMBER(16)	16	Y	Y	N							Y					Image file root name	n	
+ALRTNAME	ALRTNAME		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Image file root name	n	
 ALSMPMOD	ALSMPMOD		integer		NUMBER(16)	16	Y	Y	N							Y					Sampling mode (1:Single 2:CDS 3:MCDS 4:UTR)	3	
 ALSMPRAT	ALSMPRAT		integer		NUMBER(16)	16	Y	Y	N							Y					[kHz] Pixel sampling rate	200	
 ALTRACK	ALTRACK		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Pupil mask rotator tracking	No	
