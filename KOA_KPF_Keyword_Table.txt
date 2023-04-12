@@ -43,8 +43,8 @@ DQA_VERS	DQA_VERS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KOA: Data q
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					[s/s] DCS Diff RA rate	 	
 DTRACK	DTRACK	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										DCS differential tracking status	 	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Elevation	 	
-ELAPSED	ELAPSED	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										Actual exposure time from kpfexpose.ELAPSED	 	
-ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time	 	
+ELAPSED	ELAPSED	KPF	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	Actual exposure time from kpfexpose.ELAPSED
+ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	KOA: Total integration time
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				DCS Equinox	 	
 EXPFBILL	EXPFBILL	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Exposure meter fiber LED back illuminator power	 	
 EXPMETER	EXPMETER	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Was this camera found?	 	
