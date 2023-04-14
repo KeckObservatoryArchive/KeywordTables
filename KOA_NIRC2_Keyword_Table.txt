@@ -8,7 +8,7 @@ OUTDIR	OUTDIR	alad	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Original dire
 INSTRUME	INSTRUME	added	char		VARCHAR2(24 BYTE)	24	N	Y	Y		24s				NIRC2	Y					Instrument name		
 PROGID	PROGID	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					WMKO ID for observing program		
 PROGINST	PROGINST	added	char		VARCHAR2(32 BYTE)	32	N	N	N		32s					Y				Y	Program institution		
-PROGNAME	PROGNAME		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Program name	ENG	
+PROGNAME	PROGNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Program name	ENG	
 PROGPI	PROGPI	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y				Y	Program principal investigator		
 PROGTITL	PROGTITL	added	char		VARCHAR2(210 BYTE)	210	Y	Y	N		210s					Y				Y	"Program title - concatination of PROGTL1, PROGTL2, PROGTL3 from FITS header"		
 UT	UT	added	char		VARCHAR2(25 BYTE)	25	N	Y	Y	time	25s					Y				Y	copy of UTC		
@@ -19,13 +19,13 @@ ALCOADDS	ALCOADDS		integer		NUMBER(16)	16	Y	Y	N							Y					Number of coaddition
 ALFRMENO	ALFRMENO		integer		NUMBER(16)	16	Y	Y	N							Y					Image file running number	71	
 ALITIME	ALITIME		double		FLOAT(126)	16	Y	Y	N							Y					[s] Integration time	12	
 ALMULSAM	ALMULSAM		integer		NUMBER(16)	16	Y	Y	N							Y					Numbers of samples	8	
-ALOBJECT	ALOBJECT		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Object name	Dark_03_04_12s	
-ALOBSERV	ALOBSERV		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Observer name	Engineering	
-ALOUTDIR	ALOUTDIR		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Data directory	/usr/local/caltech/nirc2/data/nirc1/2023mar21/	
-ALRTNAME	ALRTNAME		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					Image file root name	n	
+ALOBJECT	ALOBJECT		char		VARCHAR2(78 BYTE)	78	Y	Y	N							Y					Object name	Dark_03_04_12s	
+ALOBSERV	ALOBSERV		char		VARCHAR2(78 BYTE)	78	Y	Y	N							Y					Observer name	Engineering	
+ALOUTDIR	ALOUTDIR		char		VARCHAR2(78 BYTE)	78	Y	Y	N							Y					Data directory	/usr/local/caltech/nirc2/data/nirc1/2023mar21/	
+ALRTNAME	ALRTNAME		char		VARCHAR2(78 BYTE)	78	Y	Y	N							Y					Image file root name	n	
 ALSMPMOD	ALSMPMOD		integer		NUMBER(16)	16	Y	Y	N							Y					Sampling mode (1:Single 2:CDS 3:MCDS 4:UTR)	3	
 ALSMPRAT	ALSMPRAT		integer		NUMBER(16)	16	Y	Y	N							Y					[kHz] Pixel sampling rate	200	
-ALTRACK	ALTRACK		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Pupil mask rotator tracking	No	
+ALTRACK	ALTRACK		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Pupil mask rotator tracking	No	
 ALX_EXT	ALX_EXT		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] X extent of the subarray (multiple of 32)	1024	
 ALY_EXT	ALY_EXT		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] Y extent of the subarray (multiple of 8)	1024	
 AOAOAMED	AOAOAMED	ao	double		FLOAT(126)	20	Y	Y	N		20d				"open, closed"	Y					AO WFC AOA camera median light		
@@ -50,7 +50,7 @@ AOFMY	AOFMY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO field steering 
 AOFOMODE	AOFOMODE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO focus offloading mode		
 AOLBFWHM	AOLBFWHM	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO LBWFS avg fwhm		
 AOLPMOVE	AOLPMOVE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO LSP MOVE ENABLE		
-AOMOD	AOMOD		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					AO mode used for QACITS	NGS	
+AOMOD	AOMOD		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					AO mode used for QACITS	NGS	
 AOOPSMOD	AOOPSMOD	ao	integer		NUMBER(38)	20	Y	Y	N		20d					Y					AO General Ops Mode FITS		
 AOOPSMODE	AOOPSMODE	ao-legacy	integer		NUMBER(38)	20	Y	Y	N		20d					Y					AO General Ops Mode		
 AOSTAT	AOSTAT	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO control status		
@@ -62,7 +62,7 @@ AOTSZ	AOTSZ	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					AO tip/tilt sensor
 AOTTMODE	AOTTMODE	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO tip/tilt offloading mode		
 AOWFC0	AOWFC0	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					AO WFS focus stage FSM coefficient 0		
 ARGONPWR	ARGONPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Argon lamp control		
-AUTACTIV	AUTACTIV		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Guider active	no	
+AUTACTIV	AUTACTIV		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Guider active	no	
 AUTFWHM	AUTFWHM		double		FLOAT(126)	16	Y	Y	N							Y					[pix] DCS Guider fwhm	1.885019	
 AUTXCENT	AUTXCENT		double		FLOAT(126)	16	Y	Y	N							Y					[asec] DCS Guider x centroid	-38.8	
 AUTYCENT	AUTYCENT		double		FLOAT(126)	16	Y	Y	N							Y					[asec] DCS Guider y centroid	156	
@@ -71,10 +71,10 @@ AZ	AZ	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope azimuth	
 BITPIX	BITPIX	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Bits per pixel		
 BSCALE	BSCALE	alad	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Scaling factor		
 BZERO	BZERO	alad	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Scaling zero-pointeger		
-CAL_ARCH	CAL_ARCH		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Archon time in 10ns per tick at CAL_SYS	5.25E+13	
-CAL_SYS	CAL_SYS		char		VARCHAR(32 BYTE)	32	Y	Y	N							Y					system time at CAL_ARCH	2023-03-21T01:17:21.480153	
+CAL_ARCH	CAL_ARCH		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Archon time in 10ns per tick at CAL_SYS	5.25E+13	
+CAL_SYS	CAL_SYS		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					system time at CAL_ARCH	2023-03-21T01:17:21.480153	
 CALOCAL	CALOCAL	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					collimation azimuth local		
-CAMD_VER	CAMD_VER		char		VARCHAR(24 BYTE)	24	Y	Y	N							Y					camerad build date	Mar	
+CAMD_VER	CAMD_VER		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					camerad build date	Mar	
 CAMDIST	CAMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					camera slider's distance from from home 		
 CAMNAME	CAMNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y				Y	camera slider's named position		
 CAMRAW	CAMRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					camera slider's encoder position		
@@ -87,12 +87,12 @@ CELOCAL	CELOCAL	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					collimati
 CENTERX	CENTERX		double		FLOAT(126)	16	Y	Y	N							Y					[pix] QACITS initial vortex center X position	0	
 CENTERY	CENTERY		double		FLOAT(126)	16	Y	Y	N							Y					[pix] QACITS initial vortex center Y position	0	
 CENWAVE	CENWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					central wavelength of passband		
-CHECKSUM	CHECKSUM		char		VARCHAR(24 BYTE)	24	Y	Y	N							Y					HDU checksum updated 2023-03-23T18:26:15	9FTHAESF2ESF9ESF	
+CHECKSUM	CHECKSUM		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					HDU checksum updated 2023-03-23T18:26:15	9FTHAESF2ESF9ESF	
 COADDOPT	COADDOPT		integer		NUMBER(16)	16	Y	Y	N							Y					QACITS number of coadds for optimization images	0	
 COADDPSF	COADDPSF		integer		NUMBER(16)	16	Y	Y	N							Y					QACITS number of coadds for off-axis PSF image	0	
 COADDS	COADDS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of coadds		
 COADDSCI	COADDSCI		integer		NUMBER(16)	16	Y	Y	N							Y					QACITS number of coadds for science images	0	
-COMPSTAT	COMPSTAT		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					exposure completion status	completed	
+COMPSTAT	COMPSTAT		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					exposure completion status	completed	
 CRPIX1	CRPIX1		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Reference pixel on the horizontal axis		
 CRPIX2	CRPIX2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Reference pixel on the vertical axis		
 CRVAL1	CRVAL1		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Horizontal axis WCS value at the reference pixel		
@@ -100,13 +100,13 @@ CRVAL2	CRVAL2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Vertical axis WCS va
 CTYPE1	CTYPE1		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					WCS Type of the horizontal coordinate		
 CTYPE2	CTYPE2		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					WCS Type of the vertical coordinate		
 CURRINST	CURRINST	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					current instrument		
-DATASUM	DATASUM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					data unit checksum updated 2023-03-23T18:26:15	0	
-DATE	DATE		char		VARCHAR(32 BYTE)	32	Y	Y	N							Y					FITS file write time	2023-03-23T18:26:15.868657	
+DATASUM	DATASUM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					data unit checksum updated 2023-03-23T18:26:15	0	
+DATE	DATE		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					FITS file write time	2023-03-23T18:26:15.868657	
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					diff decl rate		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope declination		
-DECBASE	DECBASE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Dec base	+00:04:51.6	
+DECBASE	DECBASE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Dec base	+00:04:51.6	
 DECOFF	DECOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					declination offset		
 DETBIAS	DETBIAS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Detector bias setting (0-4096)		
 DETGAIN	DETGAIN	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector gain		
@@ -118,10 +118,10 @@ DMGAIN	DMGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set DM loop gain
 DMMRFN	DMMRFN	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Name of DM reconstructor file		
 DOMEPOSN	DOMEPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					dome azimuth 	147.63	
 DOMESTAT	DOMESTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					dome status		
-DOMESTST	DOMESTST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Dome status string	UNINIT	
-DOOPT	DOOPT		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					QACITS run optimization sequence	No	
-DOPSF	DOPSF		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					QACITS take off-axis PSF image	No	
-DOSCI	DOSCI		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					QACITS tun QACITS science sequence	No	
+DOMESTST	DOMESTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Dome status string	UNINIT	
+DOOPT	DOOPT		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS run optimization sequence	No	
+DOPSF	DOPSF		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS take off-axis PSF image	No	
+DOSCI	DOSCI		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS tun QACITS science sequence	No	
 DPIXX	DPIXX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X offset for off-axis PSF	0	
 DPIXY	DPIXY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y offset for off-axis PSF	0	
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y					Date of DQA run		
@@ -130,21 +130,21 @@ DRA	DRA	dcs	double	sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					differential right a
 DTCLP	DTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 DTGAIN	DTGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set TT loop gain		
 DTRACK	DTRACK	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				"disable, enable"	Y					differential tracking enabled		
-DTSENSOR	DTSENSOR		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Select WFS or STRAP	WFS	
+DTSENSOR	DTSENSOR		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Select WFS or STRAP	WFS	
 EFFITIME	EFFITIME	nirc2	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Effective itme for reduced frame		
 EFFWAVE	EFFWAVE	nirc2	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					effective wavelength of passband		
 EL	EL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope elevation 	45	
 ELAPTIME	ELAPTIME	added	double	seconds	FLOAT(126)	16	Y	Y	Y		18.5f		0	9999		Y				Y	copy of ITIME		
 EQUINOX	EQUINOX	dcs	double	year	FLOAT(126)	20	Y	Y	N		18.5f					Y					telescope equinox 	2000	
-ESTTYPE	ESTTYPE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					QACITS region of interest estimator type	outer_only	
+ESTTYPE	ESTTYPE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS region of interest estimator type	outer_only	
 EXPOSURE	EXPOSURE		double		FLOAT(126)	16	Y	Y	N							Y					User defined integration time	12	
 EXPSTART	EXPSTART	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					current instrument		
 EXPSTOP	EXPSTOP	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					Exposure stop str (UT)		
-FILE	FILE		char		VARCHAR(78 BYTE)	78	Y	Y	N							Y					File	/usr/local/caltech/nirc2/data/nirc1/2023mar23/n_raw_0070.fits	
+FILE	FILE		char		VARCHAR2(78 BYTE)	78	Y	Y	N							Y					File	/usr/local/caltech/nirc2/data/nirc1/2023mar23/n_raw_0070.fits	
 FILENAME	FILENAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					Original File name		
 FILTER	FILTER	nirc2	char		VARCHAR2(50 BYTE)	50	Y	Y	N		50s				"Lp + 9holeMsk,  Ks + clear, H + clear, Lp + clear ,  Ms + clear, blank + blank , PK50_1.5 + Kcont,  K + 9holeMsk, Kp + clear, PK50_1.5 + NB2.108,  PK50_1.5 + Br_gamma,  PK50_1.5 + He1_B, J + clear , K + clear , PK50_1.5 + CO_2-0_bh, PK50_1.5 + H2_2-1, 18hole_msk + PAH, 18hole_msk + clear, PK50_1.5 + Hcont, CH4_short + PK50_1.5, H2O_ice + clear, clear + PAH,  PK50_1.5 + FeII, PK50_1.5 + PaBeta, PK50_1.5 + Jcont, Ms + 9holeMsk, H + 9holeMsk, CH4_long + PK50_1.5, Ks + 9holeMsk, J + 9holeMsk,18hole_msk + Jcont, 18hole_msk + PaBeta, 18hole_msk + Kcont, 18hole_msk + Hcont, Unknown, BrGamma2 + PK50_1.5, CH4_short + 9holeMsk, Kp + 9holeMsk, clear + clear, 18hole_msk + Br_gamma, L_undrSz + clear, 18hole_msk + CO_2-0_bh, H2O_ice + 9holeMsk, 18hole_msk + FeII,  MOVING + clear,  PK50_1.5 + MOVING,  K + MOVING, MOVING + MOVING, Kp + NB2.108, Kp + Br_gamma, Kp + Kcont, clear + FeII, clear + Hcont, PK50_1.5 + empty_07, clear + Kcont, clear + Br_gamma"	Y				Y	composite filter name (both wheel)		
-FIRMWARE	FIRMWARE		char		VARCHAR(54 BYTE)	54	Y	Y	N							Y					controller firmwa	/usr/local/caltech/nirc2/nirc2firmware/nirc2.acf	
-FITSDIR	FITSDIR		char		VARCHAR(54 BYTE)	54	Y	Y	N							Y					Output data director	/usr/local/caltech/nirc2/data/nirc1/2023mar23	
+FIRMWARE	FIRMWARE		char		VARCHAR2(54 BYTE)	54	Y	Y	N							Y					controller firmwa	/usr/local/caltech/nirc2/nirc2firmware/nirc2.acf	
+FITSDIR	FITSDIR		char		VARCHAR2(54 BYTE)	54	Y	Y	N							Y					Output data director	/usr/local/caltech/nirc2/data/nirc1/2023mar23	
 FLIMAGIN	FLIMAGIN	dcs added	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Flat lamp control 1		
 FLSPECTR	FLSPECTR	dcs added	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Flat lamp control 2		
 FOCALSTN	FOCALSTN	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					focal station		
@@ -199,7 +199,7 @@ GRSNAME	GRSNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				"medres, lowres, 
 GRSRAW	GRSRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					grism slider's encoder position		
 GRSSTAT	GRSSTAT	nirc2-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					grism slider's current state		
 GUIDFWHM	GUIDFWHM	added	double	arcseconds	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star		
-GUIDING	GUIDING		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Guiding status	FALSE	
+GUIDING	GUIDING		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Guiding status	FALSE	
 GUIDTIME	GUIDTIME	added	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
 GUIDWAVE	GUIDWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					guidestar wavelength 		
 HA	HA	dcs	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					telescope hour angle	#ERROR!	
@@ -289,7 +289,7 @@ OBWFSTST	OBWFSTST	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					State of FC
 OBWLNAME	OBWLNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WLS		
 OBWNNAME	OBWNNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WND		
 OBWPNAME	OBWPNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WPS		
-OFFLINE	OFFLINE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Run QACITS offline	No	
+OFFLINE	OFFLINE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Run QACITS offline	No	
 OFFSET20	OFFSET20		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 20	0	
 OFFSET21	OFFSET21		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 21	0	
 OFFSET22	OFFSET22		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 22	0	
@@ -339,28 +339,28 @@ PIXSCAL2	PIXSCAL2		double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Pixel scale of t
 PLATESCL	PLATESCL	legacy 2-fits	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Platescale in arcsec/pixel		
 PMAMPX	PMAMPX		double		FLOAT(126)	16	Y	Y	N							Y					[V] PWS modulator amplitude X	0	
 PMAMPY	PMAMPY		double		FLOAT(126)	16	Y	Y	N							Y					[V] PWS modulator amplitude Y	0	
-PMCF1BP	PMCF1BP		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 bypass	NECYPASS	
-PMCF1NP	PMCF1NP		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 named position	on-axis	
+PMCF1BP	PMCF1BP		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 bypass	NECYPASS	
+PMCF1NP	PMCF1NP		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 named position	on-axis	
 PMCF1RX	PMCF1RX		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM1 relative postion X	0	
 PMCF1RY	PMCF1RY		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM1 relative postion Y	0	
-PMCF1ST	PMCF1ST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 status	INPOS	
+PMCF1ST	PMCF1ST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 status	INPOS	
 PMCF1X	PMCF1X		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM1 postion X	2.918649	
-PMCF1XNS	PMCF1XNS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 negative limit set X	FALSE	
-PMCF1XPS	PMCF1XPS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 positive limit set X	FALSE	
+PMCF1XNS	PMCF1XNS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 negative limit set X	FALSE	
+PMCF1XPS	PMCF1XPS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 positive limit set X	FALSE	
 PMCF1Y	PMCF1Y		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM1 postion Y	2.613926	
-PMCF1YNS	PMCF1YNS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 negative limit set Y	FALSE	
-PMCF1YPS	PMCF1YPS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 positive limit set Y	FALSE	
-PMCF2BP	PMCF2BP		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 bypass	NECYPASS	
-PMCF2NP	PMCF2NP		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 named position	noName	
+PMCF1YNS	PMCF1YNS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 negative limit set Y	FALSE	
+PMCF1YPS	PMCF1YPS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM1 positive limit set Y	FALSE	
+PMCF2BP	PMCF2BP		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 bypass	NECYPASS	
+PMCF2NP	PMCF2NP		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 named position	noName	
 PMCF2RX	PMCF2RX		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM2 relative postion X	0.070195	
 PMCF2RY	PMCF2RY		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM2 relative postion Y	-0.049325	
-PMCF2ST	PMCF2ST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 status	INPOS	
+PMCF2ST	PMCF2ST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 status	INPOS	
 PMCF2X	PMCF2X		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM2 postion X	6.303786	
-PMCF2XNS	PMCF2XNS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 negative limit set X	FALSE	
-PMCF2XPS	PMCF2XPS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 positive limit set X	FALSE	
+PMCF2XNS	PMCF2XNS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 negative limit set X	FALSE	
+PMCF2XPS	PMCF2XPS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 positive limit set X	FALSE	
 PMCF2Y	PMCF2Y		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS FSM2 postion Y	6.810135	
-PMCF2YNS	PMCF2YNS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 negative limit set Y	FALSE	
-PMCF2YPS	PMCF2YPS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 positive limit set Y	FALSE	
+PMCF2YNS	PMCF2YNS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 negative limit set Y	FALSE	
+PMCF2YPS	PMCF2YPS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS FSM2 positive limit set Y	FALSE	
 PMCFOC	PMCFOC		double		FLOAT(126)	16	Y	Y	N							Y					[mm] PWS focus	-2.561168	
 PMOFFX	PMOFFX		double		FLOAT(126)	16	Y	Y	N							Y					[V] PWS modulator offset X	0.65	
 PMOFFY	PMOFFY		double		FLOAT(126)	16	Y	Y	N							Y					[V] PWS modulator offset Y	0.5	
@@ -389,7 +389,7 @@ PRENSYNC	PRENSYNC		integer		NUMBER(16)	16	Y	Y	N							Y					Enable Sync MGAOS PR
 PRFREQ	PRFREQ		double		FLOAT(126)	16	Y	Y	N							Y					PWS frequency	400	
 PRHMAG	PRHMAG		double		FLOAT(126)	16	Y	Y	N							Y					PWS H maginitude estimate	0	
 PRMOD	PRMOD		double		FLOAT(126)	16	Y	Y	N							Y					PWS modulation	0	
-PRMODE	PRMODE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					PWS SH mode	SHWFS	
+PRMODE	PRMODE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					PWS SH mode	SHWFS	
 PRSFAULT	PRSFAULT		double		FLOAT(126)	16	Y	Y	N							Y					PWS SAPHIRA fault	0	
 PRSSETUP	PRSSETUP		double		FLOAT(126)	16	Y	Y	N							Y					PWS SAPHIRA setup	0	
 PSOSTAT	PSOSTAT	mech-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Outer preslit current state		
@@ -401,49 +401,49 @@ PSODIST	PSODIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Outer presl
 PSONAME	PSONAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Outer preslit's named position		
 PSORAW	PSORAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					Outer preslit's encoder position		
 PTCHDIS	PTCHDIS		integer		NUMBER(16)	16	Y	Y	N							Y					Lakeshore ColdHead disable	1	
-PTCHNAM	PTCHNAM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Lakeshore ColdHead name	Coldhead	
+PTCHNAM	PTCHNAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Lakeshore ColdHead name	Coldhead	
 PTCHTMP	PTCHTMP		double		FLOAT(126)	16	Y	Y	N							Y					[deg K] Lakeshore ColdHead Temp	0	
 PTFPDIS	PTFPDIS		integer		NUMBER(16)	16	Y	Y	N							Y					Lakeshore FocalPlane disable	1	
-PTFPNAM	PTFPNAM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Lakeshore FocalPlane name	Focalplane	
+PTFPNAM	PTFPNAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Lakeshore FocalPlane name	Focalplane	
 PTFPTMP	PTFPTMP		double		FLOAT(126)	16	Y	Y	N							Y					[deg K] Lakeshore FocalPlane Temp	0	
 PTISDIS	PTISDIS		integer		NUMBER(16)	16	Y	Y	N							Y					Lakeshore InnerSanctum disable	1	
-PTISNAM	PTISNAM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Lakeshore InnerSanctum name	Inner	
+PTISNAM	PTISNAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Lakeshore InnerSanctum name	Inner	
 PTISTMP	PTISTMP		double		FLOAT(126)	16	Y	Y	N							Y					[deg K] Lakeshore InnerSanctum Temp	0	
 PTRSDIS	PTRSDIS		integer		NUMBER(16)	16	Y	Y	N							Y					Lakeshore RadiationShield disable	1	
-PTRSNAM	PTRSNAM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Lakeshore RadiationShield name	Rad	
+PTRSNAM	PTRSNAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Lakeshore RadiationShield name	Rad	
 PTRSTMP	PTRSTMP		double		FLOAT(126)	16	Y	Y	N							Y					[deg K] Lakeshore RadiationShield Temp	0	
 Q1OFFSET	Q1OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 1 preamp offset		
 Q2OFFSET	Q2OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 2 preamp offset		
 Q3OFFSET	Q3OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 3 preamp offset		
 Q4OFFSET	Q4OFFSET	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Aladdin Quadrant 4 preamp offset		
-QAWFS	QAWFS		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					WFS used for QACITS	SHWFS	
+QAWFS	QAWFS		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					WFS used for QACITS	SHWFS	
 QUADWDTH	QUADWDTH		double		FLOAT(126)	16	Y	Y	N							Y					[lambda/D] QACITS quadrant width	0	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		telescope right ascension		
-RABASE	RABASE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS RA base	29:31.1	
+RABASE	RABASE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS RA base	29:31.1	
 RADECSYS	RADECSYS		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					The system of the coordinates		
 RAOFF	RAOFF	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					right ascension offset 		
 RAMPS	RAMPS		integer		NUMBER(16)	16	Y	Y	N							Y					Number of ramps (UTR mode only)	2	
 READS	READS		integer		NUMBER(16)	16	Y	Y	N							Y					Number of reads	100	
-REV	REV		char		VARCHAR(24 BYTE)	24	Y	Y	N							Y					git hash or revision of ACF	2023-02-28T21:43:00	
+REV	REV		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					git hash or revision of ACF	2023-02-28T21:43:00	
 ROOTNAME	ROOTNAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					File prefix		
 ROTBASE	ROTBASE		double		FLOAT(126)	16	Y	Y	N							Y					[deg] DCS Rotator base	-90.3	
 ROTCALAN	ROTCALAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator calibration angle		
 ROTDEST	ROTDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user destination 		
-ROTDETS1	ROTDETS1		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 1	25:53.9	
-ROTDETS2	ROTDETS2		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 2	25:53.9	
+ROTDETS1	ROTDETS1		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 1	25:53.9	
+ROTDETS2	ROTDETS2		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 2	25:53.9	
 ROTMODE	ROTMODE	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					rotator tracking mode		
 ROTPDEST	ROTPDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical destination 		
 ROTPOSN	ROTPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user position 		
 ROTPPOSN	ROTPPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical position 		
 ROTREFAN	ROTREFAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator reference angle		
-ROTSEL	ROTSEL		char		VARCHAR(32 BYTE)	32	Y	Y	N							Y					DCS Selected rotator	none	
-ROTSTST	ROTSTST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Rotator state string	FAULT	
+ROTSEL	ROTSEL		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					DCS Selected rotator	none	
+ROTSTST	ROTSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator state string	FAULT	
 ROTZERO	ROTZERO		double		FLOAT(126)	16	Y	Y	N							Y					rotator-zero-angle	0	
 SAMPLES	SAMPLES		integer		NUMBER(16)	16	Y	Y	N							Y					Number of samples	100	
 SAMPMODE	SAMPMODE	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					1=Single; 2=CDS; 3=MCDS		
 SAMPRATE	SAMPRATE	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Pixel rate in kps		
 SECFOCUS	SECFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror focus raw 		
-SECSTST	SECSTST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Secondary status string	UNINIT	
+SECSTST	SECSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Secondary status string	UNINIT	
 SECTHETX	SECTHETX	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetax 		
 SECTHETY	SECTHETY	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					secondary mirror thetay 		
 SEMESTER	SEMESTER	added	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Semester		
@@ -479,25 +479,25 @@ SUBCSCIX	SUBCSCIX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size 
 SUBCSCIY	SUBCSCIY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of subarray for science ima	0	
 SUBWX	SUBWX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size of window for 2D-Gaussian f	0	
 SUBWY	SUBWY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of window for 2D-gaussian f	0	
-TARGDEC	TARGDEC		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Target Dec	+00:00:00.0	
+TARGDEC	TARGDEC		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Target Dec	+00:00:00.0	
 TARGEPOC	TARGEPOC		double		FLOAT(126)	16	Y	Y	N							Y					target-epoch	0	
 TARGEQUI	TARGEQUI		double		FLOAT(126)	16	Y	Y	N							Y					target-equinox	0	
-TARGFRAM	TARGFRAM		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					target-frame	mount	
+TARGFRAM	TARGFRAM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					target-frame	mount	
 TARGNAME	TARGNAME	dcs	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y				Y	target name		
 TARGPMDC	TARGPMDC		double		FLOAT(126)	16	Y	Y	N							Y					target-proper-motion-dec	0	
 TARGPMRA	TARGPMRA		double		FLOAT(126)	16	Y	Y	N							Y					target-proper-motion-ra	0	
-TARGRA	TARGRA		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Target RA	00:00.0	
+TARGRA	TARGRA		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Target RA	00:00.0	
 TARGWAVE	TARGWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					target wavelength		
 TELESCOP	TELESCOP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					telescope name		
 TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope focus compensated 		
-TERTDEST	TERTDEST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user destination	rnas	
-TERTPOSN	TERTPOSN		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user position	rnas	
-TERTSTST	TERTSTST		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary status string	UNINIT	
+TERTDEST	TERTDEST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user destination	rnas	
+TERTPOSN	TERTPOSN		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user position	rnas	
+TERTSTST	TERTSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary status string	UNINIT	
 TINTOPT	TINTOPT		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for optimization im	0	
 TINTPSF	TINTPSF		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for off-axis PSF im	0	
 TINTSCI	TINTSCI		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for science images	3	
-TM_ZONE	TM_ZONE		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					time zone	GMT	
-TRACKING	TRACKING		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					DCS Servos tracking status	no	
+TM_ZONE	TM_ZONE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					time zone	GMT	
+TRACKING	TRACKING		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Servos tracking status	no	
 TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N		18.8f					Y					tube temperature 		
 UTCLP	UTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set TT loop gain		
