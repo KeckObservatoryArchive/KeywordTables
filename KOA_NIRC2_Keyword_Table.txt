@@ -101,7 +101,7 @@ CTYPE1	CTYPE1		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					WCS Type of the h
 CTYPE2	CTYPE2		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					WCS Type of the vertical coordinate		
 CURRINST	CURRINST	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					current instrument		
 DATASUM	DATASUM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					data unit checksum updated 2023-03-23T18:26:15	0	
-DATE	DATE		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					FITS file write time	2023-03-23T18:26:15.868657	
+DATE	DATE_UT		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					FITS file write time	2023-03-23T18:26:15.868657	
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					diff decl rate		
