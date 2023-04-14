@@ -28,7 +28,7 @@ ALSMPRAT	ALSMPRAT		integer		NUMBER(16)	16	Y	Y	N							Y					[kHz] Pixel sampling
 ALTRACK	ALTRACK		char		VARCHAR(16 BYTE)	16	Y	Y	N							Y					Pupil mask rotator tracking	No	
 ALX_EXT	ALX_EXT		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] X extent of the subarray (multiple of 32)	1024	
 ALY_EXT	ALY_EXT		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] Y extent of the subarray (multiple of 8)	1024	
-AOAOAMED	AOAOAMED	ao	double		FLOAT(128)	20	Y	Y	N		20d				"open, closed"	Y					AO WFC AOA camera median light		
+AOAOAMED	AOAOAMED	ao	double		FLOAT(126)	20	Y	Y	N		20d				"open, closed"	Y					AO WFC AOA camera median light		
 AOCOMODE	AOCOMODE	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO coma offloading mode		
 AODELAY	AODELAY	nirc2	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Delay after AO locks		
 AODMSTAT	AODMSTAT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					AO deformable mirror loop stat		
