@@ -289,7 +289,7 @@ OBWFSTST	OBWFSTST	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					State of FC
 OBWLNAME	OBWLNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WLS		
 OBWNNAME	OBWNNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WND		
 OBWPNAME	OBWPNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WPS		
-OFFLINE	OFFLINE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Run QACITS offline	No	
+OFFLINE	QOFFLINE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Run QACITS offline	No	
 OFFSET20	OFFSET20		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 20	0	
 OFFSET21	OFFSET21		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 21	0	
 OFFSET22	OFFSET22		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 22	0	
