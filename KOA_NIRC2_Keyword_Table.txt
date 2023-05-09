@@ -76,6 +76,7 @@ CAL_SYS	CAL_SYS		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					system time at CAL
 CALOCAL	CALOCAL	dcs	double	arcsec	FLOAT(126)	20	Y	Y	N		18.8f					Y					collimation azimuth local		
 CAMD_VER	CAMD_VER		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					camerad build date	Mar	
 CAMDIST	CAMDIST	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					camera slider's distance from from home 		
+CAMERA	CAMERA	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y				Y	Detector/Camera name		
 CAMNAME	CAMNAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y				Y	camera slider's named position		
 CAMRAW	CAMRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					camera slider's encoder position		
 CAMSTAT	CAMSTAT	legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					camera slider's current state		
@@ -102,6 +103,9 @@ CTYPE2	CTYPE2		char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					WCS Type of the v
 CURRINST	CURRINST	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					current instrument		
 DATASUM	DATASUM		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					data unit checksum updated 2023-03-23T18:26:15	0	
 DATE	DATE_UT		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					FITS file write time	2023-03-23T18:26:15.868657	
+DATE-BEG	DATE_BEG	nirc2	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Exposure start time		
+DATE-CMD	DATE_CMD	nirc2	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Time of expose command		
+DATE-END	DATE_END	nirc2	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Exposure stop time		
 DATLEVEL	DATLEVEL	added	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Data reduction level		
 DCSSTAT	DCSSTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					drive and control status		
 DDEC	DDEC	dcs	double	arcsec/sec	FLOAT(126)	20	Y	Y	N		18.8f					Y					diff decl rate		
@@ -150,6 +154,7 @@ FLSPECTR	FLSPECTR	dcs added	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Flat
 FOCALSTN	FOCALSTN	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					focal station		
 FRAMENO	FRAMENO	alad	integer		NUMBER(38)	16	Y	Y	Y		16d		1	99999		Y				Y	Frame number		
 FRAMES	FRAMES	legacy-2 fits	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Number of frames combined		
+FRMENO	FRMENO	nirc2	integer		NUMBER(16)	16	Y	Y	N		16d					Y					Image file running number		
 FWIANGL	FWIANGL	nirc2	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					inner filter wheel's angular position from home		
 FWINAME	FWINAME	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					inner filter wheel's named position		
 FWINUM	FWINUM	nirc2	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Inner_Filter_Ordinal_Posn		
@@ -203,11 +208,13 @@ GUIDING	GUIDING		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Guiding status
 GUIDTIME	GUIDTIME	added	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
 GUIDWAVE	GUIDWAVE	dcs	double	microns	FLOAT(126)	20	Y	Y	N		18.8f					Y					guidestar wavelength 		
 HA	HA	dcs	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					telescope hour angle	#ERROR!	
+HEADVER	HEADVER		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Header config version		
 HDRSHIFT	HDRSHIFT		integer		NUMBER(16)	16	Y	Y	N							Y					number of HDR right-shift bits	16	
 IMAGEMD	IMAGEMD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					"Imaging pixels, median "		
 IMAGEMN	IMAGEMN	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					"Imaging pixels, mean "		
 IMAGESD	IMAGESD	added	double	DN	FLOAT(126)	16	Y	Y	N		18.8f					Y					"Imaging pixels, standard deviation"		
 IMAGETYP	IMAGETYP	nirc2	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					ImageType		
+IMTYPE	IMTYPE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Image type		
 INNERRAD	INNERRAD		double		FLOAT(126)	16	Y	Y	N							Y					[lambda/D] QACITS inner circle radius	0	
 INSTANGL	INSTANGL	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					porg to instrument angle	48	
 INSTFLIP	INSTFLIP	dcs	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s				"yes,no"	Y					porg to instrument y flip		
@@ -242,11 +249,17 @@ MZPSRC	MZPSRC	legacy-2 fits	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Sour
 NAXIS	NAXIS	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of axes		
 NAXIS1	NAXIS1	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of pixels in axis 1		
 NAXIS2	NAXIS2	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Number of pixels in axis 2		
+NCOADD	NCOADD	nirc2	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Coadds completed		
 NEONPWR	NEONPWR	nirc2 added	integer		NUMBER(38)	20	Y	Y	N		20d					Y					Neon lamp control		
+NFRAME	NFRAME		integer		NUMBER(38)	8	Y	Y	N							Y					Video frames completed (RXV and (RXRV)		
+NODE	NODE		double		FLOAT(126)	8	Y	Y	N							Y					Predefined not to the Eas (arcsec)		
+NODN	NODN		double		FLOAT(126)	8	Y	Y	N							Y					Predefined not to the North (arcsec)		
 NLDPTRAD	NLDPTRAD		double		FLOAT(126)	16	Y	Y	N							Y					[lambda/D] QACITS null depth circle radius	0	
 NLINEAR	NLINEAR	added	integer	DN	NUMBER(38)	16	Y	Y	N		16d					Y					Number of pixels above linearity		
 NPIXSAT	NPIXSAT	added	integer	DN	NUMBER(38)	16	Y	Y	N		16d					Y					Number of saturated pixels 	65535	
+NRAMP	NRAMP	nirc2	integer		NUMBER(38)	16	Y	Y	N		16d					Y					Ramps completed (UTR) 	
 NSCI	NSCI		integer		NUMBER(16)	16	Y	Y	N							Y					QACITS number of science frames in sequence	0	
+NSLICE	NSLICE	nirc2	integer		NUMBER(38)	8	Y	Y	N		8d					Y					Datacube slices completed 	
 OA	OA	added	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observing assistant		
 OBAMNAME	OBAMNAME	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Named position control for AFM		
 OBASNAME	OBASNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Name position control for AFS		
@@ -428,6 +441,8 @@ REV	REV		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					git hash or revision of AC
 ROOTNAME	ROOTNAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					File prefix		
 ROTBASE	ROTBASE		double		FLOAT(126)	16	Y	Y	N							Y					[deg] DCS Rotator base	-90.3	
 ROTCALAN	ROTCALAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator calibration angle		
+ROTCOE	ROTCOE	nirc2	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pupil mask rotator elevation dest coeff 		
+ROTCOR	ROTCOR	nirc2	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pupil mask rotator dest coeff 		
 ROTDEST	ROTDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user destination 		
 ROTDETS1	ROTDETS1		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 1	25:53.9	
 ROTDETS2	ROTDETS2		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator time stamp 2	25:53.9	
@@ -435,9 +450,15 @@ ROTMODE	ROTMODE	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					rotator trac
 ROTPDEST	ROTPDEST	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical destination 		
 ROTPOSN	ROTPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator user position 		
 ROTPPOSN	ROTPPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical position 		
+ROTPRIOD	ROTPRIOD	nirc2	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y					 Pupil mask rotato servo period		
 ROTREFAN	ROTREFAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator reference angle		
+ROTSERVO	ROTSERVO		integer		NUMBER(38)	8	Y	Y	N							Y					Pupil mask rotator servo start cmd		
+ROTSERVO	ROTSERVO		integer		NUMBER(38)	8	Y	Y	N							Y					Pupil mask rotator servo start cmd		
 ROTSEL	ROTSEL		char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y					DCS Selected rotator	none	
 ROTSTST	ROTSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Rotator state string	FAULT	
+ROTTRACK	ROTTRACK		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Pupil mask rotator tracking command		
+ROTUP	ROTUP		integer		NUMBER(16)	16	Y	Y	N							Y					Pupil mask rotator task running flag	1	
+ROTUSEEL	ROTUSEEL		double		FLOAT(126)	16	Y	Y	N							Y					Pupil mask rotator use elevation	1.0	
 ROTZERO	ROTZERO		double		FLOAT(126)	16	Y	Y	N							Y					rotator-zero-angle	0	
 SAMPLES	SAMPLES		integer		NUMBER(16)	16	Y	Y	N							Y					Number of samples	100	
 SAMPMODE	SAMPMODE	alad	integer		NUMBER(38)	8	Y	Y	N		8d					Y					1=Single; 2=CDS; 3=MCDS		
@@ -493,6 +514,7 @@ TELFOCUS	TELFOCUS	dcs	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					telescope f
 TERTDEST	TERTDEST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user destination	rnas	
 TERTPOSN	TERTPOSN		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary user position	rnas	
 TERTSTST	TERTSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Tertiary status string	UNINIT	
+TIME-OBS	TIME_OBS		char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Exposure start time	01:19:46.698859	
 TINTOPT	TINTOPT		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for optimization im	0	
 TINTPSF	TINTPSF		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for off-axis PSF im	0	
 TINTSCI	TINTSCI		double		FLOAT(126)	16	Y	Y	N							Y					[s] QACITS integration time for science images	3	
@@ -511,6 +533,7 @@ WCDMSTAT	WCDMSTAT	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Status of D
 WCDTSTAT	WCDTSTAT	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Status of down tt loop		
 WCSDIM	WCSDIM		integer		NUMBER(38)	20	Y	Y	N		20d					Y					number WCS dimensions		
 WCUTSTAT	WCUTSTAT	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Status of utt loop		
+WCVERS	WCVERS	nirc2	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					WFC version		
 WSCNORFN	WSCNORFN	ao	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Name of origin vec file		
 WSFRRT	WSFRRT	ao	integer	Hz	NUMBER(38)	20	Y	Y	N		20d					Y					Frame rate for WFS cam		
 WSGAIN	WSGAIN	ao-legacy	integer		NUMBER(38)	20	Y	Y	N		20d					Y					WFS camera gain servrity		
