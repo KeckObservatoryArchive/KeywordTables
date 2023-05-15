@@ -207,8 +207,8 @@ SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Po
 STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation	 	
 STVIGNE	STVIGNE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	 	
 TARGDEC	TARGDEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	 	
-TARGEPOC	TARGEPOC	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target epoch	 	
-TARGEQUI	TARGEQUI	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										DCS Target equinox	 	
+TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N		16d										DCS Target epoch
+TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N		16d										DCS Target equinox
 TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-frame	 	
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	DCS Target name	 	
 TARGPLAX	TARGPLAX	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[arcsec] target parallax	 	
