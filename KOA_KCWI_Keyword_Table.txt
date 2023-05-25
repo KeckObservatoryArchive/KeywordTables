@@ -29,10 +29,10 @@ AMPNAME1	AMPNAME1	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name,
 AMPNAME2	AMPNAME2	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 1	F	
 AMPNAME3	AMPNAME3	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 2	H	
 AMPNAME4	AMPNAME4	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 3	G	
-ASEC1	ASEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF AMPSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
-ASEC2	ASEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF AMPSEC [CCDpix], readout sequence 1	[1:2048,1:2056]	
-ASEC3	ASEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF AMPSEC [CCDpix], readout sequence 2	[1:2048,1:2056]	
-ASEC4	ASEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF AMPSEC [CCDpix], readout sequence 3	[1:2048,1:2056]	
+ASEC1	ASEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40					Y					IRAF AMPSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
+ASEC2	ASEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 1	[1:2048,1:2056]	
+ASEC3	ASEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 2	[1:2048,1:2056]	
+ASEC4	ASEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 3	[1:2048,1:2056]	
 AUTACTIV	AUTACTIV	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guider active	yes	
 AUTFWHM	AUTFWHM	DCS	double	pixels	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Guider fwhm	0.934575	
 AUTOSHUT	AUTOSHUT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					automatic shutter operation	1	
@@ -88,10 +88,10 @@ BRANGE2	BRANGE2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Heater 2 
 BRESIST1	BRESIST1	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Heater 1 Resistance (1-25, 2-50)	1	
 BRESIST2	BRESIST2	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Heater 2 Resistance (1-25, 2-50)	1	
 BSCALE	BSCALE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					default scaling factor	1	
-BSEC1	BSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF BIASSEC [FITSpix], readout sequence 0	[1054:1150,1:1028]	
-BSEC2	BSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF BIASSEC [FITSpix], readout sequence 1	[1247:1151,1:1028]	
-BSEC3	BSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF BIASSEC [FITSpix], readout sequence 2	[1054:1150,2200:1173]	
-BSEC4	BSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF BIASSEC [FITSpix], readout sequence 4	[1247:1151,2200:1173]	
+BSEC1	BSEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF BIASSEC [FITSpix], readout sequence 0	[1054:1150,1:1028]	
+BSEC2	BSEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	 Y	N		40s					Y					IRAF BIASSEC [FITSpix], readout sequence 1	[1247:1151,1:1028]	
+BSEC3	BSEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF BIASSEC [FITSpix], readout sequence 2	[1054:1150,2200:1173]	
+BSEC4	BSEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF BIASSEC [FITSpix], readout sequence 4	[1247:1151,2200:1173]	
 BTMPHTP1	BTMPHTP1	KCWI	double	%	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Heater 1 Output	0	Whole number or a floating point percentage?  Float
 BTMPHTP2	BTMPHTP2	KCWI	double	%	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Heater 2 Output	0	Whole number or a floating point percentage?
 BTRGTMP1	BTRGTMP1	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Heater 2 setpoint	160	
@@ -193,10 +193,10 @@ CRVAL2A	CRVAL2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2
 CRVAL2B	CRVAL2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS B coord value @ refpix	0.0
 CRVAL2C	CRVAL2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS C coord value @ refpix	0.0
 CRVAL2D	CRVAL2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS D coord value @ refpix	0.0
-CSEC1	CSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF CCDSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
-CSEC2	CSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF CCDSEC [CCDpix], readout sequence 1	[4096:2049,1:2056]	
-CSEC3	CSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF CCDSEC [CCDpix], readout sequence 2	[1:2048,4112:2057]	
-CSEC4	CSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF CCDSEC [CCDpix], readout sequence 3	[4096:2049,4112:2057]	
+CSEC1	CSEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
+CSEC2	CSEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 1	[4096:2049,1:2056]	
+CSEC3	CSEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 2	[1:2048,4112:2057]	
+CSEC4	CSEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 3	[4096:2049,4112:2057]	
 CSYER1A	CSYER1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS A coord systematic error	0.0
 CSYER1B	CSYER1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS B coord systematic error	0.0
 CSYER1C	CSYER1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS C coord systematic error	0.0
@@ -245,10 +245,10 @@ DOMESTST	DOMESTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Dome s
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Date of DQA run		
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DQA version number		
 DRA	DRA	DCS	double	s/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Diff RA rate	0	
-DSEC1	DSEC1	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 0	[30:1053,1:1028]	
-DSEC2	DSEC2	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 1	[2271:1248,1:1028]	
-DSEC3	DSEC3	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 3	[30:1053,2200:1173]	
-DSEC4	DSEC4	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					IRAF DATASEC [FITSpix], readout sequence 4	[2271:1248,2200:1173]	
+DSEC1	DSEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 0	[30:1053,1:1028]	
+DSEC2	DSEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 1	[2271:1248,1:1028]	
+DSEC3	DSEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 3	[30:1053,2200:1173]	
+DSEC4	DSEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 4	[2271:1248,2200:1173]	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Elevation	53.68	
 ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
 EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				Telescope equinox	2000	
