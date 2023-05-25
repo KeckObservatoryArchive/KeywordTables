@@ -1,7 +1,7 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file KP.20170208_00008.fits		
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, undefined	Y	Y			Y	KOA image type	object	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, solar, undefined	Y	Y			Y	KOA image type	object	
 ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking	 	
 AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR	 	
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Airmass	 	
