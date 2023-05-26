@@ -29,7 +29,7 @@ AMPNAME1	AMPNAME1	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name,
 AMPNAME2	AMPNAME2	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 1	F	
 AMPNAME3	AMPNAME3	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 2	H	
 AMPNAME4	AMPNAME4	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					amp name, readout sequence 3	G	
-ASEC1	ASEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40					Y					IRAF AMPSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
+ASEC1	ASEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
 ASEC2	ASEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 1	[1:2048,1:2056]	
 ASEC3	ASEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 2	[1:2048,1:2056]	
 ASEC4	ASEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF AMPSEC [CCDpix], readout sequence 3	[1:2048,1:2056]	
