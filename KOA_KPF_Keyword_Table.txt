@@ -146,9 +146,6 @@ PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Pro
 PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name from kpfexpose	 	
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program principal investigator	 	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	KOA: Program title set	 	
-PROGTL1	PROGTL1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 1	 	
-PROGTL2	PROGTL2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 2	 	
-PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 3	 	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[h] Right ascension	 	
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base	 	
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS RA offset	 	
