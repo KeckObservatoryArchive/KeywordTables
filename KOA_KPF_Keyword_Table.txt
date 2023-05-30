@@ -1,7 +1,7 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file KP.20170208_00008.fits		
 PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		
-KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, undefined	Y	Y			Y	KOA image type	object	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				object, bias, dark, arclamp, flatlamp, solar, undefined	Y	Y			Y	KOA image type	object	
 ADCTRACK	ADCTRACK	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Is the ADC Tracking	 	
 AGITSTA	AGITSTA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Agitator status kpfmot.AGITATOR	 	
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Airmass	 	
@@ -146,9 +146,6 @@ PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Pro
 PROGNAME	PROGNAME	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program name from kpfexpose	 	
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	KOA: Program principal investigator	 	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	KOA: Program title set	 	
-PROGTL1	PROGTL1	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 1	 	
-PROGTL2	PROGTL2	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 2	 	
-PROGTL3	PROGTL3	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Program title 3	 	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					[h] Right ascension	 	
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base	 	
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					[asec] DCS RA offset	 	
@@ -207,8 +204,8 @@ SSCALFW	SSCALFW	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Sci/Cal FW Po
 STELEV	STELEV	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[deg] top shutter elevation	 	
 STVIGNE	STVIGNE	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										top shutter vignette (t/f)	 	
 TARGDEC	TARGDEC	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										[deg] DCS Target Dec	 	
-TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N		16d										DCS Target epoch
-TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N		16d										DCS Target equinox
+TARGEPOC	TARGEPOC	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										DCS Target epoch
+TARGEQUI	TARGEQUI	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										DCS Target equinox
 TARGFRAM	TARGFRAM	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										target-frame	 	
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	DCS Target name	 	
 TARGPLAX	TARGPLAX	DCS	double		FLOAT(126)	16	Y	Y	N		16d										[arcsec] target parallax
