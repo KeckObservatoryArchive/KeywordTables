@@ -372,7 +372,7 @@ OFNAME	OFNAME	KCWI	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original fil
 OMICPIX1	OMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] overscan mixed with image pixels	0
 OMICPIX2	OMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] overscan mixed with image pixels	0
 OUTDIR	OUTDIR	KCWI	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					data	/data/161101	Is 15 characters enough for these? -[ACL]
-OUTFILE	OUTFILE	KCWI	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					filename prefix	kcwi	
+OUTFILE	OUTFILE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	kcwi	
 PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Parallactic angle (deg)	147.23	
 PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Parallactic angle telescope	0	
 PIMCPIX1	PIMCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure image pixels	2056
