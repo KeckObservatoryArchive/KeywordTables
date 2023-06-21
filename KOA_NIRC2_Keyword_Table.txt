@@ -283,7 +283,7 @@ OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N							Y					[mm] User-value-of-LBS-y-ax
 OBRT	OBRT	ao	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of ROT 		
 OBRTNAME	OBRTNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for ROT		
 OBSDNAME	OBSDNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SOD		
-OBSERVER	OBSERVER	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Observer		
+OBSERVER	OBSERVER	alad	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Observer		
 OBSFNAME	OBSFNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SFP		
 OBSFX	OBSFX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP x axis 		
 OBSFY	OBSFY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP y axis		
