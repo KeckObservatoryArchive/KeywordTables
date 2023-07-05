@@ -6,7 +6,7 @@ DATE-OBS	DATE_OBS	dcs	char		DATE	24	N	Y	Y	date	32s					Y				Y	universal date of 
 OFNAME	OFNAME		char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Original filename		
 OUTDIR	OUTDIR	alad	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Original directory		
 INSTRUME	INSTRUME	added	char		VARCHAR2(24 BYTE)	24	N	Y	Y		24s				NIRC2	Y					Instrument name		
-LEV0TYPE	LEV0TYPE	alad	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Type of file - processed or unprocessed		
+LEV0TYPE	LEV0TYPE	alad	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Type of file - Regular or Unprocessed (image cube)		
 PROGID	PROGID	added	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					WMKO ID for observing program		
 PROGINST	PROGINST	added	char		VARCHAR2(32 BYTE)	32	N	N	N		32s					Y				Y	Program institution		
 PROGNAME	PROGNAME		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Program name	ENG	
