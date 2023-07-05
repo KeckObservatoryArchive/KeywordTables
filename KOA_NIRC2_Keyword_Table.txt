@@ -124,9 +124,12 @@ DMMRFN	DMMRFN	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Name of DM reco
 DOMEPOSN	DOMEPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					dome azimuth 	147.63	
 DOMESTAT	DOMESTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					dome status		
 DOMESTST	DOMESTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					DCS Dome status string	UNINIT	
+DOCAL	DOCAL		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS run calibrations sequence	No	
 DOOPT	DOOPT		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS run optimization sequence	No	
 DOPSF	DOPSF		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS take off-axis PSF image	No	
 DOSCI	DOSCI		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					QACITS tun QACITS science sequence	No	
+DPIXSKYX	DPIXSKYX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X offset for sky frames	1024
+DPIXSKYY	DPIXSKYY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y offset for sky frames	1024
 DPIXX	DPIXX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X offset for off-axis PSF	0	
 DPIXY	DPIXY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y offset for off-axis PSF	0	
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y					Date of DQA run		
@@ -304,6 +307,7 @@ OBWLNAME	OBWLNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named posit
 OBWNNAME	OBWNNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WND		
 OBWPNAME	OBWPNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for WPS		
 OFFLINE	QOFFLINE		char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Run QACITS offline	No	
+OFFPSFF	OFFPSFF		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Latest off-axis PSF image	tmp.fits	
 OFFSET20	OFFSET20		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 20	0	
 OFFSET21	OFFSET21		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 21	0	
 OFFSET22	OFFSET22		integer		NUMBER(16)	16	Y	Y	N							Y					offset for AD chan 22	0	
@@ -474,6 +478,9 @@ SHRRAW	SHRRAW	nirc2	integer	counts	NUMBER(38)	20	Y	Y	N		20d					Y					shutter's 
 SHRSTAT	SHRSTAT	nirc2	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Shutter State		
 SIG2NOIS	SIG2NOIS	added	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Signal to noise estimage near image spectral center		
 SIMPLE	SIMPLE	alad	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Tape is in Fits format		
+SKYOPTF	SKYOPTF		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Latest sky frame for optimization sequence	tmp.fits	
+SKYPSFF	SKYPSFF		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Latest sky frame for off-axis PSF image	n0001.fits	
+SKYSCIF	SKYSCIF		char		VARCHAR2(72 BYTE)	72	Y	Y	N							Y					Latest sky frame for science sequence	n0001.fits	
 SLITLEN	SLITLEN	added	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Slit length projected on sky		
 SLITMM	SLITMM	nirc2	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Slit position		
 SLITNAME	SLITNAME	nirc2	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s				"corona1000 , corona150, corona1500, corona200, corona2000, corona300, corona400, corona600, corona800, none, slit10 , slit120, slit160, slit20, slit30, slit40, slit60, slit80, Unknown"	Y					Selected Slit Name		
@@ -494,8 +501,6 @@ SUBCOPTX	SUBCOPTX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size 
 SUBCOPTY	SUBCOPTY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of subarray for optimizatio	0	
 SUBCPSFX	SUBCPSFX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size of subarray for off-axis PS	0	
 SUBCPSFY	SUBCPSFY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of subarray for off-axis PS	0	
-SUBCREFX	SUBCREFX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size of subarray reference frame	1024	
-SUBCREFY	SUBCREFY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of subarray reference frame	1024	
 SUBCSCIX	SUBCSCIX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size of subarray for science ima	0	
 SUBCSCIY	SUBCSCIY		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS Y size of subarray for science ima	0	
 SUBWX	SUBWX		integer		NUMBER(16)	16	Y	Y	N							Y					[pix] QACITS X size of window for 2D-Gaussian f	0	
