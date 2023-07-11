@@ -1,0 +1,142 @@
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	KOA	char		VARCHAR2(48 BYTE)	48	N	Y	Y		48s	Y				Y	Y			Y	Unique identifier for each file OS.20210115.10883.fits		
+PROPINT	PROPINT	KOA	integer	months	NUMBER(*,0)	8	N	Y	Y		16d		0			Y	Y				data proprietary period time interval in months		
+OFNAME	OFNAME	KOA	char		VARCHAR2(48 BYTE)	48	N	Y	Y		32s					Y	Y		Y		Original filename at the telescope, copied from DATAFILE keyword	v171005_0001	May have to add .fits to DATAFILE
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
+DATE-OBS	DATE_OBS	GUIDER	date		DATE	16	N	Y	Y	date	32s	Y				Y				Y	observing date (UT)		
+AIRMASS	AIRMASS	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					air mass (1.6659124968)	1.6659124968	
+AXESTAT	AXESTAT	GUIDER	char		VARCHAR2(24 BYTE)	24	Y	Y	N							Y					axes control status	TRACKING	
+AZ	AZ	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					telescope azimuth (-63.247046 deg)	-63.247046	
+BINNING	BINNING	GUIDER	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y						4	
+BITPIX	BITPIX	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y						16	
+BSCALE	BSCALE	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y						1	
+BZERO	BZERO	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y						0	
+CALOCAL	CALOCAL	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					collim az local (43.739788 arcsec)	0.00021205647706	
+CAMBIAS0	CAMBIAS0	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					Camera bias 0	0	
+CAMBIAS1	CAMBIAS1	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					Camera bias 1	0	
+CAMBIN	CAMBIN	GUIDER	integer		NUMBER(*,0)	8	Y	Y	N							Y					Image binning	4	
+CAMFOCUS	CAMFOCUS	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					camera focus	0	
+CAMGAIN	CAMGAIN	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					Camera gain	0	
+CAMNAME	CAMNAME	GUIDER	char		VARCHAR2(20 BYTE)	20	Y	Y	N							Y					Camera name	deimos	
+CAMPORG	CAMPORG	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Default camera pointing origin	ref	
+CAMREFX	CAMREFX	GUIDER	integer		NUMBER(*,0)	8	Y	Y	N							Y					Ref pixel in x direction	512	
+CAMREFY	CAMREFY	GUIDER	integer		NUMBER(*,0)	8	Y	Y	N							Y					Ref pixel in y direction	800	
+CD1_1	CD1_1	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					Tx Matrix	4.546794e-06	
+CD1_2	CD1_2	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					Tx Matrix	0.0002299551	
+CD2_1	CD2_1	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					Tx Matrix	-0.0002299551	
+CD2_2	CD2_2	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					Tx Matrix	4.546794e-06	
+CELOCAL	CELOCAL	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					collim el local (-26.398160 arcsec)	-0.00012798189253	
+CRPIX1	CRPIX1	GUIDER	double	pixels	FLOAT(126)	8	Y	Y	N							Y					Ref pixel x pos	128	
+CRPIX2	CRPIX2	GUIDER	double	pixels	FLOAT(126)	8	Y	Y	N							Y					Ref pixel y pos	200	
+CRVAL1	CRVAL1	GUIDER	double	degrees	FLOAT(126)	8	Y	Y	N							Y					RA [degree]	238.043306	
+CRVAL2	CRVAL2	GUIDER	double	degrees	FLOAT(126)	8	Y	Y	N							Y					DEC [degree]	32.940982	
+CTYPE1	CTYPE1	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					First axis type	RA---TAN	
+CTYPE2	CTYPE2	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Second axis type	DEC--TAN	
+CUNIT1	CUNIT1	GUIDER	char	degrees	VARCHAR2(3 BYTE)	3	Y	Y	N							Y					CRVAL1 unit	deg	
+CUNIT2	CUNIT2	GUIDER	char	degrees	VARCHAR2(3 BYTE)	3	Y	Y	N							Y					CRVAL2 unit	deg	
+CURRINST	CURRINST	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					current instrument	DEIMOS	
+DATE	DATE	GUIDER	char		VARCHAR2(32 BYTE)	32	Y	Y	N							Y						2023-05-15T04:36:30	
+DCSSTAT	DCSSTAT	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					drive and control status	STANDBY	
+DCSVERS	DCSVERS	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					drive and control version	TCSU	
+DEC	DEC	GUIDER	char	degrees	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					telescope declination (32.948333 deg)	32.948333	
+DECOFF	DECOFF	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					dec offset (0.000000 arcsec)	0.0	
+DOMEPOSN	DOMEPOSN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					dome azimuth (296.806851 deg)	296.806851	
+DOMESTAT	DOMESTAT	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					dome status	Tracking	
+EL	EL	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					telescope elevation (36.818727 deg)	36.818727	
+ELAPTIME	ELAPTIME	KOA	double	secs	FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y			
+EQUINOX	EQUINOX	GUIDER	double	years	FLOAT(126)	16	Y	Y	N							Y					telescope equinox (2000)	2000	
+FOCALSTN	FOCALSTN	GUIDER	char		VARCHAR2(48 BYTE)	48	Y	Y	N							Y					focal station	Right nasmyth	
+FRAME	FRAME	GUIDER	char		VARCHAR2(4 BYTE)	4	Y	Y	N							Y					Frame type	ACQ	
+GUIDFWHM	GUIDFWHM	GUIDER	double	arcseconds	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star		
+GUIDTIME	GUIDTIME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
+HA	HA	GUIDER	double		FLOAT(126)	24	Y	Y	N							Y					telescope hour angle (3.914468 h)	3.914468	
+INSTANGL	INSTANGL	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					porg to instr angle (179.000000 deg)	179.0	
+INSTFLIP	INSTFLIP	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					porg to instrument y flip	no	
+IQLPOS	IQLPOS	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					IQ element position	IQL_OUT_OF_BEAM	
+LST	LST	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					local apparent sidereal time (h)	19.781107	
+MJD-OBS	MJD-OBS	GUIDER	double	days	FLOAT(126)	16	Y	Y	N							Y					modified julian date of obs (60079.608682	60079.608682	
+NAXIS	NAXIS	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y						2	
+NAXIS1	NAXIS1	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y						255	
+NAXIS2	NAXIS2	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y						255	
+ORIGIN	ORIGIN	GUIDER	char		VARCHAR2(22 BYTE)	22	Y	Y	N							Y						W. M. Keck Observatory	
+PARANG	PARANG	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					parallactic angle astrometric (88.844534 deg)	88.844534	
+PARANTEL	PARANTEL	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					parallactic angle telescope (88.767649 deg)	88.767649	
+PONAME	PONAME	GUIDER	char		VARCHAR2(12 BYTE)	12	Y	Y	N							Y					pointing origin name	Slit	
+PONAME1	PONAME1	GUIDER	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					pointing origin name 1	REF	
+PONAME2	PONAME2	GUIDER	char		VARCHAR2(8 BYTE)	8	Y	Y	N							Y					pointing origin name 2	TVCENTER	
+PONAME3	PONAME3	GUIDER	char		VARCHAR2(5 BYTE)	5	Y	Y	N							Y					pointing origin name 3	Image	
+PONAME4	PONAME4	GUIDER	char		VARCHAR2(4 BYTE)	4	Y	Y	N							Y					pointing origin name 4	Slit	
+PONAME5	PONAME5	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					pointing origin name 5	DEIMOS	
+PONAME6	PONAME6	GUIDER	char		VARCHAR2(9 BYTE)	9	Y	Y	N							Y					pointing origin name 6	Mira$	
+PONAME7	PONAME7	GUIDER	char		VARCHAR2(9 BYTE)	9	Y	Y	N							Y					pointing origin name 7	Slit 0.7	
+PONAME8	PONAME8	GUIDER	char		VARCHAR2(9 BYTE)	9	Y	Y	N							Y					pointing origin name 8	Slit 1.0	
+PONAME9	PONAME9	GUIDER	char		VARCHAR2(9 BYTE)	9	Y	Y	N							Y					pointing origin name 9	Slit 1.5	
+POXOFF	POXOFF	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					pointing origin x offset (0 m)	0	
+POXPOS	POXPOS	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.0947 m)	-0.0947	
+POXPOS1	POXPOS1	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.07562 m)	-0.07562	
+POXPOS2	POXPOS2	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.07325 m)	-0.07325	
+POXPOS3	POXPOS3	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.09416 m)	-0.09416	
+POXPOS4	POXPOS4	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.0947 m)	-0.0947	
+POXPOS5	POXPOS5	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.00163 m)	-0.00163	
+POXPOS6	POXPOS6	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.1392 m)	-0.1392	
+POXPOS7	POXPOS7	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.037 m)	-0.037	
+POXPOS8	POXPOS8	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.0709 m)	-0.0709	
+POXPOS9	POXPOS9	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin xposition (-0.107 m)	-0.107	
+POYOFF	POYOFF	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					pointing origin y offset (0 m)	0	
+POYPOS	POYPOS	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1961 m)	0.1961	
+POYPOS1	POYPOS1	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.10028 m)	0.10028	
+POYPOS2	POYPOS2	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.14125 m)	0.14125	
+POYPOS3	POYPOS3	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.20278 m)	0.20278	
+POYPOS4	POYPOS4	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1961 m)	0.1961	
+POYPOS5	POYPOS5	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.19589 m)	0.19589	
+POYPOS6	POYPOS6	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.2011 m)	0.2011	
+POYPOS7	POYPOS7	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1963 m)	0.1963	
+POYPOS8	POYPOS8	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1963 m)	0.1963	
+POYPOS9	POYPOS9	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.196 m)	0.196	
+RA	RA	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					telescope right ascension (237.999583 deg)	237.999583	
+RADESYS	RADESYS	GUIDER	char		VARCHAR2(3 BYTE)	3	Y	Y	N							Y					Coordinates frame type	FK5	
+RAOFF	RAOFF	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					ra offset (0.000000 arcsec)	0.0	
+ROTCALAN	ROTCALAN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator calibration angle (0.000000 deg)	0.0	
+ROTDEST	ROTDEST	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator user destination (-90.000000 deg)	-90.0	
+ROTMODE	ROTMODE	GUIDER	char		VARCHAR2(14 BYTE)	14	Y	Y	N							Y					rotator tracking mode	POSITION_ANGLE	
+ROTPDEST	ROTPDEST	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator physical destination (-215.586378 deg)	-215.586378	
+ROTPOSN	ROTPOSN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator user position (-89.999929 deg)	-89.999929	
+ROTPPOSN	ROTPPOSN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator physical position (-215.595996 deg)	-215.595996	
+ROTREFAN	ROTREFAN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator reference angle (0.000000 deg)	0.0	
+SECFOCUS	SECFOCUS	GUIDER	double	mm	FLOAT(126)	16	Y	Y	N							Y					sec mirror focus raw (-0.797000 mm)	-0.797	
+SECTHETX	SECTHETX	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					sec mirror thetax (-61.468897 arcsec)	-61.468897	
+SECTHETY	SECTHETY	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					sec mirror thetay (-406.343040 arcsec)	-406.34304	
+TARGDEC	TARGDEC	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					target declination (32.948333 deg)	32.948333	
+TARGEPOC	TARGEPOC	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					target epoch (2000)	2000	
+TARGEQUI	TARGEQUI	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					target equinox (2000)	2000	
+TARGFRAM	TARGFRAM	GUIDER	char		VARCHAR2(3 BYTE)	3	Y	Y	N							Y					target frame	FK5	
+TARGNAME	TARGNAME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					target name	BD+332642	
+TARGPLAX	TARGPLAX	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					target parallax (0.000000 arcsec)	0.0	
+TARGPMDC	TARGPMDC	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					targ pr motion dec (0 arcsec/yr)	0	
+TARGPMRA	TARGPMRA	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					targ pr motion ra (0 s/yr)	0	
+TARGRA	TARGRA	GUIDER	double	deg	FLOAT(126)	16	Y	Y	N							Y					target right ascension (15.866639 h)	15.866639	
+TARGRADV	TARGRADV	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					targ radial vel (0 km/s)	0	
+TELESCOP	TELESCOP	GUIDER	char		VARCHAR2(7 BYTE)	7	Y	Y	N							Y					telescope name	Keck II	
+TELFOCUS	TELFOCUS	GUIDER	double	mm	FLOAT(126)	16	Y	Y	N							Y					tel focus compensated (-0.909826 mm)	-0.909826	
+TEMP1	TEMP1	GUIDER	double	degC	FLOAT(126)	16	Y	Y	N							Y					SERVICEMODULE	0.0	
+TEMP2	TEMP2	GUIDER	double	degC	FLOAT(126)	16	Y	Y	N							Y					CCD1	0.0	
+TEMP3	TEMP3	GUIDER	double	degC	FLOAT(126)	16	Y	Y	N							Y					CCD2	0.0	
+TEMP4	TEMP4	GUIDER	double	degC	FLOAT(126)	16	Y	Y	N							Y					HEADTEMP	0.0	
+TTIME	TTIME	GUIDER	double	seconds	FLOAT(126)	16	Y	Y	N							Y					Exposure time [s]	1.0	
+TUBETEMP	TUBETEMP	GUIDER	double	degC	FLOAT(126)	16	Y	Y	N							Y					tube temperature (-0.18712560331 degC)	-0.18712560331	
+TVANDEF	TVANDEF	GUIDER	double		FLOAT(126)	16	Y	Y	N							Y					Default TV angle	1.2	
+TVANGL	TVANGL	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					porg to tv angle (1.200000 deg)	1.2	
+TVFLIP	TVFLIP	GUIDER	char		VARCHAR2(2 BYTE)	2	Y	Y	N							Y					porg to tv y flip	no	
+UTC	UTC	GUIDER	char		VARCHAR2(12 BYTE)	12	Y	Y	N							Y					coordinated universal time (h)	14:36:30.100	
+WINDOW	WINDOW	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Window	0,0,255,255	
+WXDOMHUM	WXDOMHUM	GUIDER	double	percent	FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome humidity		
+WXDOMTMP	WXDOMTMP	GUIDER	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Inside dome temperature 		
+WXDWPT	WXDWPT	GUIDER	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Dew point temperature		
+WXOUTHUM	WXOUTHUM	GUIDER	double	percent	FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside humidity 		
+WXOUTTMP	WXOUTTMP	GUIDER	double	degreesC	FLOAT(126)	16	Y	Y	N		18.8f					Y					Outside temperature 		
+WXPRESS	WXPRESS	GUIDER	double	mb	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pressure		
+WXWNDIR	WXWNDIR	GUIDER	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind direction (N through E)		
+WXWNDSP	WXWNDSP	GUIDER	double	mph	FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind speed 		
+WXTIME	WXTIME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logged weather keyword values		
+XPXSZ	XPXSZ	GUIDER	double	arcsec/px	FLOAT(126)	16	Y	Y	N							Y					Plt scale in x [acssec/px]	0.207	
+YPXSZ	YPXSZ	GUIDER	double	arcsec/px	FLOAT(126)	16	Y	Y	N							Y					Plt scale in x [arcsec/px]	0.207	
