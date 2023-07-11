@@ -93,6 +93,10 @@ POYPOS6	POYPOS6	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin 
 POYPOS7	POYPOS7	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1963 m)	0.1963	
 POYPOS8	POYPOS8	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.1963 m)	0.1963	
 POYPOS9	POYPOS9	GUIDER	double	m	FLOAT(126)	16	Y	Y	N							Y					pointing origin yposition (0.196 m)	0.196	
+PROGID	PROGID	GUIDER	char		VARCHAR2(16 BYTE)	16	N	Y	N							Y					WMKO ID for observing program
+PROGINST	PROGINST	GUIDER	char		VARCHAR2(32 BYTE)	32	N	Y	N							Y					Program institution
+PROGPI	PROGPI	GUIDER	char		VARCHAR2(72 BYTE)	72	N	Y	N							Y					Program principal investigator
+PROGTITL	PROGTITL	GUIDER	char		VARCHAR2(216 BYTE)	216	Y	Y	N							Y					Program title
 RA	RA	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					telescope right ascension (237.999583 deg)	237.999583	
 RADESYS	RADESYS	GUIDER	char		VARCHAR2(3 BYTE)	3	Y	Y	N							Y					Coordinates frame type	FK5	
 RAOFF	RAOFF	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					ra offset (0.000000 arcsec)	0.0	
@@ -106,6 +110,7 @@ ROTREFAN	ROTREFAN	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					rotator 
 SECFOCUS	SECFOCUS	GUIDER	double	mm	FLOAT(126)	16	Y	Y	N							Y					sec mirror focus raw (-0.797000 mm)	-0.797	
 SECTHETX	SECTHETX	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					sec mirror thetax (-61.468897 arcsec)	-61.468897	
 SECTHETY	SECTHETY	GUIDER	double	arcsec	FLOAT(126)	16	Y	Y	N							Y					sec mirror thetay (-406.343040 arcsec)	-406.34304	
+SEMESTER	SEMESTER	GUIDER	char		VARCHAR2(8 BYTE)	16	Y	Y	N							Y					Semester from PROGNAME or DATE-OBS
 TARGDEC	TARGDEC	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N							Y					target declination (32.948333 deg)	32.948333	
 TARGEPOC	TARGEPOC	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					target epoch (2000)	2000	
 TARGEQUI	TARGEQUI	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N							Y					target equinox (2000)	2000	
