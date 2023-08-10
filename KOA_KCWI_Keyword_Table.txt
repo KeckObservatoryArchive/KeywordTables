@@ -1,6 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file	KB.20170208_00008.fits, KR.20170208_00009.fits	
-PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y				Proprietary period		
+PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0.0			Y	Y				Proprietary period		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			N		FITS file size in megabytes	44.8	
 TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Keck telescope designation	Keck II	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				focus, object, bias, dark, arclamp, flatlamp, fpc, svc, domeflat, twiflat, contbars, undefined	Y	Y			Y	KOA image type	object	
@@ -9,16 +9,16 @@ PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				WMKO program 
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program Institution	UH	
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program PI	McConnell	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
-ADCGAINS	ADCGAINS	KCWI	integer		NUMBER(*,0)	8	Y	Y	N							Y					GAINn in Archon config file	0
+ADCGAINS	ADCGAINS	KCWI	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y					GAINn in Archon config file	0	
 AIRMASS	AIRMASS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Air mass (1.41)	1.34436133	
-AMP1CH	AMP1CH	KCWI	integer		NUMBER(*,0)	8	Y	Y	N							Y					Archon tap channel for ampId1	2
-AMP1GA	AMP1GA	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon tap gain for ampId1	1.0
-AMP1NM	AMP1NM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId1 name (TAPLINE0)	L2
-AMP1OF	AMP1OF	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon tap offset for ampId1	107
-AMP3CH	AMP3CH	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon tap channel for ampId3	4
-AMP3GA	AMP3GA	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon tap gain for ampId3	1.0
-AMP3NM	AMP3NM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId3 name (TAPLINE1)	U2
-AMP3OF	AMP3OF	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon tap offset for ampId3	106
+AMP1CH	AMP1CH	KCWI	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon tap channel for ampId1	2	
+AMP1GA	AMP1GA	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon tap gain for ampId1	1.0	
+AMP1NM	AMP1NM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId1 name (TAPLINE0)	L2	
+AMP1OF	AMP1OF	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon tap offset for ampId1	107	
+AMP3CH	AMP3CH	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon tap channel for ampId3	4	
+AMP3GA	AMP3GA	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon tap gain for ampId3	1.0	
+AMP3NM	AMP3NM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId3 name (TAPLINE1)	U2	
+AMP3OF	AMP3OF	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon tap offset for ampId3	106	
 AMPID1	AMPID1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					amp Id number, readout sequence 0	0	
 AMPID2	AMPID2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					amp Id number, readout sequence 1	1	
 AMPID3	AMPID3	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					amp Id number, readout sequence 2	2	
@@ -70,8 +70,8 @@ BGTPOS	BGTPOS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Grating tra
 BHTR1ST	BHTR1ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		9s					Y					Blue Heater 1 Status	UNKNOWN	If not unknown, will this a string or integer?  String (OK)
 BHTR2ST	BHTR2ST	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		9s					Y					Blue Heater 2 Status	UNKNOWN	If not unknown, will this a string or integer?
 BIASFN	BIASFN	KCWI-F	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Bias filename	0	
-BINFAC1	BINFAC1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix/FITSpix] bin factor	2
-BINFAC2	BINFAC2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix/FITSpix] bin factor	2
+BINFAC1	BINFAC1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix/FITSpix] bin factor	2	
+BINFAC2	BINFAC2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix/FITSpix] bin factor	2	
 BINNING	BINNING	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					binning: serial/axis1, parallel/axis2	2,2	
 BINPUT1	BINPUT1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Heater 1 Input Sensor	7	
 BINPUT2	BINPUT2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Blue Heater 2 Input Sensor	1	
@@ -146,93 +146,93 @@ CD1_1	CD1_1	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					WCS coordinate tran
 CD1_2	CD1_2	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					WCS coordinate transformation matrix		
 CD2_1	CD2_1	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					WCS coordinate transformation matrix		
 CD2_2	CD2_2	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					WCS coordinate transformation matrix		
-CD1_1A	CD1_1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS A CTM1_1 from pix to iWC	2.0
-CD1_1B	CD1_1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS B CTM1_1 from pix to iWC	2.0
-CD1_1C	CD1_1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS C CTM1_1 from pix to iWC	-2.0
-CD1_1D	CD1_1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS D CTM1_1 from pix to iWC	2.0
-CD1_2A	CD1_2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS A CTM1_2 from pix to iWC	0.0
-CD1_2B	CD1_2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS B CTM1_2 from pix to iWC	0.0
-CD1_2C	CD1_2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS C CTM1_2 from pix to iWC	0.0
-CD1_2D	CD1_2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS D CTM1_2 from pix to iWC	0.0
-CD2_1A	CD2_1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS A CTM2_1 from pix to iWC	0.0
-CD2_1B	CD2_1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS B CTM2_1 from pix to iWC	0.0
-CD2_1C	CD2_1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS C CTM2_1 from pix to iWC	0.0
-CD2_1D	CD2_1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS D CTM2_1 from pix to iWC	0.0
-CD2_2A	CD2_2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS A CTM2_2 from pix to iWC	2.0
-CD2_2B	CD2_2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 WCS B CTM2_2 from pix to iWC	2.0
-CD2_2C	CD2_2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS C CTM2_2 from pix to iWC	2.0
-CD2_2D	CD2_2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 WCS D CTM2_2 from pix to iWC	2.0
-CDSSPEED	CDSSPEED	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					$SPEEDn in Archon config file	1
-CHANMODE	CHANMODE	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					KCWI channels in use	BOTH
+CD1_1A	CD1_1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS A CTM1_1 from pix to iWC	2.0	
+CD1_1B	CD1_1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS B CTM1_1 from pix to iWC	2.0	
+CD1_1C	CD1_1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS C CTM1_1 from pix to iWC	-2.0	
+CD1_1D	CD1_1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS D CTM1_1 from pix to iWC	2.0	
+CD1_2A	CD1_2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS A CTM1_2 from pix to iWC	0.0	
+CD1_2B	CD1_2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS B CTM1_2 from pix to iWC	0.0	
+CD1_2C	CD1_2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS C CTM1_2 from pix to iWC	0.0	
+CD1_2D	CD1_2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS D CTM1_2 from pix to iWC	0.0	
+CD2_1A	CD2_1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS A CTM2_1 from pix to iWC	0.0	
+CD2_1B	CD2_1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS B CTM2_1 from pix to iWC	0.0	
+CD2_1C	CD2_1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS C CTM2_1 from pix to iWC	0.0	
+CD2_1D	CD2_1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS D CTM2_1 from pix to iWC	0.0	
+CD2_2A	CD2_2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS A CTM2_2 from pix to iWC	2.0	
+CD2_2B	CD2_2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 WCS B CTM2_2 from pix to iWC	2.0	
+CD2_2C	CD2_2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS C CTM2_2 from pix to iWC	2.0	
+CD2_2D	CD2_2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 WCS D CTM2_2 from pix to iWC	2.0	
+CDSSPEED	CDSSPEED	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					$SPEEDn in Archon config file	1	
+CHANMODE	CHANMODE	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					KCWI channels in use	BOTH	
 CHECKSUM	CHECKSUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					HDU checksum updated 2016-10-13T20:33:41	3dT5AbQ26bQ2AbQ2	
-CRDER1A	CRDER1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS A coord random error	0.0
-CRDER1B	CRDER1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS B coord random error	0.0
-CRDER1C	CRDER1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS C coord random error	0.0
-CRDER1D	CRDER1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS D coord random error	0.0
-CRDER2A	CRDER2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS A coord random error	0.0
-CRDER2B	CRDER2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS B coord random error	0.0
-CRDER2C	CRDER2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS C coord random error	0.0
-CRDER2D	CRDER2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS D coord random error	0.0
+CRDER1A	CRDER1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS A coord random error	0.0	
+CRDER1B	CRDER1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS B coord random error	0.0	
+CRDER1C	CRDER1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS C coord random error	0.0	
+CRDER1D	CRDER1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS D coord random error	0.0	
+CRDER2A	CRDER2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS A coord random error	0.0	
+CRDER2B	CRDER2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS B coord random error	0.0	
+CRDER2C	CRDER2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS C coord random error	0.0	
+CRDER2D	CRDER2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS D coord random error	0.0	
 CRPIX1	CRPIX1	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					Reference pixel		
 CRPIX2	CRPIX2	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					Reference pixel		
-CRPIX1A	CRPIX1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 axis1 WCS A reference pixel	0.5
-CRPIX1B	CRPIX1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 axis1 WCS B reference pixel	0.5
-CRPIX1C	CRPIX1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 axis1 WCS C reference pixel	2208.5
-CRPIX1D	CRPIX1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 axis1 WCS D reference pixel	2208.5
-CRPIX2A	CRPIX2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 axis2 WCS A reference pixel	0.5
-CRPIX2B	CRPIX2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 axis2 WCS B reference pixel	0.5
-CRPIX2C	CRPIX2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 axis2 WCS C reference pixel	0.5
-CRPIX2D	CRPIX2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 axis2 WCS D reference pixel	0.5
+CRPIX1A	CRPIX1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 axis1 WCS A reference pixel	0.5	
+CRPIX1B	CRPIX1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 axis1 WCS B reference pixel	0.5	
+CRPIX1C	CRPIX1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 axis1 WCS C reference pixel	2208.5	
+CRPIX1D	CRPIX1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 axis1 WCS D reference pixel	2208.5	
+CRPIX2A	CRPIX2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 axis2 WCS A reference pixel	0.5	
+CRPIX2B	CRPIX2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 axis2 WCS B reference pixel	0.5	
+CRPIX2C	CRPIX2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 axis2 WCS C reference pixel	0.5	
+CRPIX2D	CRPIX2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 axis2 WCS D reference pixel	0.5	
 CRVAL1	CRVAL1	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					Reference pixel value		
 CRVAL2	CRVAL2	KOA	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					Reference pixel value		
-CRVAL1A	CRVAL1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS A coord value @ refpix	-7.0
-CRVAL1B	CRVAL1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS B coord value @ refpix	-7.0
-CRVAL1C	CRVAL1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS C coord value @ refpix	-7.0
-CRVAL1D	CRVAL1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS D coord value @ refpix	4121.0
-CRVAL2A	CRVAL2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS A coord value @ refpix	0.0
-CRVAL2B	CRVAL2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS B coord value @ refpix	0.0
-CRVAL2C	CRVAL2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS C coord value @ refpix	0.0
-CRVAL2D	CRVAL2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS D coord value @ refpix	0.0
+CRVAL1A	CRVAL1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS A coord value @ refpix	-7.0	
+CRVAL1B	CRVAL1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS B coord value @ refpix	-7.0	
+CRVAL1C	CRVAL1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS C coord value @ refpix	-7.0	
+CRVAL1D	CRVAL1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS D coord value @ refpix	4121.0	
+CRVAL2A	CRVAL2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS A coord value @ refpix	0.0	
+CRVAL2B	CRVAL2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS B coord value @ refpix	0.0	
+CRVAL2C	CRVAL2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS C coord value @ refpix	0.0	
+CRVAL2D	CRVAL2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS D coord value @ refpix	0.0	
 CSEC1	CSEC1	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 0	[1:2048,1:2056]	
 CSEC2	CSEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 1	[4096:2049,1:2056]	
 CSEC3	CSEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 2	[1:2048,4112:2057]	
 CSEC4	CSEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF CCDSEC [CCDpix], readout sequence 3	[4096:2049,4112:2057]	
-CSYER1A	CSYER1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS A coord systematic error	0.0
-CSYER1B	CSYER1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS B coord systematic error	0.0
-CSYER1C	CSYER1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS C coord systematic error	0.0
-CSYER1D	CSYER1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS D coord systematic error	0.0
-CSYER2A	CSYER2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS A coord systematic error	0.0
-CSYER2B	CSYER2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS B coord systematic error	0.0
-CSYER2C	CSYER2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS C coord systematic error	0.0
-CSYER2D	CSYER2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS D coord systematic error	0.0
+CSYER1A	CSYER1A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS A coord systematic error	0.0	
+CSYER1B	CSYER1B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis1 WCS B coord systematic error	0.0	
+CSYER1C	CSYER1C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS C coord systematic error	0.0	
+CSYER1D	CSYER1D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis1 WCS D coord systematic error	0.0	
+CSYER2A	CSYER2A	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS A coord systematic error	0.0	
+CSYER2B	CSYER2B	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId1 iWaxis2 WCS B coord systematic error	0.0	
+CSYER2C	CSYER2C	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS C coord systematic error	0.0	
+CSYER2D	CSYER2D	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					ampId3 iWaxis2 WCS D coord systematic error	0.0	
 CTYPE1	CTYPE1	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Coordinate type and projection (RA)		
 CTYPE2	CTYPE2	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Coordinate type and projection (DEC)		
-CTYPE1A	CTYPE1A	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId1 iWaxis1 WCS A coord/proj type	ampId1 AMPLIFIER_X
-CTYPE1B	CTYPE1B	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId1 iWaxis1 WCS B coord/proj type	PANE_X for ampId1
-CTYPE1C	CTYPE1C	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId3 iWaxis1 WCS C coord/proj type	ampId3 AMPLIFIER_X
-CTYPE1D	CTYPE1D	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId3 iWaxis1 WCS D coord/proj type	PANE_X for ampId3
-CTYPE2A	CTYPE2A	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId1 iWaxis2 WCS A coord/proj type	ampId1 AMPLIFIER_Y
-CTYPE2B	CTYPE2B	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId1 iWaxis2 WCS B coord/proj type	PANE_Y for ampId1
-CTYPE2C	CTYPE2C	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId3 iWaxis2 WCS C coord/proj type	ampId3 AMPLIFIER_Y
-CTYPE2D	CTYPE2D	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					ampId3 iWaxis2 WCS D coord/proj type	PANE_Y for ampId3
-CUNIT1A	CUNIT1A	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS A physical unit	CCDpix
-CUNIT1B	CUNIT1B	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId1 iWaxis1 WCS B physical unit	CCDpix
-CUNIT1C	CUNIT1C	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS C physical unit	CCDpix
-CUNIT1D	CUNIT1D	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId3 iWaxis1 WCS D physical unit	CCDpix
-CUNIT2A	CUNIT2A	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS A physical unit	CCDpix
-CUNIT2B	CUNIT2B	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId1 iWaxis2 WCS B physical unit	CCDpix
-CUNIT2C	CUNIT2C	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS C physical unit	CCDpix
-CUNIT2D	CUNIT2D	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					ampId3 iWaxis2 WCS D physical unit	CCDpix
+CTYPE1A	CTYPE1A	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId1 iWaxis1 WCS A coord/proj type	ampId1 AMPLIFIER_X	
+CTYPE1B	CTYPE1B	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId1 iWaxis1 WCS B coord/proj type	PANE_X for ampId1	
+CTYPE1C	CTYPE1C	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId3 iWaxis1 WCS C coord/proj type	ampId3 AMPLIFIER_X	
+CTYPE1D	CTYPE1D	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId3 iWaxis1 WCS D coord/proj type	PANE_X for ampId3	
+CTYPE2A	CTYPE2A	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId1 iWaxis2 WCS A coord/proj type	ampId1 AMPLIFIER_Y	
+CTYPE2B	CTYPE2B	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId1 iWaxis2 WCS B coord/proj type	PANE_Y for ampId1	
+CTYPE2C	CTYPE2C	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId3 iWaxis2 WCS C coord/proj type	ampId3 AMPLIFIER_Y	
+CTYPE2D	CTYPE2D	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					ampId3 iWaxis2 WCS D coord/proj type	PANE_Y for ampId3	
+CUNIT1A	CUNIT1A	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId1 iWaxis1 WCS A physical unit	CCDpix	
+CUNIT1B	CUNIT1B	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId1 iWaxis1 WCS B physical unit	CCDpix	
+CUNIT1C	CUNIT1C	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId3 iWaxis1 WCS C physical unit	CCDpix	
+CUNIT1D	CUNIT1D	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId3 iWaxis1 WCS D physical unit	CCDpix	
+CUNIT2A	CUNIT2A	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId1 iWaxis2 WCS A physical unit	CCDpix	
+CUNIT2B	CUNIT2B	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId1 iWaxis2 WCS B physical unit	CCDpix	
+CUNIT2C	CUNIT2C	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId3 iWaxis2 WCS C physical unit	CCDpix	
+CUNIT2D	CUNIT2D	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					ampId3 iWaxis2 WCS D physical unit	CCDpix	
 CURRINST	CURRINST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Current instrument	KCWI	
 DATASUM	DATASUM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					data unit checksum updated 2016-10-13T20:33:41	1985548719	
 DATE	DATE_UT	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
 DATE-BEG	DATE_BEG	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					exposure begin	2016-11-02T12:47:05.068	
 DATE-END	DATE_END	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s	Y				Y					exposure end	2016-11-02T12:47:05.468	
 DATE-OBS	DATE_OBS	DCS	char		DATE	12	N	Y	Y	date	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	This should be in YYYY-MM-DD format, right?  [ACL]  Correct
-DATEEEND	DATEEEND	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					[UT] end specialErase/flush/purge	2023-05-03T05:39:21.675
-DATEERAS	DATEERAS	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					[UT] begin specialErase/flush/purge	2023-05-03T05:39:14.380
+DATEEEND	DATEEEND	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					[UT] end specialErase/flush/purge	2023-05-03T05:39:21.675	
+DATEERAS	DATEERAS	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					[UT] begin specialErase/flush/purge	2023-05-03T05:39:14.380	
 DATEPCLR	DATEPCLR	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					most recent erase	2016-11-02T12:47:05.068	
-DATEREAD	DATEREAD	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					[UT] readout begin	2023-05-03T05:40:01.833
+DATEREAD	DATEREAD	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					[UT] readout begin	2023-05-03T05:40:01.833	
 DATEREND	DATEREND	KCWI	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					readout end	2016-11-02T12:47:12.365	
 DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	16	N	Y	N		16d					Y					Data reduction level		
 DDEC	DDEC	DCS	double	arcseconds/s	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Diff Dec rate	0	
@@ -250,29 +250,29 @@ DSEC2	DSEC2	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [F
 DSEC3	DSEC3	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 3	[30:1053,2200:1173]	
 DSEC4	DSEC4	KCWI	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s					Y					IRAF DATASEC [FITSpix], readout sequence 4	[2271:1248,2200:1173]	
 EL	EL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Elevation	53.68	
-ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
-EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855	2100		Y	Y				Telescope equinox	2000	
+ELAPTIME	ELAPTIME	KOA	double		FLOAT(126)	16	Y	Y	Y		18.5f		0.0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855.0	2100.0		Y	Y				Telescope equinox	2000	
 EXPTIME	EXPTIME	KCWI-F	double	s	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
 EXTEND	EXTEND	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					FITS dataset may contain extensions	TRUE	
 FILENAME	FILENAME	KCWI-F	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Filename	/s/sdata1400/kcwirun/2017feb16/kf170216_000001.fits	
 FLIMAGIN	FLIMAGIN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 1	off	
 FLSPECTR	FLSPECTR	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Flat lamp control 2	off	
-FRAMEMOD	FRAMEMOD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon FRAMEMODE for this readout	0
-FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
+FRAMEMOD	FRAMEMOD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon FRAMEMODE for this readout	0	
+FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0.0	9999.0		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
 GAIN1	GAIN1	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 0	0.172	
 GAIN2	GAIN2	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 1	0.173	
 GAIN3	GAIN3	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 2	0.168	
 GAIN4	GAIN4	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					gain (e-/DN) for amp 3	0.174	
-GAINMODE	GAINMODE	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					CCD gain mode (low-0/high-1)	0
+GAINMODE	GAINMODE	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					CCD gain mode (low-0/high-1)	0	
 GAINMUL	GAINMUL	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					gain multiplier (1,2,5,10)	10	
 GUIDFWHM	GUIDFWHM	KOA	double	arcsec	FLOAT(126)	24	Y	Y	N		18.5f					Y					FWHM of guide star		
 GUIDING	GUIDING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Guiding status	TRUE	
 GUIDTIME	GUIDTIME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					UT of GUIDFWHM value		
 HA	HA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Telescope hour angle		
 HATNUM	HATNUM	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Instrument hatch position number (0,1)	0	
-HATORD	HATORD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Instrument hatch position number (0,1)	0
+HATORD	HATORD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Instrument hatch position number (0,1)	0	
 HATPOS	HATPOS	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Instrument hatch position name	Closed	
-HBIN2	HBIN2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter HBIN2 for this readout	1
+HBIN2	HBIN2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter HBIN2 for this readout	1	
 HEART_01	HEART_01	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					dcs2.UTC		
 HEART_02	HEART_02	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kbds.UPTIME		
 HEART_03	HEART_03	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kbes.UPTIME		
@@ -286,26 +286,26 @@ HEART_10	HEART_10	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kp2s.UPTI
 HEART_11	HEART_11	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kp3s.UPTIME		
 HEART_12	HEART_12	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kt1s.UPTIME		
 HEART_13	HEART_13	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					kt2s.UPTIME		
-HEART_14	HEART_14	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					krms.UPTIME	Heartbeat active
-HEART_15	HEART_15	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					kros.UPTIME	Heartbeat active
-HEART_16	HEART_16	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					krvs.UPTIME	Heartbeat active
-HEART_17	HEART_17	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					kt1s.UPTIME	Heartbeat active
-HEART_18	HEART_18	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					kt2s.UPTIME	Heartbeat active
-HEATERI	HEATERI	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater system supply current	0.047
-HEATERV	HEATERV	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater system supply voltage	27.802
-HTRAD	HTRAD	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater A derivative term	0.0
-HTRAI	HTRAI	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater A integral term	1.0
-HTRAP	HTRAP	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater A proportional term	96.0
-HTRATARG	HTRATARG	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Archon heater A target temp	-125.0
-HTRAVOLT	HTRAVOLT	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater A voltage	8.967
-HTRBD	HTRBD	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater B derivative term	0.0
-HTRBI	HTRBI	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater B integral term	0.5
-HTRBP	HTRBP	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater B proportional term	48.0
-HTRBTARG	HTRBTARG	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Archon heater B target temp	-125.0
-HTRBVOLT	HTRBVOLT	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Archon heater B voltage	0.9
-H_LEFT	H_LEFT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter H_LEFT for this readout	0
-H_RIGHT	H_RIGHT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter H_RIGHT for this readout	0
-H_SPLIT	H_SPLIT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter H_SPLIT for this readout	1
+HEART_14	HEART_14	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					krms.UPTIME	Heartbeat active	
+HEART_15	HEART_15	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					kros.UPTIME	Heartbeat active	
+HEART_16	HEART_16	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					krvs.UPTIME	Heartbeat active	
+HEART_17	HEART_17	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					kt1s.UPTIME	Heartbeat active	
+HEART_18	HEART_18	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					kt2s.UPTIME	Heartbeat active	
+HEATERI	HEATERI	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater system supply current	0.047	
+HEATERV	HEATERV	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater system supply voltage	27.802	
+HTRAD	HTRAD	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater A derivative term	0.0	
+HTRAI	HTRAI	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater A integral term	1.0	
+HTRAP	HTRAP	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater A proportional term	96.0	
+HTRATARG	HTRATARG	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Archon heater A target temp	-125.0	
+HTRAVOLT	HTRAVOLT	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater A voltage	8.967	
+HTRBD	HTRBD	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater B derivative term	0.0	
+HTRBI	HTRBI	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater B integral term	0.5	
+HTRBP	HTRBP	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater B proportional term	48.0	
+HTRBTARG	HTRBTARG	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Archon heater B target temp	-125.0	
+HTRBVOLT	HTRBVOLT	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Archon heater B voltage	0.9	
+H_LEFT	H_LEFT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter H_LEFT for this readout	0	
+H_RIGHT	H_RIGHT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter H_RIGHT for this readout	0	
+H_SPLIT	H_SPLIT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter H_SPLIT for this readout	1	
 IDLECLOK	IDLECLOK	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					idle clocking	1	Ineger or floating point?  Integer
 IFUENC	IFUENC	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					IFU encoder position (counts)	440394	
 IFUNAM	IFUNAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	IFU position name	Large	
@@ -315,20 +315,20 @@ IFUZERO	IFUZERO	KCWI-F	integer	counts	NUMBER(*,0)	16	Y	Y	N		16d					Y					IFU po
 IMAGEMD	IMAGEMD	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Imaging mean		
 IMAGEMN	IMAGEMN	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Imaging median		
 IMAGESD	IMAGESD	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Imaging standard deviation		
-IMCPIX1	IMCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] detector image pixels	2057
-IMCPIX2	IMCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] detector image pixels	4128
+IMCPIX1	IMCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] detector image pixels	2057	
+IMCPIX2	IMCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] detector image pixels	4128	
 IMGNUM	IMGNUM	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Image number	1	
-IMOCPIX1	IMOCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] image mixed with overscan pixels	0
-IMOCPIX2	IMOCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] image mixed with overscan pixels	0
-IMPCPIX1	IMPCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] image mixed with prescan pixels	1
-IMPCPIX2	IMPCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] image mixed with prescan pixels	0
+IMOCPIX1	IMOCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] image mixed with overscan pixels	0	
+IMOCPIX2	IMOCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] image mixed with overscan pixels	0	
+IMPCPIX1	IMPCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] image mixed with prescan pixels	1	
+IMPCPIX2	IMPCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] image mixed with prescan pixels	0	
 IMTYPE	IMTYPE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Image type		
 INSEQ	INSEQ	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Number in sequence	1	
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	KCWI	
 INTGAIN	INTGAIN	KCWI	double	e-DN	FLOAT(126)	16	Y	Y	N		18.5f					Y					intrinsic gain	1.45	
-INTINTVL	INTINTVL	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[10 ns] parameter INT_INTRVL for this readout	349
+INTINTVL	INTINTVL	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[10 ns] parameter INT_INTRVL for this readout	349	
 INTSPEED	INTSPEED	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					CCD integrator speed	1	
-LINECNT	LINECNT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] Archon LINECOUNT for this readout	2124
+LINECNT	LINECNT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] Archon LINECOUNT for this readout	2124	
 LMP0NAM	LMP0NAM	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					CAL Lamp 0 name	FeAr	
 LMP0ONT	LMP0ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					CAL Lamp 0 ON duration (s)	9516	
 LMP0SHST	LMP0SHST	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					CAL Lamp 0 shutter (0-closed, 1-open)	0	
@@ -346,15 +346,15 @@ LMP3ONT	LMP3ONT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					CAL Lamp 3 ON 
 LMP3STAT	LMP3STAT	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					CAL Lamp 3 status (0-off, 1-on)	1	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Local sidereal time	39:51.6	
 MJD	MJD	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Modified Julian day	57800.67666	
-M5CLAMP1	M5CLAMP1	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[V] MOD5/CLAMP1 for this readout	2.0
-M5CLAMP2	M5CLAMP2	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[V] MOD5/CLAMP2 for this readout	2.0
-M5CLAMP3	M5CLAMP3	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[V] MOD5/CLAMP3 for this readout	2.0
-M5CLAMP4	M5CLAMP4	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[V] MOD5/CLAMP4 for this readout	2.0
-M5PAGAIN	M5PAGAIN	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					MOD5/PREAMPGAIN for this readout	0
-MIOFPIX1	MIOFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] mixed image+overscan pixels	0
-MIOFPIX2	MIOFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] mixed image+overscan pixels	0
-MPIFPIX1	MPIFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] mixed prescan+image pixels	1
-MPIFPIX2	MPIFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] mixed prescan+image pixels	0
+M5CLAMP1	M5CLAMP1	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[V] MOD5/CLAMP1 for this readout	2.0	
+M5CLAMP2	M5CLAMP2	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[V] MOD5/CLAMP2 for this readout	2.0	
+M5CLAMP3	M5CLAMP3	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[V] MOD5/CLAMP3 for this readout	2.0	
+M5CLAMP4	M5CLAMP4	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[V] MOD5/CLAMP4 for this readout	2.0	
+M5PAGAIN	M5PAGAIN	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					MOD5/PREAMPGAIN for this readout	0	
+MIOFPIX1	MIOFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] mixed image+overscan pixels	0	
+MIOFPIX2	MIOFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] mixed image+overscan pixels	0	
+MPIFPIX1	MPIFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] mixed prescan+image pixels	1	
+MPIFPIX2	MPIFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] mixed prescan+image pixels	0	
 NAMPSXY	NAMPSXY	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					active video inputs along axis1 axis2	2 2	
 NAXIS	NAXIS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of data axes	2	
 NAXIS1	NAXIS1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					length of data axis 1	2300	
@@ -369,32 +369,32 @@ OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing assistant
 OBJECT	OBJECT	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	centering	
 OBSERVER	OBSERVER	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer name	matmat	
 OFNAME	OFNAME	KCWI	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	kcwi19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
-OMICPIX1	OMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] overscan mixed with image pixels	0
-OMICPIX2	OMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] overscan mixed with image pixels	0
+OMICPIX1	OMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] overscan mixed with image pixels	0	
+OMICPIX2	OMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] overscan mixed with image pixels	0	
 OUTDIR	OUTDIR	KCWI	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					data	/data/161101	Is 15 characters enough for these? -[ACL]
 OUTFILE	OUTFILE	KCWI	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	kcwi	
 PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Parallactic angle (deg)	147.23	
 PARANTEL	PARANTEL	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Parallactic angle telescope	0	
-PIMCPIX1	PIMCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure image pixels	2056
-PIMCPIX2	PIMCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure image pixels	4128
-PIMFPIX1	PIMFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure image pixels	1028
-PIMFPIX2	PIMFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure image pixels	2064
-PIXELCNT	PIXELCNT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] Archon PIXELCOUNT for this readout	1104
-PMICPIX1	PMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] prescan mixed with image pixels	1
-PMICPIX2	PMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] prescan mixed with image pixels	0
+PIMCPIX1	PIMCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure image pixels	2056	
+PIMCPIX2	PIMCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure image pixels	4128	
+PIMFPIX1	PIMFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure image pixels	1028	
+PIMFPIX2	PIMFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure image pixels	2064	
+PIXELCNT	PIXELCNT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] Archon PIXELCOUNT for this readout	1104	
+PMICPIX1	PMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] prescan mixed with image pixels	1	
+PMICPIX2	PMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] prescan mixed with image pixels	0	
 PONAME	PONAME	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Point origin name	SLIT	
-POSCPIX1	POSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure overscan pixels	144
-POSCPIX2	POSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure overscan pixels	120
-POSFPIX1	POSFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure overscan pixels	72
-POSFPIX2	POSFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure overscan pixels	60
+POSCPIX1	POSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure overscan pixels	144	
+POSCPIX2	POSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure overscan pixels	120	
+POSFPIX1	POSFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure overscan pixels	72	
+POSFPIX2	POSFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure overscan pixels	60	
 PPRECLR	PPRECLR	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					parallel pre-clear (erase)	1	Integer or a string?  Integer
-PPSCPIX1	PPSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure prescan pixels	6
-PPSCPIX2	PPSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] pure prescan pixels	0
-PPSFPIX1	PPSFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure prescan pixels	3
-PPSFPIX2	PPSFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] pure prescan pixels	0
-PSCPIX1	PSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] detector prescan pixels	7
-PSCPIX2	PSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[CCDpix] detector prescan pixels	0
-PURGROWS	PURGROWS	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter PURGE_ROWS for this readout	75
+PPSCPIX1	PPSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure prescan pixels	6	
+PPSCPIX2	PPSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] pure prescan pixels	0	
+PPSFPIX1	PPSFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure prescan pixels	3	
+PPSFPIX2	PPSFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] pure prescan pixels	0	
+PSCPIX1	PSCPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] detector prescan pixels	7	
+PSCPIX2	PSCPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] detector prescan pixels	0	
+PURGROWS	PURGROWS	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter PURGE_ROWS for this readout	75	
 PWNAMEA1	PWNAMEA1	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Power Bank A, Port 1 name	FPCam	
 PWNAMEA2	PWNAMEA2	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Power Bank A, Port 2 name	Magiq	
 PWNAMEA3	PWNAMEA3	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Power Bank A, Port 3 name	Glycol	
@@ -447,39 +447,39 @@ RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					DCS RA	19:15.0
 RABASE	RABASE	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS RA base	19:19.8	
 RADECSYS	RADECSYS	KOA	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					WCS coordinate system		
 RAOFF	RAOFF	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS RA offset	-73.1	
-RALPHA	RALPHA	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red grating incidence angle (deg)	53.0282822
-RARTANG	RARTANG	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Articulation Stage Angle (deg)	103.4355469
-RARTENC	RARTENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red Articulation Stage Encoder Value	1020113
-RBETA	RBETA	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red grating diffraction angle (deg)	50.4072647
-RCCDTMP	RCCDTMP	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Red CCD Temperature	-125.011
-RCCDTMPE	RCCDTMPE	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Red CCD Temperature, End of READ	-124.861
+RALPHA	RALPHA	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red grating incidence angle (deg)	53.0282822	
+RARTANG	RARTANG	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Articulation Stage Angle (deg)	103.4355469	
+RARTENC	RARTENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Articulation Stage Encoder Value	1020113	
+RBETA	RBETA	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red grating diffraction angle (deg)	50.4072647	
+RCCDTMP	RCCDTMP	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Red CCD Temperature	-125.011	
+RCCDTMPE	RCCDTMPE	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Red CCD Temperature, End of READ	-124.861	
 RCNTRL1	RCNTRL1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Control Mode	1	
 RCNTRL2	RCNTRL2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 2 Control Mode	1	
-RCWAVE	RCWAVE	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Central Wavelength (Ang)	7769.9331055
+RCWAVE	RCWAVE	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Central Wavelength (Ang)	7769.9331055	
 RDNOISE1	RDNOISE1	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Read Noise LL	50	
 RDNOISE2	RDNOISE2	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Read Noise LR	48.5	
 RDNOISE3	RDNOISE3	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Read Noise UL	49.7	
 RDNOISE4	RDNOISE4	KCWI-F	double	e rms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Read Noise UR	49.1	
-RFOCENC	RFOCENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red Focus Stage Encoder Value	-1419
-RFOCHM	RFOCHM	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red Focus Stage Homed? 0-no, 1-yes	1
-RFOCMM	RFOCMM	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Focus Stage Position in mm	-1.419
-RGPNAME	RGPNAME	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Red Grating pusher position name	Engaged
-RGPPOS	RGPPOS	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Red Grating pusher position num (0-3)	2
-RGPRESS	RGPRESS	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Pressure Gauge Pressure (Torr)	0.0002
-RGRANGLE	RGRANGLE	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Grating Angle (deg)	103.1454239
-RGRATNAM	RGRATNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Red Grating name	RH2
-RGRATNUM	RGRATNUM	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Red Grating number (0-7)	6
-RGRENC	RGRENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red Grating rotator encoder position (counts)	155089
-RGROTNAM	RGROTNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Red Grating rotator position name	 103.145
-RGROTNUM	RGROTNUM	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Red Grating rotator position num (0-2)	2
+RFOCENC	RFOCENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Focus Stage Encoder Value	-1419	
+RFOCHM	RFOCHM	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Focus Stage Homed? 0-no, 1-yes	1	
+RFOCMM	RFOCMM	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Focus Stage Position in mm	-1.419	
+RGPNAME	RGPNAME	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red Grating pusher position name	Engaged	
+RGPPOS	RGPPOS	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Red Grating pusher position num (0-3)	2	
+RGPRESS	RGPRESS	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Pressure Gauge Pressure (Torr)	0.0002	
+RGRANGLE	RGRANGLE	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Grating Angle (deg)	103.1454239	
+RGRATNAM	RGRATNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red Grating name	RH2	
+RGRATNUM	RGRATNUM	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Red Grating number (0-7)	6	
+RGRENC	RGRENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Grating rotator encoder position (counts)	155089	
+RGROTNAM	RGROTNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red Grating rotator position name	 103.145	
+RGROTNUM	RGROTNUM	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Red Grating rotator position num (0-2)	2	
 RHTR1ST	RHTR1ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Red Heater 1 Status	UNKNOWN	If not unknown, will this int or string? All values have been UNKNOWN so far.  Assume OK is good value.
 RHTR2ST	RHTR2ST	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Red Heater 2 Status	UNKNOWN	If not unknown, will this int or string?
 RINPUT1	RINPUT1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Input Sensor	1	
 RINPUT2	RINPUT2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 2 Input Sensor	2	
 RMXCURM1	RMXCURM1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Max Current Mode	4	
 RMXCURM2	RMXCURM2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 2 Max Current Mode	3	
-RNASENC	RNASENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red NandS Mask Stage Encoder Value	-145032
-RNASNAM	RNASNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N							Y					Red NandS Mask Stage Position Name	unknown
+RNASENC	RNASENC	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red NandS Mask Stage Encoder Value	-145032	
+RNASNAM	RNASNAM	KCWI	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red NandS Mask Stage Position Name	unknown	
 ROTBASE	ROTBASE	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Rotator base	-1.96	
 ROTDEST	ROTDEST	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Rotator user destination	182.7	
 ROTDETS1	ROTDETS1	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Rotator time stamp 1	14:22.9	
@@ -493,11 +493,11 @@ ROTPPOSN	ROTPPOSN	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Ro
 ROTREFAN	ROTREFAN	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Rotator reference angle (deg)		
 ROTSEL	ROTSEL	DCS	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					DCS Selected rotator	none	
 ROTSTST	ROTSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Rotator state string	NSPEC	
-RPKGTMP	RPKGTMP	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Red CCD Pkg Temperature	-127.59
-RPKGTMPE	RPKGTMPE	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					[deg C] Red CCD Pkg Temperature, End of READ	-125.412
+RPKGTMP	RPKGTMP	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Red CCD Pkg Temperature	-127.59	
+RPKGTMPE	RPKGTMPE	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg C] Red CCD Pkg Temperature, End of READ	-125.412	
 RPUPEN1	RPUPEN1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Power-up Enabled?	0	
 RPUPEN2	RPUPEN2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 2 Power-up Enabled?	0	
-RPWAVE	RPWAVE	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Peak Wavelength (Ang)	7441.3867188
+RPWAVE	RPWAVE	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Peak Wavelength (Ang)	7441.3867188	
 RRANGE1	RRANGE1	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Power Range (0-Off, 1-Lo, 2-Md)	0	
 RRANGE2	RRANGE2	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 2 Power Range (0-Off, 1-Lo, 2-Md)	0	
 RRESIST1	RRESIST1	KCWI	integer	Ohms	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Heater 1 Resistance (1-25, 2-50)	1	
@@ -506,24 +506,24 @@ RTMPHTP1	RTMPHTP1	KCWI	double	%	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Heater 
 RTMPHTP2	RTMPHTP2	KCWI	double	%	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Heater 2 Output	0	Whole number or a floating point percentage?
 RTRGTMP1	RTRGTMP1	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Heater 2 setpoint	226.85	
 RTRGTMP2	RTRGTMP2	KCWI	double	Kelvin	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Heater 2 setpoint	7.25	
-RVCURR	RVCURR	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Vac-Ion Current (Amps)	8.3e-05
-RVHVON	RVHVON	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Red Vac-Ion HV on? 0-no, 1-yes	1
-RVPRESS	RVPRESS	KCWI	double	units	FLOAT(126)	16	Y	Y	N							Y					Red Vac-Ion Pressure (Torr)	2e-06
-RVVOLT	RVVOLT	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Red Vac-Ion Voltage (Volts)	5050
+RVCURR	RVCURR	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Vac-Ion Current (Amps)	8.3e-05	
+RVHVON	RVHVON	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Red Vac-Ion HV on? 0-no, 1-yes	1	
+RVPRESS	RVPRESS	KCWI	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Vac-Ion Pressure (Torr)	2e-06	
+RVVOLT	RVVOLT	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Red Vac-Ion Voltage (Volts)	5050	
 SAFE	SAFE	KCWI-F	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					File written safely?	T	
-SAMPLMOD	SAMPLMOD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon SAMPLEMODE for this readout	0
+SAMPLMOD	SAMPLMOD	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon SAMPLEMODE for this readout	0	
 SECFOCUS	SECFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Secondary focus	-0.00044643	
 SECSTST	SECSTST	DCS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Secondary status string	HALT	
 SECTHETX	SECTHETX	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Secondary theta x	-43.4	
 SECTHETY	SECTHETY	DCS	double	arcseconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Secondary theta y	-219.7	
 SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing semester	2015A	
 SEQUENCE	SEQUENCE	KCWI-F	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Command sequence	1	
-SHD1	SHD1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon dCDS SHD1 for this readout	446
-SHD2	SHD2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon dCDS SHD2 for this readout	542
-SHP1	SHP1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon dCDS SHP1 for this readout	240
-SHP2	SHP2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon dCDS SHP2 for this readout	336
+SHD1	SHD1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon dCDS SHD1 for this readout	446	
+SHD2	SHD2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon dCDS SHD2 for this readout	542	
+SHP1	SHP1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon dCDS SHP1 for this readout	240	
+SHP2	SHP2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon dCDS SHP2 for this readout	336	
 SHUFROWS	SHUFROWS	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					[ccdrows] number of rows in shuffle	685	
-SHUTDELA	SHUTDELA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					[10 us] parameter SHTR_CLOSE_DELAY for this rea	10000
+SHUTDELA	SHUTDELA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					[10 us] parameter SHTR_CLOSE_DELAY for this rea	10000	
 SIG2NOIS	SIG2NOIS	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Signal to noise at center of CCD		
 SIMPLE	SIMPLE	KCWI	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					file does conform to FITS standard	TRUE	
 SKYPA	SKYPA	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					ROS Sky PA		
@@ -534,16 +534,16 @@ SPECRES	SPECRES	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Nominal spectra
 STACKING	STACKING	KCWI-F	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Stacking status	F	
 STATEID	STATEID	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y	Y		Y	State ID		
 STATENAM	STATENAM	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	User defined state name		
-TAPLIN0	TAPLIN0	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Archon tapChanBufdir,gain,offset	AD2L,1,107
-TAPLIN1	TAPLIN1	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N							Y					Archon tapChanBufdir,gain,offset	AD4R,1,106
-TAPLINES	TAPLINES	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					Archon taps for this readout	2
+TAPLIN0	TAPLIN0	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Archon tapChanBufdir,gain,offset	AD2L,1,107	
+TAPLIN1	TAPLIN1	KCWI	char	units	VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Archon tapChanBufdir,gain,offset	AD4R,1,106	
+TAPLINES	TAPLINES	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					Archon taps for this readout	2	
 TARGDEC	TARGDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Target Dec		
 TARGNAME	TARGNAME	DCS	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y			Y	DCS Target name	AEGIS_26850	
 TARGRA	TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Target RA	19:19.8	
-TCH2GA	TCH2GA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Archon tap gain for tapChan 2	1065353216
-TCH2OFF	TCH2OFF	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Archon tapOffset for tapChan 2	107
-TCH4GA	TCH4GA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Archon tap gain for tapChan 4	1065353216
-TCH4OFF	TCH4OFF	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N							Y					Archon tapOffset for tapChan 4	106
+TCH2GA	TCH2GA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Archon tap gain for tapChan 2	1065353216	
+TCH2OFF	TCH2OFF	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Archon tapOffset for tapChan 2	107	
+TCH4GA	TCH4GA	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Archon tap gain for tapChan 4	1065353216	
+TCH4OFF	TCH4OFF	KCWI	integer	units	NUMBER(*,0)	16	Y	Y	N		16d					Y					Archon tapOffset for tapChan 4	106	
 TELAPSE	TELAPSE	KCWI	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[s] dark current duration	0.3999999	
 TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Telescope focus	-0.00127984	
 TERTDEST	TERTDEST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertiary user destination	rnas	
@@ -581,28 +581,28 @@ TMPLOCB5	TMPLOCB5	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Temperatu
 TMPLOCB6	TMPLOCB6	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Temperature Bank B, Sensor 6 name	Collim	
 TMPLOCB7	TMPLOCB7	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Temperature Bank B, Sensor 7 name	Cab int	
 TMPLOCB8	TMPLOCB8	KCWI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Temperature Bank B, Sensor 8 name	Blue Fill	
-TOTFPIX1	TOTFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] total FITS pixels	1104
-TOTFPIX2	TOTFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					[FITSpix] total FITS pixels	2124
+TOTFPIX1	TOTFPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] total FITS pixels	1104	
+TOTFPIX2	TOTFPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[FITSpix] total FITS pixels	2124	
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	yes	
 TRCKMODE	TRCKMODE	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					ROS Tracking mode		
 TRIGTIME	TRIGTIME	KCWI-F	double	seconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					Trigger time	1	
-TSEC1	TSEC1	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					[FITSpix] ampId1 total section	[1:1104,1:2124]
-TSEC3	TSEC3	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					[FITSpix] ampId3 total section	[2208:1105:-1,1:2124]
+TSEC1	TSEC1	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					[FITSpix] ampId1 total section	[1:1104,1:2124]	
+TSEC3	TSEC3	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					[FITSpix] ampId3 total section	[2208:1105:-1,1:2124]	
 TTIME	TTIME	KCWI	double	seconds	FLOAT(126)	16	Y	Y	N		18.5f					Y					target exposure time	0.4	
 TUBETEMP	TUBETEMP	DCS	double	Celsius	FLOAT(126)	16	Y	Y	N		18.5f					Y					DCS Tube temperature	0.55	
 UT	UT	DCS	char		VARCHAR2(16 BYTE)	16	N	Y	Y	time	16s					Y	Y			Y	DCS Universal Time	14:23.1	
-V_DOWN	V_DOWN	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter V_DOWN for this readout	0
-V_SPLIT	V_SPLIT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter V_SPLIT for this readout	0
-V_UP	V_UP	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter V_UP for this readout	1
-VBIN2	VBIN2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N							Y					parameter VBIN2 for this readout	1
+V_DOWN	V_DOWN	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter V_DOWN for this readout	0	
+V_SPLIT	V_SPLIT	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter V_SPLIT for this readout	0	
+V_UP	V_UP	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter V_UP for this readout	1	
+VBIN2	VBIN2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					parameter VBIN2 for this readout	1	
 VIMBA	VIMBA	KCWI-F	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					VIMBA SDK Version	1.3.0	
 WAVEBLUE	WAVEBLUE	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y	Y			Y	Blue end wavelength		
 WAVECNTR	WAVECNTR	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y					Central wavelength		
 WAVERED	WAVERED	KOA	integer	angstroms	NUMBER(*,0)	16	Y	Y	N		16d					Y	Y			Y	Red end wavelength		
-WCSNAMEA	WCSNAMEA	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					tapChan2 TAPLINE0	ampId1 amp coordinates
-WCSNAMEB	WCSNAMEB	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					tapChand2 TAPLINE0	ampId1 pane coordinates
-WCSNAMEC	WCSNAMEC	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					tapChan4 TAPLINE1	ampId3 amp coordinates
-WCSNAMED	WCSNAMED	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N							Y					tapChand4 TAPLINE1	ampId3 pane coordinates
+WCSNAMEA	WCSNAMEA	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					tapChan2 TAPLINE0	ampId1 amp coordinates	
+WCSNAMEB	WCSNAMEB	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					tapChand2 TAPLINE0	ampId1 pane coordinates	
+WCSNAMEC	WCSNAMEC	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					tapChan4 TAPLINE1	ampId3 amp coordinates	
+WCSNAMED	WCSNAMED	KCWI	char	units	VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					tapChand4 TAPLINE1	ampId3 pane coordinates	
 WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Dome humidity at WXTIME		
 WXDOMTMP	WXDOMTMP	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Dome temperature at WXTIME		
 WXDWPT	WXDWPT	KOA	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					Dewpoint at WXTIME		
