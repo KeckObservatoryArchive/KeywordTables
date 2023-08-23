@@ -117,7 +117,7 @@ TARGDEC	TARGDEC	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					targe
 TARGEPOC	TARGEPOC	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					target epoch (2000)	2000	
 TARGEQUI	TARGEQUI	GUIDER	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					target equinox (2000)	2000	
 TARGFRAM	TARGFRAM	GUIDER	char		VARCHAR2(3 BYTE)	3	Y	Y	N		3s					Y					target frame	FK5	
-TARGNAME	TARGNAME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					target name	BD+332642	
+TARGNAME	TARGNAME	GUIDER	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					target name	BD+332642	
 TARGPLAX	TARGPLAX	GUIDER	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					target parallax (0.000000 arcsec)	0	
 TARGPMDC	TARGPMDC	GUIDER	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					targ pr motion dec (0 arcsec/yr)	0	
 TARGPMRA	TARGPMRA	GUIDER	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					targ pr motion ra (0 s/yr)	0	
