@@ -48,6 +48,7 @@ ELAPTIME	ELAPTIME	KOA	double	secs	FLOAT(126)	16	Y	Y	Y		18.5f		0			Y	Y			Y
 EQUINOX	EQUINOX	GUIDER	double	years	FLOAT(126)	16	Y	Y	N		18.5f					Y					telescope equinox (2000)	2000	
 FOCALSTN	FOCALSTN	GUIDER	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s					Y					focal station	Right nasmyth	
 FRAME	FRAME	GUIDER	char		VARCHAR2(4 BYTE)	4	Y	Y	N		4s					Y					Frame type	ACQ	
+FRAMENO	FRAMENO	GUIDER	integer		Number(*,0)	16	N	Y	Y		16d		0	9999		Y			Y	Y	Copy of FRAMENUM from NIRES		
 FILTER	FILTER	GUIDER	char		VARCHAR2(50 BYTE)	50	Y	Y	N		50s					Y			Y	Y	Combined Filter Wheels		
 GUIDFWHM	GUIDFWHM	GUIDER	double	arcseconds	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star		
 GUIDTIME	GUIDTIME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
