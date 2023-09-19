@@ -50,7 +50,7 @@ FOCALSTN	FOCALSTN	GUIDER	char		VARCHAR2(48 BYTE)	48	Y	Y	N		48s					Y					focal s
 FRAME	FRAME	GUIDER	char		VARCHAR2(4 BYTE)	4	Y	Y	N		4s					Y					Frame type	ACQ	
 FRAMENO	FRAMENO	GUIDER	integer		Number(*,0)	16	N	Y	Y		16d		0	9999		Y			Y	Y	Copy of FRAMENUM from NIRES		
 FILTER	FILTER	GUIDER	char		VARCHAR2(50 BYTE)	50	Y	Y	N		50s					Y			Y	Y	Combined Filter Wheels		
-GUIDFWHM	GUIDFWHM	GUIDER	double	arcseconds	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star		
+GUIDFWHM	GUIDFWHM	GUIDER	double	arcsec	FLOAT(126)	24	Y	Y	N		18.8f					Y					FWHM of NIRSPEC guide star (arcsec)		
 GUIDTIME	GUIDTIME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logger GUIDFWHM value		
 HA	HA	GUIDER	double		FLOAT(126)	24	Y	Y	N		18.5f					Y					telescope hour angle (3.914468 h)	3.914468	
 INSTANGL	INSTANGL	GUIDER	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					porg to instr angle (179.000000 deg)	179	
@@ -150,7 +150,7 @@ WXPRESS	WXPRESS	GUIDER	double	mb	FLOAT(126)	16	Y	Y	N		18.8f					Y					Pressure
 WXWNDIR	WXWNDIR	GUIDER	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind direction (N through E)		
 WXWNDSP	WXWNDSP	GUIDER	double	mph	FLOAT(126)	16	Y	Y	N		18.8f					Y					Wind speed 		
 WXTIME	WXTIME	GUIDER	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					UT of logged weather keyword values		
-XPXSZ	XPXSZ	GUIDER	double	arcsec/px	FLOAT(126)	16	Y	Y	N		18.5f					Y					Plt scale in x [acssec/px]	0.207	
+XPXSZ	XPXSZ	GUIDER	double	arcsec/px	FLOAT(126)	16	Y	Y	N		18.5f					Y					Plt scale in x [arcsec/px]	0.207	
 YPXSZ	YPXSZ	GUIDER	double	arcsec/px	FLOAT(126)	16	Y	Y	N		18.5f					Y					Plt scale in x [arcsec/px]	0.207	
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive	 	
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion	 	
