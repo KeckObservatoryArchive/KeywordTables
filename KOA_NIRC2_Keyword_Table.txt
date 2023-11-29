@@ -525,6 +525,7 @@ TINTPSF	TINTPSF		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[s] QACITS integra
 TINTSCI	TINTSCI		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[s] QACITS integration time for science images	3	
 TM_ZONE	TM_ZONE		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					time zone	GMT	
 TRACKING	TRACKING		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	no	
+TRUITIME	TRUITIME	nirc2	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					True integration time in seconds per coadd		
 TUBETEMP	TUBETEMP	dcs	double	degC	FLOAT(126)	20	Y	Y	N		18.8f					Y					tube temperature 		
 UTCLP	UTCLP	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					OPEN/CLOSE TT CLMP ctrl loop		
 UTGAIN	UTGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set TT loop gain		
