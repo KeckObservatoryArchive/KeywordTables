@@ -279,7 +279,7 @@ OBFMYIM	OBFMYIM	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					Image plane y 
 OBFMYPU	OBFMYPU	ao	double		FLOAT(126)	20	Y	Y	N		18.8f					Y					Pupil plane y motion for FSM		
 OBFSNAME	OBFSNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for FSS		
 OBIMNAME	OBIMNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for ISM		
-OBJECT	OBJECT	alad	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Object name		
+OBJECT	OBJECT	alad	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Object name		
 OBLBNAME	OBLBNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for LBS		
 OBLBX	OBLBX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] User-value-of-LBS-x-axis	0	
 OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] User-value-of-LBS-y-axis	0	
