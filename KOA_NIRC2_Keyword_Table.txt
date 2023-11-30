@@ -146,8 +146,8 @@ ELAPTIME	ELAPTIME	added	double	seconds	FLOAT(126)	16	Y	Y	Y		18.5f		0.0	9999.0		Y
 EQUINOX	EQUINOX	dcs	double	year	FLOAT(126)	20	Y	Y	N		18.5f					Y					telescope equinox 	2000	
 ESTTYPE	ESTTYPE		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					QACITS region of interest estimator type	outer_only	
 EXPOSURE	EXPOSURE		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User defined integration time	12	
-EXPSTART	EXPSTART	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					current instrument		
-EXPSTOP	EXPSTOP	alad	char		VARCHAR2(20 BYTE)	20	Y	N	N		20s					Y					Exposure stop str (UT)		
+EXPSTART	EXPSTART	alad	char		VARCHAR2(32 BYTE)	32	Y	N	N		32s					Y					current instrument		
+EXPSTOP	EXPSTOP	alad	char		VARCHAR2(32 BYTE)	32	Y	N	N		32s					Y					Exposure stop str (UT)		
 FILE	FILEPATH		char		VARCHAR2(78 BYTE)	78	Y	Y	N		78s					Y					File	/usr/local/caltech/nirc2/data/nirc1/2023mar23/n_raw_0070.fits	
 FILENAME	FILENAME	alad	char		VARCHAR2(30 BYTE)	30	Y	Y	N		30s					Y					Original File name		
 FILTER	FILTER	nirc2	char		VARCHAR2(50 BYTE)	50	Y	Y	N		50s				Lp + 9holeMsk,  Ks + clear, H + clear, Lp + clear ,  Ms + clear, blank + blank , PK50_1.5 + Kcont,  K + 9holeMsk, Kp + clear, PK50_1.5 + NB2.108,  PK50_1.5 + Br_gamma,  PK50_1.5 + He1_B, J + clear , K + clear , PK50_1.5 + CO_2-0_bh, PK50_1.5 + H2_2-1, 18hole_msk + PAH, 18hole_msk + clear, PK50_1.5 + Hcont, CH4_short + PK50_1.5, H2O_ice + clear, clear + PAH,  PK50_1.5 + FeII, PK50_1.5 + PaBeta, PK50_1.5 + Jcont, Ms + 9holeMsk, H + 9holeMsk, CH4_long + PK50_1.5, Ks + 9holeMsk, J + 9holeMsk,18hole_msk + Jcont, 18hole_msk + PaBeta, 18hole_msk + Kcont, 18hole_msk + Hcont, Unknown, BrGamma2 + PK50_1.5, CH4_short + 9holeMsk, Kp + 9holeMsk, clear + clear, 18hole_msk + Br_gamma, L_undrSz + clear, 18hole_msk + CO_2-0_bh, H2O_ice + 9holeMsk, 18hole_msk + FeII,  MOVING + clear,  PK50_1.5 + MOVING,  K + MOVING, MOVING + MOVING, Kp + NB2.108, Kp + Br_gamma, Kp + Kcont, clear + FeII, clear + Hcont, PK50_1.5 + empty_07, clear + Kcont, clear + Br_gamma	Y				Y	composite filter name (both wheel)		
