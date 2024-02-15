@@ -111,6 +111,7 @@ IMTYPE	IMTYPE	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Image Type
 INSTANGL	INSTANGL	DCS	double		FLOAT(126)	16	Y	Y	N		16d										porg-to-instrument angle
 INSTRUME	INSTRUME	DCS	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	 	
 INSTSLCT	INSTSLCT	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Selected Instrument	 	
+KPFERA	KPFERA	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										KPF ERA that the data falls under
 KWFILENM	KWFILENM	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Filename of keyword	 	
 LST	LST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Local sidereal time	 	
 MJD-OBS	MJD_OBS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										Modified Julian day	 	
@@ -129,7 +130,7 @@ OFFSET01	OFFSET01	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD c
 OFFSET02	OFFSET02	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 2	 	
 OFFSET03	OFFSET03	KPF	integer		NUMBER(*,0)	8	Y	Y	N		16d										offset for AD chan 3	 	
 OFNAME	OFNAME	KPF	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				KOA: Original file name	 	
-OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters open at exposure midpoint	 	
+OTIMSHTR	OTIMSHTR	KPF	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s										Timed shutters open at exposure midpoint	 	
 OUTDIR	OUTDIR	KPF	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					Output directory for file in OFNAME	 	
 OUTFILE	OUTFILE	KPF	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					filename prefix kpf		
 PARANG	PARANG	DCS	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					[deg] DCS Parallactic angle astrometric	 	
@@ -215,7 +216,7 @@ TARGPMRA	TARGPMRA	DCS	double		FLOAT(126)	16	Y	Y	N		16d										[s/yr] target pr
 TARGRA	TARGRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					[h] DCS Target RA	 	
 TARGRADV	TARGRADV	DCS	integer		NUMBER(*,0)	8	Y	Y	N		16d										[km/s] target radial velocity	 	
 TARGWAVE	TARGWAVE	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										target-wavelength	 	
-TELESCOP	TELESCOP	KOA	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Telescope	 	
+TELESCOP	TELESCOP	KOA	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Telescope	 	
 TELFOCUS	TELFOCUS	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] Telescope focus	 	
 TERTDEST	TERTDEST	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertiary user destination	 	
 TERTPOSN	TERTPOSN	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Tertiary user position	 	
@@ -229,7 +230,7 @@ THDAYON	THDAYON	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										ThAr Daily wa
 THDAYTON	THDAYTON	KPF	double		FLOAT(126)	16	Y	Y	N		18.5f										ThAr Daily has been on for this long	 	
 TIMEERR	TIMEERR	KPF	char		VARCHAR2(64 BYTE)	64	Y	Y	N		64s										resp from time serv	 	
 TIMESYS	TIMESYS	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										The time system.	 	
-TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Timed shutters commanded for exposure	 	
+TIMSHTTR	TIMSHTTR	KPF	char		VARCHAR2(40 BYTE)	40	Y	Y	N		40s										Timed shutters commanded for exposure	 	
 TRACKING	TRACKING	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Servos tracking status	 	
 TRIGTARG	TRIGTARG	KPF	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Cameras that were sent triggers	 	
 TUBEFLEX	TUBEFLEX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f										[arcsec] Telescope tube flexure	 	
