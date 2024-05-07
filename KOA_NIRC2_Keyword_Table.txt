@@ -286,7 +286,7 @@ OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					[mm] User-value-of-LBS
 OBRT	OBRT	ao	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of ROT 		
 OBRTNAME	OBRTNAME	ao-legacy	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for ROT		
 OBSDNAME	OBSDNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SOD		
-OBSERVER	OBSERVER	alad	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Observer		
+OBSERVER	OBSERVER	alad	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer		
 OBSFNAME	OBSFNAME	ao	char		VARCHAR2(20 BYTE)	20	Y	Y	N		20s					Y					Named position control for SFP		
 OBSFX	OBSFX	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP x axis 		
 OBSFY	OBSFY	ao	double	mm	FLOAT(126)	20	Y	Y	N		18.8f					Y					User value of SFP y axis		
@@ -457,7 +457,7 @@ ROTPOSN	ROTPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator 
 ROTPPOSN	ROTPPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator physical position 		
 ROTPRIOD	ROTPRIOD	nirc2	double	degrees	FLOAT(126)	16	Y	Y	N		18.8f					Y					 Pupil mask rotato servo period		
 ROTREFAN	ROTREFAN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					rotator reference angle		
-ROTSERVO	ROTSERVO		integer		NUMBER(38)	8	Y	Y	N		8d					Y					Pupil mask rotator servo start cmd		
+ROTSERVO	ROTSERVO		integer		NUMBER(16)	16	Y	Y	N		16d					Y					Pupil mask rotator servo start cmd		
 ROTSEL	ROTSEL		char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					DCS Selected rotator	none	
 ROTSTST	ROTSTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Rotator state string	FAULT	
 ROTTRACK	ROTTRACK		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Pupil mask rotator tracking command		
