@@ -237,7 +237,7 @@ NUMOPEN	NUMOPEN	LRIS	integer		NUMBER(*,0)	8	Y	N	N		8d					Y					number of shutte
 NVIDINP	NVIDINP	LRIS	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y	Y	Y	Y	Y	Number of video inputs	4	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observing assistant		
 OBJECT	OBJECT	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y	Y		Y	Y	Object's name	NGC 4889	
-OBSERVER	OBSERVER	LRIS	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Observer's name(s)	McConnell	
+OBSERVER	OBSERVER	LRIS	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y			Y		Observer's name(s)	McConnell	
 OBSMODE	OBSMODE	KOA,LRIS	char		VARCHAR2(16 BYTE)	16	Y	Y	Y		16s				IMAGING, SPEC, Imaging, Spectroscopy	Y	Y		Y	Y	Imaging or Spec mode		
 OBSTYPE	OBSTYPE	LRIS	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Type of observation	dark	
 OFNAME	OFNAME	LRIS	char		VARCHAR2(32 BYTE)	32	Y	N	N		32s					Y					original file name	r210729_00005.fits	

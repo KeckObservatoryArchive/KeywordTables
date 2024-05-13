@@ -367,7 +367,7 @@ NUMOPEN	NUMOPEN	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of shut
 NVIDINP	NVIDINP	KCWI	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					number of active video inputs	4	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing assistant		
 OBJECT	OBJECT	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	centering	
-OBSERVER	OBSERVER	KCWI	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					Observer name	matmat	
+OBSERVER	OBSERVER	KCWI	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer name	matmat	
 OFNAME	OFNAME	KCWI	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	kcwi19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
 OMICPIX1	OMICPIX1	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] overscan mixed with image pixels	0	
 OMICPIX2	OMICPIX2	KCWI	integer	units	NUMBER(*,0)	8	Y	Y	N		8d					Y					[CCDpix] overscan mixed with image pixels	0	

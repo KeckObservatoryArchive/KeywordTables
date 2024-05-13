@@ -165,7 +165,7 @@ NAXIS2	NAXIS2	ESI	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y					Length of data ax
 NSUBINT	NSUBINT	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y					number of sub integrations		
 NUMAMPS	NUMAMPS	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y					number of amplifiers		
 OBJECT	OBJECT	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y	Y			Y	object	sky, G93-48 B	
-OBSERVER	OBSERVER	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					observer		
+OBSERVER	OBSERVER	ESI	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					observer		
 OBSNUM	OBSNUM	ESI	integer		NUMBER(*,0)	8	Y	Y	N		11d					Y					observation number		
 OBSTYPE	OBSTYPE	ESI	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					observation type		
 OUTDIR	OUTDIR	ESI	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					data output directory		

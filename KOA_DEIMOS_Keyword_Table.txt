@@ -243,7 +243,7 @@ NAXIS	NAXIS	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		naxis
 NSUBINT	NSUBINT	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		number of sub integrations		
 NVIDINP	NVIDINP	DEIMOS	integer		NUMBER(*,0)	16	Y	Y	N		11d					Y			Y		number of video inputs		
 OBJECT	OBJECT	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y			Y		object		
-OBSERVER	OBSERVER	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y			Y		observer		
+OBSERVER	OBSERVER	DEIMOS	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y			Y		observer		
 OBSTYPE	OBSTYPE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		observation type		
 OUTDIR	OUTDIR	DEIMOS	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y			Y		data output directory		
 OUTFILE	OUTFILE	DEIMOS	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		output file		

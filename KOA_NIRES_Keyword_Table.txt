@@ -107,7 +107,7 @@ NUMREADS	NUMREADS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Number of read
 NUMUTRS	NUMUTRS	NIRES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		SDSU NUTR value	1	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observing assistant		
 OBJECT	OBJECT	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y		Y		Object name	MIRA sky	
-OBSERVER	OBSERVER	NIRES	char		VARCHAR2(68)	68	Y	Y	N		68s					Y			Y		Observer name(s BYTE)	Matthews/Cromer	
+OBSERVER	OBSERVER	NIRES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y			Y		Observer name(s BYTE)	Matthews/Cromer	
 OBSTYPE	OBSTYPE	NIRES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observation type	astro	What are allowed values?
 OFNAME	OFNAME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Original file name at the telescope, copied from DATAFILE keyword	v171005_0001	
 OUTDIR	OUTDIR	NIRES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Original output directory		

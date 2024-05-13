@@ -194,7 +194,7 @@ NUMAMPS	NUMAMPS		integer		NUMBER(*,0)	16	Y	Y	N		16d		1	16					Y	N	number-of-read
 NVIDINP	NVIDINP		integer		NUMBER(*,0)	16	Y	Y	Y		16d		1	16					Y	Y	number of video inputs		
 OA	OA		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	observing assistant		
 OBJECT	OBJECT		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	Y	object name		
-OBSERVER	OBSERVER		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	observer name		
+OBSERVER	OBSERVER		char		VARCHAR2(128 BYTE)	128	Y	N	N		128s								Y	N	observer name		
 OBSNUM	OBSNUM		integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	observation number		
 OBSTYPE	OBSTYPE		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	type of observation		
 OUTDIR	OUTDIR		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	readout-directory		

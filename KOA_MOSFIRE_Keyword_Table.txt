@@ -192,7 +192,7 @@ NAXIS2	NAXIS2	MOSFIRE	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y			Y		length of da
 NPIXSAT	NPIXSAT	KOA	integer		NUMBER(*,0)	16	N	Y	N		16d					Y			Y		Number of pixels above saturation		
 NUMREADS	NUMREADS	MOSFIRE	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y	Y	Number of reads		
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y			Y		Observing assistant		
-OBSERVER	OBSERVER	MOSFIRE	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Observer name(s)		
+OBSERVER	OBSERVER	MOSFIRE	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y			Y		Observer name(s)		
 OUTDIR	OUTDIR	MOSFIRE	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y			Y		Output directory		
 OUTPTMP1	OUTPTMP1	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch A heater output percentage		
 OUTPTMP2	OUTPTMP2	MOSFIRE	double		FLOAT(126)	24	Y	Y	N		18.8f					Y			Y		Ch B heater output percentage		
