@@ -219,7 +219,7 @@ OBLBX	OBLBX	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User-value-of-L
 OBLBY	OBLBY	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User-value-of-LBS-y-axis		
 OBRT	OBRT	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										User value of ROT (31.4380 deg)		
 OBSDNAME	OBSDNAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for SOD		
-OBSERVER	OBSERVER	Native	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s										Observer		
+OBSERVER	OBSERVER	Native	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s										Observer		
 OBSFNAME	OBSFNAME	Native	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Named position control for SFP		
 OBSFX	OBSFX	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFP x axis (-119.00 mm)		
 OBSFY	OBSFY	Native	double	mm	FLOAT(126)	32	Y	Y	N		18.8f										User value of SFP y axis (0.00 mm)		

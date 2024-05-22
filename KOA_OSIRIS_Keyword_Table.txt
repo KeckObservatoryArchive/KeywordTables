@@ -252,7 +252,7 @@ OBLBX	OBLBX		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of LBS x ax
 OBLBY	OBLBY		double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User value of LBS y axis (mm)	-0.53
 OBRT	OBRT		double		FLOAT(126)	17	Y	Y	N		18.5f					Y					User value of ROT (deg)g
 OBSDNAME	OBSDNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for SODg
-OBSERVER	OBSERVER		char		VARCHAR2(60 BYTE)	60	Y	Y	N		60s					Y					Observer name(s)g
+OBSERVER	OBSERVER		char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer name(s)g
 OBSFNAME	OBSFNAME		char		VARCHAR2(25 BYTE)	25	Y	Y	N		25s					Y					Named position control for SFPg
 OBSFX	OBSFX		double	mm	FLOAT(126)	17	Y	Y	N		18.5f					Y					User value of SFP x axis (mm)g
 OBSFY	OBSFY		double	mm	FLOAT(126)	14	Y	Y	N		18.5f					Y					User value of SFP y axis (mm)g
