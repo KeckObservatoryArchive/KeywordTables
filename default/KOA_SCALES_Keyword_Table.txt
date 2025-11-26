@@ -1,0 +1,54 @@
+FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
+KOAID	KOAID	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file	KB.20170208_00008.fits, KR.20170208_00009.fits	
+PROPINT	PROPINT	SCALES	integer		NUMBER(*,0)	16	N	Y	Y		16d		0.0			Y	Y				Proprietary period		
+FILESIZE_MB	FILESIZE_MB	SCALES	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FITS file size in megabytes	44.8	
+TELESCOP	TELESCOP	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Keck telescope designation	Keck II	
+KOAIMTYP	KOAIMTYP	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				focus, object, bias, dark, arclamp, flatlamp, fpc, svc, domeflat, twiflat, contbars, bad, test, undefined	Y	Y			Y	SCALES image type	object	
+OBSMODE	OBSMODE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation		
+PROGNAME	PROGNAME	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					WMKO program ID		
+PROGID	PROGID	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				WMKO program ID	H275	
+PROGINST	PROGINST	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program Institution	UH	
+PROGPI	PROGPI	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program PI	McConnell	
+PROGTITL	PROGTITL	SCALES	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
+AZ	AZ	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Azimuth	-20.47	
+CAMERA	CAMERA	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	Y		32s					Y	Y			Y	Camera chip: FPC for imaging (KF), BLUE (KB) or RED (KR) for spectroscopy	BLUE	
+CURRINST	CURRINST	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Current instrument	SCALES	
+DATE	DATE_UT	SCALES	char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
+DATE-OBS	DATE_OBS	SCALES	char		DATE	12	N	Y	Y	date	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	This should be in YYYY-MM-DD format, right?  [ACL]  Correct
+DOMEPOSN	DOMEPOSN	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Dome azimuth	290.2737915	
+EL	EL	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Elevation	53.68	
+ELAPTIME	ELAPTIME	SCALES	double		FLOAT(126)	16	Y	Y	Y		18.5f		0.0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
+EXPOSURE	EXPOSURE	SCALES	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User defined integration time	12	
+EXPTIME	EXPTIME	SCALES	double	sec	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
+FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y		Y	Y	Frame number	76	$
+IMAGETYP	IMAGETYP	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					ImageType		
+IMTYPE	IMTYPE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Image type		
+INSTRUME	INSTRUME	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	SCALES	
+ITIME	ITIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Integration time per coadd		
+OBJECT	OBJECT	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	centering	
+OBSNUM	OBSNUM	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	observation number		
+OBSERVER	OBSERVER	SCALES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer name	matmat	
+OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	kcwi19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
+OUTDIR	OUTDIR	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					data	/data/161101	Is 15 characters enough for these? -[ACL]
+OUTFILE	OUTFILE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	kcwi	
+SEMESTER	SEMESTER	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Semester		
+TRUITIME	TRUITIME	SCALES	double	seconds	FLOAT(126)	32	Y	Y	N		18.8f					Y					True integration time in seconds per coadd		
+UT	UT	SCALES	char		VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s					Y	Y		Y	Y	Universal time	15:13.4	
+UTC	UTC	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SCALES: UTC keyword set from UT keyword		
+XPOSURE	XPOSURE	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					shutter open duration	1.00000128	
+BITPIX	BITPIX	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Bits per pixel		
+NAXIS	NAXIS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Numbe of data axes		
+NAXIS1	NAXIS1	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 1		
+NAXIS2	NAXIS2	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 2		
+EXTEND	EXTEND	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FITS extensions		
+BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Linear factor in scaling equation	1
+BZERO	BZERO	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Zero point in scaling equation	0
+ASICGAIN	ASICGAIN	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		SPEC ASIC gain		
+ACQDATE	ACQDATE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s						Y	Y		Y	Acquisition date		
+LASTFILE	LASTFILE	SCALES	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Last filename ingested		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
+	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
+	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
+	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
+	SEMID	NExScI	char		VARCHAR2(21 BYTE)	21	Y	N	N		21s	Y				N	Y	Y	Y	Y	SEMESTER and PROGID		
