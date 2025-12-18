@@ -9,43 +9,103 @@ PROGNAME	PROGNAME	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					WMKO pr
 PROGID	PROGID	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				WMKO program ID	H275	
 PROGINST	PROGINST	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program Institution	UH	
 PROGPI	PROGPI	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program PI	McConnell	
-PROGTITL	PROGTITL	SCALES	char		VARCHAR2(210 BYTE)	210	Y	Y	N		211s					Y	Y			Y	Program title	Extreme Stellar Population Gradients in Elliptical Galaxies	
+PROGTITL	PROGTITL	Added	char		VARCHAR2(216 BYTE)	216	Y	Y	N		216s									Y	Program title - concatination of PROGTL1-3 from FITS header		
+ACQDATE	ACQDATE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s						Y	Y		Y	Acquisition date		
+AMPLIST	AMPLIST		char		VARCHAR2(69 BYTE)	68	Y	Y	Y		68s								Y	Y	readout-amplifiers		
+ASICGAIN	ASICGAIN	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		SPEC ASIC gain		
 AZ	AZ	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Azimuth	-20.47	
+BCWAVE	BCWAVE	SCALES	double	angstroms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Central Wavelength	4499.959961	
+BINNING	BINNING	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					binning: serial/axis1, parallel/axis2	2,2	
+BITPIX	BITPIX	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Bits per pixel		
+BGRATNAM	BGRATNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	Blue Grating name	BL	
+BNASNAM	BNASNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Blue NandS Mask Stage Position Name	Open	
+BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Linear factor in scaling equation	1
+BZERO	BZERO	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Zero point in scaling equation	0
 CAMERA	CAMERA	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	Y		32s					Y	Y			Y	Camera chip: FPC for imaging (KF), BLUE (KB) or RED (KR) for spectroscopy	BLUE	
+CD1_1	CD1_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
+CD1_2	CD1_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
+CD2_1	CD2_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in x		
+CD2_2	CD2_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in y		
+CRPIX1	CRPIX1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										X coordinate of center pixel		
+CRPIX2	CRPIX2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Y coordinate of center pixel		
+CRVAL1	CRVAL1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										RA of center pixel		
+CRVAL2	CRVAL2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DEC of center pixel		
+CTYPE1	CTYPE1	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 1		
+CTYPE2	CTYPE2	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 2		
 CURRINST	CURRINST	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Current instrument	SCALES	
 DATE	DATE_UT	SCALES	char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
 DATE-OBS	DATE_OBS	SCALES	char		DATE	12	N	Y	Y	date	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	This should be in YYYY-MM-DD format, right?  [ACL]  Correct
+DATLEVEL	DATLEVEL	Added	integer		NUMBER(*,0)	16	N	Y	N		16d										Data reduction level		
+DISPSCAL	DISPSCAL	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Detector pixel scale, dispersion (hi 0.144, low 0.190)		
 DOMEPOSN	DOMEPOSN	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Dome azimuth	290.2737915	
+DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s										Date of DQA run		$          
+DQA_VERS	DQA_VERS	Added	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s										DQA version number		
 EL	EL	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Elevation	53.68	
 ELAPTIME	ELAPTIME	SCALES	double		FLOAT(126)	16	Y	Y	Y		18.5f		0.0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
+EQUINOX	EQUINOX		double		FLOAT(126)	16	Y	Y	N		18.5f								Y	N	telescope-equinox		
 EXPOSURE	EXPOSURE	SCALES	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User defined integration time	12	
 EXPTIME	EXPTIME	SCALES	double	sec	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
-FRAMENO	FRAMENO	LRIS	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y		Y	Y	Frame number	76	$
+EXTEND	EXTEND	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FITS extensions		
+FRAMENO	FRAMENO	SCALES	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y		Y	Y	Frame number	76	
+FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Frame number		
+GUIDFWHM	GUIDFWHM	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										FWHM of NIRSPEC guide star		
+GUIDTIME	GUIDTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logger GUIDFWHM value		
+IFUNAM	IFUNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	IFU position name	Large	
+IMAGEMD	IMAGEMD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, median (DN)		
+IMAGEMN	IMAGEMN	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, mean (DN)		
+IMAGESD	IMAGESD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, standard deviation (DN)		
 IMAGETYP	IMAGETYP	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					ImageType		
 IMTYPE	IMTYPE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Image type		
 INSTRUME	INSTRUME	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	SCALES	
 ITIME	ITIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Integration time per coadd		
+LASTFILE	LASTFILE	SCALES	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Last filename ingested		
+NAXIS	NAXIS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of data axes		
+NAXIS1	NAXIS1	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 1		
+NAXIS2	NAXIS2	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 2		
+NAXIS3	NAXIS3	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 3		
+NPIXSAT	NPIXSAT	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d										Number of saturated pixels (65535 DN)		
+NUMCCDS	NUMCCDS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	KOA: Number of CCDs		
+OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing assistant		
 OBJECT	OBJECT	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	centering	
 OBSNUM	OBSNUM	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	observation number		
 OBSERVER	OBSERVER	SCALES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer name	matmat	
-OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	kcwi19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
+OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	scales19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
 OUTDIR	OUTDIR	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					data	/data/161101	Is 15 characters enough for these? -[ACL]
-OUTFILE	OUTFILE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	kcwi	
+OUTFILE	OUTFILE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	scales	
+PANE	PANE	SCALE	char		VARCHAR2(25 BYTE)	24	Y	N	N		24s								Y	N	mosaic-pane; Defines window for readout		
+PANELIST	PANELIST		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	bitmask describing the list of up to 16 PANEn keywords to be used when windowing		
+PARANG	PARANG		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	parallactic-angle-astrometric		
+PARANTEL	PARANTEL	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										parallactic angle telescope (103.83 deg)		
+RADECSYS	RADECSYS	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Coordinate system		
+RCWAVE	RCWAVE	SCALES	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Central Wavelength (Ang)	7769.9331055	
+RGRATNAM	RGRATNAM	SCALES	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red Grating name	RH2	
+RNASNAM	RNASNAM	SCALES	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red NandS Mask Stage Position Name	unknown	
+ROTMODE	ROTMODE		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	rotator mode		
+ROTPOSN	ROTPOSN		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	rotator position		
+SATURATE	SATURATE	SCALES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Detector saturation DN level	33000	
 SEMESTER	SEMESTER	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Semester		
+SLITLEN	SLITLEN	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										Slit length projected on sky (arcsec)		
+SLITWIDT	SLITWIDT	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f						Y				Slit width projected on sky (arcsec)		
+SPATSCAL	SPATSCAL	Added	double	arcsec/pixel	FLOAT(126)	32	Y	Y	N		18.8f										CCD pixel scale, spatial (arcsec/pixel)		
+SPECRES	SPECRES	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Nominal spectral resolution		
 TRUITIME	TRUITIME	SCALES	double	seconds	FLOAT(126)	32	Y	Y	N		18.8f					Y					True integration time in seconds per coadd		
 UT	UT	SCALES	char		VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s					Y	Y		Y	Y	Universal time	15:13.4	
 UTC	UTC	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SCALES: UTC keyword set from UT keyword		
+WAVEBLUE	WAVEBLUE	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y			Y	Approximate blue end wavelength		
+WAVEMIN	WAVEMIN	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y			Y	Approximate wavelength {IR}		
+WAVECNTR	WAVECNTR	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y				Approximate central wavelength		
+WAVERED	WAVERED	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate red end wavelength		
+WAVEMAX	WAVEMAX	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate max wavelength (IR)		
+WXDOMHUM	WXDOMHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Inside dome humidity (%)		
+WXDOMTMP	WXDOMTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Inside dome temperature (deg C)		
+WXDWPT	WXDWPT	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Dew point temperature (deg C)		
+WXOUTHUM	WXOUTHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Outside humidity (%)		
+WXOUTTMP	WXOUTTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Outside temperature (deg C)		
+WXPRESS	WXPRESS	Added	double	mb	FLOAT(126)	32	Y	Y	N		18.8f										Pressure (mb)		
+WXTIME	WXTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logged weather keyword values		
+WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Wind direction (N through E)		
+WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N		18.8f										Wind speed (mph)		
 XPOSURE	XPOSURE	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					shutter open duration	1.00000128	
-BITPIX	BITPIX	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Bits per pixel		
-NAXIS	NAXIS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Numbe of data axes		
-NAXIS1	NAXIS1	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 1		
-NAXIS2	NAXIS2	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 2		
-EXTEND	EXTEND	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FITS extensions		
-BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Linear factor in scaling equation	1
-BZERO	BZERO	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Zero point in scaling equation	0
-ASICGAIN	ASICGAIN	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		SPEC ASIC gain		
-ACQDATE	ACQDATE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s						Y	Y		Y	Acquisition date		
-LASTFILE	LASTFILE	SCALES	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Last filename ingested		
 	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
 	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
