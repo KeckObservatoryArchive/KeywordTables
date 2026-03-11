@@ -122,7 +122,7 @@ DETRN	DETRN	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector read noi
 DISPERS	DISPERS	added	char		VARCHAR2(10 BYTE)	10	Y	Y	N		10s					Y					Dispersion level		
 DISPSCAL	DISPSCAL	added	double		FLOAT(126)	16	Y	Y	N		18.8f					Y					Detector pixel scale, dispersion		
 DMGAIN	DMGAIN	ao	double		FLOAT(126)	24	Y	Y	N		18.8f					Y					Set DM loop gain		
-DMMRFN	DMMRFN	ao	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					Name of DM reconstructor file		
+DMMRFN	DMMRFN	ao	char		VARCHAR2(72 BYTE)	72	Y	Y	N		72s					Y					Name of DM reconstructor file		
 DOMEPOSN	DOMEPOSN	dcs	double	degrees	FLOAT(126)	20	Y	Y	N		18.8f					Y					dome azimuth 	147.63	
 DOMESTAT	DOMESTAT	dcs	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y					dome status		
 DOMESTST	DOMESTST		char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					DCS Dome status string	UNINIT	
