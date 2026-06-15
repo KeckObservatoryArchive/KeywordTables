@@ -1,113 +1,245 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
-KOAID	KOAID	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y			Y	Unique identifier for each file	KB.20170208_00008.fits, KR.20170208_00009.fits	
-PROPINT	PROPINT	SCALES	integer		NUMBER(*,0)	16	N	Y	Y		16d		0.0			Y	Y				Proprietary period		
-FILESIZE_MB	FILESIZE_MB	SCALES	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y			Y		FITS file size in megabytes	44.8	
-TELESCOP	TELESCOP	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Keck telescope designation	Keck II	
-KOAIMTYP	KOAIMTYP	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s				focus, object, bias, dark, arclamp, flatlamp, fpc, svc, domeflat, twiflat, contbars, bad, test, undefined	Y	Y			Y	SCALES image type	object	
-OBSMODE	OBSMODE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										Basic mode of observation		
-PROGNAME	PROGNAME	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					WMKO program ID		
-PROGID	PROGID	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y				WMKO program ID	H275	
-PROGINST	PROGINST	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program Institution	UH	
-PROGPI	PROGPI	SCALES	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y			Y	Program PI	McConnell	
-PROGTITL	PROGTITL	Added	char		VARCHAR2(216 BYTE)	216	Y	Y	N		216s									Y	Program title - concatination of PROGTL1-3 from FITS header		
-ACQDATE	ACQDATE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s						Y	Y		Y	Acquisition date		
-AMPLIST	AMPLIST		char		VARCHAR2(69 BYTE)	68	Y	Y	Y		68s								Y	Y	readout-amplifiers		
-ASICGAIN	ASICGAIN	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y			Y		SPEC ASIC gain		
-AZ	AZ	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Azimuth	-20.47	
-BCWAVE	BCWAVE	SCALES	double	angstroms	FLOAT(126)	16	Y	Y	N		18.5f					Y					Blue Central Wavelength	4499.959961	
-BINNING	BINNING	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					binning: serial/axis1, parallel/axis2	2,2	
-BITPIX	BITPIX	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Bits per pixel		
-BGRATNAM	BGRATNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	Blue Grating name	BL	
-BNASNAM	BNASNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Blue NandS Mask Stage Position Name	Open	
-BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Linear factor in scaling equation	1
-BZERO	BZERO	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d					Y					Zero point in scaling equation	0
-CAMERA	CAMERA	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	Y		32s					Y	Y			Y	Camera chip: FPC for imaging (KF), BLUE (KB) or RED (KR) for spectroscopy	BLUE	
-CD1_1	CD1_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
-CD1_2	CD1_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of RA per pixel in x		
-CD2_1	CD2_1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in x		
-CD2_2	CD2_2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Degrees of DEC per pixel in y		
-CRPIX1	CRPIX1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										X coordinate of center pixel		
-CRPIX2	CRPIX2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										Y coordinate of center pixel		
-CRVAL1	CRVAL1	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										RA of center pixel		
-CRVAL2	CRVAL2	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										DEC of center pixel		
-CTYPE1	CTYPE1	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 1		
-CTYPE2	CTYPE2	Native	char	degrees	VARCHAR2(24 BYTE)	24	Y	Y	N		24s										Coordinate type of WCS axis 2		
-CURRINST	CURRINST	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Current instrument	SCALES	
-DATE	DATE_UT	SCALES	char		VARCHAR2(26 BYTE)	26	Y	Y	N		26s	Y				Y					file creation date (YYYY-MM-DDThh:mm:ss UT)	2016-11-02T12:47:12	
-DATE-OBS	DATE_OBS	SCALES	char		DATE	12	N	Y	Y	date	12s	Y				Y	Y			Y	Universal date of observation	2/10/17	This should be in YYYY-MM-DD format, right?  [ACL]  Correct
-DATLEVEL	DATLEVEL	Added	integer		NUMBER(*,0)	16	N	Y	N		16d										Data reduction level		
-DISPSCAL	DISPSCAL	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Detector pixel scale, dispersion (hi 0.144, low 0.190)		
-DOMEPOSN	DOMEPOSN	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					Dome azimuth	290.2737915	
-DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s										Date of DQA run		$          
-DQA_VERS	DQA_VERS	Added	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s										DQA version number		
-EL	EL	SCALES	double	degrees	FLOAT(126)	16	Y	Y	N		18.5f					Y					SCALES Elevation	53.68	
-ELAPTIME	ELAPTIME	SCALES	double		FLOAT(126)	16	Y	Y	Y		18.5f		0.0			Y	Y			Y	Exposure time from XPOSURE		Confirm that we will use this to display exposure time?  [ACL]  Yes
-EQUINOX	EQUINOX		double		FLOAT(126)	16	Y	Y	N		18.5f								Y	N	telescope-equinox		
-EXPOSURE	EXPOSURE	SCALES	double		FLOAT(126)	16	Y	Y	N		18.5f					Y					User defined integration time	12	
-EXPTIME	EXPTIME	SCALES	double	sec	FLOAT(126)	16	Y	Y	N		18.5f					Y					Exposure time	0.001	
-EXTEND	EXTEND	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y			Y		FITS extensions		
-FRAMENO	FRAMENO	SCALES	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0	9999		Y	Y		Y	Y	Frame number	76	
-FRAMENUM	FRAMENUM	Native	integer		NUMBER(*,0)	16	Y	Y	N		16d										Frame number		
-GUIDFWHM	GUIDFWHM	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										FWHM of NIRSPEC guide star		
-GUIDTIME	GUIDTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logger GUIDFWHM value		
-IFUNAM	IFUNAM	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y	Y			Y	IFU position name	Large	
-IMAGEMD	IMAGEMD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, median (DN)		
-IMAGEMN	IMAGEMN	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, mean (DN)		
-IMAGESD	IMAGESD	Added	double	DN	FLOAT(126)	32	Y	Y	N		18.8f										Imaging pixels, standard deviation (DN)		
-IMAGETYP	IMAGETYP	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y					ImageType		
-IMTYPE	IMTYPE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Image type		
-INSTRUME	INSTRUME	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	Y		68s					Y	Y				Instrument name	SCALES	
-ITIME	ITIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					Integration time per coadd		
-LASTFILE	LASTFILE	SCALES	char		VARCHAR2(70 BYTE)	70	Y	Y	N		70s					Y			Y		Last filename ingested		
-NAXIS	NAXIS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Number of data axes		
-NAXIS1	NAXIS1	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 1		
-NAXIS2	NAXIS2	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 2		
-NAXIS3	NAXIS3	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d										Length of data axis 3		
-NPIXSAT	NPIXSAT	Added	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d										Number of saturated pixels (65535 DN)		
-NUMCCDS	NUMCCDS	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	KOA: Number of CCDs		
-OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing assistant		
-OBJECT	OBJECT	SCALES	char		VARCHAR2(68 BYTE)	68	Y	Y	N		68s					Y	Y				Object name	centering	
-OBSNUM	OBSNUM	SCALES	integer		NUMBER(*,0)	16	Y	Y	N		16d								Y	N	observation number		
-OBSERVER	OBSERVER	SCALES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y					Observer name	matmat	
-OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y				original file name	scales19190.fits	Is 15 characters enough for these? -[ACL]  Column G has correct value.  Column F has been updated
-OUTDIR	OUTDIR	SCALES	char		VARCHAR2(68 BYTE)	68	N	Y	N		68s					Y					data	/data/161101	Is 15 characters enough for these? -[ACL]
-OUTFILE	OUTFILE	SCALES	char		VARCHAR2(32 BYTE)	32	Y	 Y	N		32s					Y					filename prefix	scales	
-PANE	PANE	SCALE	char		VARCHAR2(25 BYTE)	24	Y	N	N		24s								Y	N	mosaic-pane; Defines window for readout		
-PANELIST	PANELIST		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	bitmask describing the list of up to 16 PANEn keywords to be used when windowing		
-PARANG	PARANG		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	parallactic-angle-astrometric		
-PARANTEL	PARANTEL	Native	double	degrees	FLOAT(126)	32	Y	Y	N		18.8f										parallactic angle telescope (103.83 deg)		
-RADECSYS	RADECSYS	Native	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s										Coordinate system		
-RCWAVE	RCWAVE	SCALES	double	units	FLOAT(126)	16	Y	Y	N		18.5f					Y					Red Central Wavelength (Ang)	7769.9331055	
-RGRATNAM	RGRATNAM	SCALES	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red Grating name	RH2	
-RNASNAM	RNASNAM	SCALES	char	units	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y					Red NandS Mask Stage Position Name	unknown	
-ROTMODE	ROTMODE		char		VARCHAR2(69 BYTE)	68	Y	N	N		68s								Y	N	rotator mode		
-ROTPOSN	ROTPOSN		double		FLOAT(126)	16	Y	Y	N		18.8f								Y	N	rotator position		
-SATURATE	SATURATE	SCALES	integer		INTEGER	16	Y	Y	N		11d					Y			Y		Detector saturation DN level	33000	
-SEMESTER	SEMESTER	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y					Semester		
-SLITLEN	SLITLEN	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f										Slit length projected on sky (arcsec)		
-SLITWIDT	SLITWIDT	Added	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f						Y				Slit width projected on sky (arcsec)		
-SPATSCAL	SPATSCAL	Added	double	arcsec/pixel	FLOAT(126)	32	Y	Y	N		18.8f										CCD pixel scale, spatial (arcsec/pixel)		
-SPECRES	SPECRES	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Nominal spectral resolution		
-TRUITIME	TRUITIME	SCALES	double	seconds	FLOAT(126)	32	Y	Y	N		18.8f					Y					True integration time in seconds per coadd		
-UT	UT	SCALES	char		VARCHAR2(24 BYTE)	24	N	Y	Y	time	24s					Y	Y		Y	Y	Universal time	15:13.4	
-UTC	UTC	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s										SCALES: UTC keyword set from UT keyword		
-WAVEBLUE	WAVEBLUE	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y			Y	Approximate blue end wavelength		
-WAVEMIN	WAVEMIN	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y			Y	Approximate wavelength {IR}		
-WAVECNTR	WAVECNTR	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15			Y				Approximate central wavelength		
-WAVERED	WAVERED	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate red end wavelength		
-WAVEMAX	WAVEMAX	Added	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15						Y	Approximate max wavelength (IR)		
-WXDOMHUM	WXDOMHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Inside dome humidity (%)		
-WXDOMTMP	WXDOMTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Inside dome temperature (deg C)		
-WXDWPT	WXDWPT	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Dew point temperature (deg C)		
-WXOUTHUM	WXOUTHUM	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Outside humidity (%)		
-WXOUTTMP	WXOUTTMP	Added	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f										Outside temperature (deg C)		
-WXPRESS	WXPRESS	Added	double	mb	FLOAT(126)	32	Y	Y	N		18.8f										Pressure (mb)		
-WXTIME	WXTIME	Added	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s										UT of logged weather keyword values		
-WXWNDIR	WXWNDIR	Added	double		FLOAT(126)	32	Y	Y	N		18.8f										Wind direction (N through E)		
-WXWNDSP	WXWNDSP	Added	double	mph	FLOAT(126)	32	Y	Y	N		18.8f										Wind speed (mph)		
-XPOSURE	XPOSURE	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		18.8f					Y					shutter open duration	1.00000128	
-	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	RA in decimal degrees, J2000 equinox		
-	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	Declination in decimal degrees, J2000 equinox		
+KOAID	KOAID	KOKA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y	N	Y	Y	Unique identifier for each file	"KB.20170208_00008.fits, KR.20170208_00009.fits"	
+PROPINT	PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y		16d		0			Y	Y	N	Y		Proprietary period		
+FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y		N	Y		FITS file size in megabytes	44.8	
+DATE-OBS	DATE-OBS	SCALES	char		DATE	16	N	Y	N	date	16s					Y		N	Y			6/6/26	
+UT	UT	SCALES	char		VARCHAR2( 16 BYTE)	16	N	Y	N	time	16s					Y		N	Y			41:52.2	
+TELESCOP	TELESCOP	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y		Keck telescope designation	Keck II	
+KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	N	Y	Y	SCALES image type	object	
+PROGNAME	PROGNAME	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y		WMKO program ID		
+PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y	N	Y		WMKO program ID	H275	
+PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y	N	Y	Y	Program Institution	UH	
+PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y	N	Y	Y	Program PI	McConnell	
+PROGTITL	PROGTITL	KOA	char		VARCHAR2(216 BYTE)	216	Y	Y	N		216s					Y		N	Y	Y	Program title - concatination of PROGTL1-3 from FITS header		
+ACQMODE	ACQMODE	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			UTR	
+ASIC-FW	ASIC-FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			Standard_IFS_Fast_Gain9_5MHz.mcd	
+BAFFSB	BAFFSB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SB Elex Baffle Post	400.8	
+BITPIX	BITPIX	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		array data type	16	
+BNCHCAM	BNCHCAM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SPEC CAM Bench	-9.90E+37	
+BNCHDI	BNCHDI	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of IMG enclosure	79.29	
+BNCHSLN1	BNCHSLN1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SLNS bench by plaque	77.98	
+BNCHSLN2	BNCHSLN2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench in middle of SLNS bench	78.33	
+BNCHST	BNCHST	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench at Stern --> misreading (stuck at ~29	85.75	
+BSCALE	BSCALE	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
+BZERO	BZERO	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			32768	
+CAMERA	CAMERA	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			IFS	
+CCGAIN	CCGAIN	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			36985	
+CD1_1	CD1_1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CD1_2	CD1_2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CD2_1	CD2_1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CD2_2	CD2_2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CHECKSUM	CHECKSUM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		HDU checksum updated 2026-06-05T21:42:25	l6Ion5Gol5Gol5Go	
+CNAME1	CNAME1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+CNAME2	CNAME2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+CRPIX1	CRPIX1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CRPIX2	CRPIX2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CRVAL1	CRVAL1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CRVAL2	CRVAL2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
+CSLIDNAM	CSLIDNAM	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Coronagraph slide named position	Pupil	
+CSLIDORD	CSLIDORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Coronagraph slide ordinal position	10	
+CSLIDRAW	CSLIDRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Coronagraph slide position, counts"	7488	
+CSRBAS	CSRBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] CSRM Body	81.22	
+CSRPCB	CSRPCB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] CSRM Encoder PCB	166.9	
+CTYPE1	CTYPE1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+CTYPE2	CTYPE2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+CUBAR	CUBAR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SB side of copper cooling bar	32.65	
+CUNIT1	CUNIT1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+CUNIT2	CUNIT2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+DATASUM	DATASUM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		data unit checksum updated 2026-06-05T21:42:25	3118961876	
+DATE-BEG	DATE-BEG	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:41:52.195647	
+DATE-END	DATE-END	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:42:23.051717	
+DATLEVEL	DATLEVEL	KOA	integer		"NUMBER(*,0)"	16	N	Y	N		16d					Y		N	Y		Data reduction level		
+DISBAS	DISBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] DISM top	78.74	
+DISM	DISM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] DISM motor	78.87	
+DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"Detector pixel scale, dispersion (hi 0.144, low 0.190)"		
+DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y		N	Y		Date of DQA run		$          
+DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s					Y		N	Y		DQA version number		
+DSPRSNAM	DSPRSNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Dispersion carousel named position	M-grating	
+DSPRSORD	DSPRSORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Dispersion carousel ordinal position	14	
+DSPRSRAW	DSPRSRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Dispersion carousel position, counts"	28023	
+EXPTIME	EXPTIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		16.6f					Y		N	Y			30	
+FILTER	FILTER	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			Unknown	
+FM2	FM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FCOP FM2	77.54	
+FM4	FM4	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of Fold Mirror	77.76	
+FPCBAS	FPCBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Base of Body	78.1	
+FPCFRM	FPCFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Shoulder/Top of Frame	78.48	
+FPCMOT	FPCMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Motor	77.86	
+GETTR1	GETTR1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter 1 (Port Bow) --> shorted out	31.15	
+GETTR2	GETTR2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter2 (Port Aft)	85.41	
+GETTR3	GETTR3	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter3 (SB Bow)	84.35	
+GUIDFWHM	GUIDFWHM	KOA	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		FWHM of NIRSPEC guide star		
+GUIDTIME	GUIDTIME	KOA	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		UT of logger GUIDFWHM value		
+HEART_01	HEART_01	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		sctherm.DISP1CLK	Heartbeat active	
+HEART_02	HEART_02	SCALES	char		VARCHAR2(24 BYTE)	25	Y	Y	N		24s					Y		N	Y		scmot.DISP1CLK	Heartbeat active	
+HEART_03	HEART_03	SCALES	char		VARCHAR2(24 BYTE)	26	Y	Y	N		24s					Y		N	Y		scmot.DISP2CLK	Heartbeat active	
+HEART_04	HEART_04	SCALES	char		VARCHAR2(24 BYTE)	27	Y	Y	N		24s					Y		N	Y		scmot.DISP3CLK	Heartbeat active	
+HEART_05	HEART_05	SCALES	char		VARCHAR2(24 BYTE)	28	Y	Y	N		24s					Y		N	Y		scmot.DISP4CLK	Heartbeat active	
+HEART_06	HEART_06	SCALES	char		VARCHAR2(24 BYTE)	29	Y	Y	N		24s					Y		N	Y		scmot.DISP5CLK	Heartbeat active	
+HEART_07	HEART_07	SCALES	char		VARCHAR2(24 BYTE)	30	Y	Y	N		24s					Y		N	Y		scmot.DISP6CLK	Heartbeat active	
+HEART_08	HEART_08	SCALES	char		VARCHAR2(24 BYTE)	31	Y	Y	N		24s					Y		N	Y		scmot.DISP7CLK	Heartbeat active	
+HEART_09	HEART_09	SCALES	char		VARCHAR2(24 BYTE)	32	Y	Y	N		24s					Y		N	Y		scmot.DISP8CLK	Heartbeat active	
+HEART_10	HEART_10	SCALES	char		VARCHAR2(24 BYTE)	33	Y	Y	N		24s					Y		N	Y		scmot.DISP9CLK	Heartbeat active	
+HEART_11	HEART_11	SCALES	char		VARCHAR2(24 BYTE)	34	Y	Y	N		24s					Y		N	Y		scpower.DISP1CLK	Heartbeat active	
+HEART_12	HEART_12	SCALES	char		VARCHAR2(24 BYTE)	35	Y	Y	N		24s					Y		N	Y		scpower.DISP2CLK	Heartbeat active	
+HEART_13	HEART_13	SCALES	char		VARCHAR2(24 BYTE)	36	Y	Y	N		24s					Y		N	Y		scpower.DISP3CLK	Heartbeat active	
+HEART_14	HEART_14	SCALES	char		VARCHAR2(24 BYTE)	37	Y	Y	N		24s					Y		N	Y		scpower.DISP4CLK	Heartbeat active	
+HEART_15	HEART_15	SCALES	char		VARCHAR2(24 BYTE)	38	Y	Y	N		24s					Y		N	Y		scturbo.DISP1CLK	Heartbeat active	
+HEART_16	HEART_16	SCALES	char		VARCHAR2(24 BYTE)	39	Y	Y	N		24s					Y		N	Y		scvac1.DISP1CLK	Heartbeat active	
+HEART_17	HEART_17	SCALES	char		VARCHAR2(24 BYTE)	40	Y	Y	N		24s					Y		N	Y		crvac.DISP1CLK	Heartbeat active	
+HEART_18	HEART_18	SCALES	char		VARCHAR2(24 BYTE)	41	Y	Y	N		24s					Y		N	Y		scheaters.DISP1CLK	Heartbeat active	
+HEART_19	HEART_19	SCALES	char		VARCHAR2(24 BYTE)	42	Y	Y	N		24s					Y		N	Y		scheaters.DISP2CLK	Heartbeat active	
+HEART_20	HEART_20	SCALES	char		VARCHAR2(24 BYTE)	43	Y	Y	N		24s					Y		N	Y		scheaters.DISP3CLK	Keygrabber starting	
+HEART_21	HEART_21	SCALES	char		VARCHAR2(24 BYTE)	44	Y	Y	N		24s					Y		N	Y		scheaters.DISP4CLK	Heartbeat active	
+HEART_22	HEART_22	SCALES	char		VARCHAR2(24 BYTE)	45	Y	Y	N		24s					Y		N	Y		scmono.DISP0CLK	Heartbeat active	
+HEART_23	HEART_23	SCALES	char		VARCHAR2(24 BYTE)	46	Y	Y	N		24s					Y		N	Y		scmono.DISP1CLK	Heartbeat active	
+HEART_24	HEART_24	SCALES	char		VARCHAR2(24 BYTE)	47	Y	Y	N		24s					Y		N	Y		scutil.DISP1CLK	Heartbeat active	
+HEART_25	HEART_25	SCALES	char		VARCHAR2(24 BYTE)	48	Y	Y	N		24s					Y		N	Y		scops.DISP1CLK	Heartbeat active	
+IFSASC	IFSASC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFS ASIC Wing	89.29	
+IFSFRM	IFSFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM base	80.69	
+IFSFW1N	IFSFW1N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS FW1 named position	Unknown	
+IFSFW1O	IFSFW1O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IFS FW1 ordinal position	-999	
+IFSFW1R	IFSFW1R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IFS FW1 position, counts"	543388	
+IFSFW2N	IFSFW2N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS FW2 named position	Unknown	
+IFSFW2O	IFSFW2O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IFS FW2 ordinal position	-999	
+IFSFW2R	IFSFW2R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IFS FW2 position, counts"	340399	
+IFSFWNAM	IFSFWNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS combo-FW position	Unknown	
+IFSM1	IFSM1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM Motor 1 external	79.84	
+IFSM2	IFSM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM Motor 2 external	80.35	
+IFSMODE	IFSMODE	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y			Unknown	
+IFS_CU	IFS_CU	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu strap to IFS Detector head	41.48	
+IFWFRM	IFWFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFWM Base	79.1	
+IFWM1	IFWM1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFWM Motor 1 external	79.57	
+IFWM2	IFWM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFWM Motor 2 external	79.69	
+IFWMTOP	IFWMTOP	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFWM Top	79.21	
+IMAGEMD	IMAGEMD	KOA	double	DN	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"Imaging pixels, median (DN)"		
+IMAGEMN	IMAGEMN	KOA	double	DN	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"Imaging pixels, mean (DN)"		
+IMAGESD	IMAGESD	KOA	double	DN	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"Imaging pixels, standard deviation (DN)"		
+IMGASC	IMGASC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IMG ASIC wing	84.33	
+IMGDET1	IMGDET1	SCALES	double		FLOAT(126)	8	Y	Y	N		8.3f					Y		N	Y		"Temperature, Imaging detector 1"	37.497	
+IMGDET2	IMGDET2	SCALES	double		FLOAT(126)	8	Y	Y	N		8.3f					Y		N	Y		"Temperature, Imaging detector 2"	37.427	
+IMGFW1N	IMGFW1N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG FW1 named position	Open	
+IMGFW1O	IMGFW1O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IMG FW1 ordinal position	1	
+IMGFW1R	IMGFW1R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IMG FW1 position, counts"	559001	
+IMGFW2N	IMGFW2N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG FW2 named position	Unknown	
+IMGFW2O	IMGFW2O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IMG FW2 ordinal position	-999	
+IMGFW2R	IMGFW2R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IMG FW2 position, counts"	390700	
+IMGFWNAM	IMGFWNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG combo-FW position	Unknown	
+IMG_CU	IMG_CU	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu cold strap to Imager Detector Head	29.68	
+IMTYPE	IMTYPE	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+IMTYPE_I	IMTYPE_I	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		User defined imager image type	None	
+IMTYPE_S	IMTYPE_S	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		User defined IFS image type	None	
+INSTRUME	INSTRUME	SCALES	char		VARCHAR2(16 BYTE)	16	N	Y	N		16s					Y		N	Y			scales	
+ITIME	ITIME	SCALES	double		FLOAT(126)	16	Y	Y	N		16.8f					Y		N	Y			0.5825422222222222	
+LABAF	LABAF	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Frame Top Front (in Baffle Volume)	78.08	
+LAFRM	LAFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR Frame Top	77.95	
+LAMCC	LAMCC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR Motor Cold Clamp	77.95	
+LAMOT	LAMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR Motor Internal	80.27	
+LENSLNAM	LENSLNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Lenslet named position	MedRes	
+LENSLORD	LENSLORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Lenslet ordinal position	2	
+LENSLRAW	LENSLRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Lenslet position, counts"	675	
+LN2_EX	LN2_EX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LN2 Exhaust	84.84	
+LPF	LPF	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			6724	
+LS1_SB	LS1_SB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 1 at Starboard Bipod Hatch	82.12	
+LS2STR	LS2STR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 2 at Stern Cover Plate	84.71	
+LS3BOW	LS3BOW	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 3 at Bow	81.66	
+LYOTNAM	LYOTNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Lyot wheel named position	Open	
+LYOTORD	LYOTORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Lyot wheel ordinal position	1	
+LYOTRAW	LYOTRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Lyot wheel position, counts"	6240	
+MACIE-FW	MACIE-FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			MACIE_Registers_Fast_Cryo.mrf	
+MCLOCK	MCLOCK	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			9.0 MHz	
+MJD	MJD	SCALES	double		FLOAT(126)	16	Y	Y	N		16.5f					Y		N	Y			61197.19574	
+MODSLNAM	MODSLNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Mode selector named position	MedRes	
+MODSLORD	MODSLORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Mode selector ordinal position	1	
+MODSLRAW	MODSLRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Mode selector position, counts"	1400	
+MONOFNAM	MONOFNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Monochromator filter name	3 um	
+MONOFPOS	MONOFPOS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Monochromator filter position	1	
+MONOGNAM	MONOGNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Monochromator grating name	300	
+MONOGPOS	MONOGPOS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Monochromator grating position	2	
+MONOSTA	MONOSTA	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Monochromator status	Ready	
+MONOWAVE	MONOWAVE	SCALES	double		FLOAT(126)	16	Y	Y	N		16.6f					Y		N	Y		Monochromator wavelength	4560.871429	
+NAXIS	NAXIS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		number of array dimensions	3	
+NAXIS1	NAXIS1	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			2048	
+NAXIS2	NAXIS2	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			2048	
+NAXIS3	NAXIS3	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			52	
+NDROPS	NDROPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			0	
+NGROUPS	NGROUPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
+NPIXSAT	NPIXSAT	KOA	integer	DN	"NUMBER(*,0)"	16	Y	Y	N		16d					Y		N	Y		Number of saturated pixels (65535 DN)		
+NRAMPS	NRAMPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
+NREADS	NREADS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			52	
+NRESETS	NRESETS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			0	
+OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y		Observing assistant		
+OAH	OAH	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of IMG OAH	77.88	
+OAP2	OAP2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FCOP OAP2	77.36	
+OBJECT	OBJECT	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y		Object name		
+OBSERVER	OBSERVER	SCALES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y		N	Y		Name of observer(s)		
+OBSMODE	OBSMODE	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Basic mode of observation	IFS Spectrograph	
+OBSNUM	OBSNUM	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			5342	
+OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			/data20/CD5/IFS/ss260605_05342.fits	
+OUTDIR	OUTDIR	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			/data20/CD5/IFS	
+PCLOCK	PCLOCK	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			1.8 MHz	
+PPLBAS	PPLBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Base of Frame, OAE side"	78.01	
+PPLFRM	PPLFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Top of Frame, OAE side"	78	
+PPLMOT	PPLMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] PPLM Motor	78.55	
+PRES1	PRES1	SCALES	double		FLOAT(126)	16	Y	Y	N		16.4f					Y		N	Y		Pressure sensor 1	7.37e-06	
+PRES2	PRES2	SCALES	double		FLOAT(126)	16	Y	Y	N		16.4f					Y		N	Y		Pressure sensor 2	0.481	
+PRESUN1	PRESUN1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		"Pressure sensor 1, units"	None	
+PRESUN2	PRESUN2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		"Pressure sensor 2, units"	None	
+PROGNAME	PROGNAME	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Program name	ENGR	
+PTCELX	PTCELX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu RS Port Elex Panel	76.49	
+PTCH1	PTCH1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 1st stage Cu CH1 port side	51.3	
+PTCH2	PTCH2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] 2nd stage coldhead, port side"	17.34	
+PT_HTR	PT_HTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Heater 2, Port side --> feeding PID control"	-9.90E+37	
+RADECSYS	RADECSYS	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+REXPTIME	REXPTIME	SCALES	double		FLOAT(126)	16	Y	Y	N		16.8f					Y		N	Y			30.292195555555555	
+RS_AFT	RS_AFT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] RS Aft	80.64	
+RS_BOW	RS_BOW	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Radiation shield port bow corner	73.41	
+SBCH1	SBCH1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 1st stage coldhead starboard	52.79	
+SBCH2	SBCH2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 2nd stage coldhead starboard	14	
+SBCUEL	SBCUEL	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Copper Cooling strap to RS Elex panel	-9.90E+37	
+SBG10	SBG10	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Starboard G10 bipod (cold)	80.16	
+SBGTTR	SBGTTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 2nd stage getter	21.31	
+SBHTR	SBHTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Heater 1, Starboard"	81.55	
+SB_EX	SB_EX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu RS Starboard Electronics	83.3	
+SLITLEN	SLITLEN	KOA	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Slit length projected on sky (arcsec)		
+SLITWIDT	SLITWIDT	KOA	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f					Y	Y	N	Y		Slit width projected on sky (arcsec)		
+SLNSM1	SLNSM1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SLNS ORM1	78.41	
+SMSFRM	SMSFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SMSS Frame	78.21	
+SMSMC	SMSMC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SMSS motor cold clamp	79.13	
+SMSMOT	SMSMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SMSS Motor Internal	79.68	
+SPATSCAL	SPATSCAL	KOA	double	arcsec/pixel	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"CCD pixel scale, spatial (arcsec/pixel)"		
+SPCAM2	SPCAM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SPEC CAM2	79.19	
+SPCAMB	SPCAMB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SPEC CAM bench	78.76	
+SPCOLB	SPCOLB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] COL SPEC bench	78.14	
+SPECRES	SPECRES	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Nominal spectral resolution		
+STATEID	STATEID	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		Y	Y		Current state of SCALES	Open_K_Unknown_Imager-Flat_Fast 1.0s 12-bit_MedRes_Mirror_Unknown_Unknown_Unknown	
+STATENAM	STATENAM	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y		User defined name of the SCALES state	<undef>	
+STOPPED	STOPPED	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			F	
+STRAP1	STRAP1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 1, Port side"	83.55	
+STRAP2	STRAP2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 2, Port Bow"	291.7	
+STRAP3	STRAP3	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 3, SB Bow"	78.97	
+STRAP4	STRAP4	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 5, SB Aft"	80.58	
+STRAP5	STRAP5	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 4, SB"	80.43	
+STRAP6	STRAP6	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Strap 6, 10'o'clock"	92.38	
+STRAP7	STRAP7	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Strap 7 at center (weakly mechanically and	84.71	
+TESTMODE	TESTMODE	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			F	
+THISEXT	THISEXT	SCALES	char		VARCHAR2( 16 BYTE)	16	Y	Y	N		16s					Y		N	Y			quicklook	
+VREFM	VREFM	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			30393	
+WAVEBLUE	WAVEBLUE	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y	Y	Approximate blue end wavelength		
+WAVEMIN	WAVEMIN	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y	Y	Approximate wavelength {IR}		
+WAVECNTR	WAVECNTR	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y		Approximate central wavelength		
+WAVERED	WAVERED	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y		N	Y	Y	Approximate red end wavelength		
+WCSNAME	WCSNAME	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
+WXDOMHUM	WXDOMHUM	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Inside dome humidity (%)		
+WXDOMTMP	WXDOMTMP	KOA	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Inside dome temperature (deg C)		
+WXDWPT	WXDWPT	KOA	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Dew point temperature (deg C)		
+WXOUTHUM	WXOUTHUM	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Outside humidity (%)		
+WXOUTTMP	WXOUTTMP	KOA	double	degreesC	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Outside temperature (deg C)		
+WXPRESS	WXPRESS	KOA	double	mb	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Pressure (mb)		
+WXTIME	WXTIME	KOA	char	hh:mm:ss.ss	VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		UT of logged weather keyword values		
+WXWNDIR	WXWNDIR	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Wind direction (N through E)		
+WXWNDSP	WXWNDSP	KOA	double	mph	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		Wind speed (mph)		
+	RA2000	NExScI	double		FLOAT(126)	11	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"RA in decimal degrees, J2000 equinox"		
+	DEC2000	NexScI	double		FLOAT(126)	16	Y	N	N		18.5f	Y				Y	Y	Y	Y	Y	"Declination in decimal degrees, J2000 equinox"		
 	UTDATETIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N	Y		Y	Y	Combined DATE_OBS and UT as a timestamp		
 	L0_INGTIME	NExScI	char		TIMESTAMP	30	Y	N	N		30s	Y				N			N		Time of metadata ingestion		
 	FILEHAND	NExScI	char		VARCHAR2(151 BYTE)	151	Y	N	N		151s	Y				N	Y	Y	Y	Y	Path to the file in the archive		
