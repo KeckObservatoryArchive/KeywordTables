@@ -2,7 +2,7 @@ FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	Nul
 KOAID	KOAID	KOKA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y	N	Y	Y	Unique identifier for each file	"KB.20170208_00008.fits, KR.20170208_00009.fits"	
 PROPINT	PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y		16d		0			Y	Y	N	Y		Proprietary period		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y		N	Y		FITS file size in megabytes	44.8	
-DATE-OBS	DATE-OBS	SCALES	char		DATE	16	N	Y	N	date	16s					Y		N	Y			6/6/26	
+DATE-OBS	DATE_OBS	SCALES	char		DATE	16	N	Y	N	date	16s					Y		N	Y			6/6/26	
 UT	UT	SCALES	char		VARCHAR2( 16 BYTE)	16	N	Y	N	time	16s					Y		N	Y			41:52.2	
 TELESCOP	TELESCOP	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y		Keck telescope designation	Keck II	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	N	Y	Y	SCALES image type	object	
@@ -13,7 +13,7 @@ PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y	N	Y	Y	Progra
 PROGPI	PROGPI	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y	N	Y	Y	Program PI	McConnell	
 PROGTITL	PROGTITL	KOA	char		VARCHAR2(216 BYTE)	216	Y	Y	N		216s					Y		N	Y	Y	Program title - concatination of PROGTL1-3 from FITS header		
 ACQMODE	ACQMODE	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			UTR	
-ASIC-FW	ASIC-FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			Standard_IFS_Fast_Gain9_5MHz.mcd	
+ASIC-FW	ASIC_FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			Standard_IFS_Fast_Gain9_5MHz.mcd	
 BAFFSB	BAFFSB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SB Elex Baffle Post	400.8	
 BITPIX	BITPIX	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		array data type	16	
 BNCHCAM	BNCHCAM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SPEC CAM Bench	-9.90E+37	
@@ -47,8 +47,8 @@ CUBAR	CUBAR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SB sid
 CUNIT1	CUNIT1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
 CUNIT2	CUNIT2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
 DATASUM	DATASUM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		data unit checksum updated 2026-06-05T21:42:25	3118961876	
-DATE-BEG	DATE-BEG	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:41:52.195647	
-DATE-END	DATE-END	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:42:23.051717	
+DATE-BEG	DATE_BEG	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:41:52.195647	
+DATE-END	DATE_END	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:42:23.051717	
 DATLEVEL	DATLEVEL	KOA	integer		"NUMBER(*,0)"	16	N	Y	N		16d					Y		N	Y		Data reduction level		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					DCS Dec		Confirm that this is in sexagesimal and not decimal? [ACL]  Yes
 DISBAS	DISBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] DISM top	78.74	
@@ -147,7 +147,7 @@ LS3BOW	LS3BOW	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lowe
 LYOTNAM	LYOTNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Lyot wheel named position	Open	
 LYOTORD	LYOTORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Lyot wheel ordinal position	1	
 LYOTRAW	LYOTRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Lyot wheel position, counts"	6240	
-MACIE-FW	MACIE-FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			MACIE_Registers_Fast_Cryo.mrf	
+MACIE-FW	MACIE_FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			MACIE_Registers_Fast_Cryo.mrf	
 MCLOCK	MCLOCK	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			9.0 MHz	
 MJD	MJD	SCALES	double		FLOAT(126)	16	Y	Y	N		16.5f					Y		N	Y			61197.19574	
 MODSLNAM	MODSLNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Mode selector named position	MedRes	
