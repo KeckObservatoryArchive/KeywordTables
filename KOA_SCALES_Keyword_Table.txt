@@ -21,7 +21,7 @@ BNCHCAM	BNCHCAM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SP
 BNCHDI	BNCHDI	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of IMG enclosure	79.29	
 BNCHSLN1	BNCHSLN1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SLNS bench by plaque	77.98	
 BNCHSLN2	BNCHSLN2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench in middle of SLNS bench	78.33	
-BNCHST	BNCHST	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench at Stern --> misreading (stuck at ~29	85.75	
+BNCHST	BNCHST	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench at Stern -> misreading (stuck at ~29	85.75	
 BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			1	
 BZERO	BZERO	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			32768	
 CAMERA	CAMERA	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			IFS	
@@ -69,7 +69,7 @@ FPCBAS	FPCBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM
 FPCFRM	FPCFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Shoulder/Top of Frame	78.48	
 FPCMOT	FPCMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Motor	77.86	
 FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0.0	9999.0		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
-GETTR1	GETTR1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter 1 (Port Bow) --> shorted out	31.15	
+GETTR1	GETTR1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter 1 (Port Bow) -> shorted out	31.15	
 GETTR2	GETTR2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter2 (Port Aft)	85.41	
 GETTR3	GETTR3	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter3 (SB Bow)	84.35	
 GUIDFWHM	GUIDFWHM	KOA	double	arcseconds	FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		FWHM of NIRSPEC guide star		
@@ -192,7 +192,7 @@ PRESUN2	PRESUN2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		"Pressu
 PTCELX	PTCELX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu RS Port Elex Panel	76.49	
 PTCH1	PTCH1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 1st stage Cu CH1 port side	51.3	
 PTCH2	PTCH2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] 2nd stage coldhead, port side"	17.34	
-PT_HTR	PT_HTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Heater 2, Port side --> feeding PID control"	-9.90E+37	
+PT_HTR	PT_HTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Heater 2, Port side -> feeding PID control"	-9.90E+37	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					DCS RA	19:15.0	
 RADECSYS	RADECSYS	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
 REXPTIME	REXPTIME	SCALES	double		FLOAT(126)	16	Y	Y	N		16.8f					Y		N	Y			30.292195555555555	
