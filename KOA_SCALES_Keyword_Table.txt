@@ -6,6 +6,7 @@ DATE-OBS	DATE-OBS	SCALES	char		DATE	16	N	Y	N	date	16s					Y		N	Y			6/6/26
 UT	UT	SCALES	char		VARCHAR2( 16 BYTE)	16	N	Y	N	time	16s					Y		N	Y			41:52.2	
 TELESCOP	TELESCOP	DCS	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y		Keck telescope designation	Keck II	
 KOAIMTYP	KOAIMTYP	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s					Y	Y	N	Y	Y	SCALES image type	object	
+SEMESTER	SEMESTER	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y					Observing semester	2015A	
 PROGNAME	PROGNAME	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Program ID	ENG	
 PROGID	PROGID	KOA	char		VARCHAR2(69 BYTE)	32	N	Y	N		32s					Y	Y	N	Y		WMKO program ID	H275	
 PROGINST	PROGINST	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y	Y	N	Y	Y	Program Institution	UH	
