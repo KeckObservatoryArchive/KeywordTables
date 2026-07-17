@@ -60,6 +60,7 @@ DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s					Y		N	Y		DQA version
 DSPRSNAM	DSPRSNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Dispersion carousel named position	M-grating	
 DSPRSORD	DSPRSORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Dispersion carousel ordinal position	14	
 DSPRSRAW	DSPRSRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Dispersion carousel position, counts"	28023	
+EQUINOX	EQUINOX	DCS	double		FLOAT(126)	16	Y	Y	N		18.5f		1855.0	2100.0		Y	Y				Telescope equinox	2000	
 EXPTIME	EXPTIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		16.6f					Y		N	Y			30	
 FILTER	FILTER	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			Unknown	
 FM2	FM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FCOP FM2	77.54	
