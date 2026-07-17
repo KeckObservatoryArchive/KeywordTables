@@ -67,6 +67,7 @@ FM4	FM4	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of Fol
 FPCBAS	FPCBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Base of Body	78.1	
 FPCFRM	FPCFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Shoulder/Top of Frame	78.48	
 FPCMOT	FPCMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FPCM Motor	77.86	
+FRAMENO	FRAMENO	KCWI	integer		NUMBER(*,0)	16	Y	Y	Y		16d		0.0	9999.0		Y	Y			Y	frame number	1919	Can this actually go over 9999?  That's been max with previous instruments [ACL]  Probably could, but shouldn't.
 GETTR1	GETTR1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter 1 (Port Bow) --> shorted out	31.15	
 GETTR2	GETTR2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter2 (Port Aft)	85.41	
 GETTR3	GETTR3	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Getter3 (SB Bow)	84.35	
