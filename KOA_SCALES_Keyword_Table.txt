@@ -1,6 +1,6 @@
 FITSKeyword	DBKeyword	Source	MetadataDatatype	Units	DBDatatype	MetadataWidth	NullsAllowed	ValidateFormat	CheckValues	InputFormat	OutputFormat	SpecialIngest	MinValue	MaxValue	DiscreteValues	Metadata	UI	Calib	TAP_visible	TAP_principal	Description	Example	Notes
 KOAID	KOAID	KOKA	char		VARCHAR2(32 BYTE)	32	N	Y	Y		32s	Y				Y	Y	N	Y	Y	Unique identifier for each file	"KB.20170208_00008.fits, KR.20170208_00009.fits"	
-PROPINT	PROPINT	KOA	integer		"NUMBER(*,0)"	16	N	Y	Y		16d		0			Y	Y	N	Y		Proprietary period		
+PROPINT	PROPINT	KOA	integer		NUMBER(*,0)	16	N	Y	Y		16d		0			Y	Y	N	Y		Proprietary period		
 FILESIZE_MB	FILESIZE_MB	KOA	double	MB	FLOAT(126)	16	Y	Y	N		18.8f					Y		N	Y		FITS file size in megabytes	44.8	
 DATE-OBS	DATE_OBS	SCALES	char		DATE	16	N	Y	N	date	16s					Y		N	Y			6/6/26	
 UT	UT	SCALES	char		VARCHAR2(16 BYTE)	16	N	Y	N	time	16s					Y		N	Y			41:52.2	
@@ -15,16 +15,16 @@ PROGTITL	PROGTITL	KOA	char		VARCHAR2(216 BYTE)	216	Y	Y	N		216s					Y		N	Y	Y	Prog
 ACQMODE	ACQMODE	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			UTR	
 ASIC-FW	ASIC_FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			Standard_IFS_Fast_Gain9_5MHz.mcd	
 BAFFSB	BAFFSB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SB Elex Baffle Post	400.8	
-BITPIX	BITPIX	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		array data type	16	
+BITPIX	BITPIX	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		array data type	16	
 BNCHCAM	BNCHCAM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SPEC CAM Bench	-9.90E+37	
 BNCHDI	BNCHDI	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of IMG enclosure	79.29	
 BNCHSLN1	BNCHSLN1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] SLNS bench by plaque	77.98	
 BNCHSLN2	BNCHSLN2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench in middle of SLNS bench	78.33	
 BNCHST	BNCHST	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Bench at Stern --> misreading (stuck at ~29	85.75	
-BSCALE	BSCALE	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
-BZERO	BZERO	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			32768	
+BSCALE	BSCALE	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			1	
+BZERO	BZERO	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			32768	
 CAMERA	CAMERA	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			IFS	
-CCGAIN	CCGAIN	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			36985	
+CCGAIN	CCGAIN	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			36985	
 CD1_1	CD1_1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
 CD1_2	CD1_2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
 CD2_1	CD2_1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
@@ -37,8 +37,8 @@ CRPIX2	CRPIX2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None
 CRVAL1	CRVAL1	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
 CRVAL2	CRVAL2	SCALES	double		FLOAT(126)	20	Y	Y	N		18.8f					Y		N	Y			None	
 CSLIDNAM	CSLIDNAM	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Coronagraph slide named position	Pupil	
-CSLIDORD	CSLIDORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Coronagraph slide ordinal position	10	
-CSLIDRAW	CSLIDRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Coronagraph slide position, counts"	7488	
+CSLIDORD	CSLIDORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Coronagraph slide ordinal position	10	
+CSLIDRAW	CSLIDRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Coronagraph slide position, counts"	7488	
 CSRBAS	CSRBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] CSRM Body	81.22	
 CSRPCB	CSRPCB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] CSRM Encoder PCB	166.9	
 CTYPE1	CTYPE1	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
@@ -49,7 +49,7 @@ CUNIT2	CUNIT2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None
 DATASUM	DATASUM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		data unit checksum updated 2026-06-05T21:42:25	3118961876	
 DATE-BEG	DATE_BEG	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:41:52.195647	
 DATE-END	DATE_END	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			2026-06-06T04:42:23.051717	
-DATLEVEL	DATLEVEL	KOA	integer		"NUMBER(*,0)"	16	N	Y	N		16d					Y		N	Y		Data reduction level		
+DATLEVEL	DATLEVEL	KOA	integer		NUMBER(*,0)	16	N	Y	N		16d					Y		N	Y		Data reduction level		
 DEC	CDEC	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					DCS Dec		Confirm that this is in sexagesimal and not decimal? [ACL]  Yes
 DISBAS	DISBAS	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] DISM top	78.74	
 DISM	DISM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] DISM motor	78.87	
@@ -57,8 +57,8 @@ DISPSCAL	DISPSCAL	KOA	double		FLOAT(126)	32	Y	Y	N		18.8f					Y		N	Y		"Detector p
 DQA_DATE	DQA_DATE	KOA	char		VARCHAR2(32 BYTE)	32	N	Y	N		32s					Y		N	Y		Date of DQA run		$          
 DQA_VERS	DQA_VERS	KOA	char		VARCHAR2(8 BYTE)	8	N	Y	N		8s					Y		N	Y		DQA version number		
 DSPRSNAM	DSPRSNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Dispersion carousel named position	M-grating	
-DSPRSORD	DSPRSORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Dispersion carousel ordinal position	14	
-DSPRSRAW	DSPRSRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Dispersion carousel position, counts"	28023	
+DSPRSORD	DSPRSORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Dispersion carousel ordinal position	14	
+DSPRSRAW	DSPRSRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Dispersion carousel position, counts"	28023	
 EXPTIME	EXPTIME	SCALES	double	seconds	FLOAT(126)	16	Y	Y	N		16.6f					Y		N	Y			30	
 FILTER	FILTER	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			Unknown	
 FM2	FM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FCOP FM2	77.54	
@@ -99,11 +99,11 @@ HEART_25	HEART_25	SCALES	char		VARCHAR2(24 BYTE)	48	Y	Y	N		24s					Y		N	Y		scops
 IFSASC	IFSASC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFS ASIC Wing	89.29	
 IFSFRM	IFSFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM base	80.69	
 IFSFW1N	IFSFW1N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS FW1 named position	Unknown	
-IFSFW1O	IFSFW1O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IFS FW1 ordinal position	-999	
-IFSFW1R	IFSFW1R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IFS FW1 position, counts"	543388	
+IFSFW1O	IFSFW1O	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		IFS FW1 ordinal position	-999	
+IFSFW1R	IFSFW1R	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"IFS FW1 position, counts"	543388	
 IFSFW2N	IFSFW2N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS FW2 named position	Unknown	
-IFSFW2O	IFSFW2O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IFS FW2 ordinal position	-999	
-IFSFW2R	IFSFW2R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IFS FW2 position, counts"	340399	
+IFSFW2O	IFSFW2O	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		IFS FW2 ordinal position	-999	
+IFSFW2R	IFSFW2R	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"IFS FW2 position, counts"	340399	
 IFSFWNAM	IFSFWNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IFS combo-FW position	Unknown	
 IFSM1	IFSM1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM Motor 1 external	79.84	
 IFSM2	IFSM2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IFFM Motor 2 external	80.35	
@@ -120,11 +120,11 @@ IMGASC	IMGASC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] IMG 
 IMGDET1	IMGDET1	SCALES	double		FLOAT(126)	8	Y	Y	N		8.3f					Y		N	Y		"Temperature, Imaging detector 1"	37.497	
 IMGDET2	IMGDET2	SCALES	double		FLOAT(126)	8	Y	Y	N		8.3f					Y		N	Y		"Temperature, Imaging detector 2"	37.427	
 IMGFW1N	IMGFW1N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG FW1 named position	Open	
-IMGFW1O	IMGFW1O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IMG FW1 ordinal position	1	
-IMGFW1R	IMGFW1R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IMG FW1 position, counts"	559001	
+IMGFW1O	IMGFW1O	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		IMG FW1 ordinal position	1	
+IMGFW1R	IMGFW1R	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"IMG FW1 position, counts"	559001	
 IMGFW2N	IMGFW2N	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG FW2 named position	Unknown	
-IMGFW2O	IMGFW2O	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		IMG FW2 ordinal position	-999	
-IMGFW2R	IMGFW2R	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"IMG FW2 position, counts"	390700	
+IMGFW2O	IMGFW2O	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		IMG FW2 ordinal position	-999	
+IMGFW2R	IMGFW2R	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"IMG FW2 position, counts"	390700	
 IMGFWNAM	IMGFWNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		IMG combo-FW position	Unknown	
 IMG_CU	IMG_CU	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu cold strap to Imager Detector Head	29.68	
 IMTYPE	IMTYPE	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
@@ -137,45 +137,45 @@ LAFRM	LAFRM	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR F
 LAMCC	LAMCC	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR Motor Cold Clamp	77.95	
 LAMOT	LAMOT	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LEAR Motor Internal	80.27	
 LENSLNAM	LENSLNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Lenslet named position	MedRes	
-LENSLORD	LENSLORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Lenslet ordinal position	2	
-LENSLRAW	LENSLRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Lenslet position, counts"	675	
+LENSLORD	LENSLORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Lenslet ordinal position	2	
+LENSLRAW	LENSLRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Lenslet position, counts"	675	
 LN2_EX	LN2_EX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] LN2 Exhaust	84.84	
-LPF	LPF	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			6724	
+LPF	LPF	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			6724	
 LS1_SB	LS1_SB	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 1 at Starboard Bipod Hatch	82.12	
 LS2STR	LS2STR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 2 at Stern Cover Plate	84.71	
 LS3BOW	LS3BOW	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Lower Shield 3 at Bow	81.66	
 LYOTNAM	LYOTNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Lyot wheel named position	Open	
-LYOTORD	LYOTORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Lyot wheel ordinal position	1	
-LYOTRAW	LYOTRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Lyot wheel position, counts"	6240	
+LYOTORD	LYOTORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Lyot wheel ordinal position	1	
+LYOTRAW	LYOTRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Lyot wheel position, counts"	6240	
 MACIE-FW	MACIE_FW	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			MACIE_Registers_Fast_Cryo.mrf	
 MCLOCK	MCLOCK	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			9.0 MHz	
 MJD	MJD	SCALES	double		FLOAT(126)	16	Y	Y	N		16.5f					Y		N	Y			61197.19574	
 MODSLNAM	MODSLNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Mode selector named position	MedRes	
-MODSLORD	MODSLORD	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Mode selector ordinal position	1	
-MODSLRAW	MODSLRAW	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		"Mode selector position, counts"	1400	
+MODSLORD	MODSLORD	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Mode selector ordinal position	1	
+MODSLRAW	MODSLRAW	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		"Mode selector position, counts"	1400	
 MONOFNAM	MONOFNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Monochromator filter name	3 um	
-MONOFPOS	MONOFPOS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Monochromator filter position	1	
+MONOFPOS	MONOFPOS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Monochromator filter position	1	
 MONOGNAM	MONOGNAM	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Monochromator grating name	300	
-MONOGPOS	MONOGPOS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		Monochromator grating position	2	
+MONOGPOS	MONOGPOS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		Monochromator grating position	2	
 MONOSTA	MONOSTA	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		Monochromator status	Ready	
 MONOWAVE	MONOWAVE	SCALES	double		FLOAT(126)	16	Y	Y	N		16.6f					Y		N	Y		Monochromator wavelength	4560.871429	
-NAXIS	NAXIS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y		number of array dimensions	3	
-NAXIS1	NAXIS1	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			2048	
-NAXIS2	NAXIS2	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			2048	
-NAXIS3	NAXIS3	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			52	
-NDROPS	NDROPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			0	
-NGROUPS	NGROUPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
-NPIXSAT	NPIXSAT	KOA	integer	DN	"NUMBER(*,0)"	16	Y	Y	N		16d					Y		N	Y		Number of saturated pixels (65535 DN)		
-NRAMPS	NRAMPS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			1	
-NREADS	NREADS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			52	
-NRESETS	NRESETS	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			0	
+NAXIS	NAXIS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y		number of array dimensions	3	
+NAXIS1	NAXIS1	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			2048	
+NAXIS2	NAXIS2	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			2048	
+NAXIS3	NAXIS3	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			52	
+NDROPS	NDROPS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			0	
+NGROUPS	NGROUPS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			1	
+NPIXSAT	NPIXSAT	KOA	integer	DN	NUMBER(*,0)	16	Y	Y	N		16d					Y		N	Y		Number of saturated pixels (65535 DN)		
+NRAMPS	NRAMPS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			1	
+NREADS	NREADS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			52	
+NRESETS	NRESETS	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			0	
 OA	OA	KOA	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y		Observing assistant		
 OAH	OAH	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Top of IMG OAH	77.88	
 OAP2	OAP2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] FCOP OAP2	77.36	
 OBJECT	OBJECT	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y		Object name		
 OBSERVER	OBSERVER	SCALES	char		VARCHAR2(128 BYTE)	128	Y	Y	N		128s					Y		N	Y		Name of observer(s)		
 OBSMODE	OBSMODE	SCALES	char		VARCHAR2(24 BYTE)	24	Y	Y	N		24s					Y		N	Y		Basic mode of observation	IFS Spectrograph	
-OBSNUM	OBSNUM	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			5342	
+OBSNUM	OBSNUM	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			5342	
 OFNAME	OFNAME	SCALES	char		VARCHAR2(32 BYTE)	32	Y	Y	N		32s					Y		N	Y			/data20/CD5/IFS/ss260605_05342.fits	
 OUTDIR	OUTDIR	SCALES	char		VARCHAR2(80 BYTE)	80	Y	Y	N		80s					Y		N	Y			/data20/CD5/IFS	
 PCLOCK	PCLOCK	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			1.8 MHz	
@@ -225,7 +225,7 @@ STRAP6	STRAP6	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Str
 STRAP7	STRAP7	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Strap 7 at center (weakly mechanically and	84.71	
 TESTMODE	TESTMODE	SCALES	char		VARCHAR2(8 BYTE)	8	Y	Y	N		8s					Y		N	Y			F	
 THISEXT	THISEXT	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			quicklook	
-VREFM	VREFM	SCALES	integer		"NUMBER(*,0)"	8	Y	Y	N		8d					Y		N	Y			30393	
+VREFM	VREFM	SCALES	integer		NUMBER(*,0)	8	Y	Y	N		8d					Y		N	Y			30393	
 WAVEBLUE	WAVEBLUE	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y	Y	Approximate blue end wavelength		
 WAVEMIN	WAVEMIN	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y	Y	Approximate wavelength {IR}		
 WAVECNTR	WAVECNTR	KOA	double	Microns	FLOAT(126)	32	Y	Y	Y		18.8f		0.8	15		Y	Y	N	Y		Approximate central wavelength		
