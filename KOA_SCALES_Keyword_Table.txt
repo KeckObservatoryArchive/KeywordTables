@@ -192,7 +192,7 @@ PRESUN2	PRESUN2	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y		"Pressu
 PTCELX	PTCELX	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] Cu RS Port Elex Panel	76.49	
 PTCH1	PTCH1	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		[K] 1st stage Cu CH1 port side	51.3	
 PTCH2	PTCH2	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] 2nd stage coldhead, port side"	17.34	
-PT_HTR	PT_HTR	SCALES	double	Kelvin	FLOAT(126)	8	Y	Y	N		8.2f					Y		N	Y		"[K] Heater 2, Port side -> feeding PID control"	-9.90E+37	
+PT_HTR	PT_HTR	SCALES	double	Kelvin	FLOAT(126)	16	Y	Y	N		16.5f					Y		N	Y		"[K] Heater 2, Port side -> feeding PID control"	-9.90E+37	
 RA	CRA	DCS	char		VARCHAR2(16 BYTE)	16	Y	Y	N	angle	16s	Y				Y					DCS RA	19:15.0	
 RADECSYS	RADECSYS	SCALES	char		VARCHAR2(16 BYTE)	16	Y	Y	N		16s					Y		N	Y			None	
 REXPTIME	REXPTIME	SCALES	double		FLOAT(126)	16	Y	Y	N		16.8f					Y		N	Y			30.292195555555555	
